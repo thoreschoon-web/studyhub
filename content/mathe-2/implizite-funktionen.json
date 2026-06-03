@@ -1,0 +1,83 @@
+{
+  "id": "implizite-funktionen",
+  "subjectId": "mathe-2",
+  "title": "Implizite Funktionen & Jacobi-Matrix",
+  "summary": "Funktionen, die nur über eine Gleichung F(x,y)=0 gegeben sind, ableiten – und die Jacobi-Matrix als Werkzeug für Funktionen mehrerer Variablen.",
+  "order": 1,
+  "estMinutes": 25,
+  "sections": [
+    {
+      "id": "idee",
+      "heading": "Implizite Funktionen – die Idee",
+      "body": "Manche Zusammenhänge lassen sich nicht nach $y$ auflösen, sondern liegen nur als Gleichung\n$$F(x,y)=0$$\nvor (z.B. der Einheitskreis $x^2+y^2-1=0$). Trotzdem definiert die Gleichung in der Nähe eines Punktes eine Funktion $y(x)$ – wir können ihre Ableitung bestimmen, **ohne** aufzulösen.\n\nDurch implizites Differenzieren nach $x$ (Kettenregel!) folgt:\n$$F_x + F_y\\cdot y'(x) = 0 \\;\\Rightarrow\\; y'(x) = -\\frac{F_x}{F_y}\\quad(F_y\\neq 0)$$",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Satz über implizite Funktionen",
+          "body": "Ist $F(x_0,y_0)=0$ und $F_y(x_0,y_0)\\neq 0$, so existiert lokal eine differenzierbare Funktion $y(x)$ mit $y'(x)=-\\dfrac{F_x}{F_y}$."
+        }
+      ]
+    },
+    {
+      "id": "jacobi",
+      "heading": "Die Jacobi-Matrix",
+      "body": "Für eine vektorwertige Funktion $f:\\mathbb{R}^n\\to\\mathbb{R}^m$ sammelt die **Jacobi-Matrix** alle partiellen Ableitungen erster Ordnung:\n$$J_f(x)=\\begin{pmatrix} \\frac{\\partial f_1}{\\partial x_1} & \\cdots & \\frac{\\partial f_1}{\\partial x_n} \\\\ \\vdots & \\ddots & \\vdots \\\\ \\frac{\\partial f_m}{\\partial x_1} & \\cdots & \\frac{\\partial f_m}{\\partial x_n} \\end{pmatrix}$$\nFür $m=1$ ist die Jacobi-Matrix gerade der **Gradient** $\\nabla f$ als Zeilenvektor.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "body": "Zeile $i$ = Gradient der $i$-ten Komponentenfunktion. Spalte $j$ = Ableitungen nach der $j$-ten Variablen."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "impl-fc-1", "topicId": "implizite-funktionen", "front": "Ableitung einer implizit gegebenen Funktion $F(x,y)=0$?", "back": "$y'(x) = -\\dfrac{F_x}{F_y}$ (sofern $F_y\\neq 0$)." },
+    { "id": "impl-fc-2", "topicId": "implizite-funktionen", "front": "Was steht in Zeile $i$, Spalte $j$ der Jacobi-Matrix?", "back": "Die partielle Ableitung $\\dfrac{\\partial f_i}{\\partial x_j}$." },
+    { "id": "impl-fc-3", "topicId": "implizite-funktionen", "front": "Wann garantiert der Satz über implizite Funktionen eine lokale Auflösung $y(x)$?", "back": "Wenn $F(x_0,y_0)=0$ **und** $F_y(x_0,y_0)\\neq 0$." }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "impl-q1",
+      "topicId": "implizite-funktionen",
+      "difficulty": "mittel",
+      "prompt": "Für $F(x,y)=x^2+y^2-1=0$ ist $y'(x)$ gleich…",
+      "options": ["$-\\dfrac{x}{y}$", "$-\\dfrac{y}{x}$", "$\\dfrac{x}{y}$", "$-\\dfrac{2x}{1}$"],
+      "correct": [0],
+      "explanation": "$F_x=2x$, $F_y=2y$, also $y'=-F_x/F_y=-\\dfrac{2x}{2y}=-\\dfrac{x}{y}$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "impl-q2",
+      "topicId": "implizite-funktionen",
+      "difficulty": "leicht",
+      "prompt": "Für eine skalare Funktion $f:\\mathbb{R}^n\\to\\mathbb{R}$ ist die Jacobi-Matrix identisch zum Gradienten (als Zeilenvektor).",
+      "answer": true,
+      "explanation": "Bei $m=1$ hat die Jacobi-Matrix nur eine Zeile – das ist genau $\\nabla f$."
+    },
+    {
+      "kind": "numeric",
+      "id": "impl-q3",
+      "topicId": "implizite-funktionen",
+      "difficulty": "mittel",
+      "prompt": "Einheitskreis $x^2+y^2=1$. Wie groß ist die Steigung $y'$ im Punkt $(0{,}6;\\,0{,}8)$?",
+      "answer": -0.75,
+      "tolerance": 0.01,
+      "explanation": "$y'=-x/y=-0{,}6/0{,}8=-0{,}75$."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "impl-ex-1",
+      "topicId": "implizite-funktionen",
+      "label": "Implizites Differenzieren",
+      "source": "Übungsblatt (Mathe 2)",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Die Kurve sei durch $F(x,y)=x^3+y^3-6xy=0$ gegeben (Descartes-Blatt). Bestimme $y'(x)$.",
+      "hint": "Differenziere jeden Term nach $x$ und beachte bei $y$-Termen die Kettenregel: $\\frac{d}{dx}y^3 = 3y^2 y'$.",
+      "solution": "**1. Partielle Ableitungen:**\n$$F_x = 3x^2 - 6y,\\qquad F_y = 3y^2 - 6x$$\n\n**2. Formel anwenden:**\n$$y'(x) = -\\frac{F_x}{F_y} = -\\frac{3x^2-6y}{3y^2-6x} = -\\frac{x^2-2y}{y^2-2x}$$\n\ngültig für $y^2-2x\\neq 0$."
+    }
+  ]
+}

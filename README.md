@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StudyHub – persönliche Lernplattform
 
-## Getting Started
+Eine lokal gehostete Lern-Webapp für vier Fächer (Sommersemester 26):
+**Mathematik 2**, **Schließende Statistik**, **Privatrecht**, **BWL II (Marketing & Personal)**.
 
-First, run the development server:
+Features: Themen-Erklärungen mit Formelsatz (KaTeX) & Grafiken, interaktive Quizze
+(Multiple-Choice, Wahr/Falsch, numerische Eingabe, Freitext), Karteikarten mit
+Spaced-Repetition (SM-2), durchgerechnete Aufgaben & Lösungen, Klausur-Simulator und
+ein KI-Tutor, der die Kursunterlagen kennt.
+
+## Starten
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install      # einmalig
+npm run dev      # → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## KI-Tutor aktivieren (optional)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cp .env.local.example .env.local
+# ANTHROPIC_API_KEY=sk-ant-... eintragen, dann Dev-Server neu starten
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ohne Key funktioniert alles außer dem Live-Chat; der Tutor zeigt dann einen Hinweis.
 
-## Learn More
+## Inhalte
 
-To learn more about Next.js, take a look at the following resources:
+Lerninhalte liegen als JSON unter `content/<fach>/<thema>.json` und werden zur
+Laufzeit geladen (`src/lib/content.ts`). Schema: `src/lib/types.ts`.
+Die Themen-/Aufgaben-Landkarte aus den Originalunterlagen: `data/corpus-map.json`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 16 (App Router, Turbopack) · React 19 · Tailwind v4 · KaTeX · Mermaid ·
+mathjs · @anthropic-ai/sdk. Fortschritt wird lokal im Browser (localStorage) gespeichert.
