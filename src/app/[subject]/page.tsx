@@ -4,7 +4,8 @@ import { getTopicHeaders } from "@/lib/content";
 import { SubjectTheme } from "@/components/SubjectTheme";
 import { TopicList } from "@/components/subject/TopicList";
 import { TutorDock } from "@/components/tutor/TutorDock";
-import { Clock, FileCheck2, Info } from "lucide-react";
+import Link from "next/link";
+import { Clock, FileCheck2, Info, Shuffle, GraduationCap } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -55,6 +56,36 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
           </div>
         )}
       </header>
+
+      {headers.length > 0 && (
+        <div className="mb-8 grid gap-3 sm:grid-cols-2">
+          <Link
+            href={`/${meta.id}/quer`}
+            className="group flex items-center gap-3 rounded-2xl border px-5 py-4 transition-all hover:-translate-y-0.5"
+            style={{ borderColor: "color-mix(in oklab, var(--accent) 40%, var(--color-line))", background: "color-mix(in oklab, var(--accent) 9%, transparent)" }}
+          >
+            <span className="grid h-11 w-11 place-items-center rounded-xl" style={{ color: meta.accent, background: "color-mix(in oklab, var(--accent) 16%, transparent)" }}>
+              <Shuffle size={20} />
+            </span>
+            <div>
+              <div className="font-medium text-heading">Querbeet lernen</div>
+              <div className="text-xs text-muted">Quiz · Karteikarten · Aufgaben aus allen Themen gemischt</div>
+            </div>
+          </Link>
+          <Link
+            href="/klausur"
+            className="group flex items-center gap-3 rounded-2xl border border-line bg-surface/40 px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-surface-2/60"
+          >
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-surface-2 text-muted transition-colors group-hover:text-text">
+              <GraduationCap size={20} />
+            </span>
+            <div>
+              <div className="font-medium text-heading">Klausur-Simulator</div>
+              <div className="text-xs text-muted">Unter Zeitdruck üben, mit Auswertung</div>
+            </div>
+          </Link>
+        </div>
+      )}
 
       {headers.length ? (
         <TopicList headers={headers} />

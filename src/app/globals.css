@@ -59,6 +59,11 @@
   --grain-opacity: 0.04;
   --grain-blend: overlay;
   --atmo-opacity: 1;
+
+  /* Karopapier (squared-paper) — DARK (blueprint) */
+  --karo-paper: #0f1119;
+  --karo-line: rgba(125, 162, 235, 0.13);
+  --karo-ink: #e0e7f6;
 }
 
 /* ----------------------------------------------------------------------------
@@ -100,6 +105,11 @@ html[data-theme="light"] {
   --grain-opacity: 0.5;
   --grain-blend: multiply;
   --atmo-opacity: 0.55;
+
+  /* Karopapier — LIGHT (pen on graph paper) */
+  --karo-paper: #fcfcf3;
+  --karo-line: rgba(56, 104, 196, 0.16);
+  --karo-ink: #1d2c54;
 
   color-scheme: light;
 }
@@ -195,6 +205,38 @@ body {
 .katex { font-size: 1.05em; }
 
 .section-lead .prose > p:first-of-type::first-letter { font-family: var(--font-display); font-weight: 600; float: left; font-size: 3.1em; line-height: 0.82; padding: 0.04em 0.12em 0 0; color: var(--accent); }
+
+/* ----------------------------------------------------------------------------
+   Karopapier — math/stat calculations look like they're on squared paper
+---------------------------------------------------------------------------- */
+.karo-surface,
+.math-karo .katex-display,
+.math-karo .solution-box {
+  background-color: var(--karo-paper);
+  background-image:
+    linear-gradient(var(--karo-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--karo-line) 1px, transparent 1px);
+  background-size: 21px 21px;
+  border: 1px solid color-mix(in oklab, var(--karo-line) 60%, var(--color-line));
+  border-radius: 10px;
+}
+.math-karo .katex-display { padding: 0.75em 1em; color: var(--karo-ink); box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset; }
+.math-karo .katex-display .katex { color: var(--karo-ink); }
+.math-karo .solution-box { color: var(--karo-ink); }
+.math-karo .solution-box .katex { color: var(--karo-ink); }
+/* nested display math inside a karo solution box: no double grid */
+.math-karo .solution-box .katex-display { background: none; border: 0; box-shadow: none; padding: 0.35em 0; }
+
+/* PDF export source — rendered off-screen, captured by the "Als PDF" button */
+.pdf-export-root {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+  width: 760px;
+  padding: 44px 40px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
 
 /* ----------------------------------------------------------------------------
    Print → clean PDF export

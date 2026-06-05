@@ -23,7 +23,7 @@ export function QuizEngine({ questions, topicId }: { questions: Question[]; topi
 
   function handleAnswer(correct: boolean) {
     setResults((r) => ({ ...r, [q.id]: correct }));
-    actions.recordQuiz(topicId, q.id, correct);
+    actions.recordQuiz(q.topicId || topicId, q.id, correct);
   }
 
   function next() {

@@ -9,7 +9,7 @@ import { QuizEngine } from "@/components/learn/QuizEngine";
 import { FlashcardDeck } from "@/components/learn/FlashcardDeck";
 import { ExerciseList } from "@/components/learn/ExerciseList";
 import { TutorDock } from "@/components/tutor/TutorDock";
-import { PrintButton } from "@/components/PrintButton";
+import { PdfButton } from "@/components/PdfButton";
 import { BookOpen, ListChecks, Layers, FileText, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 
 export const dynamic = "force-dynamic";
@@ -26,6 +26,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
   const prev = idx > 0 ? all[idx - 1] : null;
   const next = idx < all.length - 1 ? all[idx + 1] : null;
 
+  const isMath = meta.id === "mathe-2" || meta.id === "statistik";
   const context = topic.sections.map((s) => `## ${s.heading}\n${s.body}`).join("\n\n");
 
   const tabs: TabDef[] = [
@@ -67,7 +68,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
   ];
 
   return (
-    <SubjectTheme subject={meta} className="mx-auto max-w-3xl px-5 py-8 lg:px-8 lg:py-10">
+    <SubjectTheme subject={meta} className={`mx-auto max-w-3xl px-5 py-8 lg:px-8 lg:py-10 ${isMath ? "math-karo" : ""}`}>
       <div className="no-print mb-6">
         <Link href={`/${meta.id}`} className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-text">
           <ArrowLeft size={15} /> {meta.title}
@@ -82,7 +83,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
             </h1>
             <p className="serif-italic mt-3 max-w-2xl text-lg leading-relaxed text-muted">{topic.summary}</p>
           </div>
-          <PrintButton />
+          <PdfButton targetId="pdf-export-root" filename={`${topic.id}.pdf`} />
         </div>
       </div>
 
@@ -90,10 +91,11 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
         <TabsShell tabs={tabs} />
       </div>
 
-      {/* Clean print/PDF layout — always rendered, only visible when printing */}
-      <div className="print-area hidden print:block">
-        <h1 className="mb-1 text-2xl font-bold">{topic.title}</h1>
-        <p className="mb-6 text-sm">{meta.title} · {topic.summary}</p>
+      {/* PDF export source — rendered off-screen, captured by the "Als PDF" button */}
+      <div id="pdf-export-root" aria-hidden className="pdf-export-root">
+        <div className="label-mono mb-2" style={{ color: "var(--accent)" }}>{meta.short} · Thema {idx + 1}</div>
+        <h1 className="font-display mb-1 text-3xl font-medium tracking-tight text-heading">{topic.title}</h1>
+        <p className="serif-italic mb-7 text-muted">{topic.summary}</p>
         <SectionView sections={topic.sections} />
       </div>
 

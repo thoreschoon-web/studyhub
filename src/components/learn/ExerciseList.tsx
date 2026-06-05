@@ -90,7 +90,7 @@ function ExerciseItem({ ex }: { ex: Exercise }) {
           )}
 
           {showSol && (
-            <div className="animate-fade-in-up mt-4 rounded-xl border border-line bg-plot/60 p-4">
+            <div className="solution-box animate-fade-in-up mt-4 rounded-xl border border-line bg-plot/60 p-4">
               <div className="mb-2 text-[0.7rem] font-semibold uppercase tracking-wide text-faint">
                 Lösungsweg
               </div>
