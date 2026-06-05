@@ -18,7 +18,7 @@ export default function KlausurPage() {
   return (
     <div className="mx-auto max-w-2xl px-5 py-10 lg:px-8">
       <header className="mb-7">
-        <h1 className="font-display flex items-center gap-3 text-3xl font-medium tracking-tight text-white">
+        <h1 className="font-display flex items-center gap-3 text-3xl font-medium tracking-tight text-heading">
           <GraduationCap size={24} /> Klausur-Simulator
         </h1>
         <p className="mt-1 text-sm text-muted">

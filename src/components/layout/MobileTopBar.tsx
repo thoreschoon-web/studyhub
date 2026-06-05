@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { SUBJECTS } from "@/lib/subjects";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function MobileTopBar() {
   const [open, setOpen] = useState(false);
@@ -15,9 +16,12 @@ export function MobileTopBar() {
         </span>
         <span className="font-semibold">StudyHub</span>
       </Link>
-      <button onClick={() => setOpen((o) => !o)} className="rounded-lg border border-line p-2 text-muted" aria-label="Menü">
-        {open ? <X size={18} /> : <Menu size={18} />}
-      </button>
+      <div className="flex items-center gap-2">
+        <ThemeToggle compact />
+        <button onClick={() => setOpen((o) => !o)} className="rounded-lg border border-line p-2 text-muted" aria-label="Menü">
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
+      </div>
 
       {open && (
         <div className="absolute inset-x-0 top-full border-b border-line bg-bg-soft p-3 shadow-xl">

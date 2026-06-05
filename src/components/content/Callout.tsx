@@ -3,13 +3,13 @@ import type { Callout as CalloutT } from "@/lib/types";
 import { Info, AlertTriangle, Lightbulb, BookMarked, FlaskConical, Sigma } from "lucide-react";
 
 const STYLES: Record<CalloutT["kind"], { icon: React.ReactNode; label: string; color: string }> = {
-  info: { icon: <Info size={16} />, label: "Hinweis", color: "#38bdf8" },
-  warning: { icon: <AlertTriangle size={16} />, label: "Achtung", color: "#f59e0b" },
-  tip: { icon: <Lightbulb size={16} />, label: "Tipp", color: "#22c55e" },
+  info: { icon: <Info size={16} />, label: "Hinweis", color: "var(--cl-info)" },
+  warning: { icon: <AlertTriangle size={16} />, label: "Achtung", color: "var(--cl-warning)" },
+  tip: { icon: <Lightbulb size={16} />, label: "Tipp", color: "var(--cl-tip)" },
   merksatz: { icon: <BookMarked size={16} />, label: "Merksatz", color: "var(--accent)" },
-  beispiel: { icon: <FlaskConical size={16} />, label: "Beispiel", color: "#a78bfa" },
+  beispiel: { icon: <FlaskConical size={16} />, label: "Beispiel", color: "var(--cl-beispiel)" },
   definition: { icon: <BookMarked size={16} />, label: "Definition", color: "var(--accent)" },
-  formel: { icon: <Sigma size={16} />, label: "Formel", color: "#f472b6" },
+  formel: { icon: <Sigma size={16} />, label: "Formel", color: "var(--cl-formel)" },
 };
 
 export function Callout({ callout }: { callout: CalloutT }) {

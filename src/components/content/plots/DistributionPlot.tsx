@@ -73,9 +73,9 @@ export function DistributionPlot({
   return (
     <figure className="my-5">
       {title && <div className="mb-2 text-sm font-medium text-text">{title}</div>}
-      <div className="overflow-hidden rounded-xl border border-line bg-[#0b0d13] p-2">
+      <div className="overflow-hidden rounded-xl border border-line bg-plot p-2">
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={title ?? "Verteilung"}>
-          <line x1={P} y1={sy(0)} x2={W - P} y2={sy(0)} stroke="#3a4153" strokeWidth={1.5} />
+          <line x1={P} y1={sy(0)} x2={W - P} y2={sy(0)} style={{ stroke: "var(--color-plot-axis)" }} strokeWidth={1.5} />
           {areaPath && <path d={areaPath} fill="color-mix(in oklab, var(--accent) 32%, transparent)" />}
 
           {discrete
@@ -107,7 +107,7 @@ export function DistributionPlot({
           ))}
 
           {xticks.map((t) => (
-            <text key={t} x={sx(t)} y={H - P + 14} fontSize={10} fill="#646b7d" textAnchor="middle">
+            <text key={t} x={sx(t)} y={H - P + 14} fontSize={10} style={{ fill: "var(--color-faint)" }} textAnchor="middle">
               {discrete ? t : fmt(t)}
             </text>
           ))}

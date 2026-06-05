@@ -20,7 +20,7 @@ export function SectionView({ sections }: { sections: Section[] }) {
             </span>
             <span className="h-px flex-1" style={{ background: "color-mix(in oklab, var(--accent) 22%, var(--color-line))" }} />
           </div>
-          <h2 className="font-display mb-4 text-[1.7rem] font-medium leading-tight tracking-tight text-white">
+          <h2 className="font-display mb-4 text-[1.7rem] font-medium leading-tight tracking-tight text-heading">
             {s.heading}
           </h2>
           <Markdown>{s.body}</Markdown>

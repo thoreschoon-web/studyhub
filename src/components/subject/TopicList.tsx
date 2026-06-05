@@ -44,7 +44,7 @@ function TopicRow({ h, index }: { h: TopicHeader; index: number }) {
         {index + 1}
       </span>
       <div className="min-w-0 flex-1">
-        <div className="font-display truncate text-[1.1rem] font-medium text-white">{h.title}</div>
+        <div className="font-display truncate text-[1.1rem] font-medium text-heading">{h.title}</div>
         <div className="mt-0.5 line-clamp-1 text-xs text-muted">{h.summary}</div>
         <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-[0.7rem] text-faint">
           {h.counts.quiz > 0 && <span className="inline-flex items-center gap-1"><ListChecks size={12} /> {h.counts.quiz}</span>}

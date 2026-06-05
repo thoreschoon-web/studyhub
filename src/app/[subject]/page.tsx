@@ -31,7 +31,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
           </div>
           <div className="flex-1">
             <div className="label-mono mb-2" style={{ color: meta.accent }}>{meta.tagline}</div>
-            <h1 className="font-display text-3xl font-medium leading-tight tracking-tight text-white lg:text-[2.8rem]">{meta.title}</h1>
+            <h1 className="font-display text-3xl font-medium leading-tight tracking-tight text-heading lg:text-[2.8rem]">{meta.title}</h1>
             <p className="mt-2 max-w-2xl leading-relaxed text-muted">{meta.description}</p>
           </div>
         </div>

@@ -75,26 +75,26 @@ export function FunctionPlot({
   return (
     <figure className="my-5">
       {title && <div className="mb-2 text-sm font-medium text-text">{title}</div>}
-      <div className="overflow-hidden rounded-xl border border-line bg-[#0b0d13] p-2">
+      <div className="overflow-hidden rounded-xl border border-line bg-plot p-2">
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={title ?? "Funktionsplot"}>
           {/* grid */}
           {xticks.map((t) => (
-            <line key={`xg${t}`} x1={sx(t)} y1={P} x2={sx(t)} y2={H - P} stroke="#1b1f2b" strokeWidth={1} />
+            <line key={`xg${t}`} x1={sx(t)} y1={P} x2={sx(t)} y2={H - P} style={{ stroke: "var(--color-plot-grid)" }} strokeWidth={1} />
           ))}
           {yticks.map((t) => (
-            <line key={`yg${t}`} x1={P} y1={sy(t)} x2={W - P} y2={sy(t)} stroke="#1b1f2b" strokeWidth={1} />
+            <line key={`yg${t}`} x1={P} y1={sy(t)} x2={W - P} y2={sy(t)} style={{ stroke: "var(--color-plot-grid)" }} strokeWidth={1} />
           ))}
           {/* axes (x=0,y=0 if in range) */}
-          {y0 < 0 && y1 > 0 && <line x1={P} y1={sy(0)} x2={W - P} y2={sy(0)} stroke="#3a4153" strokeWidth={1.5} />}
-          {x0 < 0 && x1 > 0 && <line x1={sx(0)} y1={P} x2={sx(0)} y2={H - P} stroke="#3a4153" strokeWidth={1.5} />}
+          {y0 < 0 && y1 > 0 && <line x1={P} y1={sy(0)} x2={W - P} y2={sy(0)} style={{ stroke: "var(--color-plot-axis)" }} strokeWidth={1.5} />}
+          {x0 < 0 && x1 > 0 && <line x1={sx(0)} y1={P} x2={sx(0)} y2={H - P} style={{ stroke: "var(--color-plot-axis)" }} strokeWidth={1.5} />}
           {/* tick labels */}
           {xticks.map((t) => (
-            <text key={`xt${t}`} x={sx(t)} y={H - P + 14} fontSize={10} fill="#646b7d" textAnchor="middle">
+            <text key={`xt${t}`} x={sx(t)} y={H - P + 14} fontSize={10} style={{ fill: "var(--color-faint)" }} textAnchor="middle">
               {fmt(t)}
             </text>
           ))}
           {yticks.map((t) => (
-            <text key={`yt${t}`} x={P - 6} y={sy(t) + 3} fontSize={10} fill="#646b7d" textAnchor="end">
+            <text key={`yt${t}`} x={P - 6} y={sy(t) + 3} fontSize={10} style={{ fill: "var(--color-faint)" }} textAnchor="end">
               {fmt(t)}
             </text>
           ))}
@@ -113,7 +113,7 @@ export function FunctionPlot({
           {/* points */}
           {points.map((p, i) => (
             <g key={`p${i}`}>
-              <circle cx={sx(p.x)} cy={sy(p.y)} r={4} fill={p.color ?? "#f59e0b"} stroke="#0b0d13" strokeWidth={1.5} />
+              <circle cx={sx(p.x)} cy={sy(p.y)} r={4} fill={p.color ?? "#f59e0b"} style={{ stroke: "var(--color-plot)" }} strokeWidth={1.5} />
               {p.label && (
                 <text x={sx(p.x) + 7} y={sy(p.y) - 7} fontSize={11} fill="#e9ebf2">
                   {p.label}

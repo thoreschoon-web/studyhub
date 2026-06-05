@@ -60,7 +60,7 @@ export function SubjectCard({
         )}
       </div>
 
-      <h3 className="font-display mt-5 text-[1.45rem] font-medium leading-tight tracking-tight text-white">
+      <h3 className="font-display mt-5 text-[1.45rem] font-medium leading-tight tracking-tight text-heading">
         {meta.title}
       </h3>
       <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted">{meta.tagline}</p>

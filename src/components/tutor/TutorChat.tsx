@@ -159,7 +159,7 @@ function NoKeyNotice() {
       <p className="text-muted">
         Lege im Projektordner eine Datei <code className="rounded bg-surface-2 px-1.5 py-0.5 text-xs">.env.local</code> an mit:
       </p>
-      <pre className="mt-2 overflow-x-auto rounded-lg border border-line bg-[#0b0d13] p-3 text-xs text-text">
+      <pre className="mt-2 overflow-x-auto rounded-lg border border-line bg-plot p-3 text-xs text-text">
         ANTHROPIC_API_KEY=sk-ant-...
       </pre>
       <p className="mt-2 text-muted">

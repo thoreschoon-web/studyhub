@@ -23,7 +23,7 @@ export default function Dashboard() {
     <div className="mx-auto max-w-6xl px-5 py-12 lg:px-10 lg:py-16">
       <header className="mb-12 max-w-3xl">
         <div className="label-mono animate-fade-in">Sommersemester 26 · Lernplattform</div>
-        <h1 className="font-display mt-3 text-4xl font-medium leading-[1.05] tracking-tight text-white lg:text-[3.4rem] animate-fade-in-up">
+        <h1 className="font-display mt-3 text-4xl font-medium leading-[1.05] tracking-tight text-heading lg:text-[3.4rem] animate-fade-in-up">
           Wissen, das <span className="serif-italic" style={{ color: "var(--accent)" }}>sitzt</span>.
         </h1>
         <p className="mt-4 text-[1.05rem] leading-relaxed text-muted animate-fade-in-up" style={{ animationDelay: "80ms" }}>

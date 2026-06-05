@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 /* ============================================================================
-   StudyHub — "Editorial Premium Dark"
-   Display: Fraunces (serif, characterful) · Body: Hanken Grotesk · Mono: JetBrains
-   Warm charcoal, jewel accents, paper-grain texture, numbered editorial sections.
+   StudyHub — "Editorial Premium" · Dark + Light
+   Dark are the @theme defaults; html[data-theme="light"] overrides every token.
 ============================================================================ */
 @theme {
+  /* neutral ramp — DARK defaults */
   --color-bg: #0b0a0e;
   --color-bg-soft: #100f15;
   --color-surface: #16151d;
@@ -16,14 +16,23 @@
   --color-text: #ece9f2;
   --color-muted: #9d99ad;
   --color-faint: #6a6679;
+  --color-heading: #ffffff;
+  --color-prose: #d2cfdc;
 
-  --color-accent: #6e7bff;
+  /* surfaces for figures / code */
+  --color-plot: #0b0d13;
+  --color-plot-grid: #1b1f2b;
+  --color-plot-axis: #3a4153;
+  --color-code: #1d1c26;
+  --color-code-text: #c9cdfa;
+  --color-pre: #08070b;
 
   /* subject accents — jewel tones */
-  --color-mathe: #6e7bff;       /* iris indigo */
-  --color-statistik: #19c8b0;   /* jade teal   */
-  --color-privatrecht: #e6a83a; /* brass gold  */
-  --color-bwl: #f2698f;         /* rose        */
+  --color-accent: #6e7bff;
+  --color-mathe: #6e7bff;
+  --color-statistik: #19c8b0;
+  --color-privatrecht: #e6a83a;
+  --color-bwl: #f2698f;
 
   --color-ok: #34d399;
   --color-bad: #fb7185;
@@ -39,6 +48,60 @@
 :root {
   --accent: var(--color-mathe);
   --accent-rgb: 110 123 255;
+
+  /* callout accent colours — DARK */
+  --cl-info: #38bdf8;
+  --cl-tip: #34d399;
+  --cl-warning: #f0b429;
+  --cl-beispiel: #a78bfa;
+  --cl-formel: #f472b6;
+
+  --grain-opacity: 0.04;
+  --grain-blend: overlay;
+  --atmo-opacity: 1;
+}
+
+/* ----------------------------------------------------------------------------
+   LIGHT THEME — warm paper, deeper accents for contrast
+---------------------------------------------------------------------------- */
+html[data-theme="light"] {
+  --color-bg: #f7f5f0;
+  --color-bg-soft: #f1eee6;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f1ea;
+  --color-surface-3: #e9e5db;
+  --color-line: #e5e1d6;
+  --color-line-soft: #efece4;
+  --color-text: #2b2823;
+  --color-muted: #6c685e;
+  --color-faint: #9b958a;
+  --color-heading: #17140d;
+  --color-prose: #34302a;
+
+  --color-plot: #fcfbf7;
+  --color-plot-grid: #ece8df;
+  --color-plot-axis: #ccc7bb;
+  --color-code: #f0ede5;
+  --color-code-text: #4a4eb0;
+  --color-pre: #f3f0e8;
+
+  --color-mathe: #5b63e6;
+  --color-statistik: #0e9c89;
+  --color-privatrecht: #b9801c;
+  --color-bwl: #df436d;
+  --color-accent: #5b63e6;
+
+  --cl-info: #0a7ea4;
+  --cl-tip: #0e9e6e;
+  --cl-warning: #b9801c;
+  --cl-beispiel: #7c5cd6;
+  --cl-formel: #d6447f;
+
+  --grain-opacity: 0.5;
+  --grain-blend: multiply;
+  --atmo-opacity: 0.55;
+
+  color-scheme: light;
 }
 
 * { border-color: var(--color-line); }
@@ -54,59 +117,44 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Atmospheric accent glow + faint grid, fixed behind everything */
 .bg-atmosphere {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  opacity: var(--atmo-opacity);
   background:
     radial-gradient(1100px 640px at 82% -10%, color-mix(in oklab, var(--accent) 16%, transparent), transparent 62%),
     radial-gradient(820px 560px at -8% 2%, color-mix(in oklab, var(--accent) 9%, transparent), transparent 58%),
     linear-gradient(180deg, color-mix(in oklab, var(--accent) 4%, transparent), transparent 30%);
-  transition: background 0.5s ease;
+  transition: background 0.5s ease, opacity 0.3s ease;
 }
-/* Paper grain overlay */
 .bg-grain {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.04;
-  mix-blend-mode: overlay;
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 11px; height: 11px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: 99px; border: 3px solid transparent; background-clip: content-box; }
-::-webkit-scrollbar-thumb:hover { background: #36343f; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in oklab, var(--color-surface-3), var(--color-faint) 45%); background-clip: content-box; }
 
-::selection { background: color-mix(in oklab, var(--accent) 38%, transparent); color: #fff; }
+::selection { background: color-mix(in oklab, var(--accent) 38%, transparent); color: var(--color-heading); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 /* ----------------------------------------------------------------------------
    Editorial helpers
 ---------------------------------------------------------------------------- */
 .font-display { font-family: var(--font-display); }
-.label-mono {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-faint);
-}
+.label-mono { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-faint); }
 .hairline { height: 1px; background: linear-gradient(90deg, var(--accent), transparent); }
 .serif-italic { font-family: var(--font-display); font-style: italic; }
 
 /* ----------------------------------------------------------------------------
-   Animations — staggered editorial reveal
+   Animations
 ---------------------------------------------------------------------------- */
 @keyframes fade-in-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes pop { 0% { transform: scale(.96); } 60% { transform: scale(1.02); } 100% { transform: scale(1); } }
-@keyframes draw-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .animate-fade-in-up { animation: fade-in-up .5s cubic-bezier(.2,.7,.2,1) both; }
 .animate-fade-in { animation: fade-in .4s ease both; }
 .animate-pop { animation: pop .25s ease; }
@@ -115,22 +163,15 @@ body {
 /* ----------------------------------------------------------------------------
    Prose — rendered markdown / lecture content
 ---------------------------------------------------------------------------- */
-.prose { color: #d7d4e0; line-height: 1.78; font-size: 1.02rem; }
+.prose { color: var(--color-prose); line-height: 1.78; font-size: 1.02rem; }
 .prose > * + * { margin-top: 1.1em; }
-.prose h1, .prose h2, .prose h3, .prose h4 {
-  font-family: var(--font-display);
-  font-weight: 560;
-  line-height: 1.2;
-  letter-spacing: -0.012em;
-  color: #fff;
-  scroll-margin-top: 6rem;
-}
+.prose h1, .prose h2, .prose h3, .prose h4 { font-family: var(--font-display); font-weight: 560; line-height: 1.2; letter-spacing: -0.012em; color: var(--color-heading); scroll-margin-top: 6rem; }
 .prose h2 { font-size: 1.6rem; margin-top: 1.9em; }
 .prose h3 { font-size: 1.28rem; margin-top: 1.6em; }
 .prose h4 { font-size: 1.06rem; margin-top: 1.3em; font-weight: 600; }
-.prose p { color: #d2cfdc; }
-.prose strong { color: #fff; font-weight: 600; }
-.prose em { color: #e7e4ef; }
+.prose p { color: var(--color-prose); }
+.prose strong { color: var(--color-heading); font-weight: 600; }
+.prose em { color: var(--color-text); }
 .prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in oklab, var(--accent) 45%, transparent); }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose ul { list-style: none; }
@@ -138,38 +179,22 @@ body {
 .prose ul > li::before { content: ""; position: absolute; left: -1.05em; top: .78em; width: 6px; height: 6px; border-radius: 99px; background: var(--accent); }
 .prose ol { list-style: none; counter-reset: li; }
 .prose ol > li { position: relative; counter-increment: li; }
-.prose ol > li::before {
-  content: counter(li);
-  position: absolute; left: -1.7em; top: .05em;
-  font-family: var(--font-mono); font-size: .72em; font-weight: 600;
-  color: var(--accent);
-  width: 1.25em; height: 1.25em; display: grid; place-items: center;
-  border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent); border-radius: 6px;
-}
-.prose li { margin: .4em 0; color: #d2cfdc; }
+.prose ol > li::before { content: counter(li); position: absolute; left: -1.7em; top: .05em; font-family: var(--font-mono); font-size: .72em; font-weight: 600; color: var(--accent); width: 1.25em; height: 1.25em; display: grid; place-items: center; border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent); border-radius: 6px; }
+.prose li { margin: .4em 0; color: var(--color-prose); }
 .prose li > ul, .prose li > ol { margin-top: .4em; }
 .prose blockquote { border-left: 2px solid var(--accent); padding: .2em 0 .2em 1.2em; color: var(--color-muted); font-family: var(--font-display); font-style: italic; font-size: 1.08em; }
-.prose code { font-family: var(--font-mono); font-size: .85em; background: var(--color-surface-2); border: 1px solid var(--color-line); padding: .12em .42em; border-radius: 6px; color: #c9cdfa; }
-.prose pre { background: #08070b; border: 1px solid var(--color-line); border-radius: 12px; padding: 1.1em 1.2em; overflow-x: auto; font-size: .85rem; line-height: 1.65; }
-.prose pre code { background: none; border: none; padding: 0; color: #d2cfdc; font-size: inherit; }
+.prose code { font-family: var(--font-mono); font-size: .85em; background: var(--color-code); border: 1px solid var(--color-line); padding: .12em .42em; border-radius: 6px; color: var(--color-code-text); }
+.prose pre { background: var(--color-pre); border: 1px solid var(--color-line); border-radius: 12px; padding: 1.1em 1.2em; overflow-x: auto; font-size: .85rem; line-height: 1.65; }
+.prose pre code { background: none; border: none; padding: 0; color: var(--color-prose); font-size: inherit; }
 .prose hr { border: none; border-top: 1px solid var(--color-line); margin: 2.2em 0; }
 .prose table { width: 100%; border-collapse: collapse; font-size: .92rem; display: block; overflow-x: auto; }
 .prose th, .prose td { border: 1px solid var(--color-line); padding: .55em .8em; text-align: left; }
-.prose th { background: var(--color-surface-2); font-weight: 600; color: #fff; font-family: var(--font-sans); }
+.prose th { background: var(--color-surface-2); font-weight: 600; color: var(--color-heading); font-family: var(--font-sans); }
 .prose tbody tr:nth-child(even) { background: color-mix(in oklab, var(--color-surface) 55%, transparent); }
 .prose .katex-display { overflow-x: auto; overflow-y: hidden; padding: .4em 0; }
 .katex { font-size: 1.05em; }
 
-/* Drop cap on the first section's opening paragraph */
-.section-lead .prose > p:first-of-type::first-letter {
-  font-family: var(--font-display);
-  font-weight: 600;
-  float: left;
-  font-size: 3.1em;
-  line-height: 0.82;
-  padding: 0.04em 0.12em 0 0;
-  color: var(--accent);
-}
+.section-lead .prose > p:first-of-type::first-letter { font-family: var(--font-display); font-weight: 600; float: left; font-size: 3.1em; line-height: 0.82; padding: 0.04em 0.12em 0 0; color: var(--accent); }
 
 /* ----------------------------------------------------------------------------
    Print → clean PDF export

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { SUBJECTS } from "@/lib/subjects";
 import { cn } from "@/lib/utils";
 import { LayoutDashboard, Layers, Sparkles, GraduationCap } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -65,6 +66,8 @@ export function Sidebar() {
         <NavItem href="/klausur" icon={<GraduationCap size={17} />} label="Klausur-Simulator" active={isActive("/klausur")} />
         <NavItem href="/tutor" icon={<Sparkles size={17} />} label="KI-Tutor" active={isActive("/tutor")} />
       </nav>
+
+      <ThemeToggle className="mt-3 w-full justify-center" />
 
       <div className="mt-3 rounded-xl border border-line bg-surface/40 px-3 py-2.5 text-[0.7rem] text-faint">
         Lokal & privat · alle Fortschritte bleiben in diesem Browser.

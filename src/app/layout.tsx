@@ -35,6 +35,11 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${fraunces.variable} ${hanken.variable} ${mono.variable} h-full antialiased`}>
       <body className="min-h-full">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('studyhub.theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
+          }}
+        />
         <div className="bg-atmosphere" aria-hidden />
         <div className="bg-grain" aria-hidden />
         <div className="lg:grid lg:grid-cols-[272px_1fr] min-h-screen">

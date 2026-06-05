@@ -77,7 +77,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
             <div className="label-mono mb-2" style={{ color: "var(--accent)" }}>
               {meta.short} · Thema {idx + 1}
             </div>
-            <h1 className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-white lg:text-[2.6rem]">
+            <h1 className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-heading lg:text-[2.6rem]">
               {topic.title}
             </h1>
             <p className="serif-italic mt-3 max-w-2xl text-lg leading-relaxed text-muted">{topic.summary}</p>
