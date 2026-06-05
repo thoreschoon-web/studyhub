@@ -1,0 +1,351 @@
+{
+  "id": "hr-personalplanung-und-talent-management",
+  "subjectId": "bwl",
+  "title": "Personalplanung und Talent Management",
+  "summary": "Wie viele Mitarbeitende braucht ein Unternehmen – und welche? Dieses Thema erklärt den Personalplanungsprozess von der Bedarfsermittlung (Brutto- und Nettopersonalbedarf mit Rechenbeispiel) über HR Analytics bis hin zum strategischen Talent Management und der Nachfolgeplanung.",
+  "order": 11,
+  "estMinutes": 45,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "heading": "Was ist Personalplanung – und warum ist sie so wichtig?",
+      "body": "Stell dir vor, du bist Personalchef bei Amazon kurz vor Weihnachten: Plötzlich brauchst du 13.000 zusätzliche Mitarbeitende in Deutschland. Oder du bist bei McKinsey und musst entscheiden, welche 25 % der Jobs durch KI ersetzt werden sollen – während gleichzeitig 25 % neue, kundennahe Stellen entstehen. Solche Entscheidungen sind das Kerngeschäft der **Personalplanung**.\n\n**Definition (Armstrong 2006):** Personalplanung ist der Prozess, durch den der Personalbedarf einer Organisation identifiziert und Pläne zur Deckung dieses Bedarfs entwickelt werden. Sie beantwortet zwei grundlegende Fragen:\n\n1. **Wie viele** Mitarbeitende brauchen wir? (quantitative Planung)\n2. **Welche** Qualifikationen werden benötigt? (qualitative Planung)\n\nDie vier zentralen **W-Fragen** der Personalplanung lauten: **W**er, **W**ie viele, **W**o und **W**ann?\n\nOhne systematische Personalplanung passiert Folgendes (Kienbaum-Studie): 70 % der befragten deutschen Unternehmen haben keine Personalstrategie definiert, 75 % machen keine Szenario-Analysen. Das Ergebnis: Personalveränderungen laufen \"wenig faktenbasiert und vorausschauend\" ab.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Personalplanung",
+          "body": "Systematischer Prozess zur **quantitativen** (Wie viele?) und **qualitativen** (Welche Qualifikationen?) Bestimmung des zukünftigen Personalbedarfs, um Über- oder Unterdeckung frühzeitig zu erkennen und Maßnahmen einzuleiten."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Praxisbeispiele aus der Vorlesung",
+          "body": "- **Amazon** (2017): 13.000 Saisonkräfte fürs Weihnachtsgeschäft gesucht – Personalbestand kurzfristig verdoppelt.\n- **Continental/Rheinmetall** (2024): Continental vermittelt von Stellenkürzungen betroffene Mitarbeiter direkt an Rheinmetall weiter.\n- **McKinsey** (2026): 25 % neue kundennahe Stellen, gleichzeitig 25 % Abbau nicht-kundennaher Jobs durch KI."
+        }
+      ]
+    },
+    {
+      "id": "brutto-netto",
+      "heading": "Brutto- und Nettopersonalbedarf: Die Kernrechnung",
+      "body": "Das Herzstück der quantitativen Personalplanung ist die Unterscheidung zwischen **Bruttopersonalbedarf** und **Nettopersonalbedarf**.\n\n### Schritt 1: Bruttopersonalbedarf bestimmen\nDer **Bruttopersonalbedarf** (= Soll-Bestand) ist die Gesamtzahl der Mitarbeitenden, die das Unternehmen benötigt, um seine Ziele zu erreichen. Er wird beeinflusst durch:\n- **Externe Faktoren**: Konjunkturerwartungen, Marktentwicklung, technologischer Wandel\n- **Interne Faktoren**: neue Produkte, Technologien, Unternehmensstrategien\n- **Personale und soziale Faktoren**: Fluktuation, Krankheitsquoten, Renteneintritte\n\n### Schritt 2: Personalbestand fortschreiben\nDer **fortgeschriebene Personalbestand** ist der voraussichtliche Ist-Bestand zum Planungszeitpunkt:\n$$\\text{Fortgeschriebener Bestand} = \\text{Ist-Bestand} + \\text{Zugänge} - \\text{Abgänge}$$\n- **Zugänge**: bereits geplante Neueinstellungen, Rückkehrer aus Elternzeit\n- **Abgänge**: Renteneintritte, bekannte Kündigungen, Befristungsenden\n\n### Schritt 3: Nettopersonalbedarf berechnen\nDer **Nettopersonalbedarf** zeigt, ob Unter- oder Überdeckung vorliegt:\n$$\\text{Nettopersonalbedarf} = \\text{Bruttopersonalbedarf} - \\text{(Ist-Bestand + Zugänge - Abgänge)}$$\n\n| Ergebnis | Bedeutung | Maßnahme |\n|---|---|---|\n| Netto > 0 (positiv) | Personalmangel / Unterdeckung | Rekrutierung, Überstunden, Outsourcing |\n| Netto = 0 | Bedarfsdeckung | Keine Anpassung nötig |\n| Netto < 0 (negativ) | Personalüberhang / Überdeckung | Kurzarbeit, Abbau, Umsetzung |",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Kernformel Nettopersonalbedarf (Ridder 2009)",
+          "body": "$$\\text{Nettobedarf} = \\text{Bruttobedarf} - (\\text{Ist-Bestand} + \\text{Zugänge} - \\text{Abgänge})$$\n\nPositiver Wert = Unterdeckung (zu wenig Personal) | Negativer Wert = Überdeckung (zu viel Personal)"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Durchgerechnetes Beispiel: Softwareunternehmen TechGmbH",
+          "body": "**Gegeben:**\n- Bruttopersonalbedarf (Soll): **120 Entwickler**\n- Ist-Bestand aktuell: **100 Entwickler**\n- Geplante Zugänge (Neueinstellungen, die schon zugesagt haben): **+8**\n- Abgänge (3 Renten, 2 Kündigungen): **-5**\n\n**Rechnung:**\n$$\\text{Fortgeschriebener Bestand} = 100 + 8 - 5 = 103$$\n$$\\text{Nettopersonalbedarf} = 120 - 103 = +17$$\n\n**Ergebnis:** Die TechGmbH hat eine **Unterdeckung von 17 Stellen** und muss 17 weitere Entwickler rekrutieren."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "pp-rechenschema",
+          "title": "Rechenschema Personalbedarfsermittlung",
+          "headers": ["Position", "Wert", "Erläuterung"],
+          "rows": [
+            ["Bruttopersonalbedarf (Soll)", "120", "Wie viele brauchen wir insgesamt?"],
+            ["./. Ist-Bestand", "100", "Wie viele haben wir heute?"],
+            [".+. Geplante Zugänge", "+8", "Bereits bekannte Neueinstellungen"],
+            ["./. Abgänge", "-5", "Renten, Kündigungen, Befristungsende"],
+            ["= Fortgeschriebener Bestand", "103", "Voraussichtlicher Bestand"],
+            ["= Nettopersonalbedarf", "+17", "Positiv = Unterdeckung → Rekrutieren!"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planungsprozess",
+      "heading": "Der Personalplanungsprozess nach Noe",
+      "body": "Die Personalplanung ist kein einmaliges Ereignis, sondern ein **kontinuierlicher Kreislauf** mit drei Schritten (Noe et al. 2010):\n\n**Schritt 1: Prognose von Arbeitskräfteüberschuss oder -mangel**\n\nDazu werden zwei Prognosen erstellt und verglichen:\n- **Prognose der Nachfrage** nach Arbeitskräften: Wie viele und welche Mitarbeitenden brauchen wir künftig? (Trendanalysen, Konjunkturindikatoren, Technologieentwicklung)\n- **Prognose des Angebots**: Wie viele Mitarbeitende werden uns zur Verfügung stehen? (Altersstrukturanalyse, Fluktuationsquote, interner Arbeitsmarkt)\n\nAus dem Vergleich beider Prognosen entsteht die Vorhersage: Gibt es einen Überschuss oder Mangel?\n\n**Schritt 2: Zielsetzung und strategische Planung**\n\nFür jedes identifizierte Problem wird ein **quantitatives Ziel** festgelegt (z. B. \"In 18 Monaten 50 IT-Spezialisten einstellen\"). Die Wahl der Strategie wird nach vier Kriterien bewertet:\n- **Effektivität**: Löst die Maßnahme das Problem wirklich?\n- **Direkte und indirekte Kosten**: Was kostet die Maßnahme?\n- **Geschwindigkeit**: Wie schnell greift sie?\n- **Menschliches Leid**: Wie stark belastet sie die Betroffenen?\n\n**Schritt 3: Programmimplementierung und Evaluation**\n\nFür jede Maßnahme wird eine verantwortliche Person benannt. Nach der Umsetzung wird geprüft, ob die Ziele erreicht wurden – und warum Maßnahmen erfolgreich waren oder nicht.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Maßnahmen bei Personalmangel (Unterdeckung)",
+          "body": "- **Kurzfristig**: Überstunden, Leiharbeit, Outsourcing, Umschulung vorhandener Mitarbeitender\n- **Mittelfristig**: Externe Rekrutierung (Stellenanzeigen, Active Sourcing), Mitarbeiterempfehlungen\n- **Langfristig**: Employer Branding, Hochschulkooperationen, Azubi-Programme"
+        },
+        {
+          "kind": "info",
+          "title": "Maßnahmen bei Personalüberhang (Überdeckung)",
+          "body": "- **Vorbeugend**: Einstellungsstopp, Abbau von Überstunden, Arbeitszeitreduzierung (Kurzarbeit)\n- **Personalpolitisch**: Versetzungen, natürliche Fluktuation abwarten, Frühverrentung\n- **Direkt**: Aufhebungsverträge, betriebsbedingte Kündigung (rechtl. Rahmenbedingungen beachten!)"
+        },
+        {
+          "kind": "merksatz",
+          "title": "PINGO-Frage aus der Vorlesung (Folie 60)",
+          "body": "**Situation**: Ein neues Software-Projekt beginnt in 4 Wochen – Entwickler fehlen. Welche Maßnahme ist am sinnvollsten?\n\nAntwort: **Outsourcing** (b) – ist kurzfristig umsetzbar, weil externe Dienstleister sofort verfügbar sind. Umschulung dauert zu lang, Fluktuation zu reduzieren bringt keine neuen Fähigkeiten."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "pp-prozess",
+          "title": "Der Personalplanungsprozess (Noe et al. 2010)",
+          "caption": "Kontinuierlicher Kreislauf aus Prognose, Planung und Evaluation",
+          "code": "graph TD\n  A[Prognose der Nachfrage\\nnach Arbeitskräften] --> C\n  B[Prognose des\\nArbeitskräfteangebots] --> C\n  C[1. Prognose:\\nÜberschuss oder Mangel?] --> D\n  D[2. Zielsetzung und\\nstrategische Planung] --> E\n  E[3. Programmimplementierung\\nund Evaluation] --> A"
+        }
+      ]
+    },
+    {
+      "id": "hr-analytics",
+      "heading": "HR Analytics: Datenbasierte Personalplanung",
+      "body": "Traditionelle Personalplanung basierte oft auf Bauchgefühl. **HR Analytics** (= datenbasierte Personalentscheidungen) verändert das grundlegend.\n\n**Was ist HR Analytics?**\nHR Analytics bezeichnet die systematische Sammlung, Analyse und Nutzung mitarbeiterbezogener Daten, um **Wirkungszusammenhänge** innerhalb der Belegschaft zu verstehen und faktenbasierte Entscheidungen zu treffen. Datenquellen sind z. B. IT-Systeme, Social-Media-Netzwerke, Videokameras, biometrisches Tracking und Produktivitätsmesssysteme.\n\n**Vier Einsatzgebiete (Computerwoche, Skura 2018):**\n\n1. **Recruiting**: Datenanalysen identifizieren Kanäle, die die besten Kandidaten liefern. Automatisiertes CV-Screening ergänzt den Prozess.\n2. **Mitarbeiterbindung**: Welche Faktoren führen zu Kündigungen? Googles HR-Team stellte fest, dass Mitarbeiterinnen nach der Elternzeit besonders häufig kündigen – durch mehr Urlaubsanspruch sank die Fluktuationsrate um 50 %.\n3. **Arbeitsmarktanalyse**: Angebot und Nachfrage bestimmter Jobprofile am Markt beobachten, Benchmarks einholen.\n4. **Mitarbeiterentwicklung**: Machine Learning erkennt Wissens- und Skill-Lücken und schlägt gezielte Weiterbildungen vor.\n\n**Was ist dabei zu beachten?**\n- Mitarbeitende dürfen sich nicht überwacht fühlen – **Vertrauen** ist entscheidend\n- **Datenqualität** ist Voraussetzung: nur valide Daten liefern nützliche Erkenntnisse\n- HR Analytics benötigt die enge Zusammenarbeit mit Finanz- und IT-Abteilung\n- Ziel: **Optimierungsmöglichkeiten** aufdecken, nicht Einzelverhalten auskundschaften",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Praxisbeispiel: Evidenzbasierte Personalplanung (Noe et al.)",
+          "body": "Wal-Mart nutzt historische Kundendaten, um für jeden Standort vorherzusagen, wie viele Kunden zu welcher Zeit kommen werden – und plant den Mitarbeitereinsatz darauf basierend. Statt starrer 8-Stunden-Schichten gibt es flexible Einsatzzeiten genau dann, wenn Personal gebraucht wird."
+        },
+        {
+          "kind": "warning",
+          "title": "Umsetzungslücke in Deutschland",
+          "body": "Laut Deloitte-Studie halten 66 % der deutschen Unternehmen HR Analytics für \"wichtig\" oder \"sehr wichtig\" – aber kaum eines hat es wirklich implementiert. Haupthindernisse: fehlende IT-Systeme, mangelnde Datenqualität, kein Fachpersonal für Datenanalyse."
+        }
+      ]
+    },
+    {
+      "id": "talent-management",
+      "heading": "Talent Management: Von der Quantität zur Qualität",
+      "body": "Die Personalplanung beantwortet \"Wie viele?\". Talent Management beantwortet: **\"Welche Positionen und welche Menschen sind für unseren Unternehmenserfolg entscheidend?\"**\n\n**Definition (Festing et al. 2011):**\n> \"Talent Management umfasst das Anwerben, Auswählen, Entwickeln und Binden von Potentialträgern des Unternehmens sowie die Identifikation erfolgskritischer Positionen.\"\n\n**Drei Kernelemente des strategischen Talent Managements (Collings & Mellahi 2009):**\n\n1. **Identifikation von Schlüsselpositionen**: Welche Stellen haben überproportionalen Einfluss auf den Unternehmenserfolg?\n2. **Aufbau eines Talent Pools**: Gezielte Förderung einer Gruppe von Mitarbeitenden, die diese Schlüsselpositionen besetzen können\n3. **Differenziertes HR-System**: Unterschiedliche Investitionen in verschiedene Mitarbeitergruppen\n\n**Was ist eine \"Schlüsselposition\" (A-Position)?**\nLaut Huselid, Beatty & Becker (2005, HBR) definiert sich eine strategisch wichtige Stelle durch **zwei Merkmale**:\n- **Überproportionale strategische Bedeutung**: Die Stelle ist für die Ausführung der Unternehmensstrategie entscheidend\n- **Hohe Leistungsvariabilität**: Es gibt große Qualitätsunterschiede zwischen guten und schlechten Stelleninhabern\n\nBeispiel: Ein Top-Verkäufer im 85. Perzentil eines Unternehmens erzielt oft das 5–10-fache des Umsatzes eines Mediokren – das ist hohe Leistungsvariabilität.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Talent Management Aktivitäten",
+          "body": "**Extern (Attract):**\n- Frühzeitige Identifikation von Talenten (z. B. Hochschulkooperationen)\n- Employer Branding und Positionierung als attraktiver Arbeitgeber\n- Best Practice: selektive Personalauswahl\n\n**Intern (Manage):**\n- Maßnahmen zur Bindung und Entwicklung von Talenten\n- Strategische Abstimmung mit der Unternehmensstrategie\n- Best Practices: 360-Grad-Feedback, Mentoring, Job Rotation, langfristige Anreize"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "tm-modell",
+          "title": "Strategisches Talent Management (Collings & Mellahi 2009)",
+          "caption": "Talent Pool und Schlüsselpositionen als Grundlage organisationaler Performance",
+          "code": "graph LR\n  A[Interner\\nArbeitsmarkt] --> B\n  C[Externer\\nArbeitsmarkt] --> B\n  B([Talent Pool]) --> D([Schlüssel-\\npositionen])\n  D --> E[Individuelle Effekte:\\nMotivation, Commitment, OCB]\n  E --> F[Organisationale\\nPerformance]"
+        }
+      ]
+    },
+    {
+      "id": "a-positions",
+      "heading": "A-Positionen, B-Positionen, C-Positionen: Das Portfolio-Modell",
+      "body": "Der HBR-Artikel von Huselid, Beatty & Becker (2005) dreht die klassische Logik um: Statt alle Top-Talente (A-Player) zu fördern, geht es darum, zuerst die **strategisch wichtigsten Stellen** zu identifizieren und *dann* die besten Menschen in diese Stellen zu bringen.\n\n**Das A/B/C-Positionsmodell:**\n\nPositionen werden nach **strategischem Einfluss** und **Leistungsvariabilität** eingestuft:\n\n| Positionstyp | Merkmale | Beispiele | HR-Investition |\n|---|---|---|---|\n| **A-Position** | Hoher strategischer Einfluss + hohe Leistungsvariabilität | Schlüsselverkäufer, Chefentwickler | Überproportional hoch |\n| **B-Position** | Wichtig, aber geringerer strategischer Hebel | Buchhalter, HR-Generalist | Solide, standard |\n| **C-Position** | Geringer strategischer Wert für das Unternehmen | Teile, die ausgelagert werden könnten | Minimal oder outsourcen |\n\n**Weniger als 20 % der Stellen** in einem Unternehmen sind typischerweise A-Positionen.\n\n**Konsequenz für die Praxis:**\n- A-Positionen mit A-Playern besetzen (selektive Auswahl, hohe Investition)\n- B-Positionen mit soliden B-Playern besetzen (effizient, nicht übermäßig teuer)\n- C-Positionen kritisch hinterfragen – outsourcen oder abbauen?\n\n**Kernaussage:** \"The firms with the right talent win\" – nicht die Firmen mit den meisten Talenten, sondern die mit den richtigen Menschen an den richtigen Stellen.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: Nordstrom vs. Costco (Huselid et al. 2005)",
+          "body": "Beide Händler konkurrieren auf Basis von Kundenzufriedenheit – aber auf völlig verschiedene Weise:\n- **Nordstrom**: Differenzierung durch personalisierten Service → A-Position ist der Verkäufer\n- **Costco**: Differenzierung durch Preis und Produktverfügbarkeit → A-Position ist der Einkäufer\n\nDie strategisch wichtigsten Stellen sind also **kontextabhängig** – es gibt keine universellen A-Positionen."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Nachfolgeplanung (Succession Planning)",
+          "body": "**Nachfolgeplanung** beantwortet: Wie schnell und wie gut können Schlüsselpositionen bei Bedarf neu besetzt werden?\n\nKernfrage des Talent Managements: Haben wir bereits Kandidaten im Talent Pool, die in 12, 24 oder 36 Monaten A-Positionen übernehmen können? Diese Planung wird oft mit dem **9-Box-Grid** (Leistung × Potenzial) visualisiert."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "abc-positionen",
+          "title": "A/B/C-Positions-Framework (Huselid, Beatty & Becker 2005)",
+          "headers": ["Dimension", "A-Position", "B-Position", "C-Position"],
+          "rows": [
+            ["Strategischer Einfluss", "Sehr hoch", "Mittel", "Gering"],
+            ["Leistungsvariabilität", "Sehr hoch", "Mittel", "Gering"],
+            ["Anteil an Belegschaft", "< 20 %", "Ca. 60–70 %", "10–20 %"],
+            ["HR-Investition", "Überproportional", "Standard", "Minimal / Outsourcing"],
+            ["Rekrutierungsfokus", "A-Player zwingend", "B-Player ausreichend", "Kostengünstig / extern"],
+            ["Beispiel", "Top-Verkäufer, Chefentwickler", "Buchhalter, HR-Generalist", "Teile, die outgesourct werden könnten"]
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "pp-fc-1",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Was ist der Unterschied zwischen Brutto- und Nettopersonalbedarf?",
+      "back": "**Bruttopersonalbedarf** = Soll-Bestand (wie viele Mitarbeitende werden insgesamt gebraucht). **Nettopersonalbedarf** = Bruttobedarf minus fortgeschriebenen Bestand (Ist + Zugänge - Abgänge). Positiver Nettobedarf = Unterdeckung, negativer = Überdeckung."
+    },
+    {
+      "id": "pp-fc-2",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Formel: Nettopersonalbedarf",
+      "back": "Nettopersonalbedarf = Bruttopersonalbedarf − (Ist-Bestand + Zugänge − Abgänge)"
+    },
+    {
+      "id": "pp-fc-3",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Welche drei Schritte umfasst der Personalplanungsprozess nach Noe?",
+      "back": "1. Prognose von Arbeitskräfteüberschuss oder -mangel (Nachfrage vs. Angebot)\n2. Zielsetzung und strategische Planung\n3. Programmimplementierung und Evaluation"
+    },
+    {
+      "id": "pp-fc-4",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Was versteht man unter HR Analytics?",
+      "back": "Die systematische Sammlung, Verarbeitung und Analyse mitarbeiterbezogener Daten, um Wirkungszusammenhänge zu verstehen und faktenbasierte Personalentscheidungen zu treffen (Recruiting, Bindung, Entwicklung)."
+    },
+    {
+      "id": "pp-fc-5",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Definition Talent Management (Festing et al.)",
+      "back": "\"Talent Management umfasst das Anwerben, Auswählen, Entwickeln und Binden von Potentialträgern des Unternehmens sowie die Identifikation erfolgskritischer Positionen.\""
+    },
+    {
+      "id": "pp-fc-6",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Was sind die drei Kernelemente des strategischen Talent Managements (Collings & Mellahi)?",
+      "back": "1. Identifikation von Schlüsselpositionen (A-Positionen)\n2. Aufbau eines Talent Pools\n3. Differenziertes HR-System (unterschiedliche Investitionen je nach Positionstyp)"
+    },
+    {
+      "id": "pp-fc-7",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Was macht eine Stelle zur 'A-Position' (Huselid, Beatty & Becker)?",
+      "back": "Zwei Merkmale: (1) Überproportionale strategische Bedeutung für die Unternehmensstrategie und (2) hohe Leistungsvariabilität – d. h. es gibt große Qualitätsunterschiede zwischen guten und schlechten Stelleninhabern."
+    },
+    {
+      "id": "pp-fc-8",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Kernaussage des HBR-Artikels 'A Players or A Positions?' (Huselid et al. 2005)",
+      "back": "Nicht einfach alle Top-Talente fördern, sondern zuerst strategisch wichtige Stellen (A-Positionen) identifizieren, dann die besten Menschen in diese bringen. Die Firmen mit dem *richtigen* Talent an der *richtigen* Stelle gewinnen."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "numeric",
+      "id": "pp-q1",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "leicht",
+      "prompt": "Ein Unternehmen benötigt 80 Mitarbeitende (Bruttobedarf). Aktuell sind 70 beschäftigt, 5 neue kommen hinzu und 3 scheiden aus. Wie hoch ist der Nettopersonalbedarf?",
+      "answer": 8,
+      "tolerance": 0,
+      "unit": "Personen",
+      "explanation": "Fortgeschriebener Bestand = 70 + 5 - 3 = 72. Nettobedarf = 80 - 72 = **8 Personen** (Unterdeckung)."
+    },
+    {
+      "kind": "numeric",
+      "id": "pp-q2",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "mittel",
+      "prompt": "Bruttopersonalbedarf: 150. Ist-Bestand: 160. Geplante Zugänge: 4. Abgänge: 10. Wie hoch ist der Nettopersonalbedarf? (Negatives Ergebnis = Überdeckung, gib negative Zahl ein)",
+      "answer": -4,
+      "tolerance": 0,
+      "unit": "Personen",
+      "explanation": "Fortgeschriebener Bestand = 160 + 4 - 10 = 154. Nettobedarf = 150 - 154 = **-4** → Personalüberhang: 4 Stellen zu viel, Abbaumaßnahmen erforderlich."
+    },
+    {
+      "kind": "mc",
+      "id": "pp-q3",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "leicht",
+      "prompt": "Was beantwortet die **quantitative** Personalplanung?",
+      "options": [
+        "Welche Qualifikationen werden benötigt?",
+        "Wie viele Mitarbeitende werden benötigt?",
+        "Wo sollen die Mitarbeitenden eingesetzt werden?",
+        "Welche Führungskräfte sollen befördert werden?"
+      ],
+      "correct": [1],
+      "explanation": "Die **quantitative** Planung beantwortet 'Wie viele?', die **qualitative** Planung beantwortet 'Welche Qualifikationen?'."
+    },
+    {
+      "kind": "mc",
+      "id": "pp-q4",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "mittel",
+      "prompt": "Welche Faktoren beeinflussen den Bruttopersonalbedarf? (Mehrfachauswahl möglich)",
+      "options": [
+        "Externe Faktoren wie Konjunkturerwartungen",
+        "Interne Faktoren wie neue Produkte und Technologien",
+        "Die Höhe der Managervergütung",
+        "Personale Faktoren wie Fluktuation und Altersstruktur"
+      ],
+      "correct": [0, 1, 3],
+      "multiple": true,
+      "explanation": "Den Bruttopersonalbedarf beeinflussen externe (Konjunktur, Markt), interne (Produkte, Technologien) und personale/soziale Faktoren (Fluktuation, Renteneintrite). Die Vergütungshöhe des Managements ist kein direkter Einflussfaktor."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pp-q5",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "leicht",
+      "prompt": "Ein negativer Nettopersonalbedarf bedeutet, dass das Unternehmen neue Mitarbeitende einstellen muss.",
+      "answer": false,
+      "explanation": "Falsch. Ein **negativer** Nettobedarf bedeutet **Personalüberhang** (zu viele Mitarbeitende). Maßnahmen wären z. B. Kurzarbeit, Einstellungsstopp, Versetzung oder Abbau. Ein **positiver** Wert bedeutet Unterdeckung und erfordert Einstellungen."
+    },
+    {
+      "kind": "mc",
+      "id": "pp-q6",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "leicht",
+      "prompt": "Welche drei Kernelemente kennzeichnen das strategische Talent Management nach Collings & Mellahi (2009)?",
+      "options": [
+        "Einstellungsstopp, Kurzarbeit, Outsourcing",
+        "Identifikation von Schlüsselpositionen, Aufbau eines Talent Pools, differenziertes HR-System",
+        "Stellenanzeigen, Assessment Center, Onboarding",
+        "Vergütung, Kontrolle, Sanktionen"
+      ],
+      "correct": [1],
+      "explanation": "Die drei Kernelemente sind: (1) Identifikation von Schlüsselpositionen (A-Positionen), (2) Aufbau eines Talent Pools aus internen und externen Kandidaten, (3) differenziertes HR-System mit unterschiedlichen Investitionen je Positionstyp."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pp-q7",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "mittel",
+      "prompt": "Laut Huselid, Beatty & Becker (2005) sollte ein Unternehmen primär alle Top-Talente (A-Player) fördern, unabhängig davon, auf welcher Stelle sie eingesetzt werden.",
+      "answer": false,
+      "explanation": "Falsch. Die Kernaussage des HBR-Artikels ist genau das Gegenteil: Zuerst **strategisch wichtige Positionen** (A-Positionen) identifizieren, dann die besten Leute gezielt dorthin bringen. A-Player auf C-Positionen schaffen kaum Mehrwert."
+    },
+    {
+      "kind": "mc",
+      "id": "pp-q8",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "mittel",
+      "prompt": "Eine kurzfristige Unterdeckung an Software-Entwicklern (Projektstart in 4 Wochen) lässt sich am besten adressieren durch:",
+      "options": [
+        "Verringerung der Fluktuation",
+        "Outsourcing an einen externen Dienstleister",
+        "Umschulung vorhandener Mitarbeitender",
+        "Langfristiges Employer Branding"
+      ],
+      "correct": [1],
+      "explanation": "**Outsourcing** ist die einzige Maßnahme, die in 4 Wochen umsetzbar ist. Fluktuation reduzieren bringt keine neuen Skills, Umschulung dauert Monate, Employer Branding wirkt erst langfristig."
+    },
+    {
+      "kind": "freetext",
+      "id": "pp-q9",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "schwer",
+      "prompt": "Was unterscheidet eine 'A-Position' von einer 'B-Position' im Modell von Huselid, Beatty & Becker? Nenne die zwei Definitionsmerkmale und erläutere kurz anhand eines Beispiels.",
+      "sampleAnswer": "Eine A-Position zeichnet sich durch zwei Merkmale aus: (1) Überproportionale strategische Bedeutung für die Ausführung der Unternehmensstrategie und (2) hohe Leistungsvariabilität – d. h. es gibt große Qualitätsunterschiede zwischen guten und schlechten Stelleninhabern. Beispiel: Bei Nordstrom ist die Verkäuferrolle eine A-Position, weil Nordstroms Strategie auf personalisiertem Service basiert und ein Top-Verkäufer ein Vielfaches des Umsatzes eines mittelmäßigen erzielt. Eine B-Position (z. B. Buchhalter) ist wichtig, hat aber geringeren Einfluss auf die Differenzierungsstrategie.",
+      "keywords": ["strategische bedeutung", "leistungsvariabilität", "schlüsselposition", "differenzierung", "strategie"],
+      "explanation": "A-Positionen sind nicht automatisch die am besten bezahlten oder anspruchsvollsten Stellen – entscheidend ist ihr strategischer Hebel für den Unternehmenserfolg in Kombination mit der Variabilität der Leistungserbringung."
+    },
+    {
+      "kind": "numeric",
+      "id": "pp-q10",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "difficulty": "schwer",
+      "prompt": "Ein Krankenhaus hat einen Bruttobedarf von 200 Pflegekräften. Ist-Bestand: 185. Geplante Zugänge aus laufenden Einstellungen: 12. Abgänge durch Renteneintritt und Kündigung: 17. Wie viele Pflegekräfte muss das Krankenhaus zusätzlich rekrutieren (Nettopersonalbedarf)?",
+      "answer": 20,
+      "tolerance": 0,
+      "unit": "Pflegekräfte",
+      "explanation": "Fortgeschriebener Bestand = 185 + 12 - 17 = 180. Nettobedarf = 200 - 180 = **20 Pflegekräfte** müssen zusätzlich rekrutiert werden."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pp-ex-1",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "label": "V4 Artikel-Diskussion — HR Analytics / Big Data fürs Recruiting",
+      "source": "Personal_Artikel_SoSe_2026.pdf (Computerwoche, Skura 2018)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**Artikel: 'HR Analytics / Big Data fürs Recruiting nutzen'** (Computerwoche, 01.02.2018, Joachim Skura)\n\nLesen Sie den Artikel und beantworten Sie folgende Fragen:\n\n1. Was ist das Ziel von HR Analytics laut Artikel? Welche vier Einsatzbereiche werden genannt?\n2. Welche Rahmenbedingungen und Risiken müssen bei der Einführung von HR Analytics beachtet werden?\n3. Diskutieren Sie: Wie kann die systematische Sammlung und Analyse mitarbeiterbezogener Daten die Personalplanung verbessern? Wo liegen Grenzen?\n4. Transferfrage: Welche konkreten Vorteile hätte HR Analytics für die Personalbedarfsplanung (Brutto/Netto-Berechnung)?",
+      "hint": "Denken Sie an die vier Einsatzbereiche (Recruiting, Bindung, Arbeitsmarktanalyse, Entwicklung) und an das Google-Beispiel mit der Elternzeit.",
+      "solution": "**Lösung / Musterdiskussion:**\n\n**Zu 1 – Ziel und Einsatzbereiche:**\n\nZiel von HR Analytics ist es, \"die Wirkungszusammenhänge innerhalb der Belegschaft besser zu verstehen\" (Skura 2018), damit Maßnahmen gezielter gesteuert werden können. Die vier Einsatzbereiche sind:\n- **Recruiting**: Datenanalysen identifizieren, welche Kanäle die besten Kandidaten liefern; CV-Parsing automatisiert die Vorauswahl und gleicht mit Langzeitperformance ab\n- **Mitarbeiterbindung**: Kausalanalyse von Kündigungsfaktoren (Beispiel: Google erhöhte Urlaubsanspruch für Mütter nach Elternzeit → Fluktuationsreduktion um 50 %)\n- **Arbeitsmarktanalyse**: Angebot/Nachfrage-Beobachtung für Jobprofile, Benchmarks\n- **Mitarbeiterentwicklung**: Machine-Learning-basiertes Erkennen von Skill-Lücken, individualisierte Weiterbildungsempfehlungen\n\n**Zu 2 – Rahmenbedingungen und Risiken:**\n\n- Mitarbeitende dürfen sich **nicht überwacht** fühlen → klare Kommunikation und Transparenz erforderlich\n- **Datenqualität** ist entscheidend: Fehlerhafte oder inkonsistente Daten liefern unbrauchbare Ergebnisse\n- Enge Zusammenarbeit mit **Finanz- und IT-Abteilung** notwendig\n- **Cloud-Systeme** und kompatible Datenmodelle als technische Voraussetzung\n- HR Analytics braucht **Datenspezialistinnen**, nicht nur HR-Generalistinnen\n- Gefahr: Scheinkausalitäten entdecken statt echter Zusammenhänge\n\n**Zu 3 – Diskussion Verbesserung / Grenzen:**\n\nVerbesserungen: Faktenbasierte statt intuitionsbasierte Entscheidungen; frühzeitige Erkennung von Kündigungsrisiken; präzisere Prognosen für Personalbedarfsplanung; messbare Wirkung von HR-Maßnahmen.\n\nGrenzen: Datenschutz (DSGVO), ethische Bedenken bei Verhaltensüberwachung, Risiko von algorithmischer Diskriminierung, hoher Investitionsbedarf für IT und Expertise, Akzeptanzproblem bei Mitarbeitenden.\n\n**Zu 4 – Transfer auf Brutto/Netto-Planung:**\n\nHR Analytics verbessert die Genauigkeit der **Abgangs- und Zugangs-Prognosen**, die in die Nettopersonalbedarfsformel einfließen. Statt grober Schätzungen können historische Fluktuationsmuster, Altersstrukturanalysen und Kündigungsrisikomodelle die Abgangsquote präziser vorhersagen. Dadurch wird der fortgeschriebene Personalbestand genauer berechnet und die daraus abgeleiteten Maßnahmen besser geplant."
+    }
+  ]
+}

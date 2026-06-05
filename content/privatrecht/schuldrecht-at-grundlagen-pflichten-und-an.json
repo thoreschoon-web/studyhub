@@ -1,0 +1,425 @@
+{
+  "id": "schuldrecht-at-grundlagen-pflichten-und-an",
+  "subjectId": "privatrecht",
+  "title": "Schuldrecht AT: Grundlagen, Pflichten und Anspruchsgrundlagen (Theorieteil 5)",
+  "summary": "Was ist ein Schuldverhältnis? Wie entsteht es? Welche Pflichten trägt der Schuldner – und wie findet man die richtige Anspruchsgrundlage? Dieses Kapitel erklärt das komplette Grundgerüst des Schuldrechts laienverständlich: vom § 241 BGB über den Kaufvertrag § 433 BGB bis zu Erfüllung, Aufrechnung und Zurückbehaltungsrechten.",
+  "order": 6,
+  "estMinutes": 75,
+  "sections": [
+    {
+      "id": "was-ist-schuldverhältnis",
+      "heading": "Was ist ein Schuldverhältnis? – Das Grundkonzept",
+      "body": "## Das Schuldrecht in einem Satz\n\nDas **Schuldrecht** regelt, wer von wem was verlangen darf – und wie diese Vermögensverschiebung abzuwickeln ist. Es ist das Herzstück des BGB (2. Buch, §§ 241–853 BGB) und enthält die meisten Anspruchsgrundlagen.\n\n## Zwei Bedeutungen des Schuldverhältnisses (§ 241 BGB)\n\nDer Begriff „Schuldverhältnis\" wird im BGB in zwei verschiedenen Bedeutungen verwendet – das ist zunächst verwirrend, aber wichtig:\n\n**1. Schuldverhältnis im weiteren Sinne** (§ 241 Abs. 1 und 2 BGB)\n\nDas ist das *gesamte Rechtsverhältnis* zwischen Gläubiger und Schuldner – also die Summe aller Rechte und Pflichten aus z. B. einem Kaufvertrag oder Mietverhältnis. Stell es dir vor wie einen **Vertrag als Ganzes**: Du kaufst ein Fahrrad → zwischen dir (Käufer/Gläubiger hinsichtlich der Übergabe) und dem Verkäufer (Schuldner hinsichtlich der Übergabe) entsteht ein Kaufvertrag als Schuldverhältnis im weiteren Sinne.\n\n**2. Schuldverhältnis im engeren Sinne** (auch: Forderung)\n\nDas ist die *einzelne Forderung*, d. h. der konkrete Anspruch des Gläubigers gegen den Schuldner. Aus dem Kaufvertrag entstehen mehrere solcher Einzelforderungen: Der Käufer hat einen Anspruch auf Übergabe und Übereignung der Ware (§ 433 Abs. 1 BGB), der Verkäufer hat einen Anspruch auf Zahlung des Kaufpreises (§ 433 Abs. 2 BGB).\n\n## Das Prinzip der Relativität\n\nDas Schuldverhältnis gilt **nur zwischen den beteiligten Personen** – dem konkreten Gläubiger und dem konkreten Schuldner. Ich kann von *meinem* Verkäufer die Lieferung verlangen, nicht aber vom Nachbarn oder einem beliebigen Dritten. Das nennt sich **Relativität der Schuldverhältnisse**. Das unterscheidet das relative Recht (Anspruch) vom absoluten Recht (z. B. Eigentum, das gegenüber jedermann gilt).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Schuldverhältnis im weiteren Sinne (§ 241 BGB)",
+          "body": "Das gesamte Rechtsverhältnis zwischen Gläubiger und Schuldner mit allen Rechten und Pflichten; z. B. der Kaufvertrag als Ganzes."
+        },
+        {
+          "kind": "definition",
+          "title": "Schuldverhältnis im engeren Sinne (Forderung)",
+          "body": "Eine einzelne Pflicht des Schuldners gegenüber dem Gläubiger; z. B. die Pflicht des Verkäufers, die Ware zu übergeben (§ 433 Abs. 1 BGB)."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Relativität",
+          "body": "Ein Schuldverhältnis wirkt nur *inter partes* – nur zwischen den konkreten Parteien. Dritte sind grundsätzlich nicht berechtigt oder verpflichtet."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-schuldverh-überblick",
+          "title": "Schuldverhältnis im weiteren und engeren Sinne",
+          "caption": "Das Schuldverhältnis im weiteren Sinne (z. B. Kaufvertrag) umfasst mehrere Einzelforderungen (Schuldverhältnisse im engeren Sinne).",
+          "code": "graph TD\n  A[\"Schuldverhältnis im weiteren Sinne\\n(z.B. Kaufvertrag § 433 BGB)\"]\n  A --> B[\"Forderung 1: Übergabe + Übereignung\\n§ 433 Abs. 1 BGB\\n(Gläubiger: Käufer)\"]\n  A --> C[\"Forderung 2: Kaufpreiszahlung\\n§ 433 Abs. 2 BGB\\n(Gläubiger: Verkäufer)\"]\n  B --> D[\"Schuldner: Verkäufer\"]\n  C --> E[\"Schuldner: Käufer\"]"
+        }
+      ]
+    },
+    {
+      "id": "entstehung-schuldverhältnis",
+      "heading": "Wie entsteht ein Schuldverhältnis? – Die drei Quellen",
+      "body": "Schuldverhältnisse entstehen nicht aus dem Nichts. Das BGB kennt drei große Entstehungsquellen:\n\n## 1. Rechtsgeschäftliche Schuldverhältnisse\n\nDer Normalfall: **Vertrag** (§ 311 Abs. 1 BGB). Zwei Personen einigen sich durch zwei übereinstimmende Willenserklärungen (Angebot + Annahme) auf ein Schuldverhältnis. Beispiele: Kaufvertrag, Mietvertrag, Arbeitsvertrag.\n\nAusnahmsweise kann ein rechtsgeschäftliches Schuldverhältnis auch durch eine **einseitige Willenserklärung** entstehen, z. B. die Auslobung (§§ 657 ff. BGB): Wer öffentlich eine Belohnung für eine Handlung auslobt, begründet damit einseitig eine Pflicht.\n\n## 2. Vorvertragliche Schuldverhältnisse (§ 311 Abs. 2 BGB – culpa in contrahendo, c.i.c.)\n\nSchon **bevor** ein Vertrag geschlossen wird, entstehen Pflichten! Wenn zwei Parteien in Vertragsverhandlungen treten (§ 311 Abs. 2 Nr. 1 BGB) oder auch nur die Möglichkeit zur Einflussnahme auf Interessen eröffnet wird (Nr. 2 und 3 BGB), entsteht ein vertragsähnliches Schuldverhältnis mit Schutz- und Rücksichtnahmepflichten.\n\n**Beispiel:** Kundin K stolpert im Supermarkt über einen nassen Boden ohne Warnschild und bricht sich das Handgelenk – noch bevor sie etwas gekauft hat. Trotzdem hat sie Schadensersatzansprüche aus § 311 Abs. 2, § 241 Abs. 2, § 280 Abs. 1 BGB (c.i.c.), weil durch das Betreten des Ladens ein vorvertragliches Schuldverhältnis entstand.\n\n## 3. Gesetzliche Schuldverhältnisse\n\nDiese entstehen kraft Gesetzes, also ohne Willenserklärung, wenn ein bestimmter Tatbestand erfüllt ist:\n\n- **Unerlaubte Handlung / Delikt** (§§ 823 ff. BGB): Wer jemanden fahrlässig verletzt, schuldet Schadensersatz – egal ob ein Vertrag besteht.\n- **Ungerechtfertigte Bereicherung** (§§ 812 ff. BGB): Wer auf Kosten eines anderen ohne rechtlichen Grund etwas erlangt, muss es herausgeben.\n- **Geschäftsführung ohne Auftrag / GoA** (§§ 677 ff. BGB): Wer das Geschäft eines anderen besorgt, ohne beauftragt zu sein, hat Anspruch auf Aufwendungsersatz – und umgekehrt Pflichten.\n- **Eigentümer-Besitzer-Verhältnis** (§§ 985 ff. BGB): Gesetzliche Regelung der Herausgabe- und Ersatzpflichten zwischen Eigentümer und Besitzer.\n\n## Faktisches Schuldverhältnis\n\nIn Ausnahmefällen wird ein Schuldverhältnis auch dann anerkannt, wenn ein Vertrag zwar nicht wirksam geschlossen wurde (z. B. wegen Anfechtung), aber tatsächlich durchgeführt wurde und sich nur ungenügend rückabwickeln lässt. Beispiele: im Arbeitsrecht oder Gesellschaftsrecht.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Überblick: Drei Entstehungsquellen",
+          "body": "**Rechtsgeschäftlich:** Kaufvertrag (§ 311 I BGB) → Parteien schließen Vertrag.\n**Vorvertraglich:** Verhandlungsabbruch mit Schaden (§ 311 II BGB, c.i.c.).\n**Gesetzlich:** Fahrlässiger Auffahrunfall (§ 823 I BGB) → kein Vertrag nötig."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-entstehung-schuldverhältnis",
+          "title": "Entstehungsquellen von Schuldverhältnissen",
+          "caption": "Drei Wege, auf denen ein Schuldverhältnis entsteht.",
+          "code": "graph LR\n  A[\"Schuldverhältnis\"] --> B[\"Rechtsgeschäftlich\\n§ 311 I BGB\\nVertrag (grds.)\"]\n  A --> C[\"Vorvertraglich\\n§ 311 II BGB\\nc.i.c.\"]\n  A --> D[\"Gesetzlich\"]\n  D --> D1[\"Delikt §§ 823 ff. BGB\"]\n  D --> D2[\"Bereicherung §§ 812 ff. BGB\"]\n  D --> D3[\"GoA §§ 677 ff. BGB\"]"
+        }
+      ]
+    },
+    {
+      "id": "arten-schuldverhältnisse",
+      "heading": "Arten von Schuldverhältnissen – Wer verpflichtet wen?",
+      "body": "Nicht alle Schuldverhältnisse sind gleich aufgebaut. Je nachdem, wie viele Seiten verpflichtet sind, unterscheidet man:\n\n## Einseitig verpflichtende Verträge\n\nNur **eine Seite** hat Pflichten. Beispiele:\n- **Schenkung** (§§ 516 ff. BGB): Der Schenker muss den Gegenstand zueignen; der Beschenkte muss nichts leisten.\n- **Leihe** (§ 598 BGB): Der Verleiher muss die Sache überlassen; der Entleiher schuldet keine Vergütung (unentgeltlich).\n- **Auftrag** (§ 662 BGB): Der Beauftragte führt das Geschäft unentgeltlich durch.\n\n## Zweiseitig verpflichtende Verträge\n\nBeide Seiten haben Pflichten. Hier gibt es zwei wichtige Untergruppen:\n\n**a) Gegenseitige Verträge (Synallagma)**\n\nDie Pflichten stehen im Gegenseitigkeitsverhältnis (\"do ut des\" – ich gebe, damit du gibst). Die Leistung der einen Seite ist der Grund für die Leistung der anderen.\n\nBeispiel Kaufvertrag: Kaufsache gegen Kaufpreis. Wenn der Verkäufer nicht liefert, muss der Käufer nicht zahlen (§ 320 BGB: Einrede des nicht erfüllten Vertrages).\n\nWichtig: Bei gegenseitigen Verträgen ist jeder Vertragspartner **gleichzeitig Gläubiger und Schuldner** – nur hinsichtlich verschiedener Forderungen.\n\n**b) Unvollkommen zweiseitig verpflichtende Verträge**\n\nDie Pflichten stehen *nicht* im echten Gegenseitigkeitsverhältnis. Beispiel: Auftrag (§ 662 BGB) – der Beauftragte hat zwar einen Anspruch auf Aufwendungsersatz (§ 670 BGB), aber dieser ist keine Gegenleistung für die Tätigkeit.\n\n## Einseitige Rechtsgeschäfte als Schuldverhältnis\n\nIn Ausnahmefällen reicht eine Willenserklärung aus: Die **Auslobung** (§§ 657 ff. BGB) entsteht durch öffentliche Bekanntmachung des Auslobers allein.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Synallagma = gegenseitiger Vertrag",
+          "body": "Beim Synallagma (z. B. Kaufvertrag) hängen Leistung und Gegenleistung voneinander ab. Wer nicht leistet, kann die eigene Leistung verweigern (§ 320 BGB). Das gilt bei einseitig verpflichtenden Verträgen (Schenkung, Leihe) nicht."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-synallagma",
+          "title": "Das Synallagma beim Kaufvertrag",
+          "caption": "Kaufsache und Kaufpreis stehen in einem Gegenseitigkeitsverhältnis.",
+          "code": "graph LR\n  Verkäufer -- \"Übergabe + Übereignung\\n§ 433 Abs. 1 BGB\" --> Käufer\n  Käufer -- \"Kaufpreiszahlung\\n§ 433 Abs. 2 BGB\" --> Verkäufer"
+        },
+        {
+          "kind": "table",
+          "id": "tab-vertragsarten",
+          "title": "Vertragstypen im Überblick",
+          "headers": ["Vertragstyp", "Verpflichtungen", "Beispiel", "Entgeltlich?"],
+          "rows": [
+            ["Einseitig verpflichtend", "Nur eine Seite", "Schenkung § 516, Leihe § 598", "Nein"],
+            ["Gegenseitiger Vertrag (Synallagma)", "Beide Seiten, Pflichten verknüpft", "Kauf § 433, Miete § 535, Werk § 631", "Ja"],
+            ["Unvollk. zweiseitig verpflichtend", "Beide Seiten, aber nicht verknüpft", "Auftrag § 662 BGB", "Nein (Aufwendungsersatz möglich)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pflichten-schuldverhältnis",
+      "heading": "Pflichten aus dem Schuldverhältnis – Hauptpflicht, Nebenpflicht, Obliegenheit",
+      "body": "Aus einem Schuldverhältnis entstehen verschiedene Kategorien von Pflichten. Das zu verstehen ist wichtig, weil die **Rechtsfolgen** bei Verletzung unterschiedlich sind.\n\n## 1. Hauptpflichten (Primärpflichten) – § 241 Abs. 1 BGB\n\n**Was ist das?** Die zentrale, typusbestimmende Pflicht eines Schuldverhältnisses – also das, wofür der Vertrag eigentlich geschlossen wurde.\n\n**Beispiele:**\n- Kaufvertrag: Übergabe + Übereignung der Ware (§ 433 Abs. 1 S. 1 BGB) / Zahlung des Kaufpreises (§ 433 Abs. 2 BGB)\n- Mietvertrag: Gebrauchsüberlassung der Mietsache (§ 535 Abs. 1 S. 1 BGB) / Mietzahlung (§ 535 Abs. 2 BGB)\n- Werkvertrag: Herbeiführung des versprochenen Erfolgs (§ 631 Abs. 1 BGB) / Vergütung (§ 631 Abs. 1 BGB)\n\n**Rechtsfolge bei Verletzung:** Zunächst entsteht ein Anspruch auf Erfüllung. Wird die Pflicht verletzt, kann daraus eine **Sekundärpflicht** entstehen, also ein Schadensersatzanspruch (§ 280 Abs. 1 BGB).\n\n## 2. Nebenpflichten (Schutz- und Treuepflichten) – § 241 Abs. 2 BGB\n\n**Was ist das?** Pflichten, die neben den Hauptpflichten herlaufen und dem Schutz von Rechten, Rechtsgütern und Interessen des Vertragspartners dienen.\n\nSie folgen oft aus der **Verkehrssitte** (§ 242 BGB) und müssen nicht ausdrücklich vereinbart sein. Konkret unterscheidet man:\n\n- **Treuepflichten:** Alles tun, um den Vertragszweck zu erfüllen; nichts tun, was ihn vereiteln würde.\n- **Mitwirkungspflichten:** Den Gläubiger aktiv dabei unterstützen, dass die Hauptpflicht erfüllt werden kann (z. B. Beantragung nötiger Genehmigungen).\n- **Schutzpflichten:** Keine Verletzung von Körper, Eigentum oder sonstigen Rechtsgütern des Partners (z. B. kein nasser Boden ohne Warnung).\n- **Aufklärungspflichten:** Den Vertragspartner über wesentliche Gefahren und Umstände informieren.\n\n**Rechtsfolge bei Verletzung:** Typischerweise Schadensersatz (§ 280 Abs. 1 BGB); der Anspruch auf Erfüllung der Nebenpflicht selbst ist umstritten.\n\n## 3. Obliegenheiten – keine echten Pflichten!\n\n**Was ist das?** Eine Obliegenheit ist eine Art \"Pflicht zu sich selbst\". Sie ist **nicht einklagbar** und führt bei Verletzung *keinen* Schadensersatzanspruch herbei, sondern nur **rechtliche Nachteile für die eigene Position**.\n\n**Beispiele:**\n- **Schadensminderungspflicht** (§ 254 Abs. 1 BGB): Wer bei einem Unfall nicht versucht, den Schaden gering zu halten, erhält weniger Ersatz.\n- **Mängelrüge** im Handelsrecht (§ 377 HGB): Kaufleute, die einen Mangel nicht unverzüglich rügen, verlieren ihre Gewährleistungsrechte.\n- **Anzeigeobliegenheit** im Versicherungsfall.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Drei-Stufen-Unterschied",
+          "body": "**Hauptpflicht** → einklagbar, Verletzung → Schadensersatz (§ 280 BGB).  \n**Nebenpflicht** → einklagbar (str.), Verletzung → Schadensersatz (§ 280 BGB).  \n**Obliegenheit** → nicht einklagbar, Verletzung → eigene Rechtsnachteile (kein Schadensersatz des anderen)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Nebenpflicht in der Praxis",
+          "body": "K kauft bei V eine Küchenmaschine. Beim Einweisen in das Gerät erklärt V nicht, dass das Messer besonders scharf ist und nur mit Schutzhandschuhen gewechselt werden soll. K verletzt sich. V hat eine **Aufklärungspflicht** (Nebenpflicht, § 241 Abs. 2 BGB) verletzt → Schadensersatz aus § 280 Abs. 1 BGB."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-pflichten-übersicht",
+          "title": "Pflichten aus dem Schuldverhältnis (§ 241 BGB)",
+          "caption": "Drei Ebenen: Hauptpflicht, Nebenpflicht, Obliegenheit – mit unterschiedlichen Rechtsfolgen.",
+          "code": "graph TD\n  A[\"Pflichten aus dem Schuldverhältnis\"] --> B[\"Hauptpflicht / Primärpflicht\\n§ 241 Abs. 1 BGB\"]\n  A --> C[\"Nebenpflicht\\n§ 241 Abs. 2 BGB\"]\n  A --> D[\"Obliegenheit\"]\n  B --> B1[\"z.B. Kaufpreiszahlung,\\nÜbergabe der Ware\"]\n  B --> B2[\"→ Sekundärpflicht bei\\nVerletzung (§ 280 BGB)\"]\n  C --> C1[\"Treuepflicht, Mitwirkung,\\nSchutz, Aufklärung\"]\n  C --> C2[\"→ Schadensersatz\\n(§ 280 Abs. 1 BGB)\"]\n  D --> D1[\"Schadensminderung\\n§ 254 BGB, Mängelrüge\"]\n  D --> D2[\"→ eigene Rechtsnachteile,\\nkein Schadensersatz\"]"
+        }
+      ]
+    },
+    {
+      "id": "anspruchsgrundlagen-schema",
+      "heading": "Das Anspruchsgrundlagen-Schema: Wer will was von wem woraus?",
+      "body": "## Die wichtigste juristische Arbeitstechnik\n\nJede rechtliche Prüfung beginnt mit vier Fragen, die zusammen das **Anspruchsschema** bilden:\n\n| Frage | Bedeutung | Beispiel |\n|---|---|---|\n| **Wer** | Der Anspruchsteller (Gläubiger) | Käuferin K |\n| **will was** | Die begehrte Rechtsfolge | Übergabe des Fahrrads |\n| **von wem** | Der Anspruchsgegner (Schuldner) | Verkäufer V |\n| **woraus** | Die Anspruchsgrundlage (§) | § 433 Abs. 1 S. 1 BGB |\n\nOhne eine passende **Anspruchsgrundlage** gibt es keinen Anspruch – egal wie ungerecht die Situation erscheint. Eine Anspruchsgrundlage ist eine Rechtsnorm, die bei Vorliegen bestimmter Tatbestandsvoraussetzungen eine bestimmte Rechtsfolge anordnet.\n\n## Das dreistufige Anspruchsprüfungsschema\n\nNachdem die Anspruchsgrundlage gefunden ist, wird sie in drei Schritten geprüft:\n\n**1. Anspruch entstanden?** (rechtshindernde Einwendungen beachten)\nSind alle Tatbestandsmerkmale der AGL erfüllt? Gibt es Hindernisse wie Geschäftsunfähigkeit, Formmangel, § 134/138 BGB, Anfechtung?\n\n**2. Anspruch nicht erloschen?** (rechtsvernichtende Einwendungen beachten)\nWurde der Anspruch bereits durch Erfüllung (§ 362 BGB), Rücktritt, Unmöglichkeit o. Ä. beseitigt?\n\n**3. Anspruch durchsetzbar?** (rechtshemmende Einreden beachten)\nSteht einer Durchsetzung eine Einrede entgegen – z. B. Verjährung (§ 214 BGB), Zurückbehaltungsrecht (§§ 273, 320 BGB)?\n\n## Der Kaufvertrag § 433 BGB als zentrale Anspruchsgrundlage\n\nDer Kaufvertrag ist der wichtigste Vertragstyp im Schuldrecht BT und enthält gleich zwei wesentliche Anspruchsgrundlagen:\n\n**§ 433 Abs. 1 S. 1 BGB** (Anspruch des Käufers):\nDurch den Kaufvertrag wird der Verkäufer verpflichtet, dem Käufer die Sache zu **übergeben** und das **Eigentum** daran zu verschaffen.\n\nZusatz aus S. 2: Der Verkäufer muss die Sache **frei von Sach- und Rechtsmängeln** verschaffen (Mängelfreiheit).\n\n**§ 433 Abs. 2 BGB** (Anspruch des Verkäufers):\nDer Käufer ist verpflichtet, den vereinbarten **Kaufpreis zu zahlen** und die gekaufte Sache **abzunehmen**.\n\n**Prüfung im Gutachtenstil (Beispiel):**\n> K könnte gegen V einen Anspruch auf Übergabe und Übereignung des Fahrrads aus § 433 Abs. 1 S. 1 BGB haben.\n> Voraussetzung hierfür ist das Bestehen eines wirksamen Kaufvertrags. Ein Kaufvertrag kommt durch zwei übereinstimmende Willenserklärungen (Angebot und Annahme) zustande. V hat das Fahrrad zu einem Preis von 500 EUR angeboten (Angebot), K hat dieses Angebot angenommen (Annahme). Damit liegt ein wirksamer Kaufvertrag vor.\n> Anhaltspunkte für das Vorliegen von Wirksamkeitshindernissen (Geschäftsunfähigkeit, Formmangel etc.) sind nicht ersichtlich.\n> **Ergebnis:** K hat gegen V einen Anspruch auf Übergabe und Übereignung des Fahrrads aus § 433 Abs. 1 S. 1 BGB.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die 4-W-Formel",
+          "body": "**Wer** will **was** von **wem** **woraus**? – Erst wenn alle vier Fragen beantwortet sind, ist die Prüfung sauber aufgestellt."
+        },
+        {
+          "kind": "tip",
+          "title": "Anspruchsprüfung in der Klausur",
+          "body": "Beginne jeden neuen Anspruch mit einem **Obersatz** im Konjunktiv: \"X könnte gegen Y einen Anspruch auf ... aus § ... BGB haben.\" Prüfe dann entstanden → nicht erloschen → durchsetzbar."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-anspruchsschema",
+          "title": "Dreistufige Anspruchsprüfung",
+          "caption": "Jede Anspruchsprüfung folgt diesem Schema – von der Entstehung bis zur Durchsetzbarkeit.",
+          "code": "graph TD\n  A[\"Anspruch: Wer will was von wem woraus?\"] --> B[\"1. Entstanden?\\nTatbestandsmerkmale der AGL erfüllt?\\nRechtshindernde Einwendungen?\"]\n  B -->|\"Nein\"| X1[\"Anspruch (-) nicht entstanden\"]\n  B -->|\"Ja\"| C[\"2. Nicht erloschen?\\nErfüllung § 362? Rücktritt? Unmöglichkeit?\\nRechtsvernichtende Einwendungen?\"]\n  C -->|\"Erloschen\"| X2[\"Anspruch (-) erloschen\"]\n  C -->|\"Nicht erloschen\"| D[\"3. Durchsetzbar?\\nFälligkeit? Einreden?\\n(Verjährung § 214, § 273, § 320 BGB)\"]\n  D -->|\"Einrede greift\"| X3[\"Anspruch zur Zeit nicht durchsetzbar\"]\n  D -->|\"Durchsetzbar\"| E[\"Anspruch (+)\"]"
+        },
+        {
+          "kind": "table",
+          "id": "tab-anspruchsgrundlagen-übersicht",
+          "title": "Wichtige vertragliche Anspruchsgrundlagen im Überblick",
+          "headers": ["Vertragstyp", "Anspruch Gläubiger 1", "Anspruch Gläubiger 2", "Entgeltlich?"],
+          "rows": [
+            ["Kaufvertrag § 433 BGB", "Übergabe + Eigentum, § 433 I BGB (Käufer)", "Kaufpreis + Abnahme, § 433 II BGB (Verkäufer)", "Ja"],
+            ["Tausch § 480 BGB", "Übergabe + Eigentum (wie § 433 I)", "Übergabe + Eigentum (wie § 433 I)", "Ja (Ware gegen Ware)"],
+            ["Gelddarlehen § 488 BGB", "Auszahlung, § 488 I 1 BGB (Darlehensnehmer)", "Rückzahlung + Zins, § 488 I 2 BGB (Darlehensgeber)", "Ja (bei Zins)"],
+            ["Schenkung § 516 BGB", "Zuwendung, § 516 I BGB (Beschenkter)", "–", "Nein (unentgeltlich)"],
+            ["Mietvertrag § 535 BGB", "Gebrauchsüberlassung, § 535 I 1 BGB (Mieter)", "Mietzahlung, § 535 II BGB (Vermieter)", "Ja"],
+            ["Werkvertrag § 631 BGB", "Herbeiführung Erfolg, § 631 I BGB (Besteller)", "Vergütung, § 631 I BGB (Unternehmer)", "Ja"],
+            ["Dienstvertrag § 611 BGB", "Tätigkeit, § 611 I BGB (Dienstberechtigter)", "Vergütung, § 611 I BGB (Dienstverpflichteter)", "Ja"],
+            ["Leihe § 598 BGB", "Gebrauchsüberlassung, § 598 BGB (Entleiher)", "–", "Nein (unentgeltlich)"],
+            ["Auftrag § 662 BGB", "Besorgung des Geschäfts, § 662 BGB (Auftraggeber)", "Aufwendungsersatz möglich, § 670 BGB", "Nein (unentgeltlich)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "erfüllung-und-surrogate",
+      "heading": "Wie erlischt ein Anspruch? – Erfüllung und Erfüllungssurrogate",
+      "body": "Ein Schuldverhältnis im engeren Sinne (Forderung) erlischt auf verschiedene Wegen. Der häufigste ist die **Erfüllung**, daneben gibt es **Erfüllungssurrogate** (Alternativen mit gleicher Wirkung).\n\n## Erfüllung – § 362 Abs. 1 BGB\n\n**Was ist das?** Erfüllung liegt vor, wenn der Schuldner die geschuldete Leistung tatsächlich und ordnungsgemäß an den Gläubiger erbringt.\n\n**Wichtig:** Nur das Schuldverhältnis **im engeren Sinne** (die einzelne Forderung) erlischt, nicht das gesamte Schuldverhältnis im weiteren Sinne (z. B. der Kaufvertrag als solcher). Der Kaufvertrag bleibt der Rechtsgrund für das Behalten-Dürfen der empfangenen Leistungen.\n\n**Voraussetzungen der Erfüllung:**\n1. Leistungsgegenstand: die richtige Sache/Leistung (Stückschuld, Gattungsschuld, §§ 243 ff. BGB)\n2. Art und Weise: ordnungsgemäß, ohne Mängel\n3. Leistungsort: richtiger Ort (§ 269 BGB – Hol-/Bring-/Schickschuld)\n4. Leistungszeit: zum Fälligkeitszeitpunkt (§ 271 BGB)\n5. Empfangszuständigkeit: an den richtigen Empfänger (Gläubiger selbst oder Bevollmächtigten)\n6. Ggf. Tilgungsbestimmung: bei mehreren Schulden (§ 366 BGB)\n\n## Erfüllungssurrogate\n\n**Leistung an Erfüllungs statt** (§ 364 Abs. 1 BGB): Der Gläubiger nimmt eine andere als die geschuldete Leistung an – das Schuldverhältnis erlischt sofort.\n\n**Leistung erfüllungshalber** (§ 364 Abs. 2 BGB): Der Schuldner erbringt eine andere Leistung; das Schuldverhältnis erlischt erst, wenn der Gläubiger daraus tatsächlich befriedigt wird.\n\n**Hinterlegung** (§ 372 BGB): Der Schuldner hinterlegt Geld, Wertpapiere oder Kostbarkeiten bei einer staatlichen Hinterlegungsstelle, wenn der Gläubiger in Annahmeverzug ist, die Person des Gläubigers unbekannt oder unsicher ist. Befreiungswirkung tritt nur ein, wenn der Schuldner auf sein Rücknahmerecht verzichtet (§ 376 Abs. 2 Nr. 1 BGB).\n\n**Aufrechnung** (§ 387 BGB): Schuldner und Gläubiger haben sich wechselseitig gleichartige, fällige Forderungen (sog. Aufrechnungslage). Eine Aufrechnungserklärung (§ 388 BGB) lässt beide Forderungen erlöschen. **Besonderheit:** Die Aufrechnung wirkt **ex tunc**, also rückwirkend auf den Zeitpunkt, zu dem die Aufrechnungslage erstmals bestand (§ 389 BGB).\n\n**Erlass** (§ 397 Abs. 1 BGB): Der Gläubiger verzichtet durch Vertrag auf seine Forderung.\n\n**Negatives Schuldanerkenntnis** (§ 397 Abs. 2 BGB): Die Parteien vereinbaren, dass ein Schuldverhältnis nicht besteht.",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Achtung: Nur das engere Schuldverhältnis erlischt!",
+          "body": "Wenn der Käufer den Kaufpreis zahlt, erlischt die Zahlungsforderung des Verkäufers (§ 362 BGB). Der Kaufvertrag selbst (das Schuldverhältnis im weiteren Sinne) bleibt bestehen – er ist der Rechtsgrund dafür, dass der Verkäufer den Kaufpreis behalten darf."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Aufrechnung wirkt ex tunc!",
+          "body": "Die Aufrechnung wirkt auf den Zeitpunkt zurück, zu dem die Aufrechnungslage erstmals bestand (§ 389 BGB). Das ist wichtig für Verzugszinsen: Wenn A ab dem 1. Januar in Verzug war, aber erst am 1. März aufgerechnet wird, entfällt der Verzug rückwirkend ab 1. Januar."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-erlöschensgründe",
+          "title": "Erlöschensgründe für Schuldverhältnisse (im engeren Sinne)",
+          "caption": "Wege, auf denen eine Forderung untergeht.",
+          "code": "graph TD\n  A[\"Forderung erlischt durch...\"] --> B[\"Erfüllung\\n§ 362 I BGB\"]\n  A --> C[\"Leistung an Erfüllungs statt\\n§ 364 I BGB\"]\n  A --> D[\"Hinterlegung\\n§ 372 BGB\"]\n  A --> E[\"Aufrechnung\\n§ 387 BGB\\n(ex tunc, § 389 BGB)\"]\n  A --> F[\"Erlass\\n§ 397 I BGB\"]\n  A --> G[\"Negatives Schuldanerkenntnis\\n§ 397 II BGB\"]"
+        }
+      ]
+    },
+    {
+      "id": "leistungsgegenstand-ort-zeit",
+      "heading": "Leistungsgegenstand, -ort und -zeit: Was, wo und wann?",
+      "body": "## Der Leistungsgegenstand: Stückschuld oder Gattungsschuld?\n\nWenn die geschuldete Leistung eine Sache ist, muss man klären, ob eine bestimmte oder eine beliebige Sache geschuldet ist.\n\n### Stückschuld\n\nDer Schuldner schuldet eine **konkret bestimmte, individuelle Sache** – und nur diese. Beispiel: Das ganz bestimmte, gebrauchte Fahrrad mit der Rahmennummer XY, das K bei V besichtigt hat. V kann nur genau dieses Fahrrad liefern, kein anderes.\n\n### Gattungsschuld (§ 243 Abs. 1 BGB)\n\nDer Schuldner schuldet eine Sache, die nur nach allgemeinen **Gattungsmerkmalen** bestimmt ist, z. B. \"5 Liter Milch\", \"ein Fahrrad der Marke X, Modell Y\". Er muss eine Sache **mittlerer Art und Güte** liefern.\n\n**Vorratsschuld:** Eine beschränkte Gattungsschuld – die Gattung ist auf einen bestimmten Vorrat begrenzt (z. B. \"aus meinem Keller: 10 Flaschen Wein\").\n\n### Konkretisierung (§ 243 Abs. 2 BGB)\n\nAus einer Gattungsschuld wird eine Stückschuld durch **Konkretisierung**: Sobald der Schuldner alles seinerseits Erforderliche getan hat (z. B. die Ware am Leistungsort bereitgestellt oder abgesandt hat), beschränkt sich das Schuldverhältnis auf diese konkrete Sache. Von diesem Moment an trägt der Schuldner das Risiko nur noch für *diese* Sache.\n\n## Leistungszeit – § 271 BGB\n\n**Grundsatz:** Der Gläubiger kann die Leistung **sofort** verlangen, der Schuldner kann sie sofort erbringen (§ 271 Abs. 1 BGB).\n\nUnterschied: **Fälligkeit** (ab wann kann der Gläubiger verlangen?) vs. **Erfüllbarkeit** (ab wann darf der Schuldner leisten?).\n\nAbweichungen durch Parteivereinbarung oder Gesetz möglich (Stundung = Fälligkeit hinausgeschoben).\n\n## Leistungsort – § 269 BGB\n\n**Was ist das?** Der Ort, an dem der Schuldner die Leistung zu erbringen hat.\n\nMan unterscheidet:\n\n- **Holschuld:** Gläubiger holt beim Schuldner ab – Erfüllungsort beim Schuldner. (Regelfall bei § 269 Abs. 1 BGB: Wohnsitz/Niederlassung des Schuldners)\n- **Bringschuld:** Schuldner bringt zum Gläubiger – Erfüllungsort und Erfolgsort beide beim Gläubiger.\n- **Schickschuld:** Schuldner schickt (versendet) die Leistung – Erfüllungsort beim Schuldner, Erfolgsort beim Gläubiger. (typisch beim Versandkauf)\n\n**Praxistipp:** Der Leistungsort bestimmt u. a., ab wann die Transportgefahr auf den Gläubiger übergeht.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Gattungsschuld → Konkretisierung",
+          "body": "Weinhandel V soll an K 6 Flaschen Bordeaux 2020 liefern. Bisher liegt eine Gattungsschuld vor – V könnte noch irgendwelche 6 Flaschen aus seinem Lager nehmen. Sobald V die 6 ausgewählten Flaschen verpackt und beim Paketdienst abgegeben hat, ist die Schuld konkretisiert (§ 243 Abs. 2 BGB). Gehen die Flaschen auf dem Transport verloren, trägt das der Käufer (Schickschuld: Erfüllungsort = Lager des V)."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Merkhilfe Leistungsorte",
+          "body": "**HOL**schuld = Gläubiger **hol**t ab (beim Schuldner). **BRING**schuld = Schuldner **bring**t hin (zum Gläubiger). **SCHICK**schuld = Schuldner **schick**t los (Transportgefahr geht mit Absendung auf Gläubiger über)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-1",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Was versteht man unter dem Schuldverhältnis im weiteren Sinne und im engeren Sinne (§ 241 BGB)?",
+      "back": "**Im weiteren Sinne:** Das gesamte Rechtsverhältnis zwischen Gläubiger und Schuldner (alle Rechte und Pflichten), z. B. der Kaufvertrag als Ganzes.\n**Im engeren Sinne:** Eine einzelne Forderung / Pflicht des Schuldners, z. B. die Zahlungspflicht des Käufers (§ 433 Abs. 2 BGB)."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-2",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Nenne die drei Entstehungsquellen von Schuldverhältnissen mit je einem Beispiel.",
+      "back": "1. **Rechtsgeschäftlich** (§ 311 I BGB): Kaufvertrag durch Angebot + Annahme.\n2. **Vorvertraglich** (§ 311 II BGB, c.i.c.): Sturz im Supermarkt bei Vertragsverhandlungen → Schadensersatz.\n3. **Gesetzlich**: Unfall → § 823 I BGB; ungerechtfertigte Bereicherung → § 812 BGB."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-3",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Was ist der Unterschied zwischen Hauptpflicht, Nebenpflicht und Obliegenheit?",
+      "back": "**Hauptpflicht** (§ 241 I BGB): Kernpflicht des Vertrags, einklagbar, Verletzung → Schadensersatz.\n**Nebenpflicht** (§ 241 II BGB): Schutz- und Treuepflichten, Verletzung → Schadensersatz.\n**Obliegenheit**: Nicht einklagbar, Verletzung → nur eigene Rechtsnachteile (z. B. Mitverschulden § 254 BGB)."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-4",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Was besagt die Anspruchsformel „Wer will was von wem woraus?\" – und wofür braucht man sie?",
+      "back": "Sie ist das juristische Grundschema zur Anspruchsprüfung: **Wer** = Gläubiger, **was** = begehrte Rechtsfolge, **von wem** = Schuldner, **woraus** = Anspruchsgrundlage (§). Sie stellt sicher, dass man eine konkrete Rechtsnorm nennt, auf die sich der Anspruch stützt."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-5",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Welche Pflichten hat der Verkäufer und welche hat der Käufer beim Kaufvertrag (§ 433 BGB)?",
+      "back": "**Verkäufer** (§ 433 Abs. 1 BGB): Übergabe der Sache + Verschaffung des Eigentums + Freiheit von Sach- und Rechtsmängeln.\n**Käufer** (§ 433 Abs. 2 BGB): Zahlung des Kaufpreises + Abnahme der gekauften Sache."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-6",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Wie wirkt die Aufrechnung nach §§ 387 ff. BGB – und was bedeutet „ex tunc\"?",
+      "back": "Die Aufrechnung lässt zwei gleichartige, gegenseitige, fällige und einredefreie Forderungen erlöschen. Sie wirkt **ex tunc** (§ 389 BGB), d. h. rückwirkend auf den Zeitpunkt, zu dem die Aufrechnungslage erstmals bestand. Für Verzugszinsen bedeutet das: Rückwirkend kein Verzug ab diesem Zeitpunkt."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-7",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Was ist der Unterschied zwischen Stückschuld und Gattungsschuld? Was ist Konkretisierung (§ 243 II BGB)?",
+      "back": "**Stückschuld:** Eine individuell bestimmte, konkrete Sache wird geschuldet.\n**Gattungsschuld** (§ 243 I BGB): Eine nach Gattungsmerkmalen bestimmte Sache mittlerer Art und Güte wird geschuldet.\n**Konkretisierung** (§ 243 II BGB): Sobald der Schuldner alles seinerseits Erforderliche getan hat (z. B. Absendung), beschränkt sich die Schuld auf die ausgewählte Sache → sie wird zur Stückschuld."
+    },
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-fc-8",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "front": "Was ist das Synallagma und welche praktische Bedeutung hat es?",
+      "back": "Das **Synallagma** ist das Gegenseitigkeitsverhältnis bei zweiseitig verpflichtenden Verträgen (z. B. Kauf, Miete, Werk). Leistung und Gegenleistung hängen voneinander ab. Praktische Folge: Die **Einrede des nicht erfüllten Vertrages** (§ 320 BGB) erlaubt es dem Schuldner, seine Leistung zu verweigern, solange die andere Seite ihre Leistung nicht erbracht hat."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q1",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Aussagen beschreibt das Schuldverhältnis im **engeren** Sinne korrekt?",
+      "options": [
+        "Das gesamte Rechtsverhältnis zwischen Gläubiger und Schuldner, z. B. der Kaufvertrag als Ganzes",
+        "Die einzelne Forderung des Gläubigers gegen den Schuldner, z. B. der Anspruch auf Kaufpreiszahlung",
+        "Ein Verhältnis, das gegenüber jedermann gilt (absolutes Recht)",
+        "Nur Schuldverhältnisse, die durch Gesetz entstehen"
+      ],
+      "correct": [1],
+      "explanation": "Das Schuldverhältnis im engeren Sinne ist die einzelne Forderung (z. B. Anspruch auf Kaufpreiszahlung, § 433 Abs. 2 BGB). Das Schuldverhältnis im weiteren Sinne ist dagegen das gesamte Rechtsverhältnis (z. B. der gesamte Kaufvertrag)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q2",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "leicht",
+      "prompt": "Ein Schuldverhältnis kann ausschließlich durch Vertrag entstehen.",
+      "answer": false,
+      "explanation": "Falsch. Schuldverhältnisse entstehen auch vorvertraglich (§ 311 Abs. 2 BGB, c.i.c.) oder gesetzlich (z. B. durch unerlaubte Handlung § 823 BGB oder ungerechtfertigte Bereicherung § 812 BGB)."
+    },
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q3",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "mittel",
+      "prompt": "Käufer K kauft ein Notebook bei Verkäufer V. Beim Auspacken schneidet sich K an einer scharfen Kante der schlecht verarbeiteten Verpackung. Auf welche Anspruchsgrundlage kann K einen Schadensersatzanspruch stützen?",
+      "options": [
+        "§ 433 Abs. 1 BGB (Übergabe mangelfreier Sache)",
+        "§ 280 Abs. 1 i.V.m. § 241 Abs. 2 BGB (Verletzung einer Nebenpflicht)",
+        "§ 271 BGB (Fälligkeit)",
+        "§ 362 BGB (Erfüllung)"
+      ],
+      "correct": [1],
+      "explanation": "V hat eine Schutzpflicht (Nebenpflicht, § 241 Abs. 2 BGB) verletzt, indem er eine gefährlich scharfkantige Verpackung verwendete. Dies führt zu einem Schadensersatzanspruch aus § 280 Abs. 1 BGB i.V.m. § 241 Abs. 2 BGB. § 433 Abs. 1 BGB ist die Hauptpflicht (Lieferung der Sache selbst), regelt aber nicht die Verletzung von Körperschutzpflichten direkt."
+    },
+    {
+      "kind": "truefalse",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q4",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "mittel",
+      "prompt": "Die Aufrechnung (§ 387 BGB) hat Wirkung ex nunc, also ab dem Zeitpunkt der Aufrechnungserklärung.",
+      "answer": false,
+      "explanation": "Falsch. Die Aufrechnung wirkt gem. § 389 BGB **ex tunc**, also rückwirkend auf den Zeitpunkt, zu dem die Aufrechnungslage erstmals bestand. Dadurch entfallen auch rückwirkend etwaige Verzugszinsen."
+    },
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q5",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "mittel",
+      "prompt": "Was sind die Voraussetzungen einer wirksamen Aufrechnung (§ 387 BGB)? (Mehrfachauswahl)",
+      "options": [
+        "Gegenseitigkeit der Forderungen",
+        "Gleichartigkeit der Forderungen",
+        "Fälligkeit der Gegenforderung",
+        "Einredefreiheit der Gegenforderung",
+        "Schriftlichkeit der Aufrechnungserklärung"
+      ],
+      "correct": [0, 1, 2, 3],
+      "multiple": true,
+      "explanation": "Für eine wirksame Aufrechnung braucht man eine Aufrechnungslage: Gegenseitigkeit, Gleichartigkeit, Fälligkeit der Gegenforderung und Einredefreiheit (§§ 387, 390 BGB). Eine Schriftlichkeit ist nicht erforderlich; die Aufrechnungserklärung (§ 388 BGB) ist formfrei."
+    },
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q6",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "leicht",
+      "prompt": "Welche Aussage zum Kaufvertrag (§ 433 BGB) ist **korrekt**?",
+      "options": [
+        "Der Käufer schuldet nur die Zahlung des Kaufpreises, nicht die Abnahme der Sache.",
+        "Der Verkäufer muss die Sache nur übergeben, nicht übereignen.",
+        "Der Käufer hat aus § 433 Abs. 1 S. 2 BGB Anspruch auf eine mangelfreie Sache.",
+        "Der Kaufvertrag ist ein einseitig verpflichtender Vertrag, da nur der Verkäufer liefern muss."
+      ],
+      "correct": [2],
+      "explanation": "§ 433 Abs. 1 S. 2 BGB verpflichtet den Verkäufer, die Sache frei von Sach- und Rechtsmängeln zu verschaffen. Der Kaufvertrag ist ein gegenseitiger Vertrag (Synallagma): Der Verkäufer schuldet Übergabe + Übereignung (Abs. 1), der Käufer Kaufpreiszahlung + Abnahme (Abs. 2)."
+    },
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q7",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "mittel",
+      "prompt": "Weinhandel V soll dem K 12 Flaschen Bordeaux 2020 liefern. V packt 12 Flaschen ein und gibt das Paket beim Paketdienst ab. Auf dem Weg zu K wird das Paket durch einen Unfall des Fahrers beschädigt. Wer trägt den Schaden?",
+      "options": [
+        "V, weil er noch immer Schuldner der Gattungsschuld ist",
+        "K, weil die Schuld durch Absendung konkretisiert wurde (§ 243 Abs. 2 BGB) und es sich um eine Schickschuld handelt",
+        "Der Paketdienst allein, da dieser die Gefahr vollständig übernimmt",
+        "Beide jeweils zur Hälfte"
+      ],
+      "correct": [1],
+      "explanation": "Sobald V alles seinerseits Erforderliche getan hat (Einpacken und Übergabe an den Paketdienst), ist die Gattungsschuld gem. § 243 Abs. 2 BGB konkretisiert. Bei einer Schickschuld liegt der Erfüllungsort beim Schuldner (V), die Transportgefahr geht also mit Absendung auf den Käufer K über."
+    },
+    {
+      "kind": "truefalse",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q8",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "leicht",
+      "prompt": "Die Einrede des nicht erfüllten Vertrages (§ 320 BGB) setzt einen **gegenseitigen** Vertrag (Synallagma) voraus.",
+      "answer": true,
+      "explanation": "Richtig. § 320 BGB gilt nur bei gegenseitigen Verträgen, bei denen Leistung und Gegenleistung in einem Synallagma stehen. Bei einseitig verpflichtenden Verträgen (z. B. Schenkung) gibt es keine Gegenleistung, auf die sich diese Einrede stützen könnte."
+    },
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q9",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "mittel",
+      "prompt": "Was ist der Unterschied zwischen dem **allgemeinen Zurückbehaltungsrecht** (§ 273 BGB) und der **Einrede des nicht erfüllten Vertrages** (§ 320 BGB)?",
+      "options": [
+        "§ 273 BGB gilt nur bei gegenseitigen Verträgen; § 320 BGB gilt immer",
+        "§ 273 BGB erfordert Konnexität (einheitlicher Lebensvorgang); § 320 BGB erfordert einen gegenseitigen Vertrag mit Synallagma",
+        "Beide sind identisch – § 320 BGB ist nur eine Spezialregelung für Kaufverträge",
+        "§ 273 BGB gilt nur für Geldschulden; § 320 BGB gilt für alle Leistungen"
+      ],
+      "correct": [1],
+      "explanation": "§ 273 BGB (allgemeines ZBR) erfordert Gegenseitigkeit und Konnexität (Ansprüche aus demselben Lebensverhältnis), aber keinen gegenseitigen Vertrag. § 320 BGB erfordert dagegen einen gegenseitigen Vertrag (Synallagma) und hat eine Besonderheit: Es gibt keine Vorleistungspflicht und es kann nicht durch Sicherheitsleistung abgewendet werden (§ 320 Abs. 1 S. 3 BGB)."
+    },
+    {
+      "kind": "freetext",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q10",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "schwer",
+      "prompt": "Formuliere den Obersatz einer Anspruchsprüfung: K möchte wissen, ob sie von V die Übergabe und Übereignung des von ihr gekauften Laptops verlangen kann. Nenne auch die richtige Anspruchsgrundlage.",
+      "sampleAnswer": "K könnte gegen V einen Anspruch auf Übergabe und Übereignung des Laptops aus § 433 Abs. 1 S. 1 BGB haben.",
+      "keywords": ["könnte", "§ 433", "Abs. 1", "Übergabe", "Übereignung", "Anspruch"],
+      "explanation": "Der Obersatz steht im Konjunktiv (könnte), nennt den Anspruchsteller (K), den Schuldner (V), die begehrte Rechtsfolge (Übergabe und Übereignung des Laptops) und die Anspruchsgrundlage (§ 433 Abs. 1 S. 1 BGB). Dies ist die typische Formulierung im Gutachtenstil."
+    },
+    {
+      "kind": "truefalse",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q11",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "mittel",
+      "prompt": "Bei der Erfüllung (§ 362 BGB) erlischt das gesamte Schuldverhältnis im weiteren Sinne (z. B. der Kaufvertrag).",
+      "answer": false,
+      "explanation": "Falsch. Durch Erfüllung erlischt nur das Schuldverhältnis **im engeren Sinne**, also die einzelne Forderung. Das Schuldverhältnis im weiteren Sinne (z. B. der Kaufvertrag) bleibt bestehen – es bildet den Rechtsgrund (causa) dafür, dass das Geleistete behalten werden darf und keine Rückforderung aus § 812 BGB entsteht."
+    },
+    {
+      "kind": "mc",
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-q12",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "difficulty": "leicht",
+      "prompt": "Rentner R mäht regelmäßig den Rasen seines Nachbarn N, ohne dafür beauftragt zu sein. N ist gesundheitlich nicht mehr in der Lage, dies selbst zu tun. Welche Art von Schuldverhältnis liegt vor?",
+      "options": [
+        "Rechtsgeschäftliches Schuldverhältnis durch Auftrag (§ 662 BGB)",
+        "Gesetzliches Schuldverhältnis durch Geschäftsführung ohne Auftrag (§§ 677 ff. BGB)",
+        "Vorvertragliches Schuldverhältnis (§ 311 Abs. 2 BGB)",
+        "Kein Schuldverhältnis, da es sich um eine bloße Gefälligkeit handelt"
+      ],
+      "correct": [1],
+      "explanation": "R besorgt das Geschäft des N (Rasenmähen), ohne von N beauftragt zu sein. Das ist eine Geschäftsführung ohne Auftrag (GoA, §§ 677 ff. BGB) – ein gesetzliches Schuldverhältnis. Voraussetzung ist, dass R fremdes Geschäft führt und Fremdgeschäftsführungswille hat. R hat daher ggf. Anspruch auf Aufwendungsersatz (§ 683 i.V.m. § 670 BGB)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "schuldrecht-at-grundlagen-pflichten-und-an-ex-1",
+      "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+      "label": "Vertiefungsfall 1.1 – Der Nachbar und die Nachbarschaftshilfe",
+      "source": "Praxisteil 1, Vertiefungsfall 1.1 (PR-WIWI-Skript-PraxisteilS4-9.pdf)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "R ist gerade frisch verrentet und möchte seinen Lebensabend sinnvoll genießen. Daher mäht er regelmäßig den Rasen für Nachbar N, der dazu gesundheitlich nicht mehr in der Lage ist. In Abwesenheit des N stellt er eines Tages fest, dass eine Mauer des N durch Regen unterspült ist und die Straße zu kippen droht. Er bestellt einen Handwerker, der die Mauer abstützt, um dies zu verhindern. Als er N ein paar Wochen später mitteilt, dass er für sechs Wochen in Urlaub fährt, meint dieser, R habe es doch versprochen und müsse sich jetzt daran halten.\n\nWelche Arten von Rechtsbeziehungen liegen vor?\n\n**Abwandlung:** Wie ist der Fall zu entscheiden, wenn R sich einen Rasenmäher bestellt hatte, jedoch der Verkäufer den Kaufvertrag nach Bezahlung angefochten hatte, da durch einen Programmfehler der Preis falsch ausgewiesen worden war?",
+      "hint": "Überlege bei jedem Vorgang: Liegt eine Willenserklärung vor? Oder handelt es sich um einen Realakt? Gibt es einen Rechtsbindungswillen? Prüfe auch, ob eine Gefälligkeit vorliegt oder ein gesetzliches Schuldverhältnis.",
+      "solution": "## Lösung: Grundfall\n\n### A. Rasenmähen (R mäht regelmäßig den Rasen des N)\n\nR könnte gegen N einen Anspruch auf Aufwendungsersatz aus §§ 677, 683, 670 BGB haben (Geschäftsführung ohne Auftrag). Oder es liegt eine bloße Gefälligkeit ohne Rechtsbindung vor.\n\n**I. Art der Rechtsbeziehung beim Rasenmähen**\n\nOb ein rechtliches Schuldverhältnis oder eine bloße Gefälligkeit vorliegt, richtet sich nach dem objektiv erkennbaren Rechtsbindungswillen der Parteien. Maßgeblich sind die Umstände des Einzelfalls (wirtschaftliche Bedeutung, Interessen, Verkehrssitte).\n\nHier mäht R regelmäßig den Rasen für N. Es besteht kein Vertrag (Auftrag § 662 BGB würde eine Einigung voraussetzen; eine solche ist nicht ersichtlich). R handelt ohne beauftragt zu sein.\n\nGleichzeitig fehlt erkennbar ein Rechtsbindungswille auf beiden Seiten: Es handelt sich um nachbarschaftliche Hilfe unter Rentnern ohne wirtschaftliche Bedeutung.\n\n**Zwischenergebnis:** Die regelmäßige Rasenpflege begründet lediglich eine **Gefälligkeit** ohne Rechtsbindung, kein rechtsgeschäftliches Schuldverhältnis. Der Anspruch des N, dass R auch weiterhin den Rasen mähen müsse, scheidet daher aus.\n\n### B. Abstützung der Mauer durch den Handwerker\n\n**Obersatz:** R könnte gegen N einen Anspruch auf Ersatz der Handwerkerkosten aus §§ 677, 683 S. 1, 670 BGB (berechtigte Geschäftsführung ohne Auftrag) haben.\n\n**I. Tatbestand der Geschäftsführung ohne Auftrag (§ 677 BGB)**\n\n1. **Fremdes Geschäft:** Die Mauer gehört N; ihre Abstützung ist ein Geschäft des N.\n2. **Für einen anderen:** R handelt für N, nicht für sich selbst.\n3. **Ohne Auftrag oder sonstige Berechtigung:** R hat keinen Auftrag des N und ist auch nicht anderweitig berechtigt.\n4. **Fremdgeschäftsführungswille:** R will bewusst ein Geschäft für N besorgen; dies ist anzunehmen, da er weiß, dass die Mauer N gehört.\n\nDamit liegt eine Geschäftsführung ohne Auftrag vor.\n\n**II. Berechtigung (§ 683 S. 1 BGB)**\n\nDie Übernahme der Geschäftsführung entspricht dem **Interesse und dem wirklichen oder mutmaßlichen Willen** des Geschäftsherrn N. Ein vernünftiger Eigentümer möchte, dass seine Mauer nicht die Straße gefährdet und abstützt wird. Ein entgegenstehender Wille des N ist nicht ersichtlich.\n\n**III. Aufwendungsersatz (§ 670 BGB)**\n\nR hat die Handwerkerkosten aufgewandt. Diese waren zur Durchführung der Geschäftsführung erforderlich.\n\n**Ergebnis:** R hat gegen N einen Anspruch auf Ersatz der Handwerkerkosten aus §§ 677, 683 S. 1, 670 BGB (berechtigte Geschäftsführung ohne Auftrag).\n\n### C. Anspruch des N auf zukünftiges Rasenmähen (\"R habe es versprochen\")\n\nN behauptet, R habe sich verpflichtet, auch in Zukunft den Rasen zu mähen.\n\nEin rechtlicher Anspruch würde einen Vertrag (Auftrag § 662 BGB) oder zumindest eine einseitige bindende Willenserklärung voraussetzen.\n\nEin bloßes \"Versprechen\" unter Nachbarn im Rahmen einer Gefälligkeit begründet nach objektivem Empfängerhorizont (§§ 133, 157 BGB) regelmäßig keinen Rechtsbindungswillen. Weder die wirtschaftliche Bedeutung noch die Umstände sprechen dafür, dass R rechtlich verpflichtet sein wollte.\n\n**Ergebnis:** N hat keinen rechtlichen Anspruch darauf, dass R auch während dessen Urlaub den Rasen mäht. Die Rechtsbeziehung ist eine **rechtlich unverbindliche Gefälligkeit**.\n\n---\n\n## Abwandlung: Anfechtung des Kaufvertrags über den Rasenmäher\n\n**Sachverhalt:** R hat einen Rasenmäher bestellt und bezahlt. Der Verkäufer V hat den Kaufvertrag anschließend angefochten, weil durch einen Programmfehler der Preis falsch ausgewiesen war.\n\n**Obersatz:** R könnte gegen V einen Anspruch auf Übergabe und Übereignung des Rasenmähers aus § 433 Abs. 1 S. 1 BGB haben.\n\n**I. Wirksamer Kaufvertrag (§ 433 BGB)**\n\nR und V haben durch Bestellung (Angebot) und Annahme einen Kaufvertrag geschlossen. Dieser wäre Grundlage des Lieferanspruchs.\n\n**II. Wirksamkeit nach Anfechtung (§§ 119, 142 BGB)**\n\nV hat den Kaufvertrag angefochten. Fraglich ist, ob die Anfechtung wirksam ist.\n\n**1. Anfechtungsgrund:** V beruft sich auf einen Irrtum aufgrund eines Programmfehlers, durch den der Preis falsch ausgewiesen war. Es handelt sich um einen **Erklärungsirrtum** gem. § 119 Abs. 1 Alt. 2 BGB: V hat beim Einrichten des Shopsystems versehentlich einen falschen Preis eingegeben (oder das Programm hat einen falschen Preis angezeigt), sodass V eine Erklärung abgegeben hat, die er bei Kenntnis der Sachlage nicht abgegeben hätte.\n\nAlternativ: Es liegt ein **Inhaltsirrtum** nach § 119 Abs. 1 Alt. 1 BGB vor, wenn V zwar eine Erklärung mit dem richtigen Wortlaut wollte, deren Bedeutung aber verkannte.\n\nIn jedem Fall: Ein Irrtum über den Preis durch einen technischen Fehler (Programmfehler) kann einen Erklärungsirrtum darstellen, sofern V den falschen Preis nicht bewusst festgelegt hat.\n\n**2. Anfechtungserklärung (§ 143 BGB):** V hat die Anfechtung gegenüber R als Anfechtungsgegner erklärt.\n\n**3. Anfechtungsfrist (§ 121 BGB):** Die Anfechtung muss unverzüglich (ohne schuldhaftes Zögern) nach Kenntnis des Irrtums erfolgen. Dies ist zu unterstellen.\n\n**4. Rechtsfolge (§ 142 Abs. 1 BGB):** Bei wirksamer Anfechtung gilt der Kaufvertrag als von Anfang an nichtig (ex tunc).\n\n**III. Schadensersatzpflicht des V (§ 122 BGB)**\n\nTrotz wirksamer Anfechtung hat R bereits gezahlt. V muss gem. § 122 Abs. 1 BGB das sog. **negative Interesse** (Vertrauensschaden) ersetzen: R ist so zu stellen, wie er stünde, wenn er nicht auf die Gültigkeit des Rechtsgeschäfts vertraut hätte. Der Kaufpreis ist zurückzuzahlen.\n\n**Ergebnis:** Durch die wirksame Anfechtung des Kaufvertrags (§§ 119, 142 BGB) ist dieser ex tunc nichtig. R hat **keinen Anspruch** auf Lieferung des Rasenmähers aus § 433 Abs. 1 S. 1 BGB. V muss jedoch den bereits gezahlten Kaufpreis aus § 122 Abs. 1 BGB (Vertrauensschaden) oder aus § 812 Abs. 1 S. 1 Alt. 1 BGB (Leistungskondiktion: Zahlung ohne Rechtsgrund) zurückerstatten."
+    }
+  ]
+}

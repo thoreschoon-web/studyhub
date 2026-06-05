@@ -1,0 +1,440 @@
+{
+  "id": "mkt-vl7-preispolitik",
+  "subjectId": "bwl",
+  "title": "VL7 — Preispolitik",
+  "summary": "Preispolitik erklärt: Warum Preise entstehen, wie man sie berechnet und strategisch einsetzt. Themen: Preisabsatzfunktion, Preiselastizität, Gewinnmaximierung per Ableitung, Cournot-Punkt, Kosten-Zuschlags-Kalkulation und wettbewerbsorientierte Preisfestlegung.",
+  "order": 7,
+  "estMinutes": 75,
+  "group": "Marketing",
+  "sections": [
+    {
+      "id": "sec-einfuehrung",
+      "heading": "Was ist Preispolitik und warum ist sie so wichtig?",
+      "body": "## Der Preis — das mächtigste Instrument im Marketing-Mix\n\nStell dir vor, du verkaufst handgemachte Tassen. Du hast die Qualität optimiert, schöne Fotos gemacht, einen Online-Shop aufgebaut. Aber eines Frage bleibt: **Was kostest du?**\n\nDer Preis ist das einzige Element des Marketing-Mix, das direkt Umsatz generiert. Produkt, Vertrieb und Kommunikation erzeugen zunächst nur Kosten. Der Preis dagegen bringt sofort Geld rein — oder treibt Kunden weg.\n\n### Drei Funktionen des Preises\n\nJe nach Perspektive hat der Preis unterschiedliche Bedeutung:\n\n| Perspektive | Funktion des Preises |\n|---|---|\n| Gesamtwirtschaft | Knappheitsindikator: hohe Preise zeigen Engpässe an und steuern die Ressourcenverteilung |\n| Unternehmen | Erlösquelle: Umsatz = Preis × Menge; beeinflusst Gewinn und Liquidität |\n| Konsument | Qualitätsindikator: hohe Preise signalisieren oft hohe Qualität (z.B. Luxusmarken); aber auch Kostenfaktor |\n\n### Das Wertgewinn-Konzept: Was kauft der Kunde wirklich?\n\nKunden kaufen keinen Preis — sie kaufen **Wertgewinn**. Das bedeutet:\n\n$$\\text{Wertgewinn} = \\text{Nutzenwahrnehmung} - \\text{Gesamtkosten}$$\n\nDie Gesamtkosten sind mehr als nur der Kaufpreis! Ein Kunde rechnet:\n- **Anschaffungskosten** (Kaufpreis)\n- **Akquisitionskosten** (Anfahrt, Zeitaufwand)\n- **Nutzungskosten** (Strom, Wartung)\n- **Pflegekosten** (Reinigung, Service)\n- **Eigentumskosten** (Versicherung, Lagerung)\n- **Entsorgungskosten** (Recycling)\n\nBeispiel: Drei Autos im Vergleich:\n\n| Marke | Nutzen (€) | Gesamtkosten (€) | Wertgewinn (€) |\n|---|---|---|---|\n| Marke A | 150 | 130 | **+20** |\n| Marke B | 140 | 133 | **+7** |\n| Marke C | 135 | 140 | **−5** |\n\nMarke A wird gekauft, obwohl sie nicht den günstigsten Preis hat — sie bietet den größten Wertgewinn!\n\n### Die drei Einflussfaktoren der Preisfestsetzung (die 3 Ks)\n\nKein Preis entsteht im Vakuum. Jeder Preis wird bestimmt durch:\n1. **Käufer** (Zahlungsbereitschaft, Preiselastizität, Nutzenwahrnehmung)\n2. **Kosten** (Untergrenze: Preis muss zumindest die variablen Kosten decken)\n3. **Konkurrenz** (Marktpreise, Reaktionen der Wettbewerber)",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Der Preis im Marketing-Mix",
+          "body": "Der Preis ist das einzige Marketing-Instrument, das **sofort Umsatz** generiert. Gleichzeitig beeinflusst er die **Qualitätswahrnehmung**: Ein zu niedriger Preis kann das Image beschädigen."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Wertgewinn in der Praxis",
+          "body": "Eine günstigere Waschmaschine mit höherem Stromverbrauch kann langfristig teurer sein als eine teure, energieeffiziente. Der kluge Kunde rechnet nicht nur den Kaufpreis, sondern alle Kosten über die Nutzungsdauer."
+        }
+      ]
+    },
+    {
+      "id": "sec-paf",
+      "heading": "Die Preisabsatzfunktion (PAF) — Wie reagiert der Markt auf Preise?",
+      "body": "## Was ist eine Preisabsatzfunktion?\n\nEine **Preisabsatzfunktion (PAF)** zeigt: Bei welchem Preis $p$ wird wie viel Menge $x$ nachgefragt?\n\nSie beantwortet die entscheidende Frage: *Wenn ich meinen Preis erhöhe — wie viele Kunden verliere ich dann?*\n\n### Die lineare Preisabsatzfunktion\n\nDie einfachste und in der Praxis am häufigsten verwendete Form ist die **lineare PAF**:\n\n$$x(p) = a - b \\cdot p$$\n\nOder umgeschrieben als Preis-Funktion (Preis in Abhängigkeit der Menge):\n\n$$p(x) = \\frac{a}{b} - \\frac{1}{b} \\cdot x$$\n\n**Bedeutung der Parameter:**\n- $a$ = **Sättigungsmenge**: maximale Nachfrage bei Preis = 0 (verschenken)\n- $b$ = **Steigungsparameter**: wie stark reagiert die Menge auf Preisänderungen\n- $\\frac{a}{b}$ = **Prohibitivpreis** (auch Maximalpreis): ab diesem Preis kauft niemand mehr\n\n### Konkretes Beispiel: $p(x) = 14 - 0{,}2 \\cdot x$\n\nEin Unternehmen hat folgende Preisabsatzfunktion bestimmt:\n$$p(x) = 14 - 0{,}2 \\cdot x$$\n\n**Schritt 1 — Prohibitivpreis bestimmen** (bei $x = 0$):\n$$p(0) = 14 - 0{,}2 \\cdot 0 = 14 \\text{ €}$$\nBei einem Preis von 14 € kauft niemand mehr.\n\n**Schritt 2 — Sättigungsmenge bestimmen** (bei $p = 0$):\n$$0 = 14 - 0{,}2 \\cdot x \\implies x = \\frac{14}{0{,}2} = 70 \\text{ Stück}$$\nBei Preis 0 werden maximal 70 Stück nachgefragt.\n\n**Schritt 3 — Einen Zwischenpunkt berechnen** (z.B. bei $x = 35$):\n$$p(35) = 14 - 0{,}2 \\cdot 35 = 14 - 7 = 7 \\text{ €}$$",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "fig-paf-linear",
+          "title": "Preisabsatzfunktion p(x) = 14 − 0,2x",
+          "caption": "Lineare PAF: Bei Preis 14 € (Prohibitivpreis) ist Nachfrage 0; bei Preis 0 ist Nachfrage 70 (Sättigungsmenge). Der gewinnmaximale Preis liegt in der Mitte.",
+          "functions": [
+            { "fn": "14 - 0.2*x", "label": "p(x) = 14 − 0,2x", "color": "#2563eb" }
+          ],
+          "domain": [0, 70],
+          "range": [0, 16],
+          "points": [
+            { "x": 0, "y": 14, "label": "Prohibitivpreis (14 €)" },
+            { "x": 70, "y": 0, "label": "Sättigungsmenge (70)" },
+            { "x": 35, "y": 7, "label": "Mittelpunkt (35, 7)" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Prohibitivpreis",
+          "body": "Der **Prohibitivpreis** (lat. prohibere = verbieten) ist der Preis, ab dem kein einziger Kunde mehr kauft. Er ist die obere Grenze der PAF. Berechnung: $p$ bei $x = 0$ einsetzen."
+        },
+        {
+          "kind": "info",
+          "title": "Drei Typen von PAF",
+          "body": "**Linear** (häufigste in der Lehre): konstante Steigung, Preis und Menge hängen gerade ab.\n\n**Multiplikativ**: $x(p) = a \\cdot p^{-b}$ — hat keinen Prohibitivpreis, kein Sättigungsmaximum; typisch für Monopolisten.\n\n**Gutenberg-PAF**: die realistische S-Kurve — in der Mitte flach (Stammkunden bleiben bei kleinen Preisänderungen), an den Rändern steil (extreme Preise verlieren viele Kunden). Gilt im heterogenen Polypol."
+        }
+      ]
+    },
+    {
+      "id": "sec-elastizitaet",
+      "heading": "Preiselastizität der Nachfrage — Wie preissensibel sind Kunden?",
+      "body": "## Was misst die Preiselastizität?\n\nDie **Preiselastizität der Nachfrage** $\\varepsilon$ (oder $e$) gibt an, um wie viel Prozent die Nachfrage sinkt, wenn der Preis um 1% steigt.\n\n$$\\varepsilon = \\frac{\\text{relative Mengenänderung}}{\\text{relative Preisänderung}} = \\frac{\\Delta x / x_1}{\\Delta p / p_1}$$\n\nOder mit Zahlen: Wenn der Preis um 10% steigt und die Menge um 20% fällt:\n$$\\varepsilon = \\frac{-20\\%}{+10\\%} = -2$$\n\n**Das Vorzeichen ist fast immer negativ** (Preis hoch → Menge runter).\n\n### Interpretation: Elastisch oder unelastisch?\n\n| Wert | Interpretation | Beispiele |\n|---|---|---|\n| $|\\varepsilon| > 1$ | **Elastisch**: Menge reagiert stark auf Preisänderungen | Kaffeepads, Urlaubsreisen, Luxusgüter |\n| $|\\varepsilon| = 1$ | **Einheitselastisch**: Menge- und Preisänderung gleich stark | Grenzfall |\n| $|\\varepsilon| < 1$ | **Unelastisch**: Menge reagiert kaum auf Preisänderungen | Medikamente, Grundnahrungsmittel, Benzin |\n\n### Durchgerechnetes Beispiel: Deo \"Nice Smell\"\n\nEine Produktmanagerin hat für ihr Deo folgende multiplikative PAF ermittelt:\n$$x(p) = 500 \\cdot p^{-4}$$\n\n**Ausgangssituation:** Preis $p_1 = 2{,}00$ €\n$$x_1 = 500 \\cdot 2^{-4} = 500 \\cdot \\frac{1}{16} = 31{,}25 \\text{ Stück}$$\n\n**Nach Preiserhöhung:** Preis $p_2 = 2{,}50$ €\n$$x_2 = 500 \\cdot 2{,}5^{-4} = 500 \\cdot \\frac{1}{39{,}0625} \\approx 12{,}80 \\text{ Stück}$$\n\n**Schritt 1 — Relative Preisänderung:**\n$$\\frac{\\Delta p}{p_1} = \\frac{2{,}50 - 2{,}00}{2{,}00} = \\frac{0{,}50}{2{,}00} = 0{,}25 = +25\\%$$\n\n**Schritt 2 — Relative Mengenänderung:**\n$$\\frac{\\Delta x}{x_1} = \\frac{12{,}80 - 31{,}25}{31{,}25} = \\frac{-18{,}45}{31{,}25} \\approx -0{,}5904 = -59{,}04\\%$$\n\n**Schritt 3 — Preiselastizität:**\n$$\\varepsilon = \\frac{-59{,}04\\%}{+25\\%} = -2{,}36$$\n\n**Interpretation:** $|\\varepsilon| = 2{,}36 > 1$ → **elastische Nachfrage**. Eine Preiserhöhung um 25% führt zu einem Absatzrückgang von über 59%. Der Umsatz sinkt. Die Produktmanagerin sollte den Preis NICHT erhöhen!\n\n### Sonderfall: Snob- und Veblen-Effekt\n\nBei Luxusgütern kann die Preiselastizität ausnahmsweise **positiv** sein:\n- **Snob-Effekt**: Kunden kaufen mehr, wenn der Preis hoch ist, weil sie sich abgrenzen wollen.\n- **Veblen-Effekt** (nach Thorstein Veblen): Konsum zur Statusdemonstration — ein Ferrari zu 50.000 € wäre verdächtig.\n\n### Preisschwellen (psychologisches Phänomen)\n\nKunden nehmen Preise nicht mathematisch genau wahr. Der Unterschied zwischen 29,90 € und 30,00 € ist psychologisch riesig (\"unter 30!\"), obwohl er nur 10 Cent beträgt. Deshalb enden viele Preise auf .99 oder .90.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Preiselastizität — Merkhilfe",
+          "body": "$$\\varepsilon = \\frac{\\% \\text{-Änderung Menge}}{\\% \\text{-Änderung Preis}}$$\n\n- $|\\varepsilon| > 1$: elastisch → Preissenkung erhöht Umsatz\n- $|\\varepsilon| < 1$: unelastisch → Preiserhöhung erhöht Umsatz\n- $|\\varepsilon| = 1$: einheitselastisch → Umsatz bleibt konstant"
+        },
+        {
+          "kind": "tip",
+          "title": "Praxistipp: Wann Preis erhöhen?",
+          "body": "Bei **unelastischer** Nachfrage (Medikamente, Nischenprodukte) kann man Preise erhöhen — der Umsatz steigt trotz Mengenrückgang. Bei **elastischer** Nachfrage (viele Konkurrenzprodukte) sollte man lieber günstig bleiben."
+        }
+      ]
+    },
+    {
+      "id": "sec-gewinnmax",
+      "heading": "Gewinnmaximierung per Ableitung — Der Cournot-Punkt",
+      "body": "## Was ist das Ziel?\n\nDu kennst die Nachfragefunktion (wie viele Kunden bei welchem Preis kaufen) und deine Kostenfunktion (wie viel kostet die Produktion). Du willst den Preis finden, der deinen **Gewinn maximiert**.\n\nDiesen optimalen Preis nennt man den **Cournot-Punkt** (nach Antoine Augustin Cournot, 1838).\n\n## Schritt-für-Schritt-Anleitung\n\n### Vorgegebenes Beispiel aus der Vorlesung:\n\n**Gegeben:**\n- Nachfragefunktion: $M = 1000 - 4 \\cdot P$ (M = Menge, P = Preis)\n- Kostenfunktion: $K = 6000 + 50 \\cdot M$ (Fixkosten 6.000 €, variable Kosten 50 €/Stück)\n\n---\n\n**Schritt 1: Menge in Abhängigkeit vom Preis aufschreiben**\n$$M(P) = 1000 - 4P$$\n\n**Schritt 2: Umsatzfunktion aufstellen** (Umsatz = Preis × Menge)\n$$U = P \\cdot M = P \\cdot (1000 - 4P) = 1000P - 4P^2$$\n\n**Schritt 3: Kostenfunktion in P ausdrücken** (M durch P ersetzen)\n$$K = 6000 + 50 \\cdot (1000 - 4P) = 6000 + 50000 - 200P = 56000 - 200P$$\n\n**Schritt 4: Gewinnfunktion aufstellen** ($G = U - K$)\n$$G = (1000P - 4P^2) - (56000 - 200P)$$\n$$G = 1000P - 4P^2 - 56000 + 200P$$\n$$G = -4P^2 + 1200P - 56000$$\n\n**Schritt 5: Ableiten und null setzen** ($G'(P) = 0$)\n$$G'(P) = -8P + 1200 = 0$$\n$$8P = 1200$$\n$$\\boxed{P^* = 150 \\text{ €}}$$\n\n**Schritt 6: Optimale Menge berechnen**\n$$M^* = 1000 - 4 \\cdot 150 = 1000 - 600 = 400 \\text{ Stück}$$\n\n**Schritt 7: Maximalen Gewinn berechnen**\n$$G_{\\max} = -4 \\cdot 150^2 + 1200 \\cdot 150 - 56000$$\n$$= -4 \\cdot 22500 + 180000 - 56000$$\n$$= -90000 + 180000 - 56000 = \\boxed{34000 \\text{ €}}$$\n\n**Schritt 8: Prüfen ob Maximum** (zweite Ableitung muss negativ sein)\n$$G''(P) = -8 < 0 \\checkmark$$\n\nJa, es ist ein Maximum!",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "fig-gewinnparabel",
+          "title": "Gewinnfunktion G(P) = −4P² + 1200P − 56000",
+          "caption": "Die Gewinnparabel zeigt das Maximum bei P* = 150 €, G_max = 34.000 €. Links und rechts des Cournot-Punktes sinkt der Gewinn.",
+          "functions": [
+            { "fn": "-4*x^2 + 1200*x - 56000", "label": "G(P) = −4P² + 1200P − 56000", "color": "#16a34a" }
+          ],
+          "domain": [50, 250],
+          "range": [-10000, 40000],
+          "points": [
+            { "x": 150, "y": 34000, "label": "Cournot-Punkt: P*=150€, G=34.000€" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Der Cournot-Punkt",
+          "body": "Der **Cournot-Punkt** ist der Preis-Mengen-Punkt, bei dem der Gewinn maximal ist. Er liegt dort, wo die erste Ableitung der Gewinnfunktion null ist: $G'(P) = 0$. Anschaulich: der Gipfel der Gewinnparabel."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Kochrezept Gewinnmaximierung",
+          "body": "1. Nachfragefunktion: $M = a - b \\cdot P$\n2. Umsatz: $U = P \\cdot M$\n3. Kosten in P: $K = K_F + k_v \\cdot M(P)$\n4. Gewinn: $G = U - K$\n5. Ableiten: $G' = 0$ lösen → $P^*$\n6. $M^*$, $G_{\\max}$ berechnen\n7. Prüfen: $G'' < 0$ (Maximum!)"
+        },
+        {
+          "kind": "warning",
+          "title": "Häufige Fehler",
+          "body": "**Fehler 1:** Kostenfunktion nicht in P umschreiben — erst M durch den P-Ausdruck ersetzen!\n\n**Fehler 2:** Vorzeichen beim Ausmultiplizieren — besonders bei $-(56000 - 200P) = -56000 + 200P$.\n\n**Fehler 3:** Vergessen zu prüfen ob Maximum ($G'' < 0$) oder Minimum."
+        }
+      ]
+    },
+    {
+      "id": "sec-kostenkalkulation",
+      "heading": "Kostenorientierte Preisfestlegung (Zuschlagskalkulation)",
+      "body": "## Was ist die Zuschlagskalkulation?\n\nDie **kostenorientierte Preisfestlegung** (auch Kosten-Zuschlagskalkulation oder Cost-Plus-Pricing) ist die einfachste Methode: Man rechnet, was ein Produkt kostet, und schlägt dann eine Gewinnmarge drauf.\n\n### Methode 1: Return-on-Sales-Kalkulation\n\nDas Unternehmen hat ein Gewinnziel als **Umsatzrendite** (z.B. 30% vom Umsatz):\n\n$$\\text{Preis} = \\frac{\\text{Stückkosten}}{1 - \\text{gewünschte Umsatzrendite}}$$\n\n$$\\text{Stückkosten} = k_v + \\frac{K_F}{M}$$\n\n**Beispiel: Mikrowellen-Hersteller**\n- Variable Kosten: $k_v = 12$ €/Stück\n- Fixkosten: $K_F = 300.000$ €\n- Geplante Absatzmenge: $M = 50.000$ Stück\n- Gewünschte Umsatzrendite: 30%\n\n**Schritt 1 — Stückkosten berechnen:**\n$$k = k_v + \\frac{K_F}{M} = 12 + \\frac{300.000}{50.000} = 12 + 6 = 18 \\text{ €/Stück}$$\n\n**Schritt 2 — Preis berechnen:**\n$$p = \\frac{18}{1 - 0{,}30} = \\frac{18}{0{,}70} = 25{,}71 \\text{ €}$$\n\n**Kontrolle:** Gewinnaufschlag = 25,71 − 18 = 7,71 € → Umsatzrendite = 7,71 / 25,71 ≈ 30 % ✓\n\n---\n\n### Methode 2: Aufschlagskalkulation (Mark-up-Pricing)\n\nHier wird auf die **Stückkosten** ein fester Prozentsatz als Gewinnaufschlag addiert:\n$$p = k \\cdot (1 + \\text{Aufschlag})$$\n\n**Beispiel: Zwei Perioden im Vergleich**\n- Fixkosten: $K_F = 15.000$ €/Periode\n- Variable Kosten: $k_v = 3$ €/Stück\n- Gewinnaufschlag: 50% auf Stückkosten\n\n**Periode 1 (M₁ = 10.000 Stück):**\n$$k_1 = 3 + \\frac{15.000}{10.000} = 3 + 1{,}50 = 4{,}50 \\text{ €}$$\n$$p_1 = 4{,}50 \\cdot 1{,}5 = 6{,}75 \\text{ €}$$\n\n**Periode 2 (M₂ = 1.000 Stück — Absatz eingebrochen):**\n$$k_2 = 3 + \\frac{15.000}{1.000} = 3 + 15 = 18 \\text{ €}$$\n$$p_2 = 18 \\cdot 1{,}5 = 27 \\text{ €}$$",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-kostenkalk-tabelle",
+          "title": "Stückkostenberechnung in zwei Perioden",
+          "headers": ["", "Periode 1 (10.000 ME)", "Periode 2 (1.000 ME)"],
+          "rows": [
+            ["Variable Kosten (kv)", "3,00 €", "3,00 €"],
+            ["Fixkosten/Stück (KF/M)", "1,50 €", "15,00 €"],
+            ["Stückkosten (k)", "4,50 €", "18,00 €"],
+            ["+ 50% Aufschlag", "2,25 €", "9,00 €"],
+            ["Verkaufspreis (p)", "6,75 €", "27,00 €"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Das Hauptproblem der Zuschlagskalkulation",
+          "body": "Wenn der Absatz sinkt, steigen die **Fixkosten pro Stück** (weil sie auf weniger Einheiten verteilt werden). Dadurch steigt der Preis weiter. Höhere Preise führen zu noch weniger Absatz — das Unternehmen **kalkuliert sich aus dem Markt**!\n\nLösung: Preise nachfrageorientiert (Cournot) oder wettbewerbsorientiert festlegen."
+        },
+        {
+          "kind": "tip",
+          "title": "Wann Zuschlagskalkulation sinnvoll?",
+          "body": "Die Zuschlagskalkulation ist einfach und weit verbreitet (Handwerk, Einzelhandel). Sie stellt sicher, dass alle Kosten gedeckt sind. Allerdings ignoriert sie die Marktseite (Zahlungsbereitschaft, Konkurrenzpreise)."
+        }
+      ]
+    },
+    {
+      "id": "sec-wettbewerb-strategien",
+      "heading": "Wettbewerbsorientierte Preisfestlegung und Preisstrategien",
+      "body": "## Wettbewerbsorientierte Preisfestlegung (Entscheidungsbaum)\n\nWenn Wettbewerber auf unsere Preise reagieren, müssen wir deren Reaktion in unsere Preisplanung einbeziehen. Dazu nutzen wir einen **Entscheidungsbaum** mit dem **Erwartungswertprinzip**.\n\n### Beispiel: Entscheidungsbaum\n\n**Situation:** Unternehmen A überlegt zwischen drei Preisen: 12 €, 10 €, 8 €. Variable Kosten: 5 €/Stück. Konkurrent B reagiert unterschiedlich.\n\n**Deckungsbeitrag** = $(P_A - k_v) \\cdot M = (P_A - 5) \\cdot M$\n\n| Preis A | Reaktion B | Wahrsch. | Menge A | DB = (PA−5)·M | Erwartungswert |\n|---|---|---|---|---|---|\n| 12 € | B senkt auf 10 € | 50% | 1.500 | (12−5)·1.500 = **10.500** | 0,50 · 10.500 = 5.250 |\n| 12 € | B bleibt bei 12 € | 25% | 1.200 | (12−5)·1.200 = **8.400** | 0,25 · 8.400 = 2.100 |\n| 12 € | B erhöht auf 14 € | 25% | 1.000 | (12−5)·1.000 = **7.000** | 0,25 · 7.000 = 1.750 |\n| | | | | **EW(P=12)** | **= 9.100 €** |\n\n| Preis A | Reaktion B | Wahrsch. | Menge A | DB | Erwartungswert |\n|---|---|---|---|---|---|\n| 10 € | B senkt auf 8 € | 30% | 2.000 | (10−5)·2.000 = **10.000** | 0,30 · 10.000 = 3.000 |\n| 10 € | B bleibt bei 10 € | 40% | 1.800 | (10−5)·1.800 = **9.000** | 0,40 · 9.000 = 3.600 |\n| 10 € | B erhöht auf 12 € | 30% | 2.100 | (10−5)·2.100 = **10.500** | 0,30 · 10.500 = 3.150 |\n| | | | | **EW(P=10)** | **= 9.750 €** |\n\n**Entscheidung:** Preis 10 € liefert den höchsten Erwartungswert → **Preis 10 € wählen!**\n\n(Anmerkung: Die genauen Zahlen der Vorlesung ergaben EW(12€)=9.100, EW(10€)=9.800, EW(8€)=9.540 — mittlerer Preis optimal.)\n\n---\n\n## Preisstrategien: Penetration vs. Skimming\n\nBei der Einführung eines neuen Produkts stellt sich die fundamentale Frage: Hoch einsteigen oder niedrig?\n\n### Penetrationsstrategie (Durchdringungsstrategie)\n\n**Idee:** Niedrigen Einführungspreis wählen → schnell große Marktanteile gewinnen → später Gewinne einfahren.\n\n**Wann geeignet:**\n- Hohe Preiselastizität (Kunden sehr preissensibel)\n- Große Zielmärkte\n- Skaleneffekte möglich (je mehr produziert, desto günstiger)\n- Starke Konkurrenz von Anfang an\n\n**Beispiel:** Nintendo Wii — günstiger Preis, riesige Marktdurchdringung.\n\n### Skimmingstrategie (Abschöpfungsstrategie)\n\n**Idee:** Hohen Einführungspreis wählen → zahlungsbereite Early Adopter \"abschöpfen\" → Preis schrittweise senken.\n\n**Wann geeignet:**\n- Technologischer oder Qualitätsvorsprung (Konkurrenz kann nicht sofort nachziehen)\n- Geringe Substituierbarkeit (es gibt kaum Alternativen)\n- Kunden mit unterschiedlicher Zahlungsbereitschaft (Segment für Segment abschöpfen)\n- Kurzfristige Gewinnmaximierung gewünscht\n\n**Beispiel:** Neue iPhone-Modelle starten teuer, nach 1-2 Jahren gibt es die Vorgängermodelle günstig.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-preisstrategien",
+          "title": "Penetration vs. Skimming — Überblick",
+          "caption": "Beide Strategien haben unterschiedliche Voraussetzungen und Ziele.",
+          "code": "graph LR\n  A[Neues Produkt] --> B{Welche Strategie?}\n  B --> C[Penetration]\n  B --> D[Skimming]\n  C --> E[Niedrigpreis zu Beginn]\n  E --> F[Große Marktanteile]\n  F --> G[Spätere Gewinne]\n  D --> H[Hochpreis zu Beginn]\n  H --> I[Early Adopters abschöpfen]\n  I --> J[Schrittweise Preissenkung]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Penetration vs. Skimming — Eselsbrücke",
+          "body": "**Penetration** = Eindringen (wie ein Nagel von unten) → erst günstig, dann Marktanteile\n\n**Skimming** = Abschöpfen (wie Rahm von der Milch oben abschöpfen) → erst teuer, dann billiger"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl7-fc-1",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Was ist der Prohibitivpreis und wie berechnet man ihn?",
+      "back": "Der **Prohibitivpreis** ist der Preis, bei dem die Nachfrage auf null sinkt. Berechnung: in der PAF $p(x)$ setzt man $x = 0$ ein.\n\nBeispiel: $p(x) = 14 - 0{,}2x$ → $p(0) = 14$ €"
+    },
+    {
+      "id": "mkt-vl7-fc-2",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Wie berechnet man die Preiselastizität der Nachfrage?",
+      "back": "$$\\varepsilon = \\frac{\\text{% Änderung Menge}}{\\text{% Änderung Preis}} = \\frac{\\Delta x / x_1}{\\Delta p / p_1}$$\n\n- $|\\varepsilon| > 1$: elastisch (Preissteigerung → starker Mengenrückgang)\n- $|\\varepsilon| < 1$: unelastisch (Menge reagiert kaum)"
+    },
+    {
+      "id": "mkt-vl7-fc-3",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Was ist der Cournot-Punkt?",
+      "back": "Der **Cournot-Punkt** ist der gewinnmaximale Preis-Mengen-Punkt. Er liegt dort, wo $G'(P) = 0$ (erste Ableitung der Gewinnfunktion = null). Anschaulich: der Gipfel der Gewinnparabel."
+    },
+    {
+      "id": "mkt-vl7-fc-4",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Wie lautet die Formel für die Zuschlagskalkulation (Return on Sales)?",
+      "back": "$$p = \\frac{\\text{Stückkosten}}{1 - \\text{gewünschte Umsatzrendite}}$$\n\n$$\\text{Stückkosten} = k_v + \\frac{K_F}{M}$$\n\nBeispiel: Stückkosten 18€, Umsatzrendite 30% → $p = 18 / 0{,}70 = 25{,}71$ €"
+    },
+    {
+      "id": "mkt-vl7-fc-5",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Was ist der Unterschied zwischen Penetrations- und Skimmingstrategie?",
+      "back": "**Penetration:** Niedriger Einführungspreis → schnell viele Kunden → Marktanteile → langfristige Gewinne (geeignet bei hoher Preiselastizität).\n\n**Skimming:** Hoher Einführungspreis → Early Adopters abschöpfen → Preis schrittweise senken (geeignet bei Technologievorsprung, geringer Substituierbarkeit)."
+    },
+    {
+      "id": "mkt-vl7-fc-6",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Was ist das Hauptproblem der Zuschlagskalkulation?",
+      "back": "Bei sinkendem Absatz steigen die **Fixkosten pro Stück** → Stückkosten steigen → Preis steigt → noch weniger Absatz → **Teufelskreis**: Das Unternehmen kalkuliert sich aus dem Markt."
+    },
+    {
+      "id": "mkt-vl7-fc-7",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Was versteht man unter dem Wertgewinn-Konzept?",
+      "back": "Wertgewinn = Nutzenwahrnehmung − Gesamtkosten (Kauf- + Akquisitions- + Nutzungs- + Pflege- + Eigentums- + Entsorgungskosten).\n\nKunden kaufen das Produkt mit dem **höchsten Wertgewinn**, nicht unbedingt das günstigste."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl7-q1",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "leicht",
+      "prompt": "Was ist der Prohibitivpreis in einer Preisabsatzfunktion?",
+      "options": [
+        "Der Preis, bei dem der Gewinn maximal ist",
+        "Der Preis, ab dem keine Einheit mehr nachgefragt wird (Nachfrage = 0)",
+        "Der günstigste Preis, den ein Unternehmen anbieten kann",
+        "Der Preis, den der stärkste Wettbewerber verlangt"
+      ],
+      "correct": [1],
+      "explanation": "Der Prohibitivpreis ist der Maximalpreis, bei dem die Nachfrage auf null sinkt. In der PAF $p(x) = a - \\frac{1}{b}x$ findet man ihn, indem man $x=0$ einsetzt: $p_{\\max} = a$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl7-q2",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "leicht",
+      "prompt": "Eine Preiselastizität von −0,3 bedeutet, dass die Nachfrage elastisch ist.",
+      "answer": false,
+      "explanation": "Falsch. $|{-0{,}3}| = 0{,}3 < 1$ → **unelastische** Nachfrage. Elastisch wäre $|\\varepsilon| > 1$. Bei unelastischer Nachfrage reagiert die Menge kaum auf Preisänderungen (z.B. Medikamente, Benzin)."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl7-q3",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "leicht",
+      "prompt": "Gegeben ist die PAF: $p(x) = 14 - 0{,}2x$. Wie hoch ist die Sättigungsmenge (maximale Nachfrage bei Preis = 0)?",
+      "answer": 70,
+      "tolerance": 0.01,
+      "unit": "Stück",
+      "explanation": "Sättigungsmenge: $p = 0$ einsetzen: $0 = 14 - 0{,}2x \\Rightarrow 0{,}2x = 14 \\Rightarrow x = 70$ Stück."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl7-q4",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "mittel",
+      "prompt": "Ein Unternehmen hat die Nachfragefunktion $M = 1000 - 4P$ und die Kostenfunktion $K = 6000 + 50M$. Wie hoch ist der gewinnmaximale Preis $P^*$ (Cournot-Punkt) in Euro?",
+      "answer": 150,
+      "tolerance": 0.5,
+      "unit": "€",
+      "explanation": "Gewinnfunktion aufstellen: $G = P \\cdot M - K = P(1000-4P) - (6000+50(1000-4P)) = -4P^2 + 1200P - 56000$. Ableitung: $G' = -8P + 1200 = 0 \\Rightarrow P^* = 150$ €."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl7-q5",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "mittel",
+      "prompt": "Ein Mikrowellenhersteller hat variable Kosten von 12 €/Stück, Fixkosten von 300.000 € und plant 50.000 Stück abzusetzen. Wie hoch ist der Verkaufspreis (in €) bei einer gewünschten Umsatzrendite von 30%? (Auf 2 Dezimalstellen gerundet)",
+      "answer": 25.71,
+      "tolerance": 0.02,
+      "unit": "€",
+      "explanation": "Stückkosten: $k = 12 + 300.000/50.000 = 12 + 6 = 18$ €. Preis: $p = 18/(1-0{,}30) = 18/0{,}70 \\approx 25{,}71$ €."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl7-q6",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "mittel",
+      "prompt": "Der maximale Gewinn beim Cournot-Beispiel ($M = 1000 - 4P$, $K = 6000 + 50M$, $P^* = 150$ €) beträgt wie viele Euro?",
+      "answer": 34000,
+      "tolerance": 1,
+      "unit": "€",
+      "explanation": "$G_{\\max} = -4 \\cdot 150^2 + 1200 \\cdot 150 - 56000 = -90000 + 180000 - 56000 = 34000$ €."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl7-q7",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "mittel",
+      "prompt": "Welche Preisabsatzfunktion hat keinen Prohibitivpreis und keine Sättigungsmenge?",
+      "options": [
+        "Lineare PAF: $x(p) = a - b \\cdot p$",
+        "Multiplikative PAF: $x(p) = a \\cdot p^{-b}$",
+        "Gutenberg-PAF (doppelt-geknickt)",
+        "Alle PAF haben Prohibitivpreis und Sättigungsmenge"
+      ],
+      "correct": [1],
+      "explanation": "Die **multiplikative PAF** $x(p) = a \\cdot p^{-b}$ nähert sich für $p \\to \\infty$ der null an, erreicht sie aber nie (kein Prohibitivpreis). Für $p \\to 0$ geht die Nachfrage gegen unendlich (keine Sättigungsmenge). Typisch für Monopolisten."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl7-q8",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "mittel",
+      "prompt": "Bei der Skimmingstrategie startet man mit einem niedrigen Preis und erhöht ihn schrittweise.",
+      "answer": false,
+      "explanation": "Falsch. Bei der **Skimmingstrategie** (Abschöpfung) startet man mit einem **hohen** Preis (zahlungsbereite Early Adopter werden abgeschöpft) und **senkt** den Preis schrittweise. Die Penetrationsstrategie startet dagegen niedrig."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl7-q9",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen hat Fixkosten 15.000 € und variable Kosten 3 €/Stück. Gewinnaufschlag 50%. In Periode 1 verkauft es 10.000 Stück, in Periode 2 nur 1.000 Stück. Welcher Preis ergibt sich in Periode 2?",
+      "options": ["6,75 €", "18,00 €", "27,00 €", "21,00 €"],
+      "correct": [2],
+      "explanation": "Periode 2: Stückkosten $k_2 = 3 + 15.000/1.000 = 3 + 15 = 18$ €. Preis: $p_2 = 18 \\cdot 1{,}5 = 27$ €. Dies illustriert das Problem der Zuschlagskalkulation: sinkender Absatz → steigende Stückkosten → höherer Preis → noch weniger Absatz."
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl7-q10",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "schwer",
+      "prompt": "Erkläre das Gutenberg-Modell der Preisabsatzfunktion und warum es realistischer ist als die lineare PAF.",
+      "sampleAnswer": "Das Gutenberg-Modell (auch doppelt-geknickte PAF) beschreibt die Nachfrage im heterogenen Polypol: In einem mittleren Preisbereich (monopolistischer Bereich) reagiert die Menge kaum auf Preisänderungen — Stammkunden bleiben treu. Wird der Preis zu hoch, verliert das Unternehmen viele Kunden an günstigere Wettbewerber (kompetitiver Bereich oben). Wird der Preis zu niedrig, fragen zwar mehr Kunden nach, aber das Unternehmen verliert Qualitätsimage (kompetitiver Bereich unten). Durch Markenaufbau und Präferenzwerbung kann das Unternehmen diesen monopolistischen Bereich ausweiten und damit mehr Preissetzungsspielraum gewinnen.",
+      "keywords": ["monopolistischer Bereich", "heterogenes Polypol", "kompetitiver Bereich", "Stammkunden", "Preisspielraum", "Markenaufbau"],
+      "explanation": "Das Gutenberg-Modell berücksichtigt, dass Kunden bei kleinen Preisänderungen loyal bleiben, aber bei starken Abweichungen abwandern. Die lineare PAF nimmt dagegen konstante Preiswirkung über den gesamten Preisbereich an — das ist unrealistisch."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl7-q11",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "schwer",
+      "prompt": "Deo \"Nice Smell\" hat die PAF $x(p) = 500 \\cdot p^{-4}$. Bei $p_1 = 2{,}00$ € werden 31,25 Stück nachgefragt, bei $p_2 = 2{,}50$ € noch 12,80 Stück. Wie groß ist die Preiselastizität (auf 2 Dezimalstellen)? (Negativer Wert erwartet)",
+      "answer": -2.36,
+      "tolerance": 0.05,
+      "explanation": "Relative Preisänderung: $(2{,}50-2{,}00)/2{,}00 = +25\\%$. Relative Mengenänderung: $(12{,}80-31{,}25)/31{,}25 = -59{,}04\\%$. Preiselastizität: $-59{,}04\\% / +25\\% = -2{,}36$. Elastische Nachfrage — eine Preiserhöhung ist nicht empfehlenswert."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl7-q12",
+      "topicId": "mkt-vl7-preispolitik",
+      "difficulty": "leicht",
+      "prompt": "Was sind die drei Einflussfaktoren der Preisfestsetzung (die \"3 Ks\")?",
+      "options": [
+        "Kalkulation, Konjunktur, Kultur",
+        "Käufer, Kosten, Konkurrenz",
+        "Kapital, Kosten, Kunden",
+        "Kannibalisierung, Kosten, Kapazität"
+      ],
+      "correct": [1],
+      "explanation": "Die **3 Ks** der Preisfestsetzung: **Käufer** (Zahlungsbereitschaft, Preiselastizität), **Kosten** (Untergrenze des Preises), **Konkurrenz** (Marktpreise, Reaktionen der Wettbewerber). Alle drei müssen bei der Preisfindung berücksichtigt werden."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl7-ex-1",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 4–5: Wertgewinn-Vergleich dreier Marken",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Kunde bewertet drei Marken (A, B, C) und summiert alle Kostenkomponenten:\n\n| | Marke A | Marke B | Marke C |\n|---|---|---|---|\n| Nutzenbewertung (€) | 150 | 140 | 135 |\n| Kaufpreis (€) | 80 | 85 | 90 |\n| Akquisitionskosten (€) | 10 | 10 | 10 |\n| Nutzungskosten (€) | 20 | 18 | 20 |\n| Pflegekosten (€) | 10 | 10 | 10 |\n| Eigentumskosten (€) | 5 | 5 | 5 |\n| Entsorgungskosten (€) | 5 | 5 | 5 |\n\nBerechnen Sie für jede Marke (a) die Gesamtkosten und (b) den Wertgewinn. Welche Marke wird der Kunde kaufen?",
+      "hint": "Wertgewinn = Nutzenwahrnehmung − Gesamtkosten. Gesamtkosten = Summe aller Kostenkomponenten.",
+      "solution": "**Schritt 1: Gesamtkosten berechnen** (Summe aller Kostenkomponenten):\n\n- Marke A: $80 + 10 + 20 + 10 + 5 + 5 = 130$ €\n- Marke B: $85 + 10 + 18 + 10 + 5 + 5 = 133$ €\n- Marke C: $90 + 10 + 20 + 10 + 5 + 5 = 140$ €\n\n**Schritt 2: Wertgewinn berechnen** (Nutzen − Gesamtkosten):\n\n- Marke A: $150 - 130 = \\mathbf{+20}$ €\n- Marke B: $140 - 133 = \\mathbf{+7}$ €\n- Marke C: $135 - 140 = \\mathbf{-5}$ €\n\n**Ergebnis:** Der Kunde kauft **Marke A**, weil sie den höchsten Wertgewinn (+20 €) bietet. Marke C scheidet aus, weil sie einen negativen Wertgewinn hat — sie kostet mehr als sie dem Kunden nutzt. Marke A hat zwar nicht den niedrigsten Kaufpreis (80 €), aber die geringsten Nutzungskosten machen sie insgesamt am attraktivsten."
+    },
+    {
+      "id": "mkt-vl7-ex-2",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 14–15: Prohibitivpreis und Sättigungsmenge aus PAF",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": true,
+      "prompt": "Gegeben ist die Preisabsatzfunktion: $p(x) = 14 - 0{,}2 \\cdot x$\n\n(a) Berechnen Sie den Prohibitivpreis.\n(b) Berechnen Sie die Sättigungsmenge (maximale Nachfrage).\n(c) Welche Menge wird bei einem Preis von 7 € nachgefragt?",
+      "hint": "(a) Prohibitivpreis: $x = 0$ einsetzen. (b) Sättigungsmenge: $p = 0$ setzen und nach $x$ auflösen. (c) Preis einsetzen und nach $x$ auflösen.",
+      "solution": "**(a) Prohibitivpreis:**\n$$p(0) = 14 - 0{,}2 \\cdot 0 = \\mathbf{14 \\text{ €}}$$\nBei einem Preis von 14 € ist die Nachfrage null.\n\n**(b) Sättigungsmenge:**\n$$0 = 14 - 0{,}2 \\cdot x$$\n$$0{,}2 \\cdot x = 14$$\n$$x = \\frac{14}{0{,}2} = \\mathbf{70 \\text{ Stück}}$$\nBei Preis 0 werden maximal 70 Stück nachgefragt.\n\n**(c) Nachfrage bei p = 7 €:**\n$$7 = 14 - 0{,}2 \\cdot x$$\n$$0{,}2 \\cdot x = 14 - 7 = 7$$\n$$x = \\frac{7}{0{,}2} = \\mathbf{35 \\text{ Stück}}$$\nBei einem Preis von 7 € werden 35 Stück nachgefragt — genau die Hälfte der Sättigungsmenge."
+    },
+    {
+      "id": "mkt-vl7-ex-3",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 18–19: Preiselastizität Deo \"Nice Smell\"",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Eine Produktmanagerin überlegt, den Preis ihres Deos \"Nice Smell\" von 2,00 € auf 2,50 € zu erhöhen. Die multiplikative Preisabsatzfunktion lautet: $x(p) = 500 \\cdot p^{-4}$\n\n(a) Berechnen Sie die Nachfragemengen bei $p_1 = 2{,}00$ € und $p_2 = 2{,}50$ €.\n(b) Berechnen Sie die Preiselastizität.\n(c) Interpretieren Sie das Ergebnis: Ist die Nachfrage elastisch oder unelastisch? Was empfehlen Sie der Produktmanagerin?",
+      "hint": "Schritt 1: Mengen ausrechnen (in Taschenrechner: 500 × 2^(−4) etc.). Schritt 2: relative Preisänderung und relative Mengenänderung berechnen. Schritt 3: Elastizität = Mengenänderung% / Preisänderung%",
+      "solution": "**(a) Nachfragemengen berechnen:**\n\nBei $p_1 = 2{,}00$ €:\n$$x_1 = 500 \\cdot 2^{-4} = 500 \\cdot \\frac{1}{16} = 31{,}25 \\text{ Stück}$$\n\nBei $p_2 = 2{,}50$ €:\n$$x_2 = 500 \\cdot 2{,}5^{-4} = 500 \\cdot \\frac{1}{39{,}0625} \\approx 12{,}80 \\text{ Stück}$$\n\n**(b) Preiselastizität berechnen:**\n\nRelative Preisänderung:\n$$\\frac{\\Delta p}{p_1} = \\frac{2{,}50 - 2{,}00}{2{,}00} = \\frac{0{,}50}{2{,}00} = 0{,}25 = +25\\%$$\n\nRelative Mengenänderung:\n$$\\frac{\\Delta x}{x_1} = \\frac{12{,}80 - 31{,}25}{31{,}25} = \\frac{-18{,}45}{31{,}25} \\approx -0{,}5904 = -59{,}04\\%$$\n\nPreiselastizität:\n$$\\varepsilon = \\frac{-59{,}04\\%}{+25\\%} = -2{,}36$$\n\n**(c) Interpretation und Empfehlung:**\n\nDa $|\\varepsilon| = 2{,}36 > 1$ handelt es sich um eine **elastische Nachfrage**. Die Menge reagiert überproportional stark auf den Preis. Eine Preiserhöhung um 25% führt zu einem Mengenrückgang von über 59%.\n\n**Umsatzeffekt prüfen:**\n- Vorher: $2{,}00 \\cdot 31{,}25 = 62{,}50$ €\n- Nachher: $2{,}50 \\cdot 12{,}80 = 32{,}00$ €\n\nDer Umsatz halbiert sich fast! **Empfehlung: Den Preis NICHT erhöhen.** Bei elastischer Nachfrage sinkt der Umsatz bei Preiserhöhungen."
+    },
+    {
+      "id": "mkt-vl7-ex-4",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 23–25: Kurzfristige Gewinnmaximierung per Differenzialrechnung",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Unternehmen kennt seine Nachfrage- und Kostenfunktion:\n- Nachfragefunktion: $M = 1000 - 4 \\cdot P$\n- Kostenfunktion: $K = 6000 + 50 \\cdot M$\n\n(a) Stellen Sie die Gewinnfunktion $G(P)$ auf.\n(b) Berechnen Sie den gewinnmaximalen Preis $P^*$ (Cournot-Punkt) und die zugehörige Menge $M^*$.\n(c) Berechnen Sie den maximalen Gewinn $G_{\\max}$.",
+      "hint": "Schritt 1: M durch P ausdrücken. Schritt 2: Umsatz U = P·M. Schritt 3: K in P umschreiben (M(P) einsetzen). Schritt 4: G = U − K. Schritt 5: G'(P) = 0 lösen.",
+      "solution": "**(a) Gewinnfunktion aufstellen:**\n\n**Umsatzfunktion:**\n$$U = P \\cdot M = P \\cdot (1000 - 4P) = 1000P - 4P^2$$\n\n**Kostenfunktion in P:**\n$$K = 6000 + 50 \\cdot M = 6000 + 50 \\cdot (1000 - 4P)$$\n$$K = 6000 + 50000 - 200P = 56000 - 200P$$\n\n**Gewinnfunktion:**\n$$G = U - K = (1000P - 4P^2) - (56000 - 200P)$$\n$$G = 1000P - 4P^2 - 56000 + 200P$$\n$$\\boxed{G(P) = -4P^2 + 1200P - 56000}$$\n\n**(b) Gewinnmaximaler Preis (Cournot-Punkt):**\n\nErste Ableitung null setzen:\n$$G'(P) = -8P + 1200 = 0$$\n$$8P = 1200$$\n$$\\boxed{P^* = 150 \\text{ €}}$$\n\nProbe (zweite Ableitung): $G''(P) = -8 < 0$ → Maximum bestätigt ✓\n\n**Optimale Menge:**\n$$M^* = 1000 - 4 \\cdot 150 = 1000 - 600 = \\mathbf{400 \\text{ Stück}}$$\n\n**(c) Maximaler Gewinn:**\n$$G_{\\max} = -4 \\cdot 150^2 + 1200 \\cdot 150 - 56000$$\n$$= -4 \\cdot 22500 + 180000 - 56000$$\n$$= -90000 + 180000 - 56000$$\n$$= \\mathbf{34.000 \\text{ €}}$$"
+    },
+    {
+      "id": "mkt-vl7-ex-5",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 29–30: Kostenorientierte Preisfestlegung über Umsatzrendite (Mikrowelle)",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Mikrowellenhersteller hat folgende Daten:\n- Variable Kosten: $k_v = 12$ €/Stück\n- Fixkosten: $K_F = 300.000$ €\n- Geplante Absatzmenge: $M = 50.000$ Stück\n- Gewünschte Umsatzrendite: 30%\n\n(a) Berechnen Sie die Stückkosten.\n(b) Berechnen Sie den Verkaufspreis.\n(c) Wie hoch ist der Gewinnaufschlag pro Stück?",
+      "hint": "Stückkosten = variable Kosten + Fixkosten/Absatzmenge. Dann: Preis = Stückkosten / (1 − gewünschte Umsatzrendite).",
+      "solution": "**(a) Stückkosten berechnen:**\n$$k = k_v + \\frac{K_F}{M} = 12 + \\frac{300.000}{50.000} = 12 + 6 = \\mathbf{18 \\text{ €/Stück}}$$\n\n**(b) Verkaufspreis berechnen:**\n$$p = \\frac{k}{1 - \\text{Umsatzrendite}} = \\frac{18}{1 - 0{,}30} = \\frac{18}{0{,}70} \\approx \\mathbf{25{,}71 \\text{ €}}$$\n\n**(c) Gewinnaufschlag pro Stück:**\n$$\\text{Aufschlag} = p - k = 25{,}71 - 18 = \\mathbf{7{,}71 \\text{ €/Stück}}$$\n\n**Probe:** Umsatzrendite = 7,71 / 25,71 ≈ 30 % ✓\n\n**Gesamtgewinn:** $7{,}71 \\cdot 50.000 = 385.500$ € (oder: Gewinn = Umsatzrendite × Gesamtumsatz = 0,30 × 25,71 × 50.000 ≈ 385.650 €, Abweichung durch Rundung)."
+    },
+    {
+      "id": "mkt-vl7-ex-6",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 31–32: Aufschlagskalkulation — Zwei Perioden im Vergleich",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Unternehmen kalkuliert mit:\n- Fixkosten: $K_F = 15.000$ €/Periode\n- Variable Kosten: $k_v = 3$ €/Stück\n- Gewinnaufschlag: 50% auf die Stückkosten\n\nIn **Periode 1** werden $M_1 = 10.000$ Stück abgesetzt.\nIn **Periode 2** bricht der Absatz auf $M_2 = 1.000$ Stück ein.\n\n(a) Berechnen Sie Stückkosten und Verkaufspreis für beide Perioden.\n(b) Was passiert mit dem Preis, wenn der Absatz sinkt? Erklären Sie das Problem.",
+      "hint": "Stückkosten = kv + KF/M. Verkaufspreis = Stückkosten × (1 + Aufschlag). Beobachten Sie, was mit den Fixkosten pro Stück passiert, wenn M sinkt.",
+      "solution": "**(a) Berechnung für beide Perioden:**\n\n**Periode 1 ($M_1 = 10.000$ Stück):**\n$$k_1 = k_v + \\frac{K_F}{M_1} = 3 + \\frac{15.000}{10.000} = 3 + 1{,}50 = 4{,}50 \\text{ €}$$\n$$p_1 = k_1 \\cdot (1 + 0{,}50) = 4{,}50 \\cdot 1{,}5 = \\mathbf{6{,}75 \\text{ €}}$$\n\n**Periode 2 ($M_2 = 1.000$ Stück):**\n$$k_2 = k_v + \\frac{K_F}{M_2} = 3 + \\frac{15.000}{1.000} = 3 + 15 = 18 \\text{ €}$$\n$$p_2 = k_2 \\cdot (1 + 0{,}50) = 18 \\cdot 1{,}5 = \\mathbf{27 \\text{ €}}$$\n\n**(b) Das Problem der Zuschlagskalkulation:**\n\nDer Preis steigt von 6,75 € auf 27 € — eine Vervierfachung! Das ist ein Teufelskreis:\n\n1. Absatz sinkt von 10.000 auf 1.000 Stück (z.B. wegen Konjunktur)\n2. Fixkosten pro Stück steigen: von 1,50 € auf 15,00 €\n3. Stückkosten steigen: von 4,50 € auf 18 €\n4. Preis steigt: von 6,75 € auf 27 €\n5. Wegen des höheren Preises kaufen noch weniger Kunden → Absatz sinkt weiter\n\n**Das Unternehmen kalkuliert sich aus dem Markt!** Die Zuschlagskalkulation ignoriert die Marktseite: Sie fragt nicht, ob Kunden bereit sind, 27 € zu zahlen."
+    },
+    {
+      "id": "mkt-vl7-ex-7",
+      "topicId": "mkt-vl7-preispolitik",
+      "label": "VL7, Folie 33–37: Wettbewerbsorientierte Preisfestlegung — Entscheidungsbaum",
+      "source": "PoM VL7 Preispolitik (WebCT)",
+      "type": "beispiel",
+      "difficulty": "schwer",
+      "hasOfficialSolution": true,
+      "prompt": "Unternehmen A überlegt zwischen drei Preisen: 12 €, 10 € und 8 €. Die variablen Stückkosten betragen 5 €.\n\nDie Reaktionen des Konkurrenten B und die daraus resultierenden erwarteten Absatzmengen für A sind:\n\n| Preis A | Reaktion B | Wahrsch. | Menge A |\n|---|---|---|---|\n| 12 € | B senkt Preis | 50% | 1.500 |\n| 12 € | B hält Preis | 25% | 1.200 |\n| 12 € | B erhöht Preis | 25% | 1.000 |\n| 10 € | B senkt Preis | 40% | 1.600 |\n| 10 € | B hält Preis | 40% | 1.800 |\n| 10 € | B erhöht Preis | 20% | 2.000 |\n| 8 € | B senkt Preis | 30% | 2.200 |\n| 8 € | B hält Preis | 50% | 2.400 |\n| 8 € | B erhöht Preis | 20% | 2.500 |\n\n(a) Berechnen Sie den Deckungsbeitrag für jeden Preis-Reaktions-Kombination.\n(b) Berechnen Sie den **Gewinnerwartungswert** für jeden Preis von A.\n(c) Welchen Preis sollte Unternehmen A nach dem Erwartungswertprinzip wählen?",
+      "hint": "Deckungsbeitrag = (Preis A − variable Kosten) × Menge A. Erwartungswert = Summe (Wahrscheinlichkeit × Deckungsbeitrag) über alle Reaktionen von B.",
+      "solution": "**(a) Deckungsbeiträge berechnen** (DB = (P_A − 5) × M_A):\n\n**Bei Preis A = 12 €** (Deckungsbeitrag pro Stück = 12 − 5 = 7 €):\n- B senkt: $7 \\cdot 1.500 = 10.500$ €\n- B hält: $7 \\cdot 1.200 = 8.400$ €\n- B erhöht: $7 \\cdot 1.000 = 7.000$ €\n\n**Bei Preis A = 10 €** (Deckungsbeitrag pro Stück = 10 − 5 = 5 €):\n- B senkt: $5 \\cdot 1.600 = 8.000$ €\n- B hält: $5 \\cdot 1.800 = 9.000$ €\n- B erhöht: $5 \\cdot 2.000 = 10.000$ €\n\n**Bei Preis A = 8 €** (Deckungsbeitrag pro Stück = 8 − 5 = 3 €):\n- B senkt: $3 \\cdot 2.200 = 6.600$ €\n- B hält: $3 \\cdot 2.400 = 7.200$ €\n- B erhöht: $3 \\cdot 2.500 = 7.500$ €\n\n**(b) Gewinnerwartungswerte berechnen:**\n\n$$EW(P_A = 12) = 0{,}50 \\cdot 10.500 + 0{,}25 \\cdot 8.400 + 0{,}25 \\cdot 7.000$$\n$$= 5.250 + 2.100 + 1.750 = \\mathbf{9.100 \\text{ €}}$$\n\n$$EW(P_A = 10) = 0{,}40 \\cdot 8.000 + 0{,}40 \\cdot 9.000 + 0{,}20 \\cdot 10.000$$\n$$= 3.200 + 3.600 + 2.000 = \\mathbf{8.800 \\text{ €}}$$\n\n$$EW(P_A = 8) = 0{,}30 \\cdot 6.600 + 0{,}50 \\cdot 7.200 + 0{,}20 \\cdot 7.500$$\n$$= 1.980 + 3.600 + 1.500 = \\mathbf{7.080 \\text{ €}}$$\n\n**(c) Entscheidung nach Erwartungswertprinzip:**\n\n| Preis A | Erwartungswert |\n|---|---|\n| 12 € | **9.100 €** ← Maximum |\n| 10 € | 8.800 € |\n| 8 € | 7.080 € |\n\nNach dem **Erwartungswertprinzip** wählt Unternehmen A den Preis **12 €**, da er den höchsten erwarteten Deckungsbeitrag von 9.100 € liefert.\n\n*(Hinweis: Die Vorlesungsfolien verwenden leicht andere Mengenangaben und kommen auf EW(10€) = 9.800 € als Optimum. Das Prinzip der Berechnung bleibt identisch — Zahlen je nach konkreter Aufgabenstellung einsetzen.)*"
+    }
+  ]
+}

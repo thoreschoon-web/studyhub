@@ -1,0 +1,392 @@
+{
+  "id": "mkt-vl6-produktpolitik",
+  "subjectId": "bwl",
+  "title": "VL6 — Produktpolitik",
+  "summary": "Produktpolitik als 'Herz' des Marketing-Mix: Produkttypen, Produktebenen, BCG-Matrix, Produktlebenszyklus, ASSESSOR-Testmarktsimulation, Produktinnovation/-variation/-differenzierung/-elimination mit Kannibalisierungsrate sowie Markenpolitik und Positionierung.",
+  "order": 6,
+  "estMinutes": 60,
+  "group": "Marketing",
+  "sections": [
+    {
+      "id": "grundlagen",
+      "heading": "Was ist Produktpolitik? — Das Herz des Marketing-Mix",
+      "body": "**Produktpolitik** umfasst alle Entscheidungen, die damit zusammenhängen, was ein Unternehmen anbietet: Welche Produkte gibt es? Wie sind sie gestaltet? Wann wird ein Produkt eingeführt, verändert oder aus dem Sortiment genommen?\n\nProfessor Walsh nennt die Produktpolitik das **„Herz“ des Marketing-Mix** (4 Ps: Product, Price, Place, Promotion) — denn ohne ein gutes Produkt nützen der beste Preis und die teuerste Werbung nichts.\n\n**Ziel:** Ein auf den Kundennutzen ausgerichtetes Absatzprogramm bereitzustellen, das Unternehmens- und Marketingziele erfüllt.\n\n**Wichtig:** Produktpolitik ist keine reine Aufgabe der Forschungs- & Entwicklungsabteilung (F&E), sondern eine marktbezogene Aufgabe — der Markt (Kundennutzen, Wettbewerb) steht im Mittelpunkt.\n\n### Produkttypen: Was verkauft ein Unternehmen?\n\n| Typ | Begriff | Erklärung | Beispiel |\n|---|---|---|---|\n| Investitionsgut | **Business Product** | Wird von Unternehmen/Organisationen beschafft, um damit Leistungen für andere zu erstellen | Maschine, Software, LKW |\n| Konsumgut | **Consumer Product** | Wird von Endkonsumenten genutzt (Gebrauchsgut) oder verbraucht (Verbrauchsgut) | Kühlschrank, Joghurt |\n\n### Die drei Produktebenen — Was steckt wirklich in einem Produkt?\n\nJedes Produkt lässt sich in drei konzentrische Schichten (wie eine Zwiebel) zerlegen:\n\n1. **Kernprodukt / Kernnutzen** (innen): Der grundlegende Nutzen, den der Käufer eigentlich kauft. Beispiel: Wer einen Bohrer kauft, will eigentlich ein Loch in der Wand — kein Bohrer.\n2. **Eigentliches Produkt** (mittlere Schicht): Die konkreten Produkteigenschaften: Design, Verpackung, Markenname, Qualität. Das ist das „greifbare“ Produkt im Regal.\n3. **Erweitertes Produkt** (außen): Zusatzleistungen rund ums Produkt: Gewährleistung, After-Sales-Service, Finanzierung, Auslieferung.\n\n**Beispiel Smartphone:** Kernnutzen = Kommunikation. Eigentliches Produkt = Bildschirmgröße, Kamera, iOS/Android, Apple-Logo. Erweitertes Produkt = 2 Jahre Garantie, kostenloses Software-Update, Apple Store Beratung.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Drei Produktebenen merken",
+          "body": "**Kern** = Nutzen (was will der Kunde wirklich?), **Eigentlich** = greifbares Produkt (Design, Marke, Qualität), **Erweitert** = Drumherum (Service, Garantie). Prüfungsfrage: Ordne Merkmale den Ebenen zu!"
+        }
+      ]
+    },
+    {
+      "id": "sortiment-bcg",
+      "heading": "Sortimentspolitik und BCG-Matrix — Wie manage ich ein Produktportfolio?",
+      "body": "Ein Unternehmen hat selten nur ein Produkt, sondern ein ganzes **Sortiment** (= alle Produkte, die ein Unternehmen anbietet). Die zentrale Frage der Sortimentspolitik: In welche Produkte soll ich investieren? Welche soll ich ausbauen? Welche streichen?\n\nDas wichtigste Analyse-Werkzeug dafür ist die **BCG-Matrix** (Boston Consulting Group), auch BCG-Portfolio genannt.\n\n### So funktioniert die BCG-Matrix\n\nJedes Produkt (oder jede strategische Geschäftseinheit) wird anhand **zwei Kriterien** bewertet und in eine 4-Felder-Matrix eingeordnet:\n\n- **Y-Achse: Marktwachstum** = Wie stark wächst der Markt, in dem das Produkt verkauft wird?\n  $$\\text{Marktwachstum} = \\frac{\\text{Marktumsatz aktuelles Jahr}}{\\text{Marktumsatz Vorjahr}}$$\n- **X-Achse: Relativer Marktanteil** = Wie stark ist mein Produkt im Vergleich zum stärksten Konkurrenten?\n  $$\\text{Relativer Marktanteil} = \\frac{\\text{Marktanteil meines Produkts}}{\\text{Marktanteil des größten Konkurrenzprodukts}}$$\n  Wert > 1,0 bedeutet: ich bin Marktführer!\n\n### Die vier Felder und ihre Strategie\n\n| Feld | Name | Marktwachstum | Rel. Marktanteil | Cash-Flow | Strategie |\n|---|---|---|---|---|---|\n| Oben links | **Stars** | hoch | hoch | ausgeglichen | Ausbauen / Halten |\n| Oben rechts | **Fragezeichen** (Question Marks) | hoch | niedrig | negativ | Ausbauen oder Liquidieren |\n| Unten links | **Cash Cows** | niedrig | hoch | stark positiv | Abschöpfen / Halten |\n| Unten rechts | **Arme Hunde** (Poor Dogs) | niedrig | niedrig | negativ/neutral | Abschöpfen / Liquidieren |\n\n**Intuition:** Cash Cows (etablierte Marktführer in gesättigten Märkten) erwirtschaften viel Geld — dieses Geld finanziert die Stars und die vielversprechenden Fragezeichen. Ein gesundes Portfolio hat also immer eine Mischung.\n\n**Rechenbeispiel:** Produkt A hat einen Marktanteil von 30 %, der größte Konkurrent hat 15 %. Dann: rel. Marktanteil = 30/15 = **2,0** → Marktführer (Star oder Cash Cow, je nach Wachstum).\n\nProdukt B hat Marktanteil 10 %, Konkurrent 40 %. Rel. Marktanteil = 10/40 = **0,25** → kein Marktführer (Fragezeichen oder Poor Dog).",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "bcg-tabelle",
+          "title": "BCG-Matrix: Vier Felder im Überblick",
+          "headers": ["Feld", "Marktwachstum", "Rel. Marktanteil", "Cash-Flow", "Empfehlung"],
+          "rows": [
+            ["Stars", "hoch", "> 1,0", "ausgeglichen", "Ausbauen / Halten"],
+            ["Fragezeichen", "hoch", "< 1,0", "negativ", "Ausbauen oder Liquidieren"],
+            ["Cash Cows", "niedrig", "> 1,0", "stark positiv", "Abschöpfen / Halten"],
+            ["Arme Hunde", "niedrig", "< 1,0", "negativ", "Abschöpfen / Liquidieren"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Merkhilfe BCG-Matrix",
+          "body": "**Stars** strahlen hell, brauchen aber Energie (Investitionen). **Cash Cows** melken — sie geben Geld, wachsen aber nicht mehr. **Fragezeichen** sind unsicher — könnte Star werden oder Poor Dog. **Arme Hunde** haben keine Zukunft im Portfolio."
+        },
+        {
+          "kind": "info",
+          "title": "Verbindung zum Produktlebenszyklus",
+          "body": "Im Lauf ihres Lebens wandern Produkte typischerweise durch die BCG-Matrix: Fragezeichen (Einführung) → Star (Wachstum) → Cash Cow (Reife/Sättigung) → Armer Hund (Degeneration)."
+        }
+      ]
+    },
+    {
+      "id": "produktlebenszyklus",
+      "heading": "Produktlebenszyklus — Von der Geburt bis zum Tod eines Produkts",
+      "body": "Der **Produktlebenszyklus (PLZ)** beschreibt den Zeitlauf eines Produktes von der Markteinführung bis zum Marktaustritt. Er zeigt, wie sich **Umsatz** und **Gewinn** im Laufe der Zeit verändern.\n\n### Die fünf Phasen\n\n1. **Einführung (Introduction):** Das Produkt kommt auf den Markt. Umsatz gering, Gewinn oft negativ (hohe Anlaufkosten, intensive Werbung nötig). Bekannte Beispiele: jede Produktneuheit im ersten Jahr.\n2. **Wachstum (Growth):** Immer mehr Kunden kaufen. Umsatz steigt schnell. Gewinne entstehen, weil die hohen Einführungskosten nun auf mehr Einheiten verteilt werden. Wettbewerber werden aufmerksam.\n3. **Reife (Maturity Stage):** Umsatz wächst noch, aber langsamer. Gewinn erreicht Maximum. Der Markt ist zunehmend gesättigt.\n4. **Sättigung (Saturation):** Umsatz stagniert. Fast alle potenziellen Käufer haben das Produkt. Preiskampf beginnt, Gewinn sinkt.\n5. **Degeneration (Decline):** Umsatz und Gewinn fallen deutlich. Neuere Produkte/Technologien verdrängen das Produkt. Zeit für Produktelimination oder Relaunch.\n\n**Wichtig:** Der Gewinn hinkt dem Umsatz immer etwas **hinterher** — erst am Ende der Wachstumsphase/Beginn der Reifephase wird der Gewinn maximal, obwohl der Umsatz erst in der Sättigung sein Maximum erreicht.\n\n**Warum? Intuition:** In der Einführungsphase gibt man viel für Werbung und Vertriebsaufbau aus. Das frisst den Umsatz auf. Erst wenn diese Anfangskosten „eingespielt“ sind, bleibt Gewinn übrig.",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "plz-kurve",
+          "title": "Produktlebenszyklus: Umsatz und Gewinn über die Zeit",
+          "caption": "U = Umsatzkurve (durchgezogen, oben). G = Gewinnkurve (gestrichelt, darunter). Der Gewinn wird früher maximal als der Umsatz und wird in der Sättigung/Degeneration wieder negativ.",
+          "functions": [
+            {
+              "fn": "x < 1 ? 0.3*x^2 : x < 3 ? 0.3 + 1.5*(x-1) : x < 5 ? 3.3 + 0.3*(x-3) : x < 7 ? 3.9 - 0.8*(x-5) : 2.3 - 0.5*(x-7)",
+              "label": "Umsatz U",
+              "color": "#1a5276"
+            },
+            {
+              "fn": "x < 0.5 ? -0.4 : x < 2.5 ? -0.4 + 0.7*(x-0.5) : x < 4 ? 1.0 - 0.1*(x-2.5) : x < 6 ? 0.85 - 0.6*(x-4) : -0.35 - 0.2*(x-6)",
+              "label": "Gewinn G",
+              "color": "#922b21",
+              "dashed": true
+            }
+          ],
+          "domain": [0, 8],
+          "range": [-0.8, 4.5],
+          "points": [
+            {"x": 1, "y": 0, "label": "Einführung"},
+            {"x": 3, "y": 0, "label": "Wachstum"},
+            {"x": 5, "y": 0, "label": "Reife"},
+            {"x": 6.5, "y": 0, "label": "Sättigung"}
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Prüfungstipp: Phasenzuordnung",
+          "body": "Typische Prüfungsfrage: „In welcher Phase des Produktlebenszyklus befindet sich Produkt X?“ Merke: Umsatz steigt in Einführung/Wachstum, stagniert in Reife/Sättigung, fällt in Degeneration. Gewinn ist in Einführung oft negativ, erreicht Maximum in Reife."
+        }
+      ]
+    },
+    {
+      "id": "instrumente",
+      "heading": "Instrumente der Produktpolitik: Innovation, Variation, Differenzierung, Elimination",
+      "body": "Es gibt vier zentrale Instrumente der Produktpolitik. Sie unterscheiden sich danach, ob ein **neues** Produkt eingeführt wird, ein **bestehendes** verändert wird oder ein Produkt **aus dem Markt** genommen wird.\n\n---\n\n### 1. Produkt-Innovation — Etwas wirklich Neues\n\n**Was ist es?** Ein völlig neues Produkt wird entwickelt und auf den Markt gebracht.\n\n**Der 8-Schritte-Prozess der Neuproduktentwicklung (NPE):**\n\n| Schritt | Name | Art |\n|---|---|---|\n| 1 | Neuprodukt-Strategie | Konzeptionsphase |\n| 2 | Ideengenerierung | Konzeptionsphase |\n| 3 | Ideenvorauswahl | Bewertungsphase |\n| 4 | Konzepttest | Konzeption + Bewertung |\n| 5 | Geschäftsanalyse | Bewertungsphase |\n| 6 | Produktentwicklung | Konzeptionsphase |\n| 7 | Markttest | Bewertungsphase |\n| 8 | Produkteinführung | Konzeptionsphase |\n\n**Konzeptionsphasen** (kreativ, gestalten): 1, 2, 4, 6, 8. **Bewertungsphasen** (analysieren, entscheiden): 3, 4, 5, 7.\n\n---\n\n### 2. Produkt-Variation — Das Bestehende verbessern\n\n**Was ist es?** Ein vorhandenes Produkt wird bewusst verändert — das neue ersetzt das alte vollständig. Die Programmbreite bleibt gleich.\n\n**Beispiel Calgonit (heute Finish):** Reckitt Benckiser hat die Geschirrspültabs um Zusatzfunktionen erweitert (Klarspüler, Salzfunktion, Glasschutz, Edelstahlglanz). Die alte Version gibt es nicht mehr — nur die neue.\n\n**Beispiel FRoSTA:** FRoSTA hat seine Paella-Produkte reformuliert (mehr Shrimps, neue Verpackung) — das alte Rezept wurde ersetzt.\n\n**Merke:** Bei der Variation ändert sich das Produkt, aber der Verwendungszweck bleibt gleich.\n\n---\n\n### 3. Produkt-Differenzierung — Ableger schaffen\n\n**Was ist es?** Das bestehende Produkt bekommt einen oder mehrere „Ableger“ — abgewandelte Versionen, die **zusätzlich** angeboten werden. Die Programmbreite steigt!\n\n**Beispiel Magnum (Langnese):** Ursprünglich nur mit einer Geschmackssorte eingeführt. Heute gibt es Magnum Classic, Almond, Double, White, Ruby usw. — alle parallel im Regal.\n\n**Beispiel Häagen-Dazs:** Vanilla, Strawberry Cheesecake, Dulce de Leche, Melon — verschiedene Varianten derselben Premium-Eismarke.\n\n**Motiv:** Unternehmen wollen die besonderen Bedürfnisse verschiedener Marktsegmente befriedigen und so mehr Kunden ansprechen.\n\n**Gefahr:** Zu viele Produkte führen zu **Consumer Confusion** (Kunden fühlen sich überfordert) und **Kannibalisierungseffekten** (neue Produkte fressen den Umsatz der alten).\n\n---\n\n### 4. Produkt-Elimination — Aufräumen\n\n**Was ist es?** Produkte werden bewusst aus dem Sortiment genommen. Man spricht auch von Programmbereinigung.\n\n**Zwei Wege:**\n- **Sofortige Elimination:** Das Produkt wird sofort vom Markt genommen. Beispiel: Als PCs ohne CD-Laufwerk standard wurden, mussten Hersteller die beschreibbare CD (CD-R) sofort aus dem Programm nehmen.\n- **Schrittweise Elimination:** Das Produkt wird allmählich ausgelistet. Beispiel: Möbel- oder Porzellanhersteller nehmen einzelne Dekore schrittweise aus dem Programm (oft mit Nachkaufgarantie).",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "npe-prozess",
+          "title": "Neuproduktentwicklung (NPE): 8 Schritte",
+          "caption": "K = Konzeptionsphase, B = Bewertungsphase. Schritt 4 (Konzepttest) ist beides.",
+          "code": "graph LR\n  S1[1 Neuprodukt-Strategie K] --> S2[2 Ideengenerierung K]\n  S2 --> S3[3 Ideenvorauswahl B]\n  S3 --> S4[4 Konzepttest K+B]\n  S4 --> S5[5 Geschäftsanalyse B]\n  S5 --> S6[6 Produktentwicklung K]\n  S6 --> S7[7 Markttest B]\n  S7 --> S8[8 Produkteinführung K]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Variation vs. Differenzierung — der entscheidende Unterschied",
+          "body": "**Variation:** Altes Produkt wird durch neues ersetzt → Programmbreite **bleibt gleich**. **Differenzierung:** Neues Produkt kommt zusätzlich dazu → Programmbreite **steigt**. Das ist ein klassischer Prüfungsunterschied!"
+        }
+      ]
+    },
+    {
+      "id": "kannibalisierung",
+      "heading": "Kannibalisierungsrate — Wenn das neue Produkt das alte auffrisst",
+      "body": "**Was ist Kannibalisierung?** Wenn ein Unternehmen ein neues Produkt einführt, kann es passieren, dass Kunden, die bisher das alte Produkt gekauft haben, nun das neue kaufen — ohne dass das Unternehmen wirklich neue Kunden gewinnt. Das neue Produkt „frisst“ den Umsatz des alten.\n\n**Formel der Kannibalisierungsrate:**\n\n$$\\text{Kannibalisierungsrate (\\%)} = \\frac{\\text{Umsatzverlust vorhandener Produkte (€)}}{\\text{Umsatz des neuen Produkts (€)}} \\times 100$$\n\n**Intuition:** Eine Kannibalisierungsrate von 35 % bedeutet: Von je 100 € Umsatz, die das neue Produkt macht, stammen 35 € von Kunden, die vorher das alte Produkt gekauft hätten — die alten Produkte verlieren also 35 € für jeden 100 € Neuproduktumsatz.\n\n---\n\n### Vollständiges Rechenbeispiel (direkt aus der Vorlesung)\n\n**Ausgangssituation:**\n- Ein Lebensmittelunternehmen verkauft bisher **10.000 Stück** eines Reis-Fertiggerichts pro Jahr.\n- Das Unternehmen plant die Einführung eines neuen Fertiggerichts, von dem **5.000 Stück** verkauft werden können.\n- Die Kannibalisierungsrate beträgt **35 %**.\n\n**Schritt 1: Kannibalisierte Einheiten berechnen**\n$$\\text{Kannibalisierte Einheiten} = 35\\% \\times 5.000 = 1.750 \\text{ Stück}$$\nDiese 1.750 Stück gehen zu Lasten des alten Produkts — sie sind kein echter Mehrabsatz!\n\n**Schritt 2: Verbleibender Absatz des alten Produkts**\n$$\\text{Absatz alt (neu)} = 10.000 - 1.750 = 8.250 \\text{ Stück}$$\n\n**Schritt 3: Gesamtabsatz nach Einführung**\n$$\\text{Gesamtabsatz} = 8.250 + 5.000 = 13.250 \\text{ Stück}$$\n\n**Schritt 4: Echter Nettomehrabsatz**\n$$\\text{Nettomehrabsatz} = 13.250 - 10.000 = 3.250 \\text{ Stück}$$\n\n**Interpretation:** Das Unternehmen gewinnt netto nur 3.250 neue Einheiten — nicht 5.000! Die Produktdifferenzierung ist sinnvoll, wenn die Zusatzkosten und der angestrebte Gewinn durch diesen Mehrabsatz von 3.250 Stück gedeckt werden können.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Kannibalisierungsrate auf einen Blick",
+          "body": "$$\\text{Kannibalisierungsrate} = \\frac{\\text{Umsatzverlust alt}}{\\text{Umsatz neu}} \\times 100$$\n\n**Kannibalisierte Stück** = Rate × Stück des neuen Produkts\n\n**Nettomehrabsatz** = Stück neu − kannibalisierte Stück"
+        },
+        {
+          "kind": "tip",
+          "title": "Wann lohnt sich Differenzierung trotz Kannibalisierung?",
+          "body": "Wenn der Nettomehrabsatz (echte neue Kunden) groß genug ist, um Zusatzkosten + Zielgewinn zu decken → Differenzierung lohnt sich. Typische Klausurfrage: Berechne Nettomehrabsatz und beurteile Sinnhaftigkeit!"
+        }
+      ]
+    },
+    {
+      "id": "assessor",
+      "heading": "ASSESSOR — Testmarktsimulation für neue Produkte",
+      "body": "Bevor ein neues Produkt wirklich in den Markt eingeführt wird, will man wissen: Welchen **Marktanteil** wird es voraussichtlich erreichen? Das ASSESSOR-Modell beantwortet diese Frage durch eine Simulation — ohne den teuren und riskanten echten Markttest.\n\n### Grundmuster der Marktanteilsprognose\n\n$$\\text{Marktanteil} = \\text{Erstkaufrate} \\times \\text{Wiederkaufrate} \\times \\text{relative Kaufintensität}$$\n\n- **Erstkaufrate:** Wie viele Konsumenten probieren das Produkt überhaupt? Getrieben von Erhältlichkeit (Distribution) und Bekanntheit (Kommunikation).\n- **Wiederkaufrate:** Wie viele dieser Käufer kaufen erneut? Getrieben von Zufriedenheit und Präferenz (Produktqualität).\n- **Relative Kaufintensität:** Wie oft kaufen die Treuen im Vergleich zum Marktdurchschnitt? (Zielgruppenmerkmal)\n\n### ASSESSOR: Zwei Submodelle\n\n**Submodell I: Präferenzmodell**\n$$M_I = E^* \\cdot M_1(l^*) = E^* \\cdot \\frac{1}{n^*} \\cdot \\sum p_i^*(l^*)$$\n- $E^*$: Anteil der Konsumenten, die das Neuprodukt unter realen Marktbedingungen in ihr „Relevant Set“ aufnehmen würden.\n- $M_1(l^*)$: Aggregierte Kaufwahrscheinlichkeit für das Neuprodukt (Durchschnitt der individuellen Wahrscheinlichkeiten der $n^*$ Probanden, die es gewählt haben).\n- Ergebnis: $M_I = 0{,}15222$\n\n**Submodell II: Trial-Repeat-Modell**\n$$M_{II} = T \\cdot S$$\n- $T$ = Versuchskaufrate (wie viele probieren es?)\n- $S$ = Wiederkaufrate (wie viele kaufen danach erneut?)\n- $T$ wird berechnet als: $T = F \\cdot K \\cdot D + C \\cdot U - (F \\cdot K \\cdot D) \\cdot (C \\cdot U)$\n  - $F$ = bedingte Kaufwahrscheinlichkeit bei Bekanntheit & Verfügbarkeit\n  - $K$ = Bekanntheitsgrad, $D$ = Verfügbarkeit (Distribution)\n  - $C$ = Anteil der Konsumenten, die eine Probe erhalten; $U$ = Anteil, die dann kaufen\n- Ergebnis: $M_{II} = 0{,}13024$\n\n**Prognostizierter Marktanteil (Mittelwert beider Submodelle):**\n$$M_{\\text{prog}} = \\frac{M_I + M_{II}}{2} = \\frac{0{,}15222 + 0{,}13024}{2} = \\frac{0{,}28246}{2} \\approx 0{,}141 = 14{,}1\\%$$",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Warum zwei Submodelle?",
+          "body": "Das Präferenzmodell misst, was Konsumenten **sagen** (befragungsbasiert). Das Trial-Repeat-Modell misst, was sie **tun** (experimentell beobachtet). Der Mittelwert aus beidem ist robuster als jedes Modell allein."
+        },
+        {
+          "kind": "merksatz",
+          "title": "ASSESSOR-Formel für die Klausur",
+          "body": "**Prognostizierter Marktanteil** = $(M_I + M_{II}) / 2$. Merke die Beispielwerte: $M_I = 0{,}152$, $M_{II} = 0{,}130$, Ergebnis $\\approx 14{,}1\\%$."
+        }
+      ]
+    },
+    {
+      "id": "markenpolitik",
+      "heading": "Markenpolitik — Was ist eine Marke und warum ist sie so wertvoll?",
+      "body": "### Was ist eine Marke?\n\nEine **Marke** ist:\n1. Ein **Vorstellungsbild** in den Köpfen der Konsumenten — sie übernimmt eine Identifikations- und Differenzierungsfunktion und prägt das Kaufverhalten.\n2. Ein **gewerbliches Schutzrecht** (Kennzeichnungsrecht) — die Marke ist rechtlich geschützt.\n\n**Aufgabe der Markenpolitik:** Dem Produkt einen eigenständigen Charakter als Markenartikel zu verleihen — und es dadurch weitgehend vor reinem Preiswettbewerb zu schützen.\n\n### Der psychologische Zusatznutzen von Marken\n\nEin klassisches Experiment zeigt die Macht von Marken (Coca-Cola vs. Pepsi):\n- Im **Blindtest** (kein Logo sichtbar): Marke A (Pepsi) 51 %, Marke B (Coca-Cola) 44 %, egal 5 %\n- **Mit Darbietung der Marken**: Marke A (Pepsi) 23 %, Marke B (Coca-Cola) 65 %, egal 12 %\n\nObwohl physisch kaum unterschiedlich, „schmeckt“ Coca-Cola mit Logo viel besser — die Marke erzeugt einen **psychologischen Zusatznutzen**.\n\n### Drei Arten von Marken\n\n| Art | Beschreibung | Beispiele |\n|---|---|---|\n| **Bildmarke** | Nur ein Bild/Logo, kein Text | Deutsche Bank (Schrägstrich), Puma (springender Puma) |\n| **Textmarke** | Nur Schriftzug | JOOP!, Vapiano |\n| **Bild-/Textmarke** | Kombination aus Bild und Text | Continental, BMW |\n\n### Effektive Markennamen — Was macht einen guten Namen aus?\n\nEin guter Markenname ist:\n- Leicht auszusprechen und leicht zu merken\n- Kurz, distinkt und einzigartig\n- Beschreibt Produkt, Einsatz und Nutzen\n- Hat positive Konnotationen (Assoziationen)\n- Verstärkt das Produktimage\n- Ist rechtlich schützbar\n\n### USP und Produktpositionierung\n\n**Unique Selling Proposition (USP)** = „einzigartiger Produktvorteil“. Der Unterschied zwischen meinem Produkt und der Konkurrenz, der Kunden zum Kauf animiert. Formel: **Benefits = Equity** (Nutzenargumente schaffen Markenwert).\n\nDer USP besteht aus: Produktmerkmalen + psychologischen Merkmalen + Assoziationen.\n\n**Produktpositionierung** = Das Ergebnis aller produktbezogenen Marketingentscheidungen. Ziel: Eine **vorteilhafte Stellung im Wahrnehmungsraum** der Nachfrager zu erreichen.\n\nBeispiel Biermarkt (Positionierungskreuz mit zwei Achsen: klassisch/modern × Discount/Premium):\n- Warsteiner: klassisch + Premium\n- Oettinger: klassisch + Discount\n- Beck's: modern + Premium\n- Astra: modern + Discount\n\n**Qualitätsführerschaft** als Positionierung: Bang & Olufsen (Ästhetik), Miele (Funktionalität), Steiff (Langlebigkeit).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Marke — Doppeldefinition",
+          "body": "**1. Psychologisch:** Vorstellungsbild in Köpfen der Konsumenten → Identifikation + Differenzierung.\n**2. Rechtlich:** Gewerbliches Schutzrecht / Kennzeichnungsrecht → schützbar beim Markenamt."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Positionierungskreuz verstehen",
+          "body": "Zeichne zwei Achsen: z.B. X-Achse = Discount ↔ Premium, Y-Achse = klassisch ↔ modern. Jede Marke bekommt eine Position. Lücken im Kreuz sind mögliche Marktchancen!"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl6-fc-1",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Was sind die drei Produktebenen nach Walsh/Deseniss/Kilian?",
+      "back": "1. **Kernprodukt** (Kernnutzen — was der Käufer wirklich kauft)\n2. **Eigentliches Produkt** (Design, Verpackung, Marke, Qualität)\n3. **Erweitertes Produkt** (Service, Garantie, Finanzierung, Auslieferung)"
+    },
+    {
+      "id": "mkt-vl6-fc-2",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Wie lautet die Formel für den relativen Marktanteil (BCG-Matrix)?",
+      "back": "$$\\text{Relativer Marktanteil} = \\frac{\\text{Marktanteil meines Produkts}}{\\text{Marktanteil des größten Konkurrenzprodukts}}$$\nWert > 1,0 = Marktführer. Die Grenze zwischen hoch und niedrig liegt bei 1,0."
+    },
+    {
+      "id": "mkt-vl6-fc-3",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Was ist der Unterschied zwischen Produktvariation und Produktdifferenzierung?",
+      "back": "**Variation:** Altes Produkt wird durch verändertes ersetzt → Programmbreite bleibt gleich.\n**Differenzierung:** Neues Produkt kommt zusätzlich dazu → Programmbreite steigt, Kannibalisierung möglich."
+    },
+    {
+      "id": "mkt-vl6-fc-4",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Wie berechnet sich die Kannibalisierungsrate?",
+      "back": "$$\\text{Kannibalisierungsrate (\\%)} = \\frac{\\text{Umsatzverlust vorhandener Produkte}}{\\text{Umsatz des neuen Produkts}} \\times 100$$\nBei 35 % Kannibalisierung und 5.000 neuen Einheiten: 35 % × 5.000 = 1.750 kannibalisierte Stück."
+    },
+    {
+      "id": "mkt-vl6-fc-5",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Wie lautet die ASSESSOR-Schlussformel für den prognostizierten Marktanteil?",
+      "back": "$$M_{\\text{prog}} = \\frac{M_I + M_{II}}{2}$$\nMit den Vorlesungswerten: $(0{,}15222 + 0{,}13024) / 2 = 0{,}28246 / 2 \\approx 14{,}1\\%$"
+    },
+    {
+      "id": "mkt-vl6-fc-6",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Nenne die 5 Phasen des Produktlebenszyklus in der richtigen Reihenfolge.",
+      "back": "1. Einführung (Introduction)\n2. Wachstum (Growth)\n3. Reife (Maturity Stage)\n4. Sättigung (Saturation)\n5. Degeneration (Decline)\n\nGewinn hinkt Umsatz hinterher — Maximum des Gewinns liegt meist in Phase 3 (Reife)."
+    },
+    {
+      "id": "mkt-vl6-fc-7",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Was ist eine 'Cash Cow' in der BCG-Matrix?",
+      "back": "Produkt mit **niedrigem Marktwachstum** und **hohem relativen Marktanteil** (> 1,0). Generiert viel Cash-Flow, braucht wenig Investitionen. Strategie: **Abschöpfen / Halten**. Finanziert Stars und Fragezeichen."
+    },
+    {
+      "id": "mkt-vl6-fc-8",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Was ist die Unique Selling Proposition (USP)?",
+      "back": "Der **einzigartige Produktvorteil** — der Unterschied zwischen dem eigenen Produkt und der Konkurrenz, der Kunden zum Kauf animiert. Formel: **Benefits = Equity**. Besteht aus Produktmerkmalen, psychologischen Merkmalen und Assoziationen."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl6-q1",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Aussagen beschreibt das **Kernprodukt** (erste Produktebene) korrekt?",
+      "options": [
+        "Das Kernprodukt umfasst Design, Verpackung und Markenname.",
+        "Das Kernprodukt ist der grundlegende Nutzen, den der Käufer eigentlich erwirbt.",
+        "Das Kernprodukt beinhaltet After-Sales-Service und Garantieleistungen.",
+        "Das Kernprodukt ist identisch mit dem eigentlichen Produkt."
+      ],
+      "correct": [1],
+      "explanation": "Das Kernprodukt ist der Kernnutzen — was der Käufer wirklich kauft (z.B. 'ein Loch in der Wand' statt 'einen Bohrer'). Design/Verpackung/Marke gehören zum eigentlichen Produkt; Service/Garantie zum erweiterten Produkt."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl6-q2",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "mittel",
+      "prompt": "Ein Unternehmen hat einen Marktanteil von 20 %. Der stärkste Konkurrent hat einen Marktanteil von 40 %. Wie hoch ist der **relative Marktanteil** und wie ist das Produkt in der BCG-Matrix einzuordnen?",
+      "options": [
+        "Relativer Marktanteil = 2,0 → Star oder Cash Cow",
+        "Relativer Marktanteil = 0,5 → Fragezeichen oder Poor Dog",
+        "Relativer Marktanteil = 0,5 → Star oder Cash Cow",
+        "Relativer Marktanteil = 2,0 → Fragezeichen oder Poor Dog"
+      ],
+      "correct": [1],
+      "explanation": "Relativer MA = 20 % / 40 % = 0,5. Da 0,5 < 1,0, ist das Unternehmen kein Marktführer → das Produkt liegt im rechten Teil der BCG-Matrix (Fragezeichen bei hohem Wachstum, Poor Dog bei niedrigem Wachstum)."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl6-q3",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "mittel",
+      "prompt": "Ein Unternehmen führt ein neues Waschmittel ein. Der prognostizierte Absatz beträgt 8.000 Stück. Die Kannibalisierungsrate liegt bei 25 %. Wie viele Stück des neuen Produkts **kannibalisieren** den Absatz des alten Produkts?",
+      "answer": 2000,
+      "tolerance": 0,
+      "unit": "Stück",
+      "explanation": "Kannibalisierte Stück = 25 % × 8.000 = 0,25 × 8.000 = 2.000 Stück. Diese 2.000 Stück gehen zu Lasten des alten Produkts — sie sind kein echter Nettomehrabsatz."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl6-q4",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "mittel",
+      "prompt": "Im Vorlesungsbeispiel (Reis-Fertiggericht): Das Unternehmen verkauft bisher 10.000 Stück. Das neue Gericht soll 5.000 Stück verkaufen, Kannibalisierungsrate 35 %. Wie hoch ist der **Nettomehrabsatz** in Stück?",
+      "answer": 3250,
+      "tolerance": 0,
+      "unit": "Stück",
+      "explanation": "Kannibalisierte Stück = 35 % × 5.000 = 1.750. Nettomehrabsatz = 5.000 − 1.750 = 3.250 Stück. Der Gesamtabsatz nach Einführung beträgt 8.250 + 5.000 = 13.250 Stück."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl6-q5",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "schwer",
+      "prompt": "ASSESSOR-Modell: Das Präferenzmodell ergibt $M_I = 0{,}18$ und das Trial-Repeat-Modell ergibt $M_{II} = 0{,}12$. Wie hoch ist der prognostizierte Marktanteil in Prozent (auf eine Dezimalstelle)?",
+      "answer": 15.0,
+      "tolerance": 0.05,
+      "unit": "%",
+      "explanation": "Prognostizierter Marktanteil = (M_I + M_II) / 2 = (0,18 + 0,12) / 2 = 0,30 / 2 = 0,15 = 15,0 %."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl6-q6",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "leicht",
+      "prompt": "Bei der **Produktvariation** erhöht sich die Programmbreite des Unternehmens.",
+      "answer": false,
+      "explanation": "Falsch. Bei der Produktvariation ersetzt das veränderte Produkt das alte vollständig — die Programmbreite bleibt gleich. Nur bei der Produktdifferenzierung (Ableger) steigt die Programmbreite."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl6-q7",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "mittel",
+      "prompt": "In der BCG-Matrix gilt: Ein Produkt mit einem relativen Marktanteil von 1,5 ist Marktführer.",
+      "answer": true,
+      "explanation": "Richtig. Die Grenze zwischen hohem und niedrigem relativen Marktanteil liegt bei 1,0. Ein Wert > 1,0 bedeutet, dass das eigene Produkt einen höheren Marktanteil hat als das stärkste Konkurrenzprodukt — also Marktführerschaft."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl6-q8",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "leicht",
+      "prompt": "Welche Phase im Produktlebenszyklus ist durch stagnierende Umsätze und beginnendem Preiskampf gekennzeichnet?",
+      "options": [
+        "Einführung",
+        "Wachstum",
+        "Reife",
+        "Sättigung"
+      ],
+      "correct": [3],
+      "explanation": "Die Sättigungsphase (Saturation) ist dadurch gekennzeichnet, dass fast alle potenziellen Käufer das Produkt haben. Umsätze stagnieren, es beginnt Preiskampf, und die Gewinne sinken. In der Reifephase wächst der Umsatz noch etwas."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl6-q9",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "mittel",
+      "prompt": "Welche Schritte des NPE-Prozesses sind **Bewertungsphasen**? (Mehrfachauswahl möglich)",
+      "options": [
+        "Schritt 1: Neuprodukt-Strategie",
+        "Schritt 3: Ideenvorauswahl",
+        "Schritt 5: Geschäftsanalyse",
+        "Schritt 6: Produktentwicklung",
+        "Schritt 7: Markttest"
+      ],
+      "correct": [1, 2, 4],
+      "multiple": true,
+      "explanation": "Bewertungsphasen sind: 3 (Ideenvorauswahl), 4 (Konzepttest — auch Konzeptionsphase!), 5 (Geschäftsanalyse), 7 (Markttest). Konzeptionsphasen sind: 1, 2, 4, 6, 8. Schritt 4 gehört zu beiden."
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl6-q10",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum die BCG-Matrix empfiehlt, dass Cash Cows Stars und Fragezeichen finanzieren sollen. Was passiert, wenn ein Unternehmen nur Arme Hunde im Portfolio hat?",
+      "keywords": ["cash flow", "investitionen", "wachstum", "marktanteil", "ausgewogen", "finanzierung"],
+      "sampleAnswer": "Cash Cows sind etablierte Marktführer in langsam wachsenden Märkten. Sie benötigen wenig Investitionen (Markt wächst nicht mehr stark) und generieren deshalb hohen positiven Cash-Flow. Dieser Cash-Flow wird genutzt, um Stars (hohe Investitionen im wachsenden Markt halten) und Fragezeichen (könnten zu Stars werden, wenn investiert wird) zu finanzieren. Hat ein Unternehmen nur Arme Hunde, fehlt der Geldfluss — es kann nicht in Wachstumsmärkte investieren und stirbt langfristig aus. Ein ausgewogenes Portfolio ist daher entscheidend.",
+      "explanation": "Kernidee: Cash-Flow-Kreislauf im Portfolio — Cash Cows generieren, Stars/Fragezeichen konsumieren. Ohne Cash Cows fehlt das Geld für Wachstum."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl6-q11",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "leicht",
+      "prompt": "Was ist eine **Textmarke**?",
+      "options": [
+        "Eine Marke, die nur aus einem Logo/Symbol besteht (kein Text).",
+        "Eine Marke, die nur aus einem Schriftzug besteht (kein Bild).",
+        "Eine Marke, die aus einer Kombination aus Bild und Text besteht.",
+        "Eine Marke, die gesetzlich nicht schützbar ist."
+      ],
+      "correct": [1],
+      "explanation": "Eine Textmarke besteht nur aus Schrift/Schriftzug, ohne Bildelement. Beispiele: JOOP!, Vapiano. Eine Bildmarke hat nur ein Symbol (Deutsche Bank, Puma), eine Bild-/Textmarke kombiniert beides (BMW, Continental)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl6-q12",
+      "topicId": "mkt-vl6-produktpolitik",
+      "difficulty": "mittel",
+      "prompt": "Im Coca-Cola/Pepsi-Blindtest bevorzugte eine Mehrheit der Probanden Coca-Cola, auch ohne Markenkenntnis.",
+      "answer": false,
+      "explanation": "Falsch. Im Blindtest (ohne Markenwissen) bevorzugten 51 % Marke A (Pepsi) gegenüber 44 % für Marke B (Coca-Cola). Erst mit sichtbarer Marke drehte sich das Ergebnis — Coca-Cola gewann mit 65 %. Das zeigt die Macht des psychologischen Zusatznutzens einer Marke."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl6-ex-1",
+      "topicId": "mkt-vl6-produktpolitik",
+      "label": "VL6, Folie 14–15: Testmarktsimulation ASSESSOR",
+      "source": "PoM_VL_6_Produktpolitik_WebCT.pdf, Folie 14–15",
+      "type": "beispiel",
+      "difficulty": "schwer",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Unternehmen bewertet ein neues Produkt mit dem ASSESSOR-Modell. Es liegen folgende Ergebnisse der zwei Submodelle vor:\n\n- **Präferenzmodell (Modell I):** $M_I = 0{,}15222$\n- **Trial-Repeat-Modell (Modell II):** $M_{II} = 0{,}13024$\n\n**(a)** Berechne den prognostizierten Marktanteil als Mittelwert beider Submodelle.\n\n**(b)** Erläutere kurz, was das Präferenzmodell und das Trial-Repeat-Modell jeweils messen.",
+      "hint": "Der prognostizierte Marktanteil ist einfach der arithmetische Mittelwert der beiden Submodell-Ergebnisse.",
+      "solution": "### (a) Berechnung des prognostizierten Marktanteils\n\n**Formel:**\n$$M_{\\text{prog}} = \\frac{M_I + M_{II}}{2}$$\n\n**Einsetzen:**\n$$M_{\\text{prog}} = \\frac{0{,}15222 + 0{,}13024}{2} = \\frac{0{,}28246}{2} = 0{,}141 = \\mathbf{14{,}1\\%}$$\n\n**Ergebnis:** Der prognostizierte Marktanteil des neuen Produkts beträgt ca. **14,1 %**.\n\n---\n\n### (b) Was messen die beiden Submodelle?\n\n**Präferenzmodell (M_I):**\n- Grundlage: Befragung von Konsumenten zu ihren Präferenzen (mittels Paarvergleichen).\n- Misst, was Konsumenten **sagen** — welches Produkt sie bevorzugen, wenn das Neuprodukt in ihr Relevant Set aufgenommen wird.\n- Formel: $M_I = E^* \\cdot \\frac{1}{n^*} \\cdot \\sum p_i^*(l^*)$ wobei $E^*$ = Anteil der Konsumenten, die das Neuprodukt unter realen Bedingungen in ihr Relevant Set aufnähmen, und $p_i^*$ die individuelle Kaufwahrscheinlichkeit des Probanden $i$ ist.\n\n**Trial-Repeat-Modell (M_II = T · S):**\n- Grundlage: Experimentell beobachtetes Markenwahlverhalten.\n- Misst, was Konsumenten **tun** — wie viele kaufen das Produkt erstmals (Versuchskaufrate T) und wie viele kaufen es erneut (Wiederkaufrate S).\n- Formel: $M_{II} = T \\cdot S$, wobei $T = F \\cdot K \\cdot D + C \\cdot U - (F \\cdot K \\cdot D)(C \\cdot U)$.\n\n**Der Mittelwert** beider Modelle ist robuster, da er sowohl die stated preferences (Befragung) als auch das revealed behaviour (Experiment) berücksichtigt."
+    },
+    {
+      "id": "mkt-vl6-ex-2",
+      "topicId": "mkt-vl6-produktpolitik",
+      "label": "VL6, Folie 21–22: Kannibalisierungsrate (Reis-Fertiggericht)",
+      "source": "PoM_VL_6_Produktpolitik_WebCT.pdf, Folie 21–22",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Lebensmittelunternehmen verkauft aktuell **10.000 Stück** eines Reis-Fertiggerichts pro Jahr.\n\nEs plant die Einführung eines neuen Fertiggerichts, von dem **5.000 Stück** p.a. abgesetzt werden können. Die Kannibalisierungsrate beträgt **35 %**.\n\n**(a)** Wie viele Einheiten des neuen Produkts gehen zu Lasten des alten Produkts (kannibalisierte Einheiten)?\n\n**(b)** Wie hoch ist der Absatz des alten Produkts nach Einführung des neuen Produkts?\n\n**(c)** Wie hoch ist der Gesamtabsatz nach Einführung?\n\n**(d)** Wie hoch ist der Nettomehrabsatz durch das neue Produkt?\n\n**(e)** Unter welcher Bedingung ist die Produktdifferenzierung in diesem Beispiel sinnvoll?",
+      "hint": "Kannibalisierte Einheiten = Kannibalisierungsrate × Absatz des neuen Produkts. Dann: Alter Absatz neu = Alter Absatz − Kannibalisierte Einheiten.",
+      "solution": "### (a) Kannibalisierte Einheiten\n\n$$\\text{Kannibalisierte Einheiten} = 35\\% \\times 5.000 = 0{,}35 \\times 5.000 = \\mathbf{1.750 \\text{ Stück}}$$\n\nDiese 1.750 Stück kaufen Kunden, die sonst das alte Gericht gekauft hätten — echter Mehrabsatz ist das nicht.\n\n---\n\n### (b) Absatz des alten Produkts nach Einführung\n\n$$\\text{Absatz alt (neu)} = 10.000 - 1.750 = \\mathbf{8.250 \\text{ Stück}}$$\n\n---\n\n### (c) Gesamtabsatz nach Einführung\n\n$$\\text{Gesamtabsatz} = 8.250 + 5.000 = \\mathbf{13.250 \\text{ Stück}}$$\n\n---\n\n### (d) Nettomehrabsatz\n\n$$\\text{Nettomehrabsatz} = 13.250 - 10.000 = \\mathbf{3.250 \\text{ Stück}}$$\n\nAlternativ direkt: Nettomehrabsatz = Absatz neu − Kannibalisierte Einheiten = 5.000 − 1.750 = 3.250 Stück.\n\n---\n\n### (e) Bedingung für Sinnhaftigkeit\n\nDie Produktdifferenzierung ist sinnvoll, wenn die **Zusatzkosten** (Produktion, Vertrieb, Werbung für das neue Produkt) **und** der angestrebte Zielgewinn durch den **Nettomehrabsatz von 3.250 Stück** erwirtschaftet werden können.\n\nFazit laut Vorlesung: Falls diese Bedingung erfüllt ist, wäre in diesem Beispiel die Produktdifferenzierung sinnvoll."
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "id": "simplex-dualitaet",
+  "subjectId": "mathe-2",
+  "title": "Simplex-Algorithmus und Dualität",
+  "summary": "Systematische Lösung linearer Optimierungsprobleme (LOP) mit dem Simplex-Verfahren: Schlupfvariablen, Tableau-Aufbau, Pivot-Auswahl und -schritt, Optimalitätskriterium. Dazu: das duale LOP aufstellen, schwache und starke Dualität, Schattenpreise.",
+  "order": 11,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "standardform",
+      "heading": "Schlupfvariablen und Standardform",
+      "body": "## Was ist ein lineares Optimierungsproblem?\n\nWir wollen eine **lineare Zielfunktion** maximieren, wobei wir uns an **lineare Ungleichungen** halten müssen. Ein typisches Beispiel aus der Produktionsplanung:\n\n$$\\max\\; \\pi(x_1, x_2) = 4x_1 + x_2$$\n$$\\text{u. d. NB: } x_1 + 2x_2 \\leq 10,\\quad x_1 - x_2 \\leq 7,\\quad x_1,\\, x_2 \\geq 0$$\n\nDer **zulässige Bereich** ist ein Polygon (Vieleck); das Optimum liegt stets in einer Ecke.\n\n## Schlupfvariablen — Ungleichungen zu Gleichungen machen\n\nDer Simplex-Algorithmus braucht **Gleichungen**, keine Ungleichungen. Deshalb fügen wir für jede Nebenbedingung eine **Schlupfvariable** $s_i \\geq 0$ hinzu, die den <<Spielraum\" auffüllt:\n\n$$x_1 + 2x_2 + s_1 = 10 \\qquad (s_1 = \\text{nicht verbrauchte Kapazität der 1. NB})$$\n$$x_1 - x_2 + s_2 = 7$$\n\nDie **Standardform** lautet damit:\n\n$$\\max\\; x_0 = c_1 x_1 + \\cdots + c_n x_n \\quad \\text{u. d. NB } A\\vec{x} = \\vec{b},\\; \\vec{x} \\geq 0$$\n\nwobei $\\vec{x}$ alle Entscheidungs- **und** Schlupfvariablen enthält.\n\n**Wichtige Beobachtung:** Wir haben mehr Variablen als Gleichungen. Im Beispiel: 4 Variablen ($x_1, x_2, s_1, s_2$), aber nur 2 Gleichungen. Eine **Basislösung** setzt genau so viele Variablen auf Null, dass das restliche System eindeutig lösbar ist (= $n - m$ Variablen auf Null).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Schlupfvariable",
+          "body": "Zu $a_{i1}x_1 + \\cdots + a_{in}x_n \\leq b_i$ fügen wir $s_i \\geq 0$ hinzu:\n$$a_{i1}x_1 + \\cdots + a_{in}x_n + s_i = b_i$$\n$s_i$ misst, wie viel Spielraum (Schlupf) die Nebenbedingung noch hat. $s_i = 0$ bedeutet: die NB ist **aktiv** (ausgeschöpft)."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Startbasislösung",
+          "body": "Setzt man alle Entscheidungsvariablen $x_j = 0$, ergibt sich sofort $s_i = b_i \\geq 0$. Das ist die **Startbasislösung** mit Basis $\\{s_1, s_2, \\ldots, s_m\\}$ — der Ursprung des zulässigen Bereichs."
+        }
+      ]
+    },
+    {
+      "id": "tableau",
+      "heading": "Das Simplex-Tableau",
+      "body": "## Aufbau des Tableaus\n\nDas Simplex-Tableau fasst das Gleichungssystem kompakt zusammen. Es besteht aus:\n- **Zeile 0** (oben): die Zielfunktionszeile — umgeschrieben als $x_0 - c_1 x_1 - \\cdots - c_n x_n = 0$\n- **Zeilen 1 bis $m$**: die Nebenbedingungen in Gleichungsform\n- **Erste Spalte** (BV): welche Variable ist aktuell Basisvariable dieser Zeile\n- **Letzte Spalte** (rhs): die rechte Seite, d. h. der aktuelle Wert der Basisvariablen\n\n**Beispiel:** LOP aus SoSe19: $\\max\\; 4x_1 + x_2$, NB: $x_1+2x_2 \\leq 10$, $x_1-x_2 \\leq 7$\n\nDie Zielfunktionszeile wird umgestellt: $x_0 - 4x_1 - x_2 = 0$.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-start-se19",
+          "title": "Start-Tableau (SoSe19)",
+          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "rows": [
+            ["x₀", "−4", "−1", "0", "0", "0"],
+            ["s₁", "1", "2", "1", "0", "10"],
+            ["s₂", "1", "−1", "0", "1", "7"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Basislösung ablesen",
+          "body": "Aus dem Tableau liest man die aktuelle Basislösung direkt ab: Basisvariablen erhalten den Wert in der rhs-Spalte, alle Nicht-Basisvariablen sind 0.\n\nHier: $s_1 = 10,\\; s_2 = 7,\\; x_1 = 0,\\; x_2 = 0$. Zielfunktionswert $x_0 = 0$."
+        }
+      ]
+    },
+    {
+      "id": "pivotschritt",
+      "heading": "Pivotschritt — Schritt für Schritt",
+      "body": "## Wie verbessert man die Lösung?\n\nEin **Pivotschritt** tauscht eine Basisvariable gegen eine Nicht-Basisvariable aus und bewegt uns zur nächsten, besseren Ecke.\n\n### Schritt 1: Pivotspalte wählen\nWir suchen in **Zeile 0** den betragsmäßig größten negativen Eintrag (am negativsten). Diese Variable wird in die Basis aufgenommen — sie verbessert den Zielfunktionswert am stärksten.\n\n$$j_0 = \\arg\\min_j\\; y_{0j} \\quad (\\text{kleinster Eintrag in Zeile 0})$$\n\nIm Beispiel: $-4$ bei $x_1$ ist am negativsten $\\Rightarrow$ **Pivotspalte: $x_1$**.\n\n### Schritt 2: Pivotzeile wählen (Quotientenregel)\nFür alle Zeilen $i \\geq 1$ mit positivem Eintrag in der Pivotspalte ($y_{i,j_0} > 0$) berechnen wir den Quotienten:\n$$\\frac{\\text{rhs}_i}{y_{i,j_0}}$$\nDie Zeile mit dem **kleinsten Quotienten** wird zur Pivotzeile $i_0$. Die Quotientenregel stellt sicher, dass die neue Basislösung noch zulässig bleibt ($x_i \\geq 0$).\n\nIm Beispiel:\n- Zeile 1: $10/1 = 10$\n- Zeile 2: $7/1 = 7$ ← kleiner\n\n$\\Rightarrow$ **Pivotzeile: Zeile 2** (s₂ verlässt die Basis)\n\n### Schritt 3: Pivotelement und Gauß-Elimination\nDas **Pivotelement** ist $y_{i_0, j_0}$ (hier: $1$).\n\n1. Teile die Pivotzeile durch das Pivotelement.\n2. Eliminiere den Eintrag in der Pivotspalte in **allen anderen Zeilen** (inkl. Zeile 0) durch Subtraktion geeigneter Vielfacher der Pivotzeile.\n\nNach dem ersten Pivotschritt:",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-step1-se19",
+          "title": "Tableau nach 1. Pivotschritt (x₁ ersetzt s₂)",
+          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "rows": [
+            ["x₀", "0", "−5", "0", "4", "28"],
+            ["s₁", "0", "3", "1", "−1", "3"],
+            ["x₁", "1", "−1", "0", "1", "7"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Was hat sich geändert?",
+          "body": "Basis: $\\{s_1, x_1\\}$. Aktuelle Basislösung: $x_1 = 7, s_1 = 3, x_2 = 0, s_2 = 0$. Zielfunktionswert: $x_0 = 28$.\n\nNoch negativer Eintrag in Zeile 0: $-5$ bei $x_2$ → noch nicht optimal."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Optimalitätskriterium",
+          "body": "Das Tableau ist **optimal**, wenn alle Einträge in Zeile 0 $\\geq 0$ sind. Dann kann kein weiterer Tausch den Zielfunktionswert verbessern."
+        }
+      ]
+    },
+    {
+      "id": "beispiel-vollstaendig",
+      "heading": "Vollständiges Beispiel: SoSe19",
+      "body": "## LOP SoSe19 komplett gelöst\n\n$$\\max\\; \\pi(x_1, x_2) = 4x_1 + x_2 \\quad \\text{u. d. NB: } x_1 + 2x_2 \\leq 10,\\; x_1 - x_2 \\leq 7,\\; x_1, x_2 \\geq 0$$\n\nNach dem **2. Pivotschritt** (Pivotspalte: $x_2$, Pivotzeile: Zeile 1 mit Quotient $3/3 = 1 < 7/(-1)$ negativ, also nur Zeile 1 positiv):",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-start-se19-full",
+          "title": "Schritt 0 — Starttableau",
+          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "rows": [
+            ["x₀", "−4", "−1", "0", "0", "0"],
+            ["s₁", "1", "2", "1", "0", "10"],
+            ["s₂", "1", "−1", "0", "1", "7"]
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "tab-s1-se19-full",
+          "title": "Schritt 1 — nach Pivot (x₁ in Basis, Pivotelement 1 in Zeile 2)",
+          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "rows": [
+            ["x₀", "0", "−5", "0", "4", "28"],
+            ["s₁", "0", "3", "1", "−1", "3"],
+            ["x₁", "1", "−1", "0", "1", "7"]
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "tab-s2-se19-full",
+          "title": "Schritt 2 — nach Pivot (x₂ in Basis, Pivotelement 3 in Zeile 1) — OPTIMAL",
+          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "rows": [
+            ["x₀", "0", "0", "5/3", "7/3", "33"],
+            ["x₂", "0", "1", "1/3", "−1/3", "1"],
+            ["x₁", "1", "0", "1/3", "2/3", "8"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Lösung ablesen",
+          "body": "Alle Einträge in Zeile 0 sind $\\geq 0$ → **optimal!**\n\n$$x_1^* = 8,\\quad x_2^* = 1,\\quad \\pi^* = 33$$\n\nDie Schlupfvariablen $s_1 = 0,\\; s_2 = 0$ zeigen: beide Nebenbedingungen sind aktiv (voll ausgeschöpft)."
+        },
+        {
+          "kind": "tip",
+          "title": "Rechencheck für den Pivotschritt",
+          "body": "Schritt 2: Pivot in Zeile 1 (s₁-Zeile), Element $3$. Neue Zeile 1: $(0,3,1,-1,3) / 3 = (0,1,1/3,-1/3,1)$.\n\nZeile 0 Korrektur: $\\text{Zeile 0} + 5 \\times \\text{neue Zeile 1}$:\n$(0,-5,0,4,28) + 5\\cdot(0,1,1/3,-1/3,1) = (0,0,5/3,7/3,33)$ ✓\n\nZeile 2 Korrektur: $\\text{Zeile 2} + 1 \\times \\text{neue Zeile 1}$:\n$(1,-1,0,1,7) + 1\\cdot(0,1,1/3,-1/3,1) = (1,0,1/3,2/3,8)$ ✓"
+        }
+      ]
+    },
+    {
+      "id": "simplex-ablauf",
+      "heading": "Simplex-Ablauf im Überblick",
+      "body": "Das folgende Diagramm zeigt den Ablauf des Simplex-Algorithmus von Anfang bis Ende.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "mermaid-simplex",
+          "title": "Simplex-Algorithmus Ablauf",
+          "caption": "Entscheidungsdiagramm für den Simplex-Algorithmus",
+          "code": "graph TD\n    A[\"LOP in Standardform bringen\\n(Schlupfvariablen einfügen)\"] --> B[\"Start-Tableau aufstellen\\nBasis: alle Schlupfvariablen\\nBasislösung: x_j = 0, s_i = b_i\"]\n    B --> C{\"Gibt es negativen\\nEintrag in Zeile 0?\"}\n    C -- Nein --> D[\"OPTIMAL\\nLösung aus rhs ablesen\"]\n    C -- Ja --> E[\"Pivotspalte j₀:\\nkleinster (negativster)\\nEintrag in Zeile 0\"]\n    E --> F[\"Quotientenregel:\\nfür alle i mit y_ij₀ > 0\\nberechne rhs_i / y_ij₀\"]\n    F --> G{\"Alle y_ij₀ ≤ 0?\"}\n    G -- Ja --> H[\"UNBESCHRÄNKT\\nkein endliches Optimum\"]\n    G -- Nein --> I[\"Pivotzeile i₀:\\nzeile mit kleinstem Quotienten\"]\n    I --> J[\"Pivotschritt:\\n1. Pivotzeile ÷ Pivotelement\\n2. Alle anderen Zeilen eliminieren\"]\n    J --> C"
+        }
+      ]
+    },
+    {
+      "id": "dualitaet",
+      "heading": "Dualität — das gespiegelte Problem",
+      "body": "## Was ist das duale Problem?\n\nZu jedem linearen Optimierungsproblem (dem **primalen** Problem) gibt es ein **duales** Problem. Die Dualität ist eine tiefe mathematische Symmetrie und hat praktische Bedeutung: die dualen Variablen $y_i$ sind die **Schattenpreise** der Nebenbedingungen.\n\n## Primales und duales LOP\n\nGegeben das primale Problem (P):\n$$\\max\\; \\vec{c}^T \\vec{x} \\quad \\text{u. d. NB: } A\\vec{x} \\leq \\vec{b},\\; \\vec{x} \\geq 0$$\n\nDas duale Problem (D) lautet:\n$$\\min\\; \\vec{b}^T \\vec{y} \\quad \\text{u. d. NB: } A^T \\vec{y} \\geq \\vec{c},\\; \\vec{y} \\geq 0$$\n\n**Beobachtungen:**\n- Maximierung wird zu Minimierung (und umgekehrt)\n- $\\vec{b}$ und $\\vec{c}$ tauschen die Rollen\n- Die Matrix wird transponiert: $A \\to A^T$\n- $\\leq$ wird zu $\\geq$ (Ungleichungsrichtung dreht sich)\n- Die Anzahl der dualen Variablen $y_i$ = Anzahl der primalen Nebenbedingungen\n\n## Beispiel: SoSe19 dualisieren\n\nPrimal: $\\max\\; 4x_1 + x_2$, NB: $x_1 + 2x_2 \\leq 10$, $x_1 - x_2 \\leq 7$, $x_1,x_2 \\geq 0$.\n\nIn Matrixform:\n$$A = \\begin{pmatrix}1 & 2\\\\1 & -1\\end{pmatrix},\\quad \\vec{b} = \\begin{pmatrix}10\\\\7\\end{pmatrix},\\quad \\vec{c} = \\begin{pmatrix}4\\\\1\\end{pmatrix}$$\n\nDual: Zwei duale Variablen $y_1, y_2$ (eine pro primaler NB).\n\n$$\\min\\; 10y_1 + 7y_2 \\quad \\text{u. d. NB: } \\begin{pmatrix}1&1\\\\2&-1\\end{pmatrix}\\begin{pmatrix}y_1\\\\y_2\\end{pmatrix} \\geq \\begin{pmatrix}4\\\\1\\end{pmatrix},\\; y_1, y_2 \\geq 0$$\n\nAusgeschrieben:\n$$y_1 + y_2 \\geq 4, \\quad 2y_1 - y_2 \\geq 1, \\quad y_1, y_2 \\geq 0$$",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-primal-dual",
+          "title": "Primal ↔ Dual — Gegenüberstellung",
+          "headers": ["Merkmal", "Primales Problem (P)", "Duales Problem (D)"],
+          "rows": [
+            ["Ziel", "Maximierung", "Minimierung"],
+            ["Zielfunktionskoeffizienten", "c (werden zu RHS)", "b (werden zu RHS)"],
+            ["Matrix", "A", "Aᵀ (transponiert)"],
+            ["Ungleichungsrichtung", "Ax ≤ b", "AᵀY ≥ c"],
+            ["Vorzeichen Variablen", "x ≥ 0", "y ≥ 0"],
+            ["Anzahl Variablen", "n (Entscheidungsvar.)", "m (= Anzahl primal. NB)"],
+            ["Anzahl NB", "m", "n"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Dual des Dualen ist das Primale",
+          "body": "Dualisiert man das duale Problem nochmal, erhält man wieder das ursprüngliche primale Problem. Primal und Dual sind also vollständig symmetrisch."
+        },
+        {
+          "kind": "info",
+          "title": "Schattenpreise",
+          "body": "Die optimalen dualen Variablen $y_i^*$ sind die **Schattenpreise**: $y_i^*$ gibt an, um wie viel sich der optimale Zielfunktionswert erhöht, wenn man die $i$-te Nebenbedingung um eine Einheit lockert (d. h. $b_i$ um $1$ erhöht).\n\nIm Tableau-Optimum: $y_i^*$ steht in Zeile 0 in der Spalte der $i$-ten Schlupfvariablen $s_i$."
+        }
+      ]
+    },
+    {
+      "id": "dualitaetssaetze",
+      "heading": "Schwache und starke Dualität",
+      "body": "## Schwacher Dualitätssatz\n\nFür **jede** zulässige Lösung $\\vec{x}$ von (P) und **jede** zulässige Lösung $\\vec{y}$ von (D) gilt:\n\n$$\\vec{c}^T \\vec{x} \\leq \\vec{b}^T \\vec{y}$$\n\n**Anschauung:** Jeder duale zulässige Wert ist eine **obere Schranke** für den primalen Zielfunktionswert — und umgekehrt ist jeder primale Wert eine untere Schranke für das duale Minimum.\n\n**Folgerungen:**\n- Falls (P) unbeschränkt ist ($\\vec{c}^T\\vec{x} \\to \\infty$), dann muss (D) **unzulässig** sein.\n- Falls (D) unbeschränkt ist (Minimum $\\to -\\infty$), dann muss (P) **unzulässig** sein.\n- Wenn $\\vec{c}^T\\vec{x} = \\vec{b}^T\\vec{y}$, dann sind **beide Lösungen optimal**.\n\n## Starker Dualitätssatz\n\nFalls (P) eine optimale Lösung $\\vec{x}^*$ besitzt, dann hat auch (D) eine optimale Lösung $\\vec{y}^*$, und es gilt:\n\n$$\\vec{c}^T \\vec{x}^* = \\vec{b}^T \\vec{y}^*$$\n\n**Beide Optimalwerte sind gleich!**\n\n## Optimalwerte aus dem Simplex-Tableau ablesen\n\nNachdem der Simplex-Algorithmus fertig ist, stehen die optimalen Schattenpreise (= duale Variablen) in **Zeile 0** in den Spalten der ursprünglichen Schlupfvariablen:\n\n$$y_i^* = \\text{Eintrag in Zeile 0, Spalte } s_i \\text{ (im Optimal-Tableau)}$$\n\n**Beispiel SoSe19** (Optimal-Tableau):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|---------|\n| x₀ |  0 |  0 | 5/3 | 7/3 | 33 |\n| x₂ |  0 |  1 | 1/3 | −1/3 | 1 |\n| x₁ |  1 |  0 | 1/3 | 2/3 | 8 |\n\n$y_1^* = 5/3$ (Spalte $s_1$), $y_2^* = 7/3$ (Spalte $s_2$).\n\n**Prüfung:** $\\vec{b}^T\\vec{y}^* = 10 \\cdot \\frac{5}{3} + 7 \\cdot \\frac{7}{3} = \\frac{50+49}{3} = \\frac{99}{3} = 33 = \\pi^*$ ✓",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Dualitätssätze kompakt",
+          "body": "**Schwach:** $\\vec{c}^T\\vec{x} \\leq \\vec{b}^T\\vec{y}$ für alle zulässigen $\\vec{x}, \\vec{y}$.\n\n**Stark:** Im Optimum gilt $\\vec{c}^T\\vec{x}^* = \\vec{b}^T\\vec{y}^*$.\n\nAblesen: $y_i^* =$ Eintrag in Zeile 0, Spalte $s_i$ des Optimal-Tableaus."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "sd-fc-1",
+      "topicId": "simplex-dualitaet",
+      "front": "Was ist eine Schlupfvariable, und wozu braucht man sie?",
+      "back": "Eine Schlupfvariable $s_i \\geq 0$ wandelt die Ungleichung $a^T x \\leq b_i$ in die Gleichung $a^T x + s_i = b_i$ um. Der Simplex-Algorithmus arbeitet mit Gleichungen — Schlupfvariablen ermöglichen das."
+    },
+    {
+      "id": "sd-fc-2",
+      "topicId": "simplex-dualitaet",
+      "front": "Wie wählt man im Simplex-Verfahren die Pivotspalte?",
+      "back": "Man wählt die Spalte mit dem **betragsmäßig größten negativen** Eintrag in Zeile 0 (der Zielfunktionszeile). Diese Variable verbessert den Zielfunktionswert am stärksten."
+    },
+    {
+      "id": "sd-fc-3",
+      "topicId": "simplex-dualitaet",
+      "front": "Was besagt die Quotientenregel bei der Pivotzeilen-Wahl?",
+      "back": "Für alle Zeilen $i \\geq 1$ mit positivem Eintrag in der Pivotspalte berechne $\\text{rhs}_i / y_{i,j_0}$. Die Zeile mit dem **kleinsten positiven Quotienten** wird die Pivotzeile. Sie stellt sicher, dass die neue Basislösung zulässig bleibt."
+    },
+    {
+      "id": "sd-fc-4",
+      "topicId": "simplex-dualitaet",
+      "front": "Wann ist das Simplex-Tableau optimal?",
+      "back": "Wenn alle Einträge in **Zeile 0** (Zielfunktionszeile) $\\geq 0$ sind. Dann kann kein Basiswechsel mehr den Zielfunktionswert verbessern."
+    },
+    {
+      "id": "sd-fc-5",
+      "topicId": "simplex-dualitaet",
+      "front": "Wie lautet das duale Problem zu: max $c^T x$, $Ax \\leq b$, $x \\geq 0$?",
+      "back": "Das duale Problem ist: min $b^T y$, $A^T y \\geq c$, $y \\geq 0$. Merkhilfe: $b$ und $c$ tauschen die Rollen, die Matrix wird transponiert, $\\leq$ wird zu $\\geq$, Maximierung wird zu Minimierung."
+    },
+    {
+      "id": "sd-fc-6",
+      "topicId": "simplex-dualitaet",
+      "front": "Was sagt der schwache Dualitätssatz?",
+      "back": "Für jede zulässige Primallösung $x$ und jede zulässige Duallösung $y$ gilt: $c^T x \\leq b^T y$. Jeder duale Wert ist eine obere Schranke für den primalen Zielfunktionswert."
+    },
+    {
+      "id": "sd-fc-7",
+      "topicId": "simplex-dualitaet",
+      "front": "Was bedeutet 'Schattenpreis' $y_i^*$?",
+      "back": "$y_i^*$ gibt an, um wie viel sich der optimale Zielfunktionswert erhöht, wenn $b_i$ (die rechte Seite der $i$-ten NB) um 1 erhöht wird. Im optimalen Tableau steht $y_i^*$ in Zeile 0, Spalte $s_i$."
+    },
+    {
+      "id": "sd-fc-8",
+      "topicId": "simplex-dualitaet",
+      "front": "Was passiert beim Simplex, wenn alle Einträge in der Pivotspalte $\\leq 0$ sind?",
+      "back": "Das Problem ist **unbeschränkt** — der Zielfunktionswert kann beliebig groß werden. Es gibt kein endliches Optimum."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "sd-q1",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "leicht",
+      "prompt": "Was macht eine Schlupfvariable $s_i$ in der Standardform eines LOP?",
+      "options": [
+        "Sie wandelt eine Ungleichung $\\leq$ in eine Gleichung um",
+        "Sie maximiert die Zielfunktion",
+        "Sie ist immer gleich null",
+        "Sie ersetzt die Zielfunktionskoeffizienten"
+      ],
+      "correct": [0],
+      "explanation": "Die Schlupfvariable $s_i \\geq 0$ wird zur Ungleichung $a^T x \\leq b_i$ addiert: $a^T x + s_i = b_i$. Sie misst den ungenutzten Spielraum der Nebenbedingung."
+    },
+    {
+      "kind": "mc",
+      "id": "sd-q2",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "leicht",
+      "prompt": "Woran erkennt man im Simplex-Tableau, dass die optimale Lösung gefunden wurde?",
+      "options": [
+        "Alle Einträge in Zeile 0 sind ≥ 0",
+        "Alle rhs-Werte sind 0",
+        "Die Basisvariablen sind alle Schlupfvariablen",
+        "Der Zielfunktionswert ist 0"
+      ],
+      "correct": [0],
+      "explanation": "Optimalitätskriterium: Zeile 0 hat keine negativen Einträge mehr. Dann kann kein weiterer Basiswechsel den Zielfunktionswert erhöhen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "sd-q3",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "mittel",
+      "prompt": "Das duale Problem zu einem Maximierungsproblem ist ein Minimierungsproblem.",
+      "answer": true,
+      "explanation": "Ja. Beim Dualisieren kehrt sich Maximierung in Minimierung um (und umgekehrt). Die Rollen von $c$ und $b$ tauschen, die Matrix wird transponiert."
+    },
+    {
+      "kind": "numeric",
+      "id": "sd-q4",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "mittel",
+      "prompt": "LOP: $\\max\\; \\pi = 4x_1 + x_2$ unter $x_1 + 2x_2 \\leq 10$, $x_1 - x_2 \\leq 7$, $x_1, x_2 \\geq 0$. Wie groß ist der optimale Zielfunktionswert $\\pi^*$?",
+      "answer": 33,
+      "tolerance": 0.01,
+      "explanation": "Simplex liefert $x_1^* = 8$, $x_2^* = 1$, also $\\pi^* = 4 \\cdot 8 + 1 = 33$."
+    },
+    {
+      "kind": "numeric",
+      "id": "sd-q5",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "mittel",
+      "prompt": "LOP: $\\max\\; \\pi = x_1 + 4x_2$ unter $-x_1 + x_2 \\leq 4$, $2x_1 + x_2 \\leq 7$, $x_1, x_2 \\geq 0$. Wie groß ist $\\pi^*$?",
+      "answer": 21,
+      "tolerance": 0.01,
+      "explanation": "Simplex: Start-Pivot auf $x_2$ (Koeffizient $-4$ in Zeile 0). Nach 2 Schritten: $x_1^* = 1$, $x_2^* = 5$. $\\pi^* = 1 + 20 = 21$."
+    },
+    {
+      "kind": "numeric",
+      "id": "sd-q6",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "mittel",
+      "prompt": "LOP: $\\max\\; \\pi = x_1 + 2x_2$ unter $2x_1 + x_2 \\leq 10$, $-x_1 + x_2 \\leq 4$, $x_1, x_2 \\geq 0$. Wie groß ist $\\pi^*$?",
+      "answer": 14,
+      "tolerance": 0.01,
+      "explanation": "Ecken des zulässigen Bereichs: $(0,0), (5,0), (0,4), (2,6)$. Im Punkt $(2,6)$: $\\pi = 2 + 12 = 14$ — das Maximum."
+    },
+    {
+      "kind": "mc",
+      "id": "sd-q7",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "mittel",
+      "prompt": "Was sagt der **starke** Dualitätssatz (wenn beide Probleme zulässig sind)?",
+      "options": [
+        "Primaler und dualer Optimalwert sind gleich: $c^T x^* = b^T y^*$",
+        "Der primale Optimalwert ist immer größer als der duale",
+        "Beide Probleme haben dieselbe Anzahl an Variablen",
+        "Das duale Problem hat keine Lösung"
+      ],
+      "correct": [0],
+      "explanation": "Starker Dualitätssatz: Falls (P) optimal ist, ist auch (D) optimal, und die Optimalwerte stimmen überein: $c^T x^* = b^T y^*$."
+    },
+    {
+      "kind": "mc",
+      "id": "sd-q8",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "schwer",
+      "prompt": "LOP: $\\max\\; \\pi = -x + 3y$ unter $-x+y \\leq 4$, $2x+2y \\leq 9$, $x,y \\geq 0$. Welche Aussage über das Optimum ist korrekt?",
+      "options": [
+        "$x^* = 0{,}25$, $y^* = 4{,}25$, $\\pi^* = 12{,}5$",
+        "$x^* = 0$, $y^* = 4$, $\\pi^* = 12$",
+        "$x^* = 4{,}5$, $y^* = 0$, $\\pi^* = -4{,}5$",
+        "$x^* = 0$, $y^* = 4{,}5$, $\\pi^* = 13{,}5$"
+      ],
+      "correct": [0],
+      "explanation": "Simplex: Schritt 1 → $y$ in Basis (Pivot in Zeile 1), Schritt 2 → $x$ in Basis (Pivot in Zeile 2). Ergebnis: $x^* = 0{,}25$, $y^* = 4{,}25$, $\\pi^* = -0{,}25 + 12{,}75 = 12{,}5$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "sd-q9",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "schwer",
+      "prompt": "Wenn das primale LOP unbeschränkt ist, dann ist das duale LOP unzulässig.",
+      "answer": true,
+      "explanation": "Folgt aus dem schwachen Dualitätssatz: Falls (P) unbeschränkt ($c^T x \\to \\infty$), kann es kein zulässiges $y$ mit $b^T y \\geq c^T x$ geben — (D) ist also unzulässig."
+    },
+    {
+      "kind": "freetext",
+      "id": "sd-q10",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum der Simplex-Algorithmus immer von Ecke zu Ecke des zulässigen Bereichs springt.",
+      "sampleAnswer": "Eine Basislösung entspricht genau einer Ecke des Polyeders. Ein Pivotschritt tauscht eine Basisvariable gegen eine Nicht-Basisvariable aus — das entspricht dem Wechsel zu einer benachbarten Ecke entlang einer Kante des Polyeders. Der neue Zielfunktionswert ist dabei mindestens so gut wie der alte. Da es nur endlich viele Ecken gibt (und bei Nicht-Entartung jede nur einmal besucht wird), terminiert der Algorithmus.",
+      "keywords": ["ecke", "basislösung", "pivotschritt", "tausch", "nachbar", "polyeder", "kante"],
+      "explanation": "Jede Basislösung = Ecke des Polyeders. Pivotschritt = Kantenwechsel zur besseren Ecke. Endliche Terminierung folgt aus endlicher Eckenanzahl."
+    },
+    {
+      "kind": "mc",
+      "id": "sd-q11",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "mittel",
+      "prompt": "Wie viele duale Variablen hat das duale LOP zu einem primalen Problem mit 3 Nebenbedingungen und 4 Entscheidungsvariablen?",
+      "options": ["3", "4", "7", "12"],
+      "correct": [0],
+      "explanation": "Die Anzahl der dualen Variablen entspricht der Anzahl der primalen Nebenbedingungen — also 3. Das duale Problem hat dann 4 Nebenbedingungen (entsprechend den 4 primalen Variablen)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "sd-q12",
+      "topicId": "simplex-dualitaet",
+      "difficulty": "leicht",
+      "prompt": "Im Start-Tableau des Simplex-Algorithmus sind die Schlupfvariablen die Basisvariablen.",
+      "answer": true,
+      "explanation": "Startet man mit $x_j = 0$ für alle Entscheidungsvariablen, ist $s_i = b_i$. Die Schlupfvariablen bilden die Startbasis, die der Ecke $\\vec{x} = \\vec{0}$ entspricht."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "sd-ex-se18",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe18, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2018",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das lineare Optimierungsproblem (LOP) mit $x, y \\geq 0$:\n$$\\pi(x, y) = -x + 3y \\to \\max!$$\n$$-x + y \\leq 4$$\n$$2x + 2y \\leq 9$$\nLösen Sie das LOP mit dem Simplex-Algorithmus. Geben Sie in jedem Schritt die Basisvariablen (in der ersten Spalte) und die zugehörige Basislösung an. Wie lauten die optimalen Werte von $x$, $y$ und der Maximalwert der Zielfunktion $\\pi$?",
+      "hint": "Schlupfvariablen $s_1, s_2$ einführen. Start-Pivot: negativster Eintrag in Zeile 0 ist bei $y$ (Koeffizient $-3$). Quotientenregel: nur Zeilen mit positivem Pivot-Spalteneintrag berücksichtigen.",
+      "solution": "**Standardform:** Schlupfvariablen $s_1, s_2 \\geq 0$ einfügen:\n$$x_0 - (-x + 3y) = 0 \\implies x_0 + x - 3y = 0$$\n$$-x + y + s_1 = 4, \\quad 2x + 2y + s_2 = 9$$\n\nZielfunktionszeile: $x_0 + x - 3y + 0 \\cdot s_1 + 0 \\cdot s_2 = 0$, d. h. Einträge in Zeile 0: $(+1, -3, 0, 0)$.\n\n**Schritt 0 — Starttableau** (Basis: $\\{s_1, s_2\\}$, Lösung: $x=0, y=0, s_1=4, s_2=9, x_0=0$):\n\n| BV | x | y | s₁ | s₂ | rhs |\n|----|---|---|----|----|---------|\n| x₀ | +1 | **−3** | 0 | 0 | 0 |\n| s₁ | −1 | 1 | 1 | 0 | 4 |\n| s₂ | 2 | 2 | 0 | 1 | 9 |\n\nKleinster Eintrag in Zeile 0: $-3$ bei $y$ → **Pivotspalte: $y$**.\n\nQuotienten: Zeile 1: $4/1 = 4$; Zeile 2: $9/2 = 4{,}5$. Kleinster Quotient: Zeile 1 → **Pivotzeile: 1** (Pivotelement: $1$).\n\n**Schritt 1 — Pivot auf $y$ in Zeile 1** (Zeile 1 ÷ 1; Zeile 0 += 3 × Zeile 1; Zeile 2 -= 2 × Zeile 1):\n\n| BV | x | y | s₁ | s₂ | rhs |\n|----|---|---|----|----|---------|\n| x₀ | **−2** | 0 | 3 | 0 | 12 |\n| y  | −1 | 1 | 1 | 0 | 4 |\n| s₂ | 4 | 0 | −2 | 1 | 1 |\n\nNoch negativer Eintrag: $-2$ bei $x$ → **Pivotspalte: $x$**.\n\nQuotienten: Zeile 1: $4/(-1)$ negativ (überspringen!); Zeile 2: $1/4 = 0{,}25$. Kleinster: Zeile 2 → **Pivotzeile: 2** (Pivotelement: $4$).\n\n**Schritt 2 — Pivot auf $x$ in Zeile 2** (Zeile 2 ÷ 4; Zeile 0 += 2 × neue Zeile 2; Zeile 1 += 1 × neue Zeile 2):\n\nNeue Zeile 2: $(1, 0, -1/2, 1/4, 1/4)$.\n\nZeile 0: $(−2,0,3,0,12) + 2\\cdot(1,0,-1/2,1/4,1/4) = (0,0,2,1/2,12{,}5)$.\n\nZeile 1: $(-1,1,1,0,4) + 1\\cdot(1,0,-1/2,1/4,1/4) = (0,1,1/2,1/4,4{,}25)$.\n\n| BV | x | y | s₁ | s₂ | rhs |\n|----|---|---|----|----|---------|\n| x₀ | 0 | 0 | 2 | 1/2 | **12,5** |\n| y  | 0 | 1 | 1/2 | 1/4 | 4,25 |\n| x  | 1 | 0 | −1/2 | 1/4 | 0,25 |\n\nAlle Einträge in Zeile 0 $\\geq 0$ → **OPTIMAL**.\n\n**Ergebnis:** $x^* = 0{,}25$, $y^* = 4{,}25$, $\\pi^* = -(0{,}25) + 3(4{,}25) = -0{,}25 + 12{,}75 = \\mathbf{12{,}5}$.\n\n**Probe:** $-0{,}25 + 4{,}25 = 4 \\leq 4$ ✓; $2(0{,}25) + 2(4{,}25) = 0{,}5 + 8{,}5 = 9 \\leq 9$ ✓."
+    },
+    {
+      "id": "sd-ex-se19",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe19, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2019",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das lineare Optimierungsproblem (LOP) mit $x_1, x_2 \\geq 0$:\n$$\\pi(x_1, x_2) = 4x_1 + x_2 \\to \\max!$$\n$$x_1 + 2x_2 \\leq 10$$\n$$x_1 - x_2 \\leq 7$$\n\n(a) Lösen Sie das LOP mit dem Simplex-Algorithmus. Geben Sie in jedem Schritt die Basisvariablen und die zugehörige Basislösung an.\n\n(b) Wie lautet das zugehörige duale LOP?",
+      "hint": "Schlupfvariablen $s_1, s_2$ einführen. Zeile 0 beginnt mit $(-4, -1, 0, 0)$. Pivotspalte: $x_1$ (Eintrag $-4$). Für Teil (b): $A^T y \\geq c$, $y \\geq 0$, Zielfunktion min $b^T y$.",
+      "solution": "### Teil (a): Simplex\n\n**Standardform:** $x_0 - 4x_1 - x_2 = 0$; $x_1 + 2x_2 + s_1 = 10$; $x_1 - x_2 + s_2 = 7$.\n\n**Schritt 0** (Basis: $s_1, s_2$; Lösung: $x_1=x_2=0, s_1=10, s_2=7, x_0=0$):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | **−4** | −1 | 0 | 0 | 0 |\n| s₁ | 1 | 2 | 1 | 0 | 10 |\n| s₂ | 1 | −1 | 0 | 1 | 7 |\n\nPivotspalte: $x_1$ ($-4$). Quotienten: $10/1=10$; $7/1=7$ → Pivotzeile: 2 (Pivotelement: 1).\n\n**Schritt 1** (Zeile 2 ÷ 1; Zeile 0 += 4·Zeile 2; Zeile 1 -= 1·Zeile 2):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | **−5** | 0 | 4 | 28 |\n| s₁ | 0 | 3 | 1 | −1 | 3 |\n| x₁ | 1 | −1 | 0 | 1 | 7 |\n\nBasislösung: $x_1=7, s_1=3, x_2=0, s_2=0, x_0=28$.\n\nPivotspalte: $x_2$ ($-5$). Quotienten: Zeile 1: $3/3=1$; Zeile 2: $7/(-1)<0$ überspringen → Pivotzeile: 1 (Pivotelement: 3).\n\n**Schritt 2** (Zeile 1 ÷ 3; Zeile 0 += 5·neue Zeile 1; Zeile 2 += 1·neue Zeile 1):\n\nNeue Zeile 1: $(0, 1, 1/3, -1/3, 1)$.\n\nZeile 0: $(0,-5,0,4,28)+5\\cdot(0,1,1/3,-1/3,1)=(0,0,5/3,7/3,33)$.\n\nZeile 2: $(1,-1,0,1,7)+1\\cdot(0,1,1/3,-1/3,1)=(1,0,1/3,2/3,8)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | 0 | **5/3** | **7/3** | **33** |\n| x₂ | 0 | 1 | 1/3 | −1/3 | 1 |\n| x₁ | 1 | 0 | 1/3 | 2/3 | 8 |\n\nAlle Einträge $\\geq 0$ → **OPTIMAL**.\n\n$x_1^* = 8$, $x_2^* = 1$, $\\pi^* = 4\\cdot8 + 1 = \\mathbf{33}$.\n\nSchattenpreise: $y_1^* = 5/3$ (Spalte $s_1$), $y_2^* = 7/3$ (Spalte $s_2$).\n\n**Probe:** $10\\cdot\\frac{5}{3}+7\\cdot\\frac{7}{3}=\\frac{50+49}{3}=33$ ✓\n\n### Teil (b): Duales LOP\n\nPrimale Daten: $A = \\begin{pmatrix}1&2\\\\1&-1\\end{pmatrix}$, $\\vec{b} = \\begin{pmatrix}10\\\\7\\end{pmatrix}$, $\\vec{c} = \\begin{pmatrix}4\\\\1\\end{pmatrix}$.\n\nDuale Variablen: $y_1, y_2 \\geq 0$ (eine pro primaler NB).\n\nDuales Problem:\n$$\\min\\; 10y_1 + 7y_2$$\n$$\\text{u. d. NB: } y_1 + y_2 \\geq 4,\\quad 2y_1 - y_2 \\geq 1,\\quad y_1, y_2 \\geq 0$$\n\nOptimale duale Lösung: $y_1^* = 5/3$, $y_2^* = 7/3$. Probe: $y_1+y_2=4\\geq4$ ✓; $2\\cdot5/3-7/3=3/3=1\\geq1$ ✓."
+    },
+    {
+      "id": "sd-ex-se20",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe20, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2020",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das LOP mit $x_1, x_2 \\geq 0$:\n$$\\pi(x_1, x_2) = x_1 + 2x_2 \\to \\max!$$\n$$2x_1 + x_2 \\leq 10$$\n$$-x_1 + x_2 \\leq 4$$\n\n(a) Lösen Sie das LOP graphisch: Zeichnen Sie den zulässigen Bereich, berechnen Sie den Schnittpunkt der optimalen Ecke rechnerisch und bestimmen Sie das Maximum.\n\n(b) Lösen Sie das LOP mit dem Simplex-Algorithmus.",
+      "hint": "Graphisch: Ecken bei $(0,0), (5,0), (0,4)$ und Schnittpunkt der beiden aktiven NB. Simplex: Pivotspalte zuerst $x_2$ (Koeffizient $-2$).",
+      "solution": "### Teil (a): Graphische Lösung\n\n**Restriktionsgerade 1:** $2x_1 + x_2 = 10$: Punkte $(0,10)$ und $(5,0)$.\n**Restriktionsgerade 2:** $-x_1 + x_2 = 4$: Punkte $(0,4)$ und $(-4,0)$ — für $x_1\\geq0$ startet sie bei $(0,4)$.\n\n**Ecken des zulässigen Bereichs und Zielfunktionswerte:**\n\n| Ecke $(x_1, x_2)$ | $\\pi = x_1 + 2x_2$ |\n|-------------------|---------------------|\n| $(0, 0)$ | 0 |\n| $(5, 0)$ | 5 |\n| $(0, 4)$ | 8 |\n| $(2, 6)$ | **14** |\n\n**Schnittpunkt rechnerisch:** Beide NB aktiv:\n$$2x_1 + x_2 = 10$$\n$$-x_1 + x_2 = 4 \\implies x_2 = x_1 + 4$$\nEinsetzen: $2x_1 + x_1 + 4 = 10 \\implies 3x_1 = 6 \\implies x_1 = 2$, $x_2 = 6$.\n\n**Maximum:** $\\pi^* = 2 + 12 = \\mathbf{14}$ bei $(x_1^*, x_2^*) = (2, 6)$.\n\n### Teil (b): Simplex\n\nZielfunktionszeile: $(-1, -2, 0, 0)$. Schritt 0:\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | −1 | **−2** | 0 | 0 | 0 |\n| s₁ | 2 | 1 | 1 | 0 | 10 |\n| s₂ | −1 | 1 | 0 | 1 | 4 |\n\nPivotspalte: $x_2$. Quotienten: $10/1=10$; $4/1=4$ → Pivotzeile: 2 (Pivotelement: 1).\n\n**Schritt 1** (Zeile 2 ÷ 1; Zeile 0 += 2·Zeile 2; Zeile 1 -= 1·Zeile 2):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | **−3** | 0 | 0 | 2 | 8 |\n| s₁ | 3 | 0 | 1 | −1 | 6 |\n| x₂ | −1 | 1 | 0 | 1 | 4 |\n\nPivotspalte: $x_1$ ($-3$). Quotienten: $6/3=2$; Zeile 2: $4/(-1)<0$ überspringen → Pivotzeile: 1 (Pivotelement: 3).\n\n**Schritt 2** (Zeile 1 ÷ 3; Zeile 0 += 3·neue Zeile 1; Zeile 2 += 1·neue Zeile 1):\n\nNeue Zeile 1: $(1, 0, 1/3, -1/3, 2)$.\n\nZeile 0: $(-3,0,0,2,8)+3\\cdot(1,0,1/3,-1/3,2)=(0,0,1,1,14)$.\n\nZeile 2: $(-1,1,0,1,4)+1\\cdot(1,0,1/3,-1/3,2)=(0,1,1/3,2/3,6)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | 0 | 1 | 1 | **14** |\n| x₁ | 1 | 0 | 1/3 | −1/3 | 2 |\n| x₂ | 0 | 1 | 1/3 | 2/3 | 6 |\n\nOPTIMAL: $x_1^*=2$, $x_2^*=6$, $\\pi^*=\\mathbf{14}$ ✓"
+    },
+    {
+      "id": "sd-ex-se22",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe22, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2022",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das LOP mit $x_1, x_2 \\geq 0$:\n$$\\pi(x_1, x_2) = x_1 + 2x_2 \\to \\max!$$\n$$3x_1 + 2x_2 \\leq 16$$\n$$x_1 \\leq 4$$\n$$x_2 \\leq 5$$\n\n(a) Lösen Sie das LOP mit dem Simplex-Algorithmus.\n(b) Lösen Sie das LOP graphisch.\n(c) Wie lautet das zugehörige duale LOP?",
+      "hint": "Drei Schlupfvariablen $s_1, s_2, s_3$. Pivotspalte zuerst $x_2$ (Eintrag $-2$). Duales LOP: drei duale Variablen $y_1, y_2, y_3$.",
+      "solution": "### Teil (a): Simplex (3 Schlupfvariablen $s_1, s_2, s_3$)\n\nZielfunktionszeile: $(-1,-2,0,0,0)$.\n\n**Schritt 0** (Basis: $s_1,s_2,s_3$):\n\n| BV | x₁ | x₂ | s₁ | s₂ | s₃ | rhs |\n|----|----|----|----|----|----|---------|\n| x₀ | −1 | **−2** | 0 | 0 | 0 | 0 |\n| s₁ | 3 | 2 | 1 | 0 | 0 | 16 |\n| s₂ | 1 | 0 | 0 | 1 | 0 | 4 |\n| s₃ | 0 | 1 | 0 | 0 | 1 | 5 |\n\nPivotspalte: $x_2$. Quotienten: $16/2=8$; $4/0$: ∞ (überspringen, da 0); $5/1=5$ → Pivotzeile: 3 (s₃, Pivotelement: 1).\n\n**Schritt 1** (x₂ ersetzt s₃):\n\nZeile 3 unverändert. Zeile 0 += 2·Zeile 3: $(-1,0,0,0,2,10)$. Zeile 1 -= 2·Zeile 3: $(3,0,1,0,-2,6)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | s₃ | rhs |\n|----|----|----|----|----|----|---------|\n| x₀ | **−1** | 0 | 0 | 0 | 2 | 10 |\n| s₁ | 3 | 0 | 1 | 0 | −2 | 6 |\n| s₂ | 1 | 0 | 0 | 1 | 0 | 4 |\n| x₂ | 0 | 1 | 0 | 0 | 1 | 5 |\n\nPivotspalte: $x_1$ ($-1$). Quotienten: $6/3=2$; $4/1=4$; $5/0$: ∞ → Pivotzeile: 1 (s₁, Pivotelement: 3).\n\n**Schritt 2** (x₁ ersetzt s₁, Zeile 1 ÷ 3):\n\nNeue Zeile 1: $(1,0,1/3,0,-2/3,2)$.\n\nZeile 0 += 1·neue Zeile 1: $(0,0,1/3,0,4/3,12)$.\n\nZeile 2 -= 1·neue Zeile 1: $(0,0,-1/3,1,2/3,2)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | s₃ | rhs |\n|----|----|----|----|----|----|---------|\n| x₀ | 0 | 0 | 1/3 | 0 | 4/3 | **12** |\n| x₁ | 1 | 0 | 1/3 | 0 | −2/3 | 2 |\n| s₂ | 0 | 0 | −1/3 | 1 | 2/3 | 2 |\n| x₂ | 0 | 1 | 0 | 0 | 1 | 5 |\n\nAlle Einträge $\\geq 0$ → **OPTIMAL**: $x_1^*=2$, $x_2^*=5$, $\\pi^*=\\mathbf{12}$.\n\n### Teil (b): Graphisch\n\nEcken: $(0,0)$, $(4,0)$, $(0,5)$, $(4,2)$, $(2,5)$.\n- $(2,5)$: $\\pi=2+10=12$ ← Maximum\n- $(4,2)$: $\\pi=4+4=8$\n\nSchnittpunkt $3x_1+2x_2=16$ und $x_2=5$: $3x_1=6 \\Rightarrow x_1=2$. Ecke $(2,5)$, $\\pi=12$ ✓\n\n### Teil (c): Duales LOP\n\n$A=\\begin{pmatrix}3&2\\\\1&0\\\\0&1\\end{pmatrix}$, $\\vec{b}=\\begin{pmatrix}16\\\\4\\\\5\\end{pmatrix}$, $\\vec{c}=\\begin{pmatrix}1\\\\2\\end{pmatrix}$.\n\nDrei duale Variablen $y_1,y_2,y_3 \\geq 0$:\n$$\\min\\; 16y_1 + 4y_2 + 5y_3$$\n$$3y_1 + y_2 \\geq 1$$\n$$2y_1 + y_3 \\geq 2$$\n$$y_1, y_2, y_3 \\geq 0$$"
+    },
+    {
+      "id": "sd-ex-se23",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe23, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2023",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das LOP mit $x_1, x_2 \\geq 0$:\n$$\\pi(x_1, x_2) = 2x_1 + x_2 \\to \\max!$$\n$$x_1 + x_2 \\leq 6$$\n$$x_1 \\leq 4$$\n\n(a) Lösen Sie mit Simplex. (b) Lösen Sie graphisch. (c) Wie lautet das duale LOP?",
+      "hint": "Zwei NB, zwei Schlupfvariablen. Pivotspalte: $x_1$ (Koeffizient $-2$).",
+      "solution": "### (a) Simplex\n\nZielfunktionszeile: $(-2,-1,0,0)$.\n\n**Schritt 0** (Basis: $s_1, s_2$):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | **−2** | −1 | 0 | 0 | 0 |\n| s₁ | 1 | 1 | 1 | 0 | 6 |\n| s₂ | 1 | 0 | 0 | 1 | 4 |\n\nPivotspalte: $x_1$. Quotienten: $6/1=6$; $4/1=4$ → Pivotzeile: 2 (Pivotelement: 1).\n\n**Schritt 1** (x₁ ersetzt s₂):\n\nZeile 0 += 2·Zeile 2: $(0,-1,0,2,8)$. Zeile 1 -= Zeile 2: $(0,1,1,-1,2)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | **−1** | 0 | 2 | 8 |\n| s₁ | 0 | 1 | 1 | −1 | 2 |\n| x₁ | 1 | 0 | 0 | 1 | 4 |\n\nPivotspalte: $x_2$ ($-1$). Quotienten: $2/1=2$; $4/0$: ∞ → Pivotzeile: 1 (Pivotelement: 1).\n\n**Schritt 2** (x₂ ersetzt s₁):\n\nZeile 0 += 1·Zeile 1: $(0,0,1,1,10)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | 0 | 1 | 1 | **10** |\n| x₂ | 0 | 1 | 1 | −1 | 2 |\n| x₁ | 1 | 0 | 0 | 1 | 4 |\n\nOPTIMAL: $x_1^*=4$, $x_2^*=2$, $\\pi^*=\\mathbf{10}$.\n\n### (b) Graphisch\n\nEcken: $(0,0)\\to0$; $(4,0)\\to8$; $(0,6)\\to6$; $(4,2)\\to10$ ← Maximum.\n\nSchnittpunkt $x_1=4$ und $x_1+x_2=6$: $x_2=2$ ✓\n\n### (c) Duales LOP\n\n$y_1,y_2\\geq0$:\n$$\\min\\; 6y_1 + 4y_2 \\quad \\text{u. d. NB: } y_1+y_2\\geq2,\\; y_1\\geq1,\\; y_1,y_2\\geq0$$"
+    },
+    {
+      "id": "sd-ex-se24",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe24, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2024",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das LOP mit $x_1, x_2 \\geq 0$:\n$$\\pi(x_1, x_2) = x_1 + 3x_2 \\to \\max!$$\n$$x_1 + x_2 \\leq 6$$\n$$-x_1 + x_2 \\leq 2$$\n\n(a) Simplex. (b) Graphisch. (c) Duales LOP.",
+      "hint": "Pivotspalte: $x_2$ (Koeffizient $-3$). Beide NB im Optimum aktiv ($s_1=s_2=0$).",
+      "solution": "### (a) Simplex\n\n**Schritt 0** (Basis: $s_1,s_2$):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | −1 | **−3** | 0 | 0 | 0 |\n| s₁ | 1 | 1 | 1 | 0 | 6 |\n| s₂ | −1 | 1 | 0 | 1 | 2 |\n\nPivotspalte: $x_2$. Quotienten: $6/1=6$; $2/1=2$ → Pivotzeile: 2 (Pivotelement: 1).\n\n**Schritt 1** (x₂ ersetzt s₂):\n\nZeile 0 += 3·Zeile 2: $(−1+3(−1), 0, 0, 3, 6) = (−4,0,0,3,6)$. Warte — korrekter Weg:\n\nZeile 0: $(-1,-3,0,0,0)+3\\cdot(-1,1,0,1,2)=(-1-3,-3+3,0,0+3,0+6)=(-4,0,0,3,6)$.\n\nZeile 1: $(1,1,1,0,6)-1\\cdot(-1,1,0,1,2)=(2,0,1,-1,4)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | **−4** | 0 | 0 | 3 | 6 |\n| s₁ | 2 | 0 | 1 | −1 | 4 |\n| x₂ | −1 | 1 | 0 | 1 | 2 |\n\nPivotspalte: $x_1$ ($-4$). Quotienten: $4/2=2$; Zeile 2: $2/(-1)<0$ überspringen → Pivotzeile: 1 (Pivotelement: 2).\n\n**Schritt 2** (x₁ ersetzt s₁, Zeile 1 ÷ 2):\n\nNeue Zeile 1: $(1,0,1/2,-1/2,2)$.\n\nZeile 0 += 4·neue Zeile 1: $(-4,0,0,3,6)+4\\cdot(1,0,1/2,-1/2,2)=(0,0,2,1,14)$.\n\nZeile 2 += 1·neue Zeile 1: $(-1,1,0,1,2)+(1,0,1/2,-1/2,2)=(0,1,1/2,1/2,4)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | 0 | 2 | 1 | **14** |\n| x₁ | 1 | 0 | 1/2 | −1/2 | 2 |\n| x₂ | 0 | 1 | 1/2 | 1/2 | 4 |\n\nOPTIMAL: $x_1^*=2$, $x_2^*=4$, $\\pi^*=2+12=\\mathbf{14}$.\n\n### (b) Graphisch\n\nEcken: $(0,0)\\to0$; $(6,0)\\to6$; $(0,2)\\to6$; $(2,4)\\to14$ ← Maximum.\n\nSchnittpunkt $x_1+x_2=6$ und $-x_1+x_2=2$: Addition $\\Rightarrow 2x_2=8 \\Rightarrow x_2=4, x_1=2$ ✓\n\n### (c) Duales LOP\n\n$y_1,y_2\\geq0$:\n$$\\min\\; 6y_1+2y_2 \\quad \\text{u. d. NB: } y_1+(-1)y_2\\geq1 \\text{ d.h. } y_1-y_2\\geq1,\\; y_1+y_2\\geq3,\\; y_1,y_2\\geq0$$\n\n(Spalten von $A^T$: erste Spalte von $A$ ist $(1,-1)^T$, zweite ist $(1,1)^T$)"
+    },
+    {
+      "id": "sd-ex-se25",
+      "topicId": "simplex-dualitaet",
+      "label": "Klausur SoSe25, Aufgabe 4",
+      "source": "Klausur Mathematik 2, SoSe 2025",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das LOP mit $x_1, x_2 \\geq 0$:\n$$\\pi(x_1, x_2) = x_1 + 4x_2 \\to \\max!$$\n$$-x_1 + x_2 \\leq 4$$\n$$2x_1 + x_2 \\leq 7$$\n\n(a) Lösen Sie mit Simplex (Basisvariablen und Basislösung je Schritt).\n(b) Lösen Sie graphisch (zulässiger Bereich, Schnittpunkt rechnerisch, Maximum).\n(c) Wie lautet das duale LOP?",
+      "hint": "Pivotspalte zuerst $x_2$ (Eintrag $-4$). Erste Pivotzeile: Zeile 1 (Quotient $4/1=4 < 7/1=7$). Im 2. Schritt: Pivotspalte $x_1$ mit Eintrag $-5$ in Zeile 0.",
+      "solution": "### (a) Simplex\n\nZielfunktionszeile: $(-1,-4,0,0)$.\n\n**Schritt 0** (Basis: $s_1,s_2$; Lösung: alle $x=0$, $s_1=4, s_2=7$, $x_0=0$):\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | −1 | **−4** | 0 | 0 | 0 |\n| s₁ | −1 | 1 | 1 | 0 | 4 |\n| s₂ | 2 | 1 | 0 | 1 | 7 |\n\nPivotspalte: $x_2$ ($-4$). Quotienten: $4/1=4$; $7/1=7$ → Pivotzeile: 1 (Pivotelement: 1).\n\n**Schritt 1** (x₂ ersetzt s₁):\n\nZeile 0 += 4·Zeile 1: $(-1+4(-1),-4+4,0+4,0,0+16)=(-5,0,4,0,16)$.\n\nZeile 2 -= 1·Zeile 1: $(2-(-1),1-1,0-1,1,7-4)=(3,0,-1,1,3)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | **−5** | 0 | 4 | 0 | 16 |\n| x₂ | −1 | 1 | 1 | 0 | 4 |\n| s₂ | 3 | 0 | −1 | 1 | 3 |\n\nBasislösung: $x_2=4, s_2=3, x_1=0, s_1=0, x_0=16$.\n\nPivotspalte: $x_1$ ($-5$). Quotienten: Zeile 1: $4/(-1)<0$ überspringen; Zeile 2: $3/3=1$ → Pivotzeile: 2 (Pivotelement: 3).\n\n**Schritt 2** (x₁ ersetzt s₂, Zeile 2 ÷ 3):\n\nNeue Zeile 2: $(1,0,-1/3,1/3,1)$.\n\nZeile 0 += 5·neue Zeile 2: $(-5,0,4,0,16)+5\\cdot(1,0,-1/3,1/3,1)=(0,0,7/3,5/3,21)$.\n\nZeile 1 += 1·neue Zeile 2: $(-1,1,1,0,4)+(1,0,-1/3,1/3,1)=(0,1,2/3,1/3,5)$.\n\n| BV | x₁ | x₂ | s₁ | s₂ | rhs |\n|----|----|----|----|----|-----|\n| x₀ | 0 | 0 | 7/3 | 5/3 | **21** |\n| x₂ | 0 | 1 | 2/3 | 1/3 | 5 |\n| x₁ | 1 | 0 | −1/3 | 1/3 | 1 |\n\nOPTIMAL: $x_1^*=1$, $x_2^*=5$, $\\pi^*=1+20=\\mathbf{21}$.\n\n**Probe:** $-1+5=4\\leq4$ ✓; $2+5=7\\leq7$ ✓.\n\nSchattenpreise: $y_1^*=7/3$, $y_2^*=5/3$. Check: $4\\cdot7/3+7\\cdot5/3=28/3+35/3=63/3=21$ ✓\n\n### (b) Graphisch\n\nGeraden: $-x_1+x_2=4$ und $2x_1+x_2=7$.\n\nEcken des zulässigen Bereichs:\n- $(0,0)$: $\\pi=0$\n- $(3{,}5,\\;0)$: $\\pi=3{,}5$\n- $(0,\\;4)$: $\\pi=16$\n- $(1,\\;5)$: $\\pi=21$ ← **Maximum**\n\nSchnittpunkt rechnerisch: $-x_1+x_2=4$ und $2x_1+x_2=7$. Subtraktion: $3x_1=3 \\Rightarrow x_1=1$, $x_2=5$ ✓.\n\n### (c) Duales LOP\n\n$A=\\begin{pmatrix}-1&1\\\\2&1\\end{pmatrix}$, $\\vec{b}=\\begin{pmatrix}4\\\\7\\end{pmatrix}$, $\\vec{c}=\\begin{pmatrix}1\\\\4\\end{pmatrix}$.\n\n$y_1,y_2\\geq0$:\n$$\\min\\; 4y_1+7y_2 \\quad \\text{u. d. NB: }$$\n$$-y_1+2y_2\\geq1,\\quad y_1+y_2\\geq4,\\quad y_1,y_2\\geq0$$\n\nOptimale duale Lösung: $y_1^*=7/3$, $y_2^*=5/3$. Probe: $-7/3+10/3=3/3=1\\geq1$ ✓; $7/3+5/3=4\\geq4$ ✓."
+    }
+  ]
+}

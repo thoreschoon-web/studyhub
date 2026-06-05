@@ -1,0 +1,417 @@
+{
+  "id": "kkt",
+  "subjectId": "mathe-2",
+  "title": "Optimierung unter Ungleichungsnebenbedingungen: Karush-Kuhn-Tucker (KKT)",
+  "summary": "Der Satz von Karush, Kuhn und Tucker (KKT) ist das zentrale Werkzeug zur Optimierung unter Ungleichungsnebenbedingungen. Er verallgemeinert die Lagrange-Methode: Stationarität, Komplementärschlupf, primale und duale Zulässigkeit erlauben eine systematische Fallunterscheidung zur Bestimmung aller Kandidaten. Klausur-Schwerpunktthema (Aufgabe 2, 14–17 Punkte).",
+  "order": 5,
+  "estMinutes": 90,
+  "sections": [
+    {
+      "id": "motivation",
+      "heading": "Warum brauchen wir KKT? Motivation und Grundidee",
+      "body": "Bei der **Lagrange-Methode** (Thema 3) hatten wir Gleichungsnebenbedingungen: $h(x,y)=c$. Der Punkt musste *genau auf* der Nebenbedingungskurve liegen.\n\nJetzt haben wir **Ungleichungsnebenbedingungen**: $g(x,y) \\leq b$. Der zulässige Bereich ist eine ganze Fläche, nicht nur eine Kurve. Das Optimum kann entweder\n- **im Inneren** des zulässigen Bereichs liegen (dann \"stört\" die Nebenbedingung nicht — sie ist **inaktiv**), oder\n- **am Rand** des zulässigen Bereichs (dann ist die Nebenbedingung **aktiv**, d.h. $g(x^*,y^*)=b$).\n\n**Anschauung:** Stell dir vor, du maximierst eine Funktion auf einer Landkarte, darfst aber nur in einem bestimmten Gebiet bleiben (z.B. $x^2+y^2 \\leq 4$, ein Kreis). Liegt das unbeschränkte Maximum *innerhalb* des Kreises? Dann ist die Kreisgrenze egal — du nimmst das unbeschränkte Maximum. Liegt es *außerhalb*? Dann weichst du ans Optimum *auf dem Kreisrand* aus.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Aktive vs. inaktive Nebenbedingung",
+          "body": "Sei $g_i(\\vec{x}^*) \\leq b_i$ eine Nebenbedingung im Optimalpunkt $\\vec{x}^*$:\n- **Aktiv (binding):** $g_i(\\vec{x}^*) = b_i$ — die Nebenbedingung ist genau ausgeschöpft. Der Punkt liegt auf dem Rand.\n- **Inaktiv (slack):** $g_i(\\vec{x}^*) < b_i$ — es ist noch Spielraum. Der Punkt liegt im Inneren."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "kkt-fig-aktiv",
+          "title": "Aktive vs. inaktive Nebenbedingung",
+          "caption": "Links: Optimum im Inneren (inaktiv, λ=0). Rechts: Optimum am Rand (aktiv, λ≥0).",
+          "code": "graph LR\n  A[\"Unbeschränktes Maximum\"] --> B{\"Liegt es im zulässigen Bereich?\"}\n  B -->|Ja| C[\"Inaktiv: g < b\\nλ = 0\\nNehme unbeschränktes Max\"]\n  B -->|Nein| D[\"Aktiv: g = b\\nλ ≥ 0\\nOptimum am Rand\"]"
+        }
+      ]
+    },
+    {
+      "id": "kkt-bedingungen",
+      "heading": "Die vier KKT-Bedingungen",
+      "body": "**Allgemeines Problem (Maximierung):**\n$$\\max f(x_1,\\dots,x_n) \\quad \\text{u.d.NB} \\quad g_i(\\vec{x}) \\leq b_i, \\; i=1,\\dots,m, \\quad x_j \\geq 0$$\n\n**Lagrange-Funktion für Ungleichungsprobleme:**\n$$L(\\vec{x},\\vec{\\lambda},\\vec{\\mu}) = f(\\vec{x}) - \\sum_{i=1}^{m} \\lambda_i [g_i(\\vec{x})-b_i] + \\sum_{j=1}^{n} \\mu_j x_j$$\n\nDie KKT-Bedingungen lauten dann an einem Kandidaten $\\vec{x}^*$:\n\n**(1) Stationarität:**\n$$\\frac{\\partial f}{\\partial x_j}(\\vec{x}^*) - \\sum_{i=1}^{m} \\lambda_i \\frac{\\partial g_i}{\\partial x_j}(\\vec{x}^*) + \\mu_j = 0 \\quad \\forall j$$\n\n**(2) Primale Zulässigkeit:**\n$$g_i(\\vec{x}^*) \\leq b_i \\quad \\forall i, \\qquad x_j^* \\geq 0 \\quad \\forall j$$\n\n**(3) Duale Zulässigkeit (Vorzeichenbedingung):**\n$$\\lambda_i \\geq 0 \\quad \\forall i, \\qquad \\mu_j \\geq 0 \\quad \\forall j$$\n\n**(4) Komplementärschlupf:**\n$$\\lambda_i \\cdot [g_i(\\vec{x}^*)-b_i] = 0 \\quad \\forall i, \\qquad \\mu_j \\cdot x_j^* = 0 \\quad \\forall j$$",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Was sagt der Komplementärschlupf?",
+          "body": "Für jede Nebenbedingung $g_i \\leq b_i$ muss gelten: $\\lambda_i \\cdot (g_i - b_i) = 0$. Das bedeutet:\n- Entweder $\\lambda_i = 0$ (NB inaktiv oder egal), oder\n- $g_i(\\vec{x}^*) = b_i$ (NB aktiv).\n\nEines von beidem muss immer gelten — **nie** können beide gleichzeitig von null verschieden sein.\n\nGenauso für Vorzeichenbedingungen: $\\mu_j \\cdot x_j^* = 0$: Entweder $\\mu_j=0$ (Variable $>0$, innere Lösung) oder $x_j^*=0$ (Variable an ihrer unteren Schranke)."
+        },
+        {
+          "kind": "warning",
+          "title": "Maximierung vs. Minimierung — Vorzeichen",
+          "body": "**Maximierung:** $\\lambda_i \\geq 0$ (wie oben). **Minimierung:** Umformen zu $\\max(-f)$, oder direkt KKT für Minimierung verwenden: Stationarität wird zu $\\frac{\\partial f}{\\partial x_j} + \\sum_i \\lambda_i \\frac{\\partial g_i}{\\partial x_j} - \\mu_j = 0$ mit $\\lambda_i \\geq 0$. In der Klausur wird meist direkt Minimierung formuliert — verwende die korrekte Vorzeichenregel für deinen Typ."
+        },
+        {
+          "kind": "info",
+          "title": "Constraint Qualification (LICQ)",
+          "body": "Der KKT-Satz gilt als **notwendige** Bedingung nur, wenn eine Regularitätsbedingung (CQ) erfüllt ist. Die in der Vorlesung verwendete **LICQ** (Linear Independence Constraint Qualification) verlangt: Die Gradienten aller **aktiven** Nebenbedingungen (einschließlich aktiver Vorzeichenbedingungen $x_j=0$) im Punkt $\\vec{x}^*$ sind linear unabhängig. Prüfe: Jacobi-Matrix der aktiven NB hat vollen Rang."
+        }
+      ]
+    },
+    {
+      "id": "fallunterscheidung",
+      "heading": "Systematische Fallunterscheidung — Schritt für Schritt",
+      "body": "Da wir a priori nicht wissen, welche Nebenbedingungen aktiv sind, unterscheiden wir **alle möglichen Kombinationen**. Für jede NB: entweder $\\lambda_i=0$ (inaktiv) oder $g_i=b_i$ (aktiv). Für jede Vorzeichenbedingung $x_j \\geq 0$: entweder $x_j>0$ (dann $\\mu_j=0$) oder $x_j=0$.\n\n**Kochrezept:**\n1. **Lagrange-Funktion** aufstellen: $L = f - \\sum \\lambda_i(g_i-b_i) + \\sum \\mu_j x_j$ (für Max).\n2. **Stationaritätsbedingungen** aufschreiben ($\\partial L/\\partial x_j = 0$).\n3. **Fallunterscheidung:** Welche NB sind aktiv? Für jede Kombination:\n   - Setze für inaktive NB: $\\lambda_i=0$. Löse Stationaritätssystem.\n   - Prüfe Konsistenz: alle $\\lambda_i \\geq 0$, alle $\\mu_j \\geq 0$, alle $g_i \\leq b_i$, alle $x_j \\geq 0$.\n   - **Widerspruch** → dieser Fall tritt nicht auf.\n4. **Überlebende Kandidaten** in $f$ einsetzen, Maximum/Minimum ablesen.\n5. **LICQ prüfen** — Gradienten der aktiven NB linear unabhängig?",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "kkt-fig-fallbaum",
+          "title": "KKT-Entscheidungsbaum (Beispiel: 1 NB g≤b, x,y≥0)",
+          "caption": "Systematische Fallunterscheidung für ein Problem mit einer Ungleichungs-NB und zwei Vorzeichenbedingungen.",
+          "code": "graph TD\n  S[\"Starte Fallunterscheidung\"] --> F1\n  F1[\"Fall A: λ=0 (g inaktiv)\"] --> FA1[\"Löse grad f + μ = 0\"]\n  FA1 --> FA2{\"g < b? λ=0≥0? μ≥0?\"}\n  FA2 -->|\"Ja, kein Widerspruch\"| FAok[\"Kandidat A ✓\"]\n  FA2 -->|\"Nein\"| FAno[\"Widerspruch ✗\"]\n  S --> F2\n  F2[\"Fall B: g=b (aktiv), x>0,y>0 → μx=μy=0\"] --> FB1[\"Löse Stationarität + g=b\"]\n  FB1 --> FB2{\"λ≥0? x,y>0?\"}\n  FB2 -->|\"Ja\"| FBok[\"Kandidat B ✓\"]\n  FB2 -->|\"Nein\"| FBno[\"Widerspruch ✗\"]\n  S --> F3\n  F3[\"Fall C: g=b, x=0 → μx frei, μy=0\"] --> FC1[\"Löse Stationarität + g=b + x=0\"]\n  FC1 --> FC2{\"λ≥0? μx≥0?\"}\n  FC2 -->|\"Ja\"| FCok[\"Kandidat C ✓\"]\n  FC2 -->|\"Nein\"| FCno[\"Widerspruch ✗\"]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Effizienz-Tipp für die Klausur",
+          "body": "Prüfe zuerst, ob das **unbeschränkte Extremum** (ohne alle NB) im zulässigen Bereich liegt. Wenn ja: $\\lambda_i=0$ für alle $i$ und du brauchst keine weitere Fallunterscheidung. Wenn nein: Versuche zuerst die wirtschaftlichste Aktivkombination und arbeite dich von dort weiter."
+        }
+      ]
+    },
+    {
+      "id": "beispiel-vollstaendig",
+      "heading": "Vollständig durchgerechnetes Beispiel",
+      "body": "**Problem:** Maximiere $f(x,y)=xy$ unter $g(x,y)=x^2+y^2-1 \\leq 0$ und $x,y \\geq 0$.\n\n**Schritt 1 — Lagrange-Funktion:**\n$$L = xy - \\lambda(x^2+y^2-1) + \\mu_x x + \\mu_y y$$\n\n**Schritt 2 — Stationaritätsbedingungen:**\n$$\\frac{\\partial L}{\\partial x} = y - 2\\lambda x + \\mu_x = 0 \\tag{I}$$\n$$\\frac{\\partial L}{\\partial y} = x - 2\\lambda y + \\mu_y = 0 \\tag{II}$$\n\n**Schritt 3 — Fallunterscheidung:**\n\n**Fall 1: $\\lambda=0$ (g inaktiv).** Aus (I): $y+\\mu_x=0$; da $y \\geq 0$ und $\\mu_x \\geq 0$ folgt $y=\\mu_x=0$. Aus (II): $x+\\mu_y=0 \\Rightarrow x=0$. Kandidat $(0,0)$: $f=0$. Randkandidat, prüfen ob besser möglich.\n\n**Fall 2: $g=b$, also $x^2+y^2=1$, $x>0,y>0$ ($\\mu_x=\\mu_y=0$):**\nAus (I): $y=2\\lambda x$; aus (II): $x=2\\lambda y$. Einsetzen: $x=2\\lambda \\cdot 2\\lambda x = 4\\lambda^2 x$. Da $x>0$: $4\\lambda^2=1 \\Rightarrow \\lambda=1/2 \\geq 0$ ✓.\nDann $y=2 \\cdot \\frac{1}{2} \\cdot x = x$. Mit $x^2+y^2=1$: $2x^2=1 \\Rightarrow x=y=\\frac{1}{\\sqrt{2}}$. $f=\\frac{1}{2}$. ✓\n\n**Fall 3: $g=b$, $x=0$:** $y^2=1 \\Rightarrow y=1$. $f=0$. Kein Gewinn.\n\n**Schritt 4 — Optimum:** $f\\left(\\frac{1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}\\right)=\\frac{1}{2}$ ist das Maximum.\n\n**LICQ:** Aktive NB: $g$ (aktiv). $\\nabla g = (2x,2y)=(\\sqrt{2},\\sqrt{2})$, Rang 1. LICQ erfüllt. ✓",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "kkt-fig-circle",
+          "title": "Höhenlinien von f=xy auf dem Einheitskreis",
+          "caption": "Höhenlinie f=1/2 berührt den Kreisrand genau bei (1/√2, 1/√2). Größere Werte liegen außerhalb des zulässigen Bereichs.",
+          "functions": [
+            { "fn": "sqrt(1-x*x)", "label": "Kreisrand x²+y²=1", "color": "#e74c3c" },
+            { "fn": "0.5/x", "label": "f=1/2 (Höhenlinie)", "color": "#3498db", "dashed": true }
+          ],
+          "domain": [0, 1],
+          "range": [0, 1.5],
+          "points": [
+            { "x": 0.7071, "y": 0.7071, "label": "Optimum (1/√2, 1/√2)" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimierung-gemischt",
+      "heading": "Minimierung und gemischte Nebenbedingungen",
+      "body": "**Minimierung:** $\\min f(\\vec{x})$ s.t. $g_i(\\vec{x}) \\leq b_i$, $x_j \\geq 0$.\n\nStrategie 1 — Umformen: $\\min f = \\max (-f)$, dann wie oben.\n\nStrategie 2 — KKT direkt für Minimierung (Vorzeichen beachten!):\n$$L_{\\min} = f(\\vec{x}) + \\sum_{i} \\lambda_i [g_i(\\vec{x})-b_i] - \\sum_j \\mu_j x_j$$\nStationarität: $\\frac{\\partial f}{\\partial x_j} + \\sum_i \\lambda_i \\frac{\\partial g_i}{\\partial x_j} - \\mu_j = 0$, $\\lambda_i \\geq 0$, $\\mu_j \\geq 0$.\n\n**Vorzeichenbedingung $g \\geq b$:** Umschreiben zu $-g \\leq -b$, dann wie Ungleichungs-NB behandeln.\n\n**Gleichungs-NB:** $h(\\vec{x})=c$ ist immer aktiv; ihr Multiplikator $\\mu$ hat kein Vorzeichen-Vorzeichen (kann positiv oder negativ sein).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Monotone Transformationen der Zielfunktion",
+          "body": "Ist die Zielfunktion eine **streng monoton wachsende** Transformation einer einfacheren Funktion — etwa $f(\\vec{x}) = e^{u(\\vec{x})}$ — dann gilt: $\\min e^{u} \\Leftrightarrow \\min u$. Man kann also zum einfacheren Exponenten $u$ wechseln und dort die KKT-Bedingungen aufstellen. Das spart Rechnung und Fehler."
+        }
+      ]
+    },
+    {
+      "id": "klausurtipps",
+      "heading": "Klausurstrategie und häufige Fehler",
+      "body": "**Typischer Klausuraufbau (Aufgabe 2, 14–16 Punkte):**\n- Lagrange-Funktion aufstellen (2 P.)\n- KKT-Bedingungen aufschreiben (3 P.)\n- Fallunterscheidung mit Begründung (5–7 P.)\n- Optimal- und Multiplikatorwerte angeben, LICQ prüfen (3–4 P.)\n- Antwortsatz (1 P.)\n\n**Häufige Fehler:**\n1. **Falsches Vorzeichen bei $\\lambda$:** Für Max ist $\\lambda_i \\geq 0$. Bei Min: gleiches Vorzeichen, aber Stationarität ändert sich. Konsistenz durch Probe prüfen!\n2. **Komplementärschlupf vergessen:** $\\lambda_i \\cdot (g_i - b_i) = 0$ muss explizit begründet werden.\n3. **Widerspruch nicht sauber begründen:** Schreibe explizit: \"Da $\\lambda < 0$, Widerspruch zu $\\lambda \\geq 0$.\" Kommentarlos durchrechnen gibt keine Punkte.\n4. **LICQ vergessen:** Jacobi-Matrix der aktiven Nebenbedingungen aufstellen und Rang angeben.\n5. **Kandidaten nicht in $f$ einsetzen:** Den Optimalwert explizit berechnen!\n6. **Antwortsatz vergessen:** \"Das Maximum beträgt ... und wird angenommen an der Stelle ...\""
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "kkt-fc-1",
+      "topicId": "kkt",
+      "front": "Was sind die vier KKT-Bedingungen für $\\max f$ s.t. $g_i \\leq b_i$, $x_j \\geq 0$?",
+      "back": "(1) **Stationarität:** $\\nabla f = \\sum \\lambda_i \\nabla g_i - \\vec{\\mu}$\\n(2) **Primale Zulässigkeit:** $g_i \\leq b_i$, $x_j \\geq 0$\\n(3) **Duale Zulässigkeit:** $\\lambda_i \\geq 0$, $\\mu_j \\geq 0$\\n(4) **Komplementärschlupf:** $\\lambda_i(g_i-b_i)=0$, $\\mu_j x_j=0$"
+    },
+    {
+      "id": "kkt-fc-2",
+      "topicId": "kkt",
+      "front": "Was bedeutet Komplementärschlupf $\\lambda_i(g_i(\\vec{x}^*)-b_i)=0$?",
+      "back": "Entweder ist $\\lambda_i=0$ (Nebenbedingung inaktiv, kein Einfluss) **oder** $g_i(\\vec{x}^*)=b_i$ (Nebenbedingung aktiv, Punkt am Rand). Beides gleichzeitig ist möglich, aber nie keines von beidem."
+    },
+    {
+      "id": "kkt-fc-3",
+      "topicId": "kkt",
+      "front": "Wann ist eine Nebenbedingung $g(x,y) \\leq b$ aktiv?",
+      "back": "Wenn $g(\\vec{x}^*) = b$, d.h. die Nebenbedingung ist exakt ausgeschöpft. Der Punkt liegt auf dem Rand des zulässigen Bereichs."
+    },
+    {
+      "id": "kkt-fc-4",
+      "topicId": "kkt",
+      "front": "Was besagt LICQ?",
+      "back": "Linear Independence Constraint Qualification: Die Gradienten aller **aktiven** Nebenbedingungen (und aktiver Vorzeichenbedingungen $x_j=0$) im Kandidatenpunkt sind **linear unabhängig**. Dann gilt KKT als notwendige Bedingung."
+    },
+    {
+      "id": "kkt-fc-5",
+      "topicId": "kkt",
+      "front": "Wie lautet die Strategie, wenn das unbeschränkte Extremum außerhalb des zulässigen Bereichs liegt?",
+      "back": "Dann muss mindestens eine Nebenbedingung **aktiv** sein ($g_i = b_i$, also $\\lambda_i > 0$). Setze $g_i = b_i$ und löse das Stationaritätssystem zusammen mit der aktiven NB."
+    },
+    {
+      "id": "kkt-fc-6",
+      "topicId": "kkt",
+      "front": "Wie behandelt man $\\min e^{u(\\vec{x})}$ als KKT-Aufgabe?",
+      "back": "Da $e^u$ streng monoton wächst: $\\min e^{u(\\vec{x})} \\Leftrightarrow \\min u(\\vec{x})$. KKT-Bedingungen für $\\min u$ aufstellen — das ist meist viel einfacher."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "kkt-q1",
+      "topicId": "kkt",
+      "difficulty": "leicht",
+      "prompt": "Welche Aussage über den Komplementärschlupf $\\lambda_i(g_i(\\vec{x}^*)-b_i)=0$ ist korrekt?",
+      "options": [
+        "Es muss immer $\\lambda_i=0$ gelten.",
+        "Es muss immer $g_i(\\vec{x}^*)=b_i$ gelten.",
+        "Entweder $\\lambda_i=0$ oder $g_i(\\vec{x}^*)=b_i$ (oder beides).",
+        "Es muss immer $\\lambda_i>0$ und $g_i(\\vec{x}^*)=b_i$ gelten."
+      ],
+      "correct": [2],
+      "explanation": "Komplementärschlupf bedeutet: Das Produkt ist null, also muss mindestens einer der beiden Faktoren null sein. Beide können null sein (aktive NB mit $\\lambda=0$ im entarteten Fall), aber nie keiner."
+    },
+    {
+      "kind": "truefalse",
+      "id": "kkt-q2",
+      "topicId": "kkt",
+      "difficulty": "leicht",
+      "prompt": "Für ein Maximierungsproblem mit $g(\\vec{x}) \\leq b$ muss der Lagrange-Multiplikator $\\lambda \\geq 0$ sein.",
+      "answer": true,
+      "explanation": "Ja. Bei Maximierung unter $g \\leq b$ ist $\\lambda \\geq 0$ die duale Zulässigkeitsbedingung. Ein $\\lambda < 0$ wäre ein Widerspruch und zeigt, dass der betrachtete Fall keine Lösung enthält."
+    },
+    {
+      "kind": "mc",
+      "id": "kkt-q3",
+      "topicId": "kkt",
+      "difficulty": "mittel",
+      "prompt": "Man will $f(x,y)=x^2+y^2$ minimieren unter $g=-x-y+1 \\leq 0$ und $x,y \\geq 0$. Das unbeschränkte Minimum liegt bei $(0,0)$. Ist $(0,0)$ zulässig?",
+      "options": [
+        "Ja, da $g(0,0)=-0-0+1=1 \\leq 0$.",
+        "Nein, da $g(0,0)=1 > 0$, also die Nebenbedingung verletzt.",
+        "Ja, da $x=y=0 \\geq 0$.",
+        "Das lässt sich ohne weiteres Rechnen nicht entscheiden."
+      ],
+      "correct": [1],
+      "explanation": "$g(0,0)=-0-0+1=1>0$ verletzt $g \\leq 0$. Der Punkt $(0,0)$ ist **nicht** zulässig. Das Minimum muss am Rand $-x-y+1=0$, d.h. $x+y=1$ liegen."
+    },
+    {
+      "kind": "numeric",
+      "id": "kkt-q4",
+      "topicId": "kkt",
+      "difficulty": "mittel",
+      "prompt": "Maximiere $f(x,y)=xy$ unter $x^2+y^2 \\leq 1$, $x,y \\geq 0$ (KKT). Wie groß ist das Maximum?",
+      "answer": 0.5,
+      "tolerance": 0.001,
+      "explanation": "Im Optimum $(1/\\sqrt{2}, 1/\\sqrt{2})$ gilt $f = \\frac{1}{\\sqrt{2}} \\cdot \\frac{1}{\\sqrt{2}} = \\frac{1}{2} = 0{,}5$. Der Kreisrand ist aktiv; $\\lambda = 1/2 \\geq 0$ ✓."
+    },
+    {
+      "kind": "numeric",
+      "id": "kkt-q5",
+      "topicId": "kkt",
+      "difficulty": "mittel",
+      "prompt": "Minimiere $f(x,y,z)=x-2y+4z+1$ unter $x^2+y^2+4z^2 \\leq 1$, $x,y,z \\geq 0$ (KKT). Wie groß ist das Minimum?",
+      "answer": -1,
+      "tolerance": 0.001,
+      "explanation": "Das Minimum liegt bei $(x^*,y^*,z^*)=(0,1,0)$: $f=0-2+0+1=-1$. Die Nebenbedingung $x^2+y^2+4z^2=1$ ist aktiv ($\\lambda=1$). Die Vorzeichenmultiplikatoren: $\\mu_x=1\\geq 0$, $\\mu_z=4\\geq 0$, $\\mu_y=0$ (da $y=1>0$)."
+    },
+    {
+      "kind": "numeric",
+      "id": "kkt-q6",
+      "topicId": "kkt",
+      "difficulty": "schwer",
+      "prompt": "Maximiere $f(x,y)=x^2+3x-y^3-4y+7$ unter $2x^3+y^2 \\leq 54$, $x,y \\geq 0$ (KKT). Wie groß ist das Maximum?",
+      "answer": 25,
+      "tolerance": 0.001,
+      "explanation": "Das Maximum liegt bei $(x^*,y^*)=(3,0)$: $f=9+9-0-0+7=25$. $g$ ist aktiv, $\\lambda_1=1/6$, $\\mu_y=4 \\geq 0$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "kkt-q7",
+      "topicId": "kkt",
+      "difficulty": "mittel",
+      "prompt": "Wenn eine Nebenbedingung $g_i(\\vec{x}^*) < b_i$ (strikt inaktiv) ist, dann muss $\\lambda_i = 0$ gelten.",
+      "answer": true,
+      "explanation": "Aus dem Komplementärschlupf $\\lambda_i(g_i-b_i)=0$: Ist $g_i-b_i < 0$ (strikt inaktiv), dann muss $\\lambda_i=0$ sein, damit das Produkt null wird."
+    },
+    {
+      "kind": "freetext",
+      "id": "kkt-q8",
+      "topicId": "kkt",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, was LICQ bedeutet und warum sie für den KKT-Satz benötigt wird.",
+      "sampleAnswer": "LICQ (Linear Independence Constraint Qualification) bedeutet, dass die Gradienten aller im Optimalpunkt aktiven Nebenbedingungen linear unabhängig sind. Sie wird benötigt, weil der KKT-Satz nur dann eine **notwendige** Bedingung liefert, wenn das Problem in geeigneter Weise regulär ist. Ohne LICQ könnte es Punkte geben, die Optima sind, aber keine KKT-Bedingungen erfüllen. LICQ stellt sicher, dass die KKT-Multiplikatoren eindeutig bestimmt sind.",
+      "keywords": ["linear unabhängig", "aktiv", "gradient", "notwendig", "regulär", "multiplikator"],
+      "explanation": "LICQ ist eine hinreichende Constraint Qualification. Bei Verletzung können KKT-Bedingungen trotzdem gelten (oder auch nicht) — die Theorie macht keine Aussage."
+    },
+    {
+      "kind": "mc",
+      "id": "kkt-q9",
+      "topicId": "kkt",
+      "difficulty": "schwer",
+      "prompt": "Sei $\\mu_j$ der KKT-Multiplikator zur Vorzeichenbedingung $x_j \\geq 0$ (für Maximierung). Welche Kombination ist **nicht** möglich?",
+      "options": [
+        "$x_j^* > 0$ und $\\mu_j = 0$",
+        "$x_j^* = 0$ und $\\mu_j > 0$",
+        "$x_j^* = 0$ und $\\mu_j = 0$",
+        "$x_j^* > 0$ und $\\mu_j > 0$"
+      ],
+      "correct": [3],
+      "explanation": "Komplementärschlupf: $\\mu_j \\cdot x_j^* = 0$. Ist $x_j^* > 0$, muss $\\mu_j = 0$ sein. Also ist $x_j^* > 0$ und $\\mu_j > 0$ **nicht** möglich."
+    },
+    {
+      "kind": "truefalse",
+      "id": "kkt-q10",
+      "topicId": "kkt",
+      "difficulty": "leicht",
+      "prompt": "Wenn das unbeschränkte Maximum einer Funktion $f$ im Inneren des zulässigen Bereichs liegt, dann sind alle $\\lambda_i = 0$ und der unbeschränkte Maximierer ist gleichzeitig die Lösung des Optimierungsproblems.",
+      "answer": true,
+      "explanation": "Liegt das unbeschränkte Maximum im zulässigen Bereich, ist es auch unter den Nebenbedingungen optimal. Alle Nebenbedingungen sind strikt inaktiv ($g_i < b_i$), also folgt aus dem Komplementärschlupf $\\lambda_i = 0$. Die Stationaritätsbedingungen reduzieren sich auf $\\nabla f = 0$, was die unbeschränkte Bedingung ist."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "kkt-ex-5-1",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.1",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Zeigen Sie, dass der Punkt $\\vec{a}^* = \\left(\\tfrac{1}{2}, \\tfrac{5}{4}\\right)$ die folgende Optimierungsaufgabe löst:\n$$f(x,y) = -x^2 + 2xy - y^2 + 4 \\to \\text{Max!}$$\n$$g_1(x,y) = x^2 - y + 1 \\leq 0, \\quad g_2(x,y) = x^2 - 2x + y - 4 \\leq 0, \\quad x,y \\geq 0$$",
+      "hint": "Bestimme, welche Nebenbedingungen aktiv sind, und prüfe dann alle vier KKT-Bedingungen. Beachte: $f(x,y)=-(x-y)^2+4$.",
+      "solution": "**Schritt 1 — Aktivität prüfen:**\n\n$$g_1\\!\\left(\\tfrac{1}{2},\\tfrac{5}{4}\\right) = \\tfrac{1}{4} - \\tfrac{5}{4} + 1 = 0 \\quad \\Rightarrow \\text{aktiv}$$\n$$g_2\\!\\left(\\tfrac{1}{2},\\tfrac{5}{4}\\right) = \\tfrac{1}{4} - 1 + \\tfrac{5}{4} - 4 = -\\tfrac{7}{2} < 0 \\quad \\Rightarrow \\text{inaktiv} \\Rightarrow \\lambda_2 = 0$$\n$$x = \\tfrac{1}{2} > 0 \\Rightarrow \\mu_x = 0, \\quad y = \\tfrac{5}{4} > 0 \\Rightarrow \\mu_y = 0$$\n\n**Schritt 2 — Lagrange-Funktion:**\n$$L = f - \\lambda_1(g_1 - 0) - \\lambda_2(g_2 - 0) + \\mu_x x + \\mu_y y$$\n\n**Schritt 3 — Stationaritätsbedingungen** (mit $\\lambda_2=\\mu_x=\\mu_y=0$):\n$$\\frac{\\partial L}{\\partial x} = -2x + 2y - \\lambda_1 \\cdot 2x = 0 \\tag{I}$$\n$$\\frac{\\partial L}{\\partial y} = 2x - 2y - \\lambda_1 \\cdot (-1) = 0 \\tag{II}$$\n\nAn $\\vec{a}^* = (\\tfrac{1}{2}, \\tfrac{5}{4})$:\n- (I): $-1 + \\tfrac{5}{2} - \\lambda_1 \\cdot 1 = \\tfrac{3}{2} - \\lambda_1 = 0 \\Rightarrow \\lambda_1 = \\tfrac{3}{2}$\n- (II): $1 - \\tfrac{5}{2} + \\lambda_1 = -\\tfrac{3}{2} + \\tfrac{3}{2} = 0$ ✓\n\n**Schritt 4 — KKT-Check:**\n- Stationarität: ✓ (gerade gezeigt)\n- Primale Zulässigkeit: $g_1=0\\leq0$, $g_2=-\\tfrac{7}{2}\\leq0$, $x,y>0$ ✓\n- Duale Zulässigkeit: $\\lambda_1=\\tfrac{3}{2}\\geq0$, $\\lambda_2=0\\geq0$ ✓\n- Komplementärschlupf: $\\lambda_1 \\cdot 0=0$ ✓, $\\lambda_2 \\cdot(-\\tfrac{7}{2})=0$ ✓\n\nAlle KKT-Bedingungen sind erfüllt. Da $f(x,y)=-(x-y)^2+4 \\leq 4$ und $f(\\vec{a}^*)=-(-\\tfrac{3}{4})^2+4=4-\\tfrac{9}{16}=\\tfrac{55}{16}$... warten — nochmals prüfen: $x-y=\\tfrac{1}{2}-\\tfrac{5}{4}=-\\tfrac{3}{4}$, also $f=-(\\tfrac{3}{4})^2+4=4-\\tfrac{9}{16}=\\tfrac{55}{16}$. LICQ prüfen: Aktive NB: $g_1$. $\\nabla g_1=(2x,-1)=(1,-1)$, Rang 1. LICQ erfüllt. ✓\n\n**Antwortsatz:** Der Punkt $\\vec{a}^*=(\\tfrac{1}{2},\\tfrac{5}{4})$ erfüllt alle KKT-Bedingungen und ist somit ein KKT-Punkt. Das Maximum beträgt $f(\\vec{a}^*)=\\tfrac{55}{16}$."
+    },
+    {
+      "id": "kkt-ex-5-2",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.2 [Klausuraufgabe]",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Minimieren Sie $f(x,y,z)=x-2y+4z+1$ unter der Nebenbedingung $h(x,y,z)=x^2+y^2+4z^2-1 \\leq 0$ und unter den Vorzeichenbedingungen $x,y,z \\geq 0$. Verwenden Sie den Satz von Karush, Kuhn und Tucker.",
+      "hint": "Für Minimierung lautet die Stationarität: $\\nabla f + \\lambda \\nabla h - \\vec{\\mu} = 0$ mit $\\lambda \\geq 0$. Überlege: $f$ ist linear, $-2y$ dominiert — also möglichst großes $y$.",
+      "solution": "**Schritt 1 — Intuition:** $f=x-2y+4z+1$ wird kleiner, wenn $y$ groß und $x,z$ klein sind. Da $x,z \\geq 0$: setze $x=z=0$. Dann lässt $h$: $y^2 \\leq 1 \\Rightarrow y \\leq 1$. Kandidat: $(0,1,0)$.\n\n**Schritt 2 — KKT für Minimierung** (Lagrange-Funktion: $L=f+\\lambda h - \\mu_x x - \\mu_y y - \\mu_z z$):\n\nStationarität:\n$$\\frac{\\partial f}{\\partial x} + \\lambda \\cdot 2x - \\mu_x = 0: \\quad 1 + 2\\lambda x - \\mu_x = 0 \\tag{I}$$\n$$\\frac{\\partial f}{\\partial y} + \\lambda \\cdot 2y - \\mu_y = 0: \\quad -2 + 2\\lambda y - \\mu_y = 0 \\tag{II}$$\n$$\\frac{\\partial f}{\\partial z} + \\lambda \\cdot 8z - \\mu_z = 0: \\quad 4 + 8\\lambda z - \\mu_z = 0 \\tag{III}$$\n\n**Schritt 3 — Kandidat $(0,1,0)$ prüfen:**\n\n$h(0,1,0) = 0+1+0-1 = 0$ → **aktiv** ($\\lambda > 0$ möglich).\n$x=0$: $\\mu_x$ frei; $y=1>0 \\Rightarrow \\mu_y=0$; $z=0$: $\\mu_z$ frei.\n\n(I) bei $x=0$: $1 + 0 - \\mu_x = 0 \\Rightarrow \\mu_x = 1 \\geq 0$ ✓\n(II) bei $y=1$, $\\mu_y=0$: $-2 + 2\\lambda - 0 = 0 \\Rightarrow \\lambda = 1 \\geq 0$ ✓\n(III) bei $z=0$: $4 + 0 - \\mu_z = 0 \\Rightarrow \\mu_z = 4 \\geq 0$ ✓\n\n**Schritt 4 — LICQ prüfen:**\nAktive Nebenbedingungen: $h$ (aktiv), $-x \\leq 0$ (aktiv da $x=0$), $-z \\leq 0$ (aktiv da $z=0$).\nGradienten:\n$$\\nabla h = (2x,2y,8z)\\big|_{(0,1,0)} = (0,2,0)$$\n$$\\nabla(-x) = (-1,0,0), \\quad \\nabla(-z) = (0,0,-1)$$\nJacobi-Matrix: $\\begin{pmatrix}0&2&0\\\\-1&0&0\\\\0&0&-1\\end{pmatrix}$, Rang $= 3$ ✓. LICQ erfüllt.\n\n**Antwortsatz:** Das Minimum beträgt $f(0,1,0) = 0-2+0+1 = \\mathbf{-1}$ und wird an der Stelle $(x^*,y^*,z^*)=(0,1,0)$ angenommen. Multiplikatoren: $\\lambda=1$, $\\mu_x=1$, $\\mu_y=0$, $\\mu_z=4$."
+    },
+    {
+      "id": "kkt-ex-5-3",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.3 [Klausuraufgabe]",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y,z) = x^2-x+2y^2+8y+z^2-2z+12 \\to \\text{Min!}$$\n$$g(x,y,z) = 6x^2+y^2-3 \\leq 0, \\quad x,y,z \\geq 0$$\nBestimmen Sie den Minimalwert, überprüfen Sie LICQ, und berechnen Sie alle Lagrange-Multiplikatoren.",
+      "hint": "Ergänze quadratisch: $f=(x-\\tfrac{1}{2})^2+2(y+2)^2+(z-1)^2+C$. Das unbeschränkte Minimum liegt bei $(\\tfrac{1}{2},-2,1)$. Was verletzt die Bedingungen?",
+      "solution": "**Schritt 1 — Quadratische Ergänzung:**\n$$f = \\left(x-\\tfrac{1}{2}\\right)^2 - \\tfrac{1}{4} + 2(y+2)^2 - 8 + (z-1)^2 - 1 + 12 = \\left(x-\\tfrac{1}{2}\\right)^2 + 2(y+2)^2 + (z-1)^2 + \\tfrac{11}{4}$$\n\nUnbeschränktes Minimum bei $x=\\tfrac{1}{2}$, $y=-2$, $z=1$. Aber $y=-2 < 0$ verletzt $y \\geq 0$ und $g(\\tfrac{1}{2},-2,1)=6\\cdot\\tfrac{1}{4}+4-3=\\tfrac{5}{2}>0$ verletzt $g \\leq 0$.\n\n**Schritt 2 — Stationarität** ($L = f + \\lambda g - \\mu_x x - \\mu_y y - \\mu_z z$):\n$$2x - 1 + 12\\lambda x - \\mu_x = 0 \\tag{I}$$\n$$4y + 8 + 2\\lambda y - \\mu_y = 0 \\tag{II}$$\n$$2z - 2 - \\mu_z = 0 \\tag{III}$$\n\n**Schritt 3 — Fallunterscheidung:**\n\n**(III) direkt:** $z=1 > 0 \\Rightarrow \\mu_z=0$. Aus (III): $2(1)-2-0=0$ ✓. Somit $z^*=1$ in allen Fällen.\n\n**Fall A: $g$ inaktiv ($\\lambda=0$), $y>0$ ($\\mu_y=0$):**\n(II): $4y+8=0 \\Rightarrow y=-2 < 0$. Widerspruch zu $y>0$. ✗\n\n**Fall B: $g$ inaktiv ($\\lambda=0$), $y=0$ ($\\mu_y$ frei):**\n(II): $0+8-\\mu_y=0 \\Rightarrow \\mu_y=8 \\geq 0$ ✓.\n(I): $2x-1-\\mu_x=0$, und $g(x,0,1)=6x^2-3\\leq 0 \\Rightarrow x \\leq \\tfrac{1}{\\sqrt{2}}$.\nZusätzlich: für $x>0$ ($\\mu_x=0$): $2x-1=0 \\Rightarrow x=\\tfrac{1}{2}$.\nPrüfe: $g(\\tfrac{1}{2},0,1)=6\\cdot\\tfrac{1}{4}-3=\\tfrac{3}{2}-3=-\\tfrac{3}{2} < 0$ ✓ (inaktiv bestätigt). $\\lambda=0 \\geq 0$ ✓.\n**Kandidat B:** $(\\tfrac{1}{2},0,1)$, $\\lambda=0$, $\\mu_x=0$, $\\mu_y=8$, $\\mu_z=0$. ✓\n\n**Fall C: $g$ aktiv ($6x^2+y^2=3$), $y>0$ ($\\mu_y=0$), $x>0$ ($\\mu_x=0$):**\n(II): $4y+8+2\\lambda y=0 \\Rightarrow \\lambda=-\\tfrac{4y+8}{2y}=-2-\\tfrac{4}{y}$. Da $y>0$: $\\lambda < -2 < 0$. Widerspruch zu $\\lambda \\geq 0$. ✗\n\n**Fall D: $g$ aktiv, $y=0$, $x>0$ ($\\mu_x=0$):** $6x^2=3 \\Rightarrow x=\\tfrac{1}{\\sqrt{2}}$.\n(I): $2\\cdot\\tfrac{1}{\\sqrt{2}}-1+12\\lambda\\cdot\\tfrac{1}{\\sqrt{2}}=0 \\Rightarrow \\lambda=-\\tfrac{\\sqrt{2}-1}{6\\sqrt{2}}\\cdot\\tfrac{1}{1}$. Numerisch: $\\lambda=-(\\tfrac{\\sqrt{2}-1}{6\\sqrt{2}})=\\tfrac{1-\\sqrt{2}}{6\\sqrt{2}}<0$. Widerspruch. ✗\n\n**Schritt 4 — Einziger Kandidat:** $(x^*,y^*,z^*)=(\\tfrac{1}{2},0,1)$.\n$$f\\!\\left(\\tfrac{1}{2},0,1\\right) = \\tfrac{1}{4}-\\tfrac{1}{2}+0+0+1-2+12 = \\tfrac{1}{4}-\\tfrac{1}{2}-1+12 = \\tfrac{43}{4} = 10{,}75$$\n\n**Schritt 5 — LICQ:** Aktive NB: nur $-y \\leq 0$ (da $y=0$). $\\nabla(-y)=(0,-1,0)$, Rang 1. LICQ erfüllt ✓.\n\n**Antwortsatz:** Das Minimum beträgt $f^* = \\dfrac{43}{4} = 10{,}75$, angenommen bei $(x^*,y^*,z^*)=\\left(\\dfrac{1}{2},0,1\\right)$. Multiplikatoren: $\\lambda=0$, $\\mu_x=0$, $\\mu_y=8$, $\\mu_z=0$."
+    },
+    {
+      "id": "kkt-ex-5-4",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.4 [Klausuraufgabe]",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y,z) = e^{-x^2-2x+(y+1)^2+z^2-4z+1} \\to \\text{Min!}$$\n$$g(x,y,z) = x^2+2y^2 \\leq 2, \\quad x,y,z \\geq 0$$",
+      "hint": "Da $e^u$ streng monoton wächst: $\\min f \\Leftrightarrow \\min u(x,y,z)=-x^2-2x+(y+1)^2+z^2-4z+1$. Ergänze quadratisch für alle Variablen.",
+      "solution": "**Schritt 1 — Monotonie-Vereinfachung:**\n$e^u$ ist streng monoton wachsend, also $\\min e^u \\Leftrightarrow \\min u$ wobei:\n$$u(x,y,z) = -x^2-2x+(y+1)^2+z^2-4z+1 = -(x+1)^2+1+(y+1)^2+(z-2)^2-4+1$$\n$$= -(x+1)^2 + (y+1)^2 + (z-2)^2 - 2$$\n\n**Schritt 2 — $z$-Variable:** $u$ in $z$: $(z-2)^2$ ist minimal bei $z=2>0$. In $g$: kein $z$. Also $z^*=2$, $\\mu_z=0$.\nStationarität für $z$: $\\frac{\\partial u}{\\partial z}+0-\\mu_z=2(z-2)-\\mu_z=0$. Bei $z=2$: $0=0$ ✓.\n\n**Schritt 3 — Für $x,y$:** Minimiere $h(x,y)=-(x+1)^2+(y+1)^2$ s.t. $x^2+2y^2 \\leq 2$, $x,y \\geq 0$.\nUm $u$ zu minimieren: $-(x+1)^2$ so negativ wie möglich (also $x$ groß) und $(y+1)^2$ so klein wie möglich (also $y$ klein, $y=0$).\n\nKandidat: $y=0$, $x$ maximal unter $x^2 \\leq 2 \\Rightarrow x = \\sqrt{2}$.\n\n**Schritt 4 — KKT für $\\min u$ s.t. $g \\leq 0$:**\n$$\\frac{\\partial u}{\\partial x}+\\lambda \\cdot 2x - \\mu_x = -2(x+1)+2\\lambda x - \\mu_x = 0 \\tag{I}$$\n$$\\frac{\\partial u}{\\partial y}+\\lambda \\cdot 4y - \\mu_y = 2(y+1)+4\\lambda y - \\mu_y = 0 \\tag{II}$$\n\nKandidat $(\\sqrt{2},0,2)$: $g(\\sqrt{2},0)=2+0-2=0$ → aktiv.\n$x=\\sqrt{2}>0 \\Rightarrow \\mu_x=0$; $y=0 \\Rightarrow \\mu_y$ frei.\n\n(I): $-2(\\sqrt{2}+1)+2\\lambda\\sqrt{2}=0 \\Rightarrow \\lambda = \\dfrac{\\sqrt{2}+1}{\\sqrt{2}} = 1 + \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}+1}{\\sqrt{2}} \\geq 0$ ✓\n\n(II): $2(0+1)+0-\\mu_y=0 \\Rightarrow \\mu_y=2 \\geq 0$ ✓\n\n**Schritt 5 — LICQ:** Aktive NB: $g$ (aktiv), $-y \\leq 0$ (aktiv). $\\nabla g=(2x,4y,0)=(2\\sqrt{2},0,0)$, $\\nabla(-y)=(0,-1,0)$. Rang der Matrix: 2. LICQ erfüllt ✓.\n\n**Schritt 6 — Minimalwert:**\n$$u(\\sqrt{2},0,2) = -(\\sqrt{2}+1)^2+(0+1)^2+(2-2)^2-2 = -(3+2\\sqrt{2})+1-2 = -4-2\\sqrt{2}$$\n$$f_{\\min} = e^{-4-2\\sqrt{2}}$$\n\n**Antwortsatz:** Das Minimum beträgt $f^* = e^{-4-2\\sqrt{2}} \\approx e^{-6{,}83}$, angenommen bei $(x^*,y^*,z^*)=(\\sqrt{2},0,2)$. Multiplikatoren: $\\lambda=\\dfrac{\\sqrt{2}+1}{\\sqrt{2}}$, $\\mu_x=0$, $\\mu_y=2$, $\\mu_z=0$."
+    },
+    {
+      "id": "kkt-ex-5-5",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.5 [Klausuraufgabe SoSe 18]",
+      "source": "Übungsblatt 5 (SoSe 2026) / Klausur SoSe 18",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y) = x^2+3x-y^3-4y+7 \\to \\text{Max!}$$\n$$g_1(x,y) = 2x^3+y^2-54 \\leq 0, \\quad x,y \\geq 0$$\nBestimmen Sie den Maximalwert und alle Lagrange-Multiplikatoren.",
+      "hint": "Betrachte $\\partial f/\\partial y = -3y^2-4 < 0$: $f$ ist immer fallend in $y$, also $y^*=0$. Dann bestimme das optimale $x$.",
+      "solution": "**Schritt 1 — Stationarität:**\n$$\\frac{\\partial f}{\\partial x} - \\lambda_1 \\frac{\\partial g_1}{\\partial x} + \\mu_x = 2x+3 - 6\\lambda_1 x^2 + \\mu_x = 0 \\tag{I}$$\n$$\\frac{\\partial f}{\\partial y} - \\lambda_1 \\frac{\\partial g_1}{\\partial y} + \\mu_y = -3y^2-4 - 2\\lambda_1 y + \\mu_y = 0 \\tag{II}$$\n\n**Schritt 2 — $y$-Analyse:** $\\frac{\\partial f}{\\partial y}=-3y^2-4 \\leq -4 < 0$ für alle $y \\geq 0$: $f$ fällt streng in $y$ \\Rightarrow $y^*=0$ (Minimum von $y$, Vorzeichenbedingung aktiv).\n\n**Schritt 3 — Fall $y=0$, $g_1$ inaktiv ($\\lambda_1=0$):**\n$g_1(x,0)=2x^3-54 \\leq 0 \\Rightarrow x \\leq 3$.\n$x>0 \\Rightarrow \\mu_x=0$. (I): $2x+3=0 \\Rightarrow x=-\\tfrac{3}{2} < 0$. Widerspruch zu $x \\geq 0$. ✗\n\n**Schritt 4 — Fall $y=0$, $g_1$ aktiv ($2x^3=54 \\Rightarrow x^3=27 \\Rightarrow x=3$), $x>0$ ($\\mu_x=0$):**\n(I): $2(3)+3-6\\lambda_1(9)=9-54\\lambda_1=0 \\Rightarrow \\lambda_1=\\tfrac{9}{54}=\\tfrac{1}{6} \\geq 0$ ✓\n(II) bei $y=0$: $-4+\\mu_y=0 \\Rightarrow \\mu_y=4 \\geq 0$ ✓\n\n**Schritt 5 — LICQ:** Aktive NB: $g_1$ und $-y \\leq 0$.\n$\\nabla g_1=(6x^2,2y)=(54,0)$, $\\nabla(-y)=(0,-1)$. Rang 2. LICQ erfüllt ✓.\n\n**Antwortsatz:** Das Maximum beträgt $f(3,0)=9+9-0-0+7=\\mathbf{25}$, angenommen bei $(x^*,y^*)=(3,0)$. Multiplikatoren: $\\lambda_1=\\tfrac{1}{6}$, $\\mu_x=0$, $\\mu_y=4$."
+    },
+    {
+      "id": "kkt-ex-5-6",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.6 [Klausuraufgabe SoSe 19]",
+      "source": "Übungsblatt 5 (SoSe 2026) / Klausur SoSe 19",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y) = x^2+3x+2y^2-8y-3 \\to \\text{Min!}$$\n$$g_1(x,y) = x^2 y \\leq 16, \\quad x,y \\geq 0$$\nBestimmen Sie den Minimalwert, überprüfen Sie LICQ, und berechnen Sie alle Lagrange-Multiplikatoren.",
+      "hint": "Ergänze quadratisch: $f=(x+\\frac{3}{2})^2+2(y-2)^2-\\frac{49}{4}$. Das unbeschränkte Minimum liegt bei $x=-\\frac{3}{2}$ (verletzt $x \\geq 0$) und $y=2$.",
+      "solution": "**Schritt 1 — Quadratische Ergänzung:**\n$$f = \\left(x+\\tfrac{3}{2}\\right)^2 - \\tfrac{9}{4} + 2(y-2)^2 - 8 - 3 = \\left(x+\\tfrac{3}{2}\\right)^2 + 2(y-2)^2 - \\tfrac{49}{4}$$\n\nUnbeschränktes Minimum bei $x=-\\tfrac{3}{2}$ (verletzt $x \\geq 0$!) und $y=2$.\n\n**Schritt 2 — Stationarität** (KKT für Min):\n$$2x+3+\\lambda_1 \\cdot 2xy - \\mu_x = 0 \\tag{I}$$\n$$4y-8+\\lambda_1 \\cdot x^2 - \\mu_y = 0 \\tag{II}$$\n\n**Schritt 3 — Fallunterscheidung:**\n\n**Fall A: $g_1$ inaktiv ($\\lambda_1=0$), $x>0$ ($\\mu_x=0$):**\n(I): $2x+3=0 \\Rightarrow x=-\\tfrac{3}{2} < 0$. Widerspruch. ✗\n\n**Fall B: $g_1$ inaktiv ($\\lambda_1=0$), $x=0$ ($\\mu_x$ frei):**\n(I): $0+3-\\mu_x=0 \\Rightarrow \\mu_x=3 \\geq 0$ ✓.\n(II) mit $x=0$: $4y-8-\\mu_y=0$. \n- Unterfall $y>0$ ($\\mu_y=0$): $4y=8 \\Rightarrow y=2$. $g_1(0,2)=0 \\leq 16$ ✓ (inaktiv ✓). $\\lambda_1=0 \\geq 0$ ✓.\n**Kandidat:** $(0,2)$, $f(0,2)=0+0+8-16-3=\\mathbf{-11}$. ✓\n\n**Schritt 4 — Keine weiteren Kandidaten:** Fall $g_1$ aktiv würde $x^2 y=16>0$ erfordern, also $x>0$. Dann (I): $2x+3+2\\lambda_1 xy=\\mu_x$. $x>0 \\Rightarrow \\mu_x=0$: $2x+3+2\\lambda_1 xy=0$. Da $x>0$, $y \\geq 0$, $\\lambda_1 \\geq 0$: linke Seite $\\geq 3 > 0$. Widerspruch. ✗\n\n**Schritt 5 — LICQ:** Aktive NB: $-x \\leq 0$ (da $x=0$). $\\nabla(-x)=(-1,0)$, Rang 1. LICQ erfüllt ✓.\n\n**Antwortsatz:** Das Minimum beträgt $f(0,2)=\\mathbf{-11}$, angenommen bei $(x^*,y^*)=(0,2)$. Multiplikatoren: $\\lambda_1=0$, $\\mu_x=3$, $\\mu_y=0$."
+    },
+    {
+      "id": "kkt-ex-5-7",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.7 (Zusatzaufgabe)",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "zusatzaufgabe",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Zeigen Sie mit KKT, dass $\\vec{a}^*=(\\tfrac{1}{2},\\tfrac{1}{2})$ Lösung von $f(x,y)=x^2+y^2 \\to \\text{Min!}$ unter $g=-x-y+1 \\leq 0$, $x,y \\geq 0$ ist. Fertigen Sie eine Skizze an.",
+      "solution": "**KKT-Check an $(\\frac{1}{2},\\frac{1}{2})$:**\n\n$g(\\frac{1}{2},\\frac{1}{2})=-\\frac{1}{2}-\\frac{1}{2}+1=0$ → **aktiv**. $x,y>0 \\Rightarrow \\mu_x=\\mu_y=0$.\n\nStationarität ($L_{\\min}=f+\\lambda g$): $\\nabla f + \\lambda \\nabla g = 0$:\n$$2x + \\lambda(-1)=0 \\Rightarrow 1-\\lambda=0 \\Rightarrow \\lambda=1$$\n$$2y + \\lambda(-1)=0 \\Rightarrow 1-1=0 \\checkmark$$\n$\\lambda=1 \\geq 0$ ✓. Komplementärschlupf: $1 \\cdot 0=0$ ✓. Primale Zulässigkeit ✓.\n\nAlle KKT-Bedingungen erfüllt. Minimalwert: $f(\\frac{1}{2},\\frac{1}{2})=\\frac{1}{4}+\\frac{1}{4}=\\frac{1}{2}$.\n\n**Geometrie:** Kreise $x^2+y^2=r^2$ (Höhenlinien) wachsen vom Ursprung nach außen. Der zulässige Bereich ist $\\{x+y \\geq 1, x,y \\geq 0\\}$ — das Dreieck oberhalb der Geraden $x+y=1$. Der kleinste Kreis, der den zulässigen Bereich berührt, trifft die Gerade genau im Punkt $(\\frac{1}{2},\\frac{1}{2})$ (dem Lotfußpunkt vom Ursprung)."
+    },
+    {
+      "id": "kkt-ex-5-8",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.8 (Zusatzaufgabe)",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Minimieren Sie $f(x,y)=x^2-y$ unter den Nebenbedingungen $x^2+y^2 \\leq 1$, $x,y \\geq 0$.",
+      "solution": "**Stationarität** ($L_{\\min}=f+\\lambda(x^2+y^2-1)$):\n$$2x+2\\lambda x-\\mu_x=0 \\Rightarrow 2x(1+\\lambda)=\\mu_x \\tag{I}$$\n$$-1+2\\lambda y-\\mu_y=0 \\tag{II}$$\n\n**Fall: $g$ aktiv ($x^2+y^2=1$), $x=0$:** $y^2=1 \\Rightarrow y=1$.\n(I): $0=\\mu_x \\geq 0$ ✓. (II): $-1+2\\lambda-\\mu_y=0$. $y=1>0 \\Rightarrow \\mu_y=0$: $\\lambda=\\frac{1}{2} \\geq 0$ ✓.\nKandidat $(0,1)$: $f=0-1=-1$.\n\n**Fall: $g$ inaktiv ($\\lambda=0$), $x>0$:** (I): $2x-\\mu_x=0 \\Rightarrow \\mu_x=2x>0$, aber $x>0 \\Rightarrow \\mu_x=0$. Widerspruch. ✗\n\n**Vergleich Randpunkte:** $(0,0)$: $f=0>-1$; $(1,0)$: $f=1>-1$. Minimum bei $(0,1)$.\n\n**Antwortsatz:** Minimum $f^*=-1$ bei $(x^*,y^*)=(0,1)$. $\\lambda=\\frac{1}{2}$, $\\mu_x=0$, $\\mu_y=0$."
+    },
+    {
+      "id": "kkt-ex-5-9",
+      "topicId": "kkt",
+      "label": "Übungsblatt 5, Aufgabe 5.9 (Zusatzaufgabe)",
+      "source": "Übungsblatt 5 (SoSe 2026)",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT: $f(x,y)=xy \\to \\text{Max!}$ unter $g(x,y)=x^2+y^2-1 \\leq 0$, $x,y \\geq 0$.",
+      "solution": "**Stationarität** (für Max: $L=f-\\lambda g+\\mu_x x+\\mu_y y$):\n$$y-2\\lambda x+\\mu_x=0 \\tag{I}$$\n$$x-2\\lambda y+\\mu_y=0 \\tag{II}$$\n\n**Fall: $g$ aktiv, $x>0$, $y>0$ ($\\mu_x=\\mu_y=0$):**\n(I): $y=2\\lambda x$, (II): $x=2\\lambda y$. Einsetzen: $x=2\\lambda \\cdot 2\\lambda x=4\\lambda^2 x$. Da $x>0$: $\\lambda=\\frac{1}{2} \\geq 0$ ✓.\nDann $y=x$. $x^2+y^2=1 \\Rightarrow 2x^2=1 \\Rightarrow x=y=\\frac{1}{\\sqrt{2}}$.\nKandidat: $f=\\frac{1}{2}$.\n\n**Randkandidaten** ($x=0$ oder $y=0$): $f=0 < \\frac{1}{2}$. Keine Verbesserung.\n\n**LICQ:** $\\nabla g=(2x,2y)=(\\sqrt{2},\\sqrt{2})$, Rang 1. LICQ ✓.\n\n**Antwortsatz:** Maximum $f^*=\\frac{1}{2}$ bei $(x^*,y^*)=\\left(\\frac{1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}\\right)$. $\\lambda=\\frac{1}{2}$, $\\mu_x=\\mu_y=0$."
+    },
+    {
+      "id": "kkt-ex-k17",
+      "topicId": "kkt",
+      "label": "Klausur SoSe 17, Aufgabe 4 (17 Punkte)",
+      "source": "Klausur SoSe 2017",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y) = -5x-3xy+2y^2-6y+3 \\to \\text{Min!}$$\n$$g_1(x,y) = x^3-8 \\leq 0, \\quad x,y \\geq 0$$\nBestimmen Sie den Minimalwert, überprüfen Sie LICQ, und berechnen Sie alle Lagrange-Multiplikatoren.",
+      "hint": "Untersuche $\\partial f/\\partial y=-3x+4y-6=0$ — für welche $x$ gibt es ein stationäres $y>0$? Ist $f$ in $x$ monoton?",
+      "solution": "**Stationarität** (KKT für Min, $L=f+\\lambda g_1-\\mu_x x-\\mu_y y$):\n$$\\frac{\\partial f}{\\partial x}+\\lambda \\cdot 3x^2-\\mu_x = -5-3y+3\\lambda x^2-\\mu_x=0 \\tag{I}$$\n$$\\frac{\\partial f}{\\partial y}+0-\\mu_y = -3x+4y-6-\\mu_y=0 \\tag{II}$$\n\n**Schritt 1 — $y$-Analyse:** (II) mit $y>0$ ($\\mu_y=0$): $y=\\frac{3x+6}{4}$.\nFür $x \\geq 0$: $y \\geq \\frac{6}{4}=\\frac{3}{2}>0$ ✓.\n\n**Schritt 2 — Einstellen in (I) für $x>0$ ($\\mu_x=0$), $g_1$ inaktiv ($\\lambda=0$):**\n$-5-3\\cdot\\frac{3x+6}{4}=0 \\Rightarrow -5-\\frac{9x+18}{4}=0 \\Rightarrow -20-9x-18=0 \\Rightarrow x=-\\frac{38}{9} < 0$. Widerspruch. ✗\n\n**Schritt 3 — $g_1$ aktiv ($x^3=8 \\Rightarrow x=2$), $x>0$ ($\\mu_x=0$):**\n$y=\\frac{3(2)+6}{4}=3$. Prüfe (II): $-6+12-6-\\mu_y=0 \\Rightarrow \\mu_y=0 \\geq 0$ ✓.\n(I): $-5-9+3\\lambda \\cdot 4=0 \\Rightarrow 12\\lambda=14 \\Rightarrow \\lambda=\\frac{7}{6} \\geq 0$ ✓.\n\nPrimale Zulässigkeit: $g_1(2)=0 \\leq 0$ ✓, $x=2\\geq0$, $y=3\\geq0$ ✓.\n\n**LICQ:** Aktive NB: $g_1$. $\\nabla g_1=(3x^2,0)=(12,0)$, Rang 1. LICQ ✓.\n\n**Antwortsatz:** Minimum $f(2,3)=-10-18+18-18+3=\\mathbf{-25}$, angenommen bei $(x^*,y^*)=(2,3)$. Multiplikatoren: $\\lambda=\\frac{7}{6}$, $\\mu_x=0$, $\\mu_y=0$."
+    },
+    {
+      "id": "kkt-ex-k20",
+      "topicId": "kkt",
+      "label": "Klausur SoSe 20, Aufgabe 2 (16 Punkte)",
+      "source": "Klausur SoSe 2020",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y) = x+x^2-2y-3y^3+4 \\to \\text{Max!}$$\n$$g_1(x,y) = x^2 \\leq 25, \\quad x,y \\geq 0$$\nBestimmen Sie den Maximalwert, überprüfen Sie LICQ, und berechnen Sie alle Lagrange-Multiplikatoren.",
+      "solution": "**Stationarität** (für Max):\n$$1+2x-2\\lambda_1 \\cdot 2x+\\mu_x=0 \\Rightarrow 1+2x(1-2\\lambda_1)+\\mu_x=0 \\tag{I}$$\n$$-2-9y^2+\\mu_y=0 \\tag{II}$$\n\n**Schritt 1 — $y$-Analyse:** (II): $\\mu_y=2+9y^2 \\geq 2 > 0$ für alle $y$. Komplementärschlupf: $\\mu_y \\cdot y=0 \\Rightarrow y=0$. Also $y^*=0$, $\\mu_y=2+0=2 \\geq 0$ ✓.\n\n**Schritt 2 — $g_1$ inaktiv ($\\lambda_1=0$):** (I) mit $x>0$ ($\\mu_x=0$): $1+2x=0 \\Rightarrow x=-\\frac{1}{2} < 0$. Widerspruch. ✗\n\n**Schritt 3 — $g_1$ aktiv ($x^2=25 \\Rightarrow x=5$), $x>0$ ($\\mu_x=0$):**\n(I): $1+10(1-2\\lambda_1)=0 \\Rightarrow 11-20\\lambda_1=0 \\Rightarrow \\lambda_1=\\frac{11}{20} \\geq 0$ ✓.\n\n**LICQ:** Aktive NB: $g_1$ und $-y \\leq 0$ (da $y=0$). $\\nabla g_1=(2x,0)=(10,0)$, $\\nabla(-y)=(0,-1)$. Rang 2. LICQ ✓.\n\n**Antwortsatz:** Maximum $f(5,0)=5+25-0-0+4=\\mathbf{34}$, angenommen bei $(x^*,y^*)=(5,0)$. Multiplikatoren: $\\lambda_1=\\frac{11}{20}$, $\\mu_x=0$, $\\mu_y=2$."
+    },
+    {
+      "id": "kkt-ex-k22",
+      "topicId": "kkt",
+      "label": "Klausur SoSe 22, Aufgabe 2 (16 Punkte)",
+      "source": "Klausur SoSe 2022",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y) = x^2+x-xy-4y^2-y+6 \\to \\text{Max!}$$\n$$g_1(x,y) = x^2+y^2 \\leq 16, \\quad x,y \\geq 0$$\nBestimmen Sie den Maximalwert, überprüfen Sie LICQ, und berechnen Sie alle Lagrange-Multiplikatoren.",
+      "solution": "**Stationarität** (für Max):\n$$2x+1-y-2\\lambda_1 x+\\mu_x=0 \\tag{I}$$\n$$-x-8y-1-2\\lambda_1 y+\\mu_y=0 \\tag{II}$$\n\n**Schritt 1 — $y$-Analyse:**\n**Annahme $y>0$ ($\\mu_y=0$):** (II): $-x-8y-1-2\\lambda_1 y=0 \\Rightarrow x=-8y-1-2\\lambda_1 y$. Da $x \\geq 0$, $y>0$, $\\lambda_1 \\geq 0$: $-8y-1-2\\lambda_1 y \\leq -8y-1 < 0$. Widerspruch zu $x \\geq 0$. ✗\n\nAlso $y=0$, $\\mu_y$ frei.\n\n**Schritt 2 — $y=0$:**\n(II): $-x-1+\\mu_y=0 \\Rightarrow \\mu_y=x+1 \\geq 1 > 0$ (für $x \\geq 0$). Komplementärschlupf $\\mu_y \\cdot y=0$ ✓.\n\n**Fall $g_1$ inaktiv ($\\lambda_1=0$), $x>0$ ($\\mu_x=0$):**\n(I): $2x+1=0 \\Rightarrow x=-\\frac{1}{2} < 0$. Widerspruch. ✗\n\n**Fall $g_1$ aktiv ($x^2=16 \\Rightarrow x=4$, da $y=0$), $x>0$ ($\\mu_x=0$):**\n(I): $8+1-2\\lambda_1 \\cdot 4=0 \\Rightarrow 9-8\\lambda_1=0 \\Rightarrow \\lambda_1=\\frac{9}{8} \\geq 0$ ✓.\n$\\mu_y=4+1=5 \\geq 0$ ✓.\n\n**LICQ:** Aktive NB: $g_1$ und $-y \\leq 0$. $\\nabla g_1=(2x,2y)=(8,0)$, $\\nabla(-y)=(0,-1)$. Rang 2. LICQ ✓.\n\n**Antwortsatz:** Maximum $f(4,0)=16+4-0-0-0+6=\\mathbf{26}$, angenommen bei $(x^*,y^*)=(4,0)$. Multiplikatoren: $\\lambda_1=\\frac{9}{8}$, $\\mu_x=0$, $\\mu_y=5$."
+    },
+    {
+      "id": "kkt-ex-k23",
+      "topicId": "kkt",
+      "label": "Klausur SoSe 23, Aufgabe 2 (16 Punkte)",
+      "source": "Klausur SoSe 2023",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lösen Sie mit KKT:\n$$f(x,y) = x^3+2x-y+12 \\to \\text{Max!}$$\n$$g_1(x,y) = x^2+y^2 \\leq 36, \\quad x,y \\geq 0$$\nBestimmen Sie den Maximalwert, überprüfen Sie LICQ, und berechnen Sie alle Lagrange-Multiplikatoren.",
+      "solution": "**Stationarität** (für Max):\n$$3x^2+2-2\\lambda_1 x+\\mu_x=0 \\tag{I}$$\n$$-1-2\\lambda_1 y+\\mu_y=0 \\tag{II}$$\n\n**Schritt 1 — $y$-Analyse:** $\\partial f/\\partial y=-1 < 0$ (fallend in $y$) → $y^*=0$.\n(II): $-1+\\mu_y=0 \\Rightarrow \\mu_y=1 \\geq 0$ ✓.\n\n**Schritt 2 — $y=0$, $g_1$ inaktiv ($\\lambda_1=0$):**\n$g_1(x,0)=x^2 \\leq 36$. (I): $3x^2+2+\\mu_x=0$. $x>0 \\Rightarrow \\mu_x=0$: $3x^2+2=0$ — keine reelle Lösung. ✗\nFür $x=0$: $2+\\mu_x=0 \\Rightarrow \\mu_x=-2 < 0$. ✗\n\n**Schritt 3 — $y=0$, $g_1$ aktiv ($x^2=36 \\Rightarrow x=6$), $x>0$ ($\\mu_x=0$):**\n(I): $3 \\cdot 36+2-2\\lambda_1 \\cdot 6=0 \\Rightarrow 110-12\\lambda_1=0 \\Rightarrow \\lambda_1=\\frac{110}{12}=\\frac{55}{6} \\geq 0$ ✓.\n\n**LICQ:** Aktive NB: $g_1$ und $-y \\leq 0$. $\\nabla g_1=(2x,2y)=(12,0)$, $\\nabla(-y)=(0,-1)$. Rang 2. LICQ ✓.\n\n**Antwortsatz:** Maximum $f(6,0)=216+12-0+12=\\mathbf{240}$, angenommen bei $(x^*,y^*)=(6,0)$. Multiplikatoren: $\\lambda_1=\\frac{55}{6}$, $\\mu_x=0$, $\\mu_y=1$."
+    }
+  ]
+}

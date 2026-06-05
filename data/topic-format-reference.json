@@ -1,0 +1,145 @@
+{
+  "id": "lagrange",
+  "subjectId": "mathe-2",
+  "title": "Lagrange-Multiplikatoren",
+  "summary": "Optimierung einer Zielfunktion unter Gleichungs-Nebenbedingungen – plus die Deutung von λ als Schattenpreis.",
+  "order": 2,
+  "estMinutes": 35,
+  "sections": [
+    {
+      "id": "worum",
+      "heading": "Worum geht es?",
+      "body": "Du willst $f(x,y)$ **maximieren oder minimieren**, darfst dich aber nur entlang einer **Nebenbedingung** $g(x,y)=0$ bewegen.\n\nGeometrisch berührt im Optimum die Höhenlinie von $f$ die Nebenbedingung – beide Gradienten sind **parallel**:\n$$\\nabla f(x,y) = \\lambda\\,\\nabla g(x,y)$$\nDie Zahl $\\lambda$ heißt **Lagrange-Multiplikator**."
+    },
+    {
+      "id": "lfunktion",
+      "heading": "Die Lagrange-Funktion",
+      "body": "Wir packen Ziel und Nebenbedingung in **eine** Funktion:\n$$L(x,y,\\lambda) = f(x,y) - \\lambda\\,g(x,y)$$\nSetzen wir alle partiellen Ableitungen null, erhalten wir die **notwendigen Bedingungen erster Ordnung**:\n$$L_x = f_x - \\lambda g_x = 0,\\quad L_y = f_y - \\lambda g_y = 0,\\quad L_\\lambda = -g(x,y) = 0$$\nDie letzte Gleichung bringt einfach die Nebenbedingung zurück.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kochrezept",
+          "body": "1. **Lagrange-Funktion** aufstellen: $L = f - \\lambda g$.\n2. Partiell ableiten nach $x$, $y$ und $\\lambda$, jeweils $=0$ setzen.\n3. Das Gleichungssystem lösen (oft: erste beiden Gleichungen → Verhältnis von $x,y$; dann in die Nebenbedingung einsetzen).\n4. Kandidaten in $f$ einsetzen und Max/Min identifizieren."
+        }
+      ]
+    },
+    {
+      "id": "beispiel",
+      "heading": "Beispiel: maximales Produkt bei fester Summe",
+      "body": "Maximiere $f(x,y)=x\\,y$ unter $g(x,y)=x+y-10=0$.\n\n**Bedingungen:** $f_x=y=\\lambda$ und $f_y=x=\\lambda$, also $x=y$. Eingesetzt in $x+y=10$ folgt $2x=10$, somit\n$$x^\\* = y^\\* = 5,\\qquad \\lambda = 5,\\qquad f_{\\max}=25.$$\n\nEntlang der Nebenbedingung gilt $y=10-x$, also $h(x)=x(10-x)$. Diese Parabel hat ihr Maximum genau bei $x=5$:",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "lag-fig-1",
+          "title": "Zielfunktion entlang der Nebenbedingung",
+          "caption": "h(x) = x·(10−x); Maximum bei x = 5 mit Wert 25.",
+          "functions": [{ "fn": "x*(10-x)", "label": "h(x) = x·(10−x)" }],
+          "domain": [0, 10],
+          "points": [{ "x": 5, "y": 25, "label": "Max (5, 25)" }]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Häufige Fehler",
+          "body": "• Das Vorzeichen bei $L = f - \\lambda g$ konsequent durchziehen.\n• Die Nebenbedingung ($L_\\lambda=0$) nicht vergessen – sie ist eine der Gleichungen.\n• Am Ende prüfen, ob der Kandidat ein **Maximum** oder **Minimum** ist (Werte vergleichen / Rand beachten)."
+        }
+      ]
+    },
+    {
+      "id": "schattenpreis",
+      "heading": "λ als Schattenpreis",
+      "body": "Der Multiplikator $\\lambda$ ist nicht nur Rechen-Hilfsgröße: Er misst, **wie stark sich der optimale Zielwert ändert**, wenn man die Nebenbedingung lockert.\n\nIst $V(c)$ der optimale Wert bei Nebenbedingung $x+y=c$, so gilt (Umhüllendensatz):\n$$\\frac{dV}{dc} = \\lambda.$$\nIm Beispiel: $V(c)=\\left(\\tfrac{c}{2}\\right)^2=\\tfrac{c^2}{4}$, also $V'(c)=\\tfrac{c}{2}=5$ bei $c=10$ – genau unser $\\lambda$.",
+      "callouts": [
+        {
+          "kind": "info",
+          "body": "Ökonomisch: $\\lambda$ ist der **Grenznutzen einer zusätzlichen Einheit der knappen Ressource** – der „Preis im Schatten\" der Nebenbedingung."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "lag-fc-1", "topicId": "lagrange", "front": "Wie lautet die Lagrange-Funktion zu $f$ unter $g=0$?", "back": "$L(x,y,\\lambda)=f(x,y)-\\lambda\\,g(x,y)$" },
+    { "id": "lag-fc-2", "topicId": "lagrange", "front": "Notwendige Bedingung 1. Ordnung (geometrisch)?", "back": "$\\nabla f=\\lambda\\,\\nabla g$ – die Gradienten sind parallel; zusätzlich gilt $g=0$." },
+    { "id": "lag-fc-3", "topicId": "lagrange", "front": "Was bedeutet der Lagrange-Multiplikator $\\lambda$ ökonomisch?", "back": "Schattenpreis: $\\frac{dV}{dc}=\\lambda$ – Änderung des Optimalwerts pro gelockerter Einheit der Nebenbedingung." },
+    { "id": "lag-fc-4", "topicId": "lagrange", "front": "Maximiere $xy$ unter $x+y=10$. Lösung?", "back": "$x=y=5$, $\\lambda=5$, Maximalwert $25$." }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "lag-q1",
+      "topicId": "lagrange",
+      "difficulty": "leicht",
+      "prompt": "Welche Funktion stellt man bei der Lagrange-Methode auf?",
+      "options": ["$L=f-\\lambda g$", "$L=f\\cdot g$", "$L=f+g$", "$L=\\nabla f-\\nabla g$"],
+      "correct": [0],
+      "explanation": "Die Lagrange-Funktion ist $L=f-\\lambda g$. Ihre stationären Punkte liefern die Kandidaten."
+    },
+    {
+      "kind": "mc",
+      "id": "lag-q2",
+      "topicId": "lagrange",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Gleichungen gehören zu den notwendigen Bedingungen 1. Ordnung? (Mehrfachauswahl)",
+      "options": ["$f_x-\\lambda g_x=0$", "$f_y-\\lambda g_y=0$", "$g(x,y)=0$", "$f(x,y)=0$"],
+      "correct": [0, 1, 2],
+      "multiple": true,
+      "explanation": "Die drei Bedingungen sind $L_x=0$, $L_y=0$ und $L_\\lambda=0$ (also $g=0$). $f=0$ gehört nicht dazu."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lag-q3",
+      "topicId": "lagrange",
+      "difficulty": "mittel",
+      "prompt": "Der Lagrange-Multiplikator $\\lambda$ kann auch negativ sein.",
+      "answer": true,
+      "explanation": "Ja – das Vorzeichen von $\\lambda$ hängt von Zielfunktion und Nebenbedingung ab und ist ökonomisch durchaus aussagekräftig."
+    },
+    {
+      "kind": "numeric",
+      "id": "lag-q4",
+      "topicId": "lagrange",
+      "difficulty": "mittel",
+      "prompt": "Maximiere $f(x,y)=xy$ unter $x+y=10$. Wie groß ist der maximale Funktionswert?",
+      "answer": 25,
+      "tolerance": 0.001,
+      "explanation": "$x=y=5 \\Rightarrow f=5\\cdot 5=25$."
+    },
+    {
+      "kind": "freetext",
+      "id": "lag-q5",
+      "topicId": "lagrange",
+      "difficulty": "schwer",
+      "prompt": "Beschreibe in eigenen Worten, warum im Optimum die Gradienten von $f$ und $g$ parallel sind.",
+      "keywords": ["höhenlinie", "gradient", "senkrecht", "nebenbedingung", "richtung"],
+      "sampleAnswer": "Bewegt man sich entlang der Nebenbedingung und $\\nabla f$ hätte eine Komponente in diese Richtung, könnte man $f$ noch verbessern – also ist man nicht optimal. Im Optimum steht $\\nabla f$ daher **senkrecht** auf der Nebenbedingung, genau wie $\\nabla g$. Zwei Vektoren senkrecht auf derselben Kurve sind parallel: $\\nabla f=\\lambda\\nabla g$.",
+      "explanation": "Kernidee: tangentiale Komponente von $\\nabla f$ muss im Optimum verschwinden, sonst ginge es besser."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "lag-ex-1",
+      "topicId": "lagrange",
+      "label": "Minimale Materialkosten (Dose)",
+      "source": "Übungsblatt (Mathe 2)",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Eine zylindrische Dose soll das Volumen $V=1000\\,\\text{cm}^3$ fassen. Minimiere die Oberfläche $O(r,h)=2\\pi r^2 + 2\\pi r h$ unter der Nebenbedingung $\\pi r^2 h = 1000$.",
+      "hint": "Nebenbedingung als $g(r,h)=\\pi r^2 h-1000=0$. Aus den ersten beiden Lagrange-Gleichungen ergibt sich ein einfaches Verhältnis zwischen $h$ und $r$.",
+      "solution": "**Lagrange-Funktion:** $L = 2\\pi r^2 + 2\\pi r h - \\lambda(\\pi r^2 h - 1000)$.\n\n**Ableitungen = 0:**\n$$L_r = 4\\pi r + 2\\pi h - \\lambda\\,2\\pi r h = 0$$\n$$L_h = 2\\pi r - \\lambda\\,\\pi r^2 = 0 \\;\\Rightarrow\\; \\lambda = \\frac{2}{r}$$\n\n**Einsetzen** von $\\lambda=2/r$ in $L_r$:\n$$4\\pi r + 2\\pi h - \\frac{2}{r}\\,2\\pi r h = 4\\pi r + 2\\pi h - 4\\pi h = 4\\pi r - 2\\pi h = 0 \\;\\Rightarrow\\; h = 2r.$$\n\n**Nebenbedingung:** $\\pi r^2(2r)=1000 \\Rightarrow r^3=\\dfrac{500}{\\pi} \\Rightarrow r=\\sqrt[3]{500/\\pi}\\approx 5{,}42\\,\\text{cm}$, also $h\\approx 10{,}84\\,\\text{cm}$.\n\n**Merke:** Die optimale Dose ist so hoch wie ihr Durchmesser ($h=2r$)."
+    },
+    {
+      "id": "lag-ex-2",
+      "topicId": "lagrange",
+      "label": "Nutzenmaximierung unter Budget",
+      "source": "Klausur-Typ (Mathe 2)",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Maximiere die Nutzenfunktion $U(x,y)=x^{0{,}5}y^{0{,}5}$ unter der Budgetrestriktion $2x+4y=40$.",
+      "hint": "Cobb-Douglas: das Verhältnis der Grenznutzen gleicht dem Preisverhältnis.",
+      "solution": "**Lagrange:** $L = x^{0{,}5}y^{0{,}5} - \\lambda(2x+4y-40)$.\n\n$$L_x = 0{,}5\\,x^{-0{,}5}y^{0{,}5} - 2\\lambda = 0,\\qquad L_y = 0{,}5\\,x^{0{,}5}y^{-0{,}5} - 4\\lambda = 0.$$\n\nDivision der beiden Gleichungen:\n$$\\frac{y}{x} = \\frac{2}{4} \\;\\Rightarrow\\; y = \\tfrac{1}{2}x.$$\n\n**Budget:** $2x + 4\\cdot\\tfrac{1}{2}x = 4x = 40 \\Rightarrow x^\\*=10,\\; y^\\*=5$.\n\nNutzen: $U=\\sqrt{10\\cdot 5}=\\sqrt{50}\\approx 7{,}07$."
+    }
+  ]
+}

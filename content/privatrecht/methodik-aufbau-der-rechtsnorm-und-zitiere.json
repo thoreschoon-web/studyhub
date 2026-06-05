@@ -1,0 +1,463 @@
+{
+  "id": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+  "subjectId": "privatrecht",
+  "title": "Methodik: Aufbau der Rechtsnorm und Zitieren (Methodikteil 2)",
+  "summary": "Jede Rechtsnorm hat denselben Grundaufbau: Tatbestand (Voraussetzungen) und Rechtsfolge (was passiert dann). Dieses Kapitel erklärt diesen Aufbau von Grund auf, zeigt die verschiedenen Arten von Normen (Anspruchsgrundlage, Hilfsnorm usw.) und lehrt, wie man Paragrafen in der Klausur korrekt zitiert – in der langen und der kurzen Variante.",
+  "order": 9,
+  "estMinutes": 40,
+  "sections": [
+    {
+      "id": "einfuehrung-warum-aufbau",
+      "heading": "Warum ist der Aufbau einer Norm wichtig?",
+      "body": "Stell dir vor, du willst herausfinden, ob du von jemandem Geld verlangen kannst. Du greifst ins BGB und liest einen Paragrafen – aber was bedeutet er eigentlich? Wie weißt du, ob er auf deinen Fall passt?\n\nDie Antwort liegt im **Aufbau der Rechtsnorm**. Jede Rechtsnorm funktioniert nach demselben Prinzip: Sie sagt, **wann** etwas gilt (Tatbestand) und **was dann** gilt (Rechtsfolge). Wer dieses Grundprinzip verstanden hat, kann jede Norm im BGB – und überhaupt jede Rechtsnorm – systematisch lesen und anwenden.\n\nDarüber hinaus musst du in der Klausur und in juristischen Texten Normen **präzise zitieren**. Falsche oder ungenaue Zitate gelten als handwerklicher Fehler. Dieses Kapitel zeigt dir beides: den Aufbau und das Zitieren.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Das Grundprinzip jeder Rechtsnorm",
+          "body": "**Wenn** der Tatbestand erfüllt ist → **dann** tritt die Rechtsfolge ein.\n\nBeispiel: § 433 Abs. 1 S. 1 BGB – **Wenn** ein Kaufvertrag geschlossen wird, **dann** muss der Verkäufer die Sache übergeben und übereignen."
+        }
+      ]
+    },
+    {
+      "id": "tatbestand-rechtsfolge",
+      "heading": "Tatbestand und Rechtsfolge: das Wenn-Dann-Prinzip",
+      "body": "## Was ist der Tatbestand?\n\nDer **Tatbestand** ist der \"Wenn\"-Teil einer Rechtsnorm. Er enthält alle **Voraussetzungen**, die vorliegen müssen, damit die Norm überhaupt Wirkung entfaltet. Man nennt diese Voraussetzungen **Tatbestandsmerkmale**.\n\nBeispiel § 823 Abs. 1 BGB (Schadensersatz bei unerlaubter Handlung):\n- jemand verletzt widerrechtlich ein geschütztes Rechtsgut (Leben, Körper, Eigentum …)\n- er handelt vorsätzlich oder fahrlässig\n- dadurch entsteht ein Schaden\n\nNur wenn **alle** diese Voraussetzungen vorliegen, greift die Norm.\n\n## Was ist die Rechtsfolge?\n\nDie **Rechtsfolge** ist der \"Dann\"-Teil. Sie sagt, welche rechtliche Konsequenz eintritt, wenn der Tatbestand erfüllt ist. Bei § 823 Abs. 1 BGB lautet die Rechtsfolge: Der Schädiger ist **zum Schadensersatz verpflichtet**.\n\nAuch die Rechtsfolge kann aus mehreren Teilen bestehen – sowohl kumulativ (mehrere Pflichten zugleich) als auch alternativ (Wahlmöglichkeiten).",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "m2-fig-wenn-dann",
+          "title": "Aufbau einer Rechtsnorm: Wenn-Dann-Prinzip",
+          "caption": "Jede Rechtsnorm besteht aus Tatbestand (Voraussetzungen) und Rechtsfolge (Konsequenz).",
+          "code": "graph LR\n    A[\"Tatbestand\\n(WENN alle Voraussetzungen vorliegen)\"] -->|\"==>\"| B[\"Rechtsfolge\\n(DANN tritt Wirkung ein)\"]\n    style A fill:#dbeafe,stroke:#2563eb\n    style B fill:#dcfce7,stroke:#16a34a"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: § 433 Abs. 2 BGB – Kaufpreiszahlung",
+          "body": "**Tatbestand (Wenn):** Ein Kaufvertrag ist wirksam geschlossen worden.\n\n**Rechtsfolge (Dann):** Der Käufer ist verpflichtet, dem Verkäufer den Kaufpreis zu zahlen und die Kaufsache abzunehmen.\n\nIn der Klausur prüfe ich also zuerst: Liegt ein wirksamer Kaufvertrag vor? Wenn ja, schuldet der Käufer den Kaufpreis."
+        }
+      ]
+    },
+    {
+      "id": "tatbestandsmerkmale-arten",
+      "heading": "Tatbestandsmerkmale: Einzel, kumulativ, alternativ, positiv, negativ",
+      "body": "## Einzahl oder Vielzahl?\n\nManche Tatbestände haben nur **ein einziges Merkmal**, andere haben **mehrere**. Wenn mehrere vorliegen, ist entscheidend, wie sie verknüpft sind:\n\n### Kumulative Tatbestandsmerkmale – alle müssen vorliegen\n\nKumulative Merkmale erkennst du an den Wörtern **'und'**, **'sowie'** oder dem bloßen Aufzählen ohne Verbindungswort. Es müssen **alle** Merkmale gleichzeitig erfüllt sein.\n\n**Beispiel § 823 Abs. 1 BGB:** Widerrechtliche Verletzung **und** Vorsatz oder Fahrlässigkeit **und** Schaden – nur wenn alle drei Blöcke vorliegen, entsteht der Schadensersatzanspruch.\n\n### Alternative Tatbestandsmerkmale – eines genügt\n\nAlternative Merkmale erkennst du am Wort **'oder'**. Es reicht, wenn **mindestens eines** der Merkmale erfüllt ist.\n\n**Beispiel § 119 Abs. 1 BGB** (Anfechtung wegen Irrtums): Der Erklärende irrt entweder über den **Inhalt** seiner Erklärung **oder** er hat sich beim **Erklären** versprochen/verschrieben. Beide Fälle führen zur gleichen Rechtsfolge.\n\n### Positiv und negativ gefasste Merkmale\n\nManche Tatbestandsmerkmale sind **positiv** formuliert: Sie müssen **vorliegen**, damit die Rechtsfolge eintritt. Andere sind **negativ** formuliert: Sie dürfen gerade **nicht** vorliegen.\n\n**Beispiel positiv:** § 929 S. 1 BGB – Einigung **und** Übergabe müssen vorliegen.\n\n**Beispiel negativ:** § 104 Nr. 1 BGB – Geschäftsunfähig ist, wer das 7. Lebensjahr **noch nicht vollendet hat** (Negation: kein Alter von 7+ Jahren).\n\n**Warum ist die Unterscheidung wichtig?**\nSie entscheidet über die **Beweislast**: Wer im Streit beweisen muss, dass ein Merkmal vorliegt (positiv) oder nicht vorliegt (negativ), trägt das Risiko, wenn der Beweis misslingt.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "m2-tab-tbm",
+          "title": "Übersicht: Arten von Tatbestandsmerkmalen",
+          "headers": [
+            "Art",
+            "Erkennungswort",
+            "Bedeutung",
+            "Beispiel"
+          ],
+          "rows": [
+            [
+              "kumulativ",
+              "\"und\", \"sowie\"",
+              "ALLE Merkmale müssen vorliegen",
+              "§ 823 I BGB: Verletzung + Verschulden + Schaden"
+            ],
+            [
+              "alternativ",
+              "\"oder\"",
+              "EIN Merkmal genügt",
+              "§ 119 I BGB: Inhalts- ODER Erklärungsirrtum"
+            ],
+            [
+              "positiv",
+              "(kein spezielles Wort)",
+              "Merkmal muss vorliegen",
+              "§ 929 S. 1 BGB: Einigung muss vorliegen"
+            ],
+            [
+              "negativ",
+              "\"nicht\", \"kein\", \"ohne\"",
+              "Merkmal darf nicht vorliegen",
+              "§ 104 Nr. 1 BGB: noch nicht 7 Jahre alt"
+            ]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Gemischte Tatbestände",
+          "body": "In einer einzigen Norm können kumulative und alternative Merkmale **gemischt** vorkommen. Lies immer genau, welche Merkmale durch \"und\" verbunden sind (kumulativ) und welche durch \"oder\" (alternativ). Im Zweifel hilft Auslegung."
+        }
+      ]
+    },
+    {
+      "id": "arten-rechtsfolgen",
+      "heading": "Was können Rechtsnormen bewirken? Rechtsgrundlagen und Hilfsnormen",
+      "body": "Nicht alle Rechtsnormen tun dasselbe. Die wichtigste Unterscheidung ist: Ist eine Norm eine **Rechtsgrundlage** (sie verleiht jemandem ein Recht) oder eine **Hilfsnorm** (sie hilft dabei, andere Normen anzuwenden)?\n\n## Rechtsgrundlagen\n\n### Anspruchsgrundlage\nEine **Anspruchsgrundlage** gibt einer Person das Recht, von einer anderen Person ein **Tun oder Unterlassen zu verlangen** (vgl. § 194 Abs. 1 BGB). Sie ist das wichtigste Werkzeug im Privatrecht.\n\nBeispiele: § 433 Abs. 1 S. 1 BGB (Übergabe und Übereignung), § 433 Abs. 2 BGB (Kaufpreiszahlung), § 823 Abs. 1 BGB (Schadensersatz).\n\n**In der Klausur:** Du suchst immer zuerst eine Anspruchsgrundlage. Die Frage lautet: \"Wer kann was von wem woraus verlangen?\"\n\n### Gestaltungsrecht\nEine Norm verleiht ein **Gestaltungsrecht**, wenn sie einer Person erlaubt, ein Rechtsverhältnis **einseitig zu verändern** – also ohne dass die andere Partei zustimmen muss.\n\nBeispiel: § 142 Abs. 1 BGB (Anfechtung) – durch einseitige Anfechtungserklärung wird das Rechtsgeschäft rückwirkend nichtig.\n\n### Eingriffsgrundlage (vor allem Öffentliches Recht)\nIm öffentlichen Recht erlaubt eine **Eingriffsgrundlage** dem Staat, in Rechte von Bürgern einzugreifen. Beispiel: § 11 NPOG (polizeiliche Maßnahmen). Im Privatrecht spielt dieser Begriff eine geringere Rolle.\n\n## Hilfsnormen\n\nHilfsnormen (manchmal auch 'unvollständige Rechtssätze' genannt) sind Normen, die keine eigene Rechtsgrundlage darstellen, aber dabei helfen, Rechtsgrundlagen **anzuwenden oder einzuschränken**.\n\n| Hilfsnormtyp | Was tut sie? | Beispiel |\n|---|---|---|\n| **Legaldefinition** | Der Gesetzgeber erklärt selbst, was ein Begriff bedeutet | § 90 BGB (Was ist eine Sache?) |\n| **Gegenrecht** | Schränkt einen bestehenden Anspruch ein oder lässt ihn erlöschen | § 362 BGB (Erfüllung: Anspruch erlischt) |\n| **Verbot/Gebot** | Schreibt ein Verhalten vor oder verbietet es | § 134 BGB (Verstoß gegen gesetzliches Verbot) |\n| **Zuweisungsnorm** | Ordnet ein Recht einer bestimmten Person zu | § 948 BGB (Eigentum bei Vermischung) |\n| **Verweisungsnorm** | Verweist auf eine andere Norm | § 412 BGB (gesetzlicher Forderungsübergang i.V.m. §§ 398 ff. BGB) |\n| **Zuständigkeits-/Verfahrens-/Formvorschrift** | Regelt, wie und durch wen etwas zu tun ist | § 126 BGB (Schriftform) |\n\n### Verweisungsnormen genauer: Rechtsgrund- vs. Rechtsfolgenverweis\n\n- **Rechtsgrundverweis:** Der Verweis übernimmt sowohl Tatbestand als auch Rechtsfolge der Zielnorm. Die Voraussetzungen der Zielnorm müssen vollständig geprüft werden.\n- **Rechtsfolgenverweis:** Nur die Rechtsfolge der Zielnorm wird übernommen, der Tatbestand ist ein anderer.\n\nBeispiel: § 490 Abs. 2 S. 3 BGB verweist \"entsprechend\" auf § 346 ff. BGB – das ist ein Rechtsgrundverweis, der Anpassungen erlaubt.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "m2-fig-rechtsfolgen",
+          "title": "Arten von Rechtsfolgen im Überblick",
+          "caption": "Rechtsnormen teilen sich in Rechtsgrundlagen und Hilfsnormen auf.",
+          "code": "graph TD\n    A[\"Arten von Rechtsfolgen\"] --> B[\"Rechtsgrundlagen\"]\n    A --> C[\"Hilfsnormen\"]\n    B --> D[\"Anspruchsgrundlage\\n(z.B. § 433 BGB)\"]\n    B --> E[\"Gestaltungsrecht\\n(z.B. § 142 BGB)\"]\n    B --> F[\"Eingriffsgrundlage\\n(z.B. § 11 NPOG)\"]\n    C --> G[\"Legaldefinition\\n(z.B. § 90 BGB)\"]\n    C --> H[\"Gegenrechte\\n(z.B. § 362 BGB)\"]\n    C --> I[\"Verbot/Gebot\\n(z.B. § 134 BGB)\"]\n    C --> J[\"Zuweisungsnorm\\n(z.B. § 948 BGB)\"]\n    C --> K[\"Verweisungsnorm\"]\n    C --> L[\"Zuständigkeits-/\\nVerfahrens-/Formvorschrift\\n(z.B. § 126 BGB)\"]\n    style A fill:#fef9c3,stroke:#ca8a04\n    style B fill:#dbeafe,stroke:#2563eb\n    style C fill:#fce7f3,stroke:#db2777"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Anspruchsgrundlage – Definition",
+          "body": "Eine **Anspruchsgrundlage** ist eine Rechtsnorm, deren Rechtsfolge es einer Person (Anspruchssteller) erlaubt, von einer anderen Person (Anspruchsgegner) ein bestimmtes **Tun oder Unterlassen** zu verlangen (§ 194 Abs. 1 BGB).\n\nMerkformel: Wer kann **was** von **wem** **woraus** verlangen?"
+        },
+        {
+          "kind": "info",
+          "title": "Hilfsnormen sind nicht weniger wichtig!",
+          "body": "Hilfsnormen klingen nach \"Nebensache\" – sind es aber nicht. Ohne Legaldefinitionen wüssten wir nicht, was ein Begriff bedeutet. Ohne Gegenrechte (z.B. Erfüllung) gäbe es keine Möglichkeit, Ansprüche zum Erlöschen zu bringen. Hilfsnormen sind das Werkzeug, mit dem Rechtsgrundlagen überhaupt sinnvoll angewendet werden können."
+        }
+      ]
+    },
+    {
+      "id": "zitieren-rechtsnormen",
+      "heading": "Rechtsnormen korrekt zitieren: lange und kurze Variante",
+      "body": "## Warum genau zitieren?\n\nEin Artikel oder Paragraf im Gesetz enthält oft **mehrere Rechtsnormen** – verteilt auf verschiedene Absätze, Sätze und Nummern. § 433 BGB allein enthält mindestens vier verschiedene Rechtsnormen. Wenn du nur schreibst \"§ 433 BGB\", ist unklar, welche davon du meinst. Deshalb muss immer **genau** angegeben werden, welcher Absatz, welcher Satz, welche Nummer gemeint ist.\n\n## Die zwei Zitiervarianten\n\nEs gibt eine **Langversion** (für Hausarbeiten, Gutachten, schriftliche Ausarbeitungen) und eine **Kurzversion** (für Lösungsskizzen und Klausuren). **Wichtig:** Nie beide Varianten in einem Text mischen!\n\n### Der entscheidende Unterschied: Absätze\n\nAbsätze (im Gesetz erkennbar an der eingeklammerten Zahl, z.B. **(2)**) werden in den beiden Varianten unterschiedlich dargestellt:\n- **Langversion:** Ausgeschrieben als \"Abs. 2\"\n- **Kurzversion:** Als römische Zahl \"II\"\n\n### Sätze\n\nSätze (im Gesetz erkennbar an einer hochgestellten Ziffer) werden in der Langversion mit \"S. 2\" angegeben. In der Kurzversion ebenfalls mit einer arabischen Zahl – **aber Achtung:** Wenn kein Absatz vorhanden ist, muss auch in der Kurzversion \"S.\" geschrieben werden, um Verwechslungen zu vermeiden!\n\n### Nummern, Buchstaben, Alternativen\n\n- **Nummer** (\"Nr.\"): Wird in beiden Varianten gleich geschrieben: \"Nr. 1\"\n- **Buchstabe** (\"lit.\" / als Klammer): Langversion \"lit. c\", Kurzversion \"c)\" – **aber** nach Nummern kann der Buchstabe direkt angefügt werden ohne Missverständnis\n- **Alternative** (\"Alt.\"): z.B. § 119 Abs. 1 Alt. 1 BGB / § 119 I Alt. 1 BGB\n- **Variante** (\"Var.\"): z.B. § 242 Var. 2 BGB\n- **Halbsatz** (\"Hs.\"): z.B. § 154 Abs. 1 S. 1 Hs. 1 BGB\n\n### Mehrere Paragrafen\n\nWenn mehrere Paragrafen zusammen eine Regelung bilden, zitierst du sie mit **§§** (Plural): z.B. §§ 145 ff. BGB (§ 145 und die folgenden Normen zum Vertragsschluss).\n\n### Verweisungsnormen: i.V.m.\n\nWenn eine Norm nur zusammen mit einer anderen Norm funktioniert (Verweis), zitierst du beide **'in Verbindung mit'** (Abkürzung: **i.V.m.**).\n\nBeispiel: § 280 Abs. 1 i.V.m. § 241 Abs. 2 BGB (Schadensersatz wegen Nebenpflichtverletzung).\n\nDie Reihenfolge beim i.V.m.-Zitat wird unterschiedlich gehandhabt; üblich ist: zuerst die Norm, aus der die Rechtsfolge folgt, dann die Verweisungsnorm.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "m2-tab-zitieren",
+          "title": "Zitierweise im Vergleich: lang vs. kurz",
+          "headers": [
+            "Element",
+            "Langversion",
+            "Kurzversion",
+            "Hinweis"
+          ],
+          "rows": [
+            [
+              "Artikel",
+              "Art. 17 GG",
+              "Art. 17 GG",
+              "Beide gleich"
+            ],
+            [
+              "Paragraf",
+              "§ 1 BGB",
+              "§ 1 BGB",
+              "Beide gleich"
+            ],
+            [
+              "Absatz",
+              "§ 92 Abs. 2 BGB",
+              "§ 92 II BGB",
+              "Lang: Abs. / Kurz: röm. Zahl"
+            ],
+            [
+              "Satz (mit Abs.)",
+              "Art. 5 Abs. 1 S. 2 GG",
+              "Art. 5 I 2 GG",
+              "Kurz: Satz als arabische Zahl nach Abs."
+            ],
+            [
+              "Satz (ohne Abs.)",
+              "§ 111 S. 2 BGB",
+              "§ 111 S. 2 BGB",
+              "Auch in Kurzversion mit 'S.' (Verwechslungsgefahr!)"
+            ],
+            [
+              "Nummer",
+              "§ 104 Nr. 1 BGB",
+              "§ 104 Nr. 1 BGB",
+              "Beide gleich"
+            ],
+            [
+              "Buchstabe",
+              "§ 309 Nr. 1 lit. c BGB",
+              "§ 309 Nr. 1 c) BGB",
+              "Nach Nummern direkt anfügbar"
+            ],
+            [
+              "Alternative",
+              "§ 119 Abs. 1 Alt. 1 BGB",
+              "§ 119 I Alt. 1 BGB",
+              "\"Alt.\" wird nicht abgekürzt"
+            ],
+            [
+              "Mehrere §§",
+              "§§ 145 ff. BGB",
+              "§§ 145 ff. BGB",
+              "Beide gleich"
+            ],
+            [
+              "Verweis",
+              "§ 280 Abs. 1 i.V.m. § 241 Abs. 2 BGB",
+              "§ 280 I i.V.m. § 241 II BGB",
+              "i.V.m. bleibt immer gleich"
+            ]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Nicht mischen!",
+          "body": "Schreibe in einer Ausarbeitung entweder **durchgehend** die Langversion oder **durchgehend** die Kurzversion. Ein Wechsel zwischen beiden Systemen im selben Text ist ein handwerklicher Fehler."
+        },
+        {
+          "kind": "tip",
+          "title": "Klausur-Tipp: Kurzversion spart Zeit",
+          "body": "In der Klausur ist die Kurzversion erlaubt und spart wertvolle Zeit. Statt \"§ 433 Absatz 2 Bürgerliches Gesetzbuch\" schreibst du einfach \"§ 433 II BGB\". Das ist vollständig korrekt und deutlich schneller."
+        },
+        {
+          "kind": "info",
+          "title": "Zitieren bedeutet nicht: wörtlich wiedergeben",
+          "body": "Wenn du eine Rechtsnorm zitierst (z.B. § 433 II BGB), musst du sie **nicht** wörtlich abschreiben. Das wäre nur nötig, wenn du den genauen Wortlaut intensiv auslegst – was in dieser Veranstaltung grundsätzlich nicht erforderlich ist. Zitieren heißt: die Norm **benennen**, nicht abschreiben."
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung-und-uebersicht",
+      "heading": "Zusammenfassung: Alles auf einen Blick",
+      "body": "## Der rote Faden\n\nIn der Klausur gehst du immer nach demselben Schema vor:\n\n1. **Anspruchsgrundlage finden** – welche Norm gibt meinem Mandanten das Recht, etwas zu verlangen?\n2. **Tatbestand prüfen** – liegen alle Tatbestandsmerkmale vor? Kumulativ: alle? Alternativ: mindestens eines?\n3. **Hilfsnormen heranziehen** – Legaldefinitionen für unklare Begriffe, Gegenrechte des Gegners, Verweisungen beachten\n4. **Rechtsfolge benennen** – was folgt daraus?\n5. **Alles mit §§ belegen** – präzise in der langen oder kurzen Variante\n\n## Wichtige BGB-Normen und ihre Einordnung\n\n| Norm | Typ | Inhalt |\n|---|---|---|\n| § 433 Abs. 1 S. 1 BGB | Anspruchsgrundlage | Anspruch auf Übergabe und Übereignung |\n| § 433 Abs. 2 BGB | Anspruchsgrundlage | Anspruch auf Kaufpreiszahlung |\n| § 823 Abs. 1 BGB | Anspruchsgrundlage | Schadensersatz bei unerlaubter Handlung |\n| § 142 Abs. 1 BGB | Gestaltungsrecht | Nichtigkeit durch Anfechtung |\n| § 362 Abs. 1 BGB | Hilfsnorm (Gegenrecht) | Erlöschen durch Erfüllung |\n| § 90 BGB | Hilfsnorm (Legaldefinition) | Begriff der Sache |\n| § 194 Abs. 1 BGB | Hilfsnorm (Legaldefinition) | Begriff des Anspruchs |\n| § 126 BGB | Hilfsnorm (Formvorschrift) | Schriftform |\n| §§ 145 ff. BGB | Anspruchsgrundlagen | Vertragsschluss (Angebot und Annahme) |",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die drei Kernfragen zu jeder Rechtsnorm",
+          "body": "1. **Was ist der Tatbestand?** (Wenn-Teil: welche Voraussetzungen?)\n2. **Was ist die Rechtsfolge?** (Dann-Teil: was passiert?)\n3. **Was für eine Norm ist es?** (Anspruchsgrundlage, Gestaltungsrecht, Hilfsnorm?)"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "m2-fc-1",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Aus welchen zwei Teilen besteht jede Rechtsnorm?",
+      "back": "**Tatbestand** (Wenn-Teil: Voraussetzungen) und **Rechtsfolge** (Dann-Teil: rechtliche Konsequenz). Wenn alle Tatbestandsmerkmale vorliegen, tritt die Rechtsfolge ein."
+    },
+    {
+      "id": "m2-fc-2",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist der Unterschied zwischen kumulativen und alternativen Tatbestandsmerkmalen?",
+      "back": "**Kumulativ** (\"und\"): Alle Merkmale müssen vorliegen.\n**Alternativ** (\"oder\"): Es genügt, wenn mindestens eines vorliegt."
+    },
+    {
+      "id": "m2-fc-3",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist eine Anspruchsgrundlage?",
+      "back": "Eine Rechtsnorm, deren Rechtsfolge es einer Person erlaubt, von einer anderen ein **Tun oder Unterlassen** zu verlangen (§ 194 Abs. 1 BGB). In der Klausur immer zuerst finden: Wer will was von wem woraus?"
+    },
+    {
+      "id": "m2-fc-4",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist eine Hilfsnorm? Nenne drei Beispiele.",
+      "back": "Eine Norm, die dabei hilft, Rechtsgrundlagen anzuwenden. Beispiele:\n- **Legaldefinition** (§ 90 BGB: Begriff Sache)\n- **Gegenrecht** (§ 362 BGB: Erfüllung)\n- **Verweisungsnorm** (verweist auf andere Norm)"
+    },
+    {
+      "id": "m2-fc-5",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Wie zitiert man § 92 Absatz 2 BGB in der Kurzversion?",
+      "back": "§ 92 **II** BGB – der Absatz wird als römische Zahl dargestellt."
+    },
+    {
+      "id": "m2-fc-6",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Warum muss ein Satz ohne Absatz auch in der Kurzversion mit \"S.\" angegeben werden?",
+      "back": "Um **Verwechslungen** zu vermeiden: Ohne \"S.\" könnte eine arabische Zahl fälschlicherweise als Absatz oder als Buchstabe eines anderen Paragrafen interpretiert werden. Beispiel: § 111 S. 2 BGB (nicht: § 111 2 BGB)."
+    },
+    {
+      "id": "m2-fc-7",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was bedeutet \"i.V.m.\" beim Zitieren?",
+      "back": "\"In Verbindung mit\" – wird verwendet, wenn zwei Normen zusammen eine Rechtsgrundlage bilden oder wenn eine Verweisungsnorm auf eine andere verweist. Beispiel: § 280 Abs. 1 i.V.m. § 241 Abs. 2 BGB."
+    },
+    {
+      "id": "m2-fc-8",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist der Unterschied zwischen Rechtsgrundverweis und Rechtsfolgenverweis?",
+      "back": "**Rechtsgrundverweis:** Der Verweis übernimmt Tatbestand **und** Rechtsfolge der Zielnorm – die Voraussetzungen müssen vollständig geprüft werden.\n**Rechtsfolgenverweis:** Nur die Rechtsfolge der Zielnorm wird übernommen, der Tatbestand ist ein anderer."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "m2-q1",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "leicht",
+      "prompt": "Aus welchen zwei Hauptteilen besteht eine Rechtsnorm?",
+      "options": [
+        "Tatbestand und Rechtsfolge",
+        "Anspruch und Einrede",
+        "Paragraf und Absatz",
+        "Gesetz und Verordnung"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Jede Rechtsnorm hat einen **Tatbestand** (Wenn: Voraussetzungen) und eine **Rechtsfolge** (Dann: Konsequenz). Anspruch/Einrede, Paragraf/Absatz und Gesetz/Verordnung sind andere Begriffspaare."
+    },
+    {
+      "kind": "truefalse",
+      "id": "m2-q2",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "leicht",
+      "prompt": "Bei kumulativen Tatbestandsmerkmalen genügt es, wenn mindestens eines der Merkmale vorliegt.",
+      "answer": false,
+      "explanation": "Falsch. Bei **kumulativen** Merkmalen müssen **alle** vorliegen (\"und\"). Wenn nur eines genügt, handelt es sich um **alternative** Merkmale (\"oder\")."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q3",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "leicht",
+      "prompt": "Woran erkennst du typischerweise kumulative Tatbestandsmerkmale?",
+      "options": [
+        "An dem Wort \"oder\"",
+        "An dem Wort \"und\" bzw. \"sowie\"",
+        "An negativen Formulierungen wie \"nicht\"",
+        "An der Angabe von Fristen"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Kumulative Merkmale sind durch **\"und\"** oder **\"sowie\"** verbunden – alle müssen erfüllt sein. Das Wort \"oder\" deutet auf alternative Merkmale hin."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q4",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "mittel",
+      "prompt": "§ 433 Abs. 2 BGB berechtigt den Verkäufer, vom Käufer die Kaufpreiszahlung zu verlangen. Was für eine Norm ist das?",
+      "options": [
+        "Eine Hilfsnorm (Legaldefinition)",
+        "Eine Anspruchsgrundlage",
+        "Eine Verweisungsnorm",
+        "Eine Formvorschrift"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "§ 433 Abs. 2 BGB ist eine **Anspruchsgrundlage**: In der Rechtsfolge wird jemand berechtigt, von einer anderen Person ein Tun (Zahlung des Kaufpreises) zu verlangen."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q5",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "mittel",
+      "prompt": "§ 362 Abs. 1 BGB bestimmt, dass ein Schuldverhältnis erlischt, wenn die geschuldete Leistung an den Gläubiger bewirkt wird. In welche Kategorie fällt diese Norm?",
+      "options": [
+        "Anspruchsgrundlage",
+        "Gestaltungsrecht",
+        "Hilfsnorm (Gegenrecht)",
+        "Eingriffsgrundlage"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "§ 362 Abs. 1 BGB ist eine **Hilfsnorm** in Form eines **Gegenrechts** (rechtsvernichtende Einwendung): Sie führt nicht zu einem neuen Anspruch, sondern lässt einen bestehenden Anspruch erlöschen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "m2-q6",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "mittel",
+      "prompt": "In der Kurzversion des Zitierens werden Absätze durch römische Zahlen dargestellt. § 92 Absatz 2 BGB wird also kurz als \"§ 92 II BGB\" zitiert.",
+      "answer": true,
+      "explanation": "Richtig. Das ist der **wichtigste Unterschied** zwischen lang und kurz: Absätze werden in der Kurzversion als römische Zahlen dargestellt. Lang: § 92 Abs. 2 BGB / Kurz: § 92 II BGB."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q7",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "mittel",
+      "prompt": "§ 111 Satz 2 BGB – wie lautet die korrekte Kurzversion dieses Zitats?",
+      "options": [
+        "§ 111 II BGB",
+        "§ 111 2 BGB",
+        "§ 111 S. 2 BGB",
+        "§ 111 Abs. 2 BGB"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Da § 111 BGB **keine Absätze** hat, muss auch in der Kurzversion \"S. 2\" geschrieben werden, um Verwechslungen zu vermeiden. \"§ 111 2 BGB\" wäre missverständlich."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q8",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "mittel",
+      "prompt": "Was ist eine Legaldefinition?",
+      "options": [
+        "Eine Norm, die einen Anspruch begründet",
+        "Eine Norm, durch die der Gesetzgeber selbst einen Rechtsbegriff auslegt und definiert",
+        "Eine Norm, die auf eine andere Norm verweist",
+        "Eine Norm, die ein staatliches Handeln erlaubt"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Eine **Legaldefinition** ist eine Hilfsnorm, in der der Gesetzgeber selbst erklärt, was ein bestimmter Begriff bedeutet. Beispiel: § 90 BGB definiert, was \"Sachen\" im Rechtssinne sind."
+    },
+    {
+      "kind": "truefalse",
+      "id": "m2-q9",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "schwer",
+      "prompt": "Beim Zitieren einer Rechtsnorm muss man diese immer wörtlich wiedergeben.",
+      "answer": false,
+      "explanation": "Falsch. Das Zitieren einer Norm bedeutet nur, sie zu **benennen** (z.B. § 433 II BGB), nicht sie wörtlich abzuschreiben. Ein wörtliches Zitat ist nur erforderlich, wenn der genaue Wortlaut intensiv ausgelegt wird."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q10",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen zu negativen Tatbestandsmerkmalen ist korrekt?",
+      "options": [
+        "Negative Merkmale sind immer unwichtig und können ignoriert werden",
+        "Negative Tatbestandsmerkmale müssen für den Eintritt der Rechtsfolge gerade NICHT erfüllt sein",
+        "Negative Merkmale kommen im BGB nicht vor",
+        "Negative Merkmale sind immer kumulativ mit positiven Merkmalen verknüpft"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "**Negative Tatbestandsmerkmale** müssen für den Eintritt der Rechtsfolge gerade **nicht** vorliegen. Beispiel: § 104 Nr. 1 BGB – geschäftsunfähig ist, wer das 7. Lebensjahr **noch nicht vollendet hat** (das Merkmal \"7 Jahre alt sein\" darf also nicht vorliegen). Sie sind auch für die Beweislast relevant."
+    },
+    {
+      "kind": "freetext",
+      "id": "m2-q11",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum man beim Zitieren von Rechtsnormen so genau sein muss (Absatz, Satz, Nummer usw.) und was passiert, wenn man nur \"§ 433 BGB\" schreibt.",
+      "sampleAnswer": "Ein Paragraf enthält oft mehrere Rechtsnormen in verschiedenen Absätzen und Sätzen. § 433 BGB regelt in Abs. 1 S. 1 die Pflicht des Verkäufers zur Übergabe, in Abs. 1 S. 2 zur Verschaffung freien Eigentums, und in Abs. 2 die Pflicht des Käufers zur Kaufpreiszahlung. Schreibt man nur \"§ 433 BGB\", ist unklar, welche dieser Normen gemeint ist. Das ist ein handwerklicher Fehler, weil die Rechtsfolgen jeweils unterschiedlich sind.",
+      "keywords": [
+        "absatz",
+        "satz",
+        "nummer",
+        "rechtsnorm",
+        "rechtsfolge",
+        "präzise",
+        "verwechslung"
+      ],
+      "explanation": "Weil ein Artikel oder Paragraf oft aus mehreren Rechtsnormen besteht, muss man genau angeben, welche gemeint ist. Sonst ist unklar, welche Rechtsfolge gelten soll."
+    },
+    {
+      "kind": "mc",
+      "id": "m2-q12",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "difficulty": "schwer",
+      "prompt": "§ 142 Abs. 1 BGB bestimmt, dass ein anfechtbares Rechtsgeschäft als von Anfang an nichtig anzusehen ist, wenn es angefochten wird. Was für eine Norm ist das?",
+      "options": [
+        "Anspruchsgrundlage – sie gibt einen Anspruch auf Rückzahlung",
+        "Gestaltungsrecht – sie ermöglicht es, einseitig die Rechtslage zu verändern",
+        "Legaldefinition – sie erklärt, was Nichtigkeit bedeutet",
+        "Verweisungsnorm – sie verweist auf andere Normen zur Anfechtung"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "§ 142 Abs. 1 BGB ist die Grundlage des **Gestaltungsrechts** der Anfechtung: Durch einseitige Anfechtungserklärung (§ 143 BGB) wird das Rechtsgeschäft rückwirkend (ex tunc) nichtig – ohne dass die andere Partei zustimmen muss."
+    }
+  ],
+  "exercises": []
+}

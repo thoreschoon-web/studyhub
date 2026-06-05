@@ -1,0 +1,395 @@
+{
+  "id": "jacobi-matrix",
+  "subjectId": "mathe-2",
+  "title": "Vektorwertige Funktionen, Jacobi-Matrix und vollständiges Differential",
+  "summary": "Von der gewöhnlichen Funktion f: ℝⁿ→ℝ zur vektorwertigen Funktion F: ℝⁿ→ℝᵐ. Die Jacobi-Matrix fasst alle partiellen Ableitungen in einer Matrix zusammen und erlaubt die beste lineare Näherung – das vollständige Differential. Wirtschaftliche Anwendung: näherungsweise Nachfrageänderung bei Preis- und Einkommensänderung.",
+  "order": 1,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "s1",
+      "heading": "Was ist eine vektorwertige Funktion?",
+      "body": "Du kennst bereits Funktionen wie $f(x, y) = x^2 + y^2$, die **zwei Zahlen rein** bekommen und **eine Zahl raus** geben. Das schreibt man: $f: \\mathbb{R}^2 \\to \\mathbb{R}$.\n\nEine **vektorwertige Funktion** $\\vec{F}$ gibt stattdessen **mehrere Zahlen auf einmal** zurück – also einen Vektor. Zum Beispiel:\n\n$$\\vec{F}(x, y) = \\begin{pmatrix} xy \\\\ x^2 + y^2 \\end{pmatrix}$$\n\nHier wird aus zwei Eingaben $(x, y)$ ein Ausgabevektor mit zwei Komponenten. Man schreibt: $\\vec{F}: \\mathbb{R}^2 \\to \\mathbb{R}^2$.\n\nAllgemein: Eine Funktion $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ nimmt einen Vektor $\\vec{x} = (x_1, \\ldots, x_n)^T$ und gibt einen Vektor mit $m$ Komponenten zurück:\n\n$$\\vec{F}(\\vec{x}) = \\begin{pmatrix} f_1(x_1, \\ldots, x_n) \\\\ f_2(x_1, \\ldots, x_n) \\\\ \\vdots \\\\ f_m(x_1, \\ldots, x_n) \\end{pmatrix}$$\n\nJede **Komponentenfunktion** $f_i: \\mathbb{R}^n \\to \\mathbb{R}$ ist eine ganz gewöhnliche Funktion – sie bekommt denselben Eingangsvektor und gibt genau eine Zahl zurück. Die vektorwertige Funktion ist also nichts anderes als $m$ gewöhnliche Funktionen, die man übereinanderstapelt.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Einfaches Beispiel",
+          "body": "$\\vec{F}: \\mathbb{R}^2 \\to \\mathbb{R}^3$ mit $\\vec{F}(x,y) = \\begin{pmatrix} xy \\\\ 2x+2y \\\\ x^2+y^2 \\end{pmatrix}$.\n\nHier ist $n=2$ (zwei Eingaben), $m=3$ (drei Ausgaben). Die Komponentenfunktionen sind $f_1(x,y)=xy$, $f_2(x,y)=2x+2y$, $f_3(x,y)=x^2+y^2$."
+        },
+        {
+          "kind": "info",
+          "title": "Sprechweise",
+          "body": "Man sagt: $\\vec{F}$ bildet $\\mathbb{R}^n$ **ab** nach $\\mathbb{R}^m$. Die Schreibweise $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ gibt die **Dimensions-Information** auf einen Blick: $n$ Eingaben, $m$ Ausgaben."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-vektorfkt",
+          "title": "Schematische Darstellung einer vektorwertigen Funktion",
+          "caption": "F nimmt n Eingaben und liefert m Ausgaben – zusammengefasst als Vektor.",
+          "code": "graph LR\n  A[\"Eingangsvektor\\n(x₁, x₂, …, xₙ)\"] --> B[\"f₁(x₁,…,xₙ)\"]\n  A --> C[\"f₂(x₁,…,xₙ)\"]\n  A --> D[\"⋮\"]\n  A --> E[\"fₘ(x₁,…,xₙ)\"]\n  B --> F[\"Ausgangsvektor\\n(f₁, f₂, …, fₘ)ᵀ\"]\n  C --> F\n  D --> F\n  E --> F"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "heading": "Kurze Erinnerung: partielle Ableitung und Gradient",
+      "body": "Bevor wir zur Jacobi-Matrix kommen, kurze Wiederholung der **partiellen Ableitung** – denn die Jacobi-Matrix besteht nur daraus.\n\n**Partielle Ableitung:** Man leitet nach **einer** Variablen ab und behandelt alle anderen als Konstante.\n\nBeispiel: $f(x, y) = xy(5 - x - y)$.\n\nAbleitung nach $y$ (dabei ist $x$ fest, also eine Konstante $c=x$):\n$$\\frac{\\partial f}{\\partial y} = x \\cdot (5 - x - y) + xy \\cdot (-1) = x(5 - x - y) - xy = x(5 - x - 2y)$$\n\nAn der Stelle $\\vec{a}^* = (2, 2)^T$:\n$$\\frac{\\partial f}{\\partial y}(2, 2) = 2 \\cdot (5 - 2 - 2 \\cdot 2) = 2 \\cdot (-1) = -2$$\n\n**Anschauliche Bedeutung:** Der Wert $-2$ bedeutet: Erhöht man $y$ um eine kleine Einheit $\\Delta y$, während $x=2$ fest bleibt, fällt $f$ näherungsweise um $2 \\cdot \\Delta y$. An der Stelle $(2,2)$ geht es mit wachsendem $y$ bergab (Steigung $= -2$).\n\n**Der Gradient** fasst alle partiellen Ableitungen als Zeilenvektor zusammen:\n$$\\operatorname{grad} f(\\vec{a}) = \\left(\\frac{\\partial f}{\\partial x_1}(\\vec{a}),\\; \\frac{\\partial f}{\\partial x_2}(\\vec{a}),\\; \\ldots,\\; \\frac{\\partial f}{\\partial x_n}(\\vec{a})\\right)$$\n\nFür $f: \\mathbb{R}^n \\to \\mathbb{R}$ ist der Gradient ein **Zeilenvektor** – er zeigt in Richtung des steilsten Anstiegs.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Merkregel partielle Ableitung",
+          "body": "Partielle Ableitung nach $x_j$: Schreib alle anderen Variablen als Zahlen (fest) und leite ganz normal nach $x_j$ ab. Die Notation $\\frac{\\partial f}{\\partial x_j}$ liest man 'partiell f nach x-j'."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "heading": "Die Jacobi-Matrix: Was, Wozu und Wie",
+      "body": "### Was ist die Jacobi-Matrix?\n\nFür eine **gewöhnliche** Funktion $f: \\mathbb{R}^n \\to \\mathbb{R}$ haben wir den **Gradienten** als Ableitung – ein Zeilenvektor mit $n$ Einträgen.\n\nFür eine **vektorwertige** Funktion $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ muss jede der $m$ Komponentenfunktionen $f_i$ nach allen $n$ Variablen abgeleitet werden. Das ergibt insgesamt $m \\times n$ partielle Ableitungen – die man in einer **Matrix** anordnet: der **Jacobi-Matrix** (oder Jacobi-Matrix, nach dem Mathematiker Carl Gustav Jacob Jacobi).\n\n$$\\operatorname{Jac} \\vec{F}(\\vec{x}) = \\begin{pmatrix} \\frac{\\partial f_1}{\\partial x_1} & \\frac{\\partial f_1}{\\partial x_2} & \\cdots & \\frac{\\partial f_1}{\\partial x_n} \\\\ \\frac{\\partial f_2}{\\partial x_1} & \\frac{\\partial f_2}{\\partial x_2} & \\cdots & \\frac{\\partial f_2}{\\partial x_n} \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ \\frac{\\partial f_m}{\\partial x_1} & \\frac{\\partial f_m}{\\partial x_2} & \\cdots & \\frac{\\partial f_m}{\\partial x_n} \\end{pmatrix}$$\n\nDie Matrix hat **$m$ Zeilen** (eine pro Komponentenfunktion) und **$n$ Spalten** (eine pro Variable). Jede Zeile $i$ ist genau der Gradient der Komponentenfunktion $f_i$.\n\n### Wozu braucht man die Jacobi-Matrix?\n\nDie Jacobi-Matrix ist die **\"Ableitung\" der vektorwertigen Funktion**. Sie erlaubt die **beste lineare Näherung** von $\\vec{F}$ in der Nähe eines Punktes $\\vec{a}^*$:\n\n$$\\vec{F}(\\vec{a}^* + \\Delta\\vec{x}) \\approx \\vec{F}(\\vec{a}^*) + \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$$\n\nDas ist wie die Tangente bei einer gewöhnlichen Funktion: Statt der echten (möglicherweise komplizierten) Funktion rechnet man mit einer einfachen linearen Näherung.\n\n### Wie stellt man die Jacobi-Matrix auf? (Schritt für Schritt)\n\n**Schritt 1:** Identifiziere $n$ (Anzahl Eingaben) und $m$ (Anzahl Ausgaben). Die Jacobi-Matrix wird $m \\times n$.\n\n**Schritt 2:** Schreibe die $m$ Komponentenfunktionen $f_1, f_2, \\ldots, f_m$ auf.\n\n**Schritt 3:** Bilde alle partiellen Ableitungen: Zeile $i$, Spalte $j$ enthält $\\frac{\\partial f_i}{\\partial x_j}$.\n\n**Schritt 4:** Setze ggf. einen konkreten Punkt $\\vec{a}^*$ ein, um die **Jacobi-Matrix an dieser Stelle** zu erhalten.\n\n**Schritt 5** (Zuwachs): Multipliziere die Jacobi-Matrix an $\\vec{a}^*$ mit dem Schritt $\\Delta\\vec{x}$:\n$$d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$$",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Jacobi-Matrix (formale Definition)",
+          "body": "Sei $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ mit Komponentenfunktionen $f_1, \\ldots, f_m$. Die **Jacobi-Matrix** von $\\vec{F}$ an der Stelle $\\vec{a}^*$ ist:\n$$\\operatorname{Jac}\\vec{F}(\\vec{a}^*) = \\left(\\frac{\\partial f_i}{\\partial x_j}(\\vec{a}^*)\\right)_{\\substack{i=1,\\ldots,m \\\\ j=1,\\ldots,n}} \\in \\mathbb{R}^{m \\times n}$$\nSpezialfall $m=1$: Die Jacobi-Matrix reduziert sich auf den **Gradienten** (eine Zeile)."
+        },
+        {
+          "kind": "tip",
+          "title": "Merkhilfe",
+          "body": "**Zeile** $i$ = Gradient von $f_i$ = alle Ableitungen der $i$-ten Komponentenfunktion. **Spalte** $j$ = alle Ableitungen nach $x_j$. Die Matrix hat Dimension (Ausgaben × Eingaben) = $m \\times n$."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-jac-struktur",
+          "title": "Struktur der Jacobi-Matrix",
+          "headers": ["", "nach x₁", "nach x₂", "…", "nach xₙ"],
+          "rows": [
+            ["f₁ (Zeile 1)", "∂f₁/∂x₁", "∂f₁/∂x₂", "…", "∂f₁/∂xₙ"],
+            ["f₂ (Zeile 2)", "∂f₂/∂x₁", "∂f₂/∂x₂", "…", "∂f₂/∂xₙ"],
+            ["⋮", "⋮", "⋮", "⋱", "⋮"],
+            ["fₘ (Zeile m)", "∂fₘ/∂x₁", "∂fₘ/∂x₂", "…", "∂fₘ/∂xₙ"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "heading": "Durchgerechnete Beispiele zur Jacobi-Matrix",
+      "body": "### Beispiel 1: $\\vec{F}: \\mathbb{R}^2 \\to \\mathbb{R}^3$\n\nGegeben: $\\vec{F}(x, y) = \\begin{pmatrix} xy \\\\ 2x + 2y \\\\ x^2 + y^2 \\end{pmatrix}$, Punkt $\\vec{a}^* = (1, 1)^T$, Schritt $d\\vec{x} = (0{,}2,\\, -0{,}1)^T$.\n\n**Schritt 1:** $n=2$ Eingaben, $m=3$ Ausgaben. Jacobi-Matrix: $3 \\times 2$.\n\n**Schritt 2:** Komponentenfunktionen: $f_1 = xy$, $f_2 = 2x+2y$, $f_3 = x^2+y^2$.\n\n**Schritt 3:** Partielle Ableitungen:\n\n| | nach $x$ | nach $y$ |\n|---|---|---|\n| $f_1 = xy$ | $y$ | $x$ |\n| $f_2 = 2x+2y$ | $2$ | $2$ |\n| $f_3 = x^2+y^2$ | $2x$ | $2y$ |\n\nAlso:\n$$\\operatorname{Jac}\\vec{F}(x,y) = \\begin{pmatrix} y & x \\\\ 2 & 2 \\\\ 2x & 2y \\end{pmatrix}$$\n\n**Schritt 4:** Einsetzen von $\\vec{a}^* = (1,1)^T$:\n$$\\operatorname{Jac}\\vec{F}(1,1) = \\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$$\n\n**Schritt 5:** Näherungsweiser Zuwachs:\n$$d\\vec{F} = \\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\\\ 2 & 2 \\end{pmatrix} \\begin{pmatrix} 0{,}2 \\\\ -0{,}1 \\end{pmatrix} = \\begin{pmatrix} 1 \\cdot 0{,}2 + 1 \\cdot (-0{,}1) \\\\ 2 \\cdot 0{,}2 + 2 \\cdot (-0{,}1) \\\\ 2 \\cdot 0{,}2 + 2 \\cdot (-0{,}1) \\end{pmatrix} = \\begin{pmatrix} 0{,}1 \\\\ 0{,}2 \\\\ 0{,}2 \\end{pmatrix}$$\n\n**Rang:** Die Matrix hat Rang 2 (Zeilen 2 und 3 sind identisch, also nicht alle 3 linear unabhängig; Zeilen 1 und 2 sind linear unabhängig).\n\n---\n\n### Beispiel 2: $\\vec{F}: \\mathbb{R}^4 \\to \\mathbb{R}^2$\n\nGegeben: $\\vec{F}(\\vec{x}) = \\begin{pmatrix} x_1 x_2 x_3 + x_3 x_4 \\\\ x_1^2 + x_2^2 + x_3^2 + x_4^2 \\end{pmatrix}$, Punkt $\\vec{a}^* = (1,1,1,1)^T$, Schritt $d\\vec{x} = (0{,}1, 0{,}1, 0{,}1, 0{,}1)^T$.\n\n**Jacobi-Matrix** ($2 \\times 4$):\n\n$f_1 = x_1 x_2 x_3 + x_3 x_4$:\n- $\\frac{\\partial f_1}{\\partial x_1} = x_2 x_3$\n- $\\frac{\\partial f_1}{\\partial x_2} = x_1 x_3$\n- $\\frac{\\partial f_1}{\\partial x_3} = x_1 x_2 + x_4$\n- $\\frac{\\partial f_1}{\\partial x_4} = x_3$\n\n$f_2 = x_1^2 + x_2^2 + x_3^2 + x_4^2$:\n- $\\frac{\\partial f_2}{\\partial x_1} = 2x_1$,\\quad $\\frac{\\partial f_2}{\\partial x_2} = 2x_2$,\\quad $\\frac{\\partial f_2}{\\partial x_3} = 2x_3$,\\quad $\\frac{\\partial f_2}{\\partial x_4} = 2x_4$\n\n$$\\operatorname{Jac}\\vec{F}(\\vec{x}) = \\begin{pmatrix} x_2 x_3 & x_1 x_3 & x_1 x_2 + x_4 & x_3 \\\\ 2x_1 & 2x_2 & 2x_3 & 2x_4 \\end{pmatrix}$$\n\nAn $\\vec{a}^* = (1,1,1,1)^T$:\n$$\\operatorname{Jac}\\vec{F}(1,1,1,1) = \\begin{pmatrix} 1 & 1 & 2 & 1 \\\\ 2 & 2 & 2 & 2 \\end{pmatrix}$$\n\nRang: 2 (beide Zeilen sind linear unabhängig, da nicht proportional).\n\nNäherungsweiser Zuwachs:\n$$d\\vec{F} = \\begin{pmatrix} 1 & 1 & 2 & 1 \\\\ 2 & 2 & 2 & 2 \\end{pmatrix} \\begin{pmatrix} 0{,}1 \\\\ 0{,}1 \\\\ 0{,}1 \\\\ 0{,}1 \\end{pmatrix} = \\begin{pmatrix} 0{,}1+0{,}1+0{,}2+0{,}1 \\\\ 0{,}2+0{,}2+0{,}2+0{,}2 \\end{pmatrix} = \\begin{pmatrix} 0{,}5 \\\\ 0{,}8 \\end{pmatrix}$$",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Häufige Fehler",
+          "body": "- Zeilen und Spalten vertauscht: Zeile $i$ gehört zu $f_i$, Spalte $j$ zur Variable $x_j$.\n- Bei der Matrix-Vektor-Multiplikation: erst Jacobi-Matrix an $\\vec{a}^*$ auswerten, dann mit $d\\vec{x}$ multiplizieren.\n- Beim Ableiten: Alle anderen Variablen wirklich als Konstante behandeln."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "heading": "Vollständiges Differential und näherungsweiser Zuwachs",
+      "body": "### Das vollständige Differential\n\nFür eine gewöhnliche Funktion $f: \\mathbb{R}^n \\to \\mathbb{R}$ kennt man das **vollständige Differential**:\n$$df = \\frac{\\partial f}{\\partial x_1} dx_1 + \\frac{\\partial f}{\\partial x_2} dx_2 + \\ldots + \\frac{\\partial f}{\\partial x_n} dx_n = \\operatorname{grad} f(\\vec{a}^*) \\cdot d\\vec{x}$$\n\nDiese Formel sagt: Wenn sich alle Variablen um $dx_1, \\ldots, dx_n$ ändern, ändert sich $f$ näherungsweise um $df$.\n\nFür eine **vektorwertige Funktion** $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ wird daraus:\n$$\\begin{pmatrix} df_1 \\\\ df_2 \\\\ \\vdots \\\\ df_m \\end{pmatrix} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\begin{pmatrix} dx_1 \\\\ dx_2 \\\\ \\vdots \\\\ dx_n \\end{pmatrix}$$\n\nOder kompakt: $d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot d\\vec{x}$.\n\nDie **Approximationsformel** lautet:\n$$\\vec{F}(\\vec{a}^* + \\Delta\\vec{x}) \\approx \\vec{F}(\\vec{a}^*) + \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$$\n\n### Anschauung: lokale lineare Näherung\n\nDie Jacobi-Matrix an $\\vec{a}^*$ beschreibt, **wie stark und in welche Richtung** sich die Ausgabe ändert, wenn man die Eingabe leicht verändert. Die Approximationsformel ist das mehrdimensionale Analogon zur Tangentengleichung bei einer Kurve: Man ersetzt die komplizierte Funktion durch die einfachste mögliche lineare Funktion, die denselben Wert und dieselbe Ableitung am Punkt $\\vec{a}^*$ hat.\n\n### Relative prozentuale Änderung\n\nFür $f: \\mathbb{R}^n \\to \\mathbb{R}$ gilt:\n$$\\frac{\\Delta f}{f(\\vec{a}^*)} \\approx \\frac{\\operatorname{grad} f(\\vec{a}^*) \\cdot d\\vec{x}}{f(\\vec{a}^*)}$$\n\nDiesen Ausdruck $\\times 100\\%$ ergibt die **relative prozentuale Änderung**.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Klausuraufgabe WS 2017/2018: relatives Differential",
+          "body": "Gegeben: $f: \\mathbb{R}^4 \\to \\mathbb{R}$ mit $\\operatorname{grad} f(\\vec{a}^*) = (-2, 0, 1, -3)$, $f(\\vec{a}^*) = 6$ an $\\vec{a}^* = (0, 5, 4, -3)^T$.\n\nGesucht: relative prozentuale Änderung beim Übergang zu $\\vec{a} = (-0{,}3, 5{,}1, 4, -2{,}9)^T$.\n\n$d\\vec{x} = \\vec{a} - \\vec{a}^* = (-0{,}3, 0{,}1, 0, 0{,}1)^T$\n\n$df = \\operatorname{grad} f \\cdot d\\vec{x} = (-2)(-0{,}3) + 0 \\cdot 0{,}1 + 1 \\cdot 0 + (-3)(0{,}1) = 0{,}6 - 0{,}3 = 0{,}3$\n\nRelative prozentuale Änderung: $\\frac{0{,}3}{6} \\cdot 100\\% = 5\\%$"
+        },
+        {
+          "kind": "formel",
+          "title": "Tangentialhyperebene",
+          "body": "Die **Tangentialhyperebene** an den Graphen von $f$ im Punkt $(\\vec{a}^*, f(\\vec{a}^*))$ lautet in Koordinatenform:\n$$x_{n+1} = f(\\vec{a}^*) + \\operatorname{grad} f(\\vec{a}^*) \\cdot (\\vec{x} - \\vec{a}^*)$$\nFür das obige Beispiel ($n=4$, $f(\\vec{a}^*)=6$, $\\vec{a}^*=(0,5,4,-3)^T$):\n$$x_5 = 6 + (-2)(x_1 - 0) + 0(x_2-5) + 1(x_3-4) + (-3)(x_4+3)$$\n$$x_5 = -2x_1 + x_3 - 3x_4 - 7$$"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "heading": "Anwendung: Nachfragefunktionen und ökonomische Interpretation",
+      "body": "### Wirtschaftliche Anwendung\n\nStell dir vor, die Nachfrage nach zwei Gütern hängt von Preisen $p_1, p_2$ und Einkommen $y$ ab:\n$$q_1 = 6 p_1^{-2} p_2^{3/2} y, \\qquad q_2 = 4 p_1 p_2^{-1} y^2$$\n\nDiese beiden Nachfragefunktionen bilden zusammen eine vektorwertige Funktion $\\vec{F}: \\mathbb{R}^3 \\to \\mathbb{R}^2$ mit Eingangsvektor $(p_1, p_2, y)^T$.\n\n**Jacobi-Matrix berechnen** (partielle Ableitungen jeder Zeile nach $p_1$, $p_2$, $y$):\n\nFür $q_1 = 6 p_1^{-2} p_2^{3/2} y$:\n- $\\frac{\\partial q_1}{\\partial p_1} = -12 p_1^{-3} p_2^{3/2} y$\n- $\\frac{\\partial q_1}{\\partial p_2} = 9 p_1^{-2} p_2^{1/2} y$\n- $\\frac{\\partial q_1}{\\partial y} = 6 p_1^{-2} p_2^{3/2}$\n\nFür $q_2 = 4 p_1 p_2^{-1} y^2$:\n- $\\frac{\\partial q_2}{\\partial p_1} = 4 p_2^{-1} y^2$\n- $\\frac{\\partial q_2}{\\partial p_2} = -4 p_1 p_2^{-2} y^2$\n- $\\frac{\\partial q_2}{\\partial y} = 8 p_1 p_2^{-1} y$\n\n**Auswertung an $\\vec{a}^* = (p_1^*, p_2^*, y^*)^T = (6, 9, 2)^T$:**\n\nErst die Werte berechnen:\n- $q_1^* = 6 \\cdot 6^{-2} \\cdot 9^{3/2} \\cdot 2 = 6 \\cdot \\frac{1}{36} \\cdot 27 \\cdot 2 = 9$\n- $q_2^* = 4 \\cdot 6 \\cdot 9^{-1} \\cdot 4 = 4 \\cdot 6 \\cdot \\frac{1}{9} \\cdot 4 = \\frac{96}{9} = \\frac{32}{3} \\approx 10{,}67$\n\nJacobi-Matrix an $\\vec{a}^*$:\n- $\\frac{\\partial q_1}{\\partial p_1}(\\vec{a}^*) = -12 \\cdot 6^{-3} \\cdot 27 \\cdot 2 = -12 \\cdot \\frac{1}{216} \\cdot 54 = -3$\n- $\\frac{\\partial q_1}{\\partial p_2}(\\vec{a}^*) = 9 \\cdot 36^{-1} \\cdot 3 \\cdot 2 = 9 \\cdot \\frac{6}{36} = \\frac{9 \\cdot 6}{36} = \\frac{3}{2}$\n- $\\frac{\\partial q_1}{\\partial y}(\\vec{a}^*) = 6 \\cdot \\frac{1}{36} \\cdot 27 = \\frac{9}{2}$\n- $\\frac{\\partial q_2}{\\partial p_1}(\\vec{a}^*) = 4 \\cdot \\frac{1}{9} \\cdot 4 = \\frac{16}{9}$\n- $\\frac{\\partial q_2}{\\partial p_2}(\\vec{a}^*) = -4 \\cdot 6 \\cdot \\frac{1}{81} \\cdot 4 = -\\frac{96}{81} = -\\frac{32}{27}$\n- $\\frac{\\partial q_2}{\\partial y}(\\vec{a}^*) = 8 \\cdot 6 \\cdot \\frac{1}{9} \\cdot 2 = \\frac{96}{9} = \\frac{32}{3}$\n\n$$\\operatorname{Jac}\\vec{F}(\\vec{a}^*) = \\begin{pmatrix} -3 & \\frac{3}{2} & \\frac{9}{2} \\\\ \\frac{16}{9} & -\\frac{32}{27} & \\frac{32}{3} \\end{pmatrix}$$\n\n**Näherungsweise Nachfrageänderung** bei $dp_1 = 0{,}1$, $dp_2 = 0{,}1$, $dy = -0{,}1$:\n$$\\begin{pmatrix} dq_1 \\\\ dq_2 \\end{pmatrix} = \\begin{pmatrix} -3 & \\frac{3}{2} & \\frac{9}{2} \\\\ \\frac{16}{9} & -\\frac{32}{27} & \\frac{32}{3} \\end{pmatrix} \\begin{pmatrix} 0{,}1 \\\\ 0{,}1 \\\\ -0{,}1 \\end{pmatrix} = \\begin{pmatrix} -0{,}3 + 0{,}15 - 0{,}45 \\\\ 0{,}178 - 0{,}119 - 1{,}067 \\end{pmatrix} \\approx \\begin{pmatrix} -0{,}6 \\\\ -1{,}007 \\end{pmatrix}$$\n\n**Ökonomische Interpretation der Jacobi-Einträge:**\n- Eintrag $(1,1) = -3$: Steigt $p_1$ um 1, sinkt $q_1$ um ca. 3 Einheiten (Gut 1 hat negativen Eigenpreiseffekt – normal).\n- Eintrag $(1,2) = 1{,}5 > 0$: Steigt $p_2$, steigt auch $q_1$ → Gut 1 und Gut 2 sind **Substitute**.\n- Eintrag $(2,1) = 16/9 > 0$: Steigt $p_1$, steigt $q_2$ → ebenfalls substitutiver Zusammenhang.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Ökonomische Bedeutung der Jacobi-Einträge",
+          "body": "Der Eintrag in Zeile $i$, Spalte $j$ der Jacobi-Matrix ist $\\frac{\\partial q_i}{\\partial p_j}$ – er misst, **wie stark die Nachfrage nach Gut $i$ auf eine marginale Preisänderung von Gut $j$ reagiert**. Negative Eigenpreiseffekte ($i=j$) und positive Kreuzpreiseffekte ($i \\neq j$) sind typische Muster."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "jac-fc-1",
+      "topicId": "jacobi-matrix",
+      "front": "Was ist eine vektorwertige Funktion $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$?",
+      "back": "Eine Funktion mit $n$ Eingaben und $m$ Ausgaben. Sie besteht aus $m$ Komponentenfunktionen $f_1, \\ldots, f_m$, die jeweils $\\mathbb{R}^n \\to \\mathbb{R}$ abbilden."
+    },
+    {
+      "id": "jac-fc-2",
+      "topicId": "jacobi-matrix",
+      "front": "Welche Dimension hat die Jacobi-Matrix von $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$?",
+      "back": "$m \\times n$ – $m$ Zeilen (eine pro Komponentenfunktion), $n$ Spalten (eine pro Variable)."
+    },
+    {
+      "id": "jac-fc-3",
+      "topicId": "jacobi-matrix",
+      "front": "Was steht in Zeile $i$, Spalte $j$ der Jacobi-Matrix?",
+      "back": "Die partielle Ableitung $\\frac{\\partial f_i}{\\partial x_j}$ – man leitet die $i$-te Komponentenfunktion nach der $j$-ten Variable ab."
+    },
+    {
+      "id": "jac-fc-4",
+      "topicId": "jacobi-matrix",
+      "front": "Wie lautet die Näherungsformel für den Zuwachs einer vektorwertigen Funktion?",
+      "back": "$\\vec{F}(\\vec{a}^* + \\Delta\\vec{x}) \\approx \\vec{F}(\\vec{a}^*) + \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$"
+    },
+    {
+      "id": "jac-fc-5",
+      "topicId": "jacobi-matrix",
+      "front": "Was ist das vollständige Differential $df$ einer Funktion $f: \\mathbb{R}^n \\to \\mathbb{R}$?",
+      "back": "$df = \\frac{\\partial f}{\\partial x_1} dx_1 + \\cdots + \\frac{\\partial f}{\\partial x_n} dx_n = \\operatorname{grad} f(\\vec{a}^*) \\cdot d\\vec{x}$. Es gibt die näherungsweise Änderung bei kleiner Verschiebung $d\\vec{x}$ an."
+    },
+    {
+      "id": "jac-fc-6",
+      "topicId": "jacobi-matrix",
+      "front": "Wie ergibt sich der Gradient als Spezialfall der Jacobi-Matrix?",
+      "back": "Bei $m=1$ (eine Ausgabe) ist $\\vec{F} = f$ und die Jacobi-Matrix ist eine einzige Zeile: $\\operatorname{Jac} f = \\operatorname{grad} f = \\left(\\frac{\\partial f}{\\partial x_1}, \\ldots, \\frac{\\partial f}{\\partial x_n}\\right)$."
+    },
+    {
+      "id": "jac-fc-7",
+      "topicId": "jacobi-matrix",
+      "front": "Was bedeutet $\\frac{\\partial f}{\\partial y}(2, 2) = -2$ bei $f(x,y) = xy(5-x-y)$ anschaulich?",
+      "back": "Wenn man vom Punkt $(2,2)$ aus $y$ um $\\Delta y$ erhöht (bei festem $x=2$), sinkt $f$ näherungsweise um $2 \\cdot \\Delta y$. Die Steigung in $y$-Richtung beträgt $-2$."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "jac-q1",
+      "topicId": "jacobi-matrix",
+      "difficulty": "leicht",
+      "prompt": "Die Jacobi-Matrix von $\\vec{F}: \\mathbb{R}^3 \\to \\mathbb{R}^2$ hat welche Dimension?",
+      "options": ["$2 \\times 3$", "$3 \\times 2$", "$2 \\times 2$", "$3 \\times 3$"],
+      "correct": [0],
+      "explanation": "Jacobi-Matrix hat Dimension $m \\times n$ = (Anzahl Ausgaben) × (Anzahl Eingaben) = $2 \\times 3$."
+    },
+    {
+      "kind": "mc",
+      "id": "jac-q2",
+      "topicId": "jacobi-matrix",
+      "difficulty": "leicht",
+      "prompt": "Was steht in der 2. Zeile, 3. Spalte der Jacobi-Matrix von $\\vec{F}$?",
+      "options": ["$\\frac{\\partial f_2}{\\partial x_3}$", "$\\frac{\\partial f_3}{\\partial x_2}$", "$\\frac{\\partial f_2}{\\partial x_2}$", "$\\frac{\\partial f_3}{\\partial x_3}$"],
+      "correct": [0],
+      "explanation": "Zeile $i$, Spalte $j$ enthält $\\frac{\\partial f_i}{\\partial x_j}$. Zeile 2, Spalte 3 also $\\frac{\\partial f_2}{\\partial x_3}$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "jac-q3",
+      "topicId": "jacobi-matrix",
+      "difficulty": "leicht",
+      "prompt": "Der Gradient $\\operatorname{grad} f$ ist ein Spezialfall der Jacobi-Matrix (nämlich für $m=1$).",
+      "answer": true,
+      "explanation": "Ja. Für $m=1$ ist $\\vec{F} = f: \\mathbb{R}^n \\to \\mathbb{R}$ und $\\operatorname{Jac} f = \\operatorname{grad} f$ – eine Zeile mit $n$ partiellen Ableitungen."
+    },
+    {
+      "kind": "numeric",
+      "id": "jac-q4",
+      "topicId": "jacobi-matrix",
+      "difficulty": "leicht",
+      "prompt": "Sei $f(x, y) = xy(5-x-y)$. Berechnen Sie $\\frac{\\partial f}{\\partial y}$ an der Stelle $(2, 2)$.",
+      "answer": -2,
+      "tolerance": 0.01,
+      "explanation": "$\\frac{\\partial f}{\\partial y} = x(5-x-y) + xy \\cdot (-1) = x(5-x-2y)$. An $(2,2)$: $2(5-2-4) = 2(-1) = -2$."
+    },
+    {
+      "kind": "numeric",
+      "id": "jac-q5",
+      "topicId": "jacobi-matrix",
+      "difficulty": "mittel",
+      "prompt": "Sei $f(x, y) = xy(5-x-y)$. Berechnen Sie den exakten Zuwachs beim Übergang von $(2, 2)$ zu $(2, 2{,}1)$.",
+      "answer": -0.221,
+      "tolerance": 0.002,
+      "unit": "",
+      "explanation": "$f(2, 2) = 2 \\cdot 2 \\cdot 1 = 4$. $f(2, 2{,}1) = 2 \\cdot 2{,}1 \\cdot (5-2-2{,}1) = 4{,}2 \\cdot 0{,}9 = 3{,}78$. Exakter Zuwachs: $3{,}78 - 4 = -0{,}22$. (Näherung: $\\frac{\\partial f}{\\partial y}(2,2) \\cdot 0{,}1 = -2 \\cdot 0{,}1 = -0{,}2$.)"
+    },
+    {
+      "kind": "numeric",
+      "id": "jac-q6",
+      "topicId": "jacobi-matrix",
+      "difficulty": "mittel",
+      "prompt": "Sei $\\vec{F}(x, y) = \\begin{pmatrix} xy \\\\ x^2+y^2 \\end{pmatrix}$. Berechnen Sie den Eintrag in Zeile 2, Spalte 1 der Jacobi-Matrix an $(3, 1)$.",
+      "answer": 6,
+      "tolerance": 0.01,
+      "explanation": "Zeile 2, Spalte 1: $\\frac{\\partial f_2}{\\partial x} = 2x$. An $(3,1)$: $2 \\cdot 3 = 6$."
+    },
+    {
+      "kind": "mc",
+      "id": "jac-q7",
+      "topicId": "jacobi-matrix",
+      "difficulty": "mittel",
+      "prompt": "Welche Formel gibt die näherungsweise Änderung von $\\vec{F}$ beim kleinen Schritt $\\Delta\\vec{x}$ vom Punkt $\\vec{a}^*$ korrekt wieder?",
+      "options": [
+        "$d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$",
+        "$d\\vec{F} = \\operatorname{grad} f(\\vec{a}^*)$",
+        "$d\\vec{F} = \\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$",
+        "$d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) + \\Delta\\vec{x}$"
+      ],
+      "correct": [0],
+      "explanation": "Die Näherungsformel lautet $d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$ (Matrix-Vektor-Produkt)."
+    },
+    {
+      "kind": "numeric",
+      "id": "jac-q8",
+      "topicId": "jacobi-matrix",
+      "difficulty": "mittel",
+      "prompt": "Gegeben $\\operatorname{grad} f(\\vec{a}^*) = (-2, 0, 1, -3)$ und $f(\\vec{a}^*) = 6$. Wie groß ist die näherungsweise relative prozentuale Änderung von $f$ beim Übergang zu $\\vec{a} = (-0{,}3, 5{,}1, 4, -2{,}9)^T$ von $\\vec{a}^* = (0, 5, 4, -3)^T$?",
+      "answer": 5,
+      "tolerance": 0.1,
+      "unit": "%",
+      "explanation": "$d\\vec{x} = (-0{,}3, 0{,}1, 0, 0{,}1)^T$. $df = (-2)(-0{,}3) + 0 \\cdot 0{,}1 + 1 \\cdot 0 + (-3)(0{,}1) = 0{,}6 - 0{,}3 = 0{,}3$. Relative Änderung: $0{,}3 / 6 \\cdot 100\\% = 5\\%$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "jac-q9",
+      "topicId": "jacobi-matrix",
+      "difficulty": "mittel",
+      "prompt": "Bei der Näherungsformel $\\vec{F}(\\vec{a}^* + \\Delta\\vec{x}) \\approx \\vec{F}(\\vec{a}^*) + \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$ ist die Näherung umso besser, je größer $|\\Delta\\vec{x}|$ ist.",
+      "answer": false,
+      "explanation": "Falsch. Die lineare Näherung ist umso besser, je kleiner (näher an Null) $|\\Delta\\vec{x}|$ ist. Bei großen Schritten kann der Fehler erheblich sein."
+    },
+    {
+      "kind": "freetext",
+      "id": "jac-q10",
+      "topicId": "jacobi-matrix",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, was die Jacobi-Matrix geometrisch bedeutet. Was entspricht ihr bei einer gewöhnlichen Funktion $f: \\mathbb{R} \\to \\mathbb{R}$?",
+      "sampleAnswer": "Die Jacobi-Matrix ist die 'Ableitung' einer vektorwertigen Funktion. Sie beschreibt die beste lokale lineare Annäherung von F in der Nähe eines Punktes a*. Sie gibt an, wie stark und in welche Richtung jede Ausgabekomponente reagiert, wenn man die Eingabe leicht ändert. Bei f: R → R ist die Ableitung f'(a*) der Spezialfall – dort hat die Jacobi-Matrix nur einen Eintrag. Die Näherungsformel entspricht der Tangente.",
+      "keywords": ["lineare näherung", "ableitung", "tangente", "partielle ableitung", "lokal"],
+      "explanation": "Die Jacobi-Matrix ist das mehrdimensionale Analogon zur Ableitung. Sie beschreibt die Linearisierung von F am Punkt a*."
+    },
+    {
+      "kind": "numeric",
+      "id": "jac-q11",
+      "topicId": "jacobi-matrix",
+      "difficulty": "schwer",
+      "prompt": "Sei $\\vec{F}(x, y, z) = \\begin{pmatrix} xy^2 \\\\ e^{xz} \\\\ x/y + z \\end{pmatrix}$. Berechnen Sie den Eintrag (Zeile 2, Spalte 3) der Jacobi-Matrix an $(2, 1, 0)^T$.",
+      "answer": 2,
+      "tolerance": 0.01,
+      "explanation": "Zeile 2: $f_2 = e^{xz}$. Ableitung nach $z$ (Spalte 3): $\\frac{\\partial}{\\partial z} e^{xz} = x \\cdot e^{xz}$. An $(2,1,0)$: $2 \\cdot e^{0} = 2$."
+    },
+    {
+      "kind": "mc",
+      "id": "jac-q12",
+      "topicId": "jacobi-matrix",
+      "difficulty": "schwer",
+      "prompt": "Welche Aussagen über stationäre Punkte von $f: \\mathbb{R}^n \\to \\mathbb{R}$ sind korrekt?",
+      "options": [
+        "$\\operatorname{grad} f(\\vec{x}^*) = \\vec{0}$ (Nullvektor)",
+        "$f(\\vec{x}^*) = 0$",
+        "Alle partiellen Ableitungen von $f$ verschwinden in $\\vec{x}^*$",
+        "Die Jacobi-Matrix von $f$ an $\\vec{x}^*$ ist die Nullmatrix (Nullzeile)"
+      ],
+      "correct": [0, 2, 3],
+      "multiple": true,
+      "explanation": "Stationärer Punkt: $\\operatorname{grad} f = \\vec{0}$, d.h. alle partiellen Ableitungen sind Null (Aussagen 0, 2). Da der Gradient die Jacobi-Matrix von $f$ ist, ist auch die Jacobi-Matrix an $\\vec{x}^*$ die Nullzeile (Aussage 3). Aussage 1 ($f=0$) ist keine Bedingung für einen stationären Punkt."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "jac-ex-01",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 0, Aufgabe 0.1",
+      "source": "Blatt 0, 06. April 2026",
+      "type": "uebung",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Es sei $f(x, y) = xy(5 - x - y)$.\n\n(a) Berechnen Sie die partielle Ableitung von $f$ nach $y$ an der Stelle $\\vec{a}^* = (2, 2)^T$. Welche anschauliche Bedeutung hat dieser Wert?\n\n(b) Berechnen Sie den Zuwachs von $f$ beim Übergang von $\\vec{a}^*$ zur Stelle $\\vec{a} = (2, 2{,}1)^T$:\n(i) exakt und (ii) näherungsweise.",
+      "hint": "Für (a): Bei der partiellen Ableitung nach $y$ ist $x$ eine Konstante. Benutze die Produktregel. Für (b): Exakt = $f(2; 2{,}1) - f(2; 2)$. Näherung = partielle Ableitung nach $y$ mal $\\Delta y$.",
+      "solution": "**Teilaufgabe (a):**\n\n$f(x, y) = xy(5-x-y) = 5xy - x^2 y - xy^2$.\n\nPartielle Ableitung nach $y$ (x gilt als Konstante):\n$$\\frac{\\partial f}{\\partial y} = 5x - x^2 - 2xy = x(5 - x - 2y)$$\n\nAn der Stelle $(2, 2)$:\n$$\\frac{\\partial f}{\\partial y}(2, 2) = 2 \\cdot (5 - 2 - 2 \\cdot 2) = 2 \\cdot (-1) = -2$$\n\n**Anschauliche Bedeutung:** Wenn man $y$ bei festem $x=2$ um eine kleine Einheit erhöht, nimmt $f$ näherungsweise um $2$ ab. Die Funktion steigt an der Stelle $(2,2)$ in $y$-Richtung mit Steigung $-2$.\n\n**Teilaufgabe (b):**\n\n**(i) Exakter Zuwachs:**\n\n$f(2, 2) = 2 \\cdot 2 \\cdot (5 - 2 - 2) = 4 \\cdot 1 = 4$\n\n$f(2, 2{,}1) = 2 \\cdot 2{,}1 \\cdot (5 - 2 - 2{,}1) = 4{,}2 \\cdot 0{,}9 = 3{,}78$\n\nExakter Zuwachs: $\\Delta f = f(2; 2{,}1) - f(2; 2) = 3{,}78 - 4 = -0{,}22$\n\n**(ii) Näherungsweiser Zuwachs:**\n\n$\\Delta y = 2{,}1 - 2 = 0{,}1$\n\n$$df \\approx \\frac{\\partial f}{\\partial y}(2, 2) \\cdot \\Delta y = (-2) \\cdot 0{,}1 = -0{,}2$$\n\nVergleich: Exakt $-0{,}22$, Näherung $-0{,}2$. Fehler: $0{,}02$ (ca. 9% Abweichung – bei kleinerem $\\Delta y$ wäre die Näherung noch besser)."
+    },
+    {
+      "id": "jac-ex-02",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 0, Aufgabe 0.2 [Klausuraufgabe WS 2017/18]",
+      "source": "Blatt 0, 06. April 2026",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Eine Funktion $f(x, y, z, u): \\mathbb{R}^4 \\to \\mathbb{R}$ hat an der Stelle $\\vec{a}^* = (0, 5, 4, -3)^T$ den Gradienten $\\operatorname{grad} f(\\vec{a}^*) = (-2, 0, 1, -3)$ und den Funktionswert $v = f(\\vec{a}^*) = 6$.\n\n(a) Berechnen Sie näherungsweise mit Hilfe des vollständigen Differentials die relative prozentuale Änderung von $f(\\vec{a}^*)$, wenn $\\vec{a}^*$ geändert wird zu $\\vec{a} = (-0{,}3, 5{,}1, 4, -2{,}9)^T$.\n\n(b) Bestimmen Sie die Tangentialhyperebene von $f$ im Punkt $(\\vec{a}^*, f(\\vec{a}^*))$ in Koordinatenform. Für welche $b \\in \\mathbb{R}$ liegt der Punkt $(b, 2b, 3b, 4b, 5b)^T$ in der Ebene?",
+      "hint": "Für (a): $d\\vec{x} = \\vec{a} - \\vec{a}^*$ berechnen. Vollständiges Differential: $df = \\operatorname{grad} f \\cdot d\\vec{x}$. Relative Änderung: $df / f(\\vec{a}^*)$. Für (b): Tangentialhyperebene $x_5 = f(\\vec{a}^*) + \\operatorname{grad} f(\\vec{a}^*) \\cdot (\\vec{x} - \\vec{a}^*)$. Dann $(b, 2b, 3b, 4b)$ für $(x,y,z,u)$ und $5b$ für $x_5$ einsetzen.",
+      "solution": "**Teilaufgabe (a):**\n\nSchritt 1: Änderungsvektor $d\\vec{x}$ berechnen:\n$$d\\vec{x} = \\vec{a} - \\vec{a}^* = \\begin{pmatrix} -0{,}3-0 \\\\ 5{,}1-5 \\\\ 4-4 \\\\ -2{,}9-(-3) \\end{pmatrix} = \\begin{pmatrix} -0{,}3 \\\\ 0{,}1 \\\\ 0 \\\\ 0{,}1 \\end{pmatrix}$$\n\nSchritt 2: Vollständiges Differential:\n$$df = \\operatorname{grad} f(\\vec{a}^*) \\cdot d\\vec{x} = (-2)(-0{,}3) + 0 \\cdot 0{,}1 + 1 \\cdot 0 + (-3)(0{,}1) = 0{,}6 + 0 + 0 - 0{,}3 = 0{,}3$$\n\nSchritt 3: Relative prozentuale Änderung:\n$$\\frac{df}{f(\\vec{a}^*)} \\cdot 100\\% = \\frac{0{,}3}{6} \\cdot 100\\% = 5\\%$$\n\n**Teilaufgabe (b):**\n\nTangentialhyperebene allgemein:\n$$x_5 = f(\\vec{a}^*) + \\operatorname{grad} f(\\vec{a}^*) \\cdot (\\vec{x} - \\vec{a}^*)$$\n\nMit den konkreten Werten ($\\vec{x} = (x, y, z, u)^T$, $\\vec{a}^* = (0, 5, 4, -3)^T$):\n$$x_5 = 6 + (-2)(x - 0) + 0(y-5) + 1(z-4) + (-3)(u-(-3))$$\n$$x_5 = 6 - 2x + 0 + z - 4 - 3u - 9 = -2x + z - 3u - 7$$\n\nIn Koordinatenform: $x_5 = -2x + z - 3u - 7$\n\nFür welches $b$ liegt $(b, 2b, 3b, 4b, 5b)^T$ in der Ebene? (Die 5. Koordinate $5b$ ist $x_5$.)\n\nEinsetzen: $x = b$, $y = 2b$ (fällt raus, da Koeffizient 0), $z = 3b$, $u = 4b$, $x_5 = 5b$:\n$$5b = -2b + 3b - 3 \\cdot 4b - 7 = -2b + 3b - 12b - 7 = -11b - 7$$\n$$5b + 11b = -7 \\implies 16b = -7 \\implies b = -\\frac{7}{16}$$"
+    },
+    {
+      "id": "jac-ex-03",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 0, Aufgabe 0.3",
+      "source": "Blatt 0, 06. April 2026",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "(a) Bestimmen Sie die beiden stationären Punkte der Funktion $f(x, y, z) = xy + x^2 e^{-y} - (z+1)^2 + 3$.\n\n(b) Bestimmen Sie die drei stationären Punkte von $f(x, y) = 3x^2 + 3x^2 y + 6y^2 - 3$.",
+      "hint": "Stationäre Punkte: $\\operatorname{grad} f = \\vec{0}$, d.h. alle partiellen Ableitungen gleich Null setzen. Löse das entstandene Gleichungssystem systematisch.",
+      "solution": "**Teilaufgabe (a): $f(x, y, z) = xy + x^2 e^{-y} - (z+1)^2 + 3$**\n\nPartielle Ableitungen:\n$$\\frac{\\partial f}{\\partial x} = y + 2x e^{-y} = 0 \\quad (1)$$\n$$\\frac{\\partial f}{\\partial y} = x - x^2 e^{-y} = 0 \\quad (2)$$\n$$\\frac{\\partial f}{\\partial z} = -2(z+1) = 0 \\quad (3)$$\n\nAus (3): $z = -1$.\n\nAus (2): $x(1 - x e^{-y}) = 0$, also $x = 0$ oder $xe^{-y} = 1$ (d.h. $x = e^y$).\n\n**Fall 1:** $x = 0$. Aus (1): $y = 0$. Stationärer Punkt: $(0, 0, -1)$.\n\n**Fall 2:** $x = e^y$. Aus (1): $y + 2e^y e^{-y} = y + 2 = 0 \\Rightarrow y = -2$. Dann $x = e^{-2}$. Stationärer Punkt: $(e^{-2}, -2, -1)$.\n\n**Ergebnis:** Stationäre Punkte: $(0, 0, -1)$ und $(e^{-2}, -2, -1)$.\n\n---\n\n**Teilaufgabe (b): $f(x, y) = 3x^2 + 3x^2 y + 6y^2 - 3$**\n\nPartielle Ableitungen:\n$$\\frac{\\partial f}{\\partial x} = 6x + 6xy = 6x(1+y) = 0 \\quad (1)$$\n$$\\frac{\\partial f}{\\partial y} = 3x^2 + 12y = 0 \\quad (2)$$\n\nAus (1): $x = 0$ oder $y = -1$.\n\n**Fall 1:** $x = 0$. Aus (2): $12y = 0 \\Rightarrow y = 0$. Punkt: $(0, 0)$.\n\n**Fall 2:** $y = -1$. Aus (2): $3x^2 + 12(-1) = 0 \\Rightarrow 3x^2 = 12 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$. Punkte: $(2, -1)$ und $(-2, -1)$.\n\n**Ergebnis:** Drei stationäre Punkte: $(0, 0)$, $(2, -1)$, $(-2, -1)$."
+    },
+    {
+      "id": "jac-ex-04",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 0, Aufgabe 0.4",
+      "source": "Blatt 0, 06. April 2026",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": true,
+      "prompt": "Bestimmen Sie für die vektorwertige Funktion $\\vec{F}: \\mathbb{R}^4_+ \\to \\mathbb{R}^3$\n$$\\vec{F}(x_1, x_2, x_3, x_4) = \\begin{pmatrix} \\sqrt{x_1^3+1} \\cdot \\ln(x_2) + \\frac{x_2}{x_4} + 2 \\\\ x_1^{x_2} + e^{x_3 - x_4^2} \\\\ x_1 x_2 x_3 x_4 \\end{pmatrix}$$\ndie Jacobi-Matrix $\\operatorname{Jac}\\vec{F}(x_1, x_2, x_3, x_4)$.",
+      "hint": "Die Jacobi-Matrix ist $3 \\times 4$. Leite jede Komponentenfunktion separat nach jeder Variable ab. Beachte: $\\frac{d}{dx} x^c = cx^{c-1}$, $\\frac{d}{dx} a^x = a^x \\ln a$, $\\frac{d}{dx} \\ln x = 1/x$, $\\frac{d}{dx} \\sqrt{u} = \\frac{u'}{2\\sqrt{u}}$.",
+      "solution": "Die Jacobi-Matrix hat $m=3$ Zeilen und $n=4$ Spalten.\n\n**Zeile 1: $f_1 = \\sqrt{x_1^3+1} \\cdot \\ln(x_2) + \\frac{x_2}{x_4} + 2$**\n\n$\\frac{\\partial f_1}{\\partial x_1}$: $\\ln(x_2)$ ist Konstante, Kettenregel auf $\\sqrt{x_1^3+1}$:\n$$\\frac{\\partial f_1}{\\partial x_1} = \\ln(x_2) \\cdot \\frac{3x_1^2}{2\\sqrt{x_1^3+1}}$$\n\n$\\frac{\\partial f_1}{\\partial x_2}$: Produktregel: $\\sqrt{x_1^3+1}$ ist Konstante, ableiten von $\\ln(x_2)$; dazu $x_2/x_4$:\n$$\\frac{\\partial f_1}{\\partial x_2} = \\frac{\\sqrt{x_1^3+1}}{x_2} + \\frac{1}{x_4}$$\n\n$\\frac{\\partial f_1}{\\partial x_3} = 0$ (hängt nicht von $x_3$ ab)\n\n$\\frac{\\partial f_1}{\\partial x_4}$: Ableitung von $x_2 / x_4 = x_2 \\cdot x_4^{-1}$:\n$$\\frac{\\partial f_1}{\\partial x_4} = -\\frac{x_2}{x_4^2}$$\n\n**Zeile 2: $f_2 = x_1^{x_2} + e^{x_3 - x_4^2}$**\n\n$\\frac{\\partial f_2}{\\partial x_1}$: Ableitung von $x_1^{x_2}$ (Basis variabel, Exponent $x_2$ = Konstante):\n$$\\frac{\\partial f_2}{\\partial x_1} = x_2 \\cdot x_1^{x_2-1}$$\n\n$\\frac{\\partial f_2}{\\partial x_2}$: Ableitung von $x_1^{x_2}$ (Exponent variabel: $x_1^{x_2} = e^{x_2 \\ln x_1}$):\n$$\\frac{\\partial f_2}{\\partial x_2} = x_1^{x_2} \\cdot \\ln(x_1)$$\n\n$\\frac{\\partial f_2}{\\partial x_3}$: Ableitung von $e^{x_3 - x_4^2}$ nach $x_3$:\n$$\\frac{\\partial f_2}{\\partial x_3} = e^{x_3 - x_4^2}$$\n\n$\\frac{\\partial f_2}{\\partial x_4}$: Ableitung von $e^{x_3 - x_4^2}$ nach $x_4$ (Kettenregel, innere Ableitung $-2x_4$):\n$$\\frac{\\partial f_2}{\\partial x_4} = -2x_4 \\cdot e^{x_3 - x_4^2}$$\n\n**Zeile 3: $f_3 = x_1 x_2 x_3 x_4$**\n\nProdukt aller vier Variablen. Partielle Ableitung nach $x_j$ = Produkt der anderen drei:\n$$\\frac{\\partial f_3}{\\partial x_1} = x_2 x_3 x_4, \\quad \\frac{\\partial f_3}{\\partial x_2} = x_1 x_3 x_4, \\quad \\frac{\\partial f_3}{\\partial x_3} = x_1 x_2 x_4, \\quad \\frac{\\partial f_3}{\\partial x_4} = x_1 x_2 x_3$$\n\n**Ergebnis:**\n$$\\operatorname{Jac}\\vec{F} = \\begin{pmatrix} \\frac{3x_1^2 \\ln(x_2)}{2\\sqrt{x_1^3+1}} & \\frac{\\sqrt{x_1^3+1}}{x_2} + \\frac{1}{x_4} & 0 & -\\frac{x_2}{x_4^2} \\\\ x_2 \\cdot x_1^{x_2-1} & \\ln(x_1) \\cdot x_1^{x_2} & e^{x_3-x_4^2} & -2x_4 \\cdot e^{x_3-x_4^2} \\\\ x_2 x_3 x_4 & x_1 x_3 x_4 & x_1 x_2 x_4 & x_1 x_2 x_3 \\end{pmatrix}$$"
+    },
+    {
+      "id": "jac-ex-05",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 1, Aufgabe 1.1 (a)",
+      "source": "Blatt 1, 13. April 2026",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Bestimmen Sie für $\\vec{F}: \\mathbb{R}^4 \\to \\mathbb{R}^2$ mit\n$$\\vec{F}(\\vec{x}) = \\begin{pmatrix} x_1 x_2 x_3 + x_3 x_4 \\\\ x_1^2 + x_2^2 + x_3^2 + x_4^2 \\end{pmatrix}$$\nan $\\vec{a}^* = (1,1,1,1)^T$, $d\\vec{x} = (0{,}1, 0{,}1, 0{,}1, 0{,}1)^T$:\n- die Jacobi-Matrix (symbolisch)\n- die Jacobi-Matrix an $\\vec{a}^*$ und ihren Rang\n- den näherungsweisen Zuwachs beim Übergang von $\\vec{a}^*$ zu $\\vec{a}^* + d\\vec{x}$.",
+      "hint": "2 Zeilen (f1, f2), 4 Spalten (x1, x2, x3, x4). Rang = Anzahl linear unabhängiger Zeilen. Zuwachs = Jac(a*) · dx.",
+      "solution": "**Jacobi-Matrix symbolisch:**\n$$\\operatorname{Jac}\\vec{F}(\\vec{x}) = \\begin{pmatrix} x_2 x_3 & x_1 x_3 & x_1 x_2 + x_4 & x_3 \\\\ 2x_1 & 2x_2 & 2x_3 & 2x_4 \\end{pmatrix}$$\n\n**Berechnung der Einträge:**\n- $\\frac{\\partial f_1}{\\partial x_1} = x_2 x_3$ (Produkt der anderen zwei)\n- $\\frac{\\partial f_1}{\\partial x_2} = x_1 x_3$\n- $\\frac{\\partial f_1}{\\partial x_3} = x_1 x_2 + x_4$ (Produktregel: zwei Summanden enthalten $x_3$)\n- $\\frac{\\partial f_1}{\\partial x_4} = x_3$\n- $\\frac{\\partial f_2}{\\partial x_j} = 2x_j$ für $j=1,2,3,4$\n\n**An $\\vec{a}^* = (1,1,1,1)^T$:**\n$$\\operatorname{Jac}\\vec{F}(1,1,1,1) = \\begin{pmatrix} 1 & 1 & 2 & 1 \\\\ 2 & 2 & 2 & 2 \\end{pmatrix}$$\n\n**Rang:** Zeile 1 = $(1,1,2,1)$ und Zeile 2 = $(2,2,2,2)$. Beide nicht proportional (z.B. $1/2 \\neq 2/2$). Rang $= 2$.\n\n**Näherungsweiser Zuwachs:**\n$$d\\vec{F} = \\begin{pmatrix} 1 & 1 & 2 & 1 \\\\ 2 & 2 & 2 & 2 \\end{pmatrix} \\begin{pmatrix} 0{,}1 \\\\ 0{,}1 \\\\ 0{,}1 \\\\ 0{,}1 \\end{pmatrix} = \\begin{pmatrix} 0{,}1+0{,}1+0{,}2+0{,}1 \\\\ 0{,}2+0{,}2+0{,}2+0{,}2 \\end{pmatrix} = \\begin{pmatrix} 0{,}5 \\\\ 0{,}8 \\end{pmatrix}$$"
+    },
+    {
+      "id": "jac-ex-06",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 1, Aufgabe 1.1 (b)",
+      "source": "Blatt 1, 13. April 2026",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Bestimmen Sie für $\\vec{F}: \\mathbb{R}^2 \\to \\mathbb{R}^3$ mit\n$$\\vec{F}(\\vec{x}) = \\begin{pmatrix} xy \\\\ 2x + 2y \\\\ x^2 + y^2 \\end{pmatrix}$$\nan $\\vec{a}^* = (1,1)^T$, $d\\vec{x} = (0{,}2, -0{,}1)^T$:\n- die Jacobi-Matrix (symbolisch)\n- die Jacobi-Matrix an $\\vec{a}^*$ und ihren Rang\n- den näherungsweisen Zuwachs.",
+      "hint": "3 Zeilen (f1, f2, f3), 2 Spalten (x, y). Rang ≤ 2.",
+      "solution": "**Jacobi-Matrix symbolisch:**\n$$\\operatorname{Jac}\\vec{F}(x,y) = \\begin{pmatrix} y & x \\\\ 2 & 2 \\\\ 2x & 2y \\end{pmatrix}$$\n\n**An $\\vec{a}^* = (1,1)^T$:**\n$$\\operatorname{Jac}\\vec{F}(1,1) = \\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$$\n\n**Rang:** Zeilen 2 und 3 sind identisch: $(2, 2) = (2, 2)$. Also sind max. 2 Zeilen linear unabhängig. Zeile 1 $(1,1)$ und Zeile 2 $(2,2)$ sind proportional ($2 \\cdot (1,1) = (2,2)$). Daher: Rang $= 1$.\n\n**Näherungsweiser Zuwachs:**\n$$d\\vec{F} = \\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\\\ 2 & 2 \\end{pmatrix} \\begin{pmatrix} 0{,}2 \\\\ -0{,}1 \\end{pmatrix} = \\begin{pmatrix} 0{,}2 - 0{,}1 \\\\ 0{,}4 - 0{,}2 \\\\ 0{,}4 - 0{,}2 \\end{pmatrix} = \\begin{pmatrix} 0{,}1 \\\\ 0{,}2 \\\\ 0{,}2 \\end{pmatrix}$$"
+    },
+    {
+      "id": "jac-ex-07",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 1, Aufgabe 1.4 (Zusatzaufgabe)",
+      "source": "Blatt 1, 13. April 2026",
+      "type": "zusatzaufgabe",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Die Nachfrage nach zwei Gütern lässt sich beschreiben durch:\n$$q_1 = 6p_1^{-2} p_2^{3/2} y, \\qquad q_2 = 4 p_1 p_2^{-1} y^2$$\nWie ändert sich näherungsweise die Nachfrage an der Stelle $\\vec{a}^* = (p_1^*, p_2^*, y^*)^T = (6, 9, 2)^T$, wenn sich die Preise um $0{,}1$ erhöhen und das Einkommen um $0{,}1$ fällt?",
+      "hint": "Bilde die Jacobi-Matrix von $\\vec{F} = (q_1, q_2)^T$ nach $(p_1, p_2, y)$. Werte sie an $\\vec{a}^*$ aus. Dann: $d\\vec{q} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot d\\vec{p}$ mit $d\\vec{p} = (0{,}1, 0{,}1, -0{,}1)^T$.",
+      "solution": "**Schritt 1: Jacobi-Matrix symbolisch**\n\nFür $q_1 = 6p_1^{-2}p_2^{3/2}y$:\n- $\\frac{\\partial q_1}{\\partial p_1} = -12p_1^{-3}p_2^{3/2}y$\n- $\\frac{\\partial q_1}{\\partial p_2} = 9p_1^{-2}p_2^{1/2}y$\n- $\\frac{\\partial q_1}{\\partial y} = 6p_1^{-2}p_2^{3/2}$\n\nFür $q_2 = 4p_1 p_2^{-1} y^2$:\n- $\\frac{\\partial q_2}{\\partial p_1} = 4p_2^{-1}y^2$\n- $\\frac{\\partial q_2}{\\partial p_2} = -4p_1 p_2^{-2}y^2$\n- $\\frac{\\partial q_2}{\\partial y} = 8p_1 p_2^{-1}y$\n\n**Schritt 2: Auswertung an $\\vec{a}^* = (6, 9, 2)^T$**\n\nHilfswerte: $p_1^{-2} = 1/36$, $p_1^{-3} = 1/216$, $p_2^{3/2} = 27$, $p_2^{1/2} = 3$, $p_2^{-1} = 1/9$, $p_2^{-2} = 1/81$, $y^2 = 4$.\n\n- $\\frac{\\partial q_1}{\\partial p_1}(\\vec{a}^*) = -12 \\cdot \\frac{1}{216} \\cdot 27 \\cdot 2 = -\\frac{12 \\cdot 54}{216} = -3$\n- $\\frac{\\partial q_1}{\\partial p_2}(\\vec{a}^*) = 9 \\cdot \\frac{1}{36} \\cdot 3 \\cdot 2 = \\frac{9 \\cdot 6}{36} = \\frac{3}{2}$\n- $\\frac{\\partial q_1}{\\partial y}(\\vec{a}^*) = 6 \\cdot \\frac{1}{36} \\cdot 27 = \\frac{162}{36} = \\frac{9}{2}$\n- $\\frac{\\partial q_2}{\\partial p_1}(\\vec{a}^*) = 4 \\cdot \\frac{1}{9} \\cdot 4 = \\frac{16}{9}$\n- $\\frac{\\partial q_2}{\\partial p_2}(\\vec{a}^*) = -4 \\cdot 6 \\cdot \\frac{1}{81} \\cdot 4 = -\\frac{96}{81} = -\\frac{32}{27}$\n- $\\frac{\\partial q_2}{\\partial y}(\\vec{a}^*) = 8 \\cdot 6 \\cdot \\frac{1}{9} \\cdot 2 = \\frac{96}{9} = \\frac{32}{3}$\n\n$$\\operatorname{Jac}\\vec{F}(\\vec{a}^*) = \\begin{pmatrix} -3 & \\frac{3}{2} & \\frac{9}{2} \\\\ \\frac{16}{9} & -\\frac{32}{27} & \\frac{32}{3} \\end{pmatrix}$$\n\n**Schritt 3: Näherungsweiser Zuwachs**, $d\\vec{a} = (0{,}1, 0{,}1, -0{,}1)^T$:\n\n$$dq_1 = -3 \\cdot 0{,}1 + \\frac{3}{2} \\cdot 0{,}1 + \\frac{9}{2} \\cdot (-0{,}1) = -0{,}3 + 0{,}15 - 0{,}45 = -0{,}6$$\n\n$$dq_2 = \\frac{16}{9} \\cdot 0{,}1 - \\frac{32}{27} \\cdot 0{,}1 + \\frac{32}{3} \\cdot (-0{,}1) \\approx 0{,}178 - 0{,}119 - 1{,}067 \\approx -1{,}007$$\n\n**Ergebnis:** Die Nachfrage nach Gut 1 sinkt näherungsweise um $0{,}6$ Einheiten, die Nachfrage nach Gut 2 sinkt näherungsweise um ca. $1{,}007$ Einheiten."
+    },
+    {
+      "id": "jac-ex-08",
+      "topicId": "jacobi-matrix",
+      "label": "Übungsblatt 1, Aufgabe 1.5 (Zusatzaufgabe) [Klausuraufgabe SoSe 19]",
+      "source": "Blatt 1, 13. April 2026",
+      "type": "zusatzaufgabe",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Sei $\\vec{F}(x, y, z) = \\begin{pmatrix} x y^2 \\\\ e^{xz} \\\\ x/y + z \\end{pmatrix}$. Berechnen Sie die Jacobi-Matrix von $\\vec{F}$ im Punkt $\\vec{a}^* = (2, 1, 0)^T$. Wie ändert sich näherungsweise der Wert von $\\vec{F}$, wenn anstelle von $\\vec{a}^*$ der Punkt $\\vec{a} = (2{,}1, 0{,}9, -0{,}2)^T$ betrachtet wird?",
+      "hint": "Jacobi-Matrix ist 3×3. Schritt $d\\vec{x} = (0{,}1, -0{,}1, -0{,}2)^T$.",
+      "solution": "**Jacobi-Matrix symbolisch:**\n\n$f_1 = xy^2$:\n- $\\frac{\\partial f_1}{\\partial x} = y^2$, $\\frac{\\partial f_1}{\\partial y} = 2xy$, $\\frac{\\partial f_1}{\\partial z} = 0$\n\n$f_2 = e^{xz}$:\n- $\\frac{\\partial f_2}{\\partial x} = z e^{xz}$, $\\frac{\\partial f_2}{\\partial y} = 0$, $\\frac{\\partial f_2}{\\partial z} = x e^{xz}$\n\n$f_3 = x/y + z = xy^{-1} + z$:\n- $\\frac{\\partial f_3}{\\partial x} = y^{-1} = 1/y$, $\\frac{\\partial f_3}{\\partial y} = -xy^{-2} = -x/y^2$, $\\frac{\\partial f_3}{\\partial z} = 1$\n\n$$\\operatorname{Jac}\\vec{F}(x,y,z) = \\begin{pmatrix} y^2 & 2xy & 0 \\\\ ze^{xz} & 0 & xe^{xz} \\\\ 1/y & -x/y^2 & 1 \\end{pmatrix}$$\n\n**An $\\vec{a}^* = (2, 1, 0)^T$:** ($y^2=1$, $2xy=4$, $ze^{xz}=0$, $xe^{xz}=2e^0=2$, $1/y=1$, $x/y^2=2$)\n\n$$\\operatorname{Jac}\\vec{F}(2,1,0) = \\begin{pmatrix} 1 & 4 & 0 \\\\ 0 & 0 & 2 \\\\ 1 & -2 & 1 \\end{pmatrix}$$\n\n**Näherungsweiser Zuwachs**, $d\\vec{x} = (0{,}1, -0{,}1, -0{,}2)^T$:\n$$d\\vec{F} = \\begin{pmatrix} 1 & 4 & 0 \\\\ 0 & 0 & 2 \\\\ 1 & -2 & 1 \\end{pmatrix} \\begin{pmatrix} 0{,}1 \\\\ -0{,}1 \\\\ -0{,}2 \\end{pmatrix} = \\begin{pmatrix} 0{,}1 - 0{,}4 + 0 \\\\ 0 + 0 - 0{,}4 \\\\ 0{,}1 + 0{,}2 - 0{,}2 \\end{pmatrix} = \\begin{pmatrix} -0{,}3 \\\\ -0{,}4 \\\\ 0{,}1 \\end{pmatrix}$$"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "id": "hr-personalauswahl",
+  "subjectId": "bwl",
+  "title": "Personalauswahl",
+  "summary": "Verfahren zur Auswahl geeigneter Bewerber: Vorauswahl, Einstellungsinterviews, Assessment Center und psychologische Tests — bewertet anhand der Gütekriterien Objektivität, Reliabilität und Validität. Schwerpunkt: prognostische Validität nach Sackett et al. (2021) und der Vergleich mit Schmidt & Hunter (1998).",
+  "order": 13,
+  "estMinutes": 45,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "heading": "Was ist Personalauswahl — und warum ist sie so schwierig?",
+      "body": "Stell dir vor, du bist Teamleiterin bei einem Automobilzulieferer und suchst eine Expertin für autonomes Fahren. Dutzende Bewerbungen liegen vor dir. Wen stellst du ein? Genau darum geht es bei der **Personalauswahl**.\n\n**Definition (Festing et al., 2011):** Die Personalauswahl umfasst den Prozess der konkreten Informationssammlung über Eigenschaften und Fähigkeiten der Bewerber sowie deren Auswertung. Sie endet mit der Entscheidung, wer für eine bestimmte Position eingestellt werden soll.\n\n**Das zentrale Problem: Informationsasymmetrie.** Du siehst den Lebenslauf, hörst das Interview — aber ob jemand wirklich gut in der Stelle performen wird, weißt du erst hinterher. Die Personalauswahl versucht, diese Unsicherheit zu reduzieren.\n\n**Ziel:** Mitarbeitende mit hohem *Person-Job-Fit* (passt die Person zur Stelle?) und *Person-Organization-Fit* (passt die Person zur Unternehmenskultur?) finden.\n\n**Typischer Ablauf — der Auswahlprozess als Trichter:**",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "trichter-auswahl",
+          "title": "Auswahlprozess als Trichter",
+          "caption": "Vom großen Bewerberpool zur finalen Einstellungsentscheidung — jede Stufe reduziert die Kandidatenzahl.",
+          "code": "graph TD\n  A[Bewerberpool: alle Einsendungen] --> B[Vorauswahl: Unterlagen sichten]\n  B --> C[Einladung: Interviews / Tests]\n  C --> D[Vertiefung: Assessment Center]\n  D --> E[Einstellungsentscheidung]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Aktuelle Schlagzeilen zur Personalauswahl",
+          "body": "- 'Blinde Personaler casten besser' (WiWo 2017) — anonymisierte Bewerbungen reduzieren Vorurteile\n- 'Sachsen werden für inkompetenter gehalten' (WiWo 2017) — Akzent beeinflusst Bewertung\n- 'Sie wollen den Job? Gewinnen Sie beim Computerspiel!' (Welt 2017) — gamifizierte Auswahl\n\nDiese Beispiele zeigen: Selbst gut gemeinte Auswahlverfahren können verzerrt sein. Deshalb brauchen wir wissenschaftliche Gütekriterien."
+        }
+      ]
+    },
+    {
+      "id": "vorauswahl-verfahren",
+      "heading": "Verfahren im Überblick: Von der Bewerbungsmappe bis zum AC",
+      "body": "Unternehmen nutzen vielfältige Auswahlverfahren — oft in Kombination. Hier ein Überblick der drei Hauptkategorien:\n\n**1. Vorauswahl (Sichtung der Unterlagen)**\nBevor jemand zum Gespräch eingeladen wird, werden die schriftlichen Unterlagen gesichtet:\n- **Bewerbungsunterlagen**: Anschreiben, Lebenslauf, Zeugnisse\n- **Personalfragebögen**: strukturierte Formulare mit weiteren Angaben zu Motivation und Biografie\n- **CV-Parsing / Robot Recruiting**: Algorithmen scannen Lebensläufe automatisch auf Schlüsselbegriffe (z.B. bei Xerox, Bosch)\n\n**2. Einstellungsinterviews (Vorstellungsgespräche)**\nDas klassischste Instrument. Es gibt viele Arten — von sehr offen bis sehr strukturiert.\n\n**3. Testverfahren**\n- **Leistungstests**: Prüft konkrete Fachkenntnisse (z.B. Buchhalter löst Buchhaltungsaufgaben)\n- **Intelligenztests**: Misst kognitive Fähigkeiten, logisches Denken\n- **Persönlichkeitstests**: z.B. Big Five (Gewissenhaftigkeit, Offenheit, Extraversion…)\n- **Biographische Fragebögen**: Fragen zur Lebensgeschichte — welche Erfahrungen hat jemand gemacht?\n- **Assessment Center (AC)**: Mehrtägige Veranstaltung mit verschiedenen Übungen\n\n**Wer trifft die Entscheidung?**\nDas ist gar nicht so einfach! Mögliche Entscheider: Personalabteilung, direkter Vorgesetzter, das Team oder die Geschäftsführung. In der Praxis ist es oft eine Kombination.",
+      "callouts": [
+        {
+          "kind": "tipp",
+          "title": "Kostenüberlegung",
+          "body": "Aufwändigere Verfahren (AC) sind teurer, liefern aber oft mehr Informationen. Die Faustregel: Die Kosten des Verfahrens sollten durch den Nutzen (bessere Personalentscheidungen = höhere Leistung, weniger Fluktuation) gerechtfertigt sein."
+        }
+      ]
+    },
+    {
+      "id": "interviews",
+      "heading": "Einstellungsinterviews: strukturiert vs. unstrukturiert",
+      "body": "Das Einstellungsinterview ist das mit Abstand am häufigsten eingesetzte Auswahlverfahren. Aber nicht alle Interviews sind gleich gut.\n\n**Das Kernproblem des unstrukturierten Interviews:**\nWenn jeder Interviewer spontan fragt, was ihm einfällt, entstehen hohe **Subjektivität** und damit geringe Validität und Reliabilität. Zwei Interviewer können denselben Kandidaten komplett unterschiedlich beurteilen.\n\n**Was macht ein gutes Interview aus?**\n- **Strukturiert und standardisiert**: Alle Kandidaten werden mit denselben Fragen in derselben Reihenfolge befragt\n- **Quantitative Bewertung**: Antworten werden anhand festgelegter Skalen bewertet, nicht nach Bauchgefühl\n- **Wenige Beurteilungsdimensionen**: Nicht 20 Kriterien, sondern 5–7 klar definierte\n- **Mehrere Interviewende**: Mindestens 2 Personen reduzieren individuelle Verzerrungen\n\n**Die vier Interviewtypen:**\n\n| Typ | Logik | Beispielfrage |\n|---|---|---|\n| **Stressinterview** | Kandidat unter Druck setzen, Reaktion beobachten | 'Warum sollten wir ausgerechnet Sie nehmen?' (provokativ) |\n| **Tiefeninterview** | Persönlichkeit und Motivation ergründen | 'Erzählen Sie von einem Misserfolg — was haben Sie daraus gelernt?' |\n| **Situatives Interview** | Hypothetische Situationen: Wie würdest du reagieren? | Ankerantworten legen fest, was 0, 3 oder 5 Punkte bedeutet |\n| **Multimodales Interview** | Kombination aus strukturierten & biografischen Fragen | Standard in vielen DAX-Unternehmen |\n\n**Das situative Interview im Detail:**\nGrundlage ist die *Critical Incidents Technique*: Man sammelt reale, kritische Arbeitssituationen aus dem Berufsalltag und fragt: 'Wie würden Sie sich in Situation X verhalten?'\n\n**Beispiel aus der Vorlesung:**\n> 'Sie sind Vorgesetzte/r von Herrn Meier und riechen neuerdings eine Alkoholfahne im Gespräch. Weiterhin beobachten Sie, dass seine Kollegen ihn unterstützen. Was machen Sie?'\n> - *Ich schweige und beobachte weiter* → 0 Punkte\n> - *Ich mahne ihn ab* → 3 Punkte\n> - *Ich suche das vertrauliche Gespräch* → 5 Punkte\n\nDie **Ankerantworten** werden vorab von Experten festgelegt — das macht das Verfahren objektiver.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Strukturiert schlägt unstrukturiert",
+          "body": "Strukturierte Interviews haben eine prognostische Validität von ca. 0,42 (Sackett et al. 2021) — also fast doppelt so hoch wie unstrukturierte (0,19). Der Aufwand der Strukturierung zahlt sich aus!"
+        }
+      ]
+    },
+    {
+      "id": "assessment-center",
+      "heading": "Assessment Center (AC): Das aufwändige Verfahren",
+      "body": "**Was ist ein Assessment Center?**\nEin Assessment Center (AC) ist ein mehrtägiges Auswahlverfahren, bei dem mehrere Kandidaten gleichzeitig durch mehrere Beobachter in verschiedenen Übungen beobachtet und bewertet werden.\n\n**Definition (Oechsler, 2011):** ACs dienen der Einschätzung und Beurteilung einer Person, Gruppe oder Leistung. Man unterscheidet zwischen Einzel-Assessment und Gruppen-Assessment Centern.\n\n**Die drei Kernmerkmale von ACs:**\n\n1. **Verfahrensvielfalt** — Mix aus klassischen Auswahlverfahren und neuartigen Versuchsanordnungen (Laborsituationen, Fallstudien). Kein einzelnes Verfahren, sondern ein Bündel.\n2. **Multi-Source-Gedanke** — Mehrere Kandidaten werden gleichzeitig in verschiedenen Übungen (Einzel und Gruppe) beobachtet. So entstehen vergleichbare Daten.\n3. **Mehraugenprinzip** — Mehrere geschulte Beobachter bewerten unabhängig voneinander — das erhöht die Objektivität.\n\n**Typische Elemente eines ACs:**\n- Interviews (strukturiert)\n- Leistungstests & Intelligenztests\n- **Postkorbübung**: Kandidat erhält stapelweise E-Mails/Aufgaben und muss priorisieren — simuliert den Arbeitsalltag einer Führungskraft\n- **Rollenspiel/Rollensimulation**: z.B. ein schwieriges Mitarbeitergespräch führen\n- **Gruppendiskussion**: Wie verhält sich jemand im Team?\n- Fallstudie, Präsentation, Vorträge\n\n**Praxisbeispiel — interkulturelle Kompetenz im AC:**\nBei internationalen Unternehmen werden im AC oft Kompetenzen wie *Ambiguitätstoleranz* (mit Unsicherheit umgehen), *Verhaltensflexibilität* und *Einfühlungsvermögen* geprüft — z.B. durch ein Rollenspiel, in dem ein verspäteter mexikanischer Geschäftspartner auftaucht.\n\n**Probleme und Grenzen des ACs:**\n- **Self-fulfilling prophecy**: Wer ins AC eingeladen wird, hat schon eine Vorselektion durchlaufen — Erfolg im AC könnte auch an Vorselektion liegen\n- **Legitimierungsfunktion**: ACs wirken wissenschaftlich und fair, können aber trotzdem subjektiv sein\n- **Erlernbarkeit**: Kandidaten können AC-Übungen trainieren (Kriterium-Kontamination)\n- **Kosten**: ACs sind teuer in der Durchführung",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "ac-guete",
+          "title": "Güte des Assessment Centers nach Studien",
+          "headers": ["Kriterium", "Studie", "Ergebnis", "Bewertung"],
+          "rows": [
+            ["Reliabilität", "Howard (1974)", "Korrelation 0,60–0,98", "+  gut"],
+            ["Progn. Validität", "Schmidt & Hunter (1998)", "r = 0,37", "+/- mittel"],
+            ["Progn. Validität", "Hardison & Sackett (2007)", "r = 0,22 (Gesamt), 0,27 (Beförderung), 0,07 (Fluktuation)", "+/- gemischt"],
+            ["Progn. Validität", "Holzenkamp et al. (2008)", "r = 0,36 (Gesamt)", "+/- mittel"],
+            ["Konstruktvalidität", "Woehr et al. (2007)", "Konvergent: 0,33 / Diskriminant: 0,54", "- problematisch"],
+            ["Inhaltsvalidität", "Dreher & Sackett (1981)", "—", "als gegeben betrachtet (Augenscheinvalidität)"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Verbesserungsansätze für ACs (Woehr & Arthur, 2003)",
+          "body": "**Konstruktvalidität verbessern:** wenige Beurteilungsdimensionen, wenige Kandidaten pro Beobachter, Beurteilungen über Übungen hinweg, Psychologen (statt Manager) als Beobachtende, lange Beobachterschulungen.\n\n**Soziale Validität** (Akzeptanz bei Kandidaten): realistische Informationen über Organisation und Tätigkeit, Transparenz der Anforderungsdimensionen, Feedback nach dem AC."
+        }
+      ]
+    },
+    {
+      "id": "guetekriterien",
+      "heading": "Gütekriterien: Woran erkennt man ein gutes Auswahlverfahren?",
+      "body": "Um Auswahlverfahren wissenschaftlich zu bewerten, nutzen wir drei **Gütekriterien** (Oechsler, 2011). Diese bauen aufeinander auf: ohne Objektivität keine Reliabilität, ohne Reliabilität keine Validität.\n\n**1. Objektivität**\n*Was ist das?* Das Ausmaß, in dem ein Auswahlverfahren **unabhängig von der testenden Person** ist.\n*Leitfrage:* Würde eine andere Interviewerin oder ein anderer Interviewer zu denselben Testergebnissen kommen?\n*Drei Arten:*\n- **Durchführungsobjektivität**: Das Verfahren läuft bei jedem Kandidaten gleich ab (standardisierte Anweisung, gleiche Bedingungen)\n- **Auswertungsobjektivität**: Die Auswertung erfolgt nach klaren Regeln (nicht Bauchgefühl)\n- **Interpretationsobjektivität**: Die Ergebnisse werden gleich gedeutet (Normtabellen statt freie Einschätzung)\n\n**2. Reliabilität (Zuverlässigkeit)**\n*Was ist das?* Die Genauigkeit und Zuverlässigkeit der Messung — frei von Zufallsfehlern.\n*Leitfrage:* Wenn ich denselben Kandidaten zu einem späteren Zeitpunkt noch einmal teste, komme ich zu ähnlichen Ergebnissen?\n*Störquellen:* Stimmung des Kandidaten, Wetter, Müdigkeit, Tagesform des Interviewers.\n*Messung:* z.B. Retest-Reliabilität (zweimal testen), Interrater-Reliabilität (zwei Beobachter vergleichen).\n\n**3. Validität (Gültigkeit)**\n*Was ist das?* Das Ausmaß, in dem ein Verfahren tatsächlich das misst, was es messen soll.\n*Leitfrage:* Messen wir wirklich das, was wir messen wollen?\n*Drei Arten:*\n- **Inhaltsvalidität**: Deckt das Verfahren alle relevanten Anforderungen der Stelle ab?\n- **Konstruktvalidität**: Messen wir den richtigen theoretischen Konstrukt (z.B. 'Intelligenz') korrekt? *Konvergente Validität*: Das Verfahren korreliert mit anderen Verfahren, die dasselbe messen. *Diskriminante Validität*: Es korreliert nicht mit Verfahren, die etwas anderes messen.\n- **Prognostische (kriteriumsbezogene) Validität**: Sagt das Verfahren tatsächlich den späteren **Berufserfolg** vorher? Das ist die wichtigste Art für die Personalauswahl.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "guete-hierarchie",
+          "title": "Hierarchie der Gütekriterien",
+          "caption": "Objektivität ist Voraussetzung für Reliabilität — Reliabilität ist Voraussetzung für Validität.",
+          "code": "graph BT\n  A[Objektivität\\nUnabhängig vom Tester] --> B[Reliabilität\\nZuverlässig & fehlerfrei]\n  B --> C[Validität\\nMisst das Richtige\\nPrognostische Validität = Berufserfolg]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Analogie: Waage im Supermarkt",
+          "body": "**Objektivität**: Jede Kassiererin benutzt dieselbe Waage mit derselben Skala — nicht nach Gefühl.\n**Reliabilität**: Die Waage zeigt 1 kg Tomaten auch beim zweiten Abwiegen als 1 kg — sie misst konsistent.\n**Validität**: Die Waage misst wirklich das Gewicht — und nicht die Farbe oder den Geruch der Tomaten.\n\nEin Bewerbungsinterview kann sehr reliabel sein (immer ähnliche Ergebnisse) und trotzdem keine Validität haben — wenn es z.B. nur die Eloquenz misst, aber nicht die tatsächliche Arbeitsleistung vorhersagt."
+        }
+      ]
+    },
+    {
+      "id": "prognostische-validitaet",
+      "heading": "Prognostische Validität: Welches Verfahren sagt Berufserfolg wirklich vorher?",
+      "body": "Das ist die entscheidende Frage: Welches Auswahlverfahren **sagt die spätere Arbeitsleistung am besten vorher**? Die Antwort liefert die **prognostische (prädiktive) Validität** — ausgedrückt als Korrelationskoeffizient $r$ zwischen Auswahlverfahren und späterer Jobleistung.\n\n**Wie liest man $r$?**\n- $r = 0$: Kein Zusammenhang — das Verfahren ist nicht besser als Würfeln\n- $r = 0,3$: Schwacher bis mittlerer Zusammenhang\n- $r = 0,5$: Starker Zusammenhang\n- $r = 1,0$: Perfekte Vorhersage (in der Praxis nicht erreichbar)\n\n**Wichtig: Schmidt & Hunter (1998) vs. Sackett et al. (2021)**\n\nEine bahnbrechende Meta-Analyse von Schmidt & Hunter (1998) fasste 85 Jahre Forschungsergebnisse zusammen. Sackett et al. (2021) haben diese Werte mit moderneren statistischen Methoden *nach unten korrigiert* — weil die alten Werte eine systematische Überschätzung enthielten (Stichwort: *Overcorrection for restriction of range*).\n\n**Praktische Deutung:** Ein Verfahren mit $r = 0,42$ (strukturiertes Interview) erklärt ca. $0{,}42^2 \\approx 18\\%$ der Varianz in der späteren Jobleistung. Das klingt wenig — aber in der Personalauswahl ist das bereits gut, weil Jobleistung von hunderten Faktoren abhängt.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "validitaet-vergleich",
+          "title": "Prognostische Validität von Auswahlverfahren im Vergleich",
+          "headers": ["Auswahlverfahren", "Schmidt & Hunter (1998)", "Sackett et al. (2021)", "Veränderung", "Einordnung"],
+          "rows": [
+            ["Strukturiertes Interview", "0,51", "0,42", "-0,09", "gut — top-Empfehlung"],
+            ["Arbeitswissen-Test", "0,48", "0,40", "-0,08", "gut"],
+            ["Biografischer Fragebogen", "0,35", "0,38", "+0,03", "gut — einziger Anstieg"],
+            ["Arbeitsprobe", "0,54", "0,33", "-0,21", "mittel — starker Rückgang"],
+            ["Kognitiver Faehigkeitstest", "0,51", "0,31", "-0,20", "mittel — starker Rückgang"],
+            ["Integritaetstest", "0,41", "0,31", "-0,10", "mittel"],
+            ["Assessment Center", "0,37", "0,29", "-0,08", "mittel"],
+            ["Interessen", "0,10", "0,24", "+0,14", "angestiegen — Überraschung"],
+            ["Gewissenhaftigkeit", "0,31", "0,19", "-0,12", "gering"],
+            ["Unstrukturiertes Interview", "0,38", "0,19", "-0,19", "gering — trotz Beliebtheit!"],
+            ["Berufserfahrung in Jahren", "0,18", "0,07", "-0,11", "sehr gering"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kernbotschaften aus Sackett et al. (2021)",
+          "body": "1. **Strukturierte Interviews** sind deutlich besser als unstrukturierte (0,42 vs. 0,19) — Struktur zahlt sich aus!\n2. **Arbeitswissen-Tests und Biografische Fragebögen** sind ebenfalls stark.\n3. **Assessment Center** haben nur moderate Validität (0,29) — trotz hohem Aufwand.\n4. **Berufserfahrung in Jahren** sagt kaum etwas vorher (0,07) — Qualität der Erfahrung zählt, nicht Quantität.\n5. **Unstrukturiertes Interview** ist überraschend schwach (0,19) — obwohl es das beliebteste Verfahren ist.\n6. Kein Verfahren ist perfekt — am besten: Kombination mehrerer Verfahren."
+        },
+        {
+          "kind": "info",
+          "title": "LinkedIn als Auswahlverfahren (Roulin & Levashina, 2019)",
+          "body": "94% der Personalverantwortlichen nutzen LinkedIn zur Rekrutierung. Die Studie zeigt: Interrater-Reliabilität (0,39–0,65) ist mäßig. Prognostische Validität (0,20–0,25) ist gering. Profile mit Foto, vielen Kontakten und ausführlichen Einträgen werden besser bewertet — aber das muss nicht mit tatsächlicher Leistung zusammenhängen."
+        }
+      ]
+    },
+    {
+      "id": "ki-robot-recruiting",
+      "heading": "KI und Robot Recruiting: Die Zukunft der Personalauswahl?",
+      "body": "Algorithmen und KI halten Einzug in die Personalauswahl — mit Chancen und Risiken.\n\n**Robot Recruiting (Algorithmusbasierte Vorauswahl)**\nUnternehmen wie Xerox, Kenexa und Bosch setzen auf **CV-Parsing**: Ein Algorithmus scannt automatisch Lebensläufe auf festgelegte Schlüsselbegriffe und filtert so den Bewerberpool vor. Vorteile: schnell, kostengünstig, verarbeitbar große Datenmenge. Risiken: Algorithmus kann systematisch diskriminieren (z.B. bestimmte Namen oder Schulen bevorzugen), Black Box.\n\n**KI-Persönlichkeitsdiagnostik: Precire (Beispiel Talanx)**\nDas Programm **Precire** führt ein computergestütztes Interview durch. Es analysiert:\n- Akzent, Intonation, Sprachrhythmus\n- Pausen, Stimmvariation\n- Wortwahl und Satzbau\n\nDaraus zieht es Rückschlüsse auf die **Persönlichkeit** der Bewerbenden — z.B. ob jemand für eine Führungsposition bei Talanx (Versicherungskonzern) geeignet ist.\n\n**Diskussionsfrage aus der Vorlesung:** Glauben Sie, dass eine automatisierte Personalauswahl sinnvoll ist — und wenn ja/nein, warum?\n\n**Pro-Argumente:**\n- Skalierbar: Tausende Bewerbungen in kurzer Zeit\n- Potenziell objektiver als menschliche Beurteiler (kein Halo-Effekt)\n- Konsistent: jeder Kandidat erhält dieselbe Behandlung\n\n**Contra-Argumente:**\n- **Black-Box-Problem**: Entscheidungskriterien sind nicht transparent\n- **Trainingsdaten-Bias**: Wenn der Algorithmus mit historischen Daten trainiert wird, reproduziert er bestehende Diskriminierungen\n- **Gütekriterien unklar**: Prognostische Validität von KI-Tools oft nicht wissenschaftlich belegt\n- **Rechtliche Fragen**: DSGVO, Diskriminierungsverbot (AGG)",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Praxisbeispiel: Xerox und der Standort-Algorithmus",
+          "body": "Xerox nutzte einen Algorithmus, der — ohne es beabsichtigt zu haben — Bewerber aus bestimmten Stadtvierteln benachteiligte, weil dort historisch mehr Kündigungen stattfanden. Das Unternehmen erkannte das Problem und korrigierte den Algorithmus. Fazit: Auch automatische Systeme brauchen menschliche Kontrolle und regelmäßige Überprüfung auf Gütekriterien."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "hr-pa-fc-1",
+      "topicId": "hr-personalauswahl",
+      "front": "Definition Personalauswahl (Festing et al., 2011)",
+      "back": "Prozess der konkreten Informationssammlung über Eigenschaften und Fähigkeiten der Bewerber sowie deren Auswertung. Endet mit der Entscheidung, wer für eine bestimmte Position eingestellt werden soll."
+    },
+    {
+      "id": "hr-pa-fc-2",
+      "topicId": "hr-personalauswahl",
+      "front": "Was ist der Unterschied zwischen strukturiertem und unstrukturiertem Interview?",
+      "back": "**Strukturiert**: Gleiche Fragen, gleiche Reihenfolge, quantitative Bewertung anhand von Ankerantworten — höhere Objektivität und Validität (r = 0,42 nach Sackett et al. 2021).\n**Unstrukturiert**: Freies Gespräch, spontane Fragen — hohe Subjektivität, geringe Validität (r = 0,19)."
+    },
+    {
+      "id": "hr-pa-fc-3",
+      "topicId": "hr-personalauswahl",
+      "front": "Nennen Sie die drei Gütekriterien der Personalauswahl und ihre Kerndefinition.",
+      "back": "1. **Objektivität**: Unabhängig von der testenden Person\n2. **Reliabilität**: Zuverlässig, frei von Zufallsfehlern, konsistente Ergebnisse\n3. **Validität**: Misst das, was gemessen werden soll (insb. prognostische Validität = Berufserfolg)"
+    },
+    {
+      "id": "hr-pa-fc-4",
+      "topicId": "hr-personalauswahl",
+      "front": "Was ist prognostische Validität — und welches Verfahren hat laut Sackett et al. (2021) den höchsten Wert?",
+      "back": "Prognostische Validität = Korrelation zwischen Auswahlverfahren und späterer Arbeitsleistung.\nHöchster Wert: **Strukturiertes Interview** (r = 0,42) und **Arbeitswissen-Test** (r = 0,40)."
+    },
+    {
+      "id": "hr-pa-fc-5",
+      "topicId": "hr-personalauswahl",
+      "front": "Was sind die drei Kernmerkmale eines Assessment Centers?",
+      "back": "1. **Verfahrensvielfalt**: Mix aus verschiedenen Übungen (Postkorb, Rollenspiel, Fallstudie...)\n2. **Multi-Source**: Mehrere Kandidaten gleichzeitig in verschiedenen Übungen beobachten\n3. **Mehraugenprinzip**: Mehrere geschulte Beobachter beurteilen unabhängig"
+    },
+    {
+      "id": "hr-pa-fc-6",
+      "topicId": "hr-personalauswahl",
+      "front": "Was hat Sackett et al. (2021) im Vergleich zu Schmidt & Hunter (1998) gezeigt?",
+      "back": "Sackett et al. (2021) korrigierten die meisten Validitätswerte nach **unten** (methodische Verbesserung: keine Overcorrection for restriction of range). Einzige Ausnahmen: Biografischer Fragebogen (+0,03) und Interessen (+0,14) stiegen. Berufserfahrung in Jahren sank stark auf r = 0,07."
+    },
+    {
+      "id": "hr-pa-fc-7",
+      "topicId": "hr-personalauswahl",
+      "front": "Was ist das situative Interview — und was sind Ankerantworten?",
+      "back": "**Situatives Interview**: Kandidat erhält hypothetische Arbeitssituationen ('Wie würden Sie sich verhalten, wenn...?') — basierend auf Critical Incidents.\n**Ankerantworten**: Vorab definierte Musterlösungen mit Punkten (z.B. 0, 3, 5), die bestimmen, wie gut eine Antwort ist. Das erhöht die Auswertungsobjektivität."
+    },
+    {
+      "id": "hr-pa-fc-8",
+      "topicId": "hr-personalauswahl",
+      "front": "Warum hat Berufserfahrung in Jahren laut Sackett et al. (2021) eine sehr geringe prognostische Validität (r = 0,07)?",
+      "back": "Weil bloße Jahre nichts über die Qualität der Erfahrung aussagen. Jemand kann 10 Jahre lang dieselbe Aufgabe schlecht ausgeführt haben. Entscheidend ist, WAS jemand gelernt hat — nicht WIE LANGE er dabei war. Arbeitswissen-Tests (r = 0,40) messen das besser."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "hr-pa-q1",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "leicht",
+      "prompt": "Welches Gütekriterium ist die Voraussetzung für Reliabilität?",
+      "options": [
+        "Validität",
+        "Objektivität",
+        "Prognostische Validität",
+        "Konstruktvalidität"
+      ],
+      "correct": [1],
+      "explanation": "Die Gütekriterien bauen aufeinander auf: Objektivität → Reliabilität → Validität. Ohne Objektivität (Unabhängigkeit vom Tester) kann ein Verfahren nicht reliabel (konsistent) sein."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hr-pa-q2",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "leicht",
+      "prompt": "Das unstrukturierte Interview ist laut Sackett et al. (2021) das valideste Auswahlverfahren.",
+      "answer": false,
+      "explanation": "Falsch. Das unstrukturierte Interview hat mit r = 0,19 eine der geringsten prognostischen Validitäten — obwohl es in der Praxis sehr häufig eingesetzt wird. Das strukturierte Interview (r = 0,42) ist deutlich besser."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-pa-q3",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "leicht",
+      "prompt": "Was messen Ankerantworten im situativen Interview?",
+      "options": [
+        "Die Intelligenz des Kandidaten",
+        "Die Qualität einer Antwort auf eine hypothetische Arbeitssituation anhand vorab festgelegter Punkte",
+        "Die Körpersprache des Kandidaten",
+        "Die Anzahl der Berufsjahre"
+      ],
+      "correct": [1],
+      "explanation": "Ankerantworten sind vorab von Experten definierte Musterlösungen (z.B. 0, 3 oder 5 Punkte), die festlegen, was eine schlechte, mittlere oder gute Antwort auf eine konkrete Situationsfrage ist. Das erhöht die Auswertungsobjektivität."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-pa-q4",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "mittel",
+      "prompt": "Welche Aussagen über die Studie von Sackett et al. (2021) im Vergleich zu Schmidt & Hunter (1998) sind korrekt? (Mehrfachauswahl)",
+      "options": [
+        "Sackett et al. (2021) korrigierten die meisten Validitätswerte nach unten",
+        "Das strukturierte Interview stieg von 0,51 auf 0,60",
+        "Berufserfahrung in Jahren sank auf r = 0,07",
+        "Der biografische Fragebogen ist einer der wenigen Werte, die gestiegen sind"
+      ],
+      "correct": [0, 2, 3],
+      "multiple": true,
+      "explanation": "A: Korrekt — methodische Verbesserung (keine Overcorrection). B: Falsch — strukturiertes Interview sank von 0,51 auf 0,42. C: Korrekt — Berufserfahrung in Jahren ist sehr gering valide. D: Korrekt — biografischer Fragebogen stieg von 0,35 auf 0,38."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hr-pa-q5",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "mittel",
+      "prompt": "Ein Auswahlverfahren kann reliabel sein, ohne valide zu sein.",
+      "answer": true,
+      "explanation": "Korrekt! Reliabilität ist notwendig, aber nicht hinreichend für Validität. Beispiel: Ein Blutdruckmessgerät, das bei derselben Person immer 130/80 anzeigt (reliabel), misst aber in Wirklichkeit etwas anderes als Blutdruck (nicht valide für den Zweck). Ein Interview kann immer dasselbe Ergebnis liefern — aber trotzdem nicht die Jobleistung vorhersagen."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-pa-q6",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Verfahren haben laut Sackett et al. (2021) eine prognostische Validität von r ≥ 0,38?",
+      "options": [
+        "Strukturiertes Interview (0,42) und Arbeitswissen-Test (0,40)",
+        "Unstrukturiertes Interview (0,19) und Berufserfahrung (0,07)",
+        "Assessment Center (0,29) und Gewissenhaftigkeit (0,19)",
+        "Arbeitsprobe (0,33) und Interessen (0,24)"
+      ],
+      "correct": [0],
+      "explanation": "Nur das strukturierte Interview (0,42) und der Arbeitswissen-Test (0,40) liegen bei oder über 0,38. Biografischer Fragebogen (0,38) wäre auch korrekt, ist aber nicht in den Optionen. Die anderen Verfahren liegen darunter."
+    },
+    {
+      "kind": "freetext",
+      "id": "hr-pa-q7",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "mittel",
+      "prompt": "Erläutern Sie, warum ein Assessment Center trotz hohem Aufwand nur eine moderate prognostische Validität hat. Nennen Sie mindestens zwei Probleme.",
+      "sampleAnswer": "Das AC hat laut Sackett et al. (2021) eine prognostische Validität von nur r = 0,29. Probleme: (1) Self-fulfilling prophecy: Kandidaten wurden bereits vorselektiert — das verengt die Spannbreite und beeinflusst die Validitätsschätzung. (2) Erlernbarkeit: AC-Übungen können trainiert werden, d.h. das Ergebnis reflektiert möglicherweise Übungseffekte statt tatsächliche Eignung (Kriterium-Kontamination). (3) Konstruktvalidität ist problematisch: Beobachter beurteilen denselben Kandidaten in verschiedenen Übungen oft nicht konsistent (diskriminante Validität 0,54 in Woehr et al. 2007 — Konstrukte werden nicht sauber unterschieden).",
+      "keywords": ["self-fulfilling", "erlernbar", "vorselektion", "konstruktvalidität", "kosten", "beobachter"],
+      "explanation": "Das AC ist beliebt (hohe Akzeptanz, Augenscheinvalidität), aber seine tatsächliche prognostische Kraft ist begrenzt — vor allem durch methodische und konzeptionelle Probleme."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-pa-q8",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen nutzt nur ein unstrukturiertes Vorstellungsgespräch zur Personalauswahl. Welche Hauptkritik trifft zu?",
+      "options": [
+        "Es ist zu teuer im Vergleich zu strukturierten Verfahren",
+        "Es hat eine hohe Reliabilität, aber geringe Validität",
+        "Es ist subjektiv, hat geringe Validität (r = 0,19) und erschwert Vergleiche zwischen Kandidaten",
+        "Es verletzt gesetzliche Vorschriften (AGG)"
+      ],
+      "correct": [2],
+      "explanation": "Das unstrukturierte Interview ist hochgradig subjektiv — verschiedene Interviewer kommen zu verschiedenen Urteilen. Die prognostische Validität ist mit r = 0,19 (Sackett et al. 2021) gering. Außerdem sind die Ergebnisse verschiedener Kandidaten kaum vergleichbar, weil alle unterschiedliche Fragen erhalten. Option B ist falsch, weil auch die Reliabilität oft gering ist."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hr-pa-q9",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "schwer",
+      "prompt": "Laut Sackett et al. (2021) stieg die prognostische Validität von 'Interessen' (von 0,10 auf 0,24) — das ist damit eines der wenigen Verfahren mit einem Anstieg.",
+      "answer": true,
+      "explanation": "Korrekt. Interessen stiegen von 0,10 (Schmidt & Hunter 1998) auf 0,24 (Sackett et al. 2021) — ein Anstieg um +0,14. Auch der biografische Fragebogen stieg leicht (+0,03). Alle anderen gelisteten Verfahren sanken."
+    },
+    {
+      "kind": "freetext",
+      "id": "hr-pa-q10",
+      "topicId": "hr-personalauswahl",
+      "difficulty": "schwer",
+      "prompt": "Ein Startup möchte für eine Marketing-Stelle auswählen. Budget ist begrenzt. Empfehlen Sie — auf Basis der Validitätsdaten von Sackett et al. (2021) — ein kostengünstiges Verfahren mit guter Validität. Begründen Sie Ihre Empfehlung.",
+      "sampleAnswer": "Empfehlung: Strukturiertes Einstellungsinterview (r = 0,42) kombiniert mit einem Arbeitswissen-Test (r = 0,40) oder biografischen Fragebogen (r = 0,38). Diese Verfahren haben die höchsten Validitätswerte und sind vergleichsweise günstig durchzuführen. Ein Assessment Center (r = 0,29) würde höheren Aufwand bei geringerer Validität bedeuten. Berufserfahrung in Jahren (r = 0,07) ist kein gutes Kriterium. Wichtig: Das Interview strukturieren — gleiche Fragen, Ankerantworten, mehrere Interviewer.",
+      "keywords": ["strukturiertes interview", "arbeitswissen", "validität", "kosten", "sackett"],
+      "explanation": "Die Validitätsdaten zeigen klar: Struktur ist der wichtigste Hebel. Günstige, valide Verfahren priorisieren und teure AC-Verfahren nur bei strategisch wichtigen Stellen einsetzen."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hr-pa-ex-1",
+      "topicId": "hr-personalauswahl",
+      "label": "V7 Diskussion — Die Zukunft der Personalauswahl? (Robot Recruiting / Xerox)",
+      "source": "Personal_Artikel_SoSe_2026.pdf / Vorlesung Folie 93",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**Artikel:** 'Roboter Recruiting — Wenn der Mensch von der Maschine eingestellt wird' (WiWo)\n\nUnternehmen wie Xerox, Kenexa und Bosch setzen zunehmend auf algorithmische Personalauswahl: CV-Parsing-Systeme scannen Lebensläufe automatisch auf Schlüsselbegriffe. Bei Xerox wurden Bewerber aus bestimmten Stadtvierteln systematisch benachteiligt, weil der Algorithmus historische Fluktuationsdaten aus diesen Vierteln gelernt hatte.\n\n**Diskussionsfrage (Vorlesung, Folie 93):**\n1. Glauben Sie, dass eine automatisierte Personalauswahl sinnvoll ist — und wenn ja/nein, warum?\n2. Welche Vor- und Nachteile hat der Einsatz von Algorithmen zur Personalauswahl?\n3. Wenden Sie die Gütekriterien (Objektivität, Reliabilität, Validität) auf automatisierte Auswahlverfahren an.",
+      "hint": "Denken Sie an die Gütekriterien: Kann ein Algorithmus objektiver als ein Mensch sein? Welche Risiken entstehen durch Trainingsdaten? Bedenken Sie auch rechtliche Aspekte (DSGVO, AGG).",
+      "solution": "**Strukturierte Antwort (Transfer-/Anwendungscharakter):**\n\n**1. Grundsätzliche Bewertung:**\nAutomatisierte Personalauswahl kann *potenziell* sinnvoll sein — aber nur unter bestimmten Bedingungen. Es ist keine pauschale Ja/Nein-Frage.\n\n**2. Vorteile:**\n- **Skalierbarkeit**: Tausende Bewerbungen in kurzer Zeit verarbeitbar — relevant bei Massenrekrutierungen\n- **Konsistenz**: Jede Bewerbung wird nach denselben Regeln behandelt (hohe Durchführungsobjektivität, wenn die Regeln korrekt sind)\n- **Kostenersparnis**: Weniger Personalaufwand in der Vorauswahl\n- **Reduktion menschlicher Biases**: Algorithmen kennen keinen Halo-Effekt oder Nikolaus-Effekt — zumindest theoretisch\n\n**3. Nachteile / Risiken:**\n- **Trainingsdaten-Bias (zentrales Problem)**: Wenn der Algorithmus mit historischen Einstellungsdaten trainiert wird, lernt er die Vorurteile vergangener Entscheidungen. Beispiel Xerox: Stadtvierteldiskriminierung, weil historisch mehr Kündigungen aus bestimmten Vierteln. Der Algorithmus reproduziert und skaliert systematische Diskriminierung.\n- **Black-Box-Problem**: Entscheidungskriterien sind nicht transparent — weder für Bewerber noch für HR-Abteilung. Widerspricht dem Transparenzgebot.\n- **Gütekriterien unklar**: Prognostische Validität vieler KI-Tools ist nicht wissenschaftlich belegt. Messen sie wirklich Jobleistung, oder nur 'Ähnlichkeit mit bisherigen Mitarbeitenden'?\n- **Rechtliche Risiken**: DSGVO (Recht auf Erklärung automatisierter Entscheidungen, Art. 22), AGG (Diskriminierungsverbot) — vollautomatische Auswahlentscheidungen sind rechtlich problematisch\n- **Fehlende Soziale Validität**: Bewerber akzeptieren rein algorithmische Entscheidungen oft nicht — schadet dem Employer Branding\n\n**4. Anwendung Gütekriterien:**\n- **Objektivität**: Hoch bei der Durchführung (immer gleicher Algorithmus) — aber niedrig bei der Interpretation, wenn Trainingsdaten verzerrt sind\n- **Reliabilität**: Theoretisch hoch (Algorithmus gibt immer dasselbe Ergebnis bei denselben Eingaben) — aber sagt nichts über Korrektheit aus\n- **Validität**: Unklar und oft ungeprüft. Messen die Kriterien (z.B. Schlüsselbegriffe im Lebenslauf) wirklich die spätere Jobleistung?\n\n**5. Fazit / Empfehlung:**\nAlgorithmische Vorauswahl kann als erster Filter bei sehr großen Bewerberzahlen sinnvoll sein — wenn:\n(a) die Validität empirisch nachgewiesen wurde,\n(b) das System regelmäßig auf Diskriminierung geprüft wird,\n(c) ein Mensch die finale Entscheidung trifft und\n(d) Transparenz gegenüber Bewerbern gewährleistet ist.\nKein Verfahren — weder menschlich noch algorithmisch — ist allein ausreichend."
+    },
+    {
+      "id": "hr-pa-ex-2",
+      "topicId": "hr-personalauswahl",
+      "label": "V7 — Robot Recruiting Beispiel Precire (KI-Persönlichkeitsdiagnostik)",
+      "source": "Personal_Artikel_SoSe_2026.pdf / Vorlesung Folie 94",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "**Artikel:** 'Wenn der Roboter die Fragen stellt' (Focus)\n\n**Fallbeschreibung:**\nDas KI-Programm **Precire** führt computergestützte Interviews durch und analysiert Akzent, Intonation, Sprachrhythmus, Pausen, Stimmvariation, Wortwahl und Satzbau. Daraus zieht es Rückschlüsse auf die Persönlichkeit von Bewerbenden. Der Versicherungskonzern **Talanx** setzt Precire ein, um zu prüfen, ob jemand für eine Führungsposition geeignet ist.\n\n**Aufgaben:**\n1. Bewerten Sie das Verfahren Precire anhand der drei Gütekriterien (Objektivität, Reliabilität, Validität). Wo sehen Sie Stärken und Schwächen?\n2. Vergleichen Sie Precire mit einem strukturierten Interview: Welches Verfahren empfehlen Sie für die Auswahl von Führungskräften — und warum?\n3. Welche ethischen und rechtlichen Fragen wirft der Einsatz von Precire auf?",
+      "hint": "Überlegen Sie: Ist Sprachanalyse ein valides Maß für Führungseignung? Welche Gütekriterien könnten hoch, welche niedrig sein? Denken Sie an das Beispiel LinkedIn (Roulin & Levashina 2019) und die Validitätstabelle von Sackett et al. (2021).",
+      "solution": "**Strukturierte Antwort:**\n\n**1. Bewertung Precire anhand der Gütekriterien:**\n\n*Objektivität:*\n- **Stärke**: Hohe Durchführungsobjektivität — alle Kandidaten erhalten dieselben Fragen, der Algorithmus beurteilt nach denselben Regeln. Kein Interviewer-Effekt (Stimmung, Sympathie).\n- **Schwäche**: Auswertungs-/Interpretationsobjektivität hängt von den Trainingsdaten ab — wenn diese verzerrt sind, ist auch das Ergebnis verzerrt (Black-Box-Problem). Wer hat entschieden, welche Sprachmerkmale 'Führungseignung' bedeuten?\n\n*Reliabilität:*\n- **Stärke**: Algorithmisch konsistent — bei gleichem Input dasselbe Ergebnis (Retest-Reliabilität theoretisch hoch).\n- **Schwäche**: Kandidaten können durch Stress, Krankheit oder den Kontext (zu Hause vs. Büro) unterschiedlich klingen — das ist Zufallsvarianz, die das System nicht herausfiltert.\n\n*Validität (wichtigstes Kriterium):*\n- **Inhaltsvalidität**: Fraglich. Deckt Sprachanalyse wirklich alle relevanten Anforderungen einer Führungsposition ab? Fachkenntnisse, strategisches Denken, Teamführung — diese werden kaum durch Sprachmuster erfasst.\n- **Konstruktvalidität**: Problematisch. Misst Precire tatsächlich 'Persönlichkeit'? Oder misst es 'wer klingt wie bisherige erfolgreiche Manager' (also historischen Bias)? Die Konstruktvalidität müsste durch unabhängige Persönlichkeitstests belegt werden.\n- **Prognostische Validität**: Unbekannt und kritisch. Die Studie von Precire selbst (Eigeninteresse!) belegt Validität — aber unabhängige Replikationen fehlen. Zum Vergleich: Gewissenhaftigkeit (ein etablierter Persönlichkeitsfaktor) hat laut Sackett et al. (2021) nur r = 0,19.\n\n**2. Vergleich Precire vs. strukturiertes Interview:**\n\n| Kriterium | Precire | Strukturiertes Interview |\n|---|---|---|\n| Progn. Validität | Unbekannt / unklar | r = 0,42 (Sackett 2021) |\n| Objektivität | Hoch (Durchführung) | Mittel–hoch (mit mehreren Interviewern) |\n| Transparenz | Gering (Black Box) | Hoch (Fragen und Ankerantworten bekannt) |\n| Akzeptanz | Gering (Befremden) | Hoch |\n| Kosten | Skalierbar, günstig | Mittel |\n\n**Empfehlung**: Für Führungskräfte das strukturierte Interview bevorzugen — es hat nachgewiesene Validität, ist transparent und rechtlich weniger riskant. Precire könnte maximal als ergänzendes Screening-Tool (nicht als alleiniges Entscheidungsinstrument) eingesetzt werden, wenn die Validität unabhängig belegt wird.\n\n**3. Ethische und rechtliche Fragen:**\n- **DSGVO (Art. 22)**: Das Recht, nicht ausschließlich auf Basis automatisierter Entscheidungen beurteilt zu werden. Precire als alleiniges Auswahlwerkzeug wäre rechtlich problematisch.\n- **AGG (Allgemeines Gleichbehandlungsgesetz)**: Wenn die KI bestimmte Akzente, Sprach- oder Stilmerkmale, die mit Herkunft, Alter oder Geschlecht korrelieren, benachteiligt, liegt mittelbare Diskriminierung vor.\n- **Transparenzgebot**: Bewerber müssen wissen, wie sie bewertet werden. Die Black-Box-Natur von Precire widerspricht dem.\n- **Ethik der Persönlichkeitsdiagnostik**: Ist es akzeptabel, Persönlichkeit aus Sprache zu inferieren, ohne Zustimmung zu spezifischen Analysedimensionen? Was passiert mit den Sprachaufnahmen?\n- **Employer Branding**: Kandidaten, die ein 'Gespräch mit einem Roboter' führen, können das als unwürdig empfinden — negative Wirkung auf das Arbeitgeberimage."
+    }
+  ]
+}

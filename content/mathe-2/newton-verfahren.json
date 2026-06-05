@@ -1,0 +1,346 @@
+{
+  "id": "newton-verfahren",
+  "subjectId": "mathe-2",
+  "title": "Newton-Verfahren",
+  "summary": "Das Newton-Verfahren ist ein iterativer Algorithmus, der mithilfe von Tangenten schrittweise Nullstellen einer Funktion approximiert. Die Iterationsformel x_{n+1} = x_n - f(x_n)/f'(x_n) liefert bei guten Startwerten sehr schnelle Konvergenz und lässt sich auch zur Extremstellensuche einsetzen.",
+  "order": 8,
+  "estMinutes": 35,
+  "sections": [
+    {
+      "id": "motivation",
+      "heading": "Warum brauchen wir das Newton-Verfahren?",
+      "body": "Stell dir vor, du musst die Gleichung $f(x) = 0$ lösen – also die **Nullstelle** einer Funktion finden. Bei einfachen Funktionen wie $x^2 - 4 = 0$ geht das analytisch: $x = \\pm 2$. Aber was ist mit $f(x) = x^3 - 6x$? Hier gibt es zwar eine Formel (Cardano), die ist aber sehr unhandlich.\n\nUnd bei Funktionen wie $f(x) = x - \\cos(x)$ oder $f(x) = e^x - 3x$ gibt es **keine geschlossene Formel** mehr – man kann die Nullstelle nicht exakt ausrechnen.\n\n**Idee:** Statt einer exakten Lösung berechnen wir eine **Näherung** – und zwar immer bessere Näherungen, Schritt für Schritt. Genau das macht das Newton-Verfahren.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Nullstelle",
+          "body": "Eine Nullstelle von $f$ ist eine Stelle $x^*$ mit $f(x^*) = 0$. Geometrisch: der Punkt, an dem der Funktionsgraph die x-Achse schneidet."
+        }
+      ]
+    },
+    {
+      "id": "idee-tangente",
+      "heading": "Die Idee: Tangente statt Funktion",
+      "body": "Das Newton-Verfahren nutzt eine geniale geometrische Idee:\n\n> **Ersetze die Funktion in der Nähe des aktuellen Punktes durch ihre Tangente – und nimm die Nullstelle der Tangente als nächste Näherung.**\n\nWir starten mit einem Startwert $x_0$ (einem ersten Tipp für die Nullstelle). Dann:\n\n1. Wir berechnen den Punkt $(x_0,\\, f(x_0))$ auf dem Graphen.\n2. Wir legen die **Tangente** an den Graphen in diesem Punkt.\n3. Diese Tangente schneidet die x-Achse in einem neuen Punkt $x_1$ – das ist unsere verbesserte Näherung.\n4. Von $x_1$ aus wiederholen wir dasselbe.\n\nNach wenigen Schritten ist man in der Regel sehr nah an der echten Nullstelle.\n\nDie Tangente an $f$ im Punkt $x_n$ hat die Gleichung:\n$$T(x) = f(x_n) + f'(x_n)\\,(x - x_n)$$\nWir setzen $T(x) = 0$ und lösen nach $x$ auf:\n$$f(x_n) + f'(x_n)\\,(x - x_n) = 0 \\quad\\Longrightarrow\\quad x - x_n = -\\frac{f(x_n)}{f'(x_n)}$$\nDas ergibt den nächsten Näherungswert:",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "nwt-fig-tangente",
+          "title": "Newton-Schritt: Tangente an f im Punkt x_n",
+          "caption": "f(x) = x^3 - 6x (blau). Die Tangente in x_0=2 (orange gestrichelt) schneidet die x-Achse bei x_1 = 8/3 ≈ 2.667, näher an der Nullstelle x* ≈ 2.449.",
+          "functions": [
+            { "fn": "x^3 - 6*x", "label": "f(x) = x³ − 6x", "color": "#2563eb" },
+            { "fn": "-4 + 6*(x - 2)", "label": "Tangente in x₀=2", "color": "#f97316", "dashed": true }
+          ],
+          "domain": [1.5, 3.2],
+          "range": [-5, 8],
+          "points": [
+            { "x": 2, "y": -4, "label": "x₀=2" },
+            { "x": 2.6667, "y": 0, "label": "x₁=8/3" },
+            { "x": 2.449, "y": 0, "label": "x*≈2.449" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Iterationsformel des Newton-Verfahrens",
+          "body": "$$x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$$\nVoraussetzung: $f'(x_n) \\neq 0$ (die Tangente muss die x-Achse schneiden, also nicht waagerecht sein)."
+        }
+      ]
+    },
+    {
+      "id": "herleitung",
+      "heading": "Herleitung der Formel (Schritt für Schritt)",
+      "body": "Wir leiten die Iterationsformel nochmals sorgfältig her.\n\n**Ausgangssituation:** Wir haben den aktuellen Näherungswert $x_n$ und wollen $x_{n+1}$ bestimmen.\n\n**Schritt 1 – Linearisierung:** Wir ersetzen $f(x)$ lokal durch ihre lineare Näherung (Taylorpolynom 1. Ordnung) um $x_n$:\n$$f(x) \\approx f(x_n) + f'(x_n)\\,(x - x_n)$$\nDiese lineare Funktion ist geometrisch genau die Tangente an $f$ im Punkt $x_n$.\n\n**Schritt 2 – Nullstelle der Tangente:** Wir setzen die lineare Näherung gleich null:\n$$f(x_n) + f'(x_n)\\,(x - x_n) = 0$$\n\n**Schritt 3 – Auflösen nach $x$** (vorausgesetzt $f'(x_n) \\neq 0$):\n$$f'(x_n)\\,(x - x_n) = -f(x_n)$$\n$$x - x_n = -\\frac{f(x_n)}{f'(x_n)}$$\n$$\\boxed{x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}}$$\n\n**Schritt 4 – Wiederholen:** Mit diesem neuen $x_{n+1}$ als Startwert führen wir den nächsten Newton-Schritt durch, bis die gewünschte Genauigkeit erreicht ist.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kochrezept Newton-Verfahren",
+          "body": "1. Berechne $f(x_n)$ und $f'(x_n)$.\n2. Berechne $x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)}$.\n3. Wiederhole ab Schritt 1 mit $x_{n+1}$ als neuem Startwert.\n4. Stopp, wenn $|f(x_n)|$ klein genug oder $|x_{n+1}-x_n|$ klein genug ist."
+        },
+        {
+          "kind": "warning",
+          "title": "Wann geht das schief?",
+          "body": "Das Newton-Verfahren funktioniert **nicht**, wenn $f'(x_n) = 0$ (Tangente waagerecht – kein Schnittpunkt mit x-Achse). Es kann auch bei schlechtem Startwert divergieren oder in einen Zyklus geraten."
+        }
+      ]
+    },
+    {
+      "id": "beispiel-sqrt2",
+      "heading": "Durchgerechnetes Beispiel 1: Näherung für $\\sqrt{2}$",
+      "body": "**Aufgabe:** Berechne $\\sqrt{2}$ näherungsweise mit dem Newton-Verfahren.\n\n**Idee:** $\\sqrt{2}$ ist die positive Nullstelle von $f(x) = x^2 - 2$.\n\n**Ableitungen:** $f(x) = x^2 - 2$, also $f'(x) = 2x$.\n\n**Iterationsformel:**\n$$x_{n+1} = x_n - \\frac{x_n^2 - 2}{2x_n} = \\frac{2x_n^2 - (x_n^2 - 2)}{2x_n} = \\frac{x_n^2 + 2}{2x_n}$$\n\n**Startwert:** $x_0 = 1$ (ein einfacher erster Tipp; wir wissen $1 < \\sqrt{2} < 2$).\n\n**Iteration 1:**\n$$x_1 = 1 - \\frac{1^2 - 2}{2 \\cdot 1} = 1 - \\frac{-1}{2} = 1 + 0{,}5 = 1{,}5$$\n\n**Iteration 2:**\n$$f(1{,}5) = 1{,}5^2 - 2 = 2{,}25 - 2 = 0{,}25, \\quad f'(1{,}5) = 2 \\cdot 1{,}5 = 3$$\n$$x_2 = 1{,}5 - \\frac{0{,}25}{3} = 1{,}5 - 0{,}08\\overline{3} = 1{,}41\\overline{6}$$\n\n**Iteration 3:**\n$$f\\!\\left(\\tfrac{17}{12}\\right) = \\left(\\tfrac{17}{12}\\right)^2 - 2 = \\tfrac{289}{144} - \\tfrac{288}{144} = \\tfrac{1}{144} \\approx 0{,}00694$$\n$$f'\\!\\left(\\tfrac{17}{12}\\right) = 2 \\cdot \\tfrac{17}{12} = \\tfrac{17}{6} \\approx 2{,}8\\overline{3}$$\n$$x_3 = \\tfrac{17}{12} - \\frac{1/144}{17/6} = \\tfrac{17}{12} - \\tfrac{6}{144 \\cdot 17} = \\tfrac{17}{12} - \\tfrac{1}{408} = \\tfrac{577}{408} \\approx 1{,}41421$$\n\n**Exakter Wert:** $\\sqrt{2} \\approx 1{,}41421356\\ldots$ — schon nach 3 Schritten stimmen **5 Stellen** überein!",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "nwt-tab-sqrt2",
+          "title": "Iterationstabelle: Näherung für √2",
+          "headers": ["n", "x_n", "f(x_n) = x_n²−2", "f'(x_n) = 2x_n", "x_{n+1}"],
+          "rows": [
+            ["0", "1,0000", "−1,0000", "2,0000", "1,5000"],
+            ["1", "1,5000", "0,2500", "3,0000", "1,41667"],
+            ["2", "1,41667", "0,00694", "2,83333", "1,41421"],
+            ["3", "1,41421", "≈0,000000600", "≈2,82842", "≈1,414214"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beispiel-klausur",
+      "heading": "Durchgerechnetes Beispiel 2: Klausuraufgabe SoSe 2020",
+      "body": "**Aufgabe (Klausur SoSe 2020, Aufgabe 3c):** Sei $f(x) = x^3 - 6x$. Führen Sie **einen** Schritt des Newton-Verfahrens zur Approximation einer Nullstelle von $f$ durch. Nehmen Sie als Startwert $x_0 = 2$.\n\n**Schritt 1 – Ableitung bestimmen:**\n$$f(x) = x^3 - 6x \\quad\\Longrightarrow\\quad f'(x) = 3x^2 - 6$$\n\n**Schritt 2 – Funktionswert und Ableitungswert am Startwert $x_0 = 2$ berechnen:**\n$$f(2) = 2^3 - 6 \\cdot 2 = 8 - 12 = -4$$\n$$f'(2) = 3 \\cdot 2^2 - 6 = 3 \\cdot 4 - 6 = 12 - 6 = 6$$\n\n**Schritt 3 – Einen Newton-Schritt ausführen:**\n$$x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)} = 2 - \\frac{-4}{6} = 2 + \\frac{2}{3} = \\frac{8}{3} \\approx 2{,}6\\overline{6}$$\n\n**Probe/Plausibilitätsprüfung:** Die echten Nullstellen von $x^3 - 6x = x(x^2-6)$ sind $x^* = 0$, $x^* = \\sqrt{6} \\approx 2{,}449$ und $x^* = -\\sqrt{6}$. Ausgehend von $x_0 = 2$ nähern wir uns der positiven Nullstelle $\\sqrt{6} \\approx 2{,}449$ — $x_1 = 2{,}667$ liegt tatsächlich näher an $2{,}449$ als $x_0 = 2$. ✓",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "nwt-tab-klausur",
+          "title": "Klausurbeispiel f(x)=x³−6x, Startwert x₀=2",
+          "headers": ["n", "x_n", "f(x_n)", "f'(x_n)", "x_{n+1}"],
+          "rows": [
+            ["0", "2,0000", "−4,0000", "6,0000", "8/3 ≈ 2,6667"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Klausurtipp",
+          "body": "In der Klausur wird meist **nur ein Schritt** verlangt. Wichtig: Rechenweg vollständig zeigen — $f(x_0)$ und $f'(x_0)$ getrennt berechnen und dann in die Formel einsetzen. Das gibt volle Punktzahl."
+        }
+      ]
+    },
+    {
+      "id": "extremstellen",
+      "heading": "Anwendung: Extremstellen finden mit Newton",
+      "body": "Das Newton-Verfahren lässt sich nicht nur zur Nullstellensuche einsetzen – es kann auch **Extremstellen** (Minima und Maxima) einer Funktion finden.\n\n**Warum?** An einer Extremstelle $x^*$ gilt die notwendige Bedingung $f'(x^*) = 0$. Das heißt: Eine Extremstelle von $f$ ist eine **Nullstelle von $f'$**!\n\nWir wenden das Newton-Verfahren einfach auf $g(x) := f'(x)$ an:\n$$x_{n+1} = x_n - \\frac{g(x_n)}{g'(x_n)} = x_n - \\frac{f'(x_n)}{f''(x_n)}$$\n\nDie Iterationsformel für Extremstellen lautet also:\n$$\\boxed{x_{n+1} = x_n - \\frac{f'(x_n)}{f''(x_n)}}$$\n\n**Beispiel:** $f(x) = x^4 - 12x$ hat ein Minimum bei $f'(x) = 4x^3 - 12 = 0$, also bei $x^* = \\sqrt[3]{3} \\approx 1{,}4422$.\n\n$f''(x) = 12x^2$.\n\nStartwert $x_0 = 2$:\n\n**Iteration 1:**\n$$f'(2) = 4 \\cdot 8 - 12 = 32 - 12 = 20, \\quad f''(2) = 12 \\cdot 4 = 48$$\n$$x_1 = 2 - \\frac{20}{48} = 2 - \\frac{5}{12} = \\frac{19}{12} \\approx 1{,}5833$$\n\n**Iteration 2:**\n$$f'(1{,}5833) = 4 \\cdot (1{,}5833)^3 - 12 = 4 \\cdot 3{,}9693 - 12 = 15{,}877 - 12 = 3{,}877$$\n$$f''(1{,}5833) = 12 \\cdot (1{,}5833)^2 = 12 \\cdot 2{,}5068 = 30{,}082$$\n$$x_2 = 1{,}5833 - \\frac{3{,}877}{30{,}082} \\approx 1{,}5833 - 0{,}1289 = 1{,}4545$$\n\nDas Verfahren konvergiert schnell gegen $x^* = \\sqrt[3]{3} \\approx 1{,}4422$.",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "nwt-fig-extrem",
+          "title": "Newton zur Extremstellensuche: f(x) = x⁴ − 12x",
+          "caption": "f'(x)=0 wird durch Newton auf f' angewendet. Konvergenz gegen das Minimum bei x*=∛3≈1.442.",
+          "functions": [
+            { "fn": "x^4 - 12*x", "label": "f(x) = x⁴ − 12x", "color": "#2563eb" },
+            { "fn": "4*x^3 - 12", "label": "f'(x) = 4x³ − 12", "color": "#16a34a", "dashed": true }
+          ],
+          "domain": [0, 2.5],
+          "range": [-15, 10],
+          "points": [
+            { "x": 1.4422, "y": -12.28, "label": "Minimum x*≈1.442" }
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "nwt-tab-extrem",
+          "title": "Newton auf f'(x)=4x³−12, Startwert x₀=2",
+          "headers": ["n", "x_n", "f'(x_n)", "f''(x_n)", "x_{n+1}"],
+          "rows": [
+            ["0", "2,0000", "20,000", "48,000", "19/12 ≈ 1,5833"],
+            ["1", "1,5833", "3,877", "30,082", "≈ 1,4545"],
+            ["2", "1,4545", "0,302", "25,395", "≈ 1,4426"],
+            ["3", "1,4426", "≈ 0,002", "≈ 24,96", "≈ 1,4422"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Newton für Extremstellen",
+          "body": "Extremstelle von $f$ = Nullstelle von $f'$. Daher: Newton auf $f'$ anwenden mit Formel $x_{n+1} = x_n - \\dfrac{f'(x_n)}{f''(x_n)}$."
+        }
+      ]
+    },
+    {
+      "id": "konvergenz",
+      "heading": "Konvergenz und Abbruchkriterien",
+      "body": "Das Newton-Verfahren ist bekannt für seine **quadratische Konvergenz**: Hat man einmal einen Näherungswert in der Nähe der Nullstelle, dann verdoppelt sich grob gesagt die Anzahl richtiger Dezimalstellen mit jedem Schritt. Deshalb braucht man in der Regel nur **3–6 Iterationen** für hohe Genauigkeit.\n\n**Wann bricht man ab?**\n\nEs gibt zwei gebräuchliche Abbruchkriterien:\n\n- **Residuenkriterium:** $|f(x_n)| < \\varepsilon$ — der Funktionswert ist nahezu null.\n- **Schrittweitekriterium:** $|x_{n+1} - x_n| < \\varepsilon$ — die Verbesserung ist sehr klein.\n\nIn der Klausur wird meist eine feste Anzahl von Schritten vorgegeben (oft nur **ein** Schritt).\n\n**Wann funktioniert es gut?**\n\n- Startwert $x_0$ liegt in der Nähe der gesuchten Nullstelle.\n- $f$ ist in der Umgebung glatt (stetig differenzierbar, $f' \\neq 0$).\n\n**Wann kann es versagen?**\n\n- Bei $f'(x_n) = 0$ ist die Tangente waagerecht — kein Schnittpunkt mit der x-Achse möglich (Division durch null).\n- Bei mehrfachen Nullstellen konvergiert das Verfahren, aber nur linear (langsamer).\n- Bei schlechtem Startwert kann das Verfahren divergieren oder zwischen zwei Punkten hin- und herspringen.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "nwt-fig-ablauf",
+          "title": "Ablaufdiagramm Newton-Verfahren",
+          "caption": "Schematischer Ablauf des Newton-Verfahrens mit Abbruchbedingung.",
+          "code": "graph TD\n    A[Startwert x_0 wählen] --> B[f und f' berechnen]\n    B --> C{f x_n klein genug?}\n    C -- Ja --> D[Fertig: x_n ist Nullstelle]\n    C -- Nein --> E[x_{n+1} = x_n - f/f']\n    E --> F{f' x_n = 0?}\n    F -- Ja --> G[Fehler: Tangente waagerecht]\n    F -- Nein --> H[n = n+1]\n    H --> B"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Quadratische Konvergenz – was bedeutet das?",
+          "body": "Wenn der Fehler in Schritt $n$ gleich $e_n = |x_n - x^*|$ ist, dann gilt näherungsweise $e_{n+1} \\approx C \\cdot e_n^2$. Hat man also 3 richtige Stellen, liefert der nächste Schritt etwa 6 richtige Stellen — eine enorme Verbesserung!"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "nwt-fc-1",
+      "topicId": "newton-verfahren",
+      "front": "Wie lautet die Iterationsformel des Newton-Verfahrens für Nullstellen?",
+      "back": "$$x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$$"
+    },
+    {
+      "id": "nwt-fc-2",
+      "topicId": "newton-verfahren",
+      "front": "Woher kommt die Newton-Formel geometrisch?",
+      "back": "Man legt die Tangente an $f$ im Punkt $x_n$ und nimmt die Nullstelle der Tangente als $x_{n+1}$. Die Tangente $T(x)=f(x_n)+f'(x_n)(x-x_n)=0$ liefert $x_{n+1}=x_n-\\frac{f(x_n)}{f'(x_n)}$."
+    },
+    {
+      "id": "nwt-fc-3",
+      "topicId": "newton-verfahren",
+      "front": "Wie lautet die Newton-Formel zur Extremstellensuche?",
+      "back": "$$x_{n+1} = x_n - \\frac{f'(x_n)}{f''(x_n)}$$\nWeil man das Newton-Verfahren auf $f'$ anwendet (Nullstelle von $f'$ = Extremstelle von $f$)."
+    },
+    {
+      "id": "nwt-fc-4",
+      "topicId": "newton-verfahren",
+      "front": "Wann bricht das Newton-Verfahren zusammen (Division durch Null)?",
+      "back": "Wenn $f'(x_n) = 0$ — die Tangente ist dann waagerecht und hat keinen Schnittpunkt mit der x-Achse."
+    },
+    {
+      "id": "nwt-fc-5",
+      "topicId": "newton-verfahren",
+      "front": "Welche Konvergenzgeschwindigkeit hat das Newton-Verfahren (nahe der Nullstelle)?",
+      "back": "Quadratische Konvergenz: $e_{n+1} \\approx C \\cdot e_n^2$. Die Anzahl richtiger Dezimalstellen verdoppelt sich mit jedem Schritt."
+    },
+    {
+      "id": "nwt-fc-6",
+      "topicId": "newton-verfahren",
+      "front": "$f(x) = x^3 - 6x$, $x_0 = 2$. Berechne $x_1$ mit Newton.",
+      "back": "$f(2)=8-12=-4$, $f'(2)=3\\cdot4-6=6$.\\n$$x_1=2-\\frac{-4}{6}=2+\\frac{2}{3}=\\frac{8}{3}\\approx 2{,}667$$"
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "nwt-q1",
+      "topicId": "newton-verfahren",
+      "difficulty": "leicht",
+      "prompt": "Welche geometrische Idee steckt hinter dem Newton-Verfahren?",
+      "options": [
+        "Man berechnet den Mittelpunkt zwischen zwei Intervallgrenzen",
+        "Man legt die Tangente an den Graphen und nimmt deren Nullstelle als neue Näherung",
+        "Man integriert die Funktion und dividiert durch das Intervall",
+        "Man berechnet den Funktionswert am Symmetriepunkt"
+      ],
+      "correct": [1],
+      "explanation": "Das Newton-Verfahren legt die Tangente an $f$ im aktuellen Punkt $x_n$ und bestimmt deren Nullstelle als $x_{n+1}$. Das entspricht einer lokalen Linearisierung der Funktion."
+    },
+    {
+      "kind": "mc",
+      "id": "nwt-q2",
+      "topicId": "newton-verfahren",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Formeln ist die korrekte Iterationsformel des Newton-Verfahrens?",
+      "options": [
+        "$x_{n+1} = x_n - \\frac{f'(x_n)}{f(x_n)}$",
+        "$x_{n+1} = x_n + \\frac{f(x_n)}{f'(x_n)}$",
+        "$x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$",
+        "$x_{n+1} = x_n \\cdot f'(x_n)$"
+      ],
+      "correct": [2],
+      "explanation": "Die korrekte Formel ist $x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$. Das Minuszeichen und die Reihenfolge (f oben, f' unten) sind entscheidend."
+    },
+    {
+      "kind": "truefalse",
+      "id": "nwt-q3",
+      "topicId": "newton-verfahren",
+      "difficulty": "leicht",
+      "prompt": "Das Newton-Verfahren kann immer angewendet werden, solange $f$ differenzierbar ist — es konvergiert in jedem Fall gegen eine Nullstelle.",
+      "answer": false,
+      "explanation": "Falsch. Das Newton-Verfahren kann scheitern: bei $f'(x_n)=0$ (Division durch Null), bei schlechten Startwerten (Divergenz), oder es springt in einem Zyklus. Es braucht einen geeigneten Startwert in der Nähe der Nullstelle."
+    },
+    {
+      "kind": "numeric",
+      "id": "nwt-q4",
+      "topicId": "newton-verfahren",
+      "difficulty": "mittel",
+      "prompt": "Sei $f(x) = x^3 - 6x$ und $x_0 = 2$. Welchen Wert hat $x_1$ nach einem Newton-Schritt? (Gib den exakten Dezimalwert an, gerundet auf 4 Nachkommastellen.)",
+      "answer": 2.6667,
+      "tolerance": 0.0002,
+      "unit": "",
+      "explanation": "$f(2) = 8 - 12 = -4$, $f'(2) = 3 \\cdot 4 - 6 = 6$. Damit: $x_1 = 2 - \\frac{-4}{6} = 2 + \\frac{2}{3} = \\frac{8}{3} \\approx 2{,}6667$."
+    },
+    {
+      "kind": "numeric",
+      "id": "nwt-q5",
+      "topicId": "newton-verfahren",
+      "difficulty": "mittel",
+      "prompt": "Sei $f(x) = x^2 - 2$ (Startwert $x_0 = 1$). Welchen Wert hat $x_1$ nach einem Newton-Schritt?",
+      "answer": 1.5,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$f(1) = 1 - 2 = -1$, $f'(1) = 2 \\cdot 1 = 2$. Damit: $x_1 = 1 - \\frac{-1}{2} = 1 + 0{,}5 = 1{,}5$."
+    },
+    {
+      "kind": "numeric",
+      "id": "nwt-q6",
+      "topicId": "newton-verfahren",
+      "difficulty": "mittel",
+      "prompt": "Sei $f(x) = x^2 - 2$, Startwert $x_0 = 1$. Welchen Wert hat $x_2$ (zwei Newton-Schritte)? Runde auf 5 Nachkommastellen.",
+      "answer": 1.41667,
+      "tolerance": 0.00001,
+      "unit": "",
+      "explanation": "Nach Schritt 1: $x_1 = 1{,}5$. Dann $f(1{,}5) = 2{,}25 - 2 = 0{,}25$ und $f'(1{,}5) = 3$. Damit $x_2 = 1{,}5 - \\frac{0{,}25}{3} = 1{,}5 - 0{,}08\\overline{3} \\approx 1{,}41667$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "nwt-q7",
+      "topicId": "newton-verfahren",
+      "difficulty": "mittel",
+      "prompt": "Um die Extremstellen von $f(x) = x^4 - 12x$ mit dem Newton-Verfahren zu finden, wendet man die Formel $x_{n+1} = x_n - \\frac{f'(x_n)}{f''(x_n)}$ an.",
+      "answer": true,
+      "explanation": "Korrekt. Extremstellen von $f$ sind Nullstellen von $f'$. Das Newton-Verfahren auf $g = f'$ lautet $x_{n+1} = x_n - \\frac{g(x_n)}{g'(x_n)} = x_n - \\frac{f'(x_n)}{f''(x_n)}$."
+    },
+    {
+      "kind": "mc",
+      "id": "nwt-q8",
+      "topicId": "newton-verfahren",
+      "difficulty": "schwer",
+      "prompt": "Welche Aussagen zum Newton-Verfahren sind korrekt? (Mehrfachauswahl möglich)",
+      "options": [
+        "Das Verfahren hat nahe der Nullstelle quadratische Konvergenz",
+        "Bei $f'(x_n) = 0$ kann kein neuer Schritt ausgeführt werden",
+        "Das Newton-Verfahren funktioniert nur für Polynome",
+        "Das Verfahren kann auch zur Extremstellensuche eingesetzt werden, indem man es auf $f'$ anwendet"
+      ],
+      "correct": [0, 1, 3],
+      "multiple": true,
+      "explanation": "Richtig sind (1), (2) und (4). Das Newton-Verfahren ist nicht auf Polynome beschränkt — es funktioniert für jede differenzierbare Funktion (sofern $f' \\neq 0$)."
+    },
+    {
+      "kind": "freetext",
+      "id": "nwt-q9",
+      "topicId": "newton-verfahren",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum das Newton-Verfahren bei manchen Startwerten nicht gegen die gesuchte Nullstelle konvergiert. Nenne zwei mögliche Probleme.",
+      "sampleAnswer": "Erstens kann $f'(x_n) = 0$ auftreten — die Tangente ist dann waagerecht und schneidet die x-Achse nicht, die Formel würde durch null dividieren. Zweitens kann der Startwert so weit von der Nullstelle entfernt liegen, dass das Verfahren in eine andere Region springt, divergiert, oder zwischen zwei Punkten hin- und herspringt (Zyklus), anstatt zu konvergieren.",
+      "keywords": ["tangente", "waagerecht", "division", "null", "startwert", "divergenz", "zyklus", "konvergenz"],
+      "explanation": "Das Newton-Verfahren ist lokal konvergent: In der Nähe einer einfachen Nullstelle (mit $f'(x^*) \\neq 0$) konvergiert es garantiert. Weiter entfernt kann es scheitern."
+    },
+    {
+      "kind": "numeric",
+      "id": "nwt-q10",
+      "topicId": "newton-verfahren",
+      "difficulty": "schwer",
+      "prompt": "Wende einen Newton-Schritt auf $f(x) = x^4 - 12x$ mit Startwert $x_0 = 2$ an, um eine Extremstelle zu finden. Nutze $f'(x)=4x^3-12$ und $f''(x)=12x^2$. Wie lautet $x_1$? (Gib den Bruch als Dezimalzahl auf 4 Stellen an.)",
+      "answer": 1.5833,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$f'(2) = 4 \\cdot 8 - 12 = 20$, $f''(2) = 12 \\cdot 4 = 48$. Damit $x_1 = 2 - \\frac{20}{48} = 2 - \\frac{5}{12} = \\frac{19}{12} \\approx 1{,}5833$."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "nwt-ex-1",
+      "topicId": "newton-verfahren",
+      "label": "Klausur SoSe20, Aufgabe 3c (2 P.)",
+      "source": "Klausur Mathematik 2, SoSe 2020, Aufgabe 3 (8 Punkte gesamt)",
+      "type": "klausur",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Sei $f(x) = x^3 - 6x$. Führen Sie **einen** Schritt des Newton-Verfahrens zur Approximation einer Nullstelle von $f$ durch. Nehmen Sie als Startwert $x_0 = 2$.",
+      "hint": "Berechne $f(x_0)$ und $f'(x_0)$ separat, dann setze in $x_1 = x_0 - f(x_0)/f'(x_0)$ ein.",
+      "solution": "**Gegebene Funktion und Ableitung:**\n$$f(x) = x^3 - 6x \\qquad f'(x) = 3x^2 - 6$$\n\n**Schritt 1 – Funktionswert am Startwert $x_0 = 2$:**\n$$f(2) = 2^3 - 6 \\cdot 2 = 8 - 12 = -4$$\n\n**Schritt 2 – Ableitungswert am Startwert $x_0 = 2$:**\n$$f'(2) = 3 \\cdot 2^2 - 6 = 3 \\cdot 4 - 6 = 12 - 6 = 6$$\n\n**Schritt 3 – Newton-Formel:**\n$$x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)} = 2 - \\frac{-4}{6} = 2 + \\frac{2}{3} = \\frac{8}{3} \\approx 2{,}6\\overline{6}$$\n\n**Ergebnis:** $x_1 = \\dfrac{8}{3}$\n\n**Plausibilitätsprüfung:** Die Nullstellen von $f(x)=x(x^2-6)$ sind $0$, $\\sqrt{6}\\approx 2{,}449$ und $-\\sqrt{6}$. Ausgehend von $x_0=2$ (links von $\\sqrt{6}$) zeigt das Newton-Verfahren auf $x_1\\approx 2{,}667$ (rechts von $\\sqrt{6}$) — der nächste Schritt wird wieder näher liegen, das Verfahren konvergiert."
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "id": "folgen",
+  "subjectId": "mathe-2",
+  "title": "Reelle Zahlenfolgen",
+  "summary": "Was ist eine Folge? Bildungsgesetz, Monotonie, Beschränktheit, Grenzwert und Konvergenz (anschaulich + ε-Definition), Rechenregeln für Grenzwerte, Standardfolgen, e-Grenzwerte und rekursive Folgen – alles von Null erklärt mit durchgerechneten Beispielen.",
+  "order": 6,
+  "estMinutes": 50,
+  "sections": [
+    {
+      "id": "was-ist-folge",
+      "heading": "Was ist eine Folge? – Definition und Bildungsgesetz",
+      "body": "**Stell dir vor**, du legst jeden Monat Geld auf einem Konto an. Nach Monat 1 hast du 100 €, nach Monat 2 vielleicht 105 €, nach Monat 3 noch etwas mehr … Das sind eine Folge von Zahlen. Genau das ist eine **reelle Zahlenfolge**: eine geordnete Liste reeller Zahlen, bei der jeder Position $n \\in \\mathbb{N}$ genau eine Zahl $a_n$ zugeordnet ist.\n\n**Formale Definition:** Eine Folge ist eine Funktion $a: \\mathbb{N} \\to \\mathbb{R}$, die jedem Index $n$ einen reellen Wert $a_n$ (das **$n$-te Folgenglied**) zuordnet. Man schreibt:\n$$\\{a_n\\}_{n \\in \\mathbb{N}} = (a_1,\\, a_2,\\, a_3,\\, \\ldots)$$\n\n**Bildungsgesetz – drei Wege, eine Folge zu definieren:**\n\n1. **Explizit (geschlossene Form):** $a_n$ direkt als Formel in $n$. Beispiel: $a_n = \\frac{1}{n}$ liefert $1,\\,\\frac{1}{2},\\,\\frac{1}{3},\\,\\frac{1}{4},\\,\\ldots$\n\n2. **Geometrische Folge:** $a_n = a_1 \\cdot q^{n-1}$ mit Quotient $q$. Jedes Glied entsteht durch Multiplikation des Vorgängers mit $q$. Beispiel: Konto mit 5 % Zinsen, $a_n = 100 \\cdot (1{,}05)^n$.\n\n3. **Rekursiv:** Man gibt $a_0$ (oder $a_1$) vor und eine Regel, wie man $a_{n+1}$ aus $a_n$ berechnet. Beispiel: $d_0 = -1$, $d_{n+1} = \\frac{1}{3}d_n + \\frac{2}{3}$.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Aufgabe 6.1 – erste fünf Glieder berechnen",
+          "body": "Gegeben: $a_n=\\frac{1}{n}$, $b_n=(-1)^n \\cdot \\frac{1}{n^2}$, $c_n=100\\cdot(1{,}05)^n$, $d_{n+1}=\\frac{1}{3}d_n+\\frac{2}{3}$, $d_0=-1$.\n\n**$a_n$:** $a_1=1,\\;a_2=0{,}5,\\;a_3=0{,}\\overline{3},\\;a_4=0{,}25,\\;a_5=0{,}2$\n\n**$b_n$:** $b_1=-1,\\;b_2=0{,}25,\\;b_3\\approx -0{,}111,\\;b_4=0{,}0625,\\;b_5=-0{,}04$\n(Das Vorzeichen alterniert wegen $(-1)^n$, der Betrag fällt wie $1/n^2$)\n\n**$c_n$:** $c_0=100,\\;c_1=105,\\;c_2=110{,}25,\\;c_3\\approx 115{,}76,\\;c_4\\approx 121{,}55$\n(geometrische Folge, Konto mit 5 % Jahreszins)\n\n**$d_n$:** $d_0=-1$, $d_1=\\frac{1}{3}(-1)+\\frac{2}{3}=\\frac{1}{3}$, $d_2=\\frac{1}{3}\\cdot\\frac{1}{3}+\\frac{2}{3}=\\frac{7}{9}\\approx 0{,}778$, $d_3\\approx 0{,}926$, $d_4\\approx 0{,}975$\n(nähert sich von unten dem Wert 1 an)"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "folgen-fig-1",
+          "title": "Folgenglieder a_n = 1/n und d_n (Rekursion)",
+          "caption": "Beide Folgen nähern sich dem Wert 1 an – a_n von oben, d_n von unten.",
+          "functions": [
+            { "fn": "1/x", "label": "a_n = 1/n", "color": "#e74c3c" },
+            { "fn": "1 - (5/3)*(1/3)^x", "label": "d_n (Näherung)", "color": "#2980b9", "dashed": true }
+          ],
+          "domain": [1, 12],
+          "range": [-0.2, 1.3],
+          "points": [
+            { "x": 1, "y": 1, "label": "a₁=1" },
+            { "x": 5, "y": 0.2, "label": "a₅=0,2" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monotonie-beschraenktheit",
+      "heading": "Monotonie und Beschränktheit",
+      "body": "**Monotonie** beschreibt, ob eine Folge dauerhaft steigt oder fällt:\n\n| Begriff | Bedingung | Bedeutung |\n|---|---|---|\n| monoton wachsend | $a_n \\leq a_{n+1}$ für alle $n$ | jedes Glied mindestens so groß wie das vorherige |\n| **streng** monoton wachsend | $a_n < a_{n+1}$ für alle $n$ | jedes Glied echt größer |\n| monoton fallend | $a_n \\geq a_{n+1}$ | jedes Glied höchstens so groß |\n| streng monoton fallend | $a_n > a_{n+1}$ | jedes Glied echt kleiner |\n\n**Beschränktheit** beschreibt, ob die Folgenglieder in einem begrenzten Bereich bleiben:\n- **nach oben beschränkt:** Es gibt eine Zahl $S$ (obere Schranke) mit $a_n \\leq S$ für alle $n$.\n- **nach unten beschränkt:** Es gibt eine Zahl $s$ (untere Schranke) mit $a_n \\geq s$ für alle $n$.\n- **beschränkt:** nach oben UND nach unten beschränkt.\n\n**Wichtig:** Schranken sind nicht eindeutig! Wenn $S$ eine obere Schranke ist, dann ist $S+1$, $S+100$ usw. ebenfalls eine obere Schranke. Die **kleinste** obere Schranke ist die interessanteste – sie heißt **Supremum**. Die **größte** untere Schranke heißt **Infimum**.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Aufgabe 6.3 – Schranken der alternierenden Folge b_n",
+          "body": "Aus der Skizze: $b_n$ alterniert zwischen positiven (gerade $n$) und negativen (ungerade $n$) Werten und nähert sich den Werten $\\pm 1$ an.\n\n- **Obere Schranken:** $S=2$, $S=1{,}5$, $S=1$ – alle größer/gleich allen Folgengliedern. Die **kleinste** obere Schranke ist vermutlich $S=1$.\n- **Untere Schranken:** $s=-2$, $s=-1{,}5$, $s=-1$ – alle kleiner/gleich allen Folgengliedern. Die **größte** untere Schranke ist vermutlich $s=-1$.\n- **Nicht jede Schranke ist ein Häufungspunkt:** $S=2$ ist eine Schranke, aber kein Häufungspunkt."
+        },
+        {
+          "kind": "warning",
+          "title": "Nicht jede Folge ist beschränkt!",
+          "body": "Gegenbeispiel: $a_n = (-1)^n \\cdot n$. Diese Folge alterniert, wird aber betragsmäßig immer größer: $-1, 2, -3, 4, -5, \\ldots$ Sie hat weder eine obere noch eine untere Schranke."
+        }
+      ]
+    },
+    {
+      "id": "grenzwert-konvergenz",
+      "heading": "Grenzwert und Konvergenz – anschaulich und formal",
+      "body": "**Anschauung:** Eine Folge **konvergiert** gegen den Wert $a$, wenn die Folgenglieder für immer größere $n$ immer näher an $a$ heranrücken – und zwar so, dass sie irgendwann nicht mehr weiter als $\\varepsilon$ (egal wie klein) von $a$ entfernt sind.\n\nDen Wert $a$ nennt man dann den **Grenzwert** oder **Limes** der Folge:\n$$\\lim_{n \\to \\infty} a_n = a$$\n\n**Formale $\\varepsilon$-Definition (Satz 9, Vorlesung):**\n$$\\lim_{n \\to \\infty} a_n = a \\iff \\forall\\,\\varepsilon > 0\\; \\exists\\, n(\\varepsilon) \\in \\mathbb{N}:\\; |a_n - a| \\leq \\varepsilon \\quad \\forall\\, n \\geq n(\\varepsilon)$$\n\nWas bedeutet das konkret?\n- Wähle irgendein noch so kleines $\\varepsilon > 0$ (Toleranzband um $a$).\n- Dann gibt es eine Schranke $n(\\varepsilon)$, sodass **alle** Folgenglieder ab diesem Index im Band $[a-\\varepsilon,\\, a+\\varepsilon]$ liegen.\n- Wenn das für jedes $\\varepsilon$ funktioniert: konvergent.\n\n**Häufungspunkt vs. Grenzwert:**\n- **Häufungspunkt:** In jeder $\\varepsilon$-Umgebung um $h$ liegen **unendlich viele** Folgenglieder.\n- **Grenzwert:** In jeder $\\varepsilon$-Umgebung um $a$ liegen **alle** Folgenglieder ab einem bestimmten Index.\n\nJeder Grenzwert ist ein Häufungspunkt, aber nicht umgekehrt. Eine Folge hat **höchstens einen** Grenzwert, kann aber **mehrere** Häufungspunkte haben.\n\n**Divergenz:** Eine Folge, die keinen Grenzwert hat, heißt divergent. Sonderfälle:\n- **Bestimmt divergent:** $\\lim_{n\\to\\infty} a_n = +\\infty$ oder $-\\infty$ (Folgenglieder wachsen ohne Schranke).\n- **Unbestimmt divergent:** Folge springt hin und her (z.B. alternierende Folge $(-1)^n$).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wichtige Standardgrenzwerte",
+          "body": "Diese Grenzwerte sind Grundlagenwissen und müssen sitzen:\n$$\\lim_{n\\to\\infty} \\frac{1}{n} = 0, \\qquad \\lim_{n\\to\\infty} \\frac{1}{n^k} = 0 \\text{ für } k > 0$$\n$$\\lim_{n\\to\\infty} q^n = 0 \\text{ für } |q| < 1, \\qquad \\lim_{n\\to\\infty} q^n = +\\infty \\text{ für } q > 1$$\n$$\\lim_{n\\to\\infty} \\left(1 + \\frac{1}{n}\\right)^n = e \\approx 2{,}71828, \\qquad \\lim_{n\\to\\infty} \\left(1 + \\frac{r}{n}\\right)^n = e^r$$"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "folgen-fig-2",
+          "title": "ε-Konvergenz: a_n = 1/n gegen Grenzwert 0",
+          "caption": "Ab n=5 liegen alle Folgenglieder im Toleranzband ε=0,2 um den Grenzwert 0.",
+          "functions": [
+            { "fn": "1/x", "label": "a_n = 1/n", "color": "#e74c3c" },
+            { "fn": "0.2", "label": "ε = 0,2", "color": "#27ae60", "dashed": true },
+            { "fn": "-0.2", "label": "−ε = −0,2", "color": "#27ae60", "dashed": true }
+          ],
+          "domain": [1, 15],
+          "range": [-0.4, 1.2],
+          "points": [
+            { "x": 5, "y": 0.2, "label": "n(ε)=5" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rechenregeln-grenzwerte",
+      "heading": "Rechenregeln für Grenzwerte und typische Techniken",
+      "body": "**Rechenregeln (Satz 9 der Vorlesung):** Wenn $\\lim_{n\\to\\infty} a_n = a$ und $\\lim_{n\\to\\infty} b_n = b$, dann gilt:\n$$\\lim_{n\\to\\infty}(a_n \\pm b_n) = a \\pm b$$\n$$\\lim_{n\\to\\infty}(a_n \\cdot b_n) = a \\cdot b$$\n$$\\lim_{n\\to\\infty}\\frac{a_n}{b_n} = \\frac{a}{b} \\quad \\text{(falls } b \\neq 0\\text{)}$$\n\n---\n\n**Technik 1: Höchste Potenz ausklammern** (bei rationalen Folgen)\n\nBeispiel: $\\displaystyle\\lim_{n\\to\\infty} \\frac{3n^4 + n^2 - 6n + 5}{2n^4 + 5n^3 + 2n - 3}$\n\nSchritt 1: Höchste Potenz $n^4$ im Zähler und Nenner ausklammern:\n$$= \\lim_{n\\to\\infty} \\frac{n^4\\left(3 + \\frac{1}{n^2} - \\frac{6}{n^3} + \\frac{5}{n^4}\\right)}{n^4\\left(2 + \\frac{5}{n} + \\frac{2}{n^3} - \\frac{3}{n^4}\\right)}$$\n\nSchritt 2: $n^4$ kürzt sich, alle $\\frac{1}{n^k} \\to 0$:\n$$= \\frac{3 + 0 - 0 + 0}{2 + 0 + 0 - 0} = \\frac{3}{2}$$\n\n**Faustregel:** Bei rationalen Folgen entscheidet das **Verhältnis der führenden Koeffizienten**:\n- Grad Zähler = Grad Nenner: Grenzwert = Quotient der Leitkoeffizienten\n- Grad Zähler < Grad Nenner: Grenzwert = 0\n- Grad Zähler > Grad Nenner: Folge divergiert\n\n---\n\n**Technik 2: Konjugierter Ausdruck** (bei Wurzeldifferenzen)\n\nBeispiel: $\\displaystyle\\lim_{n\\to\\infty}(\\sqrt{5n+2} - \\sqrt{5n-1})$\n\nErweitern mit dem konjugierten Ausdruck $\\frac{\\sqrt{5n+2}+\\sqrt{5n-1}}{\\sqrt{5n+2}+\\sqrt{5n-1}}$:\n$$= \\lim_{n\\to\\infty} \\frac{(5n+2)-(5n-1)}{\\sqrt{5n+2}+\\sqrt{5n-1}} = \\lim_{n\\to\\infty}\\frac{3}{\\sqrt{5n+2}+\\sqrt{5n-1}} = \\frac{3}{\\infty} = 0$$\n\n---\n\n**Technik 3: e-Grenzwerte umformen**\n\nGrundbaustein: $\\displaystyle\\lim_{n\\to\\infty}\\left(1+\\frac{x}{n}\\right)^n = e^x$\n\nBeispiel: $\\displaystyle\\left(1+\\frac{\\sqrt{2}}{2n}\\right)^{2n} = \\left[\\left(1+\\frac{\\sqrt{2}/2}{n}\\right)^n\\right]^2 \\to (e^{\\sqrt{2}/2})^2 = e^{\\sqrt{2}}$\n\nWichtig: Wenn der Exponent und der Bruch nicht direkt die Standardform haben, muss man **umformen, bis die Form $\\left(1+\\frac{c}{n}\\right)^n$ erkennbar ist**.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Aufgabe 6.5 – alle drei Grenzwerte",
+          "body": "**6.5(a):** $a_n = \\frac{n^2+2n+1}{5n-3n^2}$\n\nHöchste Potenz $n^2$ ausklammern:\n$$= \\frac{n^2(1+2/n+1/n^2)}{n^2(5/n-3)} \\xrightarrow{n\\to\\infty} \\frac{1+0+0}{0-3} = -\\frac{1}{3}$$\n\n**6.5(b):** $a_n = \\frac{2n^3+n^2-1}{n^2-1}$\n\nGrad Zähler ($=3$) $>$ Grad Nenner ($=2$) $\\Rightarrow$ **divergiert** (bestimmt gegen $+\\infty$).\n\nProbe: $\\frac{2n^3}{n^2} = 2n \\to +\\infty$.\n\n**6.5(c):** $a_n = \\frac{n+1}{n-1} \\cdot \\frac{4n^2}{1-n^2}$\n\nNenner umschreiben: $1-n^2 = -(n^2-1) = -(n-1)(n+1)$, also:\n$$a_n = \\frac{n+1}{n-1}\\cdot\\frac{4n^2}{-(n-1)(n+1)} = \\frac{-4n^2}{(n-1)^2}$$\n\nHöchste Potenz $n^2$ ausklammern:\n$$= \\frac{-4n^2}{n^2(1-1/n)^2} \\to \\frac{-4}{1} = -4$$"
+        }
+      ]
+    },
+    {
+      "id": "e-grenzwerte-standardfolgen",
+      "heading": "e-Grenzwerte und Standardfolgen (Klausurklassiker)",
+      "body": "Die Euler-Zahl $e$ taucht in der Vorlesung immer wieder auf. Der wichtigste Grenzwert:\n$$\\lim_{n\\to\\infty}\\left(1+\\frac{r}{n}\\right)^n = e^r \\quad \\text{für jedes } r \\in \\mathbb{R}$$\n\n**Vorgehen bei e-Aufgaben:**\n1. Ziel: Ausdruck in die Form $\\left(1+\\frac{c}{n}\\right)^{\\alpha\\cdot n}$ bringen.\n2. Dann: $\\left(1+\\frac{c}{n}\\right)^{\\alpha\\cdot n} = \\left[\\left(1+\\frac{c}{n}\\right)^n\\right]^\\alpha \\to (e^c)^\\alpha = e^{\\alpha c}$.\n\n---\n\n**Aufgabe 6.6(a) – vier Grenzwerte ausführlich:**\n\n**(i)** $a_n = \\left(1-\\frac{2}{3n}\\right)^{n/2}$\n\nUmschreiben: $\\left(1+\\frac{-2/3}{n}\\right)^{n/2} = \\left[\\left(1+\\frac{-2/3}{n}\\right)^n\\right]^{1/2} \\to (e^{-2/3})^{1/2} = e^{-1/3} \\approx 0{,}7165$\n\n**(ii)** $b_n = \\left(1+\\frac{\\sqrt{2}}{2n}\\right)^{2n}$\n\n$= \\left[\\left(1+\\frac{\\sqrt{2}/2}{n}\\right)^n\\right]^2 \\to (e^{\\sqrt{2}/2})^2 = e^{\\sqrt{2}} \\approx 4{,}1133$\n\n**(iii)** $c_n = 3^n\\left(\\frac{1}{3}+\\frac{2}{n}\\right)^n$\n\n$= \\left[3\\left(\\frac{1}{3}+\\frac{2}{n}\\right)\\right]^n = \\left(1+\\frac{6}{n}\\right)^n \\to e^6 \\approx 403{,}4$\n\n**(iv)** $d_n = \\frac{2n^4+2n^3-1}{-3n^4+2n^2-n+3}+\\frac{2}{n}$\n\nHöchste Potenz $n^4$ ausklammern:\n$$\\frac{n^4(2+2/n-1/n^4)}{n^4(-3+2/n^2-1/n^3+3/n^4)} + 0 \\to \\frac{2}{-3} + 0 = -\\frac{2}{3}$$\n\n---\n\n**Aufgabe 6.6(b):** $b_n = \\left(1-\\frac{5}{r\\cdot n}\\right)^{3n}$, Grenzwert für $r=15$:\n\n$$\\lim_{n\\to\\infty} b_n = \\lim_{n\\to\\infty}\\left(1+\\frac{-5/r}{n}\\right)^{3n} = \\left[e^{-5/r}\\right]^3 = e^{-15/r}$$\n\nFür $r=15$: $e^{-15/15} = e^{-1} \\approx 0{,}3679$.\n\n*Zur Frage, für welches $r$ der Limes $= -1$ gilt:* Da $e^{-15/r} > 0$ für alle $r > 0$, gibt es kein solches $r$ – der e-Grenzwert ist stets positiv.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "e-Grenzwert-Checkliste",
+          "body": "Erkenne die Strukturen:\n- $\\left(1+\\frac{c}{n}\\right)^n \\to e^c$\n- $\\left(1+\\frac{c}{n}\\right)^{\\alpha n} \\to e^{\\alpha c}$\n- Produkttrick: $A^n \\cdot B^n = (A\\cdot B)^n$\n- Das Ergebnis ist immer $> 0$, also niemals negativ!"
+        }
+      ]
+    },
+    {
+      "id": "rekursive-folgen",
+      "heading": "Rekursive Folgen – Grenzwert und geschlossene Form",
+      "body": "Viele Klausuraufgaben handeln von rekursiv definierten Folgen. Das Schema ist immer dasselbe:\n\n**Schritt 1:** Erste Glieder berechnen (um ein Gefühl zu bekommen).\n\n**Schritt 2:** Geschlossene Form finden – oft durch Einsetzen der Rekursion:\n$$a_{n+1} = q \\cdot a_n + c \\quad \\Rightarrow \\quad a_n = \\underbrace{(a_0 - L)}_{\\text{Amplitude}} \\cdot q^n + \\underbrace{L}_{\\text{Fixpunkt}}$$\nwobei $L$ der **Fixpunkt** ist: $L = q \\cdot L + c \\Rightarrow L = \\frac{c}{1-q}$ (für $q \\neq 1$).\n\n**Schritt 3:** Konvergenz prüfen: Konvergiert genau dann, wenn $|q| < 1$. Dann ist der Grenzwert $= L$.\n\n---\n\n**Aufgabe 6.12(a):** $a_{n+1} = a_n + \\left(\\frac{a_0}{7}\\right)^n$, $a_0 \\in \\mathbb{R}$.\n\n**Streng monoton wachsend:** $a_{n+1} > a_n \\Leftrightarrow \\left(\\frac{a_0}{7}\\right)^n > 0$ für alle $n \\geq 0$. Das gilt genau für $a_0 > 0$.\n\n**Erste Glieder** (in Abhängigkeit von $a_0$):\n$$a_1 = a_0 + 1, \\quad a_2 = a_0 + 1 + \\frac{a_0}{7}, \\quad a_3 = a_0 + 1 + \\frac{a_0}{7} + \\left(\\frac{a_0}{7}\\right)^2$$\n\n**Geschlossene Form:** $a_{n+1} = a_0 + \\sum_{k=0}^{n}\\left(\\frac{a_0}{7}\\right)^k$ (geometrische Summe).\n\n**Konvergenz:** Die geometrische Reihe $\\sum_{k=0}^{\\infty}\\left(\\frac{a_0}{7}\\right)^k$ konvergiert genau für $\\left|\\frac{a_0}{7}\\right| < 1$, also $|a_0| < 7$.\n\nGrenzwert für $a_0 = 3$: $q = 3/7$, daher\n$$\\lim_{n\\to\\infty} a_n = a_0 + \\frac{1}{1-a_0/7} = 3 + \\frac{1}{1-3/7} = 3 + \\frac{1}{4/7} = 3 + \\frac{7}{4} = \\frac{19}{4} = 4{,}75$$\n\n---\n\n**Aufgabe 6.12(b):** $a_{n+1} = -\\frac{1}{2}a_n + \\frac{a_0}{4}$, $a_0 \\in \\mathbb{R}$.\n\n**Erste Glieder:**\n$$a_1 = -\\frac{a_0}{2}+\\frac{a_0}{4} = -\\frac{a_0}{4}, \\quad a_2 = -\\frac{1}{2}\\cdot\\left(-\\frac{a_0}{4}\\right)+\\frac{a_0}{4} = \\frac{a_0}{8}+\\frac{a_0}{4} = \\frac{3a_0}{8}$$\n$$a_3 = -\\frac{1}{2}\\cdot\\frac{3a_0}{8}+\\frac{a_0}{4} = -\\frac{3a_0}{16}+\\frac{4a_0}{16} = \\frac{a_0}{16}$$\n\n**Fixpunkt:** $L = -\\frac{1}{2}L + \\frac{a_0}{4} \\Rightarrow \\frac{3}{2}L = \\frac{a_0}{4} \\Rightarrow L = \\frac{a_0}{6}$.\n\n**Geschlossene Form:** $a_{n+1} = \\frac{5a_0}{6}\\cdot\\left(-\\frac{1}{2}\\right)^{n+1} + \\frac{a_0}{6}$.\n\n**Konvergenz:** Da $\\left|-\\frac{1}{2}\\right| = \\frac{1}{2} < 1$, konvergiert die Folge für **alle** $a_0 \\in \\mathbb{R}$ gegen den Grenzwert $\\dfrac{a_0}{6}$.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Fixpunktmethode – so geht's",
+          "body": "Bei $a_{n+1} = q\\cdot a_n + c$:\n1. Annahme: Grenzwert $L$ existiert. Dann gilt auch $L = q\\cdot L + c$.\n2. Auflösen: $L(1-q) = c \\Rightarrow L = c/(1-q)$.\n3. Konvergenz folgt aus $|q| < 1$.\n4. Formel: $a_n = (a_0 - L)\\cdot q^n + L$."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "folgen-fc-1",
+      "topicId": "folgen",
+      "front": "Was ist eine reelle Zahlenfolge?",
+      "back": "Eine Funktion $a: \\mathbb{N} \\to \\mathbb{R}$, die jedem Index $n$ genau ein Folgenglied $a_n$ zuordnet. Schreibweise: $\\{a_n\\}_{n\\in\\mathbb{N}}$."
+    },
+    {
+      "id": "folgen-fc-2",
+      "topicId": "folgen",
+      "front": "Was ist der Unterschied zwischen Häufungspunkt und Grenzwert?",
+      "back": "**Häufungspunkt $h$:** In jeder $\\varepsilon$-Umgebung um $h$ liegen unendlich viele Folgenglieder.\n**Grenzwert $a$:** Ab einem bestimmten Index $n(\\varepsilon)$ liegen **alle** Folgenglieder in der $\\varepsilon$-Umgebung.\nJeder Grenzwert ist ein Häufungspunkt, aber nicht umgekehrt. Eine Folge hat höchstens einen Grenzwert, aber kann mehrere Häufungspunkte haben."
+    },
+    {
+      "id": "folgen-fc-3",
+      "topicId": "folgen",
+      "front": "Welche Bedingung sichert Konvergenz bei $a_{n+1} = q\\cdot a_n + c$?",
+      "back": "$|q| < 1$. Der Grenzwert ist dann der Fixpunkt $L = \\dfrac{c}{1-q}$."
+    },
+    {
+      "id": "folgen-fc-4",
+      "topicId": "folgen",
+      "front": "Was ist $\\lim_{n\\to\\infty}\\left(1+\\frac{r}{n}\\right)^n$?",
+      "back": "$e^r$. Speziell für $r=1$: $\\lim_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n = e \\approx 2{,}71828$."
+    },
+    {
+      "id": "folgen-fc-5",
+      "topicId": "folgen",
+      "front": "Was bedeutet 'nach oben beschränkt' und ist die Beschränkung eindeutig?",
+      "back": "Es existiert eine Zahl $S$ mit $a_n \\leq S$ für alle $n$. Nein – jedes $S' > S$ ist ebenfalls eine obere Schranke. Eindeutig ist nur die **kleinste** obere Schranke (Supremum)."
+    },
+    {
+      "id": "folgen-fc-6",
+      "topicId": "folgen",
+      "front": "Wie berechnet man $\\lim_{n\\to\\infty}\\frac{3n^2 + 5}{2n^2 - n}$?",
+      "back": "Höchste Potenz $n^2$ ausklammern:\n$$\\frac{n^2(3+5/n^2)}{n^2(2-1/n)} \\to \\frac{3}{2}$$\nFaustregel: gleicher Grad → Quotient der Leitkoeffizienten."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "folgen-q1",
+      "topicId": "folgen",
+      "difficulty": "leicht",
+      "prompt": "Was ist die korrekte $\\varepsilon$-Definition des Grenzwerts $\\lim_{n\\to\\infty}a_n = a$?",
+      "options": [
+        "$\\forall\\,\\varepsilon>0\\;\\exists\\,n(\\varepsilon):\\;|a_n - a| \\leq \\varepsilon\\;\\forall\\,n\\geq n(\\varepsilon)$",
+        "$\\exists\\,\\varepsilon>0\\;\\forall\\,n(\\varepsilon):\\;|a_n - a| \\leq \\varepsilon$",
+        "$\\forall\\,\\varepsilon>0\\;\\exists\\,n(\\varepsilon):\\;|a_n - a| > \\varepsilon\\;\\forall\\,n\\geq n(\\varepsilon)$",
+        "$\\forall\\,\\varepsilon>0\\;\\forall\\,n:\\;|a_n - a| \\leq \\varepsilon$"
+      ],
+      "correct": [0],
+      "explanation": "Die korrekte Definition verlangt, dass für JEDES $\\varepsilon>0$ ein Index $n(\\varepsilon)$ existiert, ab dem ALLE Folgenglieder innerhalb der $\\varepsilon$-Umgebung liegen. Die Reihenfolge $\\forall\\varepsilon\\;\\exists n$ ist entscheidend."
+    },
+    {
+      "kind": "truefalse",
+      "id": "folgen-q2",
+      "topicId": "folgen",
+      "difficulty": "leicht",
+      "prompt": "Jeder Grenzwert einer Folge ist auch ein Häufungspunkt.",
+      "answer": true,
+      "explanation": "Ja. Wenn $a_n \\to a$, dann liegen ab einem gewissen Index alle (also insbesondere unendlich viele) Folgenglieder in jeder $\\varepsilon$-Umgebung von $a$. Also ist $a$ auch ein Häufungspunkt."
+    },
+    {
+      "kind": "truefalse",
+      "id": "folgen-q3",
+      "topicId": "folgen",
+      "difficulty": "mittel",
+      "prompt": "Eine beschränkte Folge konvergiert immer.",
+      "answer": false,
+      "explanation": "Falsch. Gegenbeispiel: $a_n = (-1)^n$ ist beschränkt (obere Schranke 1, untere Schranke -1), aber divergiert (alterniert zwischen 1 und -1). Beschränktheit ist notwendig, aber nicht hinreichend für Konvergenz."
+    },
+    {
+      "kind": "numeric",
+      "id": "folgen-q4",
+      "topicId": "folgen",
+      "difficulty": "mittel",
+      "prompt": "Berechnen Sie: $\\lim_{n\\to\\infty}\\dfrac{5n^3 - 2n + 1}{10n^3 + n^2 - 3}$",
+      "answer": 0.5,
+      "tolerance": 0.001,
+      "explanation": "Höchste Potenz $n^3$ ausklammern: $\\frac{n^3(5-2/n^2+1/n^3)}{n^3(10+1/n-3/n^3)} \\to \\frac{5}{10} = \\frac{1}{2} = 0{,}5$. Gleicher Grad: Quotient der Leitkoeffizienten."
+    },
+    {
+      "kind": "numeric",
+      "id": "folgen-q5",
+      "topicId": "folgen",
+      "difficulty": "mittel",
+      "prompt": "Berechnen Sie: $\\lim_{n\\to\\infty}\\left(1+\\dfrac{2}{3n}\\right)^{6n}$",
+      "answer": 54.598,
+      "tolerance": 0.05,
+      "unit": "≈ e⁴",
+      "explanation": "Umformen: $\\left(1+\\frac{2/3}{n}\\right)^{6n} = \\left[\\left(1+\\frac{2/3}{n}\\right)^n\\right]^6 \\to (e^{2/3})^6 = e^4 \\approx 54{,}598$."
+    },
+    {
+      "kind": "numeric",
+      "id": "folgen-q6",
+      "topicId": "folgen",
+      "difficulty": "schwer",
+      "prompt": "Die rekursive Folge $a_0 = 2$, $a_{n+1} = \\frac{1}{2}a_n - 1$ ist konvergent. Was ist der Grenzwert?",
+      "answer": -2,
+      "tolerance": 0.001,
+      "explanation": "Fixpunkt: $L = \\frac{1}{2}L - 1 \\Rightarrow \\frac{1}{2}L = -1 \\Rightarrow L = -2$. Da $|q|=1/2<1$, konvergiert die Folge. Geschlossene Form: $a_n = (a_0-(-2))\\cdot(1/2)^n + (-2) = 4\\cdot(1/2)^n - 2 \\to -2$."
+    },
+    {
+      "kind": "mc",
+      "id": "folgen-q7",
+      "topicId": "folgen",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Folgen divergiert (hat keinen endlichen Grenzwert)?",
+      "options": [
+        "$a_n = \\frac{2n^3+1}{n^2-1}$",
+        "$a_n = \\frac{2n^3+1}{n^4-1}$",
+        "$a_n = \\left(\\frac{1}{3}\\right)^n$",
+        "$a_n = \\frac{n^2}{2n^2+5}$"
+      ],
+      "correct": [0],
+      "explanation": "Bei (a) ist Grad Zähler (3) > Grad Nenner (2), also divergiert sie gegen $+\\infty$. Bei (b) Grad Zähler < Nenner → Grenzwert 0. Bei (c) $|1/3|<1$ → Grenzwert 0. Bei (d) gleicher Grad → Grenzwert 1/2."
+    },
+    {
+      "kind": "truefalse",
+      "id": "folgen-q8",
+      "topicId": "folgen",
+      "difficulty": "mittel",
+      "prompt": "Die alternierende Folge $b_n = (-1)^n$ besitzt zwei Häufungspunkte: $1$ und $-1$.",
+      "answer": true,
+      "explanation": "Richtig. In jeder $\\varepsilon$-Umgebung um $1$ liegen unendlich viele Glieder (alle geraden $n$), und in jeder $\\varepsilon$-Umgebung um $-1$ liegen unendlich viele Glieder (alle ungeraden $n$). Einen Grenzwert hat die Folge jedoch nicht."
+    },
+    {
+      "kind": "mc",
+      "id": "folgen-q9",
+      "topicId": "folgen",
+      "difficulty": "schwer",
+      "prompt": "Für die Folge $a_{n+1} = -\\frac{1}{2}a_n + \\frac{a_0}{4}$ gilt: Der Grenzwert ist …",
+      "options": [
+        "$\\dfrac{a_0}{6}$",
+        "$\\dfrac{a_0}{4}$",
+        "$\\dfrac{a_0}{2}$",
+        "hängt von $a_0$ ab, ob die Folge konvergiert"
+      ],
+      "correct": [0],
+      "explanation": "Fixpunkt: $L = -\\frac{1}{2}L + \\frac{a_0}{4} \\Rightarrow \\frac{3}{2}L = \\frac{a_0}{4} \\Rightarrow L = \\frac{a_0}{6}$. Da $|-1/2|<1$, konvergiert die Folge für alle $a_0$."
+    },
+    {
+      "kind": "freetext",
+      "id": "folgen-q10",
+      "topicId": "folgen",
+      "difficulty": "mittel",
+      "prompt": "Erkläre in eigenen Worten: Warum kann eine Folge mehrere Häufungspunkte, aber höchstens einen Grenzwert haben?",
+      "sampleAnswer": "Ein Häufungspunkt erfordert nur, dass unendlich viele Folgenglieder in einer Umgebung um ihn liegen. Wenn die Folge zwischen zwei Werten alterniert, kann das für beide Werte gleichzeitig gelten. Ein Grenzwert hingegen fordert, dass ALLE Folgenglieder ab einem bestimmten Index in einer beliebig kleinen Umgebung liegen. Das kann nur für einen einzigen Wert gelten – sonst läge irgendwann ein Glied gleichzeitig nah an zwei verschiedenen Punkten, was für beliebig kleine Umgebungen unmöglich ist.",
+      "keywords": ["häufungspunkt", "grenzwert", "unendlich viele", "alle", "umgebung", "eindeutig"],
+      "explanation": "Der Schlüsselunterschied: Häufungspunkt = unendlich viele Glieder nahe dran; Grenzwert = ab einem Index ALLE Glieder nahe dran."
+    },
+    {
+      "kind": "numeric",
+      "id": "folgen-q11",
+      "topicId": "folgen",
+      "difficulty": "schwer",
+      "prompt": "Gegeben: $a_{n+1} = a_n + \\left(\\frac{3}{7}\\right)^n$, $a_0 = 3$. Was ist der Grenzwert?",
+      "answer": 4.75,
+      "tolerance": 0.01,
+      "explanation": "$a_\\infty = a_0 + \\sum_{k=0}^{\\infty}\\left(\\frac{3}{7}\\right)^k = 3 + \\frac{1}{1-3/7} = 3 + \\frac{7}{4} = \\frac{19}{4} = 4{,}75$. Der Quotient $|3/7|<1$, also konvergiert die geometrische Reihe."
+    },
+    {
+      "kind": "truefalse",
+      "id": "folgen-q12",
+      "topicId": "folgen",
+      "difficulty": "leicht",
+      "prompt": "Der Grenzwert $\\lim_{n\\to\\infty}\\left(1+\\frac{r}{n}\\right)^n$ kann für kein reelles $r$ negativ sein.",
+      "answer": true,
+      "explanation": "Richtig. Da $e^r > 0$ für alle $r \\in \\mathbb{R}$, ist der e-Grenzwert stets positiv. Das ist wichtig bei Aufgaben der Form $\\left(1-\\frac{c}{n}\\right)^n \\to e^{-c} > 0$."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "folgen-ex-1",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.1 – Erste Folgenglieder",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26)",
+      "type": "uebung",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Berechnen Sie die ersten fünf Folgenglieder der vier Folgen:\n$$a_n = \\frac{1}{n},\\; n>0, \\qquad b_n = (-1)^n \\cdot \\frac{1}{n^2},\\; n>0$$\n$$c_n = 100\\cdot(1+r)^n,\\; n\\geq 0,\\text{ mit } r=0{,}05 \\qquad d_{n+1}=\\frac{1}{3}d_n+\\frac{2}{3},\\; d_0=-1$$\nSkizzieren Sie anschließend die Folgenglieder von $a_n$, $b_n$ und $d_n$ in ein Koordinatensystem.",
+      "solution": "**Folge $a_n = 1/n$** (explizit, fällt monoton):\n$$a_1=1,\\quad a_2=\\tfrac{1}{2}=0{,}5,\\quad a_3=\\tfrac{1}{3}\\approx 0{,}333,\\quad a_4=0{,}25,\\quad a_5=0{,}2$$\n\n**Folge $b_n = (-1)^n/n^2$** (alternierend, Betrag fällt wie $1/n^2$):\n$$b_1=-1,\\quad b_2=+0{,}25,\\quad b_3\\approx -0{,}111,\\quad b_4=+0{,}0625,\\quad b_5=-0{,}04$$\nVorzeichen: $(-1)^1=-1$, $(-1)^2=+1$, $(-1)^3=-1$, ...\n\n**Folge $c_n = 100\\cdot(1{,}05)^n$** (geometrisch, Kapital mit 5 % Zinsen):\n$$c_0=100,\\quad c_1=105,\\quad c_2=110{,}25,\\quad c_3=115{,}76,\\quad c_4\\approx 121{,}55$$\n\n**Folge $d_n$** (rekursiv, nähert sich dem Fixpunkt 1 an):\n- Fixpunkt: $L=\\frac{1}{3}L+\\frac{2}{3} \\Rightarrow \\frac{2}{3}L=\\frac{2}{3} \\Rightarrow L=1$\n- $d_0=-1$\n- $d_1=\\frac{1}{3}(-1)+\\frac{2}{3}=\\frac{-1+2}{3}=\\frac{1}{3}\\approx 0{,}333$\n- $d_2=\\frac{1}{3}\\cdot\\frac{1}{3}+\\frac{2}{3}=\\frac{1}{9}+\\frac{6}{9}=\\frac{7}{9}\\approx 0{,}778$\n- $d_3=\\frac{1}{3}\\cdot\\frac{7}{9}+\\frac{2}{3}=\\frac{7}{27}+\\frac{18}{27}=\\frac{25}{27}\\approx 0{,}926$\n- $d_4=\\frac{1}{3}\\cdot\\frac{25}{27}+\\frac{2}{3}=\\frac{25}{81}+\\frac{54}{81}=\\frac{79}{81}\\approx 0{,}975$\n\nDie Folge $d_n$ strebt monoton wachsend gegen 1. Dies liegt daran, dass $|q|=1/3<1$, also konvergiert die Rekursion."
+    },
+    {
+      "id": "folgen-ex-2",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.2 – Rekursiv definierte Folge",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26), Zusatzaufgabe",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Eine rekursiv definierte Folge sei gegeben durch $a_1=1$, $a_2=2$ und\n$$(n+1)\\cdot a_{n+1} = (2n+1)\\cdot a_n - n\\cdot a_{n-1} \\quad \\text{für } n \\geq 2.$$\nBerechnen Sie fünf weitere Folgenglieder.",
+      "solution": "Die Rekursionsformel auflösen nach $a_{n+1}$:\n$$a_{n+1} = \\frac{(2n+1)\\cdot a_n - n\\cdot a_{n-1}}{n+1}$$\n\nStartwerte: $a_1=1$, $a_2=2$.\n\n**$n=2$:** $a_3 = \\frac{5\\cdot 2 - 2\\cdot 1}{3} = \\frac{10-2}{3} = \\frac{8}{3} \\approx 2{,}667$\n\n**$n=3$:** $a_4 = \\frac{7\\cdot\\frac{8}{3} - 3\\cdot 2}{4} = \\frac{\\frac{56}{3}-6}{4} = \\frac{\\frac{56-18}{3}}{4} = \\frac{38}{12} = \\frac{19}{6} \\approx 3{,}167$\n\n**$n=4$:** $a_5 = \\frac{9\\cdot\\frac{19}{6} - 4\\cdot\\frac{8}{3}}{5} = \\frac{\\frac{171}{6}-\\frac{32}{3}}{5} = \\frac{\\frac{171-64}{6}}{5} = \\frac{107}{30} \\approx 3{,}567$\n\n**$n=5$:** $a_6 = \\frac{11\\cdot\\frac{107}{30} - 5\\cdot\\frac{19}{6}}{6} = \\frac{\\frac{1177}{30}-\\frac{95}{6}}{6} = \\frac{\\frac{1177-475}{30}}{6} = \\frac{702}{180} = \\frac{39}{10} = 3{,}9$\n\n**$n=6$:** $a_7 = \\frac{13\\cdot\\frac{39}{10} - 6\\cdot\\frac{107}{30}}{7} = \\frac{\\frac{507}{10}-\\frac{214}{10}}{7} = \\frac{293/10}{7} = \\frac{293}{70} \\approx 4{,}186$\n\nDie Folge wächst monoton: $1,\\,2,\\,\\frac{8}{3},\\,\\frac{19}{6},\\,\\frac{107}{30},\\,\\frac{39}{10},\\,\\frac{293}{70},\\,\\ldots$"
+    },
+    {
+      "id": "folgen-ex-3",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.3 – Häufungspunkte und Schranken aus Skizze",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26), Musterlösung vorhanden",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "In der Skizze sind die ersten Folgenglieder zweier Folgen erkennbar: Rot = $a_n$ (konvergiert gegen 0,5) und Blau = $b_n$ (alternierend, nähert sich $\\pm 1$). Stellen Sie Vermutungen auf:\n\n(a) Beschreiben Sie den Unterschied zwischen Häufungspunkt und Grenzwert. Wann ist ein Häufungspunkt auch ein Grenzwert? Ist jeder Grenzwert ein Häufungspunkt?\n\n(b) Gibt es obere bzw. untere Schranken der Folge $b_n$?\n\n(c) Ist jede Schranke auch ein Häufungspunkt?\n\n(d) Hat jede Folge mindestens eine Schranke?\n\n(e) Sind die Folgen monoton wachsend/fallend?",
+      "hint": "Beachte: Aus der Skizze kennen wir nur endlich viele Glieder. Alle Aussagen sind Vermutungen!",
+      "solution": "**(a) Häufungspunkt vs. Grenzwert:**\n\n- **Grenzwert:** Ab einem bestimmten Index $n(\\varepsilon)$ liegen **alle** Folgenglieder in einer $\\varepsilon$-Umgebung um den Grenzwert.\n- **Häufungspunkt:** In jeder $\\varepsilon$-Umgebung um $h$ liegen **unendlich viele** Folgenglieder (aber nicht notwendig alle).\n\nFolge $a_n$ (rot): konvergiert vermutlich gegen $0{,}5$ – das ist sowohl Grenzwert als auch Häufungspunkt.\n\nFolge $b_n$ (blau): alternierend, nähert sich $+1$ (gerade $n$) und $-1$ (ungerade $n$) an. Sie hat zwei Häufungspunkte: $+1$ und $-1$, aber **keinen Grenzwert** (denn man findet keine beliebig kleine Umgebung, in der ab einem Index **alle** Glieder liegen – die Umgebung müsste immer $[-1,1]$ umfassen).\n\nSchlussfolgerung: Jeder Grenzwert ist ein Häufungspunkt. Aber nicht jeder Häufungspunkt ist ein Grenzwert. Eine Folge hat höchstens **einen** Grenzwert, aber kann **mehrere** Häufungspunkte haben.\n\n**(b) Schranken von $b_n$:**\n\nEs gibt **unendlich viele** obere und untere Schranken:\n- Obere Schranken: $2$, $1{,}5$, $1$, … Die **kleinste** obere Schranke ist vermutlich $1$.\n- Untere Schranken: $-2$, $-1{,}5$, $-1$, … Die **größte** untere Schranke ist vermutlich $-1$.\n\nEine Schranke ist nicht eindeutig!\n\n**(c) Ist jede Schranke ein Häufungspunkt?**\n\nNein. Zum Beispiel ist $S=2$ eine obere Schranke von $b_n$, aber kein Häufungspunkt (kein Folgenglied nähert sich dem Wert 2).\n\n**(d) Hat jede Folge mindestens eine Schranke?**\n\nNein. Gegenbeispiel: $a_n = (-1)^n \\cdot n$ ist unbeschränkt (weder nach oben noch nach unten) – die Glieder werden betragsmäßig immer größer.\n\n**(e) Monotonie:**\n- $a_n$ (rot): monoton wachsend (die Glieder steigen von $-0{,}5$ auf $0{,}5$).\n- $b_n$ (blau): nicht monoton – alternierend, wechselt das Vorzeichen bei jedem Schritt."
+    },
+    {
+      "id": "folgen-ex-4",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.4 – Folgen mit vorgegebenem Grenzwert",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26)",
+      "type": "uebung",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Geben Sie Beispiele an für Folgen mit:\n(a) $\\lim_{n\\to\\infty}a_n = +\\infty$\n(b) $\\lim_{n\\to\\infty}b_n = -\\infty$\n(c) $\\lim_{n\\to\\infty}c_n = 0$\n(d) $\\lim_{n\\to\\infty}d_n = \\frac{3}{2}$",
+      "solution": "Es sind viele Antworten möglich. Hier klassische Beispiele:\n\n**(a) $\\lim a_n = +\\infty$:** $a_n = n$. Die natürlichen Zahlen wachsen ohne Schranke.\n\nAlternativ: $a_n = n^2$, $a_n = 2^n$.\n\n**(b) $\\lim b_n = -\\infty$:** $b_n = -n$. Spiegelung von (a).\n\nAlternativ: $b_n = -(n^2)$.\n\n**(c) $\\lim c_n = 0$:** $c_n = \\frac{1}{n}$. Klassisch: $1, \\frac{1}{2}, \\frac{1}{3}, \\ldots \\to 0$.\n\nAlternativ: $c_n = \\left(\\frac{1}{2}\\right)^n$ (geometrische Folge mit $|q|<1$).\n\n**(d) $\\lim d_n = \\frac{3}{2}$:** $d_n = \\frac{3}{2} + \\frac{1}{n}$. Für $n\\to\\infty$ fällt $\\frac{1}{n}$ weg.\n\nAlternativ: $d_n = \\frac{3n}{2n+1}$ – prüfen:\n$$\\frac{3n}{2n+1} = \\frac{n(3)}{n(2+1/n)} = \\frac{3}{2+1/n} \\to \\frac{3}{2}\\checkmark$$"
+    },
+    {
+      "id": "folgen-ex-5",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.5 – Konvergenz rationaler Folgen",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26), Zusatzaufgabe",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Untersuchen Sie, ob die angegebenen Folgen konvergent sind, und bestimmen Sie gegebenenfalls ihren Grenzwert:\n\n(a) $a_n = \\dfrac{n^2+2n+1}{5n-3n^2}$, $n\\in\\mathbb{N}$\n\n(b) $a_n = \\dfrac{2n^3+n^2-1}{n^2-1}$, $n>1$\n\n(c) $a_n = \\dfrac{n+1}{n-1}\\cdot\\dfrac{4n^2}{1-n^2}$, $n>1$",
+      "solution": "**(a)** Höchste Potenz $n^2$ ausklammern:\n$$a_n = \\frac{n^2(1+2/n+1/n^2)}{n^2(5/n-3)} = \\frac{1+2/n+1/n^2}{5/n-3}$$\nFür $n\\to\\infty$: Zähler $\\to 1$, Nenner $\\to -3$, also:\n$$\\lim_{n\\to\\infty} a_n = \\frac{1}{-3} = -\\frac{1}{3}$$\nDie Folge **konvergiert** gegen $-\\frac{1}{3}$.\n\n**(b)** Grad Zähler ($=3$) $>$ Grad Nenner ($=2$):\n$$a_n = \\frac{2n^3+n^2-1}{n^2-1} = \\frac{n^2(2n+1-1/n^2)}{n^2(1-1/n^2)} = \\frac{2n+1-1/n^2}{1-1/n^2} \\to \\frac{2n}{1} = 2n \\to +\\infty$$\nDie Folge **divergiert** (bestimmt gegen $+\\infty$).\n\n**(c)** Nenner $1-n^2 = -(n^2-1) = -(n-1)(n+1)$:\n$$a_n = \\frac{n+1}{n-1}\\cdot\\frac{4n^2}{-(n-1)(n+1)} = \\frac{-4n^2}{(n-1)^2}$$\nHöchste Potenz $n^2$:\n$$= \\frac{-4n^2}{n^2(1-1/n)^2} = \\frac{-4}{(1-1/n)^2} \\to \\frac{-4}{1} = -4$$\nDie Folge **konvergiert** gegen $-4$."
+    },
+    {
+      "id": "folgen-ex-6",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.6 – Grenzwerte (alte Klausuraufgaben)",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26) – Alte Klausuraufgaben",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "(a) Bestimmen Sie ausführlich die Grenzwerte:\n\n(i) $a_n = \\left(1-\\dfrac{2}{3n}\\right)^{n/2}$\n\n(ii) $b_n = \\left(1+\\dfrac{\\sqrt{2}}{2n}\\right)^{2n}$\n\n(iii) $c_n = 3^n\\left(\\dfrac{1}{3}+\\dfrac{2}{n}\\right)^n$\n\n(iv) $d_n = \\dfrac{2n^4+2n^3-1}{-3n^4+2n^2-n+3}+\\dfrac{2}{n}$\n\n(b) Gegeben sei $b_n = \\left(1-\\dfrac{5}{r\\cdot n}\\right)^{3n}$, $r>0$. Berechnen Sie $\\lim_{n\\to\\infty}b_n$ für $r=15$.",
+      "solution": "**(i)** Grundform $\\left(1+\\frac{x}{n}\\right)^n \\to e^x$ erkennen:\n$$a_n = \\left(1+\\frac{-2/3}{n}\\right)^{n/2} = \\left[\\left(1+\\frac{-2/3}{n}\\right)^n\\right]^{1/2} \\to (e^{-2/3})^{1/2} = e^{-1/3} \\approx 0{,}7165$$\n\n**(ii)** Exponent $2n$, Bruch $\\frac{\\sqrt{2}}{2n} = \\frac{\\sqrt{2}/2}{n}$:\n$$b_n = \\left(1+\\frac{\\sqrt{2}/2}{n}\\right)^{2n} = \\left[\\left(1+\\frac{\\sqrt{2}/2}{n}\\right)^n\\right]^2 \\to (e^{\\sqrt{2}/2})^2 = e^{\\sqrt{2}} \\approx 4{,}113$$\n\n**(iii)** Produkttrick: $3^n\\cdot B^n = (3B)^n$:\n$$c_n = \\left[3\\cdot\\left(\\frac{1}{3}+\\frac{2}{n}\\right)\\right]^n = \\left(1+\\frac{6}{n}\\right)^n \\to e^6 \\approx 403{,}4$$\n\n**(iv)** Höchste Potenz $n^4$ ausklammern:\n$$\\frac{n^4(2+2/n-1/n^4)}{n^4(-3+2/n^2-1/n^3+3/n^4)} + \\frac{2}{n} \\to \\frac{2}{-3} + 0 = -\\frac{2}{3}$$\n\n**(b)** Umformen auf Standardform:\n$$b_n = \\left(1+\\frac{-5/r}{n}\\right)^{3n} = \\left[\\left(1+\\frac{-5/r}{n}\\right)^n\\right]^3 \\to (e^{-5/r})^3 = e^{-15/r}$$\n\nFür $r=15$: $\\displaystyle\\lim_{n\\to\\infty} b_n = e^{-15/15} = e^{-1} \\approx 0{,}3679$.\n\nHinweis: Da $e^{-15/r}>0$ für alle $r>0$, gibt es kein $r$, für das der Grenzwert negativ (z.B. $-1$) ist."
+    },
+    {
+      "id": "folgen-ex-7",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.11 – Monotonie, Beschränktheit, Häufungspunkte",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26), Zusatzaufgabe",
+      "type": "zusatzaufgabe",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Untersuchen Sie die gegebenen Folgen auf Monotonie, Beschränktheit sowie Häufungspunkte und bestimmen Sie gegebenenfalls ihren Grenzwert.\n\n(a) $a_n = \\dfrac{2n+1}{-n}$\n\n(b) $a_{n+1} = a_n - \\left(\\dfrac{1}{3}\\right)^n$, $a_0 = 2$\n\n(c) $a_n = (-1)^n - \\left(-\\dfrac{1}{2}\\right)^n$",
+      "solution": "**(a) $a_n = \\frac{2n+1}{-n} = -2 - \\frac{1}{n}$:**\n\nErste Glieder: $a_1 = -3$, $a_2 = -2{,}5$, $a_3 \\approx -2{,}333$, ...\n\n- **Monotonie:** $a_{n+1} - a_n = (-2-\\frac{1}{n+1})-(-2-\\frac{1}{n}) = \\frac{1}{n}-\\frac{1}{n+1} = \\frac{1}{n(n+1)} > 0$. Also **streng monoton wachsend**.\n- **Beschränktheit:** $a_n = -2-\\frac{1}{n} < -2$ und $a_n \\geq -3$ (da $a_1=-3$ das kleinste Glied). **Beschränkt** mit oberer Schranke $-2$ und unterer Schranke $-3$.\n- **Konvergenz:** $\\lim_{n\\to\\infty}\\left(-2-\\frac{1}{n}\\right) = -2$. **Grenzwert: $-2$**.\n\n**(b) $a_{n+1} = a_n - (1/3)^n$, $a_0=2$:**\n\nGeschrieben als Teleskopsumme: $a_n = a_0 - \\sum_{k=0}^{n-1}\\left(\\frac{1}{3}\\right)^k = 2 - \\frac{1-(1/3)^n}{1-1/3} = 2 - \\frac{3}{2}(1-(1/3)^n)$.\n\n- **Monotonie:** Da man immer $(1/3)^n > 0$ abzieht, ist $a_{n+1} < a_n$: **streng monoton fallend**.\n- **Beschränktheit:** $a_n = 2 - \\frac{3}{2}(1-(1/3)^n) \\geq 2-\\frac{3}{2} = \\frac{1}{2}$. Und $a_n \\leq a_0 = 2$. **Beschränkt**.\n- **Grenzwert:** Für $n\\to\\infty$: $(1/3)^n \\to 0$, also $a_n \\to 2 - \\frac{3}{2} = \\frac{1}{2}$. **Grenzwert: $\\frac{1}{2}$**.\n\n**(c) $a_n = (-1)^n - (-1/2)^n$:**\n\nErste Glieder: $a_0 = 1-1 = 0$, $a_1 = -1-(-1/2) = -1/2$, $a_2 = 1-(1/4) = 3/4$, $a_3 = -1-(-1/8) = -7/8$, $a_4 = 1-1/16 = 15/16$.\n\n- **Monotonie:** Die Folge alterniert zwischen positiv und negativ. **Nicht monoton**.\n- **Beschränktheit:** $(-1/2)^n \\to 0$, also verhält sich $a_n$ für große $n$ wie $(-1)^n$. $|a_n| \\leq |(-1)^n| + |(-1/2)^n| \\leq 1 + 1 = 2$. **Beschränkt**.\n- **Häufungspunkte:** Für gerade $n$: $a_n = 1-(1/2)^n \\to 1$. Für ungerade $n$: $a_n = -1+(1/2)^n \\to -1$. Also **zwei Häufungspunkte: $+1$ und $-1$**.\n- **Kein Grenzwert** (wegen Alternierung)."
+    },
+    {
+      "id": "folgen-ex-8",
+      "topicId": "folgen",
+      "label": "Übungsblatt 6, Aufgabe 6.12 – Rekursive Folgen (alte Klausuraufgaben)",
+      "source": "Übungsblatt 6 (Mathe 2, SoSe26) – Alte Klausuraufgaben",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "(a) Gegeben: $a_{n+1} = a_n + \\left(\\dfrac{a_0}{7}\\right)^n$, $a_0\\in\\mathbb{R}$, $n\\geq 0$.\n- Für welche Werte $a_0$ ist die Folge streng monoton wachsend?\n- Geben Sie alle Folgenglieder bis $a_3$ in Abhängigkeit von $a_0$ an.\n- Drücken Sie $a_{n+1}$ mit Hilfe von $a_0$ aus.\n- Für welche $a_0$ ist die Folge konvergent? Geben Sie für $a_0=3$ den Grenzwert an.\n\n(b) Gegeben: $a_{n+1} = -\\dfrac{1}{2}a_n + \\dfrac{a_0}{4}$, $a_0\\in\\mathbb{R}$, $n\\geq 0$.\n- Geben Sie alle Folgenglieder bis $a_3$ in Abhängigkeit von $a_0$ an.\n- Drücken Sie $a_{n+1}$ mit Hilfe von $a_0$ aus und untersuchen Sie auf Konvergenz. Geben Sie ggf. den Grenzwert in Abhängigkeit von $a_0$ an.",
+      "solution": "**(a) $a_{n+1} = a_n + (a_0/7)^n$:**\n\n**Streng monoton wachsend:** $a_{n+1} > a_n \\Leftrightarrow (a_0/7)^n > 0$ für alle $n\\geq 0$.\n- $n=0$: $(a_0/7)^0 = 1 > 0$ ✓ immer.\n- $n$ gerade $\\geq 2$: $(a_0/7)^n \\geq 0$, gleich 0 nur wenn $a_0=0$.\n- $n$ ungerade: $(a_0/7)^n > 0 \\Leftrightarrow a_0/7 > 0 \\Leftrightarrow a_0 > 0$.\n\nAlso: Die Folge ist streng monoton wachsend $\\Leftrightarrow$ **$a_0 > 0$**.\n\n**Erste Glieder:**\n$$a_1 = a_0 + 1$$\n$$a_2 = a_0 + 1 + \\frac{a_0}{7}$$\n$$a_3 = a_0 + 1 + \\frac{a_0}{7} + \\left(\\frac{a_0}{7}\\right)^2$$\n\n**Geschlossene Form** (geometrische Summe $q=a_0/7$):\n$$a_{n+1} = a_0 + \\sum_{k=0}^{n}\\left(\\frac{a_0}{7}\\right)^k$$\nFalls $a_0 \\neq 7$: $a_{n+1} = a_0 + \\dfrac{1-(a_0/7)^{n+1}}{1-a_0/7}$.\n\n**Konvergenz:** Die geometrische Reihe konvergiert genau für $|a_0/7| < 1$, also $|a_0| < 7$.\n\n**Grenzwert für $a_0=3$** (hier $q=3/7$, $|q|<1$ ✓):\n$$\\lim_{n\\to\\infty} a_n = 3 + \\sum_{k=0}^{\\infty}\\left(\\frac{3}{7}\\right)^k = 3 + \\frac{1}{1-3/7} = 3 + \\frac{1}{4/7} = 3 + \\frac{7}{4} = \\frac{12+7}{4} = \\frac{19}{4} = 4{,}75$$\n\n---\n\n**(b) $a_{n+1} = -\\frac{1}{2}a_n + \\frac{a_0}{4}$:**\n\n**Erste Glieder:**\n$$a_1 = -\\frac{a_0}{2} + \\frac{a_0}{4} = -\\frac{2a_0}{4}+\\frac{a_0}{4} = -\\frac{a_0}{4}$$\n$$a_2 = -\\frac{1}{2}\\cdot\\left(-\\frac{a_0}{4}\\right)+\\frac{a_0}{4} = \\frac{a_0}{8}+\\frac{a_0}{4} = \\frac{a_0+2a_0}{8} = \\frac{3a_0}{8}$$\n$$a_3 = -\\frac{1}{2}\\cdot\\frac{3a_0}{8}+\\frac{a_0}{4} = -\\frac{3a_0}{16}+\\frac{4a_0}{16} = \\frac{a_0}{16}$$\n\n**Fixpunkt:** $L = -\\frac{1}{2}L + \\frac{a_0}{4} \\Rightarrow \\frac{3}{2}L = \\frac{a_0}{4} \\Rightarrow L = \\frac{a_0}{6}$.\n\n**Geschlossene Form:** $a_{n+1} = \\left(a_0 - \\frac{a_0}{6}\\right)\\cdot\\left(-\\frac{1}{2}\\right)^{n+1} + \\frac{a_0}{6} = \\frac{5a_0}{6}\\cdot\\left(-\\frac{1}{2}\\right)^{n+1} + \\frac{a_0}{6}$.\n\n**Konvergenz:** Da $\\left|-\\frac{1}{2}\\right| = \\frac{1}{2} < 1$, konvergiert die Folge für **alle $a_0 \\in \\mathbb{R}$**.\n\n$$\\lim_{n\\to\\infty} a_n = \\frac{a_0}{6}$$"
+    },
+    {
+      "id": "folgen-ex-9",
+      "topicId": "folgen",
+      "label": "Klausur SoSe18, Aufgabe 3 – Vier Grenzwerte",
+      "source": "Klausur SoSe18 (Mathe 2), Aufgabe 3 (10 Punkte)",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Bestimmen Sie ausführlich die folgenden Grenzwerte:\n\n(a) $\\displaystyle\\lim_{n\\to\\infty}\\frac{2n^4-\\sqrt{n}+7}{3n^6-n-4}$\n\n(b) $\\displaystyle\\lim_{n\\to\\infty}\\left(\\sqrt{5n+2}-\\sqrt{5n-1}\\right)$\n\n(c) $\\displaystyle\\lim_{n\\to\\infty}\\left(1-\\frac{1}{n^2}\\right)^n$\n\n(d) $\\displaystyle\\lim_{n\\to\\infty}a_n$, wobei $a_0=2$, $a_{n+1}=\\frac{1}{2}a_n-1$ für $n\\geq 0$.",
+      "solution": "**(a)** Höchste Potenz $n^6$ ausklammern (beachte: $\\sqrt{n}=n^{1/2}$, also viel kleinere Ordnung als $n^6$):\n$$\\frac{2n^4-n^{1/2}+7}{3n^6-n-4} = \\frac{n^6(2/n^2 - 1/n^{5{,}5} + 7/n^6)}{n^6(3-1/n^5-4/n^6)} \\to \\frac{0-0+0}{3-0-0} = \\boxed{0}$$\n\n**(b)** Mit konjugiertem Ausdruck erweitern:\n$$\\sqrt{5n+2}-\\sqrt{5n-1} = \\frac{(\\sqrt{5n+2}-\\sqrt{5n-1})(\\sqrt{5n+2}+\\sqrt{5n-1})}{\\sqrt{5n+2}+\\sqrt{5n-1}}$$\n$$= \\frac{(5n+2)-(5n-1)}{\\sqrt{5n+2}+\\sqrt{5n-1}} = \\frac{3}{\\sqrt{5n+2}+\\sqrt{5n-1}}$$\nFür $n\\to\\infty$: Nenner $\\to\\infty$, also:\n$$\\lim_{n\\to\\infty}\\frac{3}{\\sqrt{5n+2}+\\sqrt{5n-1}} = \\boxed{0}$$\n\n**(c)** Umschreiben: $(1-\\frac{1}{n^2})^n = \\exp\\left(n\\cdot\\ln\\left(1-\\frac{1}{n^2}\\right)\\right)$.\n\nFür große $n$: $\\ln(1-\\frac{1}{n^2}) \\approx -\\frac{1}{n^2}$, also:\n$$n\\cdot\\ln\\left(1-\\frac{1}{n^2}\\right) \\approx n\\cdot\\left(-\\frac{1}{n^2}\\right) = -\\frac{1}{n} \\to 0$$\nDaher: $\\lim_{n\\to\\infty}\\left(1-\\frac{1}{n^2}\\right)^n = e^0 = \\boxed{1}$\n\n**Alternativ:** $\\left(1-\\frac{1}{n^2}\\right)^n = \\left[\\left(1-\\frac{1}{n^2}\\right)^{n^2}\\right]^{1/n} \\to (e^{-1})^0 = 1$.\n\n**(d)** Fixpunktmethode:\n\nFixpunkt: $L = \\frac{1}{2}L - 1 \\Rightarrow \\frac{1}{2}L = -1 \\Rightarrow L = -2$.\n\nGeschlossene Form: $a_n = (a_0 - L)\\cdot q^n + L = (2-(-2))\\cdot\\left(\\frac{1}{2}\\right)^n + (-2) = 4\\cdot\\left(\\frac{1}{2}\\right)^n - 2$.\n\nProbe erste Glieder: $a_0=2$, $a_1=\\frac{1}{2}\\cdot2-1=0$, $a_2=\\frac{1}{2}\\cdot0-1=-1$, $a_3=-\\frac{3}{2}$, $a_4=-\\frac{7}{4}$.\n\nFormeln: $a_1=4\\cdot\\frac{1}{2}-2=0$ ✓, $a_2=4\\cdot\\frac{1}{4}-2=-1$ ✓.\n\nKonvergenz: $|q|=\\frac{1}{2}<1$, also $\\left(\\frac{1}{2}\\right)^n\\to 0$ und:\n$$\\lim_{n\\to\\infty}a_n = \\lim_{n\\to\\infty}\\left(4\\cdot\\left(\\frac{1}{2}\\right)^n-2\\right) = 0-2 = \\boxed{-2}$$"
+    },
+    {
+      "id": "folgen-ex-10",
+      "topicId": "folgen",
+      "label": "Klausur SoSe22, Aufgabe 3 – e-Grenzwert und rekursive Folge",
+      "source": "Klausur SoSe22 (Mathe 2), Aufgabe 3 (8 Punkte)",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "(a) Berechnen Sie den Grenzwert der Folge: $a_n = \\left(1+\\dfrac{2}{3n}\\right)^{6n}$\n\n(b) Eine rekursiv definierte Folge $\\{b_n\\}_{n\\in\\mathbb{N}}$ ist gegeben durch $b_{n+1}=\\frac{1}{4}b_n+1$, $b_0\\in\\mathbb{R}$, $n\\geq 0$.\n- (i) Geben Sie alle Folgenglieder bis $b_3$ in Abhängigkeit von $b_0$ an.\n- (ii) Drücken Sie $b_{n+1}$ mit Hilfe von $b_0$ aus.\n- (iii) Untersuchen Sie $\\{b_n\\}$ auf Konvergenz. Geben Sie ggf. den Grenzwert an.\n\n(c) Zu einer Folge $c_n$ (aus Skizze) beurteilen Sie: (i) eindeutige kleinste obere Schranke? (ii) monoton wachsend? (iii) Häufungspunkt bei 4? (iv) Grenzwert bei 2?",
+      "solution": "**(a)** Umformen auf Standardform $\\left(1+\\frac{x}{n}\\right)^n$:\n\nHier ist der Bruch $\\frac{2}{3n} = \\frac{2/3}{n}$ und der Exponent $6n$:\n$$a_n = \\left(1+\\frac{2/3}{n}\\right)^{6n} = \\left[\\left(1+\\frac{2/3}{n}\\right)^n\\right]^6 \\to (e^{2/3})^6 = e^{4} \\approx 54{,}598$$\n\n**(b)** Erste Glieder ($q=1/4$, $c=1$):\n$$b_1 = \\frac{b_0}{4}+1$$\n$$b_2 = \\frac{1}{4}\\cdot\\left(\\frac{b_0}{4}+1\\right)+1 = \\frac{b_0}{16}+\\frac{1}{4}+1 = \\frac{b_0}{16}+\\frac{5}{4}$$\n$$b_3 = \\frac{1}{4}\\cdot\\left(\\frac{b_0}{16}+\\frac{5}{4}\\right)+1 = \\frac{b_0}{64}+\\frac{5}{16}+1 = \\frac{b_0}{64}+\\frac{21}{16}$$\n\n**Geschlossene Form:** Fixpunkt: $L=\\frac{1}{4}L+1 \\Rightarrow \\frac{3}{4}L=1 \\Rightarrow L=\\frac{4}{3}$.\n$$b_{n+1} = \\left(b_0-\\frac{4}{3}\\right)\\cdot\\left(\\frac{1}{4}\\right)^{n+1} + \\frac{4}{3}$$\n\nDa $|1/4|<1$: $(1/4)^{n+1}\\to 0$, also:\n\n**Konvergenz:** Die Folge konvergiert für alle $b_0 \\in \\mathbb{R}$ gegen $\\dfrac{4}{3} \\approx 1{,}333$.\n\n**(c)** Aus der Skizze (Folge fällt von $\\approx 4$ auf $\\approx 2$, aber nicht monoton, pendelt): Vermutungen:\n- (i) **Richtig** – Es gibt eine kleinste obere Schranke (vermutlich 4, da kein Glied über 4 liegt).\n- (ii) **Falsch** – Die Folge ist nicht monoton wachsend (sie fällt insgesamt).\n- (iii) **Richtig** – Bei 4 liegen unendlich viele Glieder (die ersten Glieder), also Häufungspunkt.\n- (iv) **Falsch** – Bei einem Grenzwert bei 2 müssten ab einem Index ALLE Glieder nahe 2 liegen. Das ist nicht erkennbar."
+    }
+  ]
+}

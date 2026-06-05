@@ -1,0 +1,489 @@
+{
+  "id": "mkt-vl4-planung-des-strategischen-marketing",
+  "subjectId": "bwl",
+  "title": "VL4 — Planung des strategischen Marketing",
+  "summary": "Strategisches Marketing bedeutet, langfristige Weichen zu stellen: Welchen Markt bearbeiten wir? Wo stehen wir? Wohin wollen wir? Wie kommen wir dahin? Diese Vorlesung erklaert Marktabgrenzung, Marktanteil, SWOT, BCG-Portfolio, Porter, Ansoff und den STP-Prozess — alles Schritt fuer Schritt und mit konkreten Zahlenbeispielen.",
+  "order": 4,
+  "estMinutes": 75,
+  "group": "Marketing",
+  "sections": [
+    {
+      "id": "s1-grundbegriffe",
+      "heading": "1. Was ist strategisches Marketing? Markt und Marktabgrenzung",
+      "body": "**Strategisches Marketing** befasst sich mit langfristigen, grundlegenden Entscheidungen. Es geht nicht darum, heute einen Flyer zu gestalten, sondern darum, **wohin das Unternehmen in den naechsten 3–10 Jahren steuert**.\n\n> Das strategische Marketing beschaeftigt sich mit langfristigen, grundlegenden Fragen und Entscheidungen im Marketing. Es nimmt planerische Festlegungen vor, an die das Unternehmen typischerweise ueber einen laengeren Zeitraum gebunden ist. (Walsh et al. 2020, S. 146)\n\n**Was muss ich zuerst wissen: Was ist mein Markt?**\n\nBevor man eine Strategie entwickelt, muss man klaeren: *In welchem Markt spielen wir eigentlich?* Das klingt banal, ist aber entscheidend — denn je nachdem wie man den Markt definiert, aendert sich die Zahl der Wettbewerber, die Marktgroesse und damit die eigene Position.\n\n**Vier Kriterien zur Marktabgrenzung (nach Homburg/Krohmer):**\n\n| Kriterium | Frage | Beispiel |\n|---|---|---|\n| Anbieter | Wer stellt das Produkt her? | Bsp: Lebensmittelmarkt = alle Unternehmen, die Lebensmittel herstellen |\n| Produkte | Was wird angeboten? | Bsp: Markt fuer Freizeitaktivitaeten |\n| Nachfrager | Wer kauft es? | Bsp: umweltorientierte Privatkunden |\n| Beduerfnisse | Welches Beduerfnis wird befriedigt? | Bsp: Markt fuer Mobilitaet (Zug, Flugzeug, Auto, Rad) |\n\n**Beispiel Schoko-Riegel (verschachtelter Markt):**\n\nEin Mars-Riegel konkurriert auf mehreren Ebenen gleichzeitig:\n- engster Markt: Markt fuer Schoko-Riegel (direkter Wettbewerb: Twix, Snickers)\n- breiter: Markt fuer Schokoladen-Snacks (+ Alpia-Tafelschokolade)\n- noch breiter: Markt fuer Suesswaren (+ Haribo-Weinbaerchen)\n- sehr breit: Markt fuer Snacks (+ BiFi-Salami)\n- breitester: Markt fuer Lebensmittel (+ Dr. Oetker TK-Pizza)\n\nDie Wahl des relevanten Marktes beeinflusst, wer als Konkurrent gilt und wie gross der eigene Marktanteil erscheint.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Strategisches Marketing",
+          "body": "Beschaeftigt sich mit langfristigen, grundlegenden Entscheidungen und gibt die Entwicklungsrichtung des Unternehmens vor (Zeitraum: mehrere Jahre). Quelle: Brady/Frank (2004); Walsh et al. (2020)."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Planungsebenen im Konzern",
+          "body": "**Ebene 1 (Unternehmensebene):** Konzernimage, Ressourcenallokation.\n**Ebene 2 (SGE-Ebene):** Positionierung als Qualitaetsfuehrer in Markt X.\n**Ebene 3 (Instrumentalebene):** Konkreter Einsatz von Produkt-, Preis-, Kommunikations- und Vertriebspolitik.\n\nBeispiel BMW Group (2024, 142 Mrd. Euro Umsatz): Drei SGEs sind Automobile (BMW, MINI, Rolls-Royce), Motorraeder und Finanzdienstleistungen. Jede SGE traegt eigene Umsatz- und Gewinnverantwortung."
+        }
+      ]
+    },
+    {
+      "id": "s2-marktanteil",
+      "heading": "2. Marktanteil, relativer Marktanteil und Share of Wallet",
+      "body": "Jetzt wo wir wissen, *was unser Markt ist*, koennen wir messen, wie gross unser Stueck vom Kuchen ist.\n\n### Marktanteil\n\n$$\\\\text{Marktanteil} = \\\\frac{\\\\text{eigener Umsatz}}{\\\\text{Marktvolumen}}$$\n\n**Beispiel:** Marke A macht 187,5 Mio. Euro Umsatz, das gesamte Marktvolumen betraegt 750 Mio. Euro.\n$$\\\\text{Marktanteil}_A = \\\\frac{187{,}5}{750} = 25{\\\\%}$$\n\n### Relativer Marktanteil\n\nDer relative Marktanteil setzt den eigenen Marktanteil **ins Verhaeltnis zum staerksten Wettbewerber**. Er ist eine der wichtigsten Kennzahlen der BCG-Matrix (siehe Abschnitt 4).\n\n$$\\\\text{rel. Marktanteil} = \\\\frac{\\\\text{Marktanteil eigenes Produkt}}{\\\\text{Marktanteil des groessten Wettbewerbers}}$$\n\n**Beispiel aus der Vorlesung (Folie 6):** Marke A (wir) hat 187,5 Mio. Euro, Marke B (groesster Wettbewerber) hat 375 Mio. Euro.\n$$\\\\text{rel. Marktanteil (Erloes)} = \\\\frac{187{,}5}{375} = 0{,}50 = 50{\\\\%}$$\n\nAuf Stueckbasis: Marke A verkauft 7.500 Stueck, Marke B 25.000 Stueck:\n$$\\\\text{rel. Marktanteil (Stueck)} = \\\\frac{7.500}{25.000} = 0{,}30 = 30{\\\\%}$$\n\n**Wichtig:** Ist man selbst unter den Top-3-Anbietern, geht der eigene Wert mit in den Nenner ein.\n\n### Share of Wallet (SoW)\n\nSoW misst: *Welchen Anteil seines gesamten Kaufbudgets gibt ein Kunde bei uns aus?* Aus Rangdaten laesst sich der SoW approximieren:\n\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{\\\\text{Rang}}{\\\\text{Anzahl Unternehmen} + 1}\\\\right) \\\\times \\\\frac{2}{\\\\text{Anzahl Unternehmen}}$$",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "SoW-Berechnung: 3 LEH, 3 Kundinnen",
+          "body": "Tanja bewertet Rewe mit Rang 3 (schlechtester), Lidl mit Rang 1 (bester), Edeka mit Rang 2. Es gibt 3 Haendler.\n\n**Tanjas SoW fuer Rewe (Rang 3):**\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{3}{3+1}\\\\right) \\\\times \\\\frac{2}{3} = 0{,}25 \\\\times 0{,}667 = 16{,}7{\\\\%}$$\n\n**Tanjas SoW fuer Lidl (Rang 1):**\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{1}{4}\\\\right) \\\\times \\\\frac{2}{3} = 0{,}75 \\\\times 0{,}667 = 50{\\\\%}$$\n\nAggregierter SoW je Haendler (Durchschnitt aller Kundinnen): Rewe=17%, Lidl=44%, Edeka=39%."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-sow-tabelle",
+          "title": "SoW-Beispiel: Rangdaten und berechnete SoW-Werte",
+          "headers": [
+            "Kundin",
+            "Rewe (Rang)",
+            "Lidl (Rang)",
+            "Edeka (Rang)",
+            "SoW Rewe",
+            "SoW Lidl",
+            "SoW Edeka"
+          ],
+          "rows": [
+            [
+              "Tanja",
+              "3",
+              "1",
+              "2",
+              "17%",
+              "50%",
+              "33%"
+            ],
+            [
+              "Claudia",
+              "3",
+              "2",
+              "1",
+              "17%",
+              "33%",
+              "50%"
+            ],
+            [
+              "Maria",
+              "3",
+              "1",
+              "2",
+              "17%",
+              "50%",
+              "33%"
+            ],
+            [
+              "SoW LEH gesamt",
+              "",
+              "",
+              "",
+              "17%",
+              "44%",
+              "39%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-swot",
+      "heading": "3. Strategische Analyse: PESTLE und SWOT",
+      "body": "Bevor man Ziele setzt, muss man wissen, wo man steht. Das ist die **strategische Analyse** — quasi der Gesundheitscheck des Unternehmens und seines Umfeldes.\n\n### Die drei Analysebereiche\n\n1. **Unternehmen (intern):** Image, Finanzmittel, technische Kompetenzen, Ertragskennziffern.\n2. **Markt (extern):** Kunden (Beduerfnisse, Kaufkraft), Wettbewerber (Image, Kompetenzen), Handel/Vertrieb (Verhandlungsmacht).\n3. **Gesellschaft/Stakeholder (Makro-Umfeld):** PESTLE.\n\n### PESTLE-Analyse\n\nPESTLE ist ein Akronym fuer sechs Umfeldbereiche, die das Unternehmen von aussen beeinflussen:\n\n| Buchstabe | Englisch | Deutsch | Beispiel |\n|---|---|---|---|\n| P | Political | Politisch | Handelspolitik, Subventionen, Kriege |\n| E | Economic | Oekonomisch | Konjunktur, Konsumklima, Zinsniveau |\n| S | Sociocultural | Soziokulturell | Wertewandel, demografischer Wandel |\n| T | Technological | Technologisch | Digitalisierung, KI, neue Fertigungsverfahren |\n| L | Legal | Rechtlich | Datenschutz, Verbraucherschutzgesetze |\n| E | Ecological | Oekologisch | Klimawandel, Ressourcenknappheit, ESG |\n\nJeder Faktor wird in einer strukturierten Checkliste bewertet: Art des Einflusses, Staerke (stark/mittel/schwach), Zeithorizont, Qualitaet (positiv/negativ), Dynamik und relative Bedeutung.\n\n### SWOT-Analyse\n\nDie SWOT-Analyse kombiniert die interne Sicht (Staerken und Schwaechen des Unternehmens) mit der externen Sicht (Chancen und Risiken der Umwelt) — sie ist das **zentrale Werkzeug** der strategischen Analyse.\n\n**SWOT = Strengths x Weaknesses x Opportunities x Threats**\n\nDaraus entstehen vier strategische Situationen:\n\n- **SO (Staerken + Chancen):** Staerken einsetzen, um Chancen zu nutzen (strategisches Zeitfenster)\n- **ST (Staerken + Risiken):** Staerken nutzen, um Risiken abzuwehren\n- **WO (Schwaechen + Chancen):** Schwaechen abbauen, um Chancen zu nutzen\n- **WT (Schwaechen + Risiken):** Schwaechen abbauen, um Risiken zu vermeiden (strategisches Risiko)\n\n**Beispiel Lexus:**\n- Staerke: langjaehrige Kompetenz in Premium-Fertigung\n- Schwaeche: Werkstaettenqualitaet unter Niveau von BMW/Audi/Mercedes\n- Chance: Markt fuer Alternativantriebe (E-Autos) waechst -> SO-Situation: Hybridkompetenz nutzen!\n- Risiko: Sensibilitaet der Kunden fuer Service-Qualitaet waechst -> WT-Situation: strategisches Risiko!",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Merkhilfe SWOT-Matrix",
+          "body": "Denke an ein Koordinatensystem: Innen/Aussen x Gut/Schlecht.\n- Innen + Gut = Staerke\n- Innen + Schlecht = Schwaeche\n- Aussen + Gut = Chance\n- Aussen + Schlecht = Risiko"
+        },
+        {
+          "kind": "info",
+          "title": "Staerken/Schwaechen-Profil",
+          "body": "Beim Staerken/Schwaechen-Profil bewertet man das eigene Unternehmen und den staerksten Wettbewerber auf denselben Kriterien (z.B. Skala 1-5). Die grafische Gegenueberstellung zeigt sofort, wo man besser oder schlechter aufgestellt ist."
+        }
+      ]
+    },
+    {
+      "id": "s4-portfolio",
+      "heading": "4. Portfolio-Analyse: BCG-Matrix und McKinsey-Matrix",
+      "body": "Grosse Unternehmen haben viele Produkte. Wie entscheidet man, welche Produkte gefoerdert, welche gehalten und welche aufgegeben werden? Mit **Portfolio-Analysen**.\n\n### BCG-Matrix (Boston Consulting Group)\n\nDie BCG-Matrix ordnet alle Produkte/SGEs anhand von zwei Achsen ein:\n- **Y-Achse:** Marktwachstum (wie schnell waechst der Gesamtmarkt?)\n- **X-Achse:** Relativer Marktanteil (wie stark bin ich vs. den groessten Wettbewerber?)\n\n$$\\\\text{Marktwachstum} = \\\\frac{\\\\text{Marktumsatz aktuell}}{\\\\text{Marktumsatz Vorjahr}}$$\n\n$$\\\\text{Relativer Marktanteil} = \\\\frac{\\\\text{eigener Marktanteil}}{\\\\text{Marktanteil des groessten Konkurrenten}}$$\n\nDie Grenze liegt bei relativem Marktanteil = 1,0: darueber ist man **Marktfuehrer**.\n\n### McKinsey-9-Felder-Matrix\n\nDie McKinsey-Matrix bewertet Produkte nach **Marktattraktivitaet** (y-Achse: hoch/mittel/niedrig) und **Wettbewerbsstaerke** (x-Achse: schwach/mittel/stark). Resultat:\n- Zone der Mittelbindung (rechts oben): Investieren (A)\n- Selektive Zone (Diagonale): selektive Strategie (B)\n- Zone der Mittelfreisetzung (links unten): Desinvestieren/Abschoepfen (C)",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Die vier BCG-Felder im Detail",
+          "body": "**Stars (hohes Wachstum, hoher rel. MA > 1):** Marktfuehrer in wachsendem Markt. Investieren und ausbauen. Hoher Cash-Bedarf, aber auch hohe Einnahmen.\n\n**Cash Cows (niedriges Wachstum, hoher rel. MA > 1):** Marktfuehrer in gesaettigtem Markt. Geringer Investitionsbedarf, hoher Cash-Flow. Finanzieren Stars und Question Marks.\n\n**Question Marks (hohes Wachstum, niedriger rel. MA < 1):** In wachsendem Markt noch kein Marktfuehrer. Entscheidung: Investieren (-> Star) oder aufgeben.\n\n**Poor Dogs (niedriges Wachstum, niedriger rel. MA < 1):** Schwacher Marktanteil in gesaettigtem Markt. Abschoepfen oder liquidieren."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-bcg",
+          "title": "BCG-Matrix — Ueberblick der vier Felder",
+          "headers": [
+            "",
+            "Hoher rel. Marktanteil (> 1,0 = Marktfuehrer)",
+            "Niedriger rel. Marktanteil (< 1,0)"
+          ],
+          "rows": [
+            [
+              "Hohes Marktwachstum",
+              "STAR — Investieren/Ausbauen",
+              "QUESTION MARK — Investieren oder aufgeben"
+            ],
+            [
+              "Niedriges Marktwachstum",
+              "CASH COW — Abschoepfen/Halten",
+              "POOR DOG — Abschoepfen/Liquidieren"
+            ]
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "fig-mckinsey",
+          "title": "McKinsey-9-Felder-Matrix (Marktattraktivitaet x Wettbewerbsstaerke)",
+          "headers": [
+            "Marktattraktivitaet / Wettbewerbsstaerke",
+            "Schwach",
+            "Mittel",
+            "Stark"
+          ],
+          "rows": [
+            [
+              "Hoch",
+              "B — Selektiv",
+              "A — Investieren",
+              "A — Investieren"
+            ],
+            [
+              "Mittel",
+              "C — Desinvestieren",
+              "B — Selektiv",
+              "A — Investieren"
+            ],
+            [
+              "Niedrig",
+              "C — Desinvestieren",
+              "C — Desinvestieren",
+              "B — Selektiv"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5-porter-ansoff",
+      "heading": "5. Strategische Grundoptionen: Porter und Ansoff-Matrix",
+      "body": "Wir wissen jetzt, wo wir stehen (SWOT, Portfolio). Jetzt geht es darum: **Welche Strategie fahren wir?**\n\n### Porters generische Wettbewerbsstrategien\n\nMichael Porter (1980) zeigt, dass es im Grunde **drei erfolgreiche Grundstrategien** gibt — und eine Falle.\n\n**1. Differenzierungsstrategie (Gesamtmarkt + Einzigartigkeit):** Das eigene Produkt besitzt spezifische Merkmale, die Wettbewerber nicht haben. Kunden zahlen dafuer Premiumpreise, sind loyaler (keine 100%-Alternative vorhanden). Erfordert hohe F&E-Investitionen, starkes Marketing, Reputationsmanagement. Beispiel: Apple iPhone.\n\n**2. Kostenfuehrerschaft (Gesamtmarkt + Kostenvorteil):** Das Unternehmen produziert guenstiger als alle Wettbewerber und kann daher niedrigere Preise anbieten. Erfordert Skaleneffekte, Prozessoptimierung, schlanke Strukturen. Beispiel: Aldi, Ryanair.\n\n**3. Nischenstrategie / Focus (Teilmarkt):** Konzentration auf ein klar abgrenzbares Marktsegment. Entweder Qualitaets-Nische (Differenzierung im Nischenmarkt) oder Kosten-Nische. Hohe Kundenloyalitaet, wenig direkter Wettbewerb. Beispiel: Porsche (Qualitaets-Nische Sportwagen).\n\n**Die Falle: stuck in the middle (Porters U-Kurve):** Wer versucht, gleichzeitig Qualitaetsfuehrer UND Kostenfuehrer zu sein, hat i.d.R. keinen echten Wettbewerbsvorteil mehr — er faellt ins Tal der U-Kurve (niedrige Rendite). Generische Strategien sind i.d.R. nicht miteinander kompatibel.\n\n### Ansoff-Matrix (Marktfeldstrategie)\n\nHarry Ansoff (1966) stellt die Frage: **Wachsen wir mit alten oder neuen Produkten? In alten oder neuen Maerkten?**\n\n- **(1) Marktdurchdringung:** Mehr vom Gleichen auf bekannten Maerkten (Aktionen, Kundenbindung). Hoechstes Synergiepotenzial, weil alle Kompetenzen und Vertriebswege vorhanden sind.\n- **(2) Marktentwicklung:** Gleiche Produkte auf neuen Maerkten (neue Laender, neue Zielgruppen).\n- **(3) Produktentwicklung:** Neue Produkte fuer bestehende Kunden (Innovationen im Kerngeschaeft).\n- **(4) Diversifikation:** Komplett neue Produkte auf komplett neuen Maerkten. Kaum Synergien, am risikoreichsten.\n\n**Z-Strategie:** Die guenstigste Strategiefolge ist (1) -> (2) -> (3) -> (4), da sie dem Buchstaben Z in der Matrix entspricht und mit steigendem Risiko nur schrittweise in fremdes Terrain vordringt.\n\n**Economies of Scope (Verbundeffekte):** Bei Strategie (1) sind Wissen, Marke und Vertrieb bereits vorhanden. Je weiter man in Richtung (4) geht, desto weniger Synergien gibt es.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-ansoff",
+          "title": "Ansoff-Matrix (Marktfeldstrategie nach Ansoff 1966)",
+          "headers": [
+            "Produkte / Maerkte",
+            "Gegenwaertige Maerkte",
+            "Neue Maerkte"
+          ],
+          "rows": [
+            [
+              "Gegenwaertige Produkte",
+              "(1) Marktdurchdringung — hoechste Synergien, geringstes Risiko",
+              "(2) Marktentwicklung — neue Maerkte mit bewaehrten Produkten"
+            ],
+            [
+              "Neue Produkte",
+              "(3) Produktentwicklung — neue Produkte fuer bekannte Maerkte",
+              "(4) Diversifikation — kaum Synergien, hoechstes Risiko"
+            ]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Porter vs. Ansoff — Unterschied",
+          "body": "**Porter** fragt: Wie kaempfen wir im Wettbewerb? (Differenzierung / Kosten / Nische)\n**Ansoff** fragt: Wohin wachsen wir? (Markt / Produkt kombiniert)\n\nBeide Fragen ergaenzen sich: Erst die Wettbewerbsposition klaeren (Porter), dann die Wachstumsrichtung festlegen (Ansoff)."
+        }
+      ]
+    },
+    {
+      "id": "s6-stp",
+      "heading": "6. Marktsegmentierung und der STP-Prozess",
+      "body": "Kein Produkt passt fuer jeden. Deshalb teilt man den Markt in Gruppen auf — das ist **Marktsegmentierung**.\n\n**Definitionen (nach Walsh/Deseniss/Kilian 2020, S. 196ff):**\n- **Markt:** Menschen/Organisationen mit Beduerfnissen, Kaufwunsch und Kauffaehigkeit.\n- **Marktsegment:** Eine Untergruppe, die aehnliche Charakteristika teilt, die zu aehnlichen Produktbeduerfnissen fuehren.\n- **Marktsegmentierung:** Prozess der Aufteilung des Gesamtmarktes in intern homogene (innerhalb aehnlich) und untereinander heterogene (zueinander verschiedene) Segmente.\n\n### Voraussetzungen fuer sinnvolle Segmentierung\n\n| Kriterium | Bedeutung |\n|---|---|\n| Substanziell/gross genug | Segment muss gross genug sein, um einen eigenen Marketing-Mix zu rechtfertigen |\n| Identifizierbar | Segment muss erkennbar und messbar sein |\n| Zugaenglich | Mitglieder muessen mit Marketing-Instrumenten erreichbar sein |\n| Reaktion | Segment muss anders auf Marketing-Mix reagieren als andere Segmente |\n\n### Segmentierungskriterien (nach Walsh et al. 2020, S. 202)\n\n**1. Demografisch:** Alter, Lebensphase, Einkommen, Geschlecht, Schulbildung, Beruf, Familienstand, soziale Schicht, Haushaltsgroesse, Wohnort.\n\n**2. Psychografisch:** Lebensstil, Persoenlichkeit, Einstellungen/Ueberzeugungen, Wertesysteme, Nutzenerwartungen, Beduerfnisse, Involvement.\n\n**3. Verhaltensbezogen:** Markentreue, Einkaufsstaettenwahl, impulsives vs. extensives Kaufverhalten, Mediennutzung, Meinungsfuehrerschaft, Preissensibilitaet.\n\n**Nutzenbasierte Segmentierung (Benefit Segmentation):** Kunden werden nicht danach gruppiert, wer sie sind, sondern danach, *was sie von einem Produkt erwarten*.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-stp",
+          "title": "STP-Prozess: Segmentierung, Targeting, Positionierung",
+          "caption": "Die drei Schritte vom Gesamtmarkt zur konkreten Marktbearbeitung.",
+          "code": "graph LR\n    A[Gesamtmarkt] --> B[S: Segmentierung\\nMarkt in Gruppen aufteilen\\ndemografisch / psychografisch / verhaltensbezogen]\n    B --> C[T: Targeting\\nZielsegment auswaehlen:\\nAttraktivitaet x eigene Staerken]\n    C --> D[P: Positionierung\\nAngebot im Wahrnehmungsraum\\nder Zielgruppe verankern\\nUSP und Markenbotschaft]\n    D --> E[Marketing-Mix\\nProdukt / Preis / Vertrieb / Kommunikation]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "STP in drei Saetzen",
+          "body": "**Segmentierung** beantwortet: Welche verschiedenen Kaeufergruppen gibt es auf dem Markt?\n\n**Targeting** beantwortet: Welche dieser Gruppen wollen und koennen wir am besten bedienen?\n\n**Positionierung** beantwortet: Wie sollen diese Kunden unser Produkt wahrnehmen — und wie unterscheidet es sich von Wettbewerbern?"
+        },
+        {
+          "kind": "beispiel",
+          "title": "STP am Beispiel Autowaesche",
+          "body": "**Segmentierung:** Fahrer die (a) guenstig waschen wollen, (b) schnell waschen wollen, (c) Premium-Handwaesche wuenschen.\n\n**Targeting:** Das Unternehmen waehlt Segment (c) — wohlhabende Autobesitzer mit Premiumfahrzeugen in der Innenstadt.\n\n**Positionierung:** Die sorgfaeltigste Handwaesche der Stadt — Ihr Fahrzeug in besten Haenden. Premiumpreis, exklusive Lage, Sondertextilien."
+        }
+      ]
+    },
+    {
+      "id": "s7-ziele-ablauf",
+      "heading": "7. Marketingziele und idealtypischer Planungsablauf",
+      "body": "Der idealtypische Ablauf des strategischen Marketing folgt einem klaren Kreislauf:\n\n**Analyse -> Ziele -> Strategien -> Massnahmen -> Kontrolle**\n\nDie **Implementierung** (Schaffung interner Voraussetzungen) ist dabei eine Querschnittsfunktion, die alle Phasen begleitet.\n\n### Marketingziele — was wollen wir erreichen?\n\n**Oekonomische Marketingziele** (direkt messbar in Geld/Menge):\n- Umsatz, Absatz, Gewinn, Deckungsbeitrag, Rentabilitaet\n\n**Voroekonom. (psychografische) Marketingziele** (wirken zuerst auf das Verhalten, dann auf die Zahlen):\n- Bekanntheit, Image, Kundenzufriedenheit, Kaufpraeferenzen, Kundenbindung\n\n**Der Zusammenhang:** Voroekonom. Ziele sind die **Treiber** oekonomischer Ziele. Erst wenn Kunden die Marke kennen (Bekanntheit), ihr vertrauen (Image) und zufrieden sind (Kundenzufriedenheit), kaufen sie — und dann steigen Umsatz und Gewinn.\n\n### Drei Erfolgsfaktoren einer Marketingstrategie\n\n1. **Klar definierter Markt:** Die Strategie muss wissen, wen sie anspricht.\n2. **Guter Fit:** Die Staerken des Unternehmens muessen zu den Beduerfnissen des Marktes passen.\n3. **Signifikante Differenzierung:** Das Angebot muss sich in Schlusselfaktoren klar vom Wettbewerb abheben.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Voroekonom. kommt vor oekonomisch",
+          "body": "Niemand kauft etwas, das er nicht kennt. Deshalb muessen voroekonom. Ziele (Bekanntheit, Image) zuerst erreicht werden, bevor oekonom. Ziele (Umsatz, Gewinn) folgen koennen. Der Pfeil geht: Bekanntheit -> Interesse -> Kauf -> Umsatz."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl4-fc-1",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was ist der relative Marktanteil und wie wird er berechnet?",
+      "back": "Der relative Marktanteil vergleicht den eigenen Marktanteil mit dem des groessten Wettbewerbers.\n$$\\\\text{rel. MA} = \\\\frac{\\\\text{eigener Marktanteil}}{\\\\text{MA des groessten Wettbewerbers}}$$\nBeispiel: Eigener Umsatz 187,5 Mio. Euro, groesster Wettbewerber 375 Mio. Euro -> rel. MA = 50%."
+    },
+    {
+      "id": "mkt-vl4-fc-2",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Welche vier Felder hat die BCG-Matrix und welche Handlungsempfehlung gilt jeweils?",
+      "back": "Stars (hohes Wachstum, hoher MA): Investieren/Ausbauen.\nCash Cows (niedriges Wachstum, hoher MA): Abschoepfen/Halten.\nQuestion Marks (hohes Wachstum, niedriger MA): Investieren oder aufgeben.\nPoor Dogs (niedriges Wachstum, niedriger MA): Abschoepfen/Liquidieren."
+    },
+    {
+      "id": "mkt-vl4-fc-3",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was bedeuten die vier SWOT-Kombinationen SO, ST, WO, WT?",
+      "back": "SO: Staerken einsetzen, um Chancen zu nutzen (strategisches Zeitfenster).\nST: Staerken nutzen, um Risiken abzuwehren.\nWO: Schwaechen abbauen, um Chancen zu nutzen.\nWT: Schwaechen abbauen, um Risiken zu vermeiden (strategisches Risiko)."
+    },
+    {
+      "id": "mkt-vl4-fc-4",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was ist die Ansoff-Z-Strategie?",
+      "back": "Die Z-Strategie ist die guenstigste Reihenfolge der vier Ansoff-Optionen: (1) Marktdurchdringung -> (2) Marktentwicklung -> (3) Produktentwicklung -> (4) Diversifikation. Jeder Schritt erhoeht das Risiko, aber die Z-Form sichert, dass man zuerst Synergien ausschoepft."
+    },
+    {
+      "id": "mkt-vl4-fc-5",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was bedeutet 'stuck in the middle' bei Porters generischen Strategien?",
+      "back": "Wer weder konsequente Differenzierung noch konsequente Kostenfuehrerschaft verfolgt, faellt in der Rendite-U-Kurve ins Mittelfeld: kein echter Wettbewerbsvorteil, schlechteste Renditeposition. Porter nennt das 'stuck in the middle'."
+    },
+    {
+      "id": "mkt-vl4-fc-6",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was sind die vier Voraussetzungen fuer eine sinnvolle Marktsegmentierung?",
+      "back": "1. Substanziell/gross genug: Segment rechtfertigt eigenen Marketing-Mix.\n2. Identifizierbar: Segment ist erkennbar und messbar.\n3. Zugaenglich: Mitglieder sind mit Marketing-Instrumenten erreichbar.\n4. Reaktion: Segment reagiert anders auf Marketing-Mix als andere."
+    },
+    {
+      "id": "mkt-vl4-fc-7",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Fuer was stehen P-E-S-T-L-E in der PESTLE-Analyse?",
+      "back": "P = Political, E = Economic, S = Sociocultural, T = Technological, L = Legal, E = Ecological. Die PESTLE-Analyse erfasst das Makro-Umfeld des Unternehmens."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl4-q1",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "leicht",
+      "prompt": "Marke A hat einen Umsatz von 187,5 Mio. Euro. Das Marktvolumen betraegt 750 Mio. Euro. Wie hoch ist der Marktanteil von Marke A?",
+      "options": [
+        "12,5%",
+        "25%",
+        "40%",
+        "50%"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Marktanteil = 187,5 / 750 = 0,25 = 25%. Division des eigenen Umsatzes durch das gesamte Marktvolumen."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl4-q2",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "mittel",
+      "prompt": "Marke A (wir) verkauft 7.500 Stueck, der groesste Wettbewerber Marke B verkauft 25.000 Stueck. Wie hoch ist der relative Marktanteil von Marke A auf Stueckbasis (in Prozent)?",
+      "answer": 30,
+      "tolerance": 0.1,
+      "unit": "%",
+      "explanation": "Relativer Marktanteil = 7.500 / 25.000 = 0,30 = 30%. Man teilt den eigenen Absatz durch den des groessten Konkurrenten."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl4-q3",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "mittel",
+      "prompt": "Im SoW-Beispiel (3 LEH, 3 Kundinnen) bewertet Claudia Edeka mit Rang 1 (bester). Wie gross ist Claudias Share of Wallet fuer Edeka (in %)? Formel: SoW = (1 - Rang/(Anzahl+1)) x (2/Anzahl). Anzahl = 3.",
+      "answer": 50,
+      "tolerance": 0.5,
+      "unit": "%",
+      "explanation": "SoW = (1 - 1/(3+1)) x (2/3) = (1 - 0,25) x 0,667 = 0,75 x 0,667 = 0,50 = 50%."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl4-q4",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "leicht",
+      "prompt": "In der BCG-Matrix sind Cash Cows Produkte mit hohem Marktwachstum und hohem relativen Marktanteil.",
+      "answer": false,
+      "explanation": "Falsch. Cash Cows haben NIEDRIGEN Marktwachstum, aber HOHEN relativen Marktanteil. Hoher Wachstum + hoher MA = Stars."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl4-q5",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "mittel",
+      "prompt": "Welche Ansoff-Strategie hat das hoechste Synergiepotenzial (Economies of Scope)?",
+      "options": [
+        "Diversifikation",
+        "Produktentwicklung",
+        "Marktentwicklung",
+        "Marktdurchdringung"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Marktdurchdringung (bestehende Produkte auf bestehenden Maerkten) hat das hoechste Synergiepotenzial, weil alle Kompetenzen, Vertriebswege und Branchenkenntnisse bereits vorhanden sind."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl4-q6",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Aussagen zur SWOT-Analyse sind richtig? (Mehrfachauswahl)",
+      "options": [
+        "Staerken und Schwaechen kommen aus der internen Unternehmensanalyse",
+        "Chancen und Risiken kommen aus der externen Umweltanalyse",
+        "Die SO-Situation wird als strategisches Risiko bezeichnet",
+        "Im ST-Feld setzt das Unternehmen Staerken zur Abwehr von Risiken ein"
+      ],
+      "correct": [
+        0,
+        1,
+        3
+      ],
+      "multiple": true,
+      "explanation": "Richtig sind Aussagen 1, 2 und 4. Die SO-Situation (Staerken + Chancen) wird als strategisches Zeitfenster bezeichnet, nicht als Risiko. Das strategische Risiko ist die WT-Situation."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl4-q7",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "leicht",
+      "prompt": "Was beschreibt Porters stuck-in-the-middle-Phaenomen?",
+      "options": [
+        "Ein Unternehmen, das erfolgreich sowohl Differenzierung als auch Kostenfuehrerschaft verfolgt",
+        "Ein Unternehmen ohne klare Strategie, das weder Differenzierungs- noch Kostenvorteil hat und daher eine niedrige Rendite erzielt",
+        "Eine Nischenstrategie in einem mittleren Marktsegment",
+        "Ein Produkt in der Reifephase des Produktlebenszyklus"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Stuck in the middle beschreibt den gefaehrlichen Mittelweg: kein klarer Differenzierungsvorteil, kein klarer Kostenvorteil -> niedrige Rendite laut Porters U-Kurve."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl4-q8",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "leicht",
+      "prompt": "Psychografische Segmentierungskriterien umfassen Alter, Einkommen und Geschlecht.",
+      "answer": false,
+      "explanation": "Falsch. Alter, Einkommen und Geschlecht sind DEMOGRAFISCHE Kriterien. Psychografische Kriterien sind Lebensstil, Persoenlichkeit, Einstellungen, Wertesysteme, Motive."
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl4-q9",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "mittel",
+      "prompt": "Erklaere in eigenen Worten den Unterschied zwischen oekonomischen und voroekonom. Marketingzielen und wie sie zusammenhaengen.",
+      "sampleAnswer": "Oekonomische Marketingziele sind direkt in Geld oder Menge messbar: Umsatz, Absatz, Gewinn, Deckungsbeitrag. Voroekonom. (psychografische) Ziele betreffen die Koepfe der Kunden: Bekanntheit, Image, Kundenzufriedenheit, Kaufpraeferenzen. Der Zusammenhang ist kausal: Erst wenn ein Kunde eine Marke kennt (Bekanntheit), entwickelt er Vertrauen (Image), ist zufrieden (Kundenzufriedenheit) und kauft dann, was zum Umsatz fuehrt. Voroekonom. Ziele sind also die notwendigen Vorstufen oekonomischer Ziele.",
+      "keywords": [
+        "oekonomisch",
+        "voroekonom",
+        "bekanntheit",
+        "image",
+        "umsatz",
+        "treiber"
+      ],
+      "explanation": "Kernidee: Voroekonom. Ziele (psychografisch) sind Ursachen, oekonomische Ziele sind Wirkungen. Ohne Bekanntheit kein Kauf, ohne Kauf kein Umsatz."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl4-q10",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen hat folgende Produkte: Produkt X (rel. MA = 1,8; Marktwachstum 12%), Produkt Y (rel. MA = 0,4; Marktwachstum 15%), Produkt Z (rel. MA = 2,1; Marktwachstum 2%). In welches BCG-Feld gehoert Produkt Z?",
+      "options": [
+        "Star",
+        "Cash Cow",
+        "Question Mark",
+        "Poor Dog"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Produkt Z hat einen hohen relativen Marktanteil (2,1 > 1,0 = Marktfuehrer) und ein niedriges Marktwachstum (2%) -> Cash Cow. Produkt X waere ein Star (hoher MA + hohes Wachstum), Produkt Y ein Question Mark (niedriger MA + hohes Wachstum)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl4-q11",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "mittel",
+      "prompt": "Im STP-Prozess kommt die Positionierung vor der Segmentierung.",
+      "answer": false,
+      "explanation": "Falsch. Die korrekte Reihenfolge ist: Segmentierung -> Targeting -> Positionierung (STP). Erst segmentiert man den Markt, dann waehlt man das Zielsegment (Targeting), und erst dann entwickelt man die Positionierungsstrategie."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl4-q12",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "difficulty": "schwer",
+      "prompt": "Marke A hat einen Umsatz von 187,5 Mio. Euro, Marke B (groesster Wettbewerber) hat 375 Mio. Euro. Wie hoch ist der relative Marktanteil von Marke A auf Erloessbasis (in Prozent)?",
+      "answer": 50,
+      "tolerance": 0.1,
+      "unit": "%",
+      "explanation": "Relativer Marktanteil (Erloese) = 187,5 / 375 = 0,50 = 50%. Direktes Beispiel aus der Vorlesung (Folie 6)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl4-ex-1",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "label": "VL4, Folie 6: Relativer Marktanteil (Erloes- und Stueckbasis)",
+      "source": "VL4 — Planung des strategischen Marketing, Folie 6",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": true,
+      "prompt": "Marke A (eigenes Unternehmen) erzielt einen Jahresumsatz von **187,5 Mio. Euro** und verkauft **7.500 Stueck**. Der groesste Wettbewerber, Marke B, erzielt **375 Mio. Euro** Umsatz und verkauft **25.000 Stueck**.\n\na) Berechne den relativen Marktanteil von Marke A auf **Erloessbasis**.\nb) Berechne den relativen Marktanteil von Marke A auf **Stueckbasis**.\nc) Was bedeutet ein relativer Marktanteil unter 1,0?",
+      "hint": "Relativer Marktanteil = eigener Wert / Wert des groessten Wettbewerbers. Der Nenner ist immer der groesste Wettbewerber, nicht das Marktvolumen gesamt.",
+      "solution": "**a) Relativer Marktanteil auf Erloessbasis:**\n\n$$\\\\text{rel. MA (Erloes)} = \\\\frac{187{,}5 \\\\text{ Mio. Euro}}{375 \\\\text{ Mio. Euro}} = 0{,}50 = \\\\mathbf{50\\\\%}$$\n\nMarke A erwirtschaftet nur die Haelfte des Umsatzes des Marktfuehrers (Marke B).\n\n**b) Relativer Marktanteil auf Stueckbasis:**\n\n$$\\\\text{rel. MA (Stueck)} = \\\\frac{7.500}{25.000} = 0{,}30 = \\\\mathbf{30\\\\%}$$\n\nAuf Stueckbasis ist Marke A noch schwaecher aufgestellt. Sie verkauft nur 30% der Stueckzahl des Marktfuehrers.\n\n**c) Bedeutung rel. MA < 1,0:**\nEin relativer Marktanteil unter 1,0 (bzw. unter 100%) bedeutet: Das eigene Produkt ist **kein Marktfuehrer**. In der BCG-Matrix liegen solche Produkte in der linken Haelfte (Question Mark oder Poor Dog, je nach Marktwachstum).\n\n**Hinweis aus der Vorlesung (Folie 6):** Ist das eigene Unternehmen selbst unter den Top-3-Marktteilnehmern, geht der eigene Wert mit in den Nenner ein. Man vergleicht sich dann mit dem naechstgroesseren Wettbewerber."
+    },
+    {
+      "id": "mkt-vl4-ex-2",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "label": "VL4, Folie 7-8: Share of Wallet (3 LEH, 3 Kundinnen)",
+      "source": "VL4 — Planung des strategischen Marketing, Folien 7-8",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Drei Kundinnen (Tanja, Claudia, Maria) besuchen drei Lebensmittelhaendler (Rewe, Lidl, Edeka) und bewerten diese mit Rangplaetzen (1 = bester, 3 = schlechtester):\n\n| Kundin | Rewe | Lidl | Edeka |\n|---|---|---|---|\n| Tanja | 3 | 1 | 2 |\n| Claudia | 3 | 2 | 1 |\n| Maria | 3 | 1 | 2 |\n\nFormel fuer den Share of Wallet:\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{\\\\text{Rang}}{\\\\text{Anzahl Unternehmen} + 1}\\\\right) \\\\times \\\\frac{2}{\\\\text{Anzahl Unternehmen}}$$\n\na) Berechne Tanjas SoW fuer Rewe, Lidl und Edeka.\nb) Berechne den aggregierten SoW (Durchschnitt ueber alle drei Kundinnen) fuer Rewe, Lidl und Edeka.",
+      "hint": "Anzahl Unternehmen = 3. Setze fuer jede Kundin-Haendler-Kombination den jeweiligen Rang in die Formel ein. Probe: Die SoW-Werte einer Kundin sollten sich auf ca. 100% summieren.",
+      "solution": "**a) Tanjas SoW-Werte:**\n\nAnzahl Unternehmen = 3, daher gilt: Nenner = 3 + 1 = 4; zweiter Faktor = 2/3 = 0,667.\n\n**Tanja / Rewe (Rang 3):**\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{3}{4}\\\\right) \\\\times \\\\frac{2}{3} = 0{,}25 \\\\times 0{,}667 = \\\\mathbf{16{,}7\\\\%}$$\n\n**Tanja / Lidl (Rang 1):**\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{1}{4}\\\\right) \\\\times \\\\frac{2}{3} = 0{,}75 \\\\times 0{,}667 = \\\\mathbf{50{,}0\\\\%}$$\n\n**Tanja / Edeka (Rang 2):**\n$$\\\\text{SoW} = \\\\left(1 - \\\\frac{2}{4}\\\\right) \\\\times \\\\frac{2}{3} = 0{,}50 \\\\times 0{,}667 = \\\\mathbf{33{,}3\\\\%}$$\n\nProbe: 16,7% + 50,0% + 33,3% = 100% (passt!)\n\n**b) Aggregierter SoW je Haendler:**\n\nDa Tanja und Maria identische Raenge vergeben, gilt fuer sie dieselben SoW-Werte. Claudia hat Lidl und Edeka vertauscht.\n\n| Kundin | Rewe | Lidl | Edeka |\n|---|---|---|---|\n| Tanja | 17% | 50% | 33% |\n| Claudia | 17% | 33% | 50% |\n| Maria | 17% | 50% | 33% |\n| **Durchschnitt** | **17%** | **44%** | **39%** |\n\nClaudias SoW fuer Lidl (Rang 2): (1 - 2/4) x (2/3) = 0,5 x 0,667 = 33%\nClaudias SoW fuer Edeka (Rang 1): (1 - 1/4) x (2/3) = 0,75 x 0,667 = 50%\n\n**Ergebnis:** Rewe hat den niedrigsten SoW (17%), weil alle drei Kundinnen Rewe den schlechtesten Rang (3) vergeben. Lidl fuehrt mit 44%, Edeka liegt bei 39%."
+    }
+  ]
+}

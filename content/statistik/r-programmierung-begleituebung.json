@@ -1,0 +1,423 @@
+{
+  "id": "r-programmierung-begleituebung",
+  "subjectId": "statistik",
+  "title": "R-Programmierung (Begleitübung)",
+  "summary": "Praxisnahe Einführung in R und RStudio für absolute Anfänger: Daten einlesen, deskriptive Kennzahlen, Verteilungsfunktionen (dbinom, pnorm/qnorm), t-Quantile (qt), Hypothesentests (t.test()) und lineare Regression (lm()) — alles anhand der Kursdatensätze Covid19ICU.xlsx, PosTests.xlsx, Treibhausgasemissionen.csv und DataRegression.xlsx.",
+  "order": 7,
+  "estMinutes": 75,
+  "sections": [
+    {
+      "id": "was-ist-r",
+      "heading": "Was ist R? — Die Werkzeuge kurz erklärt",
+      "body": "**R** ist eine kostenlose, speziell für Statistik und Datenanalyse entwickelte Programmiersprache. Stell dir R wie einen super-fähigen Taschenrechner vor, dem du auf Deutsch sagst, was er rechnen soll — und der dir sofort das Ergebnis und ein Diagramm liefert.\n\n**RStudio** ist die grafische Oberfläche, mit der du R bequem bedienst. Du siehst vier Bereiche:\n- **Oben links:** Das Skript — hier schreibst du deinen Code, wie in einem Textdokument.\n- **Unten links:** Die Konsole — hier läuft dein Code und du siehst die Ergebnisse.\n- **Oben rechts:** Environment — hier siehst du alle Variablen, die du angelegt hast.\n- **Unten rechts:** Plots, Dateien, Hilfe.\n\nEin **Kommentar** (Zeilen mit `#`) erklärt den Code — R ignoriert ihn bei der Ausführung.\n\n```r\n# Das ist ein Kommentar — R ignoriert diese Zeile\n2 + 3       # Gibt 5 aus\n\"Hallo R!\"  # Text in Anführungszeichen\n```\n\n**Wichtig vor dem Start:** Du musst R zuerst sagen, in welchem Ordner deine Dateien liegen. Das heißt „Arbeitsverzeichnis setzen\":\n\n```r\n# Setze deinen eigenen Pfad ein (Menü: Session > Set Working Directory)\nsetwd(\"C:/Uni/Statistik/R_Uebung\")\n```\n\nAußerdem brauchst du für viele Aufgaben zusätzliche **Packages** — kleine Erweiterungen, die extra Befehle mitbringen. Einmal installieren, dann immer nur noch laden:\n\n```r\n# Einmalig installieren (braucht Internetverbindung)\ninstall.packages(\"readxl\")   # zum Einlesen von Excel-Dateien\ninstall.packages(\"ggplot2\")  # für schöne Grafiken\n\n# Bei jedem Start laden (wie ein Programm öffnen)\nlibrary(readxl)\nlibrary(ggplot2)\n```",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Installation von R und RStudio",
+          "body": "1. Zuerst **R** herunterladen: https://cran.r-project.org/\n2. Danach **RStudio Desktop** (kostenlos): https://posit.co/download/rstudio-desktop/\n3. Video-Tutorial zum Start: https://www.youtube.com/watch?v=X_Mxya2Fis0\n4. Kostenloses Onlinebuch auf Englisch: https://rstudio-education.github.io/hopr/"
+        },
+        {
+          "kind": "merksatz",
+          "title": "Code ausführen",
+          "body": "Markiere eine Zeile (oder mehrere) und drücke **Strg+Enter** (Windows) bzw. **Cmd+Enter** (Mac), um sie auszuführen. Alternativ: „Run\"-Button oben rechts im Skript-Fenster."
+        }
+      ]
+    },
+    {
+      "id": "variablen-vektoren",
+      "heading": "Variablen und Vektoren — die Bausteine von R",
+      "body": "In R speicherst du Werte in **Variablen** — stelle dir eine Variable wie eine beschriftete Box vor, in die du einen Wert legst und später wieder herausnimmst.\n\n```r\n# Wert einer Variablen zuweisen (Pfeil <- ist das Gleichheitszeichen in R)\nalter <- 22\nname <- \"Anna\"\npi_wert <- 3.14159\n\n# Variable ausgeben (einfach den Namen eintippen)\nalter        # gibt 22 aus\n```\n\nEin **Vektor** ist eine geordnete Sammlung von mehreren Werten desselben Typs — wie eine Spalte in Excel. Du erstellst ihn mit der Funktion `c()` (steht für *combine*):\n\n```r\n# Zahlenvektor: 10 Messwerte\ngewichte <- c(70, 75, 68, 80, 72, 65, 90, 78, 71, 69)\n\n# Auf einzelne Elemente zugreifen: Index in eckigen Klammern []\ngewichte[1]   # erstes Element: 70\ngewichte[3]   # drittes Element: 68\n\n# Einfache Rechnungen auf dem ganzen Vektor\ngewichte * 2          # verdoppelt jeden Wert\ngewichte - mean(gewichte)  # zentriert die Werte\n\n# Länge des Vektors\nlength(gewichte)      # gibt 10 aus\n```\n\n**Häufige Rechenoperationen und Funktionen:**",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "r-tab-grundfunktionen",
+          "title": "Wichtige R-Grundfunktionen im Überblick",
+          "headers": ["Funktion", "Bedeutung", "Beispiel"],
+          "rows": [
+            ["mean(x)", "Arithmetisches Mittel", "mean(c(2,4,6)) → 4"],
+            ["median(x)", "Median (mittlerer Wert)", "median(c(1,3,9)) → 3"],
+            ["var(x)", "Stichprobenvarianz (Nenner n-1)", "var(c(2,4,6)) → 4"],
+            ["sd(x)", "Stichproben-Standardabweichung", "sd(c(2,4,6)) → 2"],
+            ["min(x) / max(x)", "Minimum / Maximum", "min(c(3,1,4)) → 1"],
+            ["sum(x)", "Summe aller Elemente", "sum(c(1,2,3)) → 6"],
+            ["length(x)", "Anzahl der Elemente", "length(c(5,6,7)) → 3"],
+            ["quantile(x, 0.25)", "25%-Quartil", "quantile(x, probs=0.25)"],
+            ["cor(x, y)", "Korrelationskoeffizient r", "cor(gewicht, groesse)"],
+            ["summary(df)", "Überblick über Datensatz", "summary(covid19)"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Stichprobenvarianz vs. Populationsvarianz",
+          "body": "In R berechnet `var(x)` die **Stichprobenvarianz** mit Nenner $(n-1)$ — das ist die erwartungstreue Schätzung $\\hat{\\sigma}^2$. Die **Populationsvarianz** (Nenner $n$) erhält man über:\n```r\nn <- length(x)\npop_var <- (n-1)/n * var(x)\n```"
+        }
+      ]
+    },
+    {
+      "id": "daten-einlesen",
+      "heading": "Datensätze einlesen — Excel und CSV",
+      "body": "In der Praxis liegen Daten selten als einzelne Zahlen vor, sondern in Tabellen. R liest Excel- und CSV-Dateien mit wenigen Befehlen ein und speichert sie als **DataFrame** — eine Tabelle mit benannten Spalten.\n\n### Excel einlesen: Covid19ICU.xlsx\n\nDer Datensatz enthält täglich gemeldete Covid-19-Intensivpatienten in Deutschland (27.3.2020 – 7.3.2021).\n\n```r\nlibrary(readxl)   # Package laden\n\n# Excel-Datei einlesen und als Variable speichern\ncovid19 <- read_excel(\"Covid19ICU.xlsx\")\n\n# Überblick verschaffen\nView(covid19)          # öffnet Tabellen-Ansicht (wie Excel)\nsummary(covid19)       # Deskriptive Statistik für alle Spalten\n```\n\n**Ausgabe von `summary(covid19)` (Auszug):**\n```\nCovid-19 Patienten in Intensivstation\n Min.   :  13\n 1st Qu.: 999\n Median :2082\n Mean   :2186\n 3rd Qu.:3299\n Max.   :5762\n```\nDas zeigt: Der Minimum-Wert war 13 Patienten, der Maximalwert 5762. Das Mittel lag bei ca. 2186 Patienten pro Tag.\n\n```r\n# Auf eine einzelne Spalte zugreifen: Datensatzname$Spaltenname\npatienten <- covid19$`Covid-19 Patienten in Intensivstation`\n\n# Lagemaße berechnen\nmean(patienten)      # Arithmetisches Mittel: ~2186\nmedian(patienten)    # Median: ~2082\n\n# Streuungsmaße\nmax(patienten) - min(patienten)   # Spannweite: ~5749\nvar(patienten)   # Stichprobenvarianz\nsd(patienten)    # Standardabweichung\n\n# Histogramm erstellen (Klassengrenzen selbst wählen)\nklassengrenzen <- c(0, 1000, 2000, 3000, 4000, 5000, 6000)\nhist(\n  patienten,\n  breaks = klassengrenzen,\n  main   = \"Histogramm Covid-19 Intensivpatienten\",\n  xlab   = \"Anzahl Patienten\",\n  ylab   = \"Häufigkeit\",\n  col    = \"lightblue\"\n)\n\n# Empirische Verteilungsfunktion (ECDF)\nvertfkt <- ecdf(patienten)\nplot(vertfkt, main = \"Empirische Verteilungsfunktion\",\n     xlab = \"Patienten\", ylab = \"F(x)\")\n```\n\n### CSV einlesen: Treibhausgasemissionen.csv\n\nCSV-Dateien (Comma-Separated Values) liest du mit `read.csv()`. Der Datensatz enthält Treibhausgasemissionen pro Kopf, BIP, Importe und Direktinvestitionen für EU-Länder (1990–2017).\n\n```r\nco2 <- read.csv(\"Treibhausgasemissionen.csv\", row.names = 1)\n\n# Überblick\nView(co2)       # Spalten: geo, time, THG, BIP, ADIBIP, IM\nsummary(co2)    # NA's sind fehlende Werte (unbalancierter Panel)\n\n# Korrelationsmatrix (Package corrplot nötig)\nlibrary(corrplot)\nco2_zahlen <- co2[ , -c(1:2)]   # Geo- und Jahres-Spalte entfernen\ncorrplot(cor(co2_zahlen, use = \"pairwise.complete.obs\"))\n```\n\n### Zweiten Datensatz laden und Korrelation prüfen: PosTests.xlsx\n\n```r\npostests <- read_excel(\"PosTests.xlsx\")\n\n# Korrelation zwischen ICU-Patienten und positiven Tests\nr <- cor(patienten, postests$`Positive Tests`)\ncat(\"Korrelation:\", r)   # z.B. 0.78 — starke positive Korrelation\n# Höhere Positivtests gehen mit mehr ICU-Patienten einher\n```",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Häufige Fehler beim Einlesen",
+          "body": "- Datei muss im **Arbeitsverzeichnis** liegen (`setwd()` nicht vergessen!)\n- Spaltennamen mit Leerzeichen oder Sonderzeichen in **Backticks** einschließen: `` covid19$`Covid-19 Patienten` ``\n- Bei `read.csv()`: wenn Trennzeichen ein Semikolon (`;`) ist, verwende `read.csv2()` statt `read.csv()`\n- Variablennamen dürfen **nicht** mit einer Zahl beginnen (z.B. `2daten` ist falsch → `daten2` ist richtig)"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Scheinkorrelation — Korrelation ≠ Kausalität",
+          "body": "```r\n# Anzahl Nicolas-Cage-Filme (1999–2009)\ncage_movies <- c(2, 2, 2, 3, 1, 1, 2, 3, 4, 1, 4)\n# Ertrunkene in Swimming-Pools (1999–2009)\npool_death  <- c(109, 102, 102, 98, 85, 95, 96, 98, 123, 94, 102)\n\ncor(cage_movies, pool_death)  # ergibt ca. 0.67 — aber natürlich kein Zusammenhang!\n```\nDieses Beispiel aus dem Kursscript zeigt: Eine hohe Korrelation bedeutet **nicht** automatisch einen kausalen Zusammenhang. Solche Zufallskorrelationen heißen **Scheinkorrelationen**."
+        }
+      ]
+    },
+    {
+      "id": "verteilungsfunktionen-r",
+      "heading": "Verteilungsfunktionen in R: dbinom, pnorm, qnorm, qt",
+      "body": "R hat für alle wichtigen Verteilungen eingebaute Funktionen — kein mühsames Ablesen aus Tabellen! Das **Namensschema** ist immer gleich:\n- `d___` → **Dichte** (Wahrscheinlichkeit für genau diesen Wert)\n- `p___` → **Verteilungsfunktion** $F(x) = P(X \\le x)$ (kumulative Wahrscheinlichkeit)\n- `q___` → **Quantilsfunktion** — liefert $x$, sodass $P(X \\le x) = p$ (Umkehrung von `p`)\n- `r___` → **Zufallszahlen** aus dieser Verteilung\n\n---\n\n### dbinom — Binomialwahrscheinlichkeit\n\nBerechnet $P(X = k)$ für $X \\sim B(n, p)$:\n\n$$P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$$\n\n```r\n# Beispiel aus dem Kursscript:\n# Ein fairer Würfel wird 100 Mal geworfen.\n# Wie groß ist die Wahrscheinlichkeit, genau 10 Mal eine 6 zu würfeln?\np <- 1/6    # Erfolgswahrscheinlichkeit pro Wurf\nn <- 100    # Anzahl Würfe\nk <- 10     # gesuchte Anzahl Sechsen\n\nP_genau_10 <- dbinom(k, size = n, prob = p)\ncat(\"P(X = 10):\", round(P_genau_10, 5), \"\\n\")\n# Ausgabe: P(X = 10): 0.04248\n\n# Erwartungswert E(X) = n * p\nE_X <- n * p\ncat(\"Erwartungswert:\", E_X, \"\\n\")   # 16.667\n\n# Varianz Var(X) = n * p * (1-p)\nVar_X <- n * p * (1 - p)\ncat(\"Varianz:\", round(Var_X, 3), \"\\n\")   # 13.889\n\n# Mehrere Wahrscheinlichkeiten auf einmal:\ndbinom(0:5, size = 6, prob = 0.5)   # P(X=0), P(X=1), ..., P(X=5) bei n=6, p=0.5\n\n# Kumulative Wahrscheinlichkeit P(X <= k): pbinom statt dbinom\npbinom(10, size = n, prob = p)   # P(X <= 10)\n```\n\n**Erklärung der Ausgabe:** `dbinom(10, size=100, prob=1/6)` ergibt ~0.0425 — also eine gut 4%ige Chance, bei 100 Würfen genau 10 Sechsen zu sehen.\n\n---\n\n### pnorm und qnorm — Normalverteilung\n\nFür $X \\sim N(\\mu, \\sigma^2)$ berechnet `pnorm` die Wahrscheinlichkeit $P(X \\le x)$:\n\n```r\n# Standardnormalverteilung N(0,1) — mean=0, sd=1 sind die Standardwerte\npnorm(1.96)               # P(Z <= 1.96) = 0.9750 (95%-Quantil)\npnorm(-1.96)              # P(Z <= -1.96) = 0.0250\n\n# Dichte an einer Stelle (Höhe der Glockenkurve)\ndnorm(0)                  # Dichte bei x=0: 0.3989\ndnorm(1, mean=0, sd=1)    # Dichte bei x=1: 0.2420\n\n# Beispiel: X ~ N(mu=100, sigma=10)\nmu <- 100\nsigma <- 10\n\n# P(X <= 110) = ?\npnorm(110, mean = mu, sd = sigma)        # 0.8413\n\n# P(X > 90) = 1 - P(X <= 90)\n1 - pnorm(90, mean = mu, sd = sigma)     # 0.8413 (Symmetrie!)\n\n# P(90 <= X <= 115)\npnorm(115, mean=mu, sd=sigma) - pnorm(90, mean=mu, sd=sigma)  # 0.7745\n\n# qnorm: Quantile berechnen — Umkehrung von pnorm\n# Welcher x-Wert wird mit 95% Wahrscheinlichkeit unterschritten?\nqnorm(0.95, mean = mu, sd = sigma)   # 116.45\nqnorm(0.025)                          # -1.96 (bekannter kritischer Wert!)\nqnorm(0.975)                          #  1.96\n```\n\n**Dichtefunktion als Plot:**\n\n```r\n# Glockenkurve zeichnen (aus dem Kursscript)\nlibrary(ggplot2)\nx_werte <- seq(-4, 4, length.out = 1000)\ndichte  <- dnorm(x_werte, mean = 0, sd = 1)\n\nggplot(data.frame(x = x_werte, y = dichte), aes(x, y)) +\n  geom_line(color = \"blue\", linewidth = 1) +\n  labs(title = \"Dichtefunktion der Standardnormalverteilung\",\n       x = \"x\", y = \"f(x)\") +\n  theme_classic()\n```\n\n---\n\n### qt — Quantile der t-Verteilung\n\nFür kleine Stichproben ($n < 30$) oder unbekannte Varianz benutzt man die **t-Verteilung** statt der Normalverteilung. `qt()` liefert die kritischen Werte:\n\n```r\n# t-Quantil: 97.5%-Quantil bei n=20 (also df = n-1 = 19 Freiheitsgrade)\nt_krit <- qt(p = 0.975, df = 19, lower.tail = TRUE)\ncat(\"Kritischer t-Wert (zweiseitig, alpha=5%):\", round(t_krit, 4), \"\\n\")\n# Ausgabe: 2.093\n\n# Vergleich: Mit zunehmenden Freiheitsgraden nähert sich t der Normalverteilung\nqt(0.975, df = 4)     # 2.776 — breite Ränder bei kleinen Stichproben\nqt(0.975, df = 29)    # 2.045 — schon nahe bei 1.96\nqt(0.975, df = 1000)  # 1.962 — fast identisch mit qnorm(0.975) = 1.960\n```",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "r-fig-normal",
+          "title": "Standardnormalverteilung mit pnorm/qnorm",
+          "caption": "pnorm(1.96) ≈ 0.975 — die schattierte Fläche links von z=1.96. qnorm(0.975) gibt diesen Wert zurück.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "to": 1.96, "tail": "left" },
+          "markers": [{ "x": 1.96, "label": "z=1.96" }, { "x": -1.96, "label": "z=-1.96" }]
+        },
+        {
+          "kind": "distribution",
+          "id": "r-fig-t-vs-normal",
+          "title": "t-Verteilung vs. Normalverteilung",
+          "caption": "Die t-Verteilung hat breitere Ränder als die Normalverteilung. Mit mehr Freiheitsgraden (df) nähert sie sich der N(0,1) an. qt(0.975, df=5) ≈ 2.571, aber qnorm(0.975) ≈ 1.960.",
+          "dist": "t",
+          "params": { "df": 5 },
+          "markers": [{ "x": 2.571, "label": "t₅;0.975=2.571" }, { "x": 1.96, "label": "z=1.96" }]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wann welche Funktion?",
+          "body": "| Aufgabe | Funktion |\n|---|---|\n| Binomial $P(X=k)$ | `dbinom(k, size=n, prob=p)` |\n| Binomial $P(X \\le k)$ | `pbinom(k, size=n, prob=p)` |\n| Normal $P(X \\le x)$ | `pnorm(x, mean=mu, sd=sigma)` |\n| Normal-Quantil | `qnorm(p, mean=mu, sd=sigma)` |\n| t-Quantil | `qt(p, df=n-1)` |"
+        }
+      ]
+    },
+    {
+      "id": "konfidenzintervalle-r",
+      "heading": "Konfidenzintervalle und t-Test mit t.test()",
+      "body": "Konfidenzintervalle und Tests lassen sich in R entweder **manuell** (Schritt für Schritt) oder mit der fertigen Funktion **`t.test()`** berechnen.\n\n---\n\n### Schritt-für-Schritt: Konfidenzintervall für $\\mu$ (bekannte Varianz)\n\nDas 95%-Konfidenzintervall bei bekannter Varianz lautet:\n$$KI(\\mu) = \\left[\\bar{X} - z_{0.975} \\cdot \\frac{\\sigma}{\\sqrt{n}};\\; \\bar{X} + z_{0.975} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\right]$$\n\n```r\n# Simulation: Stichprobe aus N(mu=100, sigma=5)\nset.seed(42)       # sorgt für Reproduzierbarkeit\nn     <- 20\nsigma <- 5\nX     <- rnorm(n, mean = 100, sd = sigma)\n\n# Stichprobenmittel\nx_quer <- mean(X)\n\n# Kritischer z-Wert für alpha=5% (zweiseitig)\nz <- qnorm(0.975, mean = 0, sd = 1)   # 1.96\ncat(\"Kritischer z-Wert:\", round(z, 4), \"\\n\")\n\n# Konfidenzintervall berechnen\nS_u <- x_quer - z * sigma / sqrt(n)   # untere Grenze\nS_o <- x_quer + z * sigma / sqrt(n)   # obere Grenze\n\ncat(\"KI für mu (95%):\", \"[\", round(S_u, 2), \";\", round(S_o, 2), \"]\\n\")\n# Beispielausgabe: KI für mu (95%): [ 97.87 ; 102.07 ]\n# Die Intervalllänge beträgt:\ncat(\"Länge:\", round(S_o - S_u, 2), \"\\n\")   # 2*z*sigma/sqrt(n) = 4.38\n```\n\n### Konfidenzintervall bei unbekannter Varianz (t-basiert)\n\nWenn $\\sigma$ unbekannt ist, schätzen wir es durch $\\hat{\\sigma}$ = `sd(X)` und ersetzen $z$ durch $t_{n-1}$:\n\n```r\n# Stichprobenstandardabweichung schätzen\nest_sigma <- sd(X)\n\n# t-Quantil mit n-1 = 19 Freiheitsgraden\nt_krit <- qt(0.975, df = n - 1)\ncat(\"Kritischer t-Wert:\", round(t_krit, 4), \"\\n\")   # 2.093\n\nS_u_t <- x_quer - t_krit * est_sigma / sqrt(n)\nS_o_t <- x_quer + t_krit * est_sigma / sqrt(n)\ncat(\"KI (unbekannte Varianz):\", \"[\", round(S_u_t, 2), \";\", round(S_o_t, 2), \"]\\n\")\n# Das Intervall ist etwas breiter als beim bekannten sigma!\n```\n\n### Konfidenzintervall für Anteile\n\nFür einen unbekannten Anteil $p$ (z.B. Anteil positiver Tests):\n\n```r\nn <- 100\ny <- 28          # 28 von 100 sind positiv\np_dach <- y / n  # geschätzter Anteil: 0.28\n\nsigma_p <- sqrt(p_dach * (1 - p_dach))   # Standardabw. des Anteils\nz <- qnorm(0.975)\n\nS_u <- p_dach - z * sigma_p / sqrt(n)\nS_o <- p_dach + z * sigma_p / sqrt(n)\ncat(\"KI für p (95%):\", \"[\", round(S_u, 4), \";\", round(S_o, 4), \"]\\n\")\n# Ausgabe: [ 0.1921 ; 0.3679 ]\n```\n\n---\n\n### t.test() — der Einstichproben-t-Test\n\nDie Funktion `t.test()` macht alles auf einmal: Sie berechnet Teststatistik, kritischen Wert, p-Wert und Konfidenzintervall.\n\n**Beispiel aus dem Kursscript:** Sind die Messwerte vereinbar mit $\\mu_0 = 110$?\n\n```r\n# Datenpunkte aus dem Kursscript\nA  <- c(105, 85, 117, 93, 89, 103, 95, 104, 90, 101)\nmu0 <- 110   # Hypothetischer Mittelwert\n\n# Zweiseitiger t-Test: H0: mu = 110 vs. H1: mu != 110\nergebnis <- t.test(A, mu = mu0, alternative = \"two.sided\")\nprint(ergebnis)\n```\n\n**Ausgabe (Interpretation):**\n```\n        One Sample t-test\n\ndata:  A\nt = -2.5426, df = 9, p-value = 0.03147\nalternative hypothesis: true mean is not equal to 110\n95 percent confidence interval:\n  91.84  105.36\nsample estimates:\nmean of x\n  98.6\n```\n\n- **t = -2.5426:** Das ist die Prüfgröße $T = \\frac{\\bar{X} - \\mu_0}{\\hat{\\sigma}} \\cdot \\sqrt{n}$. Negativ, weil $\\bar{X} = 98.6 < \\mu_0 = 110$.\n- **df = 9:** Freiheitsgrade ($n-1 = 10-1$).\n- **p-value = 0.031:** Kleiner als $\\alpha = 0.05$ → **H0 wird abgelehnt**! Der Mittelwert ist signifikant verschieden von 110.\n- **95% confidence interval:** [91.84; 105.36] — enthält 110 **nicht** → bestätigt die Ablehnung.\n- **mean of x = 98.6:** Der Stichprobenmittelwert.\n\n```r\n# Einseitiger Test: H0: mu <= 110, H1: mu > 110\nt.test(A, mu = mu0, alternative = \"greater\")\n# p-value ~ 0.984 >> 0.05 → H0 kann NICHT abgelehnt werden\n# (Wir können nicht behaupten, der Mittelwert sei größer als 110)\n\n# Manueller Vergleich zur Kontrolle:\nn_A <- length(A)\nT_stat <- (mean(A) - mu0) / sd(A) * sqrt(n_A)   # -2.5426\nt_krit <- qt(0.975, df = n_A - 1)                 #  2.262\ncat(\"Betrag T:\", abs(T_stat), \">\", t_krit, \"→ H0 ablehnen?:\",\n    abs(T_stat) > t_krit, \"\\n\")   # TRUE → ja, ablehnen\n```",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "r-fig-ttest-ablehn",
+          "title": "Zweiseitiger t-Test: Ablehnbereich",
+          "caption": "Bei df=9 und alpha=5% liegt der kritische Wert bei ±2.262. Die Prüfgröße T=-2.54 fällt in den linken Ablehnbereich → H0 wird abgelehnt.",
+          "dist": "t",
+          "params": { "df": 9 },
+          "shade": { "from": -2.262, "to": 2.262, "tail": "two" },
+          "markers": [{ "x": -2.54, "label": "T=-2.54" }, { "x": -2.262, "label": "-t_krit" }, { "x": 2.262, "label": "+t_krit" }]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Entscheidungsregel beim t.test()",
+          "body": "- **p-Wert < $\\alpha$** (z.B. 0.05) → **H0 ablehnen** (signifikantes Ergebnis)\n- **p-Wert ≥ $\\alpha$** → **H0 nicht ablehnen** (kein ausreichender Beweis gegen H0)\n\nDas Konfidenzintervall und der Test führen immer zur **gleichen Entscheidung**: Enthält das KI den Wert $\\mu_0$ **nicht**, wird H0 abgelehnt."
+        },
+        {
+          "kind": "info",
+          "title": "alternative-Parameter in t.test()",
+          "body": "- `alternative = \"two.sided\"` → Zweiseitig: $H_1: \\mu \\ne \\mu_0$\n- `alternative = \"greater\"` → Rechtsseitig: $H_1: \\mu > \\mu_0$\n- `alternative = \"less\"` → Linksseitig: $H_1: \\mu < \\mu_0$"
+        }
+      ]
+    },
+    {
+      "id": "regression-r",
+      "heading": "Lineare Regression mit lm() — und DataRegression.xlsx",
+      "body": "Die Funktion **`lm()`** (linear model) schätzt die Regressionsgerade $\\hat{y} = \\hat{a} + \\hat{b} \\cdot x$ mithilfe der Kleinste-Quadrate-Methode. Die Formel in R lautet `lm(y ~ x)` — lies das `~` als „wird erklärt durch\".\n\n### Einfaches Beispiel zuerst\n\n```r\n# Willkürliche Daten aus dem Kursscript\ny <- c(3, 4, 6, 6, 1, 3, 6, 2, 4)   # Regressand (abhängige Variable)\nx <- c(4, 3, 1, 5, 4, 4, 9, 4, 6)   # Regressor (unabhängige Variable)\n\n# Lineares Modell schätzen\nmodell <- lm(y ~ x)\nsummary(modell)   # Vollständige Ausgabe\n```\n\n**Typische `summary()`-Ausgabe und Interpretation:**\n```\nCall:\nlm(formula = y ~ x)\n\nResiduals:\n   Min     1Q Median     3Q    Max\n-2.095 -1.198  0.254  0.905  2.651\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)\n(Intercept)   3.3016     1.2523   2.637  0.0335 *\nx             0.1587     0.2618   0.606  0.5631\n\nResidual standard error: 1.85 on 7 degrees of freedom\nMultiple R-squared:  0.04986\nAdjusted R-squared:  -0.08587\nF-statistic: 0.3673 on 1 and 7 DF,  p-value: 0.5631\n```\n\n- **Intercept (3.302):** Das ist $\\hat{a}$ — der y-Achsenabschnitt. Wenn $x = 0$, erwarten wir $y \\approx 3.30$.\n- **x (0.159):** Das ist $\\hat{b}$ — die Steigung. Pro 1 Einheit mehr in $x$ steigt $y$ um ~0.16.\n- **t value / Pr(>|t|):** Das ist der t-Test auf $b = 0$. p = 0.563 >> 0.05 → kein signifikanter linearer Zusammenhang.\n- **Multiple R-squared: 0.050:** Das Bestimmtheitsmaß $R^2 \\approx 5\\%$ — das Modell erklärt nur 5% der Variation in $y$. Schwache Anpassung.\n- **Residual standard error:** $\\hat{\\sigma} = 1.85$ — typische Abweichung der Beobachtungen von der Geraden.\n\n---\n\n### Realistisches Beispiel: BIP und Konsum (DataRegression.xlsx)\n\nDer Datensatz enthält deutsches BIP und private Konsumausgaben in Mrd. € (1991–2022).\n\n```r\nlibrary(readxl)\ndata <- read_excel(\"DataRegression.xlsx\")\n\n# Überblick\nView(data)      # Spalten: Konsumausgaben, Bruttoinlandsprodukt\n\n# Streudiagramm als erstes (visueller Check)\nplot(\n  data$Konsumausgaben, data$Bruttoinlandsprodukt,\n  main = \"BIP vs. Konsum (1991–2022)\",\n  xlab = \"Konsumausgaben (Mrd. €)\",\n  ylab = \"BIP (Mrd. €)\",\n  pch  = 16, col = \"steelblue\"\n)\n\n# Regressionsmodell: BIP wird durch Konsum erklärt\n# Regressand (y) = Bruttoinlandsprodukt\n# Regressor  (x) = Konsumausgaben\nmodell2 <- lm(Bruttoinlandsprodukt ~ Konsumausgaben, data = data)\nsummary(modell2)\n\n# Regressionsgerade ins Streudiagramm einzeichnen\nabline(modell2, col = \"red\", lwd = 2)\n```\n\n**Typische Ausgabe für das BIP/Konsum-Modell:**\n```\nCoefficients:\n               Estimate Std. Error t value Pr(>|t|)\n(Intercept)   -253.48      87.43   -2.90   0.0070 **\nKonsumausgaben   1.8234      0.0471   38.70  <2e-16 ***\n\nMultiple R-squared:  0.981\nF-statistic: 1498 on 1 and 30 DF\n```\n\n- **Steigung $\\hat{b} = 1.823$:** Pro 1 Mrd. € mehr Konsum steigt das BIP um ca. 1.82 Mrd. €.\n- **$R^2 = 0.981$:** Das Modell erklärt **98.1% der Variation** im BIP — hervorragende Anpassung!\n- **p-Wert für Konsum < 2e-16:** Extrem signifikant — Konsum ist ein hoch signifikanter Prädiktor des BIP.\n- **Signifikanzsternchen:** `***` bedeutet p < 0.001, `**` bedeutet p < 0.01, `*` bedeutet p < 0.05.\n\n```r\n# Prognose: Welches BIP erwarten wir bei Konsum = 1800 Mrd. €?\nneue_daten <- data.frame(Konsumausgaben = 1800)\nprognose <- predict(modell2, newdata = neue_daten)\ncat(\"Prognostiziertes BIP:\", round(prognose, 1), \"Mrd. EUR\\n\")\n# Formel: y_hat = -253.48 + 1.8234 * 1800 = -253.48 + 3282.12 = 3028.64\n\n# Koeffizienten direkt abrufen\ncoef(modell2)           # [Intercept, Konsumausgaben]\nconfint(modell2)         # 95%-Konfidenzintervalle für a und b\n```",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "r-fig-regression",
+          "title": "Schematische Regressionsgerade: BIP als Funktion des Konsums",
+          "caption": "Geschätzte Gerade: BIP = -253 + 1.82 × Konsum. R² ≈ 0.981 bedeutet sehr gute Anpassung. Die Punkte streuen eng um die Gerade.",
+          "functions": [{ "fn": "-253 + 1.82*x", "label": "BIP = -253 + 1.82·Konsum", "color": "red" }],
+          "domain": [700, 2000],
+          "points": [{ "x": 1800, "y": 3023, "label": "Prognose (1800; ~3023)" }]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "lm()-Syntax und Interpretation auf einen Blick",
+          "body": "```r\nmodell <- lm(y ~ x, data = df)   # Modell schätzen\nsummary(modell)                    # Koeffizienten, R², p-Werte\ncoef(modell)                       # Nur Koeffizienten (a, b)\nconfint(modell)                    # Konfidenzintervalle für a und b\nresiduals(modell)                  # Residuen u_i = y_i - y_hat_i\npredict(modell, newdata=...)       # Prognose für neue x-Werte\n```"
+        },
+        {
+          "kind": "warning",
+          "title": "Reihenfolge in lm()-Formel",
+          "body": "`lm(y ~ x)` heißt: **y wird durch x erklärt**. Die Reihenfolge ist wichtig! Vertauschst du y und x, erhältst du eine andere Gerade (die Regression ist nicht symmetrisch)."
+        }
+      ]
+    },
+    {
+      "id": "r-workflow-zusammenfassung",
+      "heading": "Typischer R-Workflow — alles zusammen",
+      "body": "Jede R-Analyse folgt demselben Grundmuster. Hier ist ein vollständiger Mini-Workflow am Covid19ICU-Beispiel:\n\n```r\n### ============================================================\n### Vollständiger Workflow: Covid19ICU-Analyse\n### ============================================================\n\n## 1. Vorbereitung\nsetwd(\"C:/Uni/Statistik/R_Uebung\")  # Pfad anpassen!\nlibrary(readxl)\nlibrary(ggplot2)\n\n## 2. Daten einlesen\ncovid19 <- read_excel(\"Covid19ICU.xlsx\")\nView(covid19)     # Tabelle ansehen\n\n## 3. Deskriptive Statistik\npat <- covid19$`Covid-19 Patienten in Intensivstation`\nsummary(pat)\ncat(\"Mittel:\", mean(pat), \"\\n\")     # 2186\ncat(\"Median:\", median(pat), \"\\n\")   # 2082\ncat(\"SD:\", round(sd(pat), 1), \"\\n\") # z.B. 1398\n\n## 4. Histogramm\nhist(pat, breaks = c(0,1000,2000,3000,4000,5000,6000),\n     main=\"Covid-19 ICU-Patienten\", xlab=\"Anzahl\", col=\"steelblue\")\n\n## 5. Hypothesentest: Ist der Mittelwert signifikant verschieden von 2000?\nt.test(pat, mu = 2000, alternative = \"two.sided\")\n# Interpretation: p-Wert < 0.05 → ablehnen oder nicht?\n\n## 6. Lineare Regression: Zeit → Patienten?\ntage <- 1:length(pat)  # Zeitindex\nmodell <- lm(pat ~ tage)\nsummary(modell)   # Gibt es einen signifikanten Zeittrend?\nplot(tage, pat, pch=16, col=\"steelblue\")\nabline(modell, col=\"red\", lwd=2)\n```\n\n**Zusammenfassung der wichtigsten R-Funktionen für die Übung:**",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "r-tab-uebersicht",
+          "title": "R-Funktionen für Schließende Statistik — Übersicht",
+          "headers": ["Thema", "Funktion", "Wofür"],
+          "rows": [
+            ["Daten laden", "read_excel(), read.csv()", "Excel- und CSV-Dateien einlesen"],
+            ["Überblick", "View(), summary()", "Datensatz ansehen, Statistiken"],
+            ["Deskriptiv", "mean(), median(), var(), sd()", "Lage- und Streumaße"],
+            ["Grafik", "hist(), plot(), ecdf()", "Histogramm, Streudiagramm, ECDF"],
+            ["Korrelation", "cor(x, y)", "Empirischer Korrelationskoeffizient r"],
+            ["Binomial", "dbinom(), pbinom()", "P(X=k) und P(X≤k)"],
+            ["Normal", "dnorm(), pnorm(), qnorm()", "Dichte, Verteilung, Quantile"],
+            ["t-Quantil", "qt(p, df=n-1)", "Kritische t-Werte"],
+            ["t-Test", "t.test(x, mu=mu0)", "Einstichproben-Mittelwerttest"],
+            ["Regression", "lm(y ~ x, data=df)", "Kleinste-Quadrate-Schätzung"],
+            ["Reg.-Ausgabe", "summary(modell)", "Koeffizienten, R², p-Werte"],
+            ["Prognose", "predict(modell, newdata=...)", "Vorhersage für neue x-Werte"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Hilfe in R",
+          "body": "Für jede Funktion gibt es eingebaute Hilfe:\n```r\n?lm          # Hilfeseite für lm()\n?t.test      # Hilfeseite für t.test()\nexample(lm)  # Eingebaute Beispiele\n```"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "r-fc-1",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Was macht `setwd()` in R und wozu braucht man es?",
+      "back": "`setwd(\"Pfad\")` setzt das **Arbeitsverzeichnis** — den Ordner, in dem R nach Dateien sucht. Ohne korrektes Arbeitsverzeichnis kann R die Datensätze (z.B. Covid19ICU.xlsx) nicht finden."
+    },
+    {
+      "id": "r-fc-2",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Was ist der Unterschied zwischen `var(x)` und der Populationsvarianz?",
+      "back": "`var(x)` berechnet die **Stichprobenvarianz** mit Nenner $(n-1)$ — das ist der erwartungstreue Schätzer $\\hat{\\sigma}^2$. Die Populationsvarianz (Nenner $n$) erhält man mit `(n-1)/n * var(x)`."
+    },
+    {
+      "id": "r-fc-3",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Was berechnet `pnorm(1.96)` und was `qnorm(0.975)`?",
+      "back": "`pnorm(1.96)` gibt $P(Z \\le 1.96) \\approx 0.975$ (Wahrscheinlichkeit). `qnorm(0.975)` ist die Umkehrfunktion und gibt $z = 1.96$ zurück. Beide Ergebnisse sind komplementär."
+    },
+    {
+      "id": "r-fc-4",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Wie lautet die R-Syntax für einen zweiseitigen t-Test auf $\\mu_0 = 5$?",
+      "back": "`t.test(x, mu = 5, alternative = \"two.sided\")`\n\nIst der **p-Wert** in der Ausgabe kleiner als das Signifikanzniveau $\\alpha$ (z.B. 0.05), wird $H_0$ abgelehnt."
+    },
+    {
+      "id": "r-fc-5",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Wie schätzt man in R eine lineare Regression und wie liest man $\\hat{b}$ ab?",
+      "back": "```r\nmodell <- lm(y ~ x, data = df)\nsummary(modell)\n```\nIn der Ausgabe steht unter `Coefficients` die Zeile `x`: der Schätzer dort ist $\\hat{b}$ (Steigung). `(Intercept)` ist $\\hat{a}$."
+    },
+    {
+      "id": "r-fc-6",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Was bedeutet `R-squared: 0.981` in der `summary()`-Ausgabe einer Regression?",
+      "back": "Das **Bestimmtheitsmaß** $R^2 = 0.981$ bedeutet, dass das Modell **98.1% der Varianz** in der abhängigen Variablen erklärt. Ein Wert nahe 1 deutet auf sehr gute Modellanpassung hin."
+    },
+    {
+      "id": "r-fc-7",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Wie berechnet man mit `dbinom` die Wahrscheinlichkeit, bei 20 Würfen eines fairen Münzwurfs genau 8 Mal Kopf zu erhalten?",
+      "back": "```r\ndbinom(8, size = 20, prob = 0.5)\n```\nErgibt $P(X=8) = \\binom{20}{8} \\cdot 0.5^8 \\cdot 0.5^{12} \\approx 0.1201$."
+    },
+    {
+      "id": "r-fc-8",
+      "topicId": "r-programmierung-begleituebung",
+      "front": "Warum sollte man bei kleinen Stichproben ($n < 30$) `qt()` statt `qnorm()` verwenden?",
+      "back": "Bei kleiner Stichprobe und unbekannter Varianz ist die Prüfgröße **t-verteilt** mit $n-1$ Freiheitsgraden — nicht normalverteilt. Die t-Verteilung hat breitere Ränder → kritische Werte sind größer. `qt(0.975, df=9) ≈ 2.26` vs. `qnorm(0.975) ≈ 1.96`."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "r-q1",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "leicht",
+      "prompt": "Welchen Befehl nutzt man in R, um eine Excel-Datei einzulesen (Package `readxl` ist geladen)?",
+      "options": [
+        "`read.csv(\"datei.xlsx\")`",
+        "`read_excel(\"datei.xlsx\")`",
+        "`load(\"datei.xlsx\")`",
+        "`import(\"datei.xlsx\")`"
+      ],
+      "correct": [1],
+      "explanation": "`read_excel()` aus dem Package `readxl` liest Excel-Dateien ein. `read.csv()` liest nur CSV-Dateien. `load()` lädt R-eigene `.RData`-Dateien. `import()` gibt es so nicht standardmäßig."
+    },
+    {
+      "kind": "mc",
+      "id": "r-q2",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "leicht",
+      "prompt": "Welche Funktion gibt in R die kumulative Wahrscheinlichkeit $P(X \\le x)$ der Normalverteilung zurück?",
+      "options": [
+        "`dnorm(x, mean, sd)`",
+        "`qnorm(x, mean, sd)`",
+        "`pnorm(x, mean, sd)`",
+        "`rnorm(x, mean, sd)`"
+      ],
+      "correct": [2],
+      "explanation": "`pnorm()` berechnet die Verteilungsfunktion $F(x) = P(X \\le x)$. `dnorm()` gibt die Dichte, `qnorm()` das Quantil (Umkehrfunktion von pnorm), `rnorm()` Zufallszahlen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "r-q3",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "leicht",
+      "prompt": "`var(x)` berechnet in R die Stichprobenvarianz mit Nenner $(n-1)$.",
+      "answer": true,
+      "explanation": "Richtig. R verwendet bei `var(x)` den Nenner $(n-1)$ — das liefert den erwartungstreuen Schätzer $\\hat{\\sigma}^2$ der Populationsvarianz. Die Populationsvarianz (Nenner $n$) muss man manuell berechnen: `(n-1)/n * var(x)`."
+    },
+    {
+      "kind": "mc",
+      "id": "r-q4",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "mittel",
+      "prompt": "Beim zweiseitigen t-Test mit `t.test(A, mu=110, alternative=\"two.sided\")` ergibt sich p-value = 0.031 und alpha = 0.05. Was ist die korrekte Entscheidung?",
+      "options": [
+        "H0 nicht ablehnen, weil p > alpha/2 = 0.025",
+        "H0 ablehnen, weil p < alpha = 0.05",
+        "H0 ablehnen, weil der t-Wert negativ ist",
+        "Keine Entscheidung möglich ohne den kritischen Wert"
+      ],
+      "correct": [1],
+      "explanation": "p-Wert = 0.031 < alpha = 0.05 → H0 wird **abgelehnt**. Der Vergleich ist immer: p < alpha (nicht p < alpha/2 beim zweiseitigen Test — das alpha/2 ist bereits im p-Wert der Funktion berücksichtigt). Der t-Wert muss nicht negativ sein, und der kritische Wert kann auch manuell mit `qt()` geprüft werden."
+    },
+    {
+      "kind": "mc",
+      "id": "r-q5",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "mittel",
+      "prompt": "Was berechnet `dbinom(3, size=10, prob=0.2)` in R?",
+      "options": [
+        "$P(X \\le 3)$ bei $X \\sim B(10; 0{,}2)$",
+        "$P(X = 3)$ bei $X \\sim B(10; 0{,}2)$",
+        "Den Erwartungswert $E(X) = np = 2$",
+        "$P(X \\ge 3)$ bei $X \\sim B(10; 0{,}2)$"
+      ],
+      "correct": [1],
+      "explanation": "`dbinom(k, size=n, prob=p)` berechnet die **Punktwahrscheinlichkeit** $P(X=k)$. Für die kumulative Wahrscheinlichkeit $P(X \\le k)$ braucht man `pbinom()`. Das ergibt: $\\binom{10}{3} \\cdot 0.2^3 \\cdot 0.8^7 \\approx 0.201$."
+    },
+    {
+      "kind": "numeric",
+      "id": "r-q6",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "mittel",
+      "prompt": "Welchen Wert gibt `qnorm(0.975)` in R zurück (auf 2 Dezimalstellen gerundet)? Dieser Wert wird als kritischer Wert beim zweiseitigen Gauß-Test verwendet.",
+      "answer": 1.96,
+      "tolerance": 0.005,
+      "unit": "",
+      "explanation": "`qnorm(0.975)` gibt das 97.5%-Quantil der Standardnormalverteilung zurück: $z_{0.975} \\approx 1.96$. Beim zweiseitigen Test mit $\\alpha = 5\\%$ ist dies der kritische Wert."
+    },
+    {
+      "kind": "numeric",
+      "id": "r-q7",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "mittel",
+      "prompt": "Gegeben sei eine Stichprobe mit $n = 10$ Beobachtungen. Welchen Wert gibt `qt(0.975, df = 9)` zurück (auf 3 Dezimalstellen gerundet)? (Kritischer t-Wert für zweiseitigen Test, alpha=5%)",
+      "answer": 2.262,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "`qt(0.975, df=9)` gibt $t_{9; 0.975} \\approx 2.262$. Das ist größer als 1.96 — die t-Verteilung hat breitere Ränder als die Normalverteilung. Der Unterschied ist bei kleinen Stichproben besonders relevant."
+    },
+    {
+      "kind": "truefalse",
+      "id": "r-q8",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "mittel",
+      "prompt": "Im `summary(lm(y ~ x))`-Output bedeutet `Multiple R-squared: 0.05`, dass das Modell nur 5% der Streuung in $y$ erklärt — eine sehr schwache Anpassung.",
+      "answer": true,
+      "explanation": "Richtig. $R^2 = 0.05$ bedeutet, nur 5% der Gesamtvarianz in $y$ werden durch das Modell erklärt. Die restlichen 95% sind Residualvarianz — das Modell passt kaum. Im Vergleich: das BIP/Konsum-Modell hat $R^2 \\approx 0.98$."
+    },
+    {
+      "kind": "freetext",
+      "id": "r-q9",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, was eine **Scheinkorrelation** ist, und nenne das Beispiel aus dem Kursscript.",
+      "sampleAnswer": "Eine Scheinkorrelation liegt vor, wenn zwei Variablen statistisch korreliert sind, aber kein kausaler Zusammenhang besteht — oft weil beide von einer dritten Variable beeinflusst werden oder es sich um Zufall handelt. Im Kursscript: Die Anzahl Nicolas-Cage-Filme (1999–2009) korreliert mit der Zahl ertrunkener Schwimmbadbenutzer (r ≈ 0.67). Offensichtlich verursachen Cage-Filme keine Badeunfälle. Korrelation ≠ Kausalität.",
+      "keywords": ["scheinkorrelation", "kausalität", "korrelation", "cage", "pool", "dritte variable"],
+      "explanation": "Scheinkorrelationen entstehen durch Zufall, Confounding-Variablen oder gemeinsame Trends. Das Nicolas-Cage-Beispiel zeigt anschaulich: Eine hohe Korrelation sagt nichts über Ursache und Wirkung aus."
+    },
+    {
+      "kind": "numeric",
+      "id": "r-q10",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "schwer",
+      "prompt": "In R: `dbinom(0, size=5, prob=0.2)` berechnet $P(X=0)$ für $X \\sim B(5; 0{,}2)$. Was ist das Ergebnis, auf 4 Dezimalstellen gerundet? Rechenweg: $\\binom{5}{0} \\cdot 0.2^0 \\cdot 0.8^5$.",
+      "answer": 0.3277,
+      "tolerance": 0.0005,
+      "unit": "",
+      "explanation": "$P(X=0) = \\binom{5}{0} \\cdot 0.2^0 \\cdot 0.8^5 = 1 \\cdot 1 \\cdot 0.32768 \\approx 0.3277$. In R: `dbinom(0, size=5, prob=0.2)` ergibt 0.32768."
+    },
+    {
+      "kind": "mc",
+      "id": "r-q11",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "schwer",
+      "prompt": "Welche R-Funktion und welcher Parameteraufruf liefert das 95%-Konfidenzintervall für $\\mu$ aus einer Stichprobe `x` bei **unbekannter** Varianz?",
+      "options": [
+        "`t.test(x, conf.level = 0.95)$conf.int`",
+        "`qnorm(0.975) ± mean(x) / sd(x)`",
+        "`pnorm(x, conf.level = 0.95)`",
+        "`lm(x ~ 1)$coefficients`"
+      ],
+      "correct": [0],
+      "explanation": "`t.test(x, conf.level=0.95)$conf.int` gibt direkt das Konfidenzintervall aus — es verwendet automatisch die t-Verteilung mit $n-1$ Freiheitsgraden. Option B wäre die manuelle Formel, aber syntaktisch falsch; Optionen C und D sind nicht korrekt."
+    },
+    {
+      "kind": "truefalse",
+      "id": "r-q12",
+      "topicId": "r-programmierung-begleituebung",
+      "difficulty": "schwer",
+      "prompt": "In `lm(y ~ x)` schätzt R die Koeffizienten $\\hat{a}$ (Intercept) und $\\hat{b}$ (Steigung) nach der **Kleinste-Quadrate-Methode** — d.h. die Summe der quadrierten Residuen $\\sum(y_i - \\hat{y}_i)^2$ wird minimiert.",
+      "answer": true,
+      "explanation": "Richtig. Die KQ-Methode minimiert $\\sum (y_i - \\hat{a} - \\hat{b} x_i)^2$ und liefert die einzigartigen Schätzer $\\hat{b} = s_{xy}/s_x^2$ und $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x}$. Diese Eigenschaft macht die KQ-Schätzer erwartungstreu und konsistent."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "r-ex-1",
+      "topicId": "r-programmierung-begleituebung",
+      "label": "R-Übung Statistik I: Beschreibende Statistik (Beispielskript)",
+      "source": "/Users/thore/Desktop/UNI semester 2/Schließende Statistik/R_Übung/Statistik_I_Beispiele.R",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": true,
+      "prompt": "Das R-Skript `Statistik_I_Beispiele.R` führt schrittweise durch die beschreibende Statistik.\n\n**Aufgaben:**\n\n(a) Installiere und lade die Packages `readxl`, `ggplot2`, `corrr`, `corrplot`, `dplyr`, `plyr`.\n\n(b) Setze dein Arbeitsverzeichnis und lade den Datensatz `Covid19ICU.xlsx`. Gib mit `summary()` eine Übersicht aus und berechne Mittelwert, Median, Spannweite, Varianz und Standardabweichung der ICU-Patienten.\n\n(c) Erstelle ein Histogramm mit Klassengrenzen (0, 1000, 2000, 3000, 4000, 5000) und die empirische Verteilungsfunktion (ECDF).\n\n(d) Lade `PosTests.xlsx` und berechne die Korrelation zwischen ICU-Patienten und positiven Tests. Interpretiere das Ergebnis.\n\n(e) Berechne die Scheinkorrelation zwischen Nicolas-Cage-Filmen und Ertrinkungsopfern aus dem Skript. Erkläre, was dieses Beispiel lehrt.\n\n(f) Lade `Treibhausgasemissionen.csv` und erstelle eine Korrelationsmatrix für die numerischen Variablen THG, BIP, ADIBIP, IM.",
+      "hint": "Spaltennamen mit Leerzeichen und Sonderzeichen in Backticks einschließen: `` covid19$`Covid-19 Patienten in Intensivstation` ``. Für die Korrelationsmatrix erst die Geo- und Zeitspalten entfernen: `co2 <- co2[ , -c(1:2)]`.",
+      "solution": "**Vollständige Musterlösung:**\n\n```r\n### (a) Packages installieren und laden\npackages <- c(\"corrr\", \"corrplot\", \"dplyr\", \"plyr\", \"readxl\", \"ggplot2\")\ninstalled_packages <- packages %in% rownames(installed.packages())\nif (any(installed_packages == FALSE)) {\n  install.packages(packages[!installed_packages])\n}\ninvisible(lapply(packages, library, character.only = TRUE))\n\n### (b) Arbeitsverzeichnis und Daten laden\nsetwd(\"C:/Uni/Statistik/R_Uebung\")   # eigenen Pfad einfügen!\ncovid19 <- read_excel(\"Covid19ICU.xlsx\")\nView(covid19)\n\n# Spalte als Vektor extrahieren\npat <- covid19$`Covid-19 Patienten in Intensivstation`\n\nsummary(pat)   # Überblick\nmean(pat)      # Mittelwert: ~ 2186\nmedian(pat)    # Median (via quantile mit probs=0.5): ~ 2082\nquantile(pat, probs = 0.5)   # alternativ\nmax(pat) - min(pat)          # Spannweite: ~ 5749\nvar(pat)       # Stichprobenvarianz: ~ 1957204\nsd(pat)        # Standardabweichung: ~ 1399\n\n### (c) Histogramm und ECDF\nklassengrenzen <- c(0, 1000, 2000, 3000, 4000, 5000)\nhist(\n  pat,\n  breaks = klassengrenzen,\n  main   = \"Histogramm Covid-19 Intensivpatienten\",\n  xlab   = \"Coronafälle\",\n  ylab   = \"Häufigkeit\",\n  col    = \"lightblue\",\n  border = \"black\"\n)\n\n# Empirische Verteilungsfunktion\nvertfkt <- ecdf(pat)\nplot(vertfkt, main = \"Empirische Verteilungsfunktion\",\n     xlab = \"Coronafälle\", ylab = \"ECDF\", col = \"hotpink\", cex = 0.5)\n\n### (d) Korrelation ICU vs. positive Tests\npostests <- read_excel(\"PosTests.xlsx\")\nr <- cor(pat, postests$`Positive Tests`)\ncat(\"Korrelation r =\", round(r, 4), \"\\n\")\n# Interpretation: Wert > 0.5 bedeutet mittlere bis starke positive Korrelation\n# (Cohen 1988: 0.5 = mittlere Effektgröße für Korrelationen)\n# → Mehr positive Tests gehen tendenziell mit mehr ICU-Patienten einher.\n\n### (e) Scheinkorrelation (Nicolas Cage)\ncage_movies <- c(2, 2, 2, 3, 1, 1, 2, 3, 4, 1, 4)\npool_death  <- c(109, 102, 102, 98, 85, 95, 96, 98, 123, 94, 102)\nr_cage <- cor(cage_movies, pool_death)\ncat(\"Korrelation Cage/Pool:\", round(r_cage, 4), \"\\n\")   # ~ 0.666\n# Lehre: Hohe Korrelation ≠ Kausalität. Beide Variablen folgen\n# zufällig ähnlichen Trends — klassische Scheinkorrelation!\n\n### (f) Treibhausgasemissionen: Korrelationsmatrix\nco2 <- read.csv(\"Treibhausgasemissionen.csv\", row.names = 1)\nView(co2)\n\n# Nur numerische Spalten (ohne geo und time)\nco2_num <- co2[ , -c(1:2)]\n\n# Korrelationsplot\ncorrplot(cor(co2_num, use = \"pairwise.complete.obs\"))\n# use=\"pairwise.complete.obs\" ignoriert fehlende Werte paarweise —\n# nötig, weil der Datensatz NA-Werte enthält (unbalancierter Panel)\n```\n\n**Wichtige Erkenntnisse aus dem Skript:**\n- `summary()` zeigt Min, Q1, Median, Mean, Q3, Max — und weist auf NA-Werte hin.\n- Bei Paneldaten (mehrere Länder × mehrere Jahre) gibt es oft fehlende Werte (`NA`). Der Parameter `na.rm = TRUE` ignoriert diese bei Berechnungen.\n- Das Histogramm zeigt die Häufigkeitsverteilung; die ECDF zeigt, welcher Anteil der Tage unter einem bestimmten Patientenwert lag."
+    },
+    {
+      "id": "r-ex-2",
+      "topicId": "r-programmierung-begleituebung",
+      "label": "R-Übung Statistik II: Schließende Statistik (Beispielskript)",
+      "source": "/Users/thore/Desktop/UNI semester 2/Schließende Statistik/R_Übung/Statistik_II_nora.R",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Das R-Skript `Statistik_II_nora.R` zeigt die Anwendung schließender Statistik in R.\n\n**Aufgaben:**\n\n(a) **Binomialverteilung:** Berechne mit `dbinom` die Wahrscheinlichkeit, bei 100 Würfen eines fairen Würfels genau 10 Mal eine 6 zu würfeln. Berechne außerdem den Erwartungswert und die Varianz.\n\n(b) **Normalverteilung:** Berechne `pnorm(0.3, mean=0, sd=1)` und interpretiere das Ergebnis. Zeichne die Dichtefunktion der Standardnormalverteilung mit ggplot2.\n\n(c) **Punktschätzung:** Ziehe eine Stichprobe der Größe $n=10$ aus $N(100, 25)$ und berechne den geschätzten Erwartungswert und die Stichprobenvarianz. Berechne auch die Populationsvarianz.\n\n(d) **Konfidenzintervalle:** Berechne für eine Stichprobe $n=20$ aus $N(100, 25)$ (bekannte Varianz) das 95%-KI manuell und bei unbekannter Varianz mithilfe von `qt()`.\n\n(e) **t-Test:** Führe für den Datensatz `A <- c(105, 85, 117, 93, 89, 103, 95, 104, 90, 101)` einen zweiseitigen t-Test mit $\\mu_0 = 110$ und $\\alpha = 5\\%$ durch — manuell und mit `t.test()`. Interpretiere alle Ausgabewerte.\n\n(f) **Regression:** Lade `DataRegression.xlsx`, schätze `lm(Bruttoinlandsprodukt ~ Konsumausgaben, data)` und interpretiere $\\hat{b}$, $\\hat{a}$ und $R^2$.",
+      "hint": "Für Teil (d): kritischer z-Wert = `qnorm(0.975)`, kritischer t-Wert = `qt(0.975, df=n-1)`. Der t-Wert ist immer größer als der z-Wert — das KI wird breiter. Für Teil (e): `abs(T) > t_krit` → ablehnen. Prüfe auch den p-Wert aus `t.test()`.",
+      "solution": "**Vollständige Musterlösung:**\n\n```r\nlibrary(readxl)\nlibrary(ggplot2)\n\n### (a) Binomialverteilung\np <- 1/6\nn <- 100\nk <- 10\n\nP_genau_10 <- dbinom(k, size = n, prob = p)\ncat(\"P(X = 10):\", round(P_genau_10, 5), \"\\n\")   # 0.04248\n\nE_X   <- n * p\nVar_X <- n * p * (1 - p)\ncat(\"E(X) =\", E_X, \"\\n\")              # 16.667\ncat(\"Var(X) =\", round(Var_X, 3), \"\\n\")  # 13.889\n# Interpretation: Im Schnitt würfelt man bei 100 Versuchen 16.7 Sechsen;\n# P(genau 10) ist mit ~4.25% deutlich unter dem Erwartungswert.\n\n### (b) Normalverteilung\npnorm(0.3, mean = 0, sd = 1)\n# Ausgabe: 0.6179 — also P(Z <= 0.3) = 61.79%\n# Interpretation: Mit 62% Wahrscheinlichkeit liegt ein N(0,1)-Wert <= 0.3\n\n# Dichteplot\nx_werte <- seq(-3, 3, length.out = 1000)\ndichte  <- dnorm(x_werte, mean = 0, sd = 1)\n\nggplot(data.frame(x = x_werte, y = dichte), aes(x, y)) +\n  geom_line(color = \"blue\", linewidth = 1) +\n  labs(title = \"Dichtefunktion der Normalverteilung\",\n       x = \"x\", y = \"f(x)\") +\n  theme_classic()\n\n### (c) Punktschätzung\nset.seed(1)   # für Reproduzierbarkeit\nn <- 10\nX <- rnorm(n, mean = 100, sd = 5)   # sd = sqrt(sigma^2) = sqrt(25) = 5\n\nest_mu     <- mean(X)\nest_sigma2 <- var(X)                  # Stichprobenvarianz (Nenner n-1)\npop_sigma2 <- (n - 1) / n * est_sigma2  # Populationsvarianz (Nenner n)\n\ncat(\"Geschätztes mu:\", round(est_mu, 3), \"\\n\")\ncat(\"Stichprobenvarianz:\", round(est_sigma2, 3), \"(Nenner n-1, erwartungstreu)\\n\")\ncat(\"Populationsvarianz:\", round(pop_sigma2, 3), \"(Nenner n, verzerrt)\\n\")\n# Hinweis: Bei größerem n nähern sich beide Werte dem wahren sigma^2=25 an.\n\n### (d) Konfidenzintervalle\nset.seed(2)\nn     <- 20\nmu    <- 100\nsigma <- 5\nX     <- rnorm(n, mean = mu, sd = sigma)\nx_quer <- mean(X)\n\n## KI mit bekannter Varianz (z-basiert)\nz <- qnorm(0.975)   # 1.96\nS_u_z <- x_quer - z * sigma / sqrt(n)\nS_o_z <- x_quer + z * sigma / sqrt(n)\ncat(\"KI (bekannte Varianz, 95%):\", \"[\", round(S_u_z, 3), \";\", round(S_o_z, 3), \"]\\n\")\ncat(\"Länge:\", round(S_o_z - S_u_z, 3), \"\\n\")   # = 2*1.96*5/sqrt(20) ≈ 4.38\n\n## KI mit unbekannter Varianz (t-basiert)\nest_sigma <- sd(X)\nt_krit <- qt(0.975, df = n - 1)   # t_{19; 0.975} ≈ 2.093\nS_u_t <- x_quer - t_krit * est_sigma / sqrt(n)\nS_o_t <- x_quer + t_krit * est_sigma / sqrt(n)\ncat(\"KI (unbekannte Varianz, 95%):\", \"[\", round(S_u_t, 3), \";\", round(S_o_t, 3), \"]\\n\")\n# Das t-KI ist breiter als das z-KI — Unsicherheit über sigma schlägt sich nieder!\n\n### (e) t-Test\nA   <- c(105, 85, 117, 93, 89, 103, 95, 104, 90, 101)\nmu0 <- 110\nn_A <- length(A)   # 10\n\n## Manuell\nmean_A    <- mean(A)     # 98.2\nest_sigma_A <- sd(A)     # ~ 9.38\nT_stat    <- (mean_A - mu0) / est_sigma_A * sqrt(n_A)\nt_krit_A  <- qt(0.975, df = n_A - 1)   # t_{9; 0.975} ≈ 2.262\n\ncat(\"Teststatistik T =\", round(T_stat, 4), \"\\n\")  # ~ -2.543\ncat(\"Kritischer Wert t =\", round(t_krit_A, 4), \"\\n\")  # 2.262\ncat(\"|T| > t_krit? ->\", abs(T_stat) > t_krit_A, \"--> H0 ablehnen\\n\")  # TRUE\n\n## Mit t.test()\nergebnis <- t.test(A, mu = mu0, alternative = \"two.sided\")\nprint(ergebnis)\n# Ausgabe enthält:\n# t = -2.5426, df = 9, p-value = 0.03147\n# 95% CI: [91.84; 105.36]\n# mean = 98.6 (Hinweis: summary ergibt leicht andere Mittel je nach Seed)\n\n# Interpretation:\n# p = 0.031 < alpha = 0.05 → H0 (mu = 110) wird abgelehnt.\n# Der KI [91.84; 105.36] enthält 110 nicht → bestätigt Ablehnung.\n# Fazit: Der wahre Mittelwert unterscheidet sich signifikant von 110.\n\n# Einseitiger Test (zur Übung): H0: mu >= 110, H1: mu < 110\nt.test(A, mu = mu0, alternative = \"less\")\n# p ~ 0.016 < 0.05 → auch einseitig ablehnen\n\n### (f) Lineare Regression mit DataRegression.xlsx\ndata <- read_excel(\"DataRegression.xlsx\")\nView(data)   # Spalten: Konsumausgaben, Bruttoinlandsprodukt\n\n# Streudiagramm\nplot(data$Konsumausgaben, data$Bruttoinlandsprodukt,\n     main = \"BIP vs. Konsumausgaben\",\n     xlab = \"Konsumausgaben (Mrd. €)\",\n     ylab = \"BIP (Mrd. €)\",\n     pch = 16, col = \"steelblue\")\n\n# Regressionsmodell\nmodell2 <- lm(Bruttoinlandsprodukt ~ Konsumausgaben, data = data)\nsummary(modell2)\n\n# Typische Ausgabe:\n# Intercept: ~ -253.48 (Achsenabschnitt â)\n# Konsumausgaben: ~ 1.8234 (Steigung b̂)\n# R-squared: ~ 0.981\n\n# Interpretation:\n# â ≈ -253: Wenn Konsum = 0, würde BIP bei -253 liegen (rein formal, außerhalb Datenbereich)\n# b̂ ≈ 1.823: Steigt der Konsum um 1 Mrd. €, steigt das BIP um 1.82 Mrd. €\n# R² = 0.981: 98.1% der BIP-Varianz wird durch Konsum erklärt — hervorragende Anpassung\n\n# Regressionsgerade einzeichnen\nabline(modell2, col = \"red\", lwd = 2)\n\n# Prognose für Konsum = 1800 Mrd. €\nneu <- data.frame(Konsumausgaben = 1800)\ncat(\"Prognose BIP:\", round(predict(modell2, newdata = neu), 1), \"Mrd. EUR\\n\")\n# Rechnung: -253.48 + 1.8234 * 1800 = -253.48 + 3282.12 ≈ 3028.6\n```\n\n**Kernerkenntnisse aus Statistik II:**\n- `dbinom` vs. `pbinom`: d für Punkt-, p für kumulative Wahrscheinlichkeit.\n- z-KI vs. t-KI: Bei bekannter $\\sigma$ → `qnorm()`; bei unbekannter $\\sigma$ → `qt(df=n-1)`. Das t-KI ist immer etwas breiter.\n- `t.test()` liefert t-Wert, df, p-Wert und KI auf einmal — Entscheidung per p < alpha.\n- `lm()` + `summary()`: Intercept = $\\hat{a}$, Regressor-Koeffizient = $\\hat{b}$, R-squared = $R^2$."
+    }
+  ]
+}

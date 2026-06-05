@@ -1,0 +1,394 @@
+{
+  "id": "intervallschaetzung-konfidenzintervalle",
+  "subjectId": "statistik",
+  "title": "Intervallschätzung (Konfidenzintervalle)",
+  "summary": "Statt eines einzelnen Schätzwerts (Punktschätzung) gibt ein Konfidenzintervall einen ganzen Bereich an, der den wahren Parameter mit vorgegebener Wahrscheinlichkeit (Konfidenzniveau 1−α) überdeckt. Dieses Thema erklärt, wie man solche Intervalle für Erwartungswerte (bekannte/unbekannte Varianz, normal-/nicht-normalverteilt) und für Anteilswerte berechnet und wie groß der Stichprobenumfang dafür sein muss.",
+  "order": 4,
+  "estMinutes": 55,
+  "sections": [
+    {
+      "id": "motivation",
+      "heading": "Warum reicht ein einzelner Schätzwert nicht?",
+      "body": "Stell dir vor, du willst wissen, wie schwer ein vollbeladener LKW im Durchschnitt ist. Du misst 9 LKWs und berechnest das **arithmetische Mittel** $\\bar{X}$. Das ist dein bester Schätzwert für den wahren Mittelwert $\\mu$ der gesamten Flotte — aber wie genau ist diese Zahl?\n\nDie **Punktschätzung** liefert *eine* Zahl, sagt aber nichts darüber aus, wie weit sie vom wahren Wert entfernt sein könnte. Bei einer anderen Stichprobe von 9 LKWs würde man einen anderen Wert bekommen.\n\n**Idee der Intervallschätzung:** Statt zu sagen „der Mittelwert ist genau 501 mm\" sagen wir lieber: „Mit 95 %iger Sicherheit liegt der wahre Mittelwert zwischen 500,02 mm und 501,98 mm.\" Dieses Intervall heißt **Konfidenzintervall** (KI) oder **Vertrauensintervall**.\n\n**Wichtige Denkweise:** Das KI ist zufällig (es hängt von der Stichprobe ab). Der wahre Wert $\\mu$ ist fest — er ist nur unbekannt. Was wir sagen können: Wenn wir dieses Verfahren sehr oft wiederholen, wird in $(1-\\alpha) \\cdot 100\\%$ aller Fälle das konstruierte Intervall den wahren Wert enthalten.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Häufige Fehlvorstellung",
+          "body": "Ein 95 %-KI bedeutet **nicht**: „Mit 95 % Wahrscheinlichkeit liegt $\\mu$ in diesem Intervall.\" Der Parameter $\\mu$ ist eine feste (unbekannte) Zahl — er liegt entweder drin oder nicht. Richtig ist: Das **Verfahren** liefert in 95 % der Wiederholungen ein Intervall, das $\\mu$ enthält."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "ki-intuition-fig",
+          "title": "Konfidenzintervall-Intuition: Viele Stichproben",
+          "caption": "Jede Stichprobe liefert ein anderes KI (Balken). Der wahre Wert μ (gestrichelte Linie) wird von ~95 % aller Intervalle überdeckt — manche (rot) verfehlen ihn.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "markers": [
+            { "x": -1.96, "label": "−z₀,₉₇₅" },
+            { "x": 1.96, "label": "+z₀,₉₇₅" }
+          ],
+          "shade": { "from": -1.96, "to": 1.96 }
+        }
+      ]
+    },
+    {
+      "id": "grundbegriffe",
+      "heading": "Grundbegriffe: Was steckt in einem KI?",
+      "body": "Ein Konfidenzintervall $[S_u;\\ S_o]$ besteht aus:\n\n| Begriff | Symbol | Bedeutung |\n|---|---|---|\n| Untere Grenze | $S_u$ | linke Schranke des Intervalls |\n| Obere Grenze | $S_o$ | rechte Schranke des Intervalls |\n| Intervalllänge | $L = S_o - S_u$ | Breite des Intervalls |\n| Irrtumswahrscheinlichkeit | $\\alpha$ | Wahrscheinlichkeit, dass KI $\\mu$ verfehlt |\n| Konfidenzniveau | $1 - \\alpha$ | Wahrscheinlichkeit, dass KI $\\mu$ enthält |\n\nFormell gilt:\n$$P(\\theta \\in [S_u;\\ S_o]) = 1 - \\alpha$$\n\nTypische Konfidenzniveaus:\n- $1-\\alpha = 0{,}90$ (10 % Irrtum erlaubt)\n- $1-\\alpha = 0{,}95$ (5 % Irrtum erlaubt) ← **am häufigsten in der Klausur**\n- $1-\\alpha = 0{,}99$ (1 % Irrtum erlaubt)\n\n**Zusammenhang mit dem Quantil:** Das Konfidenzniveau bestimmt, welches Quantil $z_{1-\\alpha/2}$ der Standardnormalverteilung wir verwenden:\n- $1-\\alpha = 0{,}95 \\Rightarrow \\alpha/2 = 0{,}025 \\Rightarrow z_{0{,}975} = 1{,}96$\n- $1-\\alpha = 0{,}99 \\Rightarrow \\alpha/2 = 0{,}005 \\Rightarrow z_{0{,}995} = 2{,}576$\n- $1-\\alpha = 0{,}90 \\Rightarrow \\alpha/2 = 0{,}05 \\Rightarrow z_{0{,}95} = 1{,}645$",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Dreiklang: Niveau – Länge – Umfang",
+          "body": "Es gibt immer einen Trade-off:\n- **Höheres Niveau** $\\Rightarrow$ breiteres Intervall (mehr Sicherheit kostet Präzision)\n- **Größere Stichprobe** $\\Rightarrow$ schmaleres Intervall (mehr Daten = mehr Präzision)\n- **Kleinere Streuung** $\\sigma$ $\\Rightarrow$ schmaleres Intervall"
+        }
+      ]
+    },
+    {
+      "id": "ki-bekannte-varianz",
+      "heading": "KI für μ bei bekannter Varianz (Gauß-Intervall)",
+      "body": "**Voraussetzung:** Die Varianz $\\sigma^2$ der Grundgesamtheit ist bekannt. Entweder ist $X$ normalverteilt, oder $n \\geq 30$ (dann greift der zentrale Grenzwertsatz).\n\n**Herleitung Schritt für Schritt:**\n\n**Schritt 1:** Das standardisierte Stichprobenmittel folgt der Standardnormalverteilung:\n$$Z = \\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} \\sim N(0,1)$$\n\n**Schritt 2:** Mit Wahrscheinlichkeit $1-\\alpha$ liegt $Z$ im zentralen Bereich:\n$$P\\!\\left(-z_{1-\\alpha/2} \\leq \\frac{\\bar{X}-\\mu}{\\sigma/\\sqrt{n}} \\leq z_{1-\\alpha/2}\\right) = 1-\\alpha$$\n\n**Schritt 3:** Umformen nach $\\mu$ (Ungleichung umdrehen):\n$$P\\!\\left(\\bar{X} - z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}} \\leq \\mu \\leq \\bar{X} + z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\right) = 1-\\alpha$$\n\n**Das Konfidenzintervall lautet also:**\n$$\\boxed{\\mathrm{KI}(\\mu) = \\left[\\bar{X} - z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\;\\;;\\ \\bar{X} + z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\right]}$$\n\n**Intervalllänge:**\n$$L = 2 \\cdot z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}$$\n\n**Mindeststichprobenumfang** für eine gewünschte maximale Intervalllänge $L$:\n$$n \\geq \\left(\\frac{2 \\cdot z_{1-\\alpha/2} \\cdot \\sigma}{L}\\right)^2 = \\left(\\frac{z_{1-\\alpha/2} \\cdot \\sigma}{\\varepsilon}\\right)^2$$\nwobei $\\varepsilon = L/2$ der halbe Fehler (maximale Abweichung) ist. **Immer aufrunden!**\n\n---\n\n**Durchgerechnetes Beispiel (Rohre, Aufgabe 4a):**\n\nGegeben: $n=9$, $\\sigma^2 = 2{,}25$ (also $\\sigma = 1{,}5$), Messwerte: 502, 504, 502, 498, 501, 497, 503, 502, 500. Niveau: $1-\\alpha = 0{,}95$.\n\n**Schritt 1:** Stichprobenmittel berechnen:\n$$\\bar{X} = \\frac{502+504+502+498+501+497+503+502+500}{9} = \\frac{4509}{9} = 501$$\n\n**Schritt 2:** Quantil ablesen: $z_{0{,}975} = 1{,}96$\n\n**Schritt 3:** Halbbreite:\n$$z_{0{,}975} \\cdot \\frac{\\sigma}{\\sqrt{n}} = 1{,}96 \\cdot \\frac{1{,}5}{\\sqrt{9}} = 1{,}96 \\cdot \\frac{1{,}5}{3} = 1{,}96 \\cdot 0{,}5 = 0{,}98$$\n\n**Schritt 4:** KI:\n$$\\mathrm{KI}(\\mu) = [501 - 0{,}98;\\ 501 + 0{,}98] = [500{,}02;\\ 501{,}98]$$\n\nInterpretation: Mit 95 % Sicherheit liegt die mittlere Rohrlänge der gesamten Produktion zwischen 500,02 mm und 501,98 mm.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Ablesen aus der Tabelle in der Klausur",
+          "body": "In der Klausur ist die Tabelle der Standardnormalverteilung $\\Phi(z)$ erlaubt. Suche in der Tabelle die Zeile/Spalte mit dem Wert $1-\\alpha/2$:\n- Für 95 %-KI: suche $\\Phi(z)=0{,}975$ → lies $z=1{,}96$ ab\n- Für 99 %-KI: suche $\\Phi(z)=0{,}995$ → lies $z=2{,}576$ ab\n- Für 90 %-KI: suche $\\Phi(z)=0{,}95$ → lies $z=1{,}645$ ab"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "ki-normal-bekannt-fig",
+          "title": "Gauß-KI: Mittlerer Bereich mit Wahrscheinlichkeit 1−α",
+          "caption": "Die schraffierten Randflächen haben zusammen die Fläche α. Die Marker bei ±z₁₋α/₂ begrenzen den zentralen (1−α)-Bereich. Das KI für μ entsteht durch Umformen dieser Ungleichung.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "from": -1.96, "to": 1.96 },
+          "markers": [
+            { "x": -1.96, "label": "−z₁₋α/₂ = −1,96" },
+            { "x": 1.96, "label": "+z₁₋α/₂ = +1,96" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ki-unbekannte-varianz",
+      "heading": "KI für μ bei unbekannter Varianz (t-Intervall)",
+      "body": "**Problem:** Oft kennen wir $\\sigma^2$ nicht. Dann müssen wir die Varianz aus der Stichprobe schätzen:\n$$\\hat{\\sigma}^2 = S^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\bar{X})^2$$\n\n**Warum n−1 im Nenner?** Weil dieser Schätzer erwartungstreu ist: $E(\\hat{\\sigma}^2) = \\sigma^2$. Mit $n$ im Nenner wäre er systematisch zu klein.\n\n**Folge:** Die standardisierte Prüfgröße folgt nun **nicht mehr** der Standardnormalverteilung, sondern der **t-Verteilung mit $n-1$ Freiheitsgraden**:\n$$T = \\frac{\\bar{X} - \\mu}{\\hat{\\sigma}/\\sqrt{n}} \\sim t_{n-1}$$\n\n**Was ist die t-Verteilung?** Sie sieht aus wie eine Glockenkurve, hat aber **dickere Ränder** (= breitere Verteilung). Je kleiner $n$, desto dicker die Ränder. Für $n \\to \\infty$ nähert sie sich der Standardnormalverteilung an.\n\n**Das KI bei unbekannter Varianz:**\n$$\\boxed{\\mathrm{KI}(\\mu) = \\left[\\bar{X} - t_{n-1,\\ 1-\\alpha/2} \\cdot \\frac{\\hat{\\sigma}}{\\sqrt{n}}\\;\\;;\\ \\bar{X} + t_{n-1,\\ 1-\\alpha/2} \\cdot \\frac{\\hat{\\sigma}}{\\sqrt{n}}\\right]}$$\n\nDas Quantil $t_{n-1,\\ 1-\\alpha/2}$ liest man aus der **t-Tabelle** ab (Zeile: Freiheitsgrade $df = n-1$; Spalte: $1-\\alpha/2$).\n\n**Faustregel:** Für $n \\geq 30$ kann man auch bei unbekannter Varianz das z-Quantil verwenden (ZGWS greift), d.h. $t_{n-1,\\ 0{,}975} \\approx z_{0{,}975} = 1{,}96$.\n\n---\n\n**Durchgerechnetes Beispiel (Rohre, Aufgabe 4c):**\n\nGleiche Daten wie oben: $n=9$, $\\bar{X}=501$, jetzt aber $\\sigma^2$ unbekannt.\n\n**Schritt 1:** Stichprobenvarianz berechnen:\n$$\\hat{\\sigma}^2 = \\frac{1}{8}\\sum(X_i-\\bar{X})^2$$\nAbweichungen: $+1, +3, +1, -3, 0, -4, +2, +1, -1$\nQuadrate: $1, 9, 1, 9, 0, 16, 4, 1, 1 = 42$\n$$\\hat{\\sigma}^2 = \\frac{42}{8} = 5{,}25,\\quad \\hat{\\sigma} = \\sqrt{5{,}25} \\approx 2{,}2913$$\n\n**Schritt 2:** t-Quantil aus Tabelle: $t_{8;\\ 0{,}975} = 2{,}306$\n\n**Schritt 3:** Halbbreite:\n$$2{,}306 \\cdot \\frac{2{,}2913}{\\sqrt{9}} = 2{,}306 \\cdot \\frac{2{,}2913}{3} = 2{,}306 \\cdot 0{,}7638 \\approx 1{,}762$$\n\n**Schritt 4:** KI:\n$$\\mathrm{KI}(\\mu) = [501 - 1{,}762;\\ 501 + 1{,}762] = [499{,}238;\\ 502{,}762]$$\n\nVergleich: Das t-KI ist **breiter** als das z-KI (±0,98), weil wir die Varianz schätzen mussten und die t-Verteilung dickere Ränder hat.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wann z, wann t?",
+          "body": "| Situation | Verteilung der GG | $\\sigma^2$ | Prüfgröße |\n|---|---|---|---|\n| Normal, $n$ beliebig | normalverteilt | bekannt | $z_{1-\\alpha/2}$ |\n| Nicht-normal, $n \\geq 30$ | beliebig | bekannt | $z_{1-\\alpha/2}$ |\n| Normal, $n < 30$ | normalverteilt | **unbekannt** | $t_{n-1,\\ 1-\\alpha/2}$ |\n| Beliebig, $n \\geq 30$ | beliebig | unbekannt | $z_{1-\\alpha/2}$ (Näherung) |"
+        },
+        {
+          "kind": "warning",
+          "title": "t-Quantil aus der Tabelle",
+          "body": "Die t-Tabelle der Formelsammlung gibt $t_{df,\\ p}$ an, wobei $p = 1-\\alpha/2$. Bei $n=9$ und 95 %-KI: $df = 8$, $p = 0{,}975$ → Wert in der Tabelle ablesen: $t_{8;\\ 0{,}975} = 2{,}306$. Nicht mit $z_{0{,}975}=1{,}96$ verwechseln!"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "t-vs-normal-fig",
+          "title": "t-Verteilung vs. Standardnormalverteilung",
+          "caption": "Die t-Verteilung (df=8, blau) hat dickere Ränder als die N(0,1) (rot gestrichelt). Deshalb ist das t-Quantil größer als das z-Quantil, und das KI wird breiter.",
+          "dist": "t",
+          "params": { "df": 8 },
+          "markers": [
+            { "x": -2.306, "label": "−t₈;₀,₉₇₅ = −2,306" },
+            { "x": 2.306, "label": "+t₈;₀,₉₇₅ = +2,306" },
+            { "x": -1.96, "label": "−z₀,₉₇₅" },
+            { "x": 1.96, "label": "+z₀,₉₇₅" }
+          ],
+          "shade": { "from": -2.306, "to": 2.306 }
+        }
+      ]
+    },
+    {
+      "id": "ki-anteil",
+      "heading": "KI für unbekannte Anteile",
+      "body": "**Situation:** Wir interessieren uns nicht für einen Mittelwert, sondern für einen **Anteil** $p$ in der Bevölkerung (z.B. Wähleranteil, Ausschussquote, Impfrate).\n\n**Ausgangslage:** Aus $n$ Beobachtungen haben $x$ das interessierende Merkmal. Der Schätzer für $p$ ist:\n$$\\hat{p} = \\bar{X} = \\frac{x}{n}$$\n\n**Varianz des Schätzers:** Da die Bernoulli-Varianz $p(1-p)$ unbekannt ist, schätzen wir sie durch $\\hat{p}(1-\\hat{p})$:\n$$\\hat{\\sigma} = \\sqrt{\\hat{p}(1-\\hat{p})}$$\n\n**Voraussetzung (ZGWS für Binomialverteilung):** $n \\geq 30$, $n\\hat{p} \\geq 10$, $n(1-\\hat{p}) \\geq 10$\n\n**Das approximative KI für p:**\n$$\\boxed{\\mathrm{KI}(p) = \\left[\\hat{p} - z_{1-\\alpha/2} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\;\\;;\\ \\hat{p} + z_{1-\\alpha/2} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\right]}$$\n\n**Warum ist $\\hat{p}(1-\\hat{p}) \\leq \\frac{1}{4}$?** Die Funktion $p(1-p)$ ist eine nach unten geöffnete Parabel mit Maximum bei $p=0{,}5$: $\\max_{p} p(1-p) = 0{,}5 \\cdot 0{,}5 = 0{,}25$. Diese Obergrenze nutzt man für einen **konservativen** Mindeststichprobenumfang.\n\n**Mindeststichprobenumfang für Anteils-KI:**\n$$n \\geq \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$$\nwobei $\\varepsilon = L/2$ die maximale Abweichung ist. Hier wird die Worst-Case-Varianz $1/4$ verwendet.\n\n---\n\n**Durchgerechnetes Beispiel (Wähler, Aufgabe 5b):**\n\nGegeben: $n=2000$, $x=800$ Befürworter, $\\hat{p} = 800/2000 = 0{,}4$. Niveau: $1-\\alpha = 0{,}95$.\n\n**Schritt 1:** Voraussetzungen prüfen: $n=2000 \\geq 30$ ✓; $n\\hat{p}=800 \\geq 10$ ✓; $n(1-\\hat{p})=1200 \\geq 10$ ✓\n\n**Schritt 2:** Geschätzte Standardabweichung:\n$$\\hat{\\sigma} = \\sqrt{0{,}4 \\cdot 0{,}6} = \\sqrt{0{,}24} \\approx 0{,}4899$$\n\n**Schritt 3:** Quantil: $z_{0{,}975} = 1{,}96$\n\n**Schritt 4:** Halbbreite:\n$$1{,}96 \\cdot \\frac{0{,}4899}{\\sqrt{2000}} = 1{,}96 \\cdot \\frac{0{,}4899}{44{,}721} = 1{,}96 \\cdot 0{,}01095 \\approx 0{,}02146$$\n\n**Schritt 5:** KI:\n$$\\mathrm{KI}(p) = [0{,}4 - 0{,}02146;\\ 0{,}4 + 0{,}02146] = [0{,}3785;\\ 0{,}4215]$$\n\nInterpretation: Mit 95 % Sicherheit würden zwischen 37,85 % und 42,15 % der Wähler diese Partei wählen.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Worst-Case-Varianz: Wozu die 1/4-Grenze?",
+          "body": "Wenn $\\hat{p}$ noch nicht bekannt ist (z.B. bei der Planung einer Umfrage), weiß man noch nicht, wie groß $\\hat{p}(1-\\hat{p})$ sein wird. Man nimmt den ungünstigsten Fall $\\hat{p}=0{,}5$, also $\\hat{p}(1-\\hat{p})=0{,}25$. So garantiert man, dass das KI auf jeden Fall maximal $2\\varepsilon$ breit ist — unabhängig vom beobachteten Anteil."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "parabel-varianz-fig",
+          "title": "Varianzfunktion p(1−p): Maximum bei p = 0,5",
+          "caption": "Die geschätzte Varianz des Anteilsschätzers ist p(1−p) und hat ihr Maximum von 0,25 bei p=0,5. Für den Mindeststichprobenumfang wird stets dieser Worst-Case-Wert verwendet.",
+          "functions": [
+            { "fn": "x*(1-x)", "label": "p·(1−p)", "color": "blue" }
+          ],
+          "domain": [0, 1],
+          "points": [
+            { "x": 0.5, "y": 0.25, "label": "Max: (0,5 ; 0,25)" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stichprobenumfang",
+      "heading": "Mindeststichprobenumfang — Planung vor der Erhebung",
+      "body": "Oft will man eine Studie planen und braucht dafür einen Mindeststichprobenumfang $n$, der ein KI der gewünschten Länge $L$ (oder maximalen Abweichung $\\varepsilon = L/2$) sicherstellt.\n\n**Für Mittelwert-KI (bekannte Varianz):**\n$$L = \\frac{2 \\cdot z_{1-\\alpha/2} \\cdot \\sigma}{\\sqrt{n}} \\leq L^* \\quad \\Longrightarrow \\quad n \\geq \\left(\\frac{2 \\cdot z_{1-\\alpha/2} \\cdot \\sigma}{L^*}\\right)^2 = \\left(\\frac{z_{1-\\alpha/2} \\cdot \\sigma}{\\varepsilon}\\right)^2$$\n\n**Für Anteils-KI (Worst-Case):**\n$$n \\geq \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$$\n\n**Kochrezept:**\n1. Gewünschtes Niveau $1-\\alpha$ → Quantil $z_{1-\\alpha/2}$ ablesen\n2. Gewünschte maximale Länge $L$ oder Abweichung $\\varepsilon = L/2$ festlegen\n3. Formel einsetzen und Ergebnis **immer aufrunden** (auf die nächste ganze Zahl!)\n\n---\n\n**Beispiel (Rohre, Aufgabe 4b):** Maximale Länge $L^* = 1$, $\\sigma = 1{,}5$, $\\alpha = 0{,}05$:\n$$n \\geq \\left(\\frac{2 \\cdot 1{,}96 \\cdot 1{,}5}{1}\\right)^2 = (5{,}88)^2 = 34{,}57 \\quad \\Rightarrow \\quad n \\geq 35$$\n\n**Beispiel (Wähler, Aufgabe 5a):** Maximale Abweichung $\\varepsilon = 0{,}01$ (d.h. $L = 0{,}02$), $\\alpha = 0{,}05$:\n$$n \\geq \\left(\\frac{1{,}96}{2 \\cdot 0{,}01}\\right)^2 = \\left(\\frac{1{,}96}{0{,}02}\\right)^2 = 98^2 = 9604$$\n\nMan braucht also mindestens 9604 befragte Personen.",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Immer aufrunden!",
+          "body": "Der Mindeststichprobenumfang ist eine Untergrenze. Wenn die Formel z.B. 34,57 ergibt, muss man auf **35** aufrunden. Mit $n=34$ wäre das KI zu breit."
+        },
+        {
+          "kind": "tip",
+          "title": "R-Code: KI berechnen",
+          "body": "```r\n# Konfidenzintervall für mu, bekannte Varianz (sigma=1.5, n=9, x_bar=501)\nn <- 9; sigma <- 1.5; x_bar <- 501; alpha <- 0.05\nz <- qnorm(1 - alpha/2)          # z = 1.96\nhb <- z * sigma / sqrt(n)         # Halbbreite = 0.98\nc(x_bar - hb, x_bar + hb)         # [500.02, 501.98]\n\n# KI für mu, unbekannte Varianz (t-Verteilung)\nhat_sigma <- sqrt(5.25)\nt_val <- qt(0.975, df = n - 1)    # t_8;0.975 = 2.306\nhb2 <- t_val * hat_sigma / sqrt(n)\nc(x_bar - hb2, x_bar + hb2)       # [499.24, 502.76]\n\n# Mindeststichprobenumfang für Anteil, eps=0.01\nepsilon <- 0.01\nceil(qnorm(0.975)^2 / (4 * epsilon^2))  # 9604\n```"
+        }
+      ]
+    },
+    {
+      "id": "uebersicht-faelle",
+      "heading": "Übersicht: Welches KI wann?",
+      "body": "In der Klausur muss man die Situation korrekt einordnen. Die folgende Übersicht hilft:\n\n| Situation | Bedingung | Formel |\n|---|---|---|\n| $\\mu$, $\\sigma^2$ **bekannt**, normalverteilt | beliebiges $n$ | $\\bar{X} \\pm z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}$ |\n| $\\mu$, $\\sigma^2$ **bekannt**, nicht-normal | $n \\geq 30$ | $\\bar{X} \\pm z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}$ |\n| $\\mu$, $\\sigma^2$ **unbekannt**, normalverteilt | $n < 30$ | $\\bar{X} \\pm t_{n-1,\\ 1-\\alpha/2} \\cdot \\frac{\\hat{\\sigma}}{\\sqrt{n}}$ |\n| $\\mu$, $\\sigma^2$ **unbekannt**, beliebig | $n \\geq 30$ | $\\bar{X} \\pm z_{1-\\alpha/2} \\cdot \\frac{\\hat{\\sigma}}{\\sqrt{n}}$ |\n| **Anteil** $p$, unbekannt | $n\\hat{p}\\geq10$, $n(1-\\hat{p})\\geq10$ | $\\hat{p} \\pm z_{1-\\alpha/2} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$ |\n\n**Wichtige Quantile auswendig kennen:**\n$$z_{0{,}95} = 1{,}645,\\quad z_{0{,}975} = 1{,}96,\\quad z_{0{,}995} = 2{,}576$$",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "ki-anteil-fig",
+          "title": "KI für Anteil: Standardnormalverteilung mit α/2-Flächen",
+          "caption": "Beim approximativen Anteils-KI nutzt man ebenfalls die Standardnormalverteilung. Die schraffierten Flächen links und rechts haben je die Größe α/2 = 0,025 (für 95%-KI).",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "tail": "two", "from": -1.96, "to": 1.96 },
+          "markers": [
+            { "x": -1.96, "label": "−1,96" },
+            { "x": 1.96, "label": "+1,96" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Entscheidungsbaum: Welches KI?",
+          "body": "1. **Was schätze ich?** Mittelwert $\\mu$ oder Anteil $p$?\n   - Anteil → Anteils-KI mit $\\hat{p}$\n   - Mittelwert → weiter zu 2.\n2. **Ist $\\sigma^2$ bekannt?**\n   - Ja → z-Quantil\n   - Nein → weiter zu 3.\n3. **Ist $n \\geq 30$?**\n   - Ja → z-Quantil (mit $\\hat{\\sigma}$ statt $\\sigma$)\n   - Nein → ist die Grundgesamtheit normalverteilt?\n     - Ja → t-Quantil mit $df = n-1$\n     - Nein → **Vorsicht**: ZGWS gilt nicht, KI ist nur Näherung"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ki-fc-1",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Was bedeutet ein 95 %-Konfidenzintervall?",
+      "back": "Das Verfahren liefert in 95 % aller Wiederholungen ein Intervall, das den wahren Parameter $\\mu$ enthält. Es ist **nicht** so zu verstehen, dass $\\mu$ mit 95 % Wahrscheinlichkeit in diesem konkreten Intervall liegt — $\\mu$ ist eine feste Zahl."
+    },
+    {
+      "id": "ki-fc-2",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Wie lautet das KI für $\\mu$ bei bekannter Varianz $\\sigma^2$?",
+      "back": "$$\\mathrm{KI}(\\mu) = \\left[\\bar{X} - z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\;;\\ \\bar{X} + z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\right]$$\nVoraussetzung: $X$ normalverteilt **oder** $n \\geq 30$."
+    },
+    {
+      "id": "ki-fc-3",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Wann verwendet man die t-Verteilung statt der Normalverteilung beim KI?",
+      "back": "Wenn $\\sigma^2$ **unbekannt** und $n < 30$ (aber $X$ normalverteilt). Dann gilt: $T = \\frac{\\bar{X}-\\mu}{\\hat{\\sigma}/\\sqrt{n}} \\sim t_{n-1}$ und man liest $t_{n-1,\\ 1-\\alpha/2}$ aus der t-Tabelle ab."
+    },
+    {
+      "id": "ki-fc-4",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Wie berechnet man den Mindeststichprobenumfang für ein Mittelwert-KI?",
+      "back": "$$n \\geq \\left(\\frac{2 \\cdot z_{1-\\alpha/2} \\cdot \\sigma}{L}\\right)^2 = \\left(\\frac{z_{1-\\alpha/2} \\cdot \\sigma}{\\varepsilon}\\right)^2$$\nwobei $L$ die gewünschte maximale Länge und $\\varepsilon = L/2$ die maximale Abweichung ist. Ergebnis **immer aufrunden**."
+    },
+    {
+      "id": "ki-fc-5",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Wie lautet das KI für einen unbekannten Anteil $p$?",
+      "back": "$$\\mathrm{KI}(p) = \\left[\\hat{p} - z_{1-\\alpha/2} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\;;\\ \\hat{p} + z_{1-\\alpha/2} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\right]$$\nVoraussetzung: $n \\geq 30$, $n\\hat{p} \\geq 10$, $n(1-\\hat{p}) \\geq 10$."
+    },
+    {
+      "id": "ki-fc-6",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Warum gilt $\\hat{p}(1-\\hat{p}) \\leq \\frac{1}{4}$?",
+      "back": "Die Funktion $f(p)=p(1-p)$ ist eine Parabel mit Maximum bei $p=0{,}5$: $f(0{,}5) = 0{,}25$. Dieser Wert dient als konservative Obergrenze für den Mindeststichprobenumfang, wenn $\\hat{p}$ noch nicht bekannt ist."
+    },
+    {
+      "id": "ki-fc-7",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Was passiert mit der Länge eines KI, wenn man die Stichprobengröße $n$ vervierfacht?",
+      "back": "Die Länge halbiert sich! Da $L = 2 z_{1-\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}$, geht die Länge mit $1/\\sqrt{n}$ gegen null. Vervierfacht man $n$, wird $\\sqrt{n}$ doppelt so groß und $L$ halbiert sich."
+    },
+    {
+      "id": "ki-fc-8",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Welche drei Quantile $z_w$ der Standardnormalverteilung sollte man für KIs kennen?",
+      "back": "$z_{0{,}95} = 1{,}645$ (für 90 %-KI)\n$z_{0{,}975} = 1{,}96$ (für 95 %-KI)\n$z_{0{,}995} = 2{,}576$ (für 99 %-KI)"
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "ki-q1",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "leicht",
+      "prompt": "Was ist die korrekte Interpretation eines 95 %-Konfidenzintervalls?",
+      "options": [
+        "Mit 95 % Wahrscheinlichkeit liegt der wahre Parameter $\\mu$ in diesem Intervall.",
+        "Das Verfahren liefert bei wiederholter Anwendung in 95 % der Fälle ein Intervall, das $\\mu$ enthält.",
+        "95 % der Stichprobenwerte liegen in diesem Intervall.",
+        "Das Intervall enthält 95 % der Grundgesamtheit."
+      ],
+      "correct": [1],
+      "explanation": "Der wahre Parameter $\\mu$ ist eine feste (unbekannte) Zahl. Das KI selbst ist zufällig (hängt von der Stichprobe ab). Die korrekte Aussage bezieht sich auf das Verfahren: Bei wiederholter Anwendung überdecken 95 % der so konstruierten Intervalle den wahren Wert."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ki-q2",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "leicht",
+      "prompt": "Ein breiteres Konfidenzintervall entspricht einer höheren statistischen Sicherheit (höherem Konfidenzniveau).",
+      "answer": true,
+      "explanation": "Stimmt. Je höher das Konfidenzniveau (z.B. 99 % statt 95 %), desto größer das Quantil $z_{1-\\alpha/2}$, und desto breiter das KI. Mehr Sicherheit bedeutet weniger Präzision (breiteres Intervall)."
+    },
+    {
+      "kind": "numeric",
+      "id": "ki-q3",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "leicht",
+      "prompt": "Welches Quantil $z_{1-\\alpha/2}$ der Standardnormalverteilung verwendet man für ein 95 %-Konfidenzintervall?",
+      "answer": 1.96,
+      "tolerance": 0.005,
+      "explanation": "Für ein 95 %-KI gilt $1-\\alpha = 0{,}95$, also $\\alpha = 0{,}05$ und $\\alpha/2 = 0{,}025$. Man sucht $z_{0{,}975}$, d.h. das 97,5 %-Quantil der Standardnormalverteilung: $\\Phi(1{,}96) = 0{,}975$."
+    },
+    {
+      "kind": "numeric",
+      "id": "ki-q4",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Eine normalverteilte Grundgesamtheit hat bekannte Varianz $\\sigma^2 = 4$. Eine Stichprobe von $n = 25$ liefert $\\bar{X} = 10$. Wie lautet die **obere Grenze** des 95 %-KI für $\\mu$? (Runde auf 2 Nachkommastellen)",
+      "answer": 10.78,
+      "tolerance": 0.01,
+      "unit": "",
+      "explanation": "KI-Formel: $S_o = \\bar{X} + z_{0{,}975} \\cdot \\frac{\\sigma}{\\sqrt{n}} = 10 + 1{,}96 \\cdot \\frac{2}{\\sqrt{25}} = 10 + 1{,}96 \\cdot 0{,}4 = 10 + 0{,}784 = 10{,}784 \\approx 10{,}78$."
+    },
+    {
+      "kind": "numeric",
+      "id": "ki-q5",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Wie groß muss der Mindeststichprobenumfang sein, damit das 95 %-KI für einen unbekannten Anteil $p$ eine maximale Abweichung von $\\varepsilon = 0{,}02$ hat? (Worst-Case-Varianz verwenden)",
+      "answer": 2401,
+      "tolerance": 0,
+      "explanation": "Formel: $n \\geq \\left(\\frac{z_{0{,}975}}{2\\varepsilon}\\right)^2 = \\left(\\frac{1{,}96}{2 \\cdot 0{,}02}\\right)^2 = \\left(\\frac{1{,}96}{0{,}04}\\right)^2 = 49^2 = 2401$. Da das Ergebnis ganzzahlig ist, gilt $n \\geq 2401$."
+    },
+    {
+      "kind": "numeric",
+      "id": "ki-q6",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Eine Maschine produziert Rohre mit bekannter Varianz $\\sigma^2 = 2{,}25$. Wie groß muss $n$ sein, damit das 95 %-KI für $\\mu$ höchstens die Länge $L = 1$ hat?",
+      "answer": 35,
+      "tolerance": 0,
+      "explanation": "$n \\geq \\left(\\frac{2 \\cdot 1{,}96 \\cdot 1{,}5}{1}\\right)^2 = (3{,}92 \\cdot 1{,}5 / 1)^2 = (5{,}88)^2 = 34{,}57 \\Rightarrow n = 35$ (aufrunden!)."
+    },
+    {
+      "kind": "mc",
+      "id": "ki-q7",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Eine Stichprobe von $n = 16$ aus einer normalverteilten Grundgesamtheit mit **unbekannter Varianz** liefert $\\bar{X} = 50$ und $\\hat{\\sigma} = 4$. Welche Formel ist für das 95 %-KI korrekt?",
+      "options": [
+        "$\\left[50 \\pm 1{,}96 \\cdot \\frac{4}{\\sqrt{16}}\\right]$",
+        "$\\left[50 \\pm t_{15,\\ 0{,}975} \\cdot \\frac{4}{\\sqrt{16}}\\right]$",
+        "$\\left[50 \\pm t_{16,\\ 0{,}975} \\cdot \\frac{4}{\\sqrt{16}}\\right]$",
+        "$\\left[50 \\pm 1{,}96 \\cdot \\frac{4}{16}\\right]$"
+      ],
+      "correct": [1],
+      "explanation": "Da $\\sigma^2$ unbekannt und $n=16 < 30$ ist, muss man das t-Quantil mit $df = n-1 = 15$ Freiheitsgraden verwenden: $t_{15,\\ 0{,}975}$. Option A wäre falsch (z statt t), Option C hat falsche df."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ki-q8",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Für ein KI für einen unbekannten Anteil $p$ benötigt man weder eine Normalverteilungsannahme noch muss man die Varianz kennen, solange $n$ groß genug ist.",
+      "answer": true,
+      "explanation": "Korrekt. Dank des ZGWS für die Binomialverteilung gilt für $n \\geq 30$, $n\\hat{p} \\geq 10$, $n(1-\\hat{p}) \\geq 10$: $\\hat{p}$ ist approximativ normalverteilt. Die unbekannte Varianz $p(1-p)$ wird durch $\\hat{p}(1-\\hat{p})$ geschätzt. Kein Normalverteilungsmodell der Grundgesamtheit nötig."
+    },
+    {
+      "kind": "freetext",
+      "id": "ki-q9",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Erkläre in eigenen Worten, warum man bei unbekannter Varianz das t-Quantil anstelle des z-Quantils verwendet, und was der Unterschied zwischen beiden ist.",
+      "sampleAnswer": "Bei bekannter Varianz $\\sigma^2$ ist die standardisierte Größe $(\\bar{X}-\\mu)/(\\sigma/\\sqrt{n})$ exakt standardnormalverteilt. Bei unbekannter Varianz ersetzt man $\\sigma$ durch den Schätzer $\\hat{\\sigma}$. Dadurch kommt ein weiterer Zufallsfehler ins Spiel, der die Verteilung in den Rändern 'dicker' macht — das ist die t-Verteilung. Ihre Quantile $t_{n-1,\\ 0{,}975}$ sind größer als $z_{0{,}975}=1{,}96$, was zu einem breiteren KI führt. Je kleiner $n$, desto größer der Unterschied. Für $n \\to \\infty$ nähert sich die t-Verteilung der Standardnormalverteilung an.",
+      "keywords": ["dicker ränder", "schätzer", "freiheitsgrade", "breiter", "unsicherheit"],
+      "explanation": "Der Kernpunkt: Das Ersetzen von $\\sigma$ durch $\\hat{\\sigma}$ fügt Zufälligkeit hinzu. Die t-Verteilung modelliert diese zusätzliche Unsicherheit durch dickere Ränder (größere Quantile = breiteres KI)."
+    },
+    {
+      "kind": "numeric",
+      "id": "ki-q10",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "schwer",
+      "prompt": "In einer Stichprobe von $n = 2000$ Wahlberechtigten geben 800 an, eine bestimmte Partei zu wählen. Wie groß ist die **obere Grenze** des 95 %-KI für den wahren Wähleranteil $p$? (Runde auf 4 Nachkommastellen)",
+      "answer": 0.4215,
+      "tolerance": 0.0005,
+      "explanation": "$\\hat{p} = 800/2000 = 0{,}4$. Geschätzte Std.-Abw.: $\\hat{\\sigma} = \\sqrt{0{,}4 \\cdot 0{,}6} = \\sqrt{0{,}24} \\approx 0{,}4899$. Halbbreite: $1{,}96 \\cdot 0{,}4899/\\sqrt{2000} = 1{,}96 \\cdot 0{,}01095 \\approx 0{,}02146$. Obere Grenze: $0{,}4 + 0{,}02146 = 0{,}42146 \\approx 0{,}4215$."
+    },
+    {
+      "kind": "mc",
+      "id": "ki-q11",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen über Konfidenzintervalle sind **korrekt**? (Mehrfachauswahl möglich)",
+      "options": [
+        "Bei gleichem $n$ und $\\sigma$: Ein 99 %-KI ist breiter als ein 95 %-KI.",
+        "Bei gleichem Niveau: Eine Verdopplung von $n$ halbiert die Intervalllänge.",
+        "Bei gleichem Niveau: Eine Verdopplung von $n$ halbiert die Intervalllänge.",
+        "Das t-Quantil ist immer größer als das entsprechende z-Quantil (für gleiches $\\alpha$)."
+      ],
+      "correct": [0, 3],
+      "multiple": true,
+      "explanation": "Option A ist korrekt: höheres Niveau → größeres Quantil → breiteres Intervall. Option B ist falsch: Die Verdopplung von $n$ ergibt Faktor $\\sqrt{2}$ in $\\sqrt{n}$, die Länge sinkt um Faktor $1/\\sqrt{2} \\approx 0{,}707$, nicht um die Hälfte. Man müsste $n$ vervierfachen, um die Länge zu halbieren. Option D ist korrekt: Die t-Verteilung hat dickere Ränder, daher ist ihr Quantil stets größer als das der N(0,1)."
+    },
+    {
+      "kind": "numeric",
+      "id": "ki-q12",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "schwer",
+      "prompt": "Eine Stichprobe von $n=9$ normalverteilten Messwerten liefert $\\bar{X}=501$ und $\\hat{\\sigma}^2 = 5{,}25$. Wie lautet die **untere Grenze** des 95 %-KI für $\\mu$ (unbekannte Varianz)? Verwende $t_{8;\\ 0{,}975} = 2{,}306$. (Runde auf 3 Nachkommastellen)",
+      "answer": 499.238,
+      "tolerance": 0.005,
+      "explanation": "$\\hat{\\sigma} = \\sqrt{5{,}25} \\approx 2{,}2913$. Halbbreite: $2{,}306 \\cdot 2{,}2913/\\sqrt{9} = 2{,}306 \\cdot 0{,}7638 \\approx 1{,}762$. Untere Grenze: $501 - 1{,}762 = 499{,}238$."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ki-ex-1",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "label": "Übungsblatt 2, Aufgabe 4 — Rohrlängen: KI bei bekannter und unbekannter Varianz",
+      "source": "Übungsblatt 2 (Punktschätzung und Konfidenzintervalle), Aufgabe 4",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Einer Maschine produziere Rohre. Dieser Maschine wird eine Stichprobe von $n = 9$ aus einem Produktionsdurchlauf entnommen, wobei sich folgende Rohrlängen in mm ergeben:\n\n$$502 \\quad 504 \\quad 502 \\quad 498 \\quad 501 \\quad 497 \\quad 503 \\quad 502 \\quad 500$$\n\nEs sei angenommen, dass die Rohrlänge mit einer Varianz $\\sigma^2 = 2{,}25$ normalverteilt ist.\n\na) Wie lauten die Grenzen des Konfidenzintervalls zum Niveau $1-\\alpha = 0{,}95$ für den unbekannten Parameter $\\mu$ der Grundgesamtheit?\n\nb) Wie groß müsste der Stichprobenumfang mindestens sein, um ein Intervall der Länge von höchstens 1 zu erhalten? ($\\alpha = 0{,}05$)\n\nc) Welche Grenzen erhält das Konfidenzintervall aus a), wenn nichts über die Varianz der Verteilung bekannt ist?",
+      "hint": "a) Nutze das z-basierte KI mit $\\sigma = \\sqrt{2{,}25} = 1{,}5$ und $z_{0{,}975} = 1{,}96$. b) Forme die Längenformel nach $n$ um. c) Berechne zuerst $\\hat{\\sigma}^2$ aus den Daten mit Nenner $n-1$ und nutze das t-Quantil $t_{8;\\ 0{,}975} = 2{,}306$.",
+      "solution": "**Schritt 0: Stichprobenmittel berechnen**\n\n$$\\bar{X} = \\frac{502+504+502+498+501+497+503+502+500}{9} = \\frac{4509}{9} = 501$$\n\n---\n\n**Teil a) KI bei bekannter Varianz ($\\sigma^2 = 2{,}25$, $\\sigma = 1{,}5$)**\n\nSituation: $X$ normalverteilt, $\\sigma^2$ bekannt, $n=9$. → z-Intervall anwenden.\n\nQuantil: $z_{0{,}975} = 1{,}96$ (aus der Tabelle der Standardnormalverteilung)\n\nHalbbreite:\n$$\\varepsilon = z_{0{,}975} \\cdot \\frac{\\sigma}{\\sqrt{n}} = 1{,}96 \\cdot \\frac{1{,}5}{\\sqrt{9}} = 1{,}96 \\cdot \\frac{1{,}5}{3} = 1{,}96 \\cdot 0{,}5 = 0{,}98$$\n\n$$\\mathrm{KI}(\\mu) = [\\bar{X} - 0{,}98;\\ \\bar{X} + 0{,}98] = [501 - 0{,}98;\\ 501 + 0{,}98] = [\\mathbf{500{,}02;\\ 501{,}98}]$$\n\nInterpretation: Mit 95 % Sicherheit liegt die mittlere Rohrlänge der gesamten Produktion zwischen 500,02 mm und 501,98 mm.\n\n---\n\n**Teil b) Mindeststichprobenumfang für $L \\leq 1$**\n\nFormel: $n \\geq \\left(\\dfrac{2 \\cdot z_{0{,}975} \\cdot \\sigma}{L}\\right)^2$\n\n$$n \\geq \\left(\\frac{2 \\cdot 1{,}96 \\cdot 1{,}5}{1}\\right)^2 = (2 \\cdot 1{,}96 \\cdot 1{,}5)^2 = (5{,}88)^2 = 34{,}5744$$\n\nAufrunden: $\\mathbf{n \\geq 35}$\n\nProbe: Mit $n=35$: $L = 2 \\cdot 1{,}96 \\cdot 1{,}5 / \\sqrt{35} = 5{,}88/5{,}916 = 0{,}994 < 1$ ✓\n\nMit $n=34$: $L = 5{,}88/\\sqrt{34} = 5{,}88/5{,}831 = 1{,}008 > 1$ ✗\n\n---\n\n**Teil c) KI bei unbekannter Varianz (t-Intervall)**\n\nNun muss $\\sigma^2$ aus der Stichprobe geschätzt werden. Berechne die Abweichungen vom Mittel $\\bar{X}=501$:\n\n| $x_i$ | $x_i - \\bar{X}$ | $(x_i - \\bar{X})^2$ |\n|---|---|---|\n| 502 | +1 | 1 |\n| 504 | +3 | 9 |\n| 502 | +1 | 1 |\n| 498 | −3 | 9 |\n| 501 | 0 | 0 |\n| 497 | −4 | 16 |\n| 503 | +2 | 4 |\n| 502 | +1 | 1 |\n| 500 | −1 | 1 |\n| **Summe** | | **42** |\n\n$$\\hat{\\sigma}^2 = \\frac{\\sum(x_i - \\bar{X})^2}{n-1} = \\frac{42}{8} = 5{,}25$$\n\n$$\\hat{\\sigma} = \\sqrt{5{,}25} \\approx 2{,}2913$$\n\nFreiheitsgrade: $df = n-1 = 8$. Quantil aus der t-Tabelle: $t_{8;\\ 0{,}975} = 2{,}306$\n\nHalbbreite:\n$$t_{8;\\ 0{,}975} \\cdot \\frac{\\hat{\\sigma}}{\\sqrt{n}} = 2{,}306 \\cdot \\frac{2{,}2913}{3} = 2{,}306 \\cdot 0{,}7638 \\approx 1{,}762$$\n\n$$\\mathrm{KI}(\\mu) = [501 - 1{,}762;\\ 501 + 1{,}762] = [\\mathbf{499{,}238;\\ 502{,}762}]$$\n\nVergleich mit a): Das t-KI ist deutlich breiter (±1,762 statt ±0,98), weil\n1. $\\hat{\\sigma} = 2{,}29 > \\sigma = 1{,}5$ (Varianz wurde überschätzt)\n2. das t-Quantil $2{,}306 > 1{,}96$ (dickere Ränder der t-Verteilung)"
+    },
+    {
+      "id": "ki-ex-2",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "label": "Übungsblatt 2, Aufgabe 5 — Wähleranteil: KI für Anteile und Mindeststichprobenumfang",
+      "source": "Übungsblatt 2 (Punktschätzung und Konfidenzintervalle), Aufgabe 5",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Eine Partei will feststellen, wie groß der Wähleranteil ist, der ihr zur Zeit die Stimme geben würde. Aus Kostengründen muss eine Stichprobe genommen werden, um auf den Anteil der Grundgesamtheit zu schließen.\n\na) Wie umfangreich muss die Stichprobe sein, damit der geschätzte Anteil um höchstens 0,01 vom wahren Wert abweicht? Dabei ist mit einer Sicherheit von $1-\\alpha = 0{,}95$ zu rechnen.\n\nb) In einer Stichprobe von $n = 2000$ befanden sich 800 Personen, die diese Partei wählen würden. Welches Konfidenzintervall überdeckt mit einer Sicherheit von $1-\\alpha = 0{,}95$ den wahren Anteil der potentiellen Wähler?",
+      "hint": "a) Da $\\hat{p}$ noch unbekannt ist, verwende die Worst-Case-Varianz $\\hat{p}(1-\\hat{p}) \\leq 1/4$ und die Formel für den Mindeststichprobenumfang. b) Berechne $\\hat{p} = x/n$, schätze $\\hat{\\sigma}$, prüfe die ZGWS-Voraussetzungen und setze in die KI-Formel ein.",
+      "solution": "**Teil a) Mindeststichprobenumfang**\n\nGegeben: maximale Abweichung $\\varepsilon = 0{,}01$, Niveau $1-\\alpha = 0{,}95$.\n\nZunächst: $z_{0{,}975} = 1{,}96$.\n\nDa der wahre Anteil $p$ (und damit auch $\\hat{p}$) noch nicht bekannt ist, verwenden wir die Worst-Case-Obergrenze der Varianz:\n$$\\hat{p}(1-\\hat{p}) \\leq \\frac{1}{4}$$\n\nMindeststichprobenumfang-Formel:\n$$n \\geq \\left(\\frac{z_{0{,}975}}{2\\varepsilon}\\right)^2 = \\left(\\frac{1{,}96}{2 \\cdot 0{,}01}\\right)^2 = \\left(\\frac{1{,}96}{0{,}02}\\right)^2 = 98^2 = \\mathbf{9604}$$\n\nDie Stichprobe muss mindestens **9604 Personen** umfassen.\n\nInterpretation: Befragt man mindestens 9604 Personen, so ist mit 95 % Sicherheit garantiert, dass der geschätzte Anteil $\\hat{p}$ maximal 0,01 vom wahren Anteil $p$ abweicht — und das unabhängig davon, wie groß $p$ tatsächlich ist.\n\n---\n\n**Teil b) KI für den Wähleranteil bei $n=2000$, $x=800$**\n\n**Schritt 1:** Anteilsschätzer:\n$$\\hat{p} = \\frac{x}{n} = \\frac{800}{2000} = 0{,}4$$\n\n**Schritt 2:** ZGWS-Voraussetzungen prüfen:\n- $n = 2000 \\geq 30$ ✓\n- $n\\hat{p} = 2000 \\cdot 0{,}4 = 800 \\geq 10$ ✓\n- $n(1-\\hat{p}) = 2000 \\cdot 0{,}6 = 1200 \\geq 10$ ✓\n\n**Schritt 3:** Geschätzte Standardabweichung:\n$$\\hat{\\sigma} = \\sqrt{\\hat{p}(1-\\hat{p})} = \\sqrt{0{,}4 \\cdot 0{,}6} = \\sqrt{0{,}24} \\approx 0{,}4899$$\n\n**Schritt 4:** Quantil: $z_{0{,}975} = 1{,}96$\n\n**Schritt 5:** Halbbreite:\n$$z_{0{,}975} \\cdot \\frac{\\hat{\\sigma}}{\\sqrt{n}} = 1{,}96 \\cdot \\frac{0{,}4899}{\\sqrt{2000}} = 1{,}96 \\cdot \\frac{0{,}4899}{44{,}7214} = 1{,}96 \\cdot 0{,}010954 \\approx 0{,}02147$$\n\n**Schritt 6:** KI:\n$$S_u = 0{,}4 - 0{,}02147 \\approx 0{,}3785$$\n$$S_o = 0{,}4 + 0{,}02147 \\approx 0{,}4215$$\n$$\\mathrm{KI}(p) = [\\mathbf{0{,}3785;\\ 0{,}4215}]$$\n\nInterpretation: Mit 95 % Sicherheit liegt der wahre Wähleranteil dieser Partei zwischen 37,85 % und 42,15 %."
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "id": "spezielle-verteilungen-und-grenzwertsaetze",
+  "subjectId": "statistik",
+  "title": "Spezielle Verteilungen und Grenzwertsätze",
+  "summary": "Wichtigste Verteilungsmodelle der WiWi-Statistik: die diskrete Binomialverteilung (und ihr Spezialfall, die Bernoulli-Verteilung) sowie die stetige Normalverteilung mit Standardisierung, zentralem Schwankungsintervall und dem zentralen Grenzwertsatz als Brücke zwischen beiden. Diese Konzepte sind das Fundament für alle späteren Schätz- und Testverfahren.",
+  "order": 1,
+  "estMinutes": 90,
+  "sections": [
+    {
+      "id": "bernoulli",
+      "heading": "1. Das Bernoulli-Experiment – der einfachste Zufallsversuch",
+      "body": "## Was ist ein Bernoulli-Experiment?\n\nStell dir vor, du wirfst eine Münze. Es gibt genau **zwei mögliche Ausgänge**: Kopf (Erfolg) oder Zahl (Misserfolg). Ein Bernoulli-Experiment ist genau das: ein Zufallsversuch mit **nur zwei möglichen Ergebnissen**.\n\nWir nennen sie klassischerweise **Erfolg** (mit Wahrscheinlichkeit $p$) und **Misserfolg** (mit Wahrscheinlichkeit $1-p$). Dabei gilt immer $0 \\le p \\le 1$.\n\n## Die Bernoulli-Zufallsvariable\n\nEiner Zufallsvariable $X$ ordnen wir zu:\n- $X = 1$, wenn der Versuch ein **Erfolg** ist (Wahrscheinlichkeit $p$)\n- $X = 0$, wenn der Versuch ein **Misserfolg** ist (Wahrscheinlichkeit $1-p$)\n\nMan schreibt: $X \\sim BE(p)$\n\nDie **Wahrscheinlichkeitsfunktion** lautet:\n$$P(X = x) = \\begin{cases} 1 - p & \\text{falls } x = 0 \\\\ p & \\text{falls } x = 1 \\end{cases}$$\n\n## Erwartungswert und Varianz\n\nDer **Erwartungswert** $E(X) = p$ sagt uns: Im Durchschnitt erwarten wir einen Wert gleich der Erfolgswahrscheinlichkeit.\n\nDie **Varianz** $\\text{Var}(X) = p(1-p)$ misst die Streuung. Sie ist maximal bei $p = 0{,}5$ (höchste Unsicherheit) und null bei $p = 0$ oder $p = 1$ (kein Zufall).\n\n## Wozu brauchen wir das?\n\nDas Bernoulli-Experiment ist der **Baustein** für die Binomialverteilung: Wenn wir das Experiment $n$-mal unabhängig wiederholen, ergibt sich eine Binomialverteilung.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Bernoulli-Experiment",
+          "body": "Ein Zufallsversuch mit genau zwei Ausgängen heißt Bernoulli-Experiment. Die zugehörige Zufallsvariable $X \\sim BE(p)$ nimmt den Wert 1 (Erfolg) mit Wahrscheinlichkeit $p$ und den Wert 0 (Misserfolg) mit Wahrscheinlichkeit $1-p$ an."
+        },
+        {
+          "kind": "formel",
+          "title": "Kennzahlen der Bernoulli-Verteilung",
+          "body": "$E(X) = p \\qquad \\text{Var}(X) = p(1-p)$"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: Qualitätskontrolle",
+          "body": "Ein Produkt ist mit Wahrscheinlichkeit $p = 0{,}03$ defekt. Wird ein Produkt zufällig entnommen, gilt: $X \\sim BE(0{,}03)$. $E(X) = 0{,}03$, d.h. im Durchschnitt ist 3% der Produkte defekt. $\\text{Var}(X) = 0{,}03 \\cdot 0{,}97 = 0{,}0291$."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-bernoulli",
+          "title": "Wahrscheinlichkeitsverteilung der Bernoulli-Verteilung",
+          "caption": "Die Bernoulli-Verteilung hat nur zwei mögliche Werte: 0 (Misserfolg) und 1 (Erfolg). Bei p=0,3 ist Misserfolg wahrscheinlicher.",
+          "dist": "binomial",
+          "params": { "n": 1, "p": 0.3 },
+          "markers": [{ "x": 0, "label": "0 (Misserfolg)" }, { "x": 1, "label": "1 (Erfolg)" }]
+        }
+      ]
+    },
+    {
+      "id": "binomial",
+      "heading": "2. Die Binomialverteilung – mehrere Versuche zählen",
+      "body": "## Was ist die Binomialverteilung?\n\nStell dir vor, du führst dasselbe Bernoulli-Experiment **$n$-mal unabhängig** durch – immer mit derselben Erfolgswahrscheinlichkeit $p$. Die Binomialverteilung beschreibt dann die **Anzahl der Erfolge** bei diesen $n$ Versuchen.\n\n**Schreibweise:** $X \\sim B(n, p)$\n\n## Intuition\n\nWenn du 10 Mal würfelst und zählst, wie oft eine Sechs fällt: Das ist Binomialverteilung! Jeder Wurf ist ein unabhängiges Bernoulli-Experiment mit $p = 1/6$.\n\n## Die Wahrscheinlichkeitsfunktion (WF)\n\nWie groß ist die Wahrscheinlichkeit, **genau $x$ Erfolge** bei $n$ Versuchen zu erzielen?\n\n$$f(x) = P(X = x) = \\binom{n}{x} p^x (1-p)^{n-x}, \\quad x = 0, 1, \\ldots, n$$\n\n**Was bedeuten die Teile?**\n- $\\binom{n}{x} = \\dfrac{n!}{x!(n-x)!}$: Der **Binomialkoeffizient** – er zählt, auf wie viele Arten man $x$ Erfolge aus $n$ Versuchen auswählen kann\n- $p^x$: Wahrscheinlichkeit für genau $x$ Erfolge\n- $(1-p)^{n-x}$: Wahrscheinlichkeit für genau $n-x$ Misserfolge\n\n**Durchgerechnetes Beispiel:** $X \\sim B(5, 0{,}3)$ — Wie groß ist $P(X = 2)$?\n$$P(X=2) = \\binom{5}{2} \\cdot 0{,}3^2 \\cdot 0{,}7^3 = 10 \\cdot 0{,}09 \\cdot 0{,}343 = 0{,}3087$$\n\n## Die Verteilungsfunktion (VF)\n\nDie kumulierte Wahrscheinlichkeit **bis einschließlich** $x$:\n$$F(x) = P(X \\le x) = \\sum_{i=0}^{x} \\binom{n}{i} p^i (1-p)^{n-i}$$\n\n## Erwartungswert und Varianz\n\n$$E(X) = np \\qquad \\text{Var}(X) = np(1-p)$$\n\n**Intuition:** Bei $n=10$ Versuchen und $p=0{,}3$ erwarten wir im Schnitt $E(X) = 10 \\cdot 0{,}3 = 3$ Erfolge.\n\n## Ablesen aus der Binomialtabelle (Klausur!)\n\nIn der Klausur gibt es eine **Binomialtabelle** für ausgewählte $n$ und $p \\le 0{,}5$. Was wenn $p > 0{,}5$? Es gibt eine elegante Symmetrie-Formel:\n\n$$f(x; n, p) = f(n-x; n, 1-p)$$\n$$F(x; n, p) = 1 - F(n-x-1; n, 1-p)$$\n\n**Beispiel:** $P(X \\le 7; n=10, p=0{,}8)$ — da $p = 0{,}8 > 0{,}5$ gilt:\n$$P(X \\le 7; 10; 0{,}8) = 1 - F(10-7-1; 10; 0{,}2) = 1 - F(2; 10; 0{,}2)$$\n\nDiesen Wert kann man dann direkt aus der Tabelle ablesen.\n\n## Anteilswert $\\hat{p}$\n\nDer **Anteilswert** $\\hat{p} = \\frac{X}{n}$ schätzt die Erfolgswahrscheinlichkeit aus einer Stichprobe:\n$$E(\\hat{p}) = p \\qquad \\text{Var}(\\hat{p}) = \\frac{p(1-p)}{n}$$\n\n## Additivitätseigenschaft\n\nWenn $X_1 \\sim B(n_1, p)$ und $X_2 \\sim B(n_2, p)$ **unabhängig** sind (gleiches $p$!), dann:\n$$X_1 + X_2 \\sim B(n_1 + n_2, p)$$",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Voraussetzungen der Binomialverteilung",
+          "body": "1. **Feste Anzahl** $n$ von Versuchen\n2. Jeder Versuch hat genau **zwei Ausgänge** (Erfolg/Misserfolg)\n3. **Dieselbe** Erfolgswahrscheinlichkeit $p$ bei jedem Versuch\n4. Versuche sind **unabhängig** voneinander"
+        },
+        {
+          "kind": "tip",
+          "title": "Tabellen-Trick für p > 0,5",
+          "body": "Die Klausurtabelle enthält nur $p \\le 0{,}5$. Für $p > 0{,}5$: \"Erfolge in Misserfolge umdeuten\" und $p' = 1-p$ verwenden.\n\n$P(X \\le x; n, p) = 1 - F(n-x-1; n, 1-p)$\n\n$P(X = x; n, p) = P(X = n-x; n, 1-p)$"
+        },
+        {
+          "kind": "formel",
+          "title": "Binomialverteilung — Zusammenfassung",
+          "body": "$X \\sim B(n,p)$\n\n$P(X=x) = \\binom{n}{x}p^x(1-p)^{n-x}$\n\n$E(X) = np \\quad \\text{Var}(X) = np(1-p)$"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-binom-05",
+          "title": "Binomialverteilung B(10; 0,5) — symmetrisch",
+          "caption": "Bei p=0,5 ist die Verteilung perfekt symmetrisch um den Erwartungswert np=5.",
+          "dist": "binomial",
+          "params": { "n": 10, "p": 0.5 },
+          "markers": [{ "x": 5, "label": "E(X)=5" }]
+        },
+        {
+          "kind": "distribution",
+          "id": "fig-binom-02",
+          "title": "Binomialverteilung B(10; 0,2) — rechtsschief",
+          "caption": "Bei p=0,2 ist die Verteilung rechtsschief: kleine Anzahlen von Erfolgen sind wahrscheinlicher. Erwartungswert np=2.",
+          "dist": "binomial",
+          "params": { "n": 10, "p": 0.2 },
+          "markers": [{ "x": 2, "label": "E(X)=2" }]
+        }
+      ]
+    },
+    {
+      "id": "normalverteilung",
+      "heading": "3. Die Normalverteilung – die Glockenkurve",
+      "body": "## Was ist die Normalverteilung?\n\nDie Normalverteilung ist die wichtigste Verteilung der Statistik. Sie modelliert Zufallsgrößen, die durch **viele unabhängige, kleine Einflüsse** entstehen: Körpergrößen, Messabweichungen, Prüfungsnoten, Börsenkurse.\n\n**Schreibweise:** $X \\sim N(\\mu, \\sigma^2)$, wobei:\n- $\\mu$ = **Erwartungswert** (Mittelpunkt der Glocke, Lage)\n- $\\sigma^2$ = **Varianz** ($\\sigma$ = Standardabweichung, Breite der Glocke)\n\n## Die Dichtefunktion\n\n$$f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\!\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right), \\quad x \\in \\mathbb{R}$$\n\n**Wichtige Eigenschaften:**\n- **Symmetrie** um $\\mu$: Die Kurve ist links und rechts von $\\mu$ identisch\n- **Wendepunkte** bei $\\mu - \\sigma$ und $\\mu + \\sigma$\n- Die Glocke ist **umso flacher und breiter**, je größer $\\sigma$ ist\n- **Gesamtfläche** unter der Kurve = 1 (Normierung)\n\n## Die Normalverteilung ist stetig!\n\nDa $X$ stetig ist, hat jeder einzelne Wert die Wahrscheinlichkeit null:\n$$P(X = x) = 0 \\quad \\text{für alle } x$$\n\nWir berechnen immer **Intervallwahrscheinlichkeiten**:\n$$P(a \\le X \\le b) = \\int_a^b f(x)\\,dx$$\n\nDiese Fläche unter der Glockenkurve kann man nicht analytisch berechnen, sondern liest sie **aus der Tabelle** ab.\n\n## Standardisierung — der wichtigste Trick!\n\nEs gibt unendlich viele Normalverteilungen (verschiedene $\\mu$ und $\\sigma$). Deshalb rechnet man alles auf **eine einzige** Normalverteilung zurück: die **Standardnormalverteilung** $N(0, 1)$.\n\nDer Trick heißt **Standardisierung** (oder Z-Transformation):\n\n$$Z = \\frac{X - \\mu}{\\sigma} \\sim N(0,1)$$\n\n**Was macht das?** Es verschiebt die Verteilung auf Mittelwert 0 und staucht sie auf Standardabweichung 1.\n\n## Wahrscheinlichkeiten berechnen (Schritt für Schritt)\n\nGesucht: $P(a \\le X \\le b)$ mit $X \\sim N(\\mu, \\sigma^2)$\n\n**Schritt 1:** Standardisieren:\n$$P(a \\le X \\le b) = P\\!\\left(\\frac{a-\\mu}{\\sigma} \\le Z \\le \\frac{b-\\mu}{\\sigma}\\right) = \\Phi\\!\\left(\\frac{b-\\mu}{\\sigma}\\right) - \\Phi\\!\\left(\\frac{a-\\mu}{\\sigma}\\right)$$\n\n**Schritt 2:** Werte $\\Phi(z)$ aus der **Normalverteilungstabelle** ablesen (gibt $P(Z \\le z)$)\n\n**Symmetrieregel:** Da die Standardnormalverteilung symmetrisch um 0 ist, gilt:\n$$\\Phi(-z) = 1 - \\Phi(z)$$\n\nDas ist extrem nützlich, weil viele Tabellen nur positive $z$-Werte auflisten!\n\n## Quantile ablesen (Umkehraufgabe)\n\nManchmal kennt man die Wahrscheinlichkeit und sucht $x$. Das **$w$-Quantil** $x_w$ erfüllt $P(X \\le x_w) = w$.\n\n**Vorgehen:** Zuerst das Standardnormalquantil $z_w$ aus der Tabelle ablesen, dann:\n$$x_w = \\mu + z_w \\cdot \\sigma$$\n\n**Durchgerechnetes Beispiel:** $X \\sim N(60, 16)$, also $\\mu=60$, $\\sigma=4$.\n\nGesucht: $P(X \\le 62{,}4)$\n$$P(X \\le 62{,}4) = \\Phi\\!\\left(\\frac{62{,}4 - 60}{4}\\right) = \\Phi(0{,}6) \\approx 0{,}7257$$\n\nGesucht: $P(X > 59{,}6)$\n$$P(X > 59{,}6) = 1 - \\Phi\\!\\left(\\frac{59{,}6-60}{4}\\right) = 1 - \\Phi(-0{,}1) = 1 - (1-\\Phi(0{,}1)) = \\Phi(0{,}1) \\approx 0{,}5398$$\n\nGesucht: $P(50{,}2 \\le X \\le 58{,}6)$\n$$= \\Phi\\!\\left(\\frac{58{,}6-60}{4}\\right) - \\Phi\\!\\left(\\frac{50{,}2-60}{4}\\right) = \\Phi(-0{,}35) - \\Phi(-2{,}45)$$\n$$= (1-\\Phi(0{,}35)) - (1-\\Phi(2{,}45)) = \\Phi(2{,}45) - \\Phi(0{,}35) \\approx 0{,}9929 - 0{,}6368 = 0{,}3561$$\n\n## Linearkombinationen\n\nNormalverteilungen sind stabil unter linearen Transformationen:\n- $Y = aX + b \\sim N(a\\mu + b,\\; a^2 \\sigma^2)$\n- $X_1 + X_2 \\sim N(\\mu_1 + \\mu_2,\\; \\sigma_1^2 + \\sigma_2^2)$ (bei Unabhängigkeit)",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die Standardisierungsformel — auswendig lernen!",
+          "body": "$$Z = \\frac{X - \\mu}{\\sigma} \\sim N(0,1)$$\n\n$$P(X \\le x) = \\Phi\\!\\left(\\frac{x-\\mu}{\\sigma}\\right)$$\n\n$$\\Phi(-z) = 1 - \\Phi(z) \\quad \\text{(Symmetrieregel)}$$"
+        },
+        {
+          "kind": "tip",
+          "title": "Ablesen aus der Normalverteilungstabelle (Klausur)",
+          "body": "Die Tabelle gibt $\\Phi(z) = P(Z \\le z)$ für $z \\ge 0$.\n\n**Für negative z:** Nutze $\\Phi(-z) = 1-\\Phi(z)$\n\n**Quantile:** Wenn $\\Phi(z_w) = w$, lies $z_w$ direkt aus der Quantiltabelle ab. Gängige Werte:\n- $z_{0{,}90} = 1{,}282$\n- $z_{0{,}95} = 1{,}645$\n- $z_{0{,}975} = 1{,}960$\n- $z_{0{,}995} = 2{,}576$"
+        },
+        {
+          "kind": "definition",
+          "title": "Standardnormalverteilung N(0,1)",
+          "body": "Die Standardnormalverteilung hat $\\mu=0$ und $\\sigma^2=1$. Ihre Verteilungsfunktion heißt $\\Phi(z)$. Jede Normalverteilung lässt sich durch die Transformation $Z = (X-\\mu)/\\sigma$ in eine Standardnormalverteilung umrechnen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-normal-standard",
+          "title": "Standardnormalverteilung N(0,1)",
+          "caption": "Die Standardnormalverteilung ist symmetrisch um 0. Die Fläche unter der gesamten Kurve beträgt 1. Schattiert: P(-1,96 ≤ Z ≤ 1,96) ≈ 0,95.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "from": -1.96, "to": 1.96 },
+          "markers": [{ "x": -1.96, "label": "-1,96" }, { "x": 1.96, "label": "1,96" }]
+        },
+        {
+          "kind": "distribution",
+          "id": "fig-normal-mu60-sigma4",
+          "title": "Normalverteilung N(60, 16) — Beispiel Aufgabe 1",
+          "caption": "X~N(60,16): Mittelwert μ=60, Standardabweichung σ=4. Schattiert: P(X ≤ 62,4) ≈ 0,726.",
+          "dist": "normal",
+          "params": { "mu": 60, "sigma": 4 },
+          "shade": { "to": 62.4, "tail": "left" },
+          "markers": [{ "x": 60, "label": "μ=60" }, { "x": 62.4, "label": "62,4" }]
+        },
+        {
+          "kind": "distribution",
+          "id": "fig-normal-sigma-vergleich",
+          "title": "Einfluss von σ auf die Normalverteilung (μ=0)",
+          "caption": "Größeres σ bedeutet eine breitere, flachere Glocke. Die Fläche unter jeder Kurve ist immer gleich 1.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 }
+        }
+      ]
+    },
+    {
+      "id": "schwankungsintervall",
+      "heading": "4. Das zentrale Schwankungsintervall",
+      "body": "## Was ist ein zentrales Schwankungsintervall?\n\nEin **zentrales Schwankungsintervall** ist ein Intervall, das **symmetrisch um den Erwartungswert $\\mu$** liegt und eine bestimmte Wahrscheinlichkeit überdeckt. Es beantwortet die Frage: 'In welchem Bereich liegen z.B. 90% aller Realisierungen von $X$?'\n\n## Das k-fache zentrale Schwankungsintervall\n\nDas **k-fache** zentrale Schwankungsintervall ist:\n$$[\\mu - k\\sigma \\;; \\; \\mu + k\\sigma]$$\n\nDie zugehörige Wahrscheinlichkeit ist parameterunabhängig und hängt nur von $k$ ab:\n$$P(\\mu - k\\sigma \\le X \\le \\mu + k\\sigma) = 2\\Phi(k) - 1$$\n\n**Besondere Werte (die 68-95-99,7-Regel):**\n\n| $k$ | Wahrscheinlichkeit |\n|-----|-------------------|\n| 1 | $2\\Phi(1)-1 = 2 \\cdot 0{,}8413 - 1 = 0{,}6827 \\approx 68{,}3\\%$ |\n| 2 | $2\\Phi(2)-1 = 2 \\cdot 0{,}9772 - 1 = 0{,}9545 \\approx 95{,}4\\%$ |\n| 3 | $2\\Phi(3)-1 = 2 \\cdot 0{,}9987 - 1 = 0{,}9973 \\approx 99{,}7\\%$ |\n\n## Umkehraufgabe: Grenzen bei gegebener Wahrscheinlichkeit\n\nGesucht sind $x_1$ und $x_2$ so, dass $P(x_1 \\le X \\le x_2) = 1-\\alpha$ (z.B. $0{,}9$):\n\n**Schritt 1:** Da das Intervall zentral ist: jedes Ende hat $\\alpha/2$ Restwahrscheinlichkeit.\n$$x_1 = \\mu - z_{1-\\alpha/2} \\cdot \\sigma, \\qquad x_2 = \\mu + z_{1-\\alpha/2} \\cdot \\sigma$$\n\n**Schritt 2:** Quantil ablesen: $z_{1-\\alpha/2} = z_{0{,}95} = 1{,}645$ (für $\\alpha = 0{,}1$, also $1-\\alpha=0{,}9$).\n\n**Durchgerechnetes Beispiel:** $X \\sim N(60, 16)$, $\\sigma = 4$. Zentrales Intervall mit $P = 0{,}9$:\n$$x_1 = 60 - 1{,}645 \\cdot 4 = 60 - 6{,}58 = 53{,}42$$\n$$x_2 = 60 + 1{,}645 \\cdot 4 = 60 + 6{,}58 = 66{,}58$$\n\nProbe: $2\\Phi(1{,}645) - 1 = 2 \\cdot 0{,}95 - 1 = 0{,}9$ ✓\n\n**2-faches Schwankungsintervall** ($k=2$):\n$$x_1 = 60 - 2 \\cdot 4 = 52, \\qquad x_2 = 60 + 2 \\cdot 4 = 68$$\n$$P(52 \\le X \\le 68) = 2\\Phi(2) - 1 \\approx 0{,}9545$$",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Zentrales Schwankungsintervall — Formeln",
+          "body": "**Grenzen:** $x_{1/2} = \\mu \\pm z_{1-\\alpha/2} \\cdot \\sigma$\n\n**Wahrscheinlichkeit für k-faches Intervall:** $P(\\mu-k\\sigma \\le X \\le \\mu+k\\sigma) = 2\\Phi(k)-1$\n\n**68-95-99,7-Regel:** $k=1 \\to 68\\%$, $k=2 \\to 95\\%$, $k=3 \\to 99{,}7\\%$"
+        },
+        {
+          "kind": "info",
+          "title": "Zentral bedeutet: symmetrisch um μ",
+          "body": "Das zentrale Schwankungsintervall schneidet auf **beiden Seiten** gleich viel Wahrscheinlichkeit ab ($\\alpha/2$ links, $\\alpha/2$ rechts). Dadurch ist es symmetrisch um $\\mu$."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-schwankungsintervall",
+          "title": "Zentrales Schwankungsintervall (95%)",
+          "caption": "Das 95%-Schwankungsintervall liegt bei μ ± 1,96σ. Je 2,5% der Wahrscheinlichkeit liegt in den Randbereichen (hellrot schattiert).",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "from": -1.96, "to": 1.96 },
+          "markers": [
+            { "x": -1.96, "label": "μ−1,96σ" },
+            { "x": 0, "label": "μ" },
+            { "x": 1.96, "label": "μ+1,96σ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grenzwertsaetze",
+      "heading": "5. Zentraler Grenzwertsatz und Normalapproximation",
+      "body": "## Das Kernprinzip: Warum ist die Normalverteilung so wichtig?\n\nDie Normalverteilung ist nicht nur ein hübsches Modell. Der **Zentrale Grenzwertsatz (ZGWS)** erklärt, warum sie in der Natur und Praxis so häufig vorkommt.\n\n## Der Zentrale Grenzwertsatz (ZGWS)\n\n**Gegeben:** $X_1, X_2, \\ldots, X_n$ sind **unabhängig und identisch verteilt** (i.i.d.) mit Erwartungswert $\\mu$ und Varianz $\\sigma^2$ (egal welche Verteilung!).\n\n**Dann gilt:** Das standardisierte Stichprobenmittel $\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^n X_i$ konvergiert für $n \\to \\infty$ in Verteilung gegen $N(0,1)$:\n\n$$\\lim_{n\\to\\infty} P\\!\\left(\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\le x\\right) = \\Phi(x)$$\n\n**Vereinfacht:** Bei großem $n$ gilt näherungsweise $\\bar{X}_n \\sim N\\!\\left(\\mu, \\dfrac{\\sigma^2}{n}\\right)$.\n\n**Faustformel:** Ab $n \\ge 30$ ist die Approximation in der Regel gut genug.\n\n## Der Satz von de Moivre: Binomial → Normal\n\nEin wichtiger Spezialfall des ZGWS: Die **Binomialverteilung** lässt sich für große $n$ durch die Normalverteilung approximieren.\n\n$$X \\sim B(n, p) \\approx N(np, np(1-p)) \\quad \\text{für große } n$$\n\nDie **standardisierte** Binomialverteilung nähert sich der Standardnormalverteilung:\n$$\\frac{X - np}{\\sqrt{np(1-p)}} \\xrightarrow{d} N(0,1)$$\n\n**Faustregeln für die Approximation (alle müssen erfüllt sein!):**\n- $n \\ge 30$\n- $np \\ge 10$\n- $n(1-p) \\ge 10$\n\n**Wahrscheinlichkeit mit Normalapproximation berechnen:**\n$$P(X > k) \\approx 1 - \\Phi\\!\\left(\\frac{k - np}{\\sqrt{np(1-p)}}\\right)$$\n\n**Zentrales Schwankungsintervall bei Binomialapproximation:**\n$$[np - z_{1-\\alpha/2}\\sqrt{np(1-p)}\\;;\\; np + z_{1-\\alpha/2}\\sqrt{np(1-p)}]$$\n\n## Durchgerechnetes Beispiel: Vertreter (Aufgabe 4b)\n\nEin Vertreter hat $p = 0{,}2$ Abschlussquote, $n = 50$ Besuche. Gesucht: $P(X > 12)$.\n\n**Prüfe Faustregeln:** $n=50 \\ge 30$ ✓, $np = 10 \\ge 10$ ✓, $n(1-p) = 40 \\ge 10$ ✓\n\n**Approximation:** $X \\approx N(np, np(1-p)) = N(10, 8)$, also $\\sigma = \\sqrt{8} \\approx 2{,}828$\n\n$$P(X > 12) \\approx 1 - \\Phi\\!\\left(\\frac{12 - 10}{\\sqrt{8}}\\right) = 1 - \\Phi(0{,}707) \\approx 1 - 0{,}7602 = 0{,}2398$$\n\n## Warum funktioniert das?\n\nIntuition: Die Binomialverteilung entsteht durch **Summieren** vieler unabhängiger Bernoulli-Versuche. Nach dem ZGWS konvergiert jede solche Summe gegen die Normalverteilung — das ist der Grundgedanke!",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Zentraler Grenzwertsatz — das Wichtigste",
+          "body": "Für i.i.d. Zufallsvariablen $X_1,\\ldots,X_n$ mit $E(X_i)=\\mu$, $\\text{Var}(X_i)=\\sigma^2$ gilt:\n\n$$\\bar{X}_n \\approx N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right) \\quad \\text{für } n \\ge 30$$\n\nDas Stichprobenmittel ist immer annähernd normalverteilt, egal wie die Ausgangsdaten verteilt sind!"
+        },
+        {
+          "kind": "merksatz",
+          "title": "Normalapproximation der Binomialverteilung",
+          "body": "Wenn $n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$:\n\n$$X \\sim B(n,p) \\approx N(np, np(1-p))$$\n\n$$P(X > k) \\approx 1 - \\Phi\\!\\left(\\frac{k-np}{\\sqrt{np(1-p)}}\\right)$$"
+        },
+        {
+          "kind": "warning",
+          "title": "Faustregeln nicht vergessen!",
+          "body": "Die Normalapproximation der Binomialverteilung ist nur gültig, wenn **alle drei** Bedingungen erfüllt sind:\n- $n \\ge 30$\n- $np \\ge 10$\n- $n(1-p) \\ge 10$\n\nBei kleinen $n$ oder extremen $p$ (nahe 0 oder 1) muss man exakt rechnen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-binom-normal-approx",
+          "title": "Normalapproximation der Binomialverteilung B(50; 0,2)",
+          "caption": "Die Binomialverteilung B(50; 0,2) (Balken) wird durch N(10; 8) (Kurve) gut approximiert. Die Faustregeln sind erfüllt: n=50≥30, np=10≥10, n(1-p)=40≥10.",
+          "dist": "normal",
+          "params": { "mu": 10, "sigma": 2.828 },
+          "markers": [{ "x": 10, "label": "np=10" }, { "x": 12, "label": "k=12" }]
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung-und-tabellen",
+      "heading": "6. Übersicht: Verteilungen und ihre Verwendung",
+      "body": "## Wann welche Verteilung?\n\nHier ist eine kompakte Entscheidungshilfe für die Klausur:\n\n| Situation | Verteilung | Formel |\n|-----------|-----------|--------|\n| Ja/Nein-Versuch | $BE(p)$ | $P(X=1)=p$ |\n| Anzahl Erfolge bei $n$ Versuchen, kleines $n$ | $B(n,p)$ | $\\binom{n}{x}p^x(1-p)^{n-x}$ |\n| Anzahl Erfolge, großes $n$ ($np\\ge10$) | Normalapprox. | $N(np, np(1-p))$ |\n| Stetige Größe mit glockenförmiger Verteilung | $N(\\mu,\\sigma^2)$ | Standardisierung |\n\n## Wichtige Standardnormalquantile (Klausur-Cheatsheet)\n\n| $w$ | $z_w = \\Phi^{-1}(w)$ | Verwendung |\n|-----|-------------------|-----------|\n| 0,90 | 1,282 | Einseitige Tests / Intervalle, $\\alpha=0{,}1$ |\n| 0,95 | 1,645 | Einseitig $\\alpha=0{,}05$; zweiseitig 90% |\n| 0,975 | 1,960 | Zweiseitig $\\alpha=0{,}05$ (95%-KI) |\n| 0,995 | 2,576 | Zweiseitig $\\alpha=0{,}01$ (99%-KI) |\n\n## Schrittweise Vorgehensweise für Normalverteilungsaufgaben\n\n**Schritt 1:** Parameter $\\mu$ und $\\sigma^2$ identifizieren, $\\sigma = \\sqrt{\\sigma^2}$ berechnen\n\n**Schritt 2:** Gesucht ist $P(X \\le x)$, $P(X > x)$ oder $P(a \\le X \\le b)$ — alles auf $\\Phi$ zurückführen\n\n**Schritt 3:** Standardisieren: $z = (x-\\mu)/\\sigma$\n\n**Schritt 4:** Tabelle ablesen; für negative $z$: Symmetrieregel $\\Phi(-z) = 1-\\Phi(z)$\n\n**Schritt 5:** Umkehraufgaben (gesuchtes $x$): zuerst $z_w$ aus Tabelle, dann $x = \\mu + z_w \\cdot \\sigma$",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "R-Code für Verteilungsberechnungen",
+          "body": "```r\n# Normalverteilung N(60, 16), sigma=4\npnorm(62.4, mean=60, sd=4)          # P(X <= 62.4)\n1 - pnorm(59.6, mean=60, sd=4)      # P(X > 59.6)\npnorm(58.6, mean=60, sd=4) - pnorm(50.2, mean=60, sd=4)  # P(50.2 <= X <= 58.6)\n\n# Quantil: x mit P(X <= x) = 0.7\nqnorm(0.7, mean=60, sd=4)\n\n# Binomialverteilung B(20, 0.5)\ndbinom(3, size=20, prob=0.5)        # P(X=3)\npbinom(12, size=20, prob=0.5) - pbinom(9, size=20, prob=0.5)  # P(10<=X<=12)\n```"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-quantile",
+          "title": "Wichtige Quantile der Standardnormalverteilung",
+          "headers": ["Wahrscheinlichkeit w", "Quantil z_w", "Typische Verwendung"],
+          "rows": [
+            ["0,80", "0,842", "Schwankungsintervall 60%"],
+            ["0,90", "1,282", "90%-Niveau, einseitig α=0,10"],
+            ["0,95", "1,645", "95%-Niveau einseitig, zweiseitig 90%"],
+            ["0,975", "1,960", "Zweiseitig α=0,05 (Standard-KI)"],
+            ["0,99", "2,326", "99%-Niveau einseitig"],
+            ["0,995", "2,576", "Zweiseitig α=0,01"]
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "spez-fc-1",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wie lautet die Wahrscheinlichkeitsfunktion der Binomialverteilung $X \\sim B(n,p)$?",
+      "back": "$$P(X=x) = \\binom{n}{x} p^x (1-p)^{n-x}, \\quad x=0,1,\\ldots,n$$\n\nErwartungswert: $E(X) = np$\n\nVarianz: $\\text{Var}(X) = np(1-p)$"
+    },
+    {
+      "id": "spez-fc-2",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wie standardisiert man eine normalverteilte Zufallsvariable $X \\sim N(\\mu, \\sigma^2)$?",
+      "back": "$$Z = \\frac{X - \\mu}{\\sigma} \\sim N(0,1)$$\n\nDamit gilt:\n$$P(X \\le x) = \\Phi\\!\\left(\\frac{x-\\mu}{\\sigma}\\right)$$\n\nUnd die Symmetrieregel: $\\Phi(-z) = 1 - \\Phi(z)$"
+    },
+    {
+      "id": "spez-fc-3",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Was ist der Zentrale Grenzwertsatz (ZGWS)? Welche Faustformel gilt?",
+      "back": "Für $n$ i.i.d. Zufallsvariablen mit $E(X_i)=\\mu$, $\\text{Var}(X_i)=\\sigma^2$ gilt:\n$$\\bar{X}_n \\approx N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right) \\quad \\text{für } n \\ge 30$$\n\nDas Stichprobenmittel ist annähernd normalverteilt — egal welche Ausgangsverteilung!"
+    },
+    {
+      "id": "spez-fc-4",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wie berechnet man die Grenzen des zentralen Schwankungsintervalls mit Wahrscheinlichkeit $1-\\alpha$?",
+      "back": "$$x_1 = \\mu - z_{1-\\alpha/2} \\cdot \\sigma, \\qquad x_2 = \\mu + z_{1-\\alpha/2} \\cdot \\sigma$$\n\nBeim k-fachen Intervall $[\\mu-k\\sigma; \\mu+k\\sigma]$:\n$$P = 2\\Phi(k)-1$$\n\nSpeziell: $k=1 \\to 68\\%$, $k=2 \\to 95\\%$, $k=3 \\to 99{,}7\\%$"
+    },
+    {
+      "id": "spez-fc-5",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wann gilt die Normalapproximation der Binomialverteilung und wie lautet sie?",
+      "back": "**Faustregeln:** $n \\ge 30$, $np \\ge 10$, $n(1-p) \\ge 10$\n\n$$X \\sim B(n,p) \\approx N(np, np(1-p))$$\n\nD.h. man berechnet $P(X > k)$ näherungsweise als:\n$$1 - \\Phi\\!\\left(\\frac{k - np}{\\sqrt{np(1-p)}}\\right)$$"
+    },
+    {
+      "id": "spez-fc-6",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wie liest man $P(X \\le x; n, p)$ aus der Tabelle ab, wenn $p > 0{,}5$?",
+      "back": "Die Tabelle enthält nur $p \\le 0{,}5$. Symmetrieregel:\n\n$$F(x; n, p) = 1 - F(n-x-1; n, 1-p)$$\n\n$$f(x; n, p) = f(n-x; n, 1-p)$$\n\nBsp.: $P(X \\le 7; 10; 0{,}8) = 1 - F(2; 10; 0{,}2)$"
+    },
+    {
+      "id": "spez-fc-7",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wie lautet die Umkehrformel, um aus einer gegebenen Wahrscheinlichkeit $w$ das Quantil $x_w$ zu berechnen?",
+      "back": "1. Standardnormalquantil $z_w$ aus der Tabelle ablesen: $\\Phi(z_w) = w$\n2. Zurückrechnen auf die Originalverteilung:\n$$x_w = \\mu + z_w \\cdot \\sigma$$\n\nBsp.: $X \\sim N(60, 16)$, $w=0{,}9$: $z_{0{,}9} = 1{,}282$ → $x_{0{,}9} = 60 + 1{,}282 \\cdot 4 = 65{,}13$"
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "spez-q1",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "leicht",
+      "prompt": "Eine Zufallsvariable $X$ ist binomialverteilt mit $n=10$ und $p=0{,}4$. Welcher Erwartungswert und welche Varianz sind richtig?",
+      "options": [
+        "$E(X) = 4$, $\\text{Var}(X) = 2{,}4$",
+        "$E(X) = 4$, $\\text{Var}(X) = 4$",
+        "$E(X) = 0{,}4$, $\\text{Var}(X) = 2{,}4$",
+        "$E(X) = 10$, $\\text{Var}(X) = 0{,}4$"
+      ],
+      "correct": [0],
+      "explanation": "$E(X) = np = 10 \\cdot 0{,}4 = 4$ und $\\text{Var}(X) = np(1-p) = 10 \\cdot 0{,}4 \\cdot 0{,}6 = 2{,}4$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "spez-q2",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "leicht",
+      "prompt": "Für die Standardnormalverteilung gilt: $\\Phi(-1{,}5) = 1 - \\Phi(1{,}5)$.",
+      "answer": true,
+      "explanation": "Ja, das ist die Symmetrieregel der Standardnormalverteilung: $\\Phi(-z) = 1-\\Phi(z)$ für alle $z$. Da die Dichte symmetrisch um 0 ist, gilt diese Beziehung exakt."
+    },
+    {
+      "kind": "numeric",
+      "id": "spez-q3",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Sei $X \\sim N(60, 16)$ (also $\\mu=60$, $\\sigma^2=16$, $\\sigma=4$). Berechnen Sie $P(X \\le 62{,}4)$ mithilfe der Standardnormalverteilung. Runden Sie auf 4 Dezimalstellen. (Hinweis: $\\Phi(0{,}6) = 0{,}7257$)",
+      "answer": 0.7257,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "Standardisierung: $z = (62{,}4 - 60)/4 = 2{,}4/4 = 0{,}6$. Also $P(X \\le 62{,}4) = \\Phi(0{,}6) \\approx 0{,}7257$."
+    },
+    {
+      "kind": "numeric",
+      "id": "spez-q4",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Ein Vertreter schließt bei 20% aller Besuche einen Vertrag ab ($p=0{,}2$). Bei $n=50$ Besuchen: Wie groß ist der Erwartungswert der Anzahl abgeschlossener Verträge?",
+      "answer": 10,
+      "tolerance": 0.01,
+      "unit": "Verträge",
+      "explanation": "$E(X) = np = 50 \\cdot 0{,}2 = 10$ Verträge."
+    },
+    {
+      "kind": "numeric",
+      "id": "spez-q5",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Sei $X \\sim N(\\mu, \\sigma^2)$. Welche Wahrscheinlichkeit hat das 2-fache zentrale Schwankungsintervall $[\\mu-2\\sigma; \\mu+2\\sigma]$? Berechnen Sie $2\\Phi(2)-1$. ($\\Phi(2) = 0{,}9772$)",
+      "answer": 0.9545,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$P(\\mu-2\\sigma \\le X \\le \\mu+2\\sigma) = 2\\Phi(2)-1 = 2 \\cdot 0{,}9772 - 1 = 0{,}9545 \\approx 95{,}45\\%$."
+    },
+    {
+      "kind": "mc",
+      "id": "spez-q6",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Faustregeln müssen **alle** erfüllt sein, damit die Normalapproximation der Binomialverteilung gilt?",
+      "options": [
+        "$n \\ge 30$, $np \\ge 10$, $n(1-p) \\ge 10$",
+        "$n \\ge 10$, $np \\ge 5$",
+        "$p = 0{,}5$",
+        "$n \\ge 100$"
+      ],
+      "correct": [0],
+      "explanation": "Die korrekten Faustregeln sind: $n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$. Alle drei müssen gleichzeitig erfüllt sein."
+    },
+    {
+      "kind": "truefalse",
+      "id": "spez-q7",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Der Zentrale Grenzwertsatz besagt, dass das Stichprobenmittel $\\bar{X}_n$ auch dann annähernd normalverteilt ist, wenn die einzelnen $X_i$ nicht normalverteilt sind.",
+      "answer": true,
+      "explanation": "Genau das ist die Kernaussage des ZGWS: Egal welche Verteilung die einzelnen $X_i$ haben (solange $\\mu$ und $\\sigma^2$ endlich sind), ist $\\bar{X}_n$ für große $n$ annähernd $N(\\mu, \\sigma^2/n)$ verteilt."
+    },
+    {
+      "kind": "mc",
+      "id": "spez-q8",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "schwer",
+      "prompt": "Sei $X \\sim B(10, 0{,}8)$. Wie berechnet man $P(X = 3)$ mit der Tabelle (die nur $p \\le 0{,}5$ enthält)?",
+      "options": [
+        "$P(X=3; 10; 0{,}8) = P(X=7; 10; 0{,}2)$",
+        "$P(X=3; 10; 0{,}8) = P(X=3; 10; 0{,}2)$",
+        "$P(X=3; 10; 0{,}8) = 1 - P(X=7; 10; 0{,}2)$",
+        "$P(X=3; 10; 0{,}8) = P(X=6; 10; 0{,}2)$"
+      ],
+      "correct": [0],
+      "explanation": "Die Symmetrie-Formel lautet: $f(x; n, p) = f(n-x; n, 1-p)$. Mit $x=3$, $n=10$, $p=0{,}8$: $P(X=3; 10; 0{,}8) = P(X = 10-3; 10; 1-0{,}8) = P(X=7; 10; 0{,}2)$. Diesen Wert kann man direkt aus der Tabelle ablesen."
+    },
+    {
+      "kind": "freetext",
+      "id": "spez-q9",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum die Normalverteilung in der Natur so häufig vorkommt. Was sagt der Zentrale Grenzwertsatz dazu?",
+      "sampleAnswer": "Viele Zufallsgrößen in der Natur entstehen als Summe oder Mittelwert vieler kleiner, unabhängiger Einflüsse. Der Zentrale Grenzwertsatz besagt, dass eine solche Summe unabhängig von der Verteilung der Einzeleinflüsse für große n näherungsweise normalverteilt ist. Körpergröße z.B. wird durch viele Gene und Umweltfaktoren bestimmt — die Summe dieser vielen kleinen, unabhängigen Einflüsse führt zur beobachteten Glockenkurve.",
+      "keywords": ["summe", "unabhängig", "grenzwertsatz", "viele einflüsse", "näherungsweise", "normalverteilt"],
+      "explanation": "Der ZGWS erklärt, warum Normalverteilungen so häufig auftreten: Sobald eine Zufallsgröße durch die Addition vieler kleiner unabhängiger Effekte entsteht, konvergiert ihre Verteilung gegen die Normalverteilung."
+    },
+    {
+      "kind": "mc",
+      "id": "spez-q10",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "leicht",
+      "prompt": "Welche Aussagen über die Normalverteilung $N(\\mu, \\sigma^2)$ sind korrekt? (Mehrfachauswahl möglich)",
+      "options": [
+        "Sie ist symmetrisch um $\\mu$.",
+        "Die Wendepunkte der Dichtefunktion liegen bei $\\mu \\pm \\sigma$.",
+        "Die Fläche unter der Dichtefunktion beträgt genau 1.",
+        "$P(X = \\mu) > 0$"
+      ],
+      "correct": [0, 1, 2],
+      "multiple": true,
+      "explanation": "Aussagen 1, 2 und 3 sind korrekt. Aussage 4 ist falsch: Da die Normalverteilung stetig ist, gilt $P(X=x)=0$ für jeden einzelnen Wert — nur Intervallwahrscheinlichkeiten sind positiv."
+    },
+    {
+      "kind": "numeric",
+      "id": "spez-q11",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "schwer",
+      "prompt": "Sei $X \\sim N(700, 144)$ (Orangensaft-Abfüllanlage: $\\mu=700$ ml, $\\sigma^2=144$, $\\sigma=12$). Welchen Wert muss $\\mu$ annehmen, damit gilt $P(X \\ge 680) = 0{,}995$? (Hinweis: $z_{0{,}995} = 2{,}576$, Ergebnis auf 2 Dezimalstellen)",
+      "answer": 710.91,
+      "tolerance": 0.05,
+      "unit": "ml",
+      "explanation": "Gesucht: $P(X \\ge 680) = 0{,}995$, d.h. $P(X < 680) = 0{,}005$. Standardisierung: $(680-\\mu)/12 = z_{0{,}005} = -z_{0{,}995} = -2{,}576$. Umformen: $680 - \\mu = -2{,}576 \\cdot 12 = -30{,}912$, also $\\mu = 680 + 30{,}912 = 710{,}91$ ml."
+    },
+    {
+      "kind": "truefalse",
+      "id": "spez-q12",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "leicht",
+      "prompt": "Wenn $X_1 \\sim B(5, 0{,}3)$ und $X_2 \\sim B(7, 0{,}3)$ unabhängig sind, dann gilt $X_1 + X_2 \\sim B(12, 0{,}3)$.",
+      "answer": true,
+      "explanation": "Die Additivitätseigenschaft der Binomialverteilung besagt: Wenn $X_1 \\sim B(n_1, p)$ und $X_2 \\sim B(n_2, p)$ unabhängig sind (gleiches $p$!), dann $X_1+X_2 \\sim B(n_1+n_2, p)$. Hier: $B(5+7, 0{,}3) = B(12, 0{,}3)$ ✓."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "spez-ex-ub1-a1",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "label": "Übungsblatt 1, Aufgabe 1 — Normalverteilung: Wahrscheinlichkeiten und Quantile",
+      "source": "Übungsblatt 1 (Spezielle Verteilungen), Prof. Dr. Sibbertsen, LU Hannover",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "prompt": "Eine Zufallsvariable $X$ ist normalverteilt mit $\\mu = 60$ und $\\sigma^2 = 16$ (also $\\sigma = 4$).\n\na) Berechnen Sie $P(X \\le 62{,}4)$, $P(X > 59{,}6)$, $P(50{,}2 \\le X \\le 58{,}6)$.\n\nb) Wie ist $x$ jeweils zu wählen, damit $P(X \\le x) = 0{,}7$ bzw. $P(X > x) = 0{,}9$ gilt?\n\nc) Wie ist $x$ zu wählen, damit $P(x \\le X < 70) = 0{,}9$ ist?\n\nd) Wie sind die Grenzen $x_1$ und $x_2$ eines zentralen Schwankungsintervalls zu wählen, damit $P(x_1 \\le X \\le x_2) = 0{,}9$ gilt?\n\ne) Bestimmen Sie die Grenzen $x_1$ und $x_2$ des zentralen 2-fachen Schwankungsintervalls. Wie groß ist die zugehörige Wahrscheinlichkeit?",
+      "hint": "Standardisieren Sie mit $Z = (X-\\mu)/\\sigma = (X-60)/4$. Verwenden Sie $\\Phi(-z) = 1-\\Phi(z)$. Für Quantilaufgaben: $x = \\mu + z_w \\cdot \\sigma$.",
+      "solution": "**Gegeben:** $X \\sim N(60, 16)$, also $\\mu=60$, $\\sigma=4$.\n\n---\n\n### Teil a) Wahrscheinlichkeiten berechnen\n\n**$P(X \\le 62{,}4)$:**\n$$z = \\frac{62{,}4 - 60}{4} = \\frac{2{,}4}{4} = 0{,}6$$\n$$P(X \\le 62{,}4) = \\Phi(0{,}6) \\approx \\mathbf{0{,}7257}$$\n\n**$P(X > 59{,}6)$:**\n$$z = \\frac{59{,}6 - 60}{4} = \\frac{-0{,}4}{4} = -0{,}1$$\n$$P(X > 59{,}6) = 1 - P(X \\le 59{,}6) = 1 - \\Phi(-0{,}1) = 1 - (1-\\Phi(0{,}1)) = \\Phi(0{,}1) \\approx \\mathbf{0{,}5398}$$\n\n**$P(50{,}2 \\le X \\le 58{,}6)$:**\n$$z_1 = \\frac{50{,}2 - 60}{4} = \\frac{-9{,}8}{4} = -2{,}45, \\qquad z_2 = \\frac{58{,}6 - 60}{4} = \\frac{-1{,}4}{4} = -0{,}35$$\n$$P(50{,}2 \\le X \\le 58{,}6) = \\Phi(-0{,}35) - \\Phi(-2{,}45)$$\n$$= (1 - \\Phi(0{,}35)) - (1 - \\Phi(2{,}45)) = \\Phi(2{,}45) - \\Phi(0{,}35)$$\n$$\\approx 0{,}9929 - 0{,}6368 = \\mathbf{0{,}3561}$$\n\n---\n\n### Teil b) Quantile bestimmen\n\n**$P(X \\le x) = 0{,}7$:**\n\nWir suchen $z_{0{,}7}$: Tabelle liefert $\\Phi(0{,}524) \\approx 0{,}70$ → $z_{0{,}7} \\approx 0{,}524$.\n$$x = \\mu + z_{0{,}7} \\cdot \\sigma = 60 + 0{,}524 \\cdot 4 = 60 + 2{,}097 \\approx \\mathbf{62{,}1}$$\n\n**$P(X > x) = 0{,}9$, d.h. $P(X \\le x) = 0{,}1$:**\n\nWir suchen $z_{0{,}1}$: Da $\\Phi(-z) = 1 - \\Phi(z)$, gilt $z_{0{,}1} = -z_{0{,}9} = -1{,}282$.\n$$x = 60 + (-1{,}282) \\cdot 4 = 60 - 5{,}128 \\approx \\mathbf{54{,}87}$$\n\n---\n\n### Teil c) Untergrenze bei $P(x \\le X < 70) = 0{,}9$\n\nZuerst $P(X < 70)$ berechnen:\n$$z = \\frac{70-60}{4} = 2{,}5 \\quad \\Rightarrow \\quad P(X < 70) = \\Phi(2{,}5) \\approx 0{,}9938$$\n\nNun: $P(x \\le X < 70) = \\Phi(2{,}5) - \\Phi\\!\\left(\\frac{x-60}{4}\\right) = 0{,}9$\n$$\\Phi\\!\\left(\\frac{x-60}{4}\\right) = 0{,}9938 - 0{,}9 = 0{,}0938$$\n$$\\frac{x-60}{4} = \\Phi^{-1}(0{,}0938) = -z_{0{,}9062} \\approx -1{,}313$$\n$$x = 60 - 1{,}313 \\cdot 4 = 60 - 5{,}253 \\approx \\mathbf{54{,}75}$$\n\n---\n\n### Teil d) Zentrales Schwankungsintervall mit $P = 0{,}9$\n\nDa das Intervall **zentral** ist, liegen $\\alpha/2 = 0{,}05$ Wahrscheinlichkeit auf jeder Seite.\n$$z_{0{,}95} = 1{,}645$$\n$$x_1 = 60 - 1{,}645 \\cdot 4 = 60 - 6{,}58 = \\mathbf{53{,}42}$$\n$$x_2 = 60 + 1{,}645 \\cdot 4 = 60 + 6{,}58 = \\mathbf{66{,}58}$$\n\nProbe: $P(53{,}42 \\le X \\le 66{,}58) = 2\\Phi(1{,}645) - 1 = 2 \\cdot 0{,}95 - 1 = 0{,}9$ ✓\n\n---\n\n### Teil e) Zentrales 2-faches Schwankungsintervall\n\nDas 2-fache Schwankungsintervall ist $[\\mu - 2\\sigma; \\mu + 2\\sigma]$:\n$$x_1 = 60 - 2 \\cdot 4 = \\mathbf{52}, \\qquad x_2 = 60 + 2 \\cdot 4 = \\mathbf{68}$$\n\nZugehörige Wahrscheinlichkeit:\n$$P(52 \\le X \\le 68) = 2\\Phi(2) - 1 = 2 \\cdot 0{,}9772 - 1 = \\mathbf{0{,}9545} \\approx 95{,}45\\%$$",
+      "hasOfficialSolution": false
+    },
+    {
+      "id": "spez-ex-ub1-a2",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "label": "Übungsblatt 1, Aufgabe 2 — Abfüllanlage Orangensaft",
+      "source": "Übungsblatt 1 (Spezielle Verteilungen), Prof. Dr. Sibbertsen, LU Hannover",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "prompt": "Eine automatische Abfüllanlage füllt Flaschen mit Orangensaft. Die abgefüllte Menge ist normalverteilt mit $\\mu = 700$ ml und $\\sigma^2 = 144$ ml$^2$ (also $\\sigma = 12$ ml).\n\na) Wie groß ist die Wahrscheinlichkeit, dass der garantierte Mindestinhalt von 680 ml nicht erreicht wird?\n\nb) Auf welchen Wert müsste $\\mu$ eingestellt werden, wenn ein Mindestinhalt von 680 ml garantiert werden soll und die Wahrscheinlichkeit für das Erreichen dieses Mindestinhalts 0,995 betragen soll?\n\nc) Durch Verbesserungen gelingt es, $\\sigma$ auf 8 ml zu senken. Auf welchen Wert muss $\\mu$ eingestellt werden, wenn mit Wahrscheinlichkeit 0,995 mindestens 680 ml in einer Flasche sein sollen?",
+      "hint": "In a): $P(X < 680)$ berechnen. In b) und c): Gesucht ist $\\mu$ so, dass $P(X \\ge 680) = 0{,}995$ — das bedeutet $P(X < 680) = 0{,}005$. Das Quantil $z_{0{,}005} = -z_{0{,}995} = -2{,}576$.",
+      "solution": "**Gegeben:** $X \\sim N(\\mu, \\sigma^2)$, Mindestinhalt $x_0 = 680$ ml.\n\n---\n\n### Teil a) $\\mu = 700$, $\\sigma = 12$: Wahrscheinlichkeit für Unterschreitung\n\n$$P(X < 680) = \\Phi\\!\\left(\\frac{680 - 700}{12}\\right) = \\Phi\\!\\left(\\frac{-20}{12}\\right) = \\Phi(-1{,}\\overline{6}) \\approx \\Phi(-1{,}667)$$\n$$= 1 - \\Phi(1{,}667) \\approx 1 - 0{,}9525 = \\mathbf{0{,}0475} \\approx 4{,}75\\%$$\n\n---\n\n### Teil b) $\\sigma = 12$, gesucht: $\\mu$ mit $P(X \\ge 680) = 0{,}995$\n\nBedingung: $P(X \\ge 680) = 0{,}995$ bedeutet $P(X < 680) = 0{,}005$.\n\nStandardisierung: \n$$P\\!\\left(Z < \\frac{680-\\mu}{12}\\right) = 0{,}005$$\n$$\\frac{680-\\mu}{12} = z_{0{,}005} = -z_{0{,}995} = -2{,}576$$\n\nAuflösen nach $\\mu$:\n$$680 - \\mu = -2{,}576 \\cdot 12 = -30{,}912$$\n$$\\mu = 680 + 30{,}912 = \\mathbf{710{,}91 \\approx 711 \\text{ ml}}$$\n\n**Interpretation:** Die Anlage muss auf ca. 711 ml eingestellt werden, damit 99,5% der Flaschen mindestens 680 ml enthalten.\n\n---\n\n### Teil c) $\\sigma = 8$, gesucht: $\\mu$ mit $P(X \\ge 680) = 0{,}995$\n\nVorgehen identisch, jetzt mit $\\sigma = 8$:\n$$\\frac{680-\\mu}{8} = -2{,}576$$\n$$680 - \\mu = -2{,}576 \\cdot 8 = -20{,}608$$\n$$\\mu = 680 + 20{,}608 = \\mathbf{700{,}61 \\approx 701 \\text{ ml}}$$\n\n**Interpretation:** Durch die Präzisionsverbesserung ($\\sigma$ von 12 auf 8 ml) kann der Sollwert $\\mu$ von ca. 711 ml auf ca. 701 ml gesenkt werden — eine Einsparung von ca. 10 ml pro Flasche bei gleicher Garantieleistung!",
+      "hasOfficialSolution": false
+    },
+    {
+      "id": "spez-ex-ub1-a3",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "label": "Übungsblatt 1, Aufgabe 3 — Binomialverteilung: Geburten",
+      "source": "Übungsblatt 1 (Spezielle Verteilungen), Prof. Dr. Sibbertsen, LU Hannover",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "prompt": "Die Wahrscheinlichkeit, dass bei einer Geburt ein Junge zur Welt kommt, beträgt nach allgemeiner Auffassung $p = 0{,}5$.\n\na) Wie groß ist die Wahrscheinlichkeit, dass unter 20 Neugeborenen...\n\n   aa) 3 Jungen,\n\n   ab) nicht mehr als 12, aber auch nicht weniger als 10 Jungen,\n\n   ac) 13 Jungen und 2 Mädchen (beachte: 13 + 2 = 15 ≠ 20!),\n\n   ad) mindestens 12 Mädchen sind?\n\nb) Man hat festgestellt, dass in den letzten Jahren 51% aller Neugeborenen männlichen Geschlechts sind ($p = 0{,}51$). Wie groß ist die Wahrscheinlichkeit, dass unter 5 Neugeborenen\n\n   ba) 3 Jungen,\n\n   bb) mehr als 1, aber weniger als 4 Jungen sind?",
+      "hint": "Für Teil a): $X \\sim B(20, 0{,}5)$ — Tabelle verwendbar. Bei ad): Mädchen = $Y = 20-X \\sim B(20,0{,}5)$, gleiche Verteilung. Bei ac): Beachten Sie, dass 13+2=15 ≠ 20 — das sind nicht alle 20 Neugeborenen, also ist ac) ein unmögliches Ereignis! Für Teil b): $n=5$, direkte Berechnung mit der Formel.",
+      "solution": "### Teil a) $X \\sim B(20, 0{,}5)$, $E(X) = 10$\n\n**aa) $P(X = 3)$:**\n$$P(X=3) = \\binom{20}{3} \\cdot 0{,}5^3 \\cdot 0{,}5^{17} = \\binom{20}{3} \\cdot 0{,}5^{20}$$\n$$= 1140 \\cdot \\frac{1}{1\\,048\\,576} \\approx \\mathbf{0{,}00109}$$\n\nAus der Binomialtabelle für $n=20$, $p=0{,}5$: $P(X=3) \\approx 0{,}0011$.\n\n**ab) $P(10 \\le X \\le 12)$:**\n$$P(10 \\le X \\le 12) = F(12) - F(9)$$\n\nAus der Tabelle: $F(12; 20; 0{,}5) \\approx 0{,}8684$, $F(9; 20; 0{,}5) \\approx 0{,}4119$.\n$$P(10 \\le X \\le 12) \\approx 0{,}8684 - 0{,}4119 = \\mathbf{0{,}4565}$$\n\n**ac) 13 Jungen UND 2 Mädchen unter 20 Neugeborenen:**\n\nAchtung: $13 + 2 = 15 \\ne 20$. Unter 20 Neugeborenen müssen es 13 Jungen und 7 Mädchen sein (bzw. 2 Jungen und 18 Mädchen wäre eine andere Interpretation). Da 13 + 2 ≠ 20, ist das Ereignis \"genau 13 Jungen und genau 2 Mädchen unter 20 Neugeborenen\" **unmöglich** (Wahrscheinlichkeit = 0), denn $13 + 2 = 15 \\ne 20$. **Hinweis:** Falls die Aufgabe 15 Neugeborene meint: $P(X=13; 15; 0{,}5) = \\binom{15}{13}\\cdot 0{,}5^{15} = 105/32768 \\approx 0{,}0032$.\n\n**ad) Mindestens 12 Mädchen:** Sei $Y$ = Anzahl Mädchen. Da $p(\\text{Mädchen})=0{,}5$, gilt $Y \\sim B(20; 0{,}5)$.\n$$P(Y \\ge 12) = 1 - P(Y \\le 11) = 1 - F(11; 20; 0{,}5)$$\n\nAus Tabelle: $F(11; 20; 0{,}5) \\approx 0{,}7483$ (Symmetrie: $F(11;20;0{,}5) = 1-F(8;20;0{,}5) = 1-0{,}2517 = 0{,}7483$).\n$$P(Y \\ge 12) = 1 - 0{,}7483 = \\mathbf{0{,}2517}$$\n\n---\n\n### Teil b) $n = 5$, $p = 0{,}51$, $X \\sim B(5; 0{,}51)$\n\nDirekte Berechnung mit der Formel (Tabelle enthält $p=0{,}51$ nicht).\n\n**ba) $P(X = 3)$:**\n$$P(X=3) = \\binom{5}{3} \\cdot 0{,}51^3 \\cdot 0{,}49^2 = 10 \\cdot 0{,}132651 \\cdot 0{,}2401 \\approx \\mathbf{0{,}3185}$$\n\n**bb) $P(1 < X < 4)$, d.h. $P(X = 2) + P(X = 3)$:**\n\n$$P(X=2) = \\binom{5}{2} \\cdot 0{,}51^2 \\cdot 0{,}49^3 = 10 \\cdot 0{,}2601 \\cdot 0{,}117649 \\approx 0{,}3060$$\n$$P(X=3) \\approx 0{,}3185 \\text{ (oben berechnet)}$$\n$$P(1 < X < 4) = P(X=2) + P(X=3) \\approx 0{,}3060 + 0{,}3185 = \\mathbf{0{,}6245}$$",
+      "hasOfficialSolution": false
+    },
+    {
+      "id": "spez-ex-ub1-a4",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "label": "Übungsblatt 1, Aufgabe 4 — Vertreter: Binomialverteilung und Normalapproximation",
+      "source": "Übungsblatt 1 (Spezielle Verteilungen), Prof. Dr. Sibbertsen, LU Hannover",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "prompt": "Ein Vertreter weiß aus Erfahrung, dass er bei 20% aller Besuche einen Kaufvertrag abschließt ($p = 0{,}2$). Sein Arbeitgeber zahlt ihm 30 € je abgeschlossenem Vertrag.\n\na) Wie groß ist die Wahrscheinlichkeit, dass der Vertreter nach den ersten 6 Besuchen mehr als 100 € verdient hat?\n\nb) Bestimmen Sie die Wahrscheinlichkeit, dass er nach 50 Besuchen mehr als 12 Verträge abgeschlossen hat.\n\nc) In welchen zentralen Grenzen ist bei 20 Arbeitstagen (20 Besuche pro Tag, also 400 Besuche gesamt) die monatliche Anzahl an Verträgen mit einer Wahrscheinlichkeit von mindestens 90% zu erwarten?",
+      "hint": "a) Mehr als 100 € bedeutet mehr als $100/30 \\approx 3{,}33$ Verträge, also mindestens 4 Verträge. $X \\sim B(6; 0{,}2)$ — exakte Berechnung. b) $X \\sim B(50; 0{,}2)$, Normalapproximation möglich ($np=10$, $n(1-p)=40$). c) Gesamtbesuche $n=400$, $X \\sim B(400; 0{,}2)$, Normalapproximation.",
+      "solution": "**Grunddaten:** $p = 0{,}2$, Prämie = 30 € pro Vertrag.\n\n---\n\n### Teil a) $n=6$ Besuche: $P(\\text{Verdienst} > 100 \\text{ €})$\n\n100 € / 30 €/Vertrag = 3,33... → Es werden **mindestens 4** Verträge benötigt.\n\n$X \\sim B(6; 0{,}2)$: Faustregeln für Normalapproximation: $np = 1{,}2 < 10$ — **Exakte Berechnung** verwenden!\n\n$$P(X \\ge 4) = 1 - P(X \\le 3) = 1 - F(3; 6; 0{,}2)$$\n$$F(3; 6; 0{,}2) = \\sum_{x=0}^{3}\\binom{6}{x}0{,}2^x 0{,}8^{6-x}$$\n\nEinzelne Terme:\n$$P(X=0) = 0{,}8^6 = 0{,}2621$$\n$$P(X=1) = \\binom{6}{1} \\cdot 0{,}2 \\cdot 0{,}8^5 = 6 \\cdot 0{,}2 \\cdot 0{,}3277 = 0{,}3932$$\n$$P(X=2) = \\binom{6}{2} \\cdot 0{,}04 \\cdot 0{,}8^4 = 15 \\cdot 0{,}04 \\cdot 0{,}4096 = 0{,}2458$$\n$$P(X=3) = \\binom{6}{3} \\cdot 0{,}008 \\cdot 0{,}8^3 = 20 \\cdot 0{,}008 \\cdot 0{,}512 = 0{,}0819$$\n\n$$F(3; 6; 0{,}2) = 0{,}2621 + 0{,}3932 + 0{,}2458 + 0{,}0819 = 0{,}9830$$\n$$P(X \\ge 4) = 1 - 0{,}9830 = \\mathbf{0{,}0170} \\approx 1{,}7\\%$$\n\n---\n\n### Teil b) $n=50$ Besuche: $P(X > 12)$ via Normalapproximation\n\n$X \\sim B(50; 0{,}2)$: $\\mu = np = 10$, $\\sigma^2 = np(1-p) = 8$, $\\sigma = \\sqrt{8} \\approx 2{,}828$.\n\n**Prüfe Faustregeln:** $n=50 \\ge 30$ ✓, $np=10 \\ge 10$ ✓, $n(1-p)=40 \\ge 10$ ✓ → Normalapproximation zulässig.\n\n$$P(X > 12) \\approx 1 - \\Phi\\!\\left(\\frac{12 - 10}{\\sqrt{8}}\\right) = 1 - \\Phi\\!\\left(\\frac{2}{2{,}828}\\right) = 1 - \\Phi(0{,}707)$$\n$$\\approx 1 - 0{,}7602 = \\mathbf{0{,}2398} \\approx 24\\%$$\n\n---\n\n### Teil c) $n=400$ Besuche: Zentrales Schwankungsintervall mit $W \\ge 90\\%$\n\n$X \\sim B(400; 0{,}2)$: $\\mu = np = 400 \\cdot 0{,}2 = 80$, $\\sigma^2 = np(1-p) = 400 \\cdot 0{,}2 \\cdot 0{,}8 = 64$, $\\sigma = 8$.\n\n**Normalapproximation:** ✓ ($np=80 \\ge 10$, $n(1-p)=320 \\ge 10$)\n\nFür ein **zentrales** Schwankungsintervall mit $W = 90\\%$ gilt $\\alpha = 0{,}1$, also $z_{0{,}95} = 1{,}645$.\n\n$$x_1 = np - z_{0{,}95} \\cdot \\sqrt{np(1-p)} = 80 - 1{,}645 \\cdot 8 = 80 - 13{,}16 = \\mathbf{66{,}84}$$\n$$x_2 = np + z_{0{,}95} \\cdot \\sqrt{np(1-p)} = 80 + 1{,}645 \\cdot 8 = 80 + 13{,}16 = \\mathbf{93{,}16}$$\n\n**Ergebnis:** Mit mindestens 90% Wahrscheinlichkeit schließt der Vertreter im Monat zwischen **ca. 67 und 93 Verträgen** ab (zentrales Intervall $[66{,}84; 93{,}16]$).\n\nProbe: $P(66{,}84 \\le X \\le 93{,}16) \\approx 2\\Phi(1{,}645)-1 = 0{,}9$ ✓",
+      "hasOfficialSolution": false
+    },
+    {
+      "id": "spez-ex-klausur-normalvtgl",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "label": "Zusatzaufgabe (alte Klausur): Normalverteilung — Kraftstoffverbrauch Kleinwagen",
+      "source": "Zusatzaufgabe Normalverteilung, alte Klausur (Schließende Statistik)",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "prompt": "Ein Autohersteller gibt für seinen neuen Kleinwagen einen Durchschnittsverbrauch von 6 l/100 km an. Der Verbrauch sei normalverteilt mit einer Standardabweichung von 0,5 l/100 km.\n\na) Wie groß ist die Wahrscheinlichkeit, dass der Verbrauch\n\n   aa) höchstens 7 l/100 km,\n\n   ab) mehr als 7,5 l/100 km,\n\n   ac) mehr als 5,5, aber höchstens 7 l/100 km beträgt?\n\nb) Wie lauten die Grenzen des 2-fachen zentralen Schwankungsintervalls für den Verbrauch und mit welcher Wahrscheinlichkeit fällt der Verbrauch in dieses Intervall?\n\nc) Durch konstruktive Verbesserung des Motors erreicht der Hersteller, dass nun mit einer Wahrscheinlichkeit von 0,9 ein Verbrauch von höchstens 6 l/100 km erreicht wird. Wieviel verbraucht dieser Wagen durchschnittlich?",
+      "hint": "Gegeben: $\\mu=6$, $\\sigma=0{,}5$. Standardisieren mit $Z=(X-6)/0{,}5$. In c) ist $\\mu$ gesucht, $\\sigma=0{,}5$ bleibt unverändert; $P(X \\le 6)=0{,}9$ führt auf $z_{0{,}9}=1{,}282$.",
+      "solution": "**Gegeben:** $X \\sim N(6; 0{,}25)$, also $\\mu=6$ l/100 km, $\\sigma=0{,}5$ l/100 km.\n\n---\n\n### Teil a) Wahrscheinlichkeiten\n\n**aa) $P(X \\le 7)$:**\n$$z = \\frac{7 - 6}{0{,}5} = 2 \\quad \\Rightarrow \\quad P(X \\le 7) = \\Phi(2) \\approx \\mathbf{0{,}9772}$$\n\n**ab) $P(X > 7{,}5)$:**\n$$z = \\frac{7{,}5 - 6}{0{,}5} = 3 \\quad \\Rightarrow \\quad P(X > 7{,}5) = 1 - \\Phi(3) \\approx 1 - 0{,}9987 = \\mathbf{0{,}0013}$$\n\n**ac) $P(5{,}5 < X \\le 7)$:**\n$$z_1 = \\frac{5{,}5-6}{0{,}5} = -1, \\qquad z_2 = \\frac{7-6}{0{,}5} = 2$$\n$$P(5{,}5 < X \\le 7) = \\Phi(2) - \\Phi(-1) = \\Phi(2) - (1-\\Phi(1))$$\n$$= 0{,}9772 - (1 - 0{,}8413) = 0{,}9772 - 0{,}1587 = \\mathbf{0{,}8185}$$\n\n---\n\n### Teil b) Zentrales 2-faches Schwankungsintervall\n\nDas 2-fache zentrale Schwankungsintervall ist $[\\mu - 2\\sigma;\\; \\mu + 2\\sigma]$:\n$$x_1 = 6 - 2 \\cdot 0{,}5 = \\mathbf{5 \\text{ l/100 km}}$$\n$$x_2 = 6 + 2 \\cdot 0{,}5 = \\mathbf{7 \\text{ l/100 km}}$$\n\nZugehörige Wahrscheinlichkeit:\n$$P(5 \\le X \\le 7) = 2\\Phi(2) - 1 = 2 \\cdot 0{,}9772 - 1 = \\mathbf{0{,}9545} \\approx 95{,}45\\%$$\n\n---\n\n### Teil c) Neues $\\mu$ bei $P(X \\le 6) = 0{,}9$\n\nNach der Verbesserung gilt weiterhin $\\sigma = 0{,}5$, aber $\\mu$ ist unbekannt.\n\nBedingung: $P(X \\le 6) = 0{,}9$\n$$\\Phi\\!\\left(\\frac{6-\\mu}{0{,}5}\\right) = 0{,}9$$\n$$\\frac{6-\\mu}{0{,}5} = z_{0{,}9} = 1{,}282$$\n$$6 - \\mu = 1{,}282 \\cdot 0{,}5 = 0{,}641$$\n$$\\mu = 6 - 0{,}641 = \\mathbf{5{,}359 \\approx 5{,}36 \\text{ l/100 km}}$$\n\n**Interpretation:** Das verbesserte Fahrzeug verbraucht durchschnittlich ca. 5,36 l/100 km — deutlich weniger als die ursprünglichen 6 l/100 km. Dadurch liegt der Verbrauch mit 90% Wahrscheinlichkeit unter 6 l/100 km.",
+      "hasOfficialSolution": false
+    }
+  ]
+}

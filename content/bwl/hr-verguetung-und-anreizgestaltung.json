@@ -1,0 +1,363 @@
+{
+  "id": "hr-verguetung-und-anreizgestaltung",
+  "subjectId": "bwl",
+  "title": "Vergütung und Anreizgestaltung",
+  "summary": "Wie bezahlt man Mitarbeitende so, dass sie motiviert bleiben und fair behandelt werden? Diese Einheit erklärt den Aufbau von Vergütungssystemen (fix/variabel), die Prinzipal-Agenten-Theorie, intrinsische vs. extrinsische Motivation, Fairness-Konzepte (Equity Theory) und Methoden der Entgeltbestimmung.",
+  "order": 17,
+  "estMinutes": 50,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "einfuehrung-anreize",
+      "heading": "Was sind Anreize und warum sind sie wichtig?",
+      "body": "Stell dir vor, du hast gerade deinen ersten Job. Warum stehst du morgens auf und gibst dein Bestes? Die Antwort liegt in **Anreizen** — all den Dingen, die dich motivieren zu arbeiten.\n\n**Anreize** sind alle Faktoren, die das Verhalten, die Einstellungen und die Leistung von Mitarbeitenden beeinflussen. Das Vergütungssystem eines Unternehmens ist dabei das wichtigste HR-Instrument, um:\n\n- **Talente anzuziehen** (warum soll jemand hier und nicht woanders arbeiten?)\n- **Mitarbeitende zu motivieren** (warum soll jemand sein Bestes geben?)\n- **Mitarbeitende zu halten** (warum soll jemand bleiben?)\n- **Energie auf Unternehmensziele auszurichten** (damit alle in die gleiche Richtung arbeiten)\n\nBei der Entgeltgestaltung müssen zwei Seiten beachtet werden:\n- **Intern:** Fairness und Zufriedenheit (das Äquivalenzprinzip — Lohn soll zu Leistung und Anforderungen passen)\n- **Extern:** Konkurrenzfähigkeit auf dem Arbeitsmarkt (was zahlen andere Unternehmen?)\n\n**Geld und Glück:** Studien zeigen: Mehr Einkommen steigert die Lebenszufriedenheit — aber nur bis zu einem gewissen Punkt. Danach tritt ein **Gewöhnungseffekt** ein: Man freut sich kurz über die Gehaltserhöhung, gewöhnt sich daran und ist bald wieder gleich zufrieden wie vorher. Das erklärt, warum Geld allein nicht dauerhaft motiviert.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Äquivalenzprinzip",
+          "body": "Das Äquivalenzprinzip besagt, dass Lohn und Leistung in einem angemessenen Verhältnis stehen sollen. Es gibt zwei Dimensionen: **Anforderungsgerechtigkeit** (hohe Anforderungen = höheres Grundgehalt) und **Leistungsgerechtigkeit** (mehr Leistung = mehr Bonus). Ohne Äquivalenz fühlen sich Mitarbeitende unfair behandelt."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "verguetung-anreize-tabelle",
+          "title": "Materielle vs. immaterielle Anreize",
+          "headers": ["Anreizart", "Beispiele", "Besonderheit"],
+          "rows": [
+            ["Materielle Anreize (fix)", "Grundgehalt, Tarifzulagen", "Planbar, sicher, Grundlage"],
+            ["Materielle Anreize (variabel)", "Boni, Erfolgsbeteiligung, Aktienoptionen", "Leistungsabhängig, Anreizwirkung"],
+            ["Materielle Anreize (Sozialleistungen)", "Betriebliche Altersvorsorge, Dienstwagen, Kita-Zuschuss", "Steuerlich begünstigt, Bindung"],
+            ["Immaterielle Anreize", "Anerkennung, Karrierechancen, Arbeitsinhalt, Autonomie, Homeoffice", "Wertewandel: nehmen stark an Bedeutung zu"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prinzipal-agent",
+      "heading": "Prinzipal-Agenten-Theorie: Das Grundproblem jeder Vergütung",
+      "body": "Stell dir vor, du beauftragst jemanden, etwas für dich zu erledigen — z.B. ein Handwerker soll deine Wohnung renovieren. Woher weißt du, ob er wirklich sein Bestes gibt, wenn du nicht dabei bist? Dieses Problem heißt in der Ökonomie das **Prinzipal-Agenten-Problem**.\n\n**Prinzipal** = derjenige, der einen Auftrag gibt (z.B. das Unternehmen / der Eigentümer)\n\n**Agent** = derjenige, der den Auftrag ausführt (z.B. der angestellte Manager oder Mitarbeitende)\n\nDas Problem entsteht, weil:\n1. **Informationsasymmetrie:** Der Agent weiß mehr über seine eigene Arbeit als der Prinzipal\n2. **Interessenkonflikt:** Der Agent könnte seine eigenen Ziele verfolgen statt die des Prinzipals (z.B. sich schonen, wenn niemand zuschaut)\n3. **Beobachtungsproblem:** Der Prinzipal kann die Anstrengung des Agenten nicht direkt sehen, nur das Ergebnis\n\n**Lösung durch Vergütungsgestaltung:** Wenn der Agent ein eigenes finanzielles Interesse am Erfolg hat (z.B. durch Boni oder Aktienoptionen), richten sich seine Interessen automatisch stärker an denen des Prinzipals aus. Das ist die Grundidee hinter **Pay-for-Performance**.\n\n**Beispiel Tesla/Elon Musk:** Musks riesiges Aktienpaket (Wert: bis zu 1 Billion Dollar) ist an 12 konkrete Ziele für Marktkapitalisierung und operative Leistung geknüpft. Nur wenn Tesla diese Ziele erreicht, bekommt Musk die Aktien. Das soll sicherstellen, dass Musks Interessen mit denen der Tesla-Aktionäre (Prinzipal) übereinstimmen.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Prinzipal-Agenten-Problem auf einen Blick",
+          "body": "**Problem:** Agent hat andere Interessen als Prinzipal + Prinzipal kann Einsatz nicht direkt beobachten.\n\n**Lösung durch Vergütung:** Beteilige den Agenten am Erfolg (Boni, Aktien) — dann will er selbst, dass es gut läuft."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Elon Musk & Tesla — extremes Beispiel variabler Vergütung",
+          "body": "Tesla-Chef Elon Musk erhält ein Aktienpaket im Wert von bis zu 1 Billion Dollar — aber nur wenn 12 Meilensteine erreicht werden (z.B. Marktkapitalisierung von 2–8,5 Billionen Dollar UND operative Ziele wie 20 Mio. ausgelieferte Fahrzeuge). Jede Tranche entspricht 1 % der Tesla-Aktien. Dieses System koppelt Musks persönliches Vermögen direkt an den Unternehmenserfolg — ein Paradebeispiel für die Lösung des Prinzipal-Agenten-Problems."
+        }
+      ]
+    },
+    {
+      "id": "variable-verguetung",
+      "heading": "Variable Vergütung: Wie Boni und Aktien funktionieren",
+      "body": "Die Gesamtvergütung besteht in den meisten Unternehmen aus mehreren Bausteinen:\n\n$$\\text{Gesamtvergütung} = \\underbrace{\\text{Grundgehalt}}_{\\text{fix}} + \\underbrace{\\text{Bonus/Prämie}}_{\\text{kurzfristig variabel}} + \\underbrace{\\text{Aktienoptionen/ESOPs}}_{\\text{langfristig variabel}}$$\n\n**Aktienoptionen** geben Mitarbeitenden das Recht, Aktien zu einem festgelegten (niedrigeren) Preis zu kaufen — wenn der Aktienkurs steigt, verdienen sie dabei. Hauptziel: **Motivation**. Populär in den 90er-Jahren.\n\n**ESOPs (Employee Stock Ownership Plans)** — auf Deutsch: Mitarbeiterbeteiligungsprogramme — geben Mitarbeitenden direkt Aktien, z.B. beim Einstieg oder zum Jahresende. Die Anzahl ist oft leistungsunabhängig. Hauptziel: **langfristige Bindung**. Heute die gängigste Form.\n\n**Pay-for-Performance (PfP)** — zu Deutsch: leistungsorientierte Vergütung — koppelt Teile der Vergütung direkt an messbare Leistungsziele (z.B. Umsatzziele, Kundenzufriedenheit, individuelle Beurteilungen).\n\n**Wichtig:** Die Forschung zeigt insgesamt **heterogene Befunde** — variable Vergütung wirkt nicht immer wie erhofft.",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "\"When bonuses backfire\" — Wenn Boni nach hinten losgehen",
+          "body": "**Studie: Alfitian, Sliwka & Vogelsang (2023)**, Management Science.\n\n**Frage:** Wie wirken sich finanzielle Boni auf den Krankenstand von Auszubildenden aus?\n\n**Methode:** Experiment mit 346 Auszubildenden aus 232 Filialen einer deutschen Supermarktkette.\n\n**Überraschendes Ergebnis:** Finanzielle Anwesenheitsboni **erhöhten** den Absentismus (Fehlzeiten) um **50 % (= 5 zusätzliche Fehltage pro Jahr)** — statt ihn zu senken!\n\n**Erklärung:** Der Bonus signalisiert den Auszubildenden, dass Anwesenheit etwas Besonderes ist, das belohnt werden muss — also nicht selbstverständlich. Dadurch hören sie auf, Anwesenheit als normale Pflicht zu sehen. Zeitliche Boni (z.B. zusätzlicher Urlaub) hatten übrigens weder positive noch negative Effekte.\n\n**Fazit:** Externe Anreize können interne Motivation (intrinsisches Pflichtgefühl) **verdrängen** — das nennt man den **Crowding-out-Effekt**."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "verguetung-bausteine",
+          "title": "Bausteine der Gesamtvergütung",
+          "caption": "Typischer Aufbau eines Vergütungssystems von unten nach oben",
+          "code": "graph TD\n    A[Gesamtvergütung] --> B[Grundgehalt / fix]\n    A --> C[Kurzfristig variabel]\n    A --> D[Langfristig variabel]\n    A --> E[Immaterielle Anreize]\n    C --> C1[Jahresbonus]\n    C --> C2[Prämien / Provision]\n    D --> D1[Aktienoptionen]\n    D --> D2[ESOPs — Mitarbeiterbeteiligung]\n    E --> E1[Karriere & Entwicklung]\n    E --> E2[Flexible Arbeitszeit]\n    E --> E3[Anerkennung & Führungskultur]"
+        }
+      ]
+    },
+    {
+      "id": "motivation-intrinsisch-extrinsisch",
+      "heading": "Intrinsische vs. extrinsische Motivation: Was wirklich antreibt",
+      "body": "**Was ist Motivation?** Motivation ist der Antrieb, etwas zu tun. Man unterscheidet zwei grundlegende Arten:\n\n**Extrinsische Motivation** — von außen gesteuert\n- Geld, Boni, Prämien, Beförderungen, Lob vom Chef, Angst vor Strafe\n- Der Antrieb kommt von *außen*: Du arbeitest, *weil* du dafür belohnt wirst\n- Vorteil: Wirkt oft schnell und messbar\n- Nachteil: Gewöhnungseffekt! Die Wirkung lässt nach; ohne Anreiz hört die Motivation auf\n\n**Intrinsische Motivation** — von innen kommend\n- Freude an der Aufgabe, Neugier, Sinn, Kompetenzgefühl, Autonomie\n- Der Antrieb kommt von *innen*: Du arbeitest, *weil* dir die Arbeit selbst etwas bedeutet\n- Vorteil: Haltbarer, führt zu Kreativität und Engagement\n- Nachteil: Schwerer zu steuern\n\n**Die Selbstdeterminationstheorie (Self-Determination Theory, SDT)** von Deci & Ryan erklärt: Menschen haben drei grundlegende psychologische Bedürfnisse:\n1. **Kompetenz:** Das Gefühl, Dinge gut zu können\n2. **Autonomie:** Selbst entscheiden, wie man arbeitet\n3. **Soziale Eingebundenheit:** Zugehörigkeit zu einer Gruppe\n\nWenn diese Bedürfnisse erfüllt sind, entsteht **intrinsische Motivation** — und die ist nachhaltiger als jeder Bonus.\n\n**Der Crowding-out-Effekt:** Externe Anreize können intrinsische Motivation *verdrängen*. Klassisches Experiment: Kinder, die gerne malten, hörten auf freiwillig zu malen, sobald man sie dafür bezahlte — weil Malen plötzlich nach \"Arbeit\" aussah, die belohnt werden muss. Genau das zeigt auch die Bonus-Studie von Alfitian et al. (2023).\n\n**Praktische Empfehlung:** Entgeltgestaltung sollte beides berücksichtigen — faire materielle Basis schaffen (extrinsisch) UND intrinsische Motivation nicht untergraben. Immaterielle Anreize (interessante Aufgaben, Autonomie, Entwicklung) gewinnen durch den gesellschaftlichen **Wertewandel** zunehmend an Bedeutung.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Intrinsisch vs. extrinsisch — der Kernunterschied",
+          "body": "**Extrinsisch:** Ich arbeite *für* die Belohnung (Geld, Lob). Ohne Belohnung: kein Anreiz.\n\n**Intrinsisch:** Ich arbeite *wegen* der Arbeit selbst (Interesse, Sinn). Die Arbeit ist die Belohnung.\n\n**Gefahr:** Zu starke externe Anreize können inneren Antrieb zerstören (Crowding-out)."
+        }
+      ]
+    },
+    {
+      "id": "fairness-equity",
+      "heading": "Fairness und Equity Theory: Warum sich Gehalt fair anfühlen muss",
+      "body": "Ein Gehalt kann noch so hoch sein — wenn Mitarbeitende es als *unfair* empfinden, sinkt die Motivation. Das zeigt die **Equity Theory (Gleichgewichtstheorie) von Adams (1963)**.\n\n**Grundidee:** Jeder Mensch vergleicht sein Verhältnis aus Inputs und Outcomes mit dem einer Vergleichsperson (Kollege, Branchendurchschnitt).\n\n$$\\frac{\\text{Outcomes}_{\\text{eigen}}}{\\text{Inputs}_{\\text{eigen}}} \\quad \\text{vs.} \\quad \\frac{\\text{Outcomes}_{\\text{Vergleich}}}{\\text{Inputs}_{\\text{Vergleich}}}$$\n\n**Inputs** = was ich einbringe: Arbeitsstunden, Erfahrung, Ausbildung, Engagement\n\n**Outcomes** = was ich bekomme: Gehalt, Boni, Status, Anerkennung\n\n**Drei mögliche Situationen:**\n- **Gleichgewicht** ($=$): Ich bringe genauso viel ein wie meine Vergleichsperson und bekomme genauso viel → zufrieden\n- **Unterbeloht** ($<$): Ich bekomme relativ weniger → Unzufriedenheit, Demotivation, eventuell Kündigung\n- **Überbezahlt** ($>$): Ich bekomme relativ mehr → kurzfristig schlechtes Gewissen, aber Gewöhnung tritt ein\n\n**Fairness hat drei Dimensionen:**\n\n| Fairnesstyp | Frage | Beispiel |\n|---|---|---|\n| Distributiv | Ist die *Verteilung* der Ergebnisse fair? | Bekommt die Leistungsstärkste die Beförderung? |\n| Prozedural | Ist der *Entscheidungsprozess* fair? | Gibt es transparente Beförderungskriterien? |\n| Interaktional | Werde ich *respektvoll behandelt*? | Erklärt der Chef die Entscheidung würdevoll? |\n\n**Praxisbeispiel Google:** Bei Google kursierte intern eine Tabelle, in die Mitarbeitende ihre Gehälter eintrugen. Das Ergebnis: Viele merkten, wie \"unfair\" ihre Gehälter im Vergleich zu Kollegen waren — trotz hoher Absolutbeträge. Googles Personalchef Laszlo Bock bekannte offen: Google zahlt \"unfair\" — bewusst unterschiedlich, je nach wahrgenommenem Beitrag. Das zeigt: Wahrgenommene Unfairness entsteht nicht durch Niedriglohn, sondern durch *Vergleich*.\n\n**Fußball-Beispiel (PINGO):** Frauenfußballerinnen fordern gleiche Gehälter wie Männer.\n- *Pro:* Gleiche Arbeit, gleicher Lohn — distributive Fairness\n- *Contra:* Getrennte Arbeitsmärkte mit unterschiedlichen Umsätzen/Zuschauerzahlen → ökonomisch unterschiedliche Outcomes-Basis\n\nDieses Beispiel zeigt: \"Fairness\" ist komplex und hängt davon ab, *welche* Inputs und Outcomes man vergleicht.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Externe vs. interne Gerechtigkeit",
+          "body": "**Externe Gerechtigkeit:** Sind unsere Gehälter im Vergleich zum Markt (andere Unternehmen) fair? → Wichtig für Rekrutierung und Mitarbeiterbindung.\n\n**Interne Gerechtigkeit:** Sind unsere Gehälter innerhalb des Unternehmens fair verteilt? → Wichtig für Zufriedenheit und Zusammenarbeit."
+        }
+      ]
+    },
+    {
+      "id": "entgeltbestimmung",
+      "heading": "Entgeltbestimmung und Arbeitsbewertung: Wie legt man Gehälter fest?",
+      "body": "Wie kommt ein Unternehmen überhaupt zu seiner Gehaltsstruktur? Der Schlüssel liegt in der **Arbeitsbewertung** — also dem systematischen Vergleich und der Bewertung aller Stellen.\n\n**Ziel:** Eine Entgeltstruktur schaffen, die nachvollziehbar, gerecht und objektiv ist.\n\nDer Grundlohn setzt sich zusammen aus:\n1. **Anforderungen des Arbeitsplatzes** (über Arbeitsbewertung ermittelt) → Grundgehalt\n2. **Individuelle Leistung** (über Leistungsbeurteilung ermittelt) → Leistungszulage\n3. **Marktwert** (externer Vergleich) → Anpassungen\n\n**Zwei Formen der Arbeitsbewertung:**\n\n**Summarische Arbeitsbewertung** — Stellen werden *als Ganzes* verglichen:\n- **Rangfolgeverfahren:** Alle Stellen werden nach Schwierigkeit in eine Rangfolge gebracht (Chefin > Lagerarbeiter > Bote > Sekretärin)\n- **Lohngruppenverfahren (Katalogverfahren):** Stellen werden in vordefinierte Lohngruppen eingeordnet (z.B. öffentlicher Dienst: Besoldungsgruppen A5–A16 in Niedersachsen)\n\n**Analytische Arbeitsbewertung** — Stellen werden nach *Einzelmerkmalen* bewertet:\n1. Arbeitsplatzbeschreibung erstellen\n2. Anforderungsarten bestimmen (z.B. Können, Belastung, Verantwortung, Umgebung)\n3. Bewertungsverfahren festlegen\n4. Anforderungsarten gewichten\n5. Anforderungen bewerten und Arbeitswerte quantifizieren → Lohngruppe ableiten\n\n**Ziel der analytischen Methode:** anforderungsgerechte Differenzierung der Gehälter — wissenschaftlicher, aber aufwendiger.\n\n**Probleme der Arbeitsbewertung:**\n- Lohnpolitik als interessengeleitete Entscheidung (Mikropolitik: Mächtige setzen ihre Vorstellungen durch)\n- Bestätigung bestehender Hierarchien (was schon immer so war, bleibt so)\n- Geschlechtsspezifische Diskriminierung (z.B. werden körperlich anspruchsvolle Tätigkeiten höher bewertet als feinmotorische — benachteiligt oft Frauen)\n- Unverträglichkeit mit modernen Arbeitsformen (z.B. Teamarbeit, wo individuelle Stellenbeschreibungen schwer zu erstellen sind)",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Rechenbeispiel: Summarische Arbeitsbewertung (Rangfolgeverfahren)",
+          "body": "Ein kleines Unternehmen hat vier Stellentypen. Schritt 1: Rangfolge nach Schwierigkeit festlegen.\n\n| Rang | Stelle | Monatslohn |\n|---|---|---|\n| 1 (höchste Anforderung) | 1 × Chefin | 5.000 € |\n| 2 | 2 × Lagerarbeiter | je 3.000 € |\n| 3 | 25 × Boten | je 2.000 € |\n| 4 (niedrigste Anforderung) | 15 × Sekretärinnen | je 1.500 € |\n\nGesamte Lohnkosten: $1 \\times 5.000 + 2 \\times 3.000 + 25 \\times 2.000 + 15 \\times 1.500 = 5.000 + 6.000 + 50.000 + 22.500 = 83.500\\,€$ pro Monat.\n\nDie Rangfolge ist simpel, aber subjektiv — wer entscheidet, dass eine Lagerarbeiterstelle schwieriger ist als die einer Sekretärin?"
+        },
+        {
+          "kind": "warning",
+          "title": "Probleme der Arbeitsbewertung nicht unterschätzen",
+          "body": "Arbeitsbewertung klingt objektiv, ist es aber oft nicht. Wer entscheidet, welche Anforderungen wie viel wert sind? Oft spiegeln Bewertungen bestehende Machtverhältnisse wider und zementieren Ungleichheiten — besonders zum Nachteil von Frauen."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "hrv-fc-1",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Was ist der Unterschied zwischen intrinsischer und extrinsischer Motivation?",
+      "back": "**Extrinsisch:** Antrieb kommt von außen (Geld, Lob, Angst vor Strafe). Ohne Belohnung kein Anreiz.\n\n**Intrinsisch:** Antrieb kommt von innen (Freude, Sinn, Interesse). Die Arbeit selbst motiviert.\n\nGefahr: Externe Anreize können innere Motivation verdrängen (Crowding-out-Effekt)."
+    },
+    {
+      "id": "hrv-fc-2",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Erkläre das Prinzipal-Agenten-Problem in eigenen Worten.",
+      "back": "**Prinzipal** (z.B. Unternehmen) beauftragt einen **Agenten** (z.B. Manager), der eigene Interessen hat und dessen Anstrengung nicht direkt beobachtbar ist.\n\n**Lösung:** Vergütung, die Agent am Erfolg beteiligt (Boni, Aktien) → Interessenangleichung."
+    },
+    {
+      "id": "hrv-fc-3",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Was besagt die Equity Theory (Adams, 1963)?",
+      "back": "Menschen vergleichen ihr Verhältnis aus Inputs (Einsatz) und Outcomes (Belohnung) mit einer Vergleichsperson:\n\n$$\\frac{\\text{Outcomes}_{\\text{eigen}}}{\\text{Inputs}_{\\text{eigen}}} \\quad \\text{vs.} \\quad \\frac{\\text{Outcomes}_{\\text{Vergleich}}}{\\text{Inputs}_{\\text{Vergleich}}}$$\n\nUngleichgewicht führt zu Unzufriedenheit und Demotivation."
+    },
+    {
+      "id": "hrv-fc-4",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Was ist der \"When bonuses backfire\"-Effekt (Alfitian et al., 2023)?",
+      "back": "Finanzielle Anwesenheitsboni erhöhten in einer Studie den Absentismus von Auszubildenden um 50 % (5 Tage/Jahr) statt ihn zu senken.\n\n**Erklärung:** Der Bonus signalisiert, dass Anwesenheit besonders belohnt werden muss — sie wird nicht mehr als Selbstverständlichkeit gesehen. Intrinsisches Pflichtgefühl wird verdrängt (Crowding-out)."
+    },
+    {
+      "id": "hrv-fc-5",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Was ist der Unterschied zwischen summarischer und analytischer Arbeitsbewertung?",
+      "back": "**Summarisch:** Stellen werden *als Ganzes* verglichen und in Rangfolge/Lohngruppen eingeordnet. Schnell, aber subjektiv.\n\n**Analytisch:** Stellen werden nach *Einzelmerkmalen* (Anforderungen) bewertet und gewichtet. Differenzierter, aber aufwendiger."
+    },
+    {
+      "id": "hrv-fc-6",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Nennen Sie die drei Dimensionen von Fairness in der Vergütung.",
+      "back": "1. **Distributive Fairness:** Ist die Verteilung der Ergebnisse gerecht?\n2. **Prozedurale Fairness:** Ist der Entscheidungsprozess fair und transparent?\n3. **Interaktionale Fairness:** Werden Mitarbeitende respektvoll und würdevoll behandelt?"
+    },
+    {
+      "id": "hrv-fc-7",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Was ist der Unterschied zwischen Aktienoptionen und ESOPs?",
+      "back": "**Aktienoptionen:** Recht, Aktien zu einem festen (niedrigeren) Preis zu kaufen. Hauptziel: Motivation. Populär in den 90ern.\n\n**ESOPs (Employee Stock Ownership Plans):** Mitarbeitende erhalten direkt Aktien (oft leistungsunabhängig). Hauptziel: langfristige Bindung. Heute gängigste Form."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "hrv-q1",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Was ist das Ziel eines Vergütungssystems aus Unternehmensperspektive? (Mehrfachauswahl möglich)",
+      "options": [
+        "Talentierte Mitarbeitende anziehen",
+        "Mitarbeitende motivieren und binden",
+        "Energie auf strategische Unternehmensziele ausrichten",
+        "Möglichst niedrige Lohnkosten um jeden Preis"
+      ],
+      "correct": [0, 1, 2],
+      "multiple": true,
+      "explanation": "Die ersten drei Optionen sind korrekte Ziele laut Vorlesung (Jackson et al., 2009). Rein auf Kostenminimierung zu setzen widerspricht dem strategischen Ansatz, der auch externe Wettbewerbsfähigkeit und interne Fairness berücksichtigt."
+    },
+    {
+      "kind": "mc",
+      "id": "hrv-q2",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "leicht",
+      "prompt": "In der Equity Theory nach Adams (1963) vergleicht ein Mitarbeitender:",
+      "options": [
+        "Sein Absolut-Gehalt mit dem Mindestlohn",
+        "Sein Verhältnis aus Inputs und Outcomes mit dem einer Vergleichsperson",
+        "Seine Arbeitszeit mit der gesetzlichen Höchstarbeitszeit",
+        "Seinen Bonus mit dem Vorjahresbonus"
+      ],
+      "correct": [1],
+      "explanation": "Die Equity Theory besagt: Menschen vergleichen ihr Input/Outcome-Verhältnis mit dem einer Referenzperson. Wahrgenommene Ungleichheit führt zu Demotivation — unabhängig vom Absolut-Betrag."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hrv-q3",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Intrinsische Motivation ist dauerhafter und kreativer als extrinsische Motivation.",
+      "answer": true,
+      "explanation": "Richtig. Intrinsische Motivation (aus eigenem Antrieb, wegen der Arbeit selbst) ist nachhaltiger und fördert Kreativität. Extrinsische Anreize können sogar intrinsische Motivation verdrängen (Crowding-out-Effekt), wenn sie als Kontrollmechanismus wahrgenommen werden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hrv-q4",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Die Studie von Alfitian, Sliwka & Vogelsang (2023) zeigt, dass finanzielle Anwesenheitsboni den Absentismus von Auszubildenden deutlich senken.",
+      "answer": false,
+      "explanation": "Falsch! Das Gegenteil war der Fall. Finanzielle Boni erhöhten den Absentismus um 50 % (5 Tage pro Jahr). Der Bonus signalisierte, dass Anwesenheit eine besondere Leistung ist — und untergrub das intrinsische Pflichtgefühl (Crowding-out)."
+    },
+    {
+      "kind": "mc",
+      "id": "hrv-q5",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Ein Mitarbeitender merkt, dass sein Kollege bei gleicher Leistung und Erfahrung 20 % mehr verdient. Welche Art von Fairness-Problem liegt vor?",
+      "options": [
+        "Prozedurale Unfairness",
+        "Distributive Unfairness",
+        "Interaktionale Unfairness",
+        "Kein Fairness-Problem, da absolute Gehälter wichtiger sind"
+      ],
+      "correct": [1],
+      "explanation": "Distributive Fairness bezieht sich auf die Verteilung der Ergebnisse (Outcomes). Wenn bei gleichen Inputs (Leistung, Erfahrung) die Outcomes (Gehalt) ungleich sind, liegt distributive Unfairness vor — genau das, was die Equity Theory beschreibt."
+    },
+    {
+      "kind": "mc",
+      "id": "hrv-q6",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Was ist das Hauptziel von ESOPs (Employee Stock Ownership Plans) im Vergleich zu Aktienoptionen?",
+      "options": [
+        "Kurzfristige Leistungssteigerung durch direkten finanziellen Anreiz",
+        "Langfristige Bindung von Mitarbeitenden an das Unternehmen",
+        "Lösung des Prinzipal-Agenten-Problems durch Leistungskopplung",
+        "Reduzierung der Fixlohnkosten"
+      ],
+      "correct": [1],
+      "explanation": "ESOPs haben als Hauptziel die langfristige Bindung von Mitarbeitenden. Da die Aktienanzahl meist leistungsunabhängig vergeben wird, ist der kurzfristige Motivationsanreiz geringer als bei Aktienoptionen. Aktienoptionen dagegen zielen primär auf Motivation."
+    },
+    {
+      "kind": "numeric",
+      "id": "hrv-q7",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Ein Unternehmen hat folgende Belegschaft und Monatslöhne: 1 Chefin (5.000 €), 2 Lagerarbeiter (je 3.000 €), 25 Boten (je 2.000 €). Wie hoch sind die monatlichen Lohnkosten für genau diese 28 Personen in Euro?",
+      "answer": 61000,
+      "tolerance": 0,
+      "unit": "€",
+      "explanation": "Schritt für Schritt: 1 × 5.000 = 5.000 €; 2 × 3.000 = 6.000 €; 25 × 2.000 = 50.000 €. Summe: 5.000 + 6.000 + 50.000 = 61.000 €."
+    },
+    {
+      "kind": "freetext",
+      "id": "hrv-q8",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen führt einen Anwesenheitsbonus von 500 € jährlich für Mitarbeitende ohne Fehlzeiten ein. Erläutern Sie mögliche unbeabsichtigte Folgen anhand des Crowding-out-Effekts und der Studie von Alfitian et al. (2023).",
+      "sampleAnswer": "Der Crowding-out-Effekt beschreibt das Verdrängen intrinsischer Motivation durch externe Anreize. Indem das Unternehmen Anwesenheit mit 500 € belohnt, signalisiert es implizit, dass Anwesenheit keine Selbstverständlichkeit ist, sondern eine besondere Leistung. Mitarbeitende, die zuvor aus Pflichtbewusstsein (intrinsisch) anwesend waren, können ihre Einstellung ändern: Anwesenheit wird nun als 'leistungsabhängige Option' wahrgenommen. Alfitian et al. (2023) zeigten genau dies: Bei Auszubildenden einer Supermarktkette stieg der Absentismus nach Einführung von Anwesenheitsboni um 50 % (5 Tage/Jahr) an. Der Effekt war besonders stark bei neu eingestellten Auszubildenden, die noch kein gefestigtes Pflichtgefühl entwickelt hatten. Fazit: Boni können ihre eigentliche Wirkung ins Gegenteil verkehren.",
+      "keywords": ["crowding-out", "intrinsisch", "pflichtgefühl", "alfitian", "absentismus", "signal", "50 Prozent"],
+      "explanation": "Kernidee: Externe Anreize verändern die Wahrnehmung einer Verhaltensweise. Was zuvor Pflicht war, wird zur (optional belohnten) Sonderleistung. Das untergräbt intrinsisches Pflichtgefühl."
+    },
+    {
+      "kind": "mc",
+      "id": "hrv-q9",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Welches Problem soll die analytische Arbeitsbewertung im Vergleich zur summarischen lösen?",
+      "options": [
+        "Sie ist schneller und kostengünstiger durchzuführen",
+        "Sie bewertet Stellen nach Einzelmerkmalen und ermöglicht anforderungsgerechte Differenzierung",
+        "Sie eliminiert alle politischen Einflüsse auf die Lohnpolitik",
+        "Sie orientiert sich ausschließlich am externen Markt"
+      ],
+      "correct": [1],
+      "explanation": "Die analytische Arbeitsbewertung zerlegt Stellen in Einzelanforderungen (z.B. Können, Belastung, Verantwortung), bewertet und gewichtet diese. Ziel ist anforderungsgerechte Differenzierung der Gehälter. Sie ist aufwendiger als die summarische Methode, aber transparenter und nachvollziehbarer."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hrv-q10",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "schwer",
+      "prompt": "Laut Selbstdeterminationstheorie (SDT) reicht ein hohes Gehalt aus, um dauerhaft hohe intrinsische Motivation zu erzeugen.",
+      "answer": false,
+      "explanation": "Falsch. Die SDT betont drei psychologische Grundbedürfnisse: Kompetenz, Autonomie und soziale Eingebundenheit. Ein hohes Gehalt adressiert diese Bedürfnisse nicht direkt. Intrinsische Motivation entsteht, wenn die Arbeit selbst Kompetenz- und Autonomieerlebnisse ermöglicht — Geld allein erzeugt bestenfalls kurzfristige extrinsische Motivation."
+    },
+    {
+      "kind": "freetext",
+      "id": "hrv-q11",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "schwer",
+      "prompt": "Erläutern Sie anhand des Beispiels Elon Musk / Tesla, wie das Prinzipal-Agenten-Problem durch Vergütungsgestaltung gelöst werden soll. Welche Risiken bleiben trotzdem bestehen?",
+      "sampleAnswer": "Das Prinzipal-Agenten-Problem bei Tesla: Die Aktionäre (Prinzipal) können Musks Entscheidungen nicht vollständig beobachten; Musks Interessen könnten von ihren abweichen. Musks Vergütungspaket koppelt seinen persönlichen Reichtum direkt an 12 Meilensteine (Marktkapitalisierung + operative Ziele). Damit hat Musk ein massives finanzielles Eigeninteresse, genau die Ziele zu verfolgen, die Aktionäre wollen — Interessenangleichung. Verbleibende Risiken: (1) Manipulierbarkeit der Kennzahlen (Musk könnte auf Kennzahloptimierung statt echte Wertschöpfung setzen); (2) Zeithorizont-Problem (kurzfristige Kurssteigerungen statt langfristiger Nachhaltigkeit); (3) extreme Konzentration von Macht und Incentives auf eine Person; (4) insgesamt heterogene Forschungsbefunde zur Wirkung solcher Vergütungsmodelle.",
+      "keywords": ["prinzipal", "agent", "interessenangleichung", "musk", "aktien", "meilensteine", "risiken", "kennzahlen"],
+      "explanation": "Pay-for-Performance löst das Motivationsproblem durch Interessenangleichung — aber neue Probleme entstehen: Kennzahlenmanipulation, Zeithorizont-Konflikte, Überfokus auf messbare Größen."
+    },
+    {
+      "kind": "mc",
+      "id": "hrv-q12",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Anreize zählen zu den immateriellen Anreizen? (Mehrfachauswahl möglich)",
+      "options": [
+        "Jahresbonus",
+        "Flexible Arbeitszeiten (Gleitzeit)",
+        "Betriebliche Altersvorsorge",
+        "Interessante Arbeitsaufgaben",
+        "Partizipation an Entscheidungen"
+      ],
+      "correct": [1, 3, 4],
+      "multiple": true,
+      "explanation": "Jahresbonus (materiell, variabel) und betriebliche Altersvorsorge (materiell, Sozialleistung) sind materielle Anreize. Flexible Arbeitszeit, interessante Aufgaben und Partizipation sind immaterielle Anreize — sie befriedigen Bedürfnisse nach Autonomie, Kompetenz und sozialer Eingebundenheit."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hrv-ex-1",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "label": "PINGO — Gehalt von Fußballern und Fußballerinnen (Lohngerechtigkeit)",
+      "source": "Vorlesung Personal SoSe 2026, Folie 170 + Personal_Artikel_SoSe_2026.pdf",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Fußballerinnen verdienen im Durchschnitt erheblich weniger als ihre männlichen Kollegen. Fußballerinnen fordern zunehmend gleiche Gehälter. Der Streit um die Gleichberechtigung ist entbrannt.\n\n**Frage:** Ist die Forderung nach gleichen Gehältern aus ökonomischer und fairnesstheoretischer Sicht berechtigt? Diskutieren Sie Pro- und Contra-Argumente und beziehen Sie die Equity Theory von Adams (1963) ein.",
+      "hint": "Überlegen Sie: Was sind die relevanten Inputs (Einsatz, Training, Qualität)? Was sind die Outcomes (Einnahmen, Zuschauerzahlen, Marktgröße)? Sind die Arbeitsmärkte für Männer- und Frauenfußball wirklich identisch?",
+      "solution": "**Pro: Forderung ist berechtigt**\n\n- Aus Sicht der **distributiven Fairness** (Adams 1963): Beide leisten vergleichbare sportliche Arbeit (Training, Spiele, körperlicher Einsatz) — gleiche Inputs sollten zu gleichen Outcomes führen.\n- Gesellschaftlich: Das Prinzip \"Gleicher Lohn für gleiche Arbeit\" ist ein grundlegendes Gerechtigkeitsprinzip und rechtlich in der EU verankert.\n- Wahrgenommene Unfairness führt zu Demotivation und gesellschaftlichem Schaden.\n\n**Contra: Forderung ist ökonomisch nicht unbedingt gerechtfertigt**\n\n- Aus Sicht der **externen Gerechtigkeit** (Marktperspektive): Männer- und Frauenfußball sind *getrennte Arbeitsmärkte* mit sehr unterschiedlichen Einnahmen (TV-Rechte, Zuschauerzahlen, Sponsorengelder). Wenn Männerfußball erheblich mehr Umsatz generiert, entstehen unterschiedliche Outcome-Pools.\n- In der Equity Theory sind Outcomes relativ zu den *generierten* Werten: Ein Spieler, der mit einem Verein 100 Mio. Euro Umsatz generiert, hat einen anderen \"Marktwert\" als eine Spielerin, die 10 Mio. Euro generiert.\n- ESOPs und leistungsabhängige Vergütung (Pay-for-Performance) würden in diesem Fall unterschiedliche Vergütungen rechtfertigen.\n\n**Fazit / Transfer auf HR:**\n- Das Beispiel zeigt, dass \"Fairness\" in der Vergütung immer davon abhängt, *welche* Inputs und Outputs man vergleicht.\n- Unternehmen müssen Vergütungsentscheidungen transparent begründen (prozedurale Fairness), um wahrgenommene Ungerechtigkeit zu minimieren.\n- Langfristig: Geringere Vermarktung des Frauenfußballs ist selbst ein strukturelles Problem, das sich verändert — die Vergütungsfrage wird sich mit wachsenden Märkten verschieben."
+    },
+    {
+      "id": "hrv-ex-2",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "label": "Diskussion — Geld und Glück: Empfehlungen für die Entgeltgestaltung",
+      "source": "Vorlesung Personal SoSe 2026, Folie 161 + Personal_Artikel_SoSe_2026.pdf (Artikel: 'Geld macht glücklich, aber …')",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Studien zeigen: Einkommen und Lebenszufriedenheit hängen zusammen. Allerdings tritt bei steigendem Einkommen schnell ein **Gewöhnungseffekt** ein — nach kurzer Zeit ist man nicht mehr zufriedener als vorher.\n\n**Frage:** Welche konkreten Empfehlungen für die Entgeltgestaltung lassen sich aus dem Zusammenhang zwischen Einkommen, Gewöhnungseffekt und Selbstdeterminationstheorie ableiten? Nennen und begründen Sie mindestens drei Empfehlungen.",
+      "hint": "Denken Sie an: abnehmender Grenznutzen von Geld, Selbstdeterminationstheorie (Kompetenz, Autonomie, Eingebundenheit), intrinsische vs. extrinsische Motivation, immaterielle Anreize.",
+      "solution": "**Empfehlung 1: Faire Grundvergütung als Hygienefaktor sicherstellen**\n\nBegründung: Geld verliert ab einem bestimmten Niveau (Gewöhnungseffekt / abnehmender Grenznutzen) an motivierender Wirkung. Trotzdem muss das Grundgehalt als fair und marktgerecht empfunden werden — sonst entsteht distributive Unfairness (Equity Theory). Empfehlung: Transparente, marktgerechte Grundgehälter, regelmäßige Überprüfung.\n\n**Empfehlung 2: Immaterielle Anreize stärker gewichten**\n\nBegründung: Da Geld schnell zum Standard wird (Gewöhnungseffekt), wirken immaterielle Anreize oft nachhaltiger. Die Selbstdeterminationstheorie zeigt: Autonomie (flexible Arbeitszeit, Homeoffice), Kompetenzentwicklung (Weiterbildung) und soziale Eingebundenheit (Teamkultur) erzeugen echte intrinsische Motivation. Empfehlung: Investition in interessante Aufgaben, Entwicklungsmöglichkeiten und flexible Arbeitsmodelle.\n\n**Empfehlung 3: Variable Vergütung mit Bedacht einsetzen — Crowding-out-Risiko beachten**\n\nBegründung: Boni und leistungsabhängige Vergütung (Pay-for-Performance) können bei falscher Gestaltung die intrinsische Motivation untergraben (Alfitian et al., 2023: Anwesenheitsboni erhöhten Absentismus). Variable Vergütung sollte nur dort eingesetzt werden, wo klare, messbare und beeinflussbare Ziele existieren. Empfehlung: Ziele gemeinsam vereinbaren (MbO-Ansatz), Fairness des Verfahrens sicherstellen (prozedurale Fairness), Anreize nicht für Selbstverständlichkeiten zahlen.\n\n**Empfehlung 4: Verteilungsgerechtigkeit und Transparenz wahren**\n\nBegründung: Der Google-Fall zeigt, dass wahrgenommene Unfairness selbst bei hohen Gehältern entsteht, wenn Gehaltsunterschiede nicht nachvollziehbar sind. Empfehlung: Klare Gehaltsbänder und Kriterien für Gehaltsanpassungen kommunizieren."
+    },
+    {
+      "id": "hrv-ex-3",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "label": "Variable Vergütung Beispiel Elon Musk — Analyse und Transfer",
+      "source": "Personal_Artikel_SoSe_2026.pdf (Tagesschau-Artikel) + Vorlesung Folie 164",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Tesla-Chef Elon Musk erhält ein Aktienpaket im potenziellen Wert von bis zu 1 Billion Dollar. Es ist an 12 Stufen (Tranchen) geknüpft, die jeweils 1 % der Tesla-Aktien entsprechen. Jede Tranche wird nur ausgezahlt, wenn Tesla sowohl ein Marktkapitalisierungsziel als auch ein operatives Ziel (z.B. 20 Mio. ausgelieferte Fahrzeuge, bestimmte Gewinngrenzen) erreicht.\n\n**Aufgabe:** \n(a) Erläutern Sie, wie dieses Vergütungspaket das Prinzipal-Agenten-Problem lösen soll.\n(b) Identifizieren Sie mindestens zwei Risiken oder Nachteile dieses Ansatzes.\n(c) Ordnen Sie das Paket in die Systematik materieller Vergütungsbestandteile ein (fix/variabel/langfristig).",
+      "hint": "Für (a): Denken Sie an Interessenangleichung. Für (b): Was passiert, wenn Kennzahlen manipuliert werden? Was ist mit Zeithorizont? Für (c): Schauen Sie sich die Bausteine der Gesamtvergütung an.",
+      "solution": "**Teil (a): Lösung des Prinzipal-Agenten-Problems**\n\nDas Prinzipal-Agenten-Problem bei Tesla: Die Aktionäre (Prinzipal) können Musks (Agent) tatsächliche Anstrengungen und Entscheidungsqualität nicht vollständig beobachten. Musks persönliche Interessen könnten von denen der Aktionäre abweichen (z.B. andere Prioritäten setzen, Risiken eingehen oder vermeiden).\n\nDas Vergütungspaket löst dies durch **Interessenangleichung**: Musks persönliches Vermögen ist direkt an den Tesla-Börsenwert und operative Leistungskennzahlen gekoppelt. Wenn Tesla erfolgreich ist, wird Musk reich. Wenn Tesla scheitert, erhält Musk die Aktien nicht. Damit hat Musk dasselbe finanzielle Interesse wie die Aktionäre — er wird zum \"Miteigentümer mit Leistungsanreiz\". Das ist die Grundidee des Pay-for-Performance-Ansatzes.\n\n**Teil (b): Risiken und Nachteile**\n\n1. **Kennzahlenmanipulation:** Wenn Vergütung an spezifische Messgrößen (Börsenwert, Lieferzahlen) geknüpft ist, entsteht Anreiz, genau diese Kennzahlen zu optimieren — nicht unbedingt langfristige Wertschöpfung. Booking von Umsätzen kurz vor Quartalsende, aggressive Lieferzielvorgaben auf Kosten von Qualität usw.\n\n2. **Zeithorizont-Problem:** Aktienbasierte Vergütung kann kurzfristige Kurssteigerungen über langfristige Nachhaltigkeit stellen. Entscheidungen, die den Kurs kurzfristig pushen, aber langfristig schaden, werden incentiviert.\n\n3. **Extreme Machtkonzentration:** Ein Paket dieser Größe gibt einem einzigen Manager enormen Einfluss — Governance-Risiko.\n\n4. **Insgesamt heterogene Forschungsbefunde:** Die Wirkung von aktienbasierten Vergütungsmodellen ist empirisch nicht eindeutig positiv.\n\n**Teil (c): Einordnung in Vergütungssystematik**\n\nDas Paket ist ein **langfristiger, variabler Vergütungsbestandteil** — genauer: eine Kombination aus Aktienoptionen (Recht auf Aktienerwerb unter Bedingungen) und leistungsabhängiger Aktienübertragung (ähnlich Performance Shares). Es gehört zur Kategorie der **langfristigen variablen Vergütung** (Long-Term Incentives, LTI). Ein fixes Grundgehalt (Fixum) und kurzfristige Boni (STI) sind davon getrennt."
+    },
+    {
+      "id": "hrv-ex-4",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "label": "Lohnungleichheit Beispiel Google — Equity Theory anwenden",
+      "source": "Personal_Artikel_SoSe_2026.pdf (Spiegel-Artikel: Google und Gehalt-Erica-Baker)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Bei Google kursierte intern eine Tabelle, in die Mitarbeitende freiwillig ihr Gehalt eintrugen. Das Ergebnis: Viele wurden sich bewusst, wie unterschiedlich die Gehälter bei vermeintlich ähnlicher Arbeit waren. Googles Personalchef Laszlo Bock bekannte in seinem Buch \"Work Rules!\": Google zahlt bewusst \"unfair\" — manche bekommen deutlich mehr als andere, weil ihr Beitrag als deutlich höher eingeschätzt wird.\n\n**Aufgabe:**\n(a) Analysieren Sie die Situation aus Sicht der Equity Theory (Adams, 1963). Welche Reaktionen können Sie erwarten?\n(b) Wie bewertet die Vorlesung das Konzept \"New Pay\" (transparente, differenzierte Bezahlung)? Was sind Chancen und Risiken?\n(c) Welche der drei Fairness-Dimensionen (distributiv, prozedural, interaktional) ist in diesem Fall besonders relevant und warum?",
+      "hint": "Für (a): Was passiert, wenn Mitarbeitende plötzlich sehen, dass ihr Kollege bei gleicher Stelle mehr verdient? Was sind mögliche Verhaltensreaktionen nach Adams? Für (b): Denken Sie an prozedurale Fairness.",
+      "solution": "**Teil (a): Analyse mit Equity Theory**\n\nNach Adams (1963) vergleichen Mitarbeitende:\n$$\\frac{\\text{Outcomes}_{\\text{eigen}}}{\\text{Inputs}_{\\text{eigen}}} \\quad \\text{vs.} \\quad \\frac{\\text{Outcomes}_{\\text{Kollege}}}{\\text{Inputs}_{\\text{Kollege}}}$$\n\nWenn Mitarbeitende durch die interne Tabelle erfahren, dass ein Kollege bei ähnlicher Stelle 20 % mehr verdient, ohne dass ein offensichtlicher Leistungsunterschied erkennbar ist, entsteht **wahrgenommene distributive Unfairness** (Unterbezahlung relativ zum Kollegen).\n\nMögliche Reaktionen nach Equity Theory:\n- **Verhaltensänderung:** weniger Leistung erbringen (Inputs senken, bis das Verhältnis wieder stimmt)\n- **Kognitive Neubewertung:** \"Mein Job ist doch schwieriger als ich dachte\" (Selbstschutz)\n- **Referenzpunkt wechseln:** Vergleich mit anderen Kollegen, die weniger verdienen\n- **Vergütungserhöhung einfordern:** Gehaltsverhandlung\n- **Kündigung:** wenn Unfairness als dauerhaft und unveränderbar erlebt wird\n\n**Teil (b): New Pay — Chancen und Risiken**\n\n*Chancen der Transparenz:*\n- Informationsasymmetrien werden abgebaut\n- Mitarbeitende können ihren eigenen Marktwert besser einschätzen\n- Signalwirkung: Unternehmen, die Transparenz zeigen, wirken glaubwürdiger\n- Prozedurale Fairness steigt, wenn Kriterien klar kommuniziert werden\n\n*Risiken:*\n- Wenn Gehaltsunterschiede nicht nachvollziehbar begründet werden, steigt die wahrgenommene Unfairness dramatisch (distributive Unfairness)\n- Sozialer Vergleich führt zu Neid, Konflikten und Demotivation\n- Google-Ansatz (bewusst unterschiedliche Bezahlung nach Beitrag) funktioniert nur, wenn Kriterien für unterschiedliche Beiträge klar und akzeptiert sind\n\n**Teil (c): Relevante Fairness-Dimension**\n\nAlle drei Dimensionen sind berührt, aber **prozedurale Fairness** ist besonders kritisch: Die entscheidende Frage ist nicht nur *was* jemand verdient, sondern *wie* die Gehaltsentscheidungen zustande kommen. Wenn Google-Mitarbeitende erfahren, dass Gehälter unterschiedlich sind, aber nicht verstehen, *warum* (welche Kriterien, welche Prozesse?), ist prozedurale Unfairness das Hauptproblem. Transparenz im Prozess (klare, nachvollziehbare Kriterien für Gehaltsunterschiede) könnte die distributive Unfairness abfedern."
+    }
+  ]
+}

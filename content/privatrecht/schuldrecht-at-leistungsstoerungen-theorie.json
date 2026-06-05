@@ -1,0 +1,471 @@
+{
+  "id": "schuldrecht-at-leistungsstoerungen-theorie",
+  "subjectId": "privatrecht",
+  "title": "Schuldrecht AT: Leistungsstörungen (Theorieteil 6)",
+  "summary": "Was passiert, wenn eine Partei ihre vertragliche Pflicht nicht, nicht rechtzeitig oder nicht ordentlich erfüllt? Dieses Thema erklärt alle Erscheinungsformen der Leistungsstörung: Unmöglichkeit (§ 275 BGB), Schuldnerverzug (§§ 286 ff. BGB), Schadensersatz (§§ 280 ff. BGB), Rücktritt (§§ 323 ff. BGB), Störung der Geschäftsgrundlage (§ 313 BGB) sowie Vertretenmüssen (§§ 276, 278 BGB) – alles mit Alltagsbeispielen und vollständigen Gutachtenschemata.",
+  "order": 7,
+  "estMinutes": 75,
+  "sections": [
+    {
+      "id": "ueberblick",
+      "heading": "Überblick: Was ist eine Leistungsstörung?",
+      "body": "Stell dir vor, du kaufst bei einem Händler einen Laptop. Ihr schließt einen Kaufvertrag. Damit ist eigentlich alles klar: Der Händler muss dir den Laptop liefern, du musst den Preis zahlen. Doch was, wenn der Laptop vor der Lieferung abbrennt? Oder der Händler ihn einfach nicht liefert? Oder er einen anderen, schlechteren Laptop schickt?\n\nIn all diesen Situationen liegt eine **Leistungsstörung** vor. Eine Leistungsstörung ist jede Abweichung vom vertraglich geschuldeten Leistungserfolg – sei es, dass die Leistung gar nicht erbracht wird, zu spät kommt, mangelhaft ist oder Nebenpflichten verletzt werden.\n\nDas BGB kennt vier Grundformen:",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Die vier Erscheinungsformen der Leistungsstörung",
+          "body": "1. **Unmöglichkeit** – die Leistung kann objektiv oder subjektiv nicht erbracht werden (§ 275 BGB)\n2. **Schlechtleistung / Nebenpflichtverletzung** – die Leistung wird erbracht, aber nicht wie geschuldet oder eine Nebenpflicht wird verletzt (§ 280 I i.V.m. § 241 II BGB)\n3. **Schuldnerverzug** – die Leistung wird zu spät erbracht (§§ 286 ff. BGB)\n4. **Gläubigerverzug** – der Gläubiger nimmt die angebotene Leistung nicht an (§§ 293 ff. BGB)"
+        },
+        {
+          "kind": "info",
+          "title": "Anfängliche vs. nachträgliche Störung",
+          "body": "Wichtig: Eine Störung kann **anfänglich** (schon bei Vertragsschluss vorhanden, § 311a BGB) oder **nachträglich** (erst nach Vertragsschluss eingetreten) sein. Seit der Schuldrechtsreform 2002 können beide zu Schadensersatzansprüchen führen."
+        }
+      ]
+    },
+    {
+      "id": "unmoeglichkeit",
+      "heading": "Unmöglichkeit (§ 275 BGB): Wenn Leisten nicht mehr geht",
+      "body": "**Was bedeutet Unmöglichkeit?** Der Schuldner (also die Person, die leisten soll) kann die vereinbarte Leistung nicht erbringen – und zwar dauerhaft, nicht nur vorübergehend.\n\nDas BGB unterscheidet drei Arten der Unmöglichkeit in § 275 BGB:",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "unmoeglichkeit-schema",
+          "title": "Formen der Unmöglichkeit nach § 275 BGB",
+          "caption": "Überblick über die drei Absätze des § 275 BGB und ihre Abgrenzung.",
+          "code": "graph TD\n    A[Unmöglichkeit § 275 BGB] --> B[Absolute Unmöglichkeit\\n§ 275 Abs. 1 BGB\\nLeistungspflicht erlischt automatisch]\n    A --> C[Faktische Unmöglichkeit\\n§ 275 Abs. 2 BGB\\nAufwand grob unverhältnismäßig\\nSchuldner kann Einrede erheben]\n    A --> D[Persönliche Unmöglichkeit\\n§ 275 Abs. 3 BGB\\nLeistung höchstpersönlich unzumutbar\\nSchuldner kann Einrede erheben]\n    B --> E[Objektive Unmöglichkeit\\nniemand kann leisten]\n    B --> F[Subjektive Unmöglichkeit\\nnur Schuldner kann nicht leisten]\n    B --> G[Tatsächliche Unmöglichkeit\\nphysisch ausgeschlossen]\n    B --> H[Rechtliche Unmöglichkeit\\nRechtsgründe verhindern Leistung]\n    B --> I[Absolutes Fixgeschäft\\nZeitpunkt war Teil des Leistungserfolgs]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Beispiele zu den drei Formen",
+          "body": "**§ 275 Abs. 1 (absolute Unmöglichkeit):**\n- *Tatsächlich:* Verkauftes Gemälde brennt vor Übergabe vollständig ab → niemand kann es liefern.\n- *Rechtlich:* Verkauftes Auto wird von Polizei beschlagnahmt, weil es gestohlen war → Eigentümer weigert sich zu verkaufen, N kann Übereignung nicht herbeiführen.\n- *Absolutes Fixgeschäft:* Buchung eines Konzerttickets – der Konzerttermin ist verstrichen → Leistung durch Zeitablauf unmöglich.\n\n**§ 275 Abs. 2 (faktische Unmöglichkeit):**\nEin Auto (Wert 5.000 €) wird gestohlen, zerlegt und ins Meer geworfen. Bergung und Wiederherstellung würden 80.000 € kosten. Das ist ein grob unverhältnismäßiger Aufwand → Schuldner kann die Leistung verweigern.\n\n**§ 275 Abs. 3 (persönliche Unmöglichkeit):**\nEin Konzertpianist soll auftreten, aber sein Kind liegt schwer krank im Krankenhaus. Die persönlichen Umstände machen die Leistung unzumutbar."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Einrede vs. automatisches Erlöschen",
+          "body": "Bei § 275 Abs. 1 BGB erlischt die Leistungspflicht **automatisch** (von Amts wegen). Bei § 275 Abs. 2 und 3 BGB muss der Schuldner die **Einrede** ausdrücklich geltend machen – der Anspruch erlischt nicht von selbst!"
+        },
+        {
+          "kind": "info",
+          "title": "Stück- vs. Gattungsschuld bei Unmöglichkeit",
+          "body": "Bei einer **Stückschuld** (genau diese eine Sache) liegt Unmöglichkeit vor, wenn die Sache untergeht.\nBei einer **Gattungsschuld** (z. B. 'ein Laptop Modell X') trägt der Schuldner die **Leistungsgefahr**: Er muss notfalls eine andere Sache derselben Gattung beschaffen. Unmöglichkeit tritt erst ein, wenn die gesamte Gattung untergegangen ist.\nAusnahme: Nach **Konkretisierung** (§ 243 Abs. 2 BGB) – wenn der Schuldner alles seinerseits Erforderliche getan hat – wandelt sich die Gattungsschuld in eine Stückschuld um."
+        }
+      ]
+    },
+    {
+      "id": "schadensersatz-280ff",
+      "heading": "Schadensersatz nach §§ 280 ff. BGB: Das zentrale System",
+      "body": "Das Herzstück des Leistungsstörungsrechts ist § 280 BGB. Er ist der **Grundtatbestand** für alle Schadensersatzansprüche aus Schuldverhältnissen. Alle weiteren Schadensersatzansprüche (§§ 281–283 BGB) bauen darauf auf und ergänzen ihn durch zusätzliche Voraussetzungen.\n\n**Warum ist § 280 Abs. 1 BGB so wichtig?** Weil er für fast jede Pflichtverletzung gilt: egal ob Schlechtleistung, Nebenpflichtverletzung oder (nach Konkurrenzfragen) auch Verzug oder Unmöglichkeit.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "280ff-schema",
+          "title": "Das System der Schadensersatzansprüche §§ 280 ff. BGB",
+          "caption": "§ 280 Abs. 1 BGB ist die Basis; die weiteren Tatbestände erfordern zusätzliche Voraussetzungen.",
+          "code": "graph TD\n    A[§ 280 Abs. 1 BGB\\nGrundtatbestand\\nPflichtverletzung + Vertretenmüssen] --> B[Schadensersatz neben der Leistung\\nz.B. Mangelfolgeschäden]\n    A --> C[§ 280 Abs. 1, 2 BGB\\ni.V.m. § 286 BGB\\nVerzögerungsschaden\\nnur bei Verzug]\n    A --> D[§ 280 Abs. 1, 3 BGB\\ni.V.m. § 281 BGB\\nSchadensersatz STATT der Leistung\\nbei Nicht-/Schlechtleistung\\n+ Fristsetzung]\n    A --> E[§ 280 Abs. 1, 3 BGB\\ni.V.m. § 282 BGB\\nSchadensersatz STATT der Leistung\\nbei Nebenpflichtverletzung\\n+ Unzumutbarkeit]\n    A --> F[§ 280 Abs. 1, 3 BGB\\ni.V.m. § 283 BGB\\nSchadensersatz STATT der Leistung\\nbei Unmöglichkeit\\nkeine Fristsetzung nötig]\n    G[Voraussetzungen gemeinsam] --> A\n    G --> G1[1. Schuldverhältnis]\n    G --> G2[2. Pflichtverletzung]\n    G --> G3[3. Vertretenmüssen § 276, 278 BGB]\n    G --> G4[4. Kausaler Schaden]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Schadensersatz NEBEN vs. STATT der Leistung",
+          "body": "**Schadensersatz neben der Leistung** (§ 280 Abs. 1 BGB direkt): Der Gläubiger bekommt Schadensersatz, will aber weiterhin die Hauptleistung. Beispiel: Handwerker beschädigt beim Reparieren eine Vase – du willst die Reparatur trotzdem, aber auch Ersatz für die Vase.\n\n**Schadensersatz statt der Leistung** (§§ 281–283 BGB): Der Gläubiger gibt die Hoffnung auf die Hauptleistung auf und will stattdessen Geld. Dazu muss grundsätzlich eine **Frist** gesetzt worden sein (außer bei Unmöglichkeit: § 283 BGB, oder wenn Fristsetzung entbehrlich ist)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Durchgerechnetes Beispiel § 281 BGB (Schadensersatz statt der Leistung)",
+          "body": "**Sachverhalt:** K kauft bei V einen Laptop für 1.000 €. V liefert einen defekten Laptop. K setzt V eine 2-Wochen-Frist zur Nachbesserung. V rührt sich nicht.\n\n**Prüfung § 280 Abs. 1, 3 i.V.m. § 281 BGB:**\n1. *Schuldverhältnis:* Kaufvertrag § 433 BGB ✓\n2. *Pflichtverletzung:* Schlechtleistung – Laptop ist defekt, § 433 Abs. 1 S. 2 BGB verletzt ✓\n3. *Fristsetzung:* K hat angemessene Frist gesetzt, die fruchtlos verstrichen ist ✓\n4. *Vertretenmüssen:* V hat keine Entlastungsgründe vorgetragen, § 280 Abs. 1 S. 2 BGB: Schuldner muss beweisen, dass er die Pflichtverletzung nicht zu vertreten hat ✓\n5. *Schaden:* K muss sich einen Ersatzlaptop für 1.100 € kaufen → Differenz 100 € + ggf. Nutzungsausfall\n\n**Ergebnis:** K hat gegen V einen Anspruch auf Schadensersatz statt der Leistung aus §§ 280 Abs. 1, 3, 281 BGB."
+        }
+      ]
+    },
+    {
+      "id": "verzug",
+      "heading": "Schuldnerverzug (§§ 286 ff. BGB): Wenn die Leistung zu spät kommt",
+      "body": "**Was ist Verzug?** Verzug bedeutet, dass der Schuldner die fällige Leistung **schuldhaft nicht rechtzeitig** erbringt. Er kann also leisten, tut es aber nicht pünktlich.\n\n**Voraussetzungen des Schuldnerverzugs (§ 286 BGB):**\n\n1. **Fälliger, einredefreier Anspruch** – die Leistung muss bereits fällig sein (§ 271 BGB: im Zweifel sofort) und der Schuldner darf keine Einrede erheben dürfen (z. B. kein Zurückbehaltungsrecht).\n2. **Mahnung** – grundsätzlich erforderlich: eine eindeutige, einseitige Aufforderung des Gläubigers an den Schuldner zu leisten. Die Mahnung ist eine **rechtsgeschäftsähnliche Handlung** (keine Willenserklärung).\n3. **Entbehrlichkeit der Mahnung (§ 286 Abs. 2 BGB)** – die Mahnung ist ausnahmsweise nicht nötig:\n   - Nr. 1: Leistungszeit ist nach dem Kalender bestimmt (z. B. 'Lieferung am 15. März')\n   - Nr. 2: Leistungszeit ist nach dem Kalender berechenbar (z. B. '30 Tage nach Rechnungseingang')\n   - Nr. 3: Schuldner verweigert Leistung ernsthaft und endgültig\n   - Nr. 4: Besondere Umstände machen sofortigen Verzugseintritt rechtfertigen\n4. **Vertretenmüssen** – der Schuldner muss die Verspätung zu vertreten haben (§ 276 BGB). Bei Geldschulden: der Schuldner kann sich grundsätzlich nicht auf fehlendes Vertretenmüssen berufen ('Geld hat man zu haben').",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Rechtsfolgen des Schuldnerverzugs",
+          "body": "Bei eingetretenem Verzug hat der Gläubiger mehrere Rechte:\n\n**1. Verzögerungsschaden** (§§ 280 Abs. 1, 2, 286 BGB): Alle Schäden, die durch die Verspätung entstehen. Beispiel: K muss sich wegen der verspäteten Lieferung des Rasenmähers für 3 Wochen einen Mietrasenmäher für 150 € mieten → G muss diese 150 € ersetzen.\n\n**2. Schadensersatz statt der Leistung** (§§ 280 Abs. 1, 3, 281 BGB): Wenn K nach fruchtlosem Ablauf einer Nachfrist die Leistung nicht mehr will.\n\n**3. Rücktrittsrecht** (§ 323 BGB): K kann vom Vertrag zurücktreten nach Fristsetzung.\n\n**4. Verschärfte Haftung** (§ 287 BGB): Im Verzug haftet der Schuldner auch für Zufall (außer wenn der Schaden auch ohne Verzug eingetreten wäre).\n\n**5. Verzugszinsen** (§ 288 BGB): Bei Geldschulden mindestens 5 Prozentpunkte über dem Basiszinssatz p.a. (bei Nicht-Verbrauchergeschäften: 9 Prozentpunkte)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Vollständiges Beispiel: Verzug beim Rasenmäher",
+          "body": "G verkauft K einen Rasenmäher, Lieferung vereinbart für Montag. G liefert nicht. K schickt am Dienstag eine E-Mail: 'Bitte liefern Sie bis Freitag.' G liefert erst 3 Wochen später.\n\n**Verzugsbeginn:** Nicht schon Montag (kein Kalendertermin mit Mahnungsersatz nach § 286 Abs. 2 Nr. 1 BGB, da 'Montag' allein ohne explizite Vereinbarung als feste Frist ausgelegt werden muss – hier Fristsetzung durch K am Dienstag). K hat Mahnung per E-Mail am Dienstag ausgesprochen → Verzug ab Samstag (Freitag abgelaufen, G hat nicht geliefert).\n\n**Schaden:** Mietkosten für Ersatzrasenmäher 150 € → Verzögerungsschaden aus §§ 280 Abs. 1, 2, 286 BGB."
+        }
+      ]
+    },
+    {
+      "id": "vertretenmüssen",
+      "heading": "Vertretenmüssen (§§ 276, 278 BGB): Wann haftet der Schuldner?",
+      "body": "Schadensersatz gibt es nur, wenn der Schuldner die Pflichtverletzung auch **zu vertreten hat** – das ist sozusagen die 'Schuldfrage' im Zivilrecht.\n\n**§ 276 BGB – eigenes Verschulden:**\n\nGrundsätzlich haftet der Schuldner für **Vorsatz und Fahrlässigkeit**.\n- **Vorsatz** = Wissen und Wollen des schädigenden Handelns.\n- **Fahrlässigkeit** (§ 276 Abs. 2 BGB) = außer Achtlassen der im Verkehr erforderlichen Sorgfalt. Maßstab ist ein objektiver 'Durchschnittsmensch' in der jeweiligen Situation.\n- **Grobe Fahrlässigkeit** = besonders schwere Sorgfaltspflichtverletzung (kommt z. B. bei § 300 Abs. 1 BGB zum Tragen: im Gläubigerverzug haftet der Schuldner nur noch für Vorsatz und grobe Fahrlässigkeit).\n\nDie Parteien können vertraglich eine **strengere Haftung** vereinbaren (z. B. Garantie: Haftung auch ohne Verschulden) oder eine **mildere** (z. B. nur grobe Fahrlässigkeit). Grenzen: § 276 Abs. 3 BGB – Vorsatz kann nicht im Voraus erlassen werden.\n\n**§ 278 BGB – Haftung für Erfüllungsgehilfen:**\n\nDer Schuldner muss sich das Verschulden einer Person zurechnen lassen, die er zur Erfüllung seiner Verbindlichkeit einsetzt (sog. **Erfüllungsgehilfe**). Das ist derjenige, der mit dem Wissen und Wollen des Schuldners bei der Erfüllung seiner Pflichten tätig wird.\n\nBeispiel: Maler M beauftragt Hilfskraft H, die beim Streichen fahrlässig eine Drehtür beschädigt. M haftet für das Verschulden von H wie für eigenes Verschulden (§ 278 BGB).\n\n**Wichtiger Unterschied zum Verrichtungsgehilfen (§ 831 BGB):** Der Verrichtungsgehilfe ist im Deliktsrecht relevant (jemand, der in einem Weisungsverhältnis tätig ist). Beim Erfüllungsgehilfen ist kein Weisungsverhältnis nötig; auch ein selbstständiger Subunternehmer kann Erfüllungsgehilfe sein.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Beweislastumkehr – wichtig für die Klausur!",
+          "body": "Nach § 280 Abs. 1 S. 2 BGB wird das Vertretenmüssen des Schuldners **vermutet**. Der Schuldner muss also beweisen, dass er die Pflichtverletzung **nicht** zu vertreten hat. Das ist ein erheblicher Vorteil für den Gläubiger!"
+        },
+        {
+          "kind": "table",
+          "id": "haftung-uebersicht",
+          "title": "Übersicht Haftungsmaßstäbe",
+          "headers": ["Situation", "Haftungsmaßstab", "Rechtsgrundlage"],
+          "rows": [
+            ["Normalfall", "Vorsatz + Fahrlässigkeit", "§ 276 Abs. 1 BGB"],
+            ["Garantie / Beschaffungsgarantie", "Auch ohne Verschulden (Zufall)", "§ 276 Abs. 1 BGB, vertraglich"],
+            ["Im Gläubigerverzug", "Nur Vorsatz + grobe Fahrlässigkeit", "§ 300 Abs. 1 BGB"],
+            ["Schuldnerverzug (für Zufall)", "Auch zufällige Unmöglichkeit", "§ 287 S. 2 BGB"],
+            ["Für Erfüllungsgehilfen", "Wie eigenes Verschulden", "§ 278 BGB"],
+            ["Vorsatz vorauserlassen?", "Nicht möglich", "§ 276 Abs. 3 BGB"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruecktritt",
+      "heading": "Rücktritt (§§ 323 ff. BGB): Den Vertrag rückabwickeln",
+      "body": "**Was ist der Rücktritt?** Der Rücktritt ist ein **Gestaltungsrecht**: Durch einseitige Erklärung (§ 349 BGB) kann eine Partei das ursprüngliche Schuldverhältnis in ein **Rückgewährschuldverhältnis** umwandeln. Das bedeutet: Bereits erbrachte Leistungen müssen zurückgegeben werden.\n\nWichtig: Rücktritt und Schadensersatz schließen sich **nicht** gegenseitig aus. Man kann zurücktreten **und** Schadensersatz verlangen (§ 325 BGB).\n\n**Voraussetzungen des gesetzlichen Rücktritts (§ 323 BGB):**\n\n1. **Gegenseitiger Vertrag (Synallagma)** – Leistung und Gegenleistung stehen in einem Austauschverhältnis (z. B. Kaufvertrag: Ware gegen Geld). Nur bei gegenseitigen Verträgen greift § 323 BGB.\n\n2. **Rücktrittsgrund** – je nach Rechtsgrundlage:\n   - § 323 Abs. 1 BGB: Nicht- oder Schlechtleistung einer fälligen, einredefreien Hauptpflicht\n   - § 324 BGB: Verletzung einer Nebenpflicht (§ 241 Abs. 2 BGB), wenn Festhalten am Vertrag unzumutbar\n   - § 326 Abs. 5 BGB: Unmöglichkeit der Leistung\n\n3. **Fristsetzung** (grundsätzlich erforderlich bei § 323 BGB) – der Gläubiger muss dem Schuldner eine angemessene Nachfrist setzen. Ausnahmen (Frist entbehrlich, § 323 Abs. 2 BGB):\n   - Nr. 1: Schuldner verweigert Leistung ernsthaft und endgültig\n   - Nr. 2: Termin war für den Gläubiger wesentlich (relatives Fixgeschäft)\n   - Nr. 3: Besondere Umstände (insb. Interessenabwägung)\n   Bei Nebenpflichtverletzung (§ 324 BGB) und Unmöglichkeit (§ 326 Abs. 5 BGB) ist **keine Frist** erforderlich.\n\n4. **Erheblichkeit** – bei Schlechtleistung: die Pflichtverletzung darf nicht unerheblich sein (§ 323 Abs. 5 S. 2 BGB). Eine bloße Kleinigkeit rechtfertigt keinen Rücktritt vom ganzen Vertrag.\n\n5. **Kein Ausschluss** – § 323 Abs. 6 BGB: Rücktritt ausgeschlossen, wenn der Gläubiger allein oder weit überwiegend für den Rücktrittsgrund verantwortlich ist oder wenn Gläubigerverzug besteht und Schuldner die Unmöglichkeit nicht zu vertreten hat.\n\n6. **Rücktrittserklärung** (§ 349 BGB) – empfangsbedürftige Willenserklärung gegenüber dem Vertragspartner.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Rücktritt setzt KEIN Vertretenmüssen voraus!",
+          "body": "Anders als beim Schadensersatz braucht man für den Rücktritt **kein Verschulden** des Schuldners. Auch wenn der Schuldner die Pflichtverletzung gar nicht zu vertreten hat (z. B. höhere Gewalt), kann der Gläubiger zurücktreten (nur § 323 Abs. 6 und § 326 Abs. 5 BGB beachten)."
+        },
+        {
+          "kind": "definition",
+          "title": "Das Rückgewährschuldverhältnis (§ 346 BGB)",
+          "body": "Nach dem Rücktritt müssen die empfangenen Leistungen **zurückgewährt** werden (§ 346 Abs. 1 BGB), außerdem gezogene Nutzungen herausgegeben werden.\n\nIst Rückgewähr nicht möglich (z. B. Sache verbraucht, weiterverkauft, beschädigt), ist **Wertersatz** zu leisten (§ 346 Abs. 2 BGB), es sei denn, der Mangel hätte sich erst im Rahmen der bestimmungsgemäßen Verwendung gezeigt (§ 346 Abs. 3 S. 1 Nr. 3 BGB)."
+        }
+      ]
+    },
+    {
+      "id": "stoerung-geschaeftsgrundlage",
+      "heading": "Störung der Geschäftsgrundlage (§ 313 BGB)",
+      "body": "**Das Problem:** Was, wenn beide Parteien von einer bestimmten Grundlage ausgegangen sind, die sich als falsch herausstellt oder sich verändert – obwohl niemand eine Pflichtverletzung begangen hat?\n\nBeispiel: U und Bauunternehmer B schließen einen Vertrag über den Bau eines Hauses für 150.000 €. Beide gehen davon aus, dass keine besondere Grundwassersicherung nötig ist. Durch unvorhergesehene Industrieschließungen in der Gegend steigt der Grundwasserspiegel. Jetzt wären 100.000 € Mehrkosten nötig.\n\n**Voraussetzungen des § 313 BGB:**\n\n**Alternative 1: Objektive Geschäftsgrundlage (§ 313 Abs. 1 BGB)**\n- Umstände, die zwar nicht Vertragsinhalt geworden sind, aber von beiden Parteien als Grundlage vorausgesetzt wurden\n- Diese Umstände haben sich wesentlich verändert\n- Bei Kenntnis hätten die Parteien den Vertrag nicht oder anders geschlossen\n- Festhalten am Vertrag ist unzumutbar (Risikoverteilung beachten!)\n\n**Alternative 2: Subjektive Geschäftsgrundlage (§ 313 Abs. 2 BGB)**\n- Gemeinsame Vorstellungen der Parteien, die sich als falsch herausstellen\n- Typischer Fall: **beiderseitiger Motivirrtum**\n- Beispiel: Beide gehen irrtümlich von einem niedrigen Grundwasserstand aus\n\n**Abgrenzung zur wirtschaftlichen Unmöglichkeit:** § 313 BGB gilt nur, wenn die Gegenleistung sich nicht verändert (der Aufwand steigt, die Vergütung bleibt). Wenn die Gegenleistung sich ändert, könnte § 275 Abs. 2 BGB in Betracht kommen. Im Zweifelsfall: § 313 BGB prüfen.\n\n**Rechtsfolge:** Primär **Vertragsanpassung** auf das, was die Parteien vereinbart hätten, wenn sie die veränderten Umstände gekannt hätten. Nur wenn Anpassung nicht möglich oder unzumutbar: **Rücktrittsrecht** (bei Dauerschuldverhältnissen: Kündigung).",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Subsidiarität des § 313 BGB",
+          "body": "§ 313 BGB gilt nur subsidiär. Wenn die veränderten Umstände schon durch Auslegung des Vertrages gelöst werden können oder wenn § 275 BGB eingreift, bleibt für § 313 BGB kein Raum. Außerdem ist die eigene Risikosphäre zu beachten: Wer das wirtschaftliche Risiko übernommen hat, kann sich nicht auf § 313 BGB berufen."
+        }
+      ]
+    },
+    {
+      "id": "befreiung-gegenleistung",
+      "heading": "Befreiung von der Gegenleistung (§ 326 BGB)",
+      "body": "**Das Problem beim gegenseitigen Vertrag:** Wenn eine Seite nicht leisten kann – muss die andere Seite trotzdem ihre Gegenleistung erbringen?\n\nBeispiel: K kauft bei G einen Rasenmäher. Bevor G liefert, verbrennt der Rasenmäher. K hat bereits bezahlt. Muss K zahlen? Bekommt er sein Geld zurück?\n\n**§ 326 Abs. 1 BGB – Grundregel:** Wird der Schuldner von seiner Leistungspflicht befreit (§ 275 BGB), **erlischt auch die Gegenleistungspflicht** des anderen. K muss also nicht zahlen – oder bekommt das Gezahlte zurück (§ 326 Abs. 4 BGB i.V.m. §§ 346 ff. BGB).\n\n**Ausnahmen – Gegenleistungspflicht bleibt bestehen:**\n\n- **§ 326 Abs. 2 S. 1 Alt. 1 BGB:** Der Gläubiger hat den Unmöglichkeitsgrund **allein oder weit überwiegend zu vertreten** → er muss trotzdem zahlen (behält aber ggf. Rücktrittsrecht nach § 326 Abs. 5 BGB).\n\n- **§ 326 Abs. 2 S. 1 Alt. 2 BGB:** Die Unmöglichkeit tritt ein, während sich der Gläubiger im **Gläubigerverzug** befand und der Schuldner die Unmöglichkeit nicht zu vertreten hat → Gegenleistungspflicht bleibt.\n\n- **§ 326 Abs. 3 BGB (Stellvertretendes commodum, § 285 BGB):** Wenn der Gläubiger das stellvertretende commodum herausverlangt (z. B. Versicherungsleistung statt der zerstörten Sache), muss er die Gegenleistung erbringen (gekürzt um den Mehrwert des Ersatzes).\n\n**Rücktrittsrecht nach § 326 Abs. 5 BGB:** Bei Unmöglichkeit kann der Gläubiger auch zurücktreten (ohne Fristsetzung, mit den Einschränkungen des § 323 Abs. 6 BGB).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wer ist Schuldner, wer ist Gläubiger?",
+          "body": "Bei § 326 BGB richtet sich die Bezeichnung nach der **unmöglich gewordenen Leistung**: Wessen Leistung unmöglich geworden ist, der ist der 'Schuldner' im Sinne dieser Norm. Die andere Seite ist der 'Gläubiger'. Das kann im gegenseitigen Vertrag verwirrend sein, weil jede Partei für ihre eigene Pflicht gleichzeitig Schuldner und für die Pflicht der anderen Gläubiger ist."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "lst-fc-1",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Was sind die vier Erscheinungsformen der Leistungsstörung?",
+      "back": "1. Unmöglichkeit (§ 275 BGB)\n2. Schlechtleistung / Nebenpflichtverletzung (§ 280 I i.V.m. § 241 II BGB)\n3. Schuldnerverzug (§§ 286 ff. BGB)\n4. Gläubigerverzug (§§ 293 ff. BGB)"
+    },
+    {
+      "id": "lst-fc-2",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Was ist der Unterschied zwischen § 275 Abs. 1 und Abs. 2 BGB?",
+      "back": "§ 275 Abs. 1 BGB (absolute Unmöglichkeit): Leistungspflicht erlischt automatisch von Gesetzes wegen.\n§ 275 Abs. 2 BGB (faktische Unmöglichkeit): Schuldner hat ein Leistungsverweigerungsrecht (Einrede) – er muss es geltend machen; der Aufwand muss in grobem Missverhältnis zum Leistungsinteresse des Gläubigers stehen."
+    },
+    {
+      "id": "lst-fc-3",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Wann ist die Mahnung beim Schuldnerverzug entbehrlich?",
+      "back": "§ 286 Abs. 2 BGB: Mahnung entbehrlich wenn\n1. Leistungszeit nach dem Kalender bestimmt (Nr. 1)\n2. Leistungszeit nach dem Kalender berechenbar und Ereignis eingetreten (Nr. 2)\n3. Schuldner verweigert Leistung ernsthaft und endgültig (Nr. 3)\n4. Besondere Gründe (sofortiger Verzugseintritt gerechtfertigt) (Nr. 4)"
+    },
+    {
+      "id": "lst-fc-4",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Was ist der Unterschied zwischen Schadensersatz neben und statt der Leistung?",
+      "back": "**Neben der Leistung** (§ 280 Abs. 1 BGB): Gläubiger will weiterhin Hauptleistung, aber Ersatz für Begleitschäden (z. B. beschädigte Vase beim Handwerker).\n**Statt der Leistung** (§§ 281–283 BGB): Gläubiger gibt Hauptleistung auf und will stattdessen Geldersatz. Grundsätzlich Fristsetzung erforderlich (Ausnahme: § 283 BGB bei Unmöglichkeit)."
+    },
+    {
+      "id": "lst-fc-5",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Setzt der Rücktritt nach § 323 BGB ein Verschulden des Schuldners voraus?",
+      "back": "Nein! Der Rücktritt (§§ 323 ff. BGB) setzt kein Vertretenmüssen voraus. Er ist ein Gestaltungsrecht, das allein von der objektiven Pflichtverletzung abhängt. Schadensersatz hingegen erfordert Vertretenmüssen (§ 280 Abs. 1 S. 2 BGB)."
+    },
+    {
+      "id": "lst-fc-6",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Was ist ein Erfüllungsgehilfe (§ 278 BGB)?",
+      "back": "Eine Person, die der Schuldner mit Wissen und Wollen zur Erfüllung seiner Verbindlichkeit einsetzt. Ihr Verschulden wird dem Schuldner wie eigenes Verschulden zugerechnet. Kein Weisungsverhältnis erforderlich – auch ein selbstständiger Subunternehmer kann Erfüllungsgehilfe sein. Setzt ein bestehendes Schuldverhältnis voraus."
+    },
+    {
+      "id": "lst-fc-7",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Was ist die Rechtsfolge des § 326 Abs. 1 BGB?",
+      "back": "Bei Unmöglichkeit der Schuldnerleistung (§ 275 BGB) erlischt automatisch auch die Gegenleistungspflicht des Gläubigers. Wurde bereits gezahlt, kann der Gläubiger das Gezahlte nach §§ 326 Abs. 4, 346 ff. BGB zurückfordern."
+    },
+    {
+      "id": "lst-fc-8",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Was sind die Voraussetzungen der Störung der Geschäftsgrundlage (§ 313 BGB)?",
+      "back": "1. Geschäftsgrundlage (objektiv: gemeinsam vorausgesetzte Umstände; oder subjektiv: beiderseitiger Motivirrtum)\n2. Wesentliche Veränderung der Umstände / Vorstellungen\n3. Unzumutbarkeit des Festhaltens am Vertrag unter Berücksichtigung der Risikoverteilung\nRechtsfolge: primär Vertragsanpassung, nur subsidiär Rücktritt/Kündigung."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "lst-q1",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "leicht",
+      "prompt": "Bei welcher Form der Unmöglichkeit erlischt die Leistungspflicht automatisch, ohne dass der Schuldner etwas tun muss?",
+      "options": [
+        "§ 275 Abs. 1 BGB (absolute Unmöglichkeit)",
+        "§ 275 Abs. 2 BGB (faktische Unmöglichkeit)",
+        "§ 275 Abs. 3 BGB (persönliche Unmöglichkeit)",
+        "§ 313 BGB (Störung der Geschäftsgrundlage)"
+      ],
+      "correct": [0],
+      "explanation": "Nur bei § 275 Abs. 1 BGB erlischt die Leistungspflicht kraft Gesetzes (ipso iure). Bei Abs. 2 und 3 handelt es sich um Einreden, die der Schuldner aktiv geltend machen muss."
+    },
+    {
+      "kind": "mc",
+      "id": "lst-q2",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "mittel",
+      "prompt": "K kauft bei V einen bestimmten Oldtimer (Stückschuld). Vor Übergabe wird das Auto von einem Dritten D gestohlen und vollständig zerlegt. V weigert sich zu liefern. Welche Norm schließt Vs Leistungspflicht aus?",
+      "options": [
+        "§ 275 Abs. 1 BGB – absolute (tatsächliche) Unmöglichkeit",
+        "§ 275 Abs. 2 BGB – faktische Unmöglichkeit",
+        "§ 275 Abs. 3 BGB – persönliche Unmöglichkeit",
+        "§ 313 BGB – Störung der Geschäftsgrundlage"
+      ],
+      "correct": [1],
+      "explanation": "Das Auto existiert noch (als Einzelteile), aber seine Wiederherstellung wäre unverhältnismäßig teuer. Das ist faktische Unmöglichkeit nach § 275 Abs. 2 BGB. V muss die Einrede geltend machen. § 275 Abs. 1 BGB wäre nur gegeben, wenn das Auto physisch vollständig untergegangen wäre."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lst-q3",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "leicht",
+      "prompt": "Für einen Schadensersatzanspruch aus § 280 Abs. 1 BGB muss der Gläubiger beweisen, dass der Schuldner die Pflichtverletzung zu vertreten hat.",
+      "answer": false,
+      "explanation": "Falsch! Nach § 280 Abs. 1 S. 2 BGB wird das Vertretenmüssen des Schuldners vermutet. Der Schuldner muss sich entlasten – also beweisen, dass er die Pflichtverletzung nicht zu vertreten hat."
+    },
+    {
+      "kind": "mc",
+      "id": "lst-q4",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "mittel",
+      "prompt": "Welche zusätzlichen Voraussetzungen verlangt § 281 BGB gegenüber dem Grundtatbestand des § 280 Abs. 1 BGB? (Mehrfachauswahl möglich)",
+      "options": [
+        "Fristsetzung (oder deren Entbehrlichkeit)",
+        "Vertretenmüssen des Schuldners",
+        "Gegenseitiger Vertrag",
+        "Der Gläubiger darf die Hauptleistung nicht mehr wollen (Schadensersatz statt der Leistung)"
+      ],
+      "correct": [0],
+      "multiple": true,
+      "explanation": "§ 281 BGB verlangt zusätzlich zu § 280 Abs. 1 BGB eine fruchtlos abgelaufene angemessene Nachfrist. Das Vertretenmüssen gilt schon über § 280 Abs. 1 BGB. Das Synallagma ist keine Voraussetzung des § 281 BGB selbst. Die Ablehnung der Hauptleistung ist keine formelle Voraussetzung, ergibt sich aber aus der Natur des Anspruchs."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lst-q5",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "mittel",
+      "prompt": "Der Rücktritt nach § 323 BGB und ein Schadensersatzanspruch aus §§ 280, 281 BGB schließen sich gegenseitig aus.",
+      "answer": false,
+      "explanation": "Falsch! § 325 BGB stellt ausdrücklich klar, dass das Rücktrittsrecht durch Schadensersatzverlangen nicht ausgeschlossen wird. Beide Rechte können nebeneinander ausgeübt werden."
+    },
+    {
+      "kind": "mc",
+      "id": "lst-q6",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "mittel",
+      "prompt": "Maler M streicht das Büro von O. Dabei beschädigt er fahrlässig eine Drehtür. Auf welcher Rechtsgrundlage kann O Schadensersatz für die Drehtür verlangen?",
+      "options": [
+        "§§ 280 Abs. 1, 241 Abs. 2 BGB (Nebenpflichtverletzung)",
+        "§§ 280 Abs. 1, 2, 286 BGB (Verzögerungsschaden)",
+        "§§ 280 Abs. 1, 3, 281 BGB (Schadensersatz statt der Leistung nach Fristsetzung)",
+        "§ 275 Abs. 1 BGB (Unmöglichkeit)"
+      ],
+      "correct": [0],
+      "explanation": "Die Beschädigung der Drehtür ist eine Verletzung der Schutzpflicht aus § 241 Abs. 2 BGB (Nebenpflicht). Schadensersatzanspruch ergibt sich aus § 280 Abs. 1 BGB i.V.m. § 241 Abs. 2 BGB. Keine Fristsetzung erforderlich, da es sich um Schadensersatz neben (nicht statt) der Leistung handelt."
+    },
+    {
+      "kind": "mc",
+      "id": "lst-q7",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "schwer",
+      "prompt": "G verkauft M 40 Farbeimer. Unterwegs laufen 12 Eimer durch Gs Verschulden aus. M lehnt Annahme der restlichen 28 Eimer ab. Welche Norm regelt, ob G noch den vollen Kaufpreis verlangen kann?",
+      "options": [
+        "§ 326 Abs. 1 BGB – Befreiung von der Gegenleistung bei Unmöglichkeit",
+        "§ 280 Abs. 1 BGB – Schadensersatz wegen Pflichtverletzung",
+        "§ 323 Abs. 5 S. 1 BGB – Rücktritt bei Teilleistung",
+        "§ 275 Abs. 2 BGB – faktische Unmöglichkeit"
+      ],
+      "correct": [0, 2],
+      "multiple": true,
+      "explanation": "Die 12 Eimer sind durch Gs Verschulden untergegangen → Teilunmöglichkeit. § 326 Abs. 1 S. 1 BGB: G verliert anteilig seinen Anspruch auf den Kaufpreis für die 12 Eimer (Befreiung von der Gegenleistung). Da M an den 28 Eimern allein kein Interesse hat (Totalschaden des Auftrags), kann M nach § 323 Abs. 5 S. 1 BGB vom gesamten Vertrag zurücktreten (kein Interesse an Teilleistung). Da G die Unmöglichkeit zu vertreten hat, greift § 326 Abs. 2 BGB nicht."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lst-q8",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "mittel",
+      "prompt": "Für den Rücktritt nach § 324 BGB (Verletzung einer Nebenpflicht) ist eine Fristsetzung erforderlich.",
+      "answer": false,
+      "explanation": "Falsch! Bei § 324 BGB (Verletzung einer Nebenpflicht nach § 241 Abs. 2 BGB) ist keine Fristsetzung erforderlich, weil eine Frist hier keinen Sinn ergibt – die Verletzung ist bereits geschehen. Voraussetzung ist, dass das Festhalten am Vertrag für den Gläubiger unzumutbar ist."
+    },
+    {
+      "kind": "freetext",
+      "id": "lst-q9",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "schwer",
+      "prompt": "T ist als Ingenieur bei W beschäftigt und soll an der Entwicklung bewaffnungsfähiger Drohnen mitarbeiten. Dies ist mit seinem Gewissen als Pazifist unvereinbar. Er bleibt der Arbeit fern. Hat T einen Anspruch auf Lohn? Skizzieren Sie den Lösungsansatz.",
+      "sampleAnswer": "T könnte einen Anspruch auf Lohn gegen W aus § 611a Abs. 2 BGB haben (Arbeitnehmer: Vergütungsanspruch). Fraglich ist, ob T seinerseits zur Leistung verpflichtet ist. W könnte ein Leistungsverweigerungsrecht nach § 275 Abs. 3 BGB geltend machen (persönliche Unmöglichkeit). Die Leistung des T ist höchstpersönlich und an seiner Person haftend. T müsste nachweisen, dass ihm die Leistung aufgrund eines ernsthaften Gewissenskonflikts unzumutbar ist (Abwägung mit Interessen von W). Kommt § 275 Abs. 3 BGB zur Anwendung (T macht die Einrede geltend), erlischt Ts Leistungspflicht – und damit nach § 326 Abs. 1 BGB auch Ws Lohnzahlungspflicht. T hat dann keinen Lohnanspruch. Ausnahme: § 326 Abs. 2 BGB greift nicht, da W den Gewissenskonflikt nicht verursacht hat.",
+      "keywords": ["§ 275 Abs. 3 BGB", "persönliche Unmöglichkeit", "Gewissenskonflikt", "Einrede", "§ 326 Abs. 1 BGB", "Lohnverlust"],
+      "explanation": "§ 275 Abs. 3 BGB erfasst Fälle, in denen persönliche Umstände des Schuldners (hier: Gewissenskonflikt des Pazifisten T) eine höchstpersönliche Leistung unzumutbar machen. T muss die Einrede ausdrücklich erheben. Rechtsfolge: § 326 Abs. 1 BGB → kein Lohn."
+    },
+    {
+      "kind": "mc",
+      "id": "lst-q10",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "schwer",
+      "prompt": "B soll einen Verkaufswagen an H liefern. B ist im Gläubigerverzug (er hat die Annahme verweigert). Auf dem Heimweg verursacht H durch einfache Fahrlässigkeit einen Unfall, der den Wagen zerstört. Hat H noch Anspruch auf den Kaufpreis?",
+      "options": [
+        "Ja, nach § 326 Abs. 2 S. 1 Alt. 2 BGB bleibt der Kaufpreisanspruch erhalten",
+        "Nein, weil H die Unmöglichkeit fahrlässig selbst verursacht hat",
+        "Ja, weil H nur wegen Gläubigerverzugs haftet, der Wagen aber durch Zufall zerstört wurde",
+        "Nein, weil § 275 Abs. 1 BGB die Kaufpreispflicht automatisch zum Erlöschen bringt"
+      ],
+      "correct": [0],
+      "explanation": "§ 326 Abs. 2 S. 1 Alt. 2 BGB: Der Schuldner (H) behält seinen Anspruch auf die Gegenleistung, wenn die Unmöglichkeit eintritt während der Gläubiger (B) im Annahmeverzug ist UND H die Unmöglichkeit nicht zu vertreten hat. Im Gläubigerverzug haftet H nach § 300 Abs. 1 BGB nur noch für Vorsatz und grobe Fahrlässigkeit. Einfache Fahrlässigkeit reicht nicht – also hat H die Unmöglichkeit nicht zu vertreten. Ergebnis: H behält seinen Kaufpreisanspruch."
+    },
+    {
+      "kind": "mc",
+      "id": "lst-q11",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "mittel",
+      "prompt": "Was ist das 'stellvertretende commodum' (§ 285 BGB)?",
+      "options": [
+        "Der Ersatz (z. B. Versicherungsleistung), den der Schuldner wegen des unmöglich gewordenen Leistungsgegenstands von Dritten erhält",
+        "Der Schadensersatz, den der Gläubiger nach § 280 BGB verlangen kann",
+        "Das Recht des Schuldners, statt der unmöglichen Leistung eine andere zu erbringen",
+        "Der Anspruch des Schuldners auf Befreiung von der Gegenleistung"
+      ],
+      "correct": [0],
+      "explanation": "§ 285 BGB: Wenn der Schuldner für den Umstand, der zur Unmöglichkeit geführt hat, einen Ersatz erhalten hat (z. B. Versicherungsleistung für das verbrannte Auto), kann der Gläubiger diesen Ersatz herausverlangen. Der Gläubiger muss dann aber die Gegenleistung erbringen (§ 326 Abs. 3 BGB)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lst-q12",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "difficulty": "leicht",
+      "prompt": "§ 313 BGB (Störung der Geschäftsgrundlage) führt in erster Linie zu einem Rücktrittsrecht.",
+      "answer": false,
+      "explanation": "Falsch! Die primäre Rechtsfolge des § 313 BGB ist die Vertragsanpassung – der Vertrag wird an die veränderten Umstände angepasst. Ein Rücktrittsrecht (bei Dauerschuldverhältnissen: Kündigung) besteht nur subsidiär, wenn eine Anpassung nicht möglich oder einer Partei nicht zumutbar ist."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "lst-ex-6-1",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Besprechungsfall 6.1 – Der neue Rasenmäher der Gärtnerei",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "K hat sich mit einem Gärtnereibetrieb selbstständig gemacht. Für einen neuen Auftrag hat er bei G einen gebrauchten Rasenmäher Probe gefahren und bereits bezahlt. Vereinbart ist, dass der Rasenmäher durch G in der Folgewoche geliefert wird. Leider wird der Rasenmäher jedoch am Vortag durch einen Wasserschaden bei G zerstört. Dies teilt G dem K umgehend mit und sie einigen sich, dass G einen neuen Rasenmäher aus seinem Lager liefert. Der Rasenmäher soll ebenfalls am Folgetag bereits geliefert werden. Leider hatte G jedoch übersehen, dass das letzte Exemplar an einen anderen Kunden bereits verkauft worden war. Sie einigen sich, dass er umgehend einen neuen Rasenmäher bestellt; erst drei Wochen später bestellt er den Rasenmäher und liefert ihn an K; der sich jedoch inzwischen einen anderen Rasenmäher mieten musste, um den Auftrag zu erfüllen. Außerdem verweigert er die Annahme, da er zwischenzeitlich ein günstigeres Angebot gefunden hat.\n\nWelche Formen einer Leistungsstörung liegen vor?\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn G zunächst einen Rasenmäher mit einem leistungsschwächeren Motor, als vereinbart, geliefert hätte und bei der zweiten Lieferung sodann das Einfahrtstor des K beschädigt hätte?",
+      "hint": "Prüfe chronologisch jede Stufe des Sachverhalts: (1) Zerstörung des ursprünglichen Rasenmähers (Stückschuld?), (2) Einigung auf Ersatzlieferung (Gattungsschuld?), (3) Verspätete Bestellung/Lieferung (Verzug?), (4) Verweigerung der Annahme durch K (Gläubigerverzug?). Besonderes Schuldrecht ist außer Betracht zu lassen.",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**I. Zerstörung des ursprünglichen Rasenmähers (Wasserschaden)**\n\nK könnte gegen G einen Anspruch auf Übereignung und Übergabe des ursprünglich gekauften Rasenmähers aus § 433 Abs. 1 S. 1 BGB haben.\n\nEin Kaufvertrag wurde wirksam geschlossen. Die Lieferpflicht des G ist durch den Wasserschaden erloschen. Beim verkauften gebrauchten Rasenmäher handelt es sich um eine **Stückschuld** (eine konkrete, individualisierte Sache). Der Rasenmäher ist durch den Wasserschaden dauerhaft und vollständig zerstört worden. Damit ist die Leistung für G unmöglich: Niemand kann diesen spezifischen Rasenmäher liefern, da er nicht mehr existiert. Es liegt eine **objektive, tatsächliche Unmöglichkeit** nach **§ 275 Abs. 1 BGB** vor. Die Leistungspflicht des G erlischt automatisch.\n\nErgebnis: K hat keinen Anspruch auf Lieferung des ursprünglichen Rasenmähers mehr. Die Parteien haben sich jedoch auf Ersatzlieferung geeinigt (neues Schuldverhältnis).\n\n**II. Verspätete Lieferung des Ersatzrasenmähers – Schuldnerverzug**\n\nK könnte gegen G einen Anspruch auf Ersatz der Mietkosten (Verzögerungsschaden) aus **§§ 280 Abs. 1, 2, 286 BGB** haben.\n\n*Schuldverhältnis:* Kaufvertrag (Einigung auf Ersatzlieferung) besteht.\n\n*Fälliger Anspruch:* G war verpflichtet, umgehend einen neuen Rasenmäher zu bestellen und zu liefern.\n\n*Mahnung entbehrlich?* Eine genaue Mahnung durch K ist nicht beschrieben, aber G hat sich schon zur 'umgehenden' Bestellung verpflichtet. Der Zeitpunkt war zumindest durch die Umstände bestimmbar. G hat erst drei Wochen später bestellt – das ist offensichtlich verspätet. K könnte zumindest durch das Zuwarten eine konkludente Mahnung gesetzt haben, oder Verzug trat durch die offensichtliche Weigerung/Untätigkeit ein (§ 286 Abs. 2 Nr. 3 BGB analog). Jedenfalls ist spätestens nach angemessener Zeit Verzug eingetreten.\n\n*Vertretenmüssen:* G hat die Verspätung fahrlässig zu vertreten (er hatte das Exemplar übersehen und dann drei Wochen ohne Grund gezögert). Die Vermutung des § 280 Abs. 1 S. 2 BGB ist nicht widerlegt.\n\n*Schaden:* Die Mietkosten für den Ersatzrasenmäher sind kausal durch den Verzug entstanden.\n\nErgebnis: K hat gegen G einen Anspruch auf Ersatz der Mietkosten aus §§ 280 Abs. 1, 2, 286 BGB.\n\n**III. Verweigerung der Annahme durch K – Gläubigerverzug**\n\nK verweigert die Annahme des (nunmehr gelieferten) Rasenmähers, weil er ein günstigeres Angebot gefunden hat. Darin liegt ein **Gläubigerverzug** des K nach §§ 293 ff. BGB. G hat die Leistung ordnungsgemäß angeboten (§ 294 BGB). K hat die Annahme verweigert. G muss die Leistung nicht mehr erbringen und kann ggf. Schadensersatz verlangen. K ist nicht zur Annahme 'verpflichtet' im technischen Sinne (Annahmepflicht muss vertraglich vereinbart sein), aber er verliert seine Schadensersatzrechte und G haftet nur noch für Vorsatz und grobe Fahrlässigkeit (§ 300 Abs. 1 BGB).\n\n**IV. Abwandlung**\n\n*Lieferung mit leistungsschwächerem Motor:* Das ist eine **Schlechtleistung** (Lieferung mangelhafter Ware). G verletzt seine Pflicht aus § 433 Abs. 1 S. 2 BGB. K hat Schadensersatzansprüche aus § 280 Abs. 1 BGB und Gewährleistungsrechte (hier außer Betracht).\n\n*Beschädigung des Einfahrtstors:* G verletzt beim zweiten Lieferversuch die **Schutzpflicht** aus § 241 Abs. 2 BGB (Nebenpflicht). Schadensersatzanspruch des K aus **§§ 280 Abs. 1, 241 Abs. 2 BGB** (Schadensersatz neben der Leistung, keine Fristsetzung erforderlich). G hat dabei durch sein Verhalten fahrlässig gehandelt (§ 276 BGB). K kann Reparaturkosten für das Tor verlangen.\n\nAußerdem kann K ggf. nach **§ 324 BGB** zurücktreten (Nebenpflichtverletzung macht Festhalten am Vertrag unzumutbar), wenn die Beschädigung so schwerwiegend ist."
+    },
+    {
+      "id": "lst-ex-6-2",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Besprechungsfall 6.2 – Der Weiterverkauf des neuen alten Oldtimer",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "R ist gerade frisch verrentet und möchte sich einen Oldtimer Daimler Benz 280 SE, Typ W 111, Baujahr 1971, zum Preis von 330.000 Euro kaufen. Er einigt sich mit seinem Nachbarn N und vereinbart, den Oldtimer in der Folgewoche abzuholen und den Kaufpreis zu überweisen. Als R bei N erscheint, ist die Polizei bereits vor Ort und hat das Auto beschlagnahmt. N hatte den Oldtimer von D erworben, der ihn wiederum dem Eigentümer E vor fast 10 Jahren gestohlen hatte. E weigert sich, den Oldtimer an N zu veräußern.\n\nHat R einen Anspruch auf Übereignung und Übergabe des Oldtimers gegenüber N?\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn es sich um ein Auto zum Preis 7.000 Euro (Wert: 5.000 Euro) handelt, das N gehört hätte, jedoch D den Oldtimer gestohlen und vollständig in seine Einzelteile zerlegt hätte, bevor N ihn von der Polizei zurückerhalten hätte und eine Instandsetzung 8.000 Euro kosten würde?",
+      "hint": "Prüfe zunächst, ob ein wirksamer Kaufvertrag vorliegt (§ 433 BGB). Dann: Kann N übereignen? E ist Eigentümer und weigert sich. Welche Form der Unmöglichkeit liegt vor? Für die Abwandlung: Ist die Sache noch vorhanden?",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Hauptfall: Anspruch des R gegen N auf Übereignung und Übergabe aus § 433 Abs. 1 S. 1 BGB**\n\nObersatz: R könnte gegen N einen Anspruch auf Übereignung und Übergabe des Oldtimers aus § 433 Abs. 1 S. 1 BGB haben.\n\n*Anspruch entstanden:* R und N haben sich über Kaufgegenstand und Preis geeinigt. Ein wirksamer Kaufvertrag i.S.d. § 433 BGB ist zustande gekommen. Der Anspruch auf Übereignung und Übergabe ist entstanden.\n\n*Anspruch erloschen – Unmöglichkeit (§ 275 Abs. 1 BGB)?*\n\nDer Anspruch könnte gem. § 275 Abs. 1 BGB erloschen sein. Voraussetzung ist, dass die Leistung objektiv oder subjektiv unmöglich ist.\n\nDie Übereignung setzt voraus, dass N dem R Eigentum verschaffen kann. N ist nicht Eigentümer des Oldtimers – der wahre Eigentümer ist E. E wurde durch den Diebstahl des D nicht Eigentümer. Da D das gestohlene Auto an N verkauft hat, konnte N nach § 935 BGB kein Eigentum erwerben (kein gutgläubiger Erwerb bei gestohlenen Sachen). Eigentümer ist weiterhin E.\n\nDa der Oldtimer beschlagnahmt ist und E sich weigert, sein Eigentum an N zu übertragen, kann N dem R das Eigentum nicht verschaffen. Es liegt eine **subjektive (rechtliche) Unmöglichkeit** nach **§ 275 Abs. 1 BGB** vor: N (der Schuldner) kann die Leistung – Übereignung – dauerhaft nicht erbringen, weil er selbst kein Eigentum hat und E die Übertragung verweigert.\n\nSomit ist die Leistungspflicht des N nach § 275 Abs. 1 BGB automatisch erloschen.\n\n*Ergebnis:* R hat keinen Anspruch auf Übereignung und Übergabe des Oldtimers gegen N.\n\n*Hinweis auf Folgen:* R könnte ggf. Schadensersatz statt der Leistung aus §§ 280 Abs. 1, 3, 283 BGB verlangen (N hat die Unmöglichkeit zu vertreten, wenn er wusste oder hätte wissen müssen, dass D das Auto gestohlen hatte). Außerdem Rücktrittsrecht nach § 326 Abs. 5 BGB, Rückzahlung bereits geleisteter Beträge.\n\n**Abwandlung: Faktische Unmöglichkeit (§ 275 Abs. 2 BGB)**\n\nObersatz: R könnte gegen N einen Anspruch auf Übereignung und Übergabe eines funktionsfähigen Autos aus § 433 Abs. 1 S. 1 BGB haben.\n\nHier *gehört das Auto dem N* (er hat es von der Polizei zurückerhalten). Das Auto existiert noch (als Einzelteile). Eine absolute Unmöglichkeit nach § 275 Abs. 1 BGB liegt nicht vor, da das Auto als Ganzes noch identifizierbar und wiederherstellbar ist.\n\nN macht jedoch geltend, die Instandsetzung (8.000 €) sei unverhältnismäßig. N könnte ein Leistungsverweigerungsrecht nach **§ 275 Abs. 2 BGB** haben. Voraussetzung: Der Aufwand für die Leistungserbringung steht in einem **groben Missverhältnis** zum Leistungsinteresse des Gläubigers.\n\nKaufpreis: 7.000 €; Wert des Autos: 5.000 €; Instandsetzungskosten: 8.000 €. Der Aufwand der Instandsetzung (8.000 €) übersteigt sogar den vereinbarten Kaufpreis (7.000 €) erheblich und ist mehr als das 1,5-fache des eigentlichen Sachwerts (5.000 €). Dies begründet ein grobes Missverhältnis. N kann die **Einrede** des § 275 Abs. 2 BGB geltend machen.\n\nSobald N die Einrede erhebt, ist er von der Leistungspflicht befreit. § 326 Abs. 1 BGB: Damit erlischt auch Rs Gegenleistungspflicht (Kaufpreiszahlung). R kann Rücktrittsrecht nach § 326 Abs. 5 BGB ausüben.\n\n*Ergebnis:* R hat gegen N keinen Anspruch auf Übereignung des Autos, sofern N die Einrede des § 275 Abs. 2 BGB erhebt."
+    },
+    {
+      "id": "lst-ex-6-3",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Besprechungsfall 6.3 – Das Haus und das gestiegene Grundwasser",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "U hat ein Grundstück erworben, auf dem er ein Haus errichten und später weiterverkaufen möchte. U einigt sich mit Bauunternehmer B, der das Haus samt Fundament zum Gesamtpreis von 150.000 Euro errichten soll. In den Planungen gehen beide davon aus, dass keine besonderen Vorsichtsmaßnahmen in Bezug auf das Grundwasser zu treffen sind. Leider kommt es zu Verzögerungen im Genehmigungsverfahren und als B endlich anfangen kann, das Fundament zu gießen, stellt sich heraus, dass durch Industrieschließungen in der Umgebung der Grundwasserspiegel in der Zwischenzeit gestiegen ist. Hierdurch müsste B das Fundament ändern, was zu Mehrkosten in der Herstellung von 100.000 Euro führen würde. B teilt U mit, dass er den Vertrag nicht erfüllen könne, zumindest nicht ohne Übernahme der Mehrkosten. U lehnt ab.\n\nHat U einen Anspruch auf Erstellung des Hauses gegenüber B?\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn U und B von einem alten Grundwasserspiegel ausgegangen waren, als sie den Bauvertrag geschlossen hatten?",
+      "hint": "Prüfe: (1) Liegt absolute Unmöglichkeit (§ 275 Abs. 1) vor? Das Haus kann gebaut werden – nur teurer. (2) Liegt faktische Unmöglichkeit (§ 275 Abs. 2) vor? Vergleiche Aufwand mit Leistungsinteresse. (3) Kann § 313 BGB (Störung der Geschäftsgrundlage) helfen? Unterscheide: Hauptfall (Veränderung nach Vertragsschluss = § 313 Abs. 1) vs. Abwandlung (Irrtum bei Vertragsschluss = § 313 Abs. 2).",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Hauptfall: Anspruch des U gegen B auf Erstellung des Hauses aus § 631 Abs. 1 BGB**\n\nObersatz: U könnte gegen B einen Anspruch auf Erstellung des Hauses (Werkvertrag) aus § 631 Abs. 1 BGB haben.\n\n*Anspruch entstanden:* Zwischen U und B besteht ein wirksamer Werkvertrag (§ 631 BGB) über die Errichtung eines Hauses zum Preis von 150.000 €. Der Anspruch des U auf Herstellung des Werks ist entstanden.\n\n*Anspruch erloschen nach § 275 BGB?*\n\n**§ 275 Abs. 1 BGB (absolute Unmöglichkeit):** Das Haus kann technisch errichtet werden – es ist nur teurer. Absolute Unmöglichkeit liegt nicht vor.\n\n**§ 275 Abs. 2 BGB (faktische Unmöglichkeit):** Der Aufwand (250.000 €) steht gegenüber dem Leistungsinteresse des U (Haus für 150.000 €). Mehrkosten von 100.000 € stellen eine erhebliche Kostensteigerung von 66 % dar. Allerdings ist das Leistungsinteresse des U (Fertigstellung des Hauses zum Weiterverkauf) nicht unbedeutend. Nach dem Wortlaut des § 275 Abs. 2 BGB muss ein **grobes Missverhältnis** vorliegen – der Aufwand muss in krassem Missverhältnis zum Leistungsinteresse stehen. 66 % Kostensteigerung ist erheblich, aber ob es sich um ein 'grobes Missverhältnis' handelt, ist zweifelhaft, da U das Haus weiterverkaufen und Gewinn erzielen will. Abzugrenzen ist zudem: § 275 Abs. 2 BGB betrifft das Verhältnis zwischen Aufwand und Leistungsinteresse; hier geht es aber um eine Kostensteigerung im Verhältnis zur Vergütung (Gegenleistung), was eher ein Problem der Geschäftsgrundlage ist.\n\n**§ 313 BGB (Störung der Geschäftsgrundlage):** Zu prüfen, ob B einen Anspruch auf Vertragsanpassung hat und ggf. die Leistung verweigern kann.\n\nVoraussetzungen:\n1. *Objektive Geschäftsgrundlage (§ 313 Abs. 1 BGB):* Beide Parteien haben bei Vertragsschluss den (damaligen) Grundwasserspiegel als Planungsgrundlage vorausgesetzt. Diese Umstände sind zwar nicht Vertragsinhalt geworden, aber beide haben davon als selbstverständliche Grundlage ausgegangen.\n2. *Wesentliche Veränderung:* Der Grundwasserspiegel ist nach Vertragsschluss durch die Industrieschließungen erheblich gestiegen. Die Mehrkosten von 100.000 € auf einen Vertragswert von 150.000 € stellen eine wesentliche Veränderung dar.\n3. *Unzumutbarkeit:* Würde B das Haus für 150.000 € bauen müssen, entstünde ihm ein erheblicher wirtschaftlicher Schaden (er hat selbst keine Mehrkosten verursacht und trägt das Risiko einer unvorhergesehenen Naturveränderung nicht allein). Andererseits hat B als Fachunternehmer grundsätzlich das Risiko von Baukostensteigerungen – er hätte sich besser absichern können. Hier entscheidet eine **Risikoabwägung**: Das Risiko eines allgemein gestiegenen Grundwasserspiegels, der durch externe Industrieschließungen bedingt ist, liegt nicht in der typischen Risikosphäre des Bauunternehmers. Es liegt vor Unzumutbarkeit des Festhaltens am ursprünglichen Preis.\n\n*Rechtsfolge:* Primär Vertragsanpassung (§ 313 Abs. 1 BGB) – der Preis ist angemessen zu erhöhen (nicht zwingend um volle 100.000 €, sondern interessengerecht verteilt). Ist Anpassung nicht möglich oder unzumutbar: Rücktritt/Kündigung.\n\nB kann also nicht einfach die Leistung verweigern, sondern hat einen Anspruch auf **Vertragsanpassung**. Bis zur Anpassung kann B ggf. die Leistung zurückhalten (§ 273 BGB).\n\n*Ergebnis:* U hat grundsätzlich weiterhin einen Anspruch auf Errichtung des Hauses aus § 631 Abs. 1 BGB. B kann die Leistung nicht ohne Weiteres verweigern. Jedoch kann B nach § 313 Abs. 1 BGB eine Anpassung des Vertrages (Erhöhung des Preises) verlangen.\n\n**Abwandlung: Beiderseitiger Irrtum bei Vertragsschluss (§ 313 Abs. 2 BGB)**\n\nFalls beide von einem alten (falschen) Grundwasserspiegel ausgegangen waren, als sie den Vertrag schlossen, liegt ein **beiderseitiger Motivirrtum** vor. Dies betrifft die **subjektive Geschäftsgrundlage** (§ 313 Abs. 2 BGB). Beide Parteien hatten eine gemeinsame Fehlvorstellung über einen bestehenden Umstand.\n\nDie Voraussetzungen (wesentlich, Unzumutbarkeit) sind entsprechend zu prüfen wie oben. Rechtsfolge: ebenfalls primär Vertragsanpassung. § 313 Abs. 2 BGB stellt eine Unterform dar, unterscheidet sich aber in der Folge nicht von Abs. 1."
+    },
+    {
+      "id": "lst-ex-6-4",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Besprechungsfall 6.4 – Farbe nur teilweise geliefert",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Maler M bestellt bei Großhändler G einen Restposten von 40 Eimern der Farbe 'arktinen valkoinen' zum Stückpreis von 25 Euro inkl. Lieferung. G sichert die Ladung nicht und bei einer Vollbremsung laufen 12 Farbeimer aus. Als G bei M ankommt, lehnt M die Abnahme der restlichen 28 Eimer ab, da er diese für einen Großauftrag braucht und Farbe gleicher Sorte benötigt. G erklärt, der Restposten sei aufgebraucht. M will dann auch die 28 Eimer nicht abnehmen.\n\nHat G einen Anspruch gegen M auf Zahlung des Kaufpreises in Höhe von 1.000 Euro? (Besonderes Schuldrecht außer Betracht)\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn M eine Baugrube auf seinem Grundstück nicht abgesichert hätte und G daher mit seinem Lieferwagen umgekippt wäre, wodurch 12 Farbeimer ausgelaufen wären?",
+      "hint": "Prüfe: Schuldverhältnis – Kaufvertrag über 40 Eimer (Gattungsschuld oder Stückschuld/Vorratsschuld?). Dann: Teilunmöglichkeit der 12 Eimer (§ 275, § 326 BGB). Kann M wegen der 12 Eimer auch die restlichen 28 ablehnen (§ 323 Abs. 5 S. 1 BGB, kein Interesse an Teilleistung)? Für Abwandlung: Wer hat die Unmöglichkeit zu vertreten? § 326 Abs. 2 BGB prüfen.",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Hauptfall: Anspruch des G gegen M auf Zahlung des Kaufpreises aus § 433 Abs. 2 BGB**\n\nObersatz: G könnte gegen M einen Anspruch auf Zahlung des Kaufpreises in Höhe von 1.000 Euro (40 Eimer × 25 €) aus § 433 Abs. 2 BGB haben.\n\n*Anspruch entstanden:* Zwischen G und M besteht ein wirksamer Kaufvertrag über 40 Eimer Farbe zu je 25 €. Der Anspruch des G auf den Kaufpreis von 1.000 € ist entstanden.\n\n*Anspruch erloschen – Teilunmöglichkeit und § 326 Abs. 1 BGB:*\n\nDie Farbe 'arktinen valkoinen' ist als bestimmter Restposten von 40 Eimern zu werten. Es handelt sich um eine **Vorratsschuld** (beschränkte Gattungsschuld): Gs Pflicht ist auf den konkreten Vorrat beschränkt. Die 12 ausgelaufenen Eimer existieren nicht mehr. G hat die Ladung nicht gesichert – das war fahrlässig, § 276 BGB. Die Teilunmöglichkeit (12 Eimer) ist von G zu vertreten.\n\n**Bezüglich der 12 Eimer (Teilunmöglichkeit):**\nDer Anspruch auf Lieferung der 12 Eimer erlischt nach § 275 Abs. 1 BGB. Nach § 326 Abs. 1 BGB entfällt die Gegenleistungspflicht des M für die 12 Eimer anteilig (12 × 25 € = 300 €). Da G die Unmöglichkeit zu vertreten hat (§ 326 Abs. 2 BGB greift nicht), verliert G seinen Anspruch auf 300 €.\n\n**Bezüglich der restlichen 28 Eimer – Rücktrittsrecht des M:**\nM könnte wegen der Teilunmöglichkeit vom gesamten Vertrag zurücktreten. Nach § 323 Abs. 5 S. 1 BGB (analog über § 326 Abs. 5 BGB bei Teilunmöglichkeit) kann M vom gesamten Vertrag zurücktreten, wenn er an der Teilleistung (28 Eimern) kein Interesse mehr hat. M hat angegeben, er brauche die Farbe für einen Großauftrag und benötige die volle Menge gleicher Sorte; 28 Eimer nützen ihm ohne die anderen 12 nichts. Das fehlende Interesse ist glaubhaft. Da kein Ersatz mehr beschaffbar ist, ist das Interesse an den 28 Eimern allein weggefallen.\n\nM kann also wegen fehlenden Interesses an der Teilleistung vom gesamten Vertrag nach **§§ 326 Abs. 5, 323 Abs. 5 S. 1 BGB** zurücktreten. Da kein Ausschlussgrund vorliegt, ist der Rücktritt wirksam.\n\n*Ergebnis:* G hat nach Ausübung des Rücktrittsrechts durch M **keinen Anspruch** auf Zahlung des Kaufpreises von 1.000 €. Das gesamte Vertragsverhältnis ist rückabzuwickeln; da noch nichts geleistet wurde (M hat nicht gezahlt, G hat nicht vollständig geliefert), entstehen keine Rückgewähransprüche.\n\nZusätzlich: G haftet M gegenüber für Schadensersatz wegen der 12 Eimer und für etwaige Folgeschäden aus §§ 280 Abs. 1, 283 BGB.\n\n**Abwandlung: Gläubigerverantwortung – § 326 Abs. 2 BGB**\n\nFalls M eine Baugrube nicht abgesichert hat und G dadurch umgekippt ist, trägt M (als Gläubiger) die Verantwortung für die Unmöglichkeit der 12 Eimer. **§ 326 Abs. 2 S. 1 Alt. 1 BGB:** Wenn der Gläubiger (M) allein oder weit überwiegend für den Umstand verantwortlich ist, der zur Unmöglichkeit geführt hat, behält der Schuldner (G) seinen Anspruch auf die Gegenleistung. Ms Unterlassung (keine Absicherung der Baugrube) ist für den Unfall kausal. G hat die Unmöglichkeit nicht zu vertreten. Daher behält G seinen Anspruch auf den **vollen Kaufpreis von 1.000 €** – M muss also trotz Nichtlieferung von 12 Eimern zahlen. Ein Rücktritt des M nach § 323 Abs. 6 BGB ist ausgeschlossen, da M allein verantwortlich für den Rücktrittsgrund ist."
+    },
+    {
+      "id": "lst-ex-6-5",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Besprechungsfall 6.5 – Der neue Verkaufswagen für den Marktstand",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "B betreibt eine Bäckerei und kauft beim Gebrauchtwagenhändler H einen Verkaufswagen einschließlich Lieferung für 5.000 Euro. Lieferung soll am Folgetag um 15:00 Uhr erfolgen. B muss jedoch am Folgetag plötzlich zum Zahnarzt. H wartet eine halbe Stunde vergeblich und fährt zurück. Auf dem Heimweg kommt H aus Versehen gegen einen Bordstein, der Verkaufswagen kippt um und erleidet einen Totalschaden.\n\nHat H einen Anspruch gegen B auf Zahlung des Kaufpreises in Höhe von 5.000 Euro? (Besonderes Schuldrecht außer Betracht)\n\nAbwandlung: Wie wäre der Fall zu entscheiden, wenn H aufgrund überhöhter Geschwindigkeit auf den Bordstein aufgefahren wäre?",
+      "hint": "Prüfe: (1) Liegt Gläubigerverzug des B vor (§§ 293 ff. BGB)? (2) Welche Haftungsfolgen hat der Gläubigerverzug (§ 300 Abs. 1 BGB: nur Vorsatz + grobe Fahrlässigkeit)? (3) § 326 Abs. 2 S. 1 Alt. 2 BGB: Gegenleistungspflicht bleibt bei Gläubigerverzug + kein Vertretenmüssen des Schuldners.",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Anspruch des H gegen B auf Zahlung des Kaufpreises aus § 433 Abs. 2 BGB**\n\nObersatz: H könnte gegen B einen Anspruch auf Zahlung des Kaufpreises in Höhe von 5.000 Euro aus § 433 Abs. 2 BGB haben.\n\n*Anspruch entstanden:* Zwischen H und B besteht ein wirksamer Kaufvertrag über den Verkaufswagen zu 5.000 €. Hs Anspruch auf den Kaufpreis ist entstanden.\n\n*Anspruch erloschen – Unmöglichkeit und § 326 Abs. 1 BGB?*\n\nDer Verkaufswagen wurde durch den Unfall vollständig zerstört (Totalschaden). Es handelt sich um eine Stückschuld (genau dieser Wagen). Damit liegt **objektive tatsächliche Unmöglichkeit** nach **§ 275 Abs. 1 BGB** vor. Die Lieferpflicht des H erlischt automatisch. Nach der Grundregel des **§ 326 Abs. 1 BGB** würde auch der Kaufpreisanspruch des H erlöschen.\n\n*Ausnahme – § 326 Abs. 2 S. 1 Alt. 2 BGB (Gläubigerverzug):*\n\nDer Kaufpreisanspruch bleibt jedoch bestehen, wenn (1) B im Annahmeverzug war und (2) H die Unmöglichkeit nicht zu vertreten hat.\n\n**(1) Gläubigerverzug des B (§§ 293 ff. BGB):** Voraussetzungen des Gläubigerverzugs:\n- Fälliges, ordnungsgemäßes Angebot des Schuldners: H ist pünktlich um 15:00 Uhr erschienen und hat den Wagen zur Lieferung angeboten. Das ist ein tatsächliches Angebot i.S.d. § 294 BGB. ✓\n- Erfüllbarkeit und Möglichkeit: H konnte die Leistung erbringen. ✓\n- Nichtannahme durch den Gläubiger: B war nicht da (beim Zahnarzt) und hat die Annahme faktisch verweigert. ✓\n- Verschulden des B nicht erforderlich (§ 293 BGB: 'aus welchem Grund auch immer'). ✓\n\nMit Ablauf der Wartezeit von ca. 30 Minuten ohne Reaktion des B ist **Gläubigerverzug** eingetreten.\n\n**(2) Vertretenmüssen des H für die Unmöglichkeit:** Im Gläubigerverzug haftet H nach **§ 300 Abs. 1 BGB** nur noch für **Vorsatz und grobe Fahrlässigkeit**. H ist auf dem Heimweg aus Versehen (einfache Fahrlässigkeit) gegen einen Bordstein gefahren. **Einfache Fahrlässigkeit reicht im Gläubigerverzug nicht aus.** Grobe Fahrlässigkeit liegt nicht vor (H ist nicht besonders rücksichtslos oder unaufmerksam gefahren). H hat die Unmöglichkeit somit nicht zu vertreten.\n\n**Ergebnis:** Die Voraussetzungen des § 326 Abs. 2 S. 1 Alt. 2 BGB liegen vor. H **behält seinen Anspruch auf den Kaufpreis von 5.000 €**. B muss trotz Nichtlieferung zahlen.\n\nZusätzlich: Da der Wagen vor Übergabe unterging, kann B nach § 326 Abs. 5 BGB zurücktreten. Dann würde das Rückgewährschuldverhältnis nach § 346 BGB entstehen. Da H aber noch nichts erhalten hat (kein Kaufpreis), entsteht nur eine Zahlungspflicht des B ohne Rückleistung des H. § 325 BGB: H könnte zudem Schadensersatz verlangen, wenn B schuldhaft den Verzug verursacht hat – hier: B hat fahrlässig (Zahnarzttermin am Liefertag) den Gläubigerverzug herbeigeführt.\n\n**Abwandlung: Überhöhte Geschwindigkeit des H**\n\nFährt H aufgrund überhöhter Geschwindigkeit auf den Bordstein, liegt **grobe Fahrlässigkeit** vor (erhebliche und unentschuldbare Missachtung der im Verkehr erforderlichen Sorgfalt). Im Gläubigerverzug haftet H zwar nur für Vorsatz und grobe Fahrlässigkeit (§ 300 Abs. 1 BGB), aber grobe Fahrlässigkeit ist hier gegeben. H hat die Unmöglichkeit also doch zu vertreten. Damit greift § 326 Abs. 2 S. 1 Alt. 2 BGB **nicht**: H verliert seinen Kaufpreisanspruch nach § 326 Abs. 1 BGB.\n\n*Ergebnis Abwandlung:* H hat keinen Anspruch auf den Kaufpreis von 5.000 €."
+    },
+    {
+      "id": "lst-ex-6-v1",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Vertiefungsfall 6.1 – Die Malerarbeiten und die Drehtür",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "O betreibt einen Großhandel und lässt von Maler M sein Büro für 2.000 Euro neu streichen. Am ersten Tag trägt M eine Leiter ins Büro und stößt dabei eine Vase um, die am Boden zerschellt. O ermahnt M. Am Folgetag ist das Büro zur Hälfte gestrichen; als M gehetzt neue Farbe holt, übersieht er die Drehtür und kollidiert mit ihr; die Drehtür geht zu Bruch.\n\n1. Welche Formen einer Leistungsstörung liegen vor?\n2. Kann O den Rücktritt erklären?\n\nAbwandlung 1: M verwendet anstatt der vereinbarten matten Farbe eine glänzende und weigert sich auf Aufforderung, mit der richtigen Farbe erneut zu streichen.\n\nAbwandlung 2: M erscheint zum vereinbarten Termin nicht und vertröstet O mehrfach. Zuletzt setzt O dem M eine letzte Frist, die fruchtlos verstreicht.",
+      "hint": "Unterscheide: (1) Zerstörung der Vase = Nebenpflichtverletzung (§§ 280 I, 241 II BGB); (2) Zerstörung der Drehtür beim Streichen ebenfalls. Rücktritt nach § 324 BGB (Nebenpflichtverletzung): keine Frist nötig, aber Unzumutbarkeit! Für Abwandlung 1: Schlechtleistung (§§ 280, 281 BGB, Fristsetzung). Für Abwandlung 2: Schuldnerverzug (§§ 286, 280, 323 BGB).",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Hauptfall – Teil 1: Welche Formen der Leistungsstörung liegen vor?**\n\n**(a) Zerstörung der Vase:**\nM schuldete das Streichen des Büros (Hauptpflicht, § 631 BGB). Das Umwerfen und Zerstören der Vase ist keine Verletzung der Hauptleistungspflicht (das Streichen wird dadurch nicht schlechter), sondern eine Verletzung der **Schutzpflicht** aus § 241 Abs. 2 BGB. M hatte die Pflicht, auf die Rechtsgüter des O (Eigentum an der Vase) Rücksicht zu nehmen. Diese Schutzpflicht hat M fahrlässig verletzt. Es liegt eine **Nebenpflichtverletzung** vor (§ 241 Abs. 2 BGB).\n\n**(b) Zerstörung der Drehtür:**\nEbenso: Beim Herausgehen aus dem Büro zur Farbbeschaffung stößt M gehetzt gegen die Drehtür und beschädigt sie. Auch dies ist eine Verletzung der Schutzpflicht (§ 241 Abs. 2 BGB). M handelt fahrlässig (Gehetztheit begründet Sorgfaltspflichtverletzung, § 276 Abs. 2 BGB). Nebenpflichtverletzung liegt vor.\n\n**Schadensersatzansprüche des O:**\n- Für die Vase: §§ 280 Abs. 1, 241 Abs. 2 BGB → Schadensersatz neben der Leistung.\n- Für die Drehtür: §§ 280 Abs. 1, 241 Abs. 2 BGB → Schadensersatz neben der Leistung.\nKeine Fristsetzung erforderlich, da keine Hauptleistungspflicht verletzt. Vertretenmüssen (Fahrlässigkeit) bejaht; nach § 280 Abs. 1 S. 2 BGB vermutet.\n\n**Hauptfall – Teil 2: Kann O den Rücktritt erklären?**\n\nO könnte nach **§ 324 BGB** vom Werkvertrag zurücktreten.\n\nVoraussetzungen:\n1. *Schuldverhältnis:* Werkvertrag ✓\n2. *Nebenpflichtverletzung:* M hat § 241 Abs. 2 BGB verletzt (s.o.) ✓\n3. *Unzumutbarkeit:* Es müsste O nicht zumutbar sein, am Vertrag festzuhalten. Abzuwägen: O hat M nach der ersten Pflichtverletzung (Vase) bereits ermahnt. M hat dies nicht beachtet und eine zweite Pflichtverletzung (Drehtür) begangen. Die wiederholte Verletzung trotz Ermahnung deutet darauf hin, dass O nicht mehr darauf vertrauen kann, dass M seine Rechtsgüter respektiert. Das Festhalten am Vertrag erscheint unzumutbar. ✓\n4. *Keine Fristsetzung:* § 324 BGB verlangt keine Fristsetzung. ✓\n5. *Rücktrittserklärung (§ 349 BGB):* O muss den Rücktritt erklären.\n\n*Ergebnis:* O kann nach § 324 BGB den Rücktritt erklären. Die Rechtsfolge richtet sich nach § 346 BGB: Bereits erbrachte Leistungen sind zurückzugewähren (Wertersatz für die halbfertige Streicharbeit ist denkbar). Der Schadensersatzanspruch für Vase und Drehtür bleibt bestehen (§ 325 BGB).\n\n**Abwandlung 1: Schlechtleistung (glänzende statt matte Farbe)**\n\nM liefert eine andere als die vereinbarte Werkleistung (glänzende statt matte Farbe). Das ist eine **Schlechtleistung** (Verletzung der Hauptleistungspflicht aus § 631 BGB). O hat M aufgefordert, neu zu streichen, M weigert sich. Das ist eine **ernsthafte und endgültige Verweigerung** der Nacherfüllung (§ 323 Abs. 2 Nr. 1 BGB).\n\nO kann zurücktreten nach **§§ 323 Abs. 1, Abs. 2 Nr. 1 BGB** (Fristsetzung entbehrlich wegen ernsthafter Verweigerung). Außerdem Schadensersatz statt der Leistung aus **§§ 280 Abs. 1, 3, 281 BGB** (Fristsetzung ebenfalls entbehrlich).\n\n**Abwandlung 2: Schuldnerverzug und Rücktritt nach Fristsetzung**\n\nM erscheint zum vereinbarten Termin nicht → Nichtleistung einer fälligen Pflicht. O mahnt mehrfach (konkludente Mahnungen durch Nachfragen). M kommt trotzdem nicht. O setzt eine letzte Frist, die fruchtlos verstreicht.\n\nVoraussetzungen des Schuldnerverzugs (§ 286 BGB): Fällige Leistung ✓, Mahnung ✓ (mehrfaches Nachhaken), Vertretenmüssen ✓ (M gibt keinen Entschuldigungsgrund an).\n\nO kann nach **§§ 280 Abs. 1, 2, 286 BGB** Verzögerungsschaden verlangen und nach **§ 323 Abs. 1 BGB** zurücktreten (Frist gesetzt, fruchtlos verstrichen)."
+    },
+    {
+      "id": "lst-ex-6-v2",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Vertiefungsfall 6.2 – Der zerstörte Sandkasten",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "H möchte für seine Kinder einen Sandkasten der Marke 'Ostsee' für 100 Euro kaufen. Da der Sandkasten beim Baumarkt B nicht vorrätig ist, bestellt B ihn. H soll ihn abholen, sobald er eingetroffen ist. Als der Sandkasten eingetroffen ist, ruft B an und teilt mit, dass der Sandkasten bei der Warenausgabe bereitgestellt wurde. In der darauffolgenden Nacht – noch bevor H den Sandkasten abholen kann – wird der Sandkasten bei einem Feuer zerstört.\n\nHat H einen Anspruch gegen B auf Übereignung und Übergabe eines Sandkastens der Marke 'Ostsee'?",
+      "hint": "Prüfe: Gattungsschuld oder Stückschuld? Durch die Bereitstellung und Benachrichtigung hat B alles seinerseits Erforderliche getan – Konkretisierung (§ 243 Abs. 2 BGB). Was bedeutet Konkretisierung für die Leistungsgefahr? War die Gattungsschuld bereits zur Stückschuld geworden, als der Brand ausbrach?",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Anspruch des H gegen B auf Übereignung und Übergabe eines Sandkastens 'Ostsee' aus § 433 Abs. 1 S. 1 BGB**\n\nObersatz: H könnte gegen B einen Anspruch auf Übereignung und Übergabe eines Sandkastens der Marke 'Ostsee' aus § 433 Abs. 1 S. 1 BGB haben.\n\n*Anspruch entstanden:* Zwischen H und B besteht ein wirksamer Kaufvertrag über einen Sandkasten 'Ostsee' zu 100 €. Der Anspruch ist entstanden.\n\n*Anspruch erloschen – Unmöglichkeit (§ 275 BGB)?*\n\nFraglich ist zunächst, ob eine Gattungs- oder Stückschuld vorliegt. H hat einen Sandkasten der Marke 'Ostsee' bestellt, nicht ein ganz bestimmtes Exemplar. Es lag daher ursprünglich eine **Gattungsschuld** vor (§ 243 Abs. 1 BGB). Bei einer Gattungsschuld trägt der Schuldner (B) zunächst die **Leistungsgefahr**: Er muss ggf. ein anderes Exemplar der Gattung beschaffen, wenn das erste untergeht.\n\nEntscheidend ist jedoch: Ist inzwischen eine **Konkretisierung** eingetreten (§ 243 Abs. 2 BGB)?\n\nNach § 243 Abs. 2 BGB endet die Gattungsschuld und wird zur Stückschuld, wenn der Schuldner das seinerseits Erforderliche getan hat. Bei einer **Holschuld** (H soll den Sandkasten abholen) hat B das seinerseits Erforderliche getan, wenn er (1) eine Sache mittlerer Art und Güte ausgesondert und (2) dem Gläubiger zur Abholung bereitgestellt hat.\n\nB hat den Sandkasten bei der Warenausgabe bereitgestellt und H telefonisch mitgeteilt, dass der Sandkasten abholbereit ist. Damit hat B alles seinerseits Erforderliche getan. **Konkretisierung ist eingetreten** (§ 243 Abs. 2 BGB). Ab diesem Zeitpunkt bestand eine Stückschuld auf genau diesen Sandkasten.\n\nDie Stückschuld ist durch den Brand in der Nacht **unmöglich** geworden (§ 275 Abs. 1 BGB). Da die Konkretisierung vor dem Brand eingetreten war, erlischt die Leistungspflicht des B. B muss keinen anderen Sandkasten liefern.\n\n*Rechtsfolgen:*\n- § 326 Abs. 1 BGB: Hs Kaufpreiszahlungspflicht erlischt ebenfalls (soweit noch nicht gezahlt).\n- Wurde bereits gezahlt: Rückforderung nach § 326 Abs. 4 i.V.m. §§ 346 ff. BGB.\n- B hat die Unmöglichkeit grundsätzlich nicht zu vertreten (Brand durch Zufall). Schadensersatzanspruch des H aus § 280 BGB scheidet mangels Vertretenmüssens aus.\n\n*Ergebnis:* H hat **keinen Anspruch** mehr auf Übereignung und Übergabe eines Sandkastens 'Ostsee' gegen B, da die Leistungspflicht durch Konkretisierung zur Stückschuld und anschließenden Brand unmöglich geworden ist (§§ 243 Abs. 2, 275 Abs. 1 BGB)."
+    },
+    {
+      "id": "lst-ex-6-v3",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "label": "Praxisteil 6, Vertiefungsfall 6.3 – Drohnen für die Armee",
+      "source": "PR-WIWI-Skript-PraxisteilS23-25.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "T ist als Ingenieur bei W in der Drohnenentwicklung beschäftigt. W möchte ein neues Modell bewaffnungsfähiger Drohnen entwickeln lassen. T ist Pazifist und kann das nicht mit seinem Gewissen vereinbaren. Er verlangt, in eine andere Abteilung versetzt zu werden. W kann ihn nicht versetzen. T bleibt der Arbeit fern.\n\nHat T einen Anspruch auf Lohn gegen W? (Besonderes Schuldrecht außer Betracht)",
+      "hint": "Prüfe: § 611a Abs. 2 BGB als Anspruchsgrundlage für den Lohn. Dann: T erbringt keine Arbeitsleistung – Verletzung seiner Pflicht? Könnte § 275 Abs. 3 BGB T eine Einrede geben? Was sind die Voraussetzungen (Höchstpersönlichkeit, ernster Gewissenskonflikt, Abwägung)? Rechtsfolge: § 326 Abs. 1 BGB.",
+      "solution": "**Gutachtenstil-Lösung:**\n\n**Anspruch des T gegen W auf Lohn aus § 611a Abs. 2 BGB**\n\nObersatz: T könnte gegen W einen Anspruch auf Zahlung seines Lohns aus § 611a Abs. 2 BGB haben.\n\n*Anspruch entstanden:* Zwischen T und W besteht ein wirksamer Arbeitsvertrag. Der Lohnanspruch des T ist entstanden.\n\n*Anspruch erloschen – § 326 Abs. 1 BGB i.V.m. § 275 Abs. 3 BGB?*\n\nFraglich ist, ob T zur Arbeitsleistung verpflichtet ist. T erbringt die Arbeitsleistung nicht. W könnte geltend machen, Ts Lohnanspruch sei nach § 326 Abs. 1 BGB erloschen, weil T seinerseits nicht leistet. Das setzt aber voraus, dass auch Ts Leistungspflicht erloschen ist – was nur bei Unmöglichkeit (§ 275 BGB) der Fall ist.\n\n**Prüfung § 275 Abs. 3 BGB (persönliche Unmöglichkeit):**\n\nVoraussetzungen:\n1. *Höchstpersönliche Leistung:* Die Arbeitsleistung des T als Ingenieur ist in seiner Person begründet und höchstpersönlich. ✓\n2. *Persönliche Umstände, die Leistung unzumutbar machen:* T ist überzeugter Pazifist. Die Mitwirkung an der Entwicklung bewaffnungsfähiger Drohnen steht in direktem Widerspruch zu seiner ernsthaften Gewissensüberzeugung. Ein ernsthafter Gewissenskonflikt liegt vor (kein bloß leichtfertig vorgebrachter Einwand). ✓\n3. *Abwägung:* Das Interesse des W an der Leistung des T (eine Person von vielen im Unternehmen) ist gegen das Gewissensinteresse des T abzuwägen. W hat angegeben, T nicht in einer anderen Abteilung einsetzen zu können; W ist damit auch nicht entgegengekommen. Ts grundrechtlich geschütztes Gewissensrecht (Art. 4 GG, der auch im Privatrecht ausstrahlt) überwiegt das wirtschaftliche Interesse des W an der Leistung genau dieses einen Ingenieurs, zumal W ihn nicht anderweitig einsetzen kann. Die Einrede des § 275 Abs. 3 BGB ist begründet.\n\nT muss die Einrede ausdrücklich geltend machen (§ 275 Abs. 3 BGB ist keine automatische Rechtsfolge). Indem T die Arbeit fernbleibt und auf seinen Gewissenskonflikt hinweist, hat er die Einrede konkludent erhoben.\n\n*Rechtsfolge:* Nach § 326 Abs. 1 BGB erlischt – wenn T von seiner Leistungspflicht befreit ist – auch Ws Lohnzahlungspflicht. § 326 Abs. 2 BGB greift nicht: W hat den Gewissenskonflikt weder allein noch weit überwiegend verursacht.\n\n*Ergebnis:* T hat **keinen Anspruch auf Lohn** gegen W für den Zeitraum, in dem er der Arbeit fernbleibt, da seine Leistungspflicht nach § 275 Abs. 3 BGB durch die geltend gemachte Einrede gehemmt ist und damit nach § 326 Abs. 1 BGB auch der Lohnanspruch erlischt.\n\n*Hinweis:* T könnte ggf. nach § 313 BGB eine Vertragsanpassung verlangen (Versetzung in eine andere Abteilung als Anpassung des Arbeitsvertrags), falls das möglich und zumutbar wäre. Da W jedoch sagt, eine Versetzung sei nicht möglich, käme allenfalls eine Auflösung des Arbeitsverhältnisses in Betracht."
+    }
+  ]
+}

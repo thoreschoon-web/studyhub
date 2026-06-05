@@ -1,0 +1,397 @@
+{
+  "id": "lineare-regression",
+  "subjectId": "statistik",
+  "title": "Lineare Regression",
+  "summary": "Das einfache lineare Regressionsmodell erklärt, wie man einen linearen Zusammenhang zwischen zwei Variablen aus Daten schätzt. Die Kleinste-Quadrate-Methode liefert die optimale Regressionsgerade, das Bestimmtheitsmaß R² bewertet die Güte der Anpassung, und t-Tests prüfen die statistische Signifikanz der geschätzten Koeffizienten.",
+  "order": 6,
+  "estMinutes": 75,
+  "sections": [
+    {
+      "id": "was-ist-regression",
+      "heading": "Was ist lineare Regression? — Die Grundidee",
+      "body": "Stell dir vor, du willst wissen: **Hängen die monatlichen Energieausgaben eines Haushalts davon ab, wie viel er für Nahrungsmittel ausgibt?** Du hast Daten von 10 Haushalten gesammelt. Für jeden Haushalt kennst du zwei Zahlen: Nahrungsmittelausgaben ($x_i$) und Energieausgaben ($y_i$).\n\nDas Ziel der **linearen Regression** ist: Finde eine Gerade, die den Zusammenhang zwischen $x$ und $y$ möglichst gut beschreibt. Damit kannst du:\n1. Den Zusammenhang quantifizieren: „Pro 100 € mehr Nahrungsmittelausgaben steigen die Energieausgaben um circa X €.“\n2. **Vorhersagen** treffen: „Bei Nahrungsmittelausgaben von 900 € erwarte ich Energieausgaben von ...“\n\n**Die zwei Variablen haben unterschiedliche Rollen:**\n- $x$ = **Regressor** (erklärende Variable, exogene Variable) — die Ursache oder der Einfluss\n- $y$ = **Regressand** (abhängige Variable, endogene Variable) — das, was wir erklären wollen\n\nBei einer Linie $y = a + b \\cdot x$ gibt es unendlich viele mögliche Geraden. Die lineare Regression findet automatisch **die beste** davon.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Vorsicht: Korrelation ≠ Kausalität",
+          "body": "Regression beschreibt einen **statistischen Zusammenhang**, keine Ursache-Wirkungs-Beziehung. Dass $x$ und $y$ zusammenhängen, bedeutet nicht, dass $x$ die Ursache von $y$ ist. Die inhaltliche Interpretation liegt beim Forscher."
+        },
+        {
+          "kind": "definition",
+          "title": "Das einfache lineare Regressionsmodell",
+          "body": "$$y_i = a + b \\cdot x_i + u_i, \\quad i = 1, \\dots, n$$\n- $a$ = **Achsenabschnitt** (intercept): Wert von $y$, wenn $x = 0$\n- $b$ = **Steigung** (slope): Veränderung von $y$ bei einer Einheit mehr $x$\n- $u_i$ = **Störgröße / Residuum**: alles, was die Gerade nicht erklärt (zufällige Abweichung, andere Einflüsse)"
+        }
+      ]
+    },
+    {
+      "id": "annahmen",
+      "heading": "Die Modellannahmen — Was muss gelten?",
+      "body": "Das lineare Regressionsmodell funktioniert nur dann zuverlässig, wenn bestimmte Annahmen erfüllt sind. Hier sind die wichtigsten:\n\n**Annahme 1: Erwartungswert der Störgröße ist null**\n$$E(u_i) = 0$$\nDie Fehler sollen im Durchschnitt verschwinden — mal zu hoch, mal zu niedrig, aber kein systematischer Bias.\n\n**Annahme 2: Homoskedastizität (gleiche Streuung)**\n$$\\text{Var}(u_i) = \\sigma^2 \\quad \\text{(konstant für alle } i\\text{)}$$\nDie Streuung der Fehler soll für alle $x$-Werte gleich groß sein. Das Gegenteil heißt **Heteroskedastizität** und verletzt die Annahme.\n\n**Annahme 3: Normalverteilung der Störgrößen**\n$$u_i \\sim N(0, \\sigma^2)$$\nDies ist wichtig für Konfidenzintervalle und Tests. Es folgt dann auch:\n$$y_i \\sim N(a + b \\cdot x_i,\\; \\sigma^2)$$\nDas heißt: Für jeden $x$-Wert ist der zugehörige $y$-Wert normalverteilt um die Regressionsgerade.\n\n**Annahme 4: Keine Multikollinearität**\nDie $x_i$-Werte sind nicht alle gleich (sonst kann man keine Steigung schätzen).",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "reg-annahmen-tab",
+          "title": "Modellannahmen im Überblick",
+          "headers": ["Annahme", "Formel", "Bedeutung"],
+          "rows": [
+            ["Nullmittelwert der Störgröße", "$E(u_i) = 0$", "Kein systematischer Fehler"],
+            ["Homoskedastizität", "$\\text{Var}(u_i) = \\sigma^2$", "Konstante Fehlerstreuung"],
+            ["Normalverteilung", "$u_i \\sim N(0, \\sigma^2)$", "Fehler sind normalverteilt"],
+            ["Erwartungswert von $y_i$", "$E(y_i) = a + b x_i$", "Die Gerade trifft den Mittelwert"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Homoskedastizität vs. Heteroskedastizität anschaulich",
+          "body": "**Homoskedastizität:** Stelle dir vor, für jeden Nahrungsmittel-Ausgabenwert streuen die Energieausgaben gleich weit um die Gerade — ob $x = 300$ oder $x = 1400$, die Fehler haben immer dieselbe Breite.\n\n**Heteroskedastizität:** Bei höheren Einkommen (hohem $x$) streuen die Ausgaben viel stärker als bei niedrigen Einkommen. Das würde die Annahme verletzen."
+        }
+      ]
+    },
+    {
+      "id": "kq-methode",
+      "heading": "Die Kleinste-Quadrate-Methode (KQ) — Schritt für Schritt",
+      "body": "Die **Kleinste-Quadrate-Methode** (engl. *Ordinary Least Squares*, OLS) ist das Standardverfahren, um die Koeffizienten $a$ und $b$ zu schätzen.\n\n**Das Prinzip:**\nFür jede mögliche Gerade gibt es Abweichungen zwischen dem echten $y_i$ und dem von der Geraden vorhergesagten Wert $\\hat{y}_i = \\hat{a} + \\hat{b} x_i$. Diese Abweichungen heißen **Residuen**: $\\hat{u}_i = y_i - \\hat{y}_i$.\n\nDie KQ-Methode sucht die Gerade, die die **Summe der quadrierten Residuen** minimiert:\n$$\\sum_{i=1}^{n} \\hat{u}_i^2 = \\sum_{i=1}^{n} (y_i - a - b x_i)^2 \\longrightarrow \\min_{a,\\, b}$$\n\n**Warum quadrieren?** Weil sonst positive und negative Abweichungen sich aufheben würden. Durch Quadrieren werden alle Fehler positiv, und große Fehler werden stärker bestraft.\n\n**Die Formeln für die KQ-Schätzer** (durch partielles Ableiten und Nullsetzen hergeleitet):\n\n$$\\hat{b} = \\frac{\\sum_{i=1}^{n}(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2} = \\frac{s_{xy}}{s_x^2} = \\frac{\\overline{xy} - \\bar{x}\\bar{y}}{\\overline{x^2} - \\bar{x}^2}$$\n\n$$\\hat{a} = \\bar{y} - \\hat{b} \\cdot \\bar{x}$$\n\nWichtige Eigenschaft: Die Regressionsgerade geht **immer durch den Schwerpunkt** $(\\bar{x}, \\bar{y})$ der Daten!\n\n**Schätzer für die Störtermvarianz** $\\sigma^2$ (mit $n-2$ im Nenner, weil 2 Parameter geschätzt wurden):\n$$\\hat{\\sigma}^2 = \\frac{1}{n-2} \\sum_{i=1}^{n} \\hat{u}_i^2 = \\frac{1}{n-2} \\sum_{i=1}^{n} (y_i - \\hat{a} - \\hat{b} x_i)^2$$\n\n**Güte der KQ-Schätzer:** Es gilt $E(\\hat{a}) = a$, $E(\\hat{b}) = b$, $E(\\hat{\\sigma}^2) = \\sigma^2$ — alle drei Schätzer sind **erwartungstreu**. Der Gauss-Markov-Satz besagt: Unter den Modellannahmen sind die KQ-Schätzer die **besten linearen erwartungstreuen Schätzer** (BLUE).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kochrezept: Regressionsgerade berechnen",
+          "body": "1. Berechne $\\bar{x} = \\frac{1}{n}\\sum x_i$ und $\\bar{y} = \\frac{1}{n}\\sum y_i$.\n2. Berechne $\\sum(x_i - \\bar{x})(y_i - \\bar{y})$ (Zähler für $\\hat{b}$).\n3. Berechne $\\sum(x_i - \\bar{x})^2$ (Nenner für $\\hat{b}$).\n4. Teile: $\\hat{b} = \\frac{\\text{Zähler}}{\\text{Nenner}}$.\n5. Berechne: $\\hat{a} = \\bar{y} - \\hat{b} \\cdot \\bar{x}$.\n6. Gerade: $\\hat{y}_i = \\hat{a} + \\hat{b} x_i$."
+        },
+        {
+          "kind": "formel",
+          "title": "Alternative Rechenformel (nützlich bei gegebenen Summen)",
+          "body": "$$\\hat{b} = \\frac{\\sum x_i y_i - n \\bar{x} \\bar{y}}{\\sum x_i^2 - n \\bar{x}^2}$$\nDiese Form ist äquivalent und oft praktischer, wenn Summen $\\sum x_i y_i$ und $\\sum x_i^2$ direkt gegeben sind."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "reg-line-fig",
+          "title": "Regressionsgerade: Energieausgaben vs. Nahrungsmittelausgaben",
+          "caption": "Die KQ-Regressionsgerade ŷ = 19,78 + 0,1878·x durch die 10 Datenpunkte. Die Gerade minimiert die Summe der quadrierten vertikalen Abstände (Residuen).",
+          "functions": [
+            { "fn": "19.778 + 0.18778*x", "label": "ŷ = 19,78 + 0,1878·x", "color": "#2563eb" }
+          ],
+          "domain": [200, 1500],
+          "range": [0, 320],
+          "points": [
+            { "x": 300, "y": 100, "label": "H1" },
+            { "x": 500, "y": 70, "label": "H2" },
+            { "x": 600, "y": 170, "label": "H3" },
+            { "x": 700, "y": 120, "label": "H4" },
+            { "x": 700, "y": 150, "label": "H5" },
+            { "x": 800, "y": 160, "label": "H6" },
+            { "x": 900, "y": 200, "label": "H7" },
+            { "x": 1000, "y": 250, "label": "H8" },
+            { "x": 1100, "y": 190, "label": "H9" },
+            { "x": 1400, "y": 290, "label": "H10" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beispiel-berechnung",
+      "heading": "Vollständig durchgerechnetes Beispiel — 10 Haushalte",
+      "body": "Hier rechnen wir die Koeffizienten der Regressionsgerade für den Datensatz aus Aufgabe 1 vollständig durch.\n\n**Datensatz (n = 10 Haushalte):**\n\n| $i$ | $x_i$ | $y_i$ | $x_i - \\bar{x}$ | $y_i - \\bar{y}$ | $(x_i-\\bar{x})(y_i-\\bar{y})$ | $(x_i-\\bar{x})^2$ |\n|---|---|---|---|---|---|---|\n| 1 | 300 | 100 | −500 | −70 | 35 000 | 250 000 |\n| 2 | 500 | 70 | −300 | −100 | 30 000 | 90 000 |\n| 3 | 600 | 170 | −200 | 0 | 0 | 40 000 |\n| 4 | 700 | 120 | −100 | −50 | 5 000 | 10 000 |\n| 5 | 700 | 150 | −100 | −20 | 2 000 | 10 000 |\n| 6 | 800 | 160 | 0 | −10 | 0 | 0 |\n| 7 | 900 | 200 | 100 | 30 | 3 000 | 10 000 |\n| 8 | 1000 | 250 | 200 | 80 | 16 000 | 40 000 |\n| 9 | 1100 | 190 | 300 | 20 | 6 000 | 90 000 |\n| 10 | 1400 | 290 | 600 | 120 | 72 000 | 360 000 |\n| **Summe** | **8000** | **1700** | | | **169 000** | **900 000** |\n\n**Schritt 1: Mittelwerte**\n$$\\bar{x} = \\frac{8000}{10} = 800, \\qquad \\bar{y} = \\frac{1700}{10} = 170$$\n\n**Schritt 2: Steigung**\n$$\\hat{b} = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2} = \\frac{169\\,000}{900\\,000} = 0{,}1878$$\n\n**Schritt 3: Achsenabschnitt**\n$$\\hat{a} = \\bar{y} - \\hat{b} \\cdot \\bar{x} = 170 - 0{,}1878 \\cdot 800 = 170 - 150{,}22 = 19{,}78$$\n\n**Ergebnis: Regressionsgerade**\n$$\\hat{y}_i = 19{,}78 + 0{,}1878 \\cdot x_i$$\n\n**Interpretation:** Bei null Nahrungsmittelausgaben werden 19,78 € Energieausgaben erwartet (Achsenabschnitt). Jeder zusätzliche Euro für Nahrungsmittel geht mit 18,78 Cent mehr Energieausgaben einher (Steigung).\n\n**Prognose für $x_0 = 900$:**\n$$\\hat{y}_0 = 19{,}78 + 0{,}1878 \\cdot 900 = 19{,}78 + 169{,}00 = 188{,}78 \\text{ €}$$",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Kontrollrechnung: Schwerpunkt prüfen",
+          "body": "Die Regressionsgerade muss durch den Punkt $(\\bar{x}, \\bar{y}) = (800, 170)$ verlaufen. Einsetzen: $19{,}78 + 0{,}1878 \\cdot 800 = 19{,}78 + 150{,}22 = 170$ ✓"
+        }
+      ]
+    },
+    {
+      "id": "bestimmtheitsmass",
+      "heading": "Das Bestimmtheitsmaß R² — Wie gut passt die Gerade?",
+      "body": "Eine Regressionsgerade kann man immer berechnen — aber wie gut erklärt sie wirklich die Daten? Dafür gibt es das **Bestimmtheitsmaß $R^2$**.\n\n**Die Grundidee der Varianzzerlegung:**\nDie Gesamtstreuung von $y$ lässt sich in zwei Teile zerlegen:\n$$\\underbrace{\\sum_{i=1}^{n}(y_i - \\bar{y})^2}_{\\text{Gesamtstreuung (TSS)}} = \\underbrace{\\sum_{i=1}^{n}(\\hat{y}_i - \\bar{y})^2}_{\\text{erklärte Streuung}} + \\underbrace{\\sum_{i=1}^{n}(y_i - \\hat{y}_i)^2}_{\\text{Residualstreuung (RSS)}}$$\n\n- **TSS** (Total Sum of Squares): Wie stark streuen die $y$-Werte um ihren Mittelwert $\\bar{y}$?\n- **Erklärte Streuung**: Wie stark streuen die vorhergesagten Werte $\\hat{y}_i$ um $\\bar{y}$? Das ist der Teil, den die Regressionsgerade erklärt.\n- **RSS** (Residual Sum of Squares): Wie groß sind die Fehler, die die Gerade macht?\n\n**Definition:**\n$$R^2 = 1 - \\frac{\\text{RSS}}{\\text{TSS}} = 1 - \\frac{\\sum(y_i - \\hat{y}_i)^2}{\\sum(y_i - \\bar{y})^2}$$\n\nAuch direkt über den empirischen Korrelationskoeffizienten $r_{xy}$:\n$$R^2 = r_{xy}^2 = \\frac{\\left[\\sum(x_i-\\bar{x})(y_i-\\bar{y})\\right]^2}{\\sum(x_i-\\bar{x})^2 \\cdot \\sum(y_i-\\bar{y})^2}$$\n\n**Interpretation:**\n- $R^2 = 1$: Die Gerade erklärt die Daten **perfekt** (alle Punkte liegen genau auf der Geraden).\n- $R^2 = 0$: Die Gerade erklärt **gar nichts** (genauso gut wie der bloße Mittelwert $\\bar{y}$).\n- $0 \\leq R^2 \\leq 1$ immer.\n- In der Praxis: $R^2 > 0{,}7$ gilt oft als gute Anpassung (hängt vom Fachgebiet ab).\n\n**Berechnung für unser Beispiel:**\n\nWir benötigen $\\sum(y_i - \\bar{y})^2 = 40\\,000$ (TSS) und die Residuenquadrate:\n\n| $i$ | $y_i$ | $\\hat{y}_i$ | $\\hat{u}_i = y_i - \\hat{y}_i$ | $\\hat{u}_i^2$ |\n|---|---|---|---|---|\n| 1 | 100 | 76,11 | 23,89 | 570,7 |\n| 2 | 70 | 113,67 | −43,67 | 1907,1 |\n| 3 | 170 | 132,44 | 37,56 | 1410,7 |\n| 4 | 120 | 151,22 | −31,22 | 974,7 |\n| 5 | 150 | 151,22 | −1,22 | 1,5 |\n| 6 | 160 | 170,00 | −10,00 | 100,0 |\n| 7 | 200 | 188,78 | 11,22 | 125,9 |\n| 8 | 250 | 207,56 | 42,44 | 1801,1 |\n| 9 | 190 | 226,33 | −36,33 | 1320,0 |\n| 10 | 290 | 282,67 | 7,33 | 53,7 |\n| **Summe** | | | | **8 265,6** |\n\n$$R^2 = 1 - \\frac{8\\,265{,}6}{40\\,000} = 1 - 0{,}2066 = 0{,}7934$$\n\nOder direkt: $R^2 = r_{xy}^2 = \\left(\\frac{169\\,000}{\\sqrt{900\\,000 \\cdot 40\\,000}}\\right)^2 = \\left(\\frac{169\\,000}{189\\,737}\\right)^2 = 0{,}8907^2 = 0{,}7934$\n\n**Fazit:** Die Regressionsgerade erklärt **79,3 %** der gesamten Streuung der Energieausgaben. Das ist ein recht guter Wert.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "R² und Korrelationskoeffizient",
+          "body": "Im **einfachen** linearen Regressionsmodell (ein Regressor) gilt stets: $R^2 = r_{xy}^2$. Das Bestimmtheitsmaß ist also das Quadrat des Pearson-Korrelationskoeffizienten. Der empirische Korrelationskoeffizient $R = +\\sqrt{R^2} = r_{y\\hat{y}}$ gibt auch die Richtung an."
+        },
+        {
+          "kind": "info",
+          "title": "Warum maximiert KQ das R²?",
+          "body": "Die KQ-Methode minimiert $\\sum \\hat{u}_i^2 = \\text{RSS}$. Da $\\text{TSS}$ fest ist, maximiert das automatisch den Anteil der erklärten Streuung und damit $R^2 = 1 - \\text{RSS}/\\text{TSS}$. KQ und R²-Maximierung sind **dasselbe Problem**."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "reg-r2-vergleich",
+          "title": "Regressionsgerade: Erklärt 79,3 % der Streuung (R² = 0,793)",
+          "caption": "Die Datenpunkte streuen um die Gerade. Wäre R²=1, lägen alle Punkte exakt auf der Geraden.",
+          "functions": [
+            { "fn": "19.778 + 0.18778*x", "label": "Regressionsgerade", "color": "#2563eb" },
+            { "fn": "170", "label": "Mittelwert ȳ = 170", "color": "#dc2626", "dashed": true }
+          ],
+          "domain": [200, 1500],
+          "range": [0, 320],
+          "points": [
+            { "x": 800, "y": 170, "label": "Schwerpunkt (800, 170)" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ki-tests",
+      "heading": "Konfidenzintervalle und Tests für die Regressionskoeffizienten",
+      "body": "Nachdem wir $\\hat{a}$ und $\\hat{b}$ berechnet haben, stellen sich wichtige Fragen:\n- Ist der geschätzte Zusammenhang **statistisch signifikant**, oder könnte er zufällig entstanden sein?\n- In welchem **Intervall** liegt der wahre Wert von $b$?\n\n**Verteilung der Schätzer:**\nUnter den Modellannahmen gilt:\n$$\\hat{b} \\sim N\\!\\left(b,\\; \\frac{\\sigma^2}{\\sum(x_i - \\bar{x})^2}\\right), \\qquad \\hat{a} \\sim N\\!\\left(a,\\; \\sigma^2 \\left[\\frac{1}{n} + \\frac{\\bar{x}^2}{\\sum(x_i - \\bar{x})^2}\\right]\\right)$$\n\nDa $\\sigma^2$ unbekannt ist, schätzen wir ihn durch $\\hat{\\sigma}^2$. Die Prüfgröße folgt dann einer **t-Verteilung mit $n-2$ Freiheitsgraden**:\n\n$$T_b = \\frac{\\hat{b} - b_0}{\\hat{\\sigma}_{\\hat{b}}} \\sim t_{n-2}, \\qquad \\text{mit} \\quad \\hat{\\sigma}_{\\hat{b}}^2 = \\frac{\\hat{\\sigma}^2}{\\sum(x_i - \\bar{x})^2}$$\n\n**Konfidenzintervall für $b$ (Niveau $1-\\alpha$):**\n$$KI(b) = \\left[\\hat{b} \\pm t_{n-2,\\,1-\\alpha/2} \\cdot \\hat{\\sigma}_{\\hat{b}}\\right]$$\n\n**Test auf Signifikanz: $H_0: b = 0$ vs. $H_1: b \\neq 0$**\n\nDies ist der wichtigste Test: Wenn $b = 0$, hat $x$ **keinen linearen Einfluss** auf $y$.\n$$T_b = \\frac{\\hat{b} - 0}{\\hat{\\sigma}_{\\hat{b}}} \\sim t_{n-2} \\quad \\text{unter } H_0$$\nAblehnung von $H_0$, wenn $|T_b| > t_{n-2,\\,1-\\alpha/2}$.\n\nÄquivalent dazu (und bequemer): Nutze den **Korrelationstest**:\n$$T = r_{xy} \\cdot \\frac{\\sqrt{n-2}}{\\sqrt{1-r_{xy}^2}} \\sim t_{n-2} \\quad \\text{unter } H_0: \\rho = 0$$\n\n**Prognose:**\nFür einen neuen Beobachtungspunkt $x_0$ lautet die Punktprognose:\n$$\\hat{y}_0 = \\hat{a} + \\hat{b} \\cdot x_0$$\n\n**Numerisches Beispiel (Aufgabe 1, Test auf $b=0$):**\n$$\\hat{\\sigma}^2 = \\frac{8\\,265{,}6}{10-2} = 1\\,033{,}2$$\n$$\\hat{\\sigma}_{\\hat{b}} = \\sqrt{\\frac{1\\,033{,}2}{900\\,000}} = \\sqrt{0{,}001148} = 0{,}03388$$\n$$T_b = \\frac{0{,}1878}{0{,}03388} = 5{,}54$$\n\nKritischer Wert bei $\\alpha = 0{,}05$: $t_{8,\\,0{,}975} = 2{,}306$. Da $5{,}54 > 2{,}306$, wird $H_0: b=0$ **abgelehnt** — der Zusammenhang ist statistisch signifikant.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Stichprobenumfang und Signifikanz",
+          "body": "Die Prüfgröße $T_b = \\hat{b} / \\hat{\\sigma}_{\\hat{b}}$ hängt über $\\hat{\\sigma}_{\\hat{b}} = \\hat{\\sigma}/\\sqrt{\\sum(x_i-\\bar{x})^2}$ vom Stichprobenumfang ab: Mit wachsendem $n$ wächst $\\sum(x_i-\\bar{x})^2$ typischerweise, sodass $\\hat{\\sigma}_{\\hat{b}}$ kleiner und $T_b$ größer wird. Gleiches $\\hat{b}$ und gleiches $R^2$, aber größeres $n$ → leichter signifikant."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "reg-t-test-fig",
+          "title": "t-Verteilung mit 8 Freiheitsgraden: Test auf b = 0",
+          "caption": "Zweiseitiger Test (α = 0,05): Ablehnbereich |T| > 2,306. Prüfgröße T_b = 5,54 liegt weit im Ablehnbereich.",
+          "dist": "t",
+          "params": { "df": 8 },
+          "shade": { "from": -2.306, "to": 2.306, "tail": "two" },
+          "markers": [
+            { "x": -2.306, "label": "−t₈;0,975 = −2,306" },
+            { "x": 2.306, "label": "t₈;0,975 = 2,306" },
+            { "x": 5.54, "label": "T_b = 5,54" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r-code",
+      "heading": "Lineare Regression in R — Mit lm()",
+      "body": "In der Praxis und in der R-Übung nutzen wir den Befehl `lm()` (linear model), der alles auf einmal berechnet.\n\n**Einfaches Beispiel mit den Haushaltsdaten:**\n\n```r\n# Daten eingeben\nx <- c(300, 500, 600, 700, 700, 800, 900, 1000, 1100, 1400)\ny <- c(100, 70, 170, 120, 150, 160, 200, 250, 190, 290)\n\n# Lineares Modell schätzen\nmodell <- lm(y ~ x)\n\n# Zusammenfassung anzeigen\nsummary(modell)\n# Output enthält: Koeffizienten (a_hat, b_hat), Standardfehler,\n# t-Werte, p-Werte, R², sigma_hat\n\n# Prognose für x0 = 900\npredict(modell, newdata = data.frame(x = 900))\n# Ergebnis: 188.78\n\n# Streudiagramm mit Regressionsgerade\nplot(x, y, main = \"Nahrungsmittel vs. Energie\",\n     xlab = \"Nahrungsmittelausgaben (EUR)\",\n     ylab = \"Energieausgaben (EUR)\")\nabline(modell, col = \"blue\")\n```\n\n**Regression mit dem Datensatz DataRegression.xlsx (BIP und Konsum):**\n\n```r\nlibrary(readxl)\ndata <- read_excel(\"DataRegression.xlsx\")\n\n# Regressand: BIP (Bruttoinlandsprodukt)\n# Regressor: Konsumausgaben\nmodell2 <- lm(Bruttoinlandsprodukt ~ Konsumausgaben, data = data)\nsummary(modell2)\n# Aus summary() ablesen:\n# Coefficients: Estimate = geschätzte Koeff., Std. Error, t value, Pr(>|t|)\n# Multiple R-squared: R²\n# Residual standard error: sigma_hat\n```\n\n**Interpretation des R-Outputs:**\n- `(Intercept)` = $\\hat{a}$ (Achsenabschnitt)\n- `x` oder `Konsumausgaben` = $\\hat{b}$ (Steigung)\n- `Std. Error` = $\\hat{\\sigma}_{\\hat{b}}$ (Standardfehler des Schätzers)\n- `t value` = Prüfgröße $T_b = \\hat{b} / \\hat{\\sigma}_{\\hat{b}}$\n- `Pr(>|t|)` = p-Wert (< 0,05 → signifikant bei $\\alpha = 5\\%$)\n- `Multiple R-squared` = $R^2$\n- `Residual standard error` = $\\hat{\\sigma}$",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "p-Wert in R lesen",
+          "body": "Wenn `Pr(>|t|)` kleiner als das Signifikanzniveau $\\alpha$ (z.B. 0,05) ist, wird $H_0: b = 0$ abgelehnt — der Regressor hat einen statistisch signifikanten Einfluss. In R markiert `***` höchste Signifikanz (p < 0,001)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "linreg-fc-1",
+      "topicId": "lineare-regression",
+      "front": "Was ist das Ziel der Kleinste-Quadrate-Methode?",
+      "back": "Minimiere die Summe der quadrierten Residuen: $\\sum(y_i - \\hat{a} - \\hat{b} x_i)^2 \\to \\min$. Das liefert die bestmöglich angepasste Regressionsgerade."
+    },
+    {
+      "id": "linreg-fc-2",
+      "topicId": "lineare-regression",
+      "front": "Wie berechnet man den KQ-Schätzer für die Steigung $\\hat{b}$?",
+      "back": "$$\\hat{b} = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2} = \\frac{s_{xy}}{s_x^2}$$"
+    },
+    {
+      "id": "linreg-fc-3",
+      "topicId": "lineare-regression",
+      "front": "Wie berechnet man den Achsenabschnitt $\\hat{a}$?",
+      "back": "$\\hat{a} = \\bar{y} - \\hat{b} \\cdot \\bar{x}$. Die Regressionsgerade geht immer durch den Schwerpunkt $(\\bar{x}, \\bar{y})$."
+    },
+    {
+      "id": "linreg-fc-4",
+      "topicId": "lineare-regression",
+      "front": "Was sagt das Bestimmtheitsmaß $R^2$ aus?",
+      "back": "$R^2 \\in [0, 1]$ gibt den Anteil der durch die Regressionsgerade erklärten Streuung an der Gesamtstreuung an. $R^2 = 1$: perfekte Anpassung; $R^2 = 0$: kein linearer Zusammenhang."
+    },
+    {
+      "id": "linreg-fc-5",
+      "topicId": "lineare-regression",
+      "front": "Wie hängen $R^2$ und der Korrelationskoeffizient $r_{xy}$ zusammen?",
+      "back": "Im einfachen linearen Regressionsmodell gilt: $R^2 = r_{xy}^2$. Das Bestimmtheitsmaß ist das Quadrat des Pearson-Korrelationskoeffizienten."
+    },
+    {
+      "id": "linreg-fc-6",
+      "topicId": "lineare-regression",
+      "front": "Welche Verteilung hat die Prüfgröße $T_b$ beim Test auf $b = 0$?",
+      "back": "$T_b = \\hat{b}/\\hat{\\sigma}_{\\hat{b}} \\sim t_{n-2}$ (t-Verteilung mit $n-2$ Freiheitsgraden). Ablehnung von $H_0: b=0$ bei $|T_b| > t_{n-2,\\, 1-\\alpha/2}$."
+    },
+    {
+      "id": "linreg-fc-7",
+      "topicId": "lineare-regression",
+      "front": "Was bedeutet Homoskedastizität im Regressionsmodell?",
+      "back": "Die Varianz der Störgröße $u_i$ ist für alle Beobachtungen gleich: $\\text{Var}(u_i) = \\sigma^2 = \\text{const}$. Das Gegenteil (variierende Fehlervarianz) heißt Heteroskedastizität."
+    },
+    {
+      "id": "linreg-fc-8",
+      "topicId": "lineare-regression",
+      "front": "Wie schätzt man $\\sigma^2$ (Störtermvarianz) im Regressionsmodell?",
+      "back": "$$\\hat{\\sigma}^2 = \\frac{1}{n-2}\\sum_{i=1}^n \\hat{u}_i^2 = \\frac{\\text{RSS}}{n-2}$$\nDer Nenner ist $n-2$ (nicht $n$), weil 2 Parameter ($a$ und $b$) geschätzt wurden."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "linreg-q1",
+      "topicId": "lineare-regression",
+      "difficulty": "leicht",
+      "prompt": "Was minimiert die Kleinste-Quadrate-Methode?",
+      "options": [
+        "Die Summe der absoluten Residuen $\\sum |y_i - \\hat{y}_i|$",
+        "Die Summe der quadrierten Residuen $\\sum (y_i - \\hat{y}_i)^2$",
+        "Das Bestimmtheitsmaß $R^2$",
+        "Die Varianz der Regressoren $\\sum (x_i - \\bar{x})^2$"
+      ],
+      "correct": [1],
+      "explanation": "Die KQ-Methode minimiert $\\sum (y_i - \\hat{y}_i)^2$ — die Summe der quadrierten vertikalen Abstände zwischen den Datenpunkten und der Geraden. Durch das Quadrieren werden alle Abweichungen positiv und große Fehler stärker gewichtet."
+    },
+    {
+      "kind": "truefalse",
+      "id": "linreg-q2",
+      "topicId": "lineare-regression",
+      "difficulty": "leicht",
+      "prompt": "Die Regressionsgerade geht immer durch den Punkt $(\\bar{x}, \\bar{y})$ (den Schwerpunkt der Daten).",
+      "answer": true,
+      "explanation": "Ja, das ist eine mathematische Konsequenz der KQ-Schätzung. $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x}$ stellt genau sicher, dass $\\hat{y}$ beim Einsetzen von $\\bar{x}$ den Wert $\\bar{y}$ ergibt."
+    },
+    {
+      "kind": "numeric",
+      "id": "linreg-q3",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Gegeben: $\\sum(x_i - \\bar{x})(y_i - \\bar{y}) = 30$, $\\sum(x_i - \\bar{x})^2 = 100$, $\\bar{x} = 6$, $\\bar{y} = 5$. Wie groß ist der Achsenabschnitt $\\hat{a}$?",
+      "answer": 3.2,
+      "tolerance": 0.01,
+      "explanation": "Steigung: $\\hat{b} = 30/100 = 0{,}3$. Achsenabschnitt: $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x} = 5 - 0{,}3 \\cdot 6 = 5 - 1{,}8 = 3{,}2$."
+    },
+    {
+      "kind": "numeric",
+      "id": "linreg-q4",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Für einen Datensatz mit $n = 10$ Haushalten gilt: $\\bar{x} = 800$, $\\bar{y} = 170$, $\\sum(x_i-\\bar{x})(y_i-\\bar{y}) = 169\\,000$, $\\sum(x_i-\\bar{x})^2 = 900\\,000$. Welchen Wert ergibt die Regressionsgerade für $x_0 = 900$? (Runde auf ganze Zahl.)",
+      "answer": 189,
+      "tolerance": 1,
+      "unit": "EUR",
+      "explanation": "$\\hat{b} = 169\\,000/900\\,000 \\approx 0{,}1878$. $\\hat{a} = 170 - 0{,}1878 \\cdot 800 = 19{,}78$. Prognose: $\\hat{y}_0 = 19{,}78 + 0{,}1878 \\cdot 900 = 188{,}78 \\approx 189$."
+    },
+    {
+      "kind": "numeric",
+      "id": "linreg-q5",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Gegeben: $\\sum(x_i-\\bar{x})(y_i-\\bar{y}) = 169\\,000$, $\\sum(x_i-\\bar{x})^2 = 900\\,000$, $\\sum(y_i-\\bar{y})^2 = 40\\,000$. Wie groß ist $R^2$? (Runde auf 4 Dezimalstellen.)",
+      "answer": 0.7934,
+      "tolerance": 0.001,
+      "explanation": "$R^2 = r^2 = \\frac{(169\\,000)^2}{900\\,000 \\cdot 40\\,000} = \\frac{28\\,561\\,000\\,000}{36\\,000\\,000\\,000} = 0{,}7934$. Oder: $r = 169\\,000 / \\sqrt{900\\,000 \\cdot 40\\,000} = 169\\,000/189\\,736{,}7 \\approx 0{,}8907$; $R^2 = 0{,}8907^2 = 0{,}7934$."
+    },
+    {
+      "kind": "mc",
+      "id": "linreg-q6",
+      "topicId": "lineare-regression",
+      "difficulty": "leicht",
+      "prompt": "Was bedeutet $R^2 = 0{,}79$ in einem Regressionsmodell?",
+      "options": [
+        "Der Korrelationskoeffizient beträgt 0,79",
+        "Die Regressionsgerade erklärt 79 % der Gesamtstreuung von $y$",
+        "79 % der Datenpunkte liegen auf der Geraden",
+        "Der Achsenabschnitt ist 79 % des Mittelwerts"
+      ],
+      "correct": [1],
+      "explanation": "$R^2$ gibt den Anteil der durch das Regressionsmodell erklärten Streuung an der Gesamtstreuung an. $R^2 = 0{,}79$ bedeutet: 79 % der Variabilität in $y$ wird durch den linearen Zusammenhang mit $x$ erklärt."
+    },
+    {
+      "kind": "mc",
+      "id": "linreg-q7",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Welche Verteilung hat die Prüfgröße $T_b = \\hat{b}/\\hat{\\sigma}_{\\hat{b}}$ beim Test auf Signifikanz der Steigung?",
+      "options": [
+        "$N(0,1)$ (Standardnormalverteilung)",
+        "$t_{n-1}$ (t-Verteilung mit $n-1$ Freiheitsgraden)",
+        "$t_{n-2}$ (t-Verteilung mit $n-2$ Freiheitsgraden)",
+        "$\\chi^2_{n-2}$ (Chi-Quadrat-Verteilung)"
+      ],
+      "correct": [2],
+      "explanation": "Im einfachen linearen Regressionsmodell gilt $T_b \\sim t_{n-2}$, weil zwei Parameter ($a$ und $b$) geschätzt werden. Es gehen also 2 Freiheitsgrade verloren."
+    },
+    {
+      "kind": "truefalse",
+      "id": "linreg-q8",
+      "topicId": "lineare-regression",
+      "difficulty": "schwer",
+      "prompt": "Bei gleichem Bestimmtheitsmaß $R^2$ und gleichem $\\hat{b}$ wird der Test auf $H_0: b = 0$ mit wachsendem Stichprobenumfang $n$ leichter abgelehnt.",
+      "answer": true,
+      "explanation": "Ja. Die Prüfgröße ist $T_b = \\hat{b}/\\hat{\\sigma}_{\\hat{b}}$ mit $\\hat{\\sigma}_{\\hat{b}} = \\hat{\\sigma}/\\sqrt{\\sum(x_i-\\bar{x})^2}$. Mit wachsendem $n$ wächst typischerweise $\\sum(x_i-\\bar{x})^2$, sodass $\\hat{\\sigma}_{\\hat{b}}$ kleiner und $|T_b|$ größer wird — selbst wenn $\\hat{b}$ und $R^2$ konstant bleiben."
+    },
+    {
+      "kind": "freetext",
+      "id": "linreg-q9",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Erkläre in eigenen Worten, was ein Residuum $\\hat{u}_i$ ist und welche Rolle es in der Regressionsanalyse spielt.",
+      "sampleAnswer": "Ein Residuum $\\hat{u}_i = y_i - \\hat{y}_i$ ist die Differenz zwischen dem tatsächlich beobachteten Wert $y_i$ und dem von der Regressionsgerade vorhergesagten Wert $\\hat{y}_i$. Es ist der Teil von $y_i$, den das Modell nicht erklärt. Die KQ-Methode minimiert die Summe der quadrierten Residuen, um die bestmögliche Gerade zu finden. Große Residuen zeigen an, dass das Modell für diese Beobachtungen schlecht passt.",
+      "keywords": ["residuum", "beobachtet", "vorhergesagt", "differenz", "fehler", "nicht erklärt"],
+      "explanation": "Das Residuum misst den 'Schätztfehler' für jede Beobachtung. Die Analyse der Residuen (z.B. auf Normalverteilung, Homoskedastizität) erlaubt es, die Modellgüte und -annahmen zu prüfen."
+    },
+    {
+      "kind": "mc",
+      "id": "linreg-q10",
+      "topicId": "lineare-regression",
+      "difficulty": "schwer",
+      "prompt": "Mit welchem R-Befehl schätzt man eine lineare Regression von $y$ auf $x$?",
+      "options": [
+        "`reg(y, x)`",
+        "`lm(y ~ x)`",
+        "`cor(y, x)`",
+        "`glm(y, x)`"
+      ],
+      "correct": [1],
+      "explanation": "`lm(y ~ x)` steht für *linear model* und schätzt das einfache lineare Regressionsmodell. `cor()` berechnet nur den Korrelationskoeffizienten; `glm()` ist für verallgemeinerte lineare Modelle."
+    },
+    {
+      "kind": "truefalse",
+      "id": "linreg-q11",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Der Schätzer $\\hat{\\sigma}^2 = \\frac{1}{n-2}\\sum\\hat{u}_i^2$ ist ein erwartungstreuer Schätzer für die Störtermvarianz $\\sigma^2$.",
+      "answer": true,
+      "explanation": "Ja, es gilt $E(\\hat{\\sigma}^2) = \\sigma^2$. Der Nenner $n-2$ (statt $n$) stellt die Erwartungstreue sicher, weil zwei Parameter ($a$ und $b$) aus denselben Daten geschätzt wurden."
+    },
+    {
+      "kind": "numeric",
+      "id": "linreg-q12",
+      "topicId": "lineare-regression",
+      "difficulty": "schwer",
+      "prompt": "Aus $n=42$ Wertepaaren: $\\sum(x_i-\\bar{x})(y_i-\\bar{y}) = 30$, $\\sum(x_i-\\bar{x})^2 = 100$, $\\sum(y_i-\\bar{y})^2 = 49$. Wie groß ist $R^2$? (Runde auf 4 Dezimalstellen.)",
+      "answer": 0.1837,
+      "tolerance": 0.001,
+      "explanation": "$r = 30/\\sqrt{100 \\cdot 49} = 30/70 = 3/7 \\approx 0{,}4286$. $R^2 = r^2 = (3/7)^2 = 9/49 \\approx 0{,}1837$. Nur 18,37 % der Streuung von $y$ wird durch den linearen Zusammenhang mit $x$ erklärt — eine schwache Anpassung."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "linreg-ex-1",
+      "topicId": "lineare-regression",
+      "label": "Übungsblatt 5, Aufgabe 1 — Einkommens- und Verbrauchsstichprobe",
+      "source": "Übungsblatt 5 (Lineare Regression), Prof. Dr. Sibbertsen, Leibniz Universität Hannover",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "prompt": "Bei einer Einkommens- und Verbrauchsstichprobe wurden an 10 zufällig ausgewählten Haushalten die folgenden Verbrauchsdaten ermittelt ($x_i$ := monatliche Ausgaben für Nahrungsmittel inkl. Genussmittel, $y_i$ := monatliche Ausgaben für Energie). Die Ausgaben folgen einer Normalverteilung.\n\n| $x_i$ | 300 | 500 | 600 | 700 | 700 | 800 | 900 | 1000 | 1100 | 1400 |\n|--------|-----|-----|-----|-----|-----|-----|-----|------|------|------|\n| $y_i$ | 100 | 70 | 170 | 120 | 150 | 160 | 200 | 250 | 190 | 290 |\n\n**(a)** Es wird ein linearer Zusammenhang vermutet. Zeichnen Sie ein Streudiagramm.\n\n**(b)**\n- **(ba)** Wie lautet die Regressionsgerade aus der obigen Stichprobe, welche die mittlere Ausgabe für Energie in Abhängigkeit von den Ausgaben für Nahrungsmittel angibt?\n- **(bb)** Welche durchschnittlichen Ausgaben für Energie sind bei Ausgaben von 900 für Nahrungsmittel zu erwarten?\n\n**(c)**\n- **(ca)** Berechnen Sie das Bestimmtheitsmaß $R^2$.\n- **(cb)** Warum maximiert die Methode der kleinsten Quadrate das Bestimmtheitsmaß?\n- **(cc)** Es wird behauptet, dass mit steigendem Stichprobenumfang und unverändertem Bestimmtheitsmaß die Chance zunimmt, einen statistisch gesicherten Zusammenhang von $X$ und $Y$ zu erhalten. Nehmen Sie dazu Stellung.",
+      "hint": "Berechne zuerst $\\bar{x}$ und $\\bar{y}$. Dann $\\sum(x_i-\\bar{x})(y_i-\\bar{y})$ und $\\sum(x_i-\\bar{x})^2$ durch spaltenweise Berechnung in einer Tabelle. Für $R^2$: Nutze $R^2 = r_{xy}^2 = [\\sum(x_i-\\bar{x})(y_i-\\bar{y})]^2 / [\\sum(x_i-\\bar{x})^2 \\cdot \\sum(y_i-\\bar{y})^2]$.",
+      "solution": "### (a) Streudiagramm\n\nDie 10 Datenpunkte werden in einem Koordinatensystem eingetragen, wobei die Nahrungsmittelausgaben $x$ auf der Waagerechten und die Energieausgaben $y$ auf der Senkrechten abgetragen werden. Man erkennt einen positiven, annähernd linearen Trend: Haushalte mit höheren Nahrungsmittelausgaben haben tendenziell auch höhere Energieausgaben.\n\n### (b) Regressionsgerade\n\n**Schritt 1: Mittelwerte berechnen**\n$$\\bar{x} = \\frac{300+500+600+700+700+800+900+1000+1100+1400}{10} = \\frac{8000}{10} = 800$$\n$$\\bar{y} = \\frac{100+70+170+120+150+160+200+250+190+290}{10} = \\frac{1700}{10} = 170$$\n\n**Schritt 2: Hilfsgrößen tabellarisch berechnen**\n\n| $i$ | $x_i$ | $y_i$ | $x_i-\\bar{x}$ | $y_i-\\bar{y}$ | $(x_i-\\bar{x})(y_i-\\bar{y})$ | $(x_i-\\bar{x})^2$ | $(y_i-\\bar{y})^2$ |\n|---|---|---|---|---|---|---|---|\n| 1 | 300 | 100 | −500 | −70 | 35 000 | 250 000 | 4 900 |\n| 2 | 500 | 70 | −300 | −100 | 30 000 | 90 000 | 10 000 |\n| 3 | 600 | 170 | −200 | 0 | 0 | 40 000 | 0 |\n| 4 | 700 | 120 | −100 | −50 | 5 000 | 10 000 | 2 500 |\n| 5 | 700 | 150 | −100 | −20 | 2 000 | 10 000 | 400 |\n| 6 | 800 | 160 | 0 | −10 | 0 | 0 | 100 |\n| 7 | 900 | 200 | 100 | 30 | 3 000 | 10 000 | 900 |\n| 8 | 1000 | 250 | 200 | 80 | 16 000 | 40 000 | 6 400 |\n| 9 | 1100 | 190 | 300 | 20 | 6 000 | 90 000 | 400 |\n| 10 | 1400 | 290 | 600 | 120 | 72 000 | 360 000 | 14 400 |\n| **Σ** | 8000 | 1700 | 0 | 0 | **169 000** | **900 000** | **40 000** |\n\n**Schritt 3: Steigung schätzen**\n$$\\hat{b} = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\frac{169\\,000}{900\\,000} \\approx 0{,}1878$$\n\n**Schritt 4: Achsenabschnitt schätzen**\n$$\\hat{a} = \\bar{y} - \\hat{b} \\cdot \\bar{x} = 170 - 0{,}1878 \\cdot 800 = 170 - 150{,}22 = 19{,}78$$\n\n**Ergebnis:**\n$$\\boxed{\\hat{y}_i = 19{,}78 + 0{,}1878 \\cdot x_i}$$\n\nInterpretation der Steigung: Steigen die Nahrungsmittelausgaben um 1 EUR, so steigen die Energieausgaben durchschnittlich um ca. 0,19 EUR.\n\n**Kontrollrechnung:** Die Gerade durch den Schwerpunkt: $19{,}78 + 0{,}1878 \\cdot 800 = 170 = \\bar{y}$ ✓\n\n### (bb) Prognose für $x_0 = 900$\n$$\\hat{y}_0 = 19{,}78 + 0{,}1878 \\cdot 900 = 19{,}78 + 169{,}00 = 188{,}78 \\text{ EUR}$$\n\nBei monatlichen Nahrungsmittelausgaben von 900 EUR sind durchschnittliche Energieausgaben von **188,78 EUR** zu erwarten.\n\n### (ca) Bestimmtheitsmaß $R^2$\n\nDirekt über den Korrelationskoeffizienten (alle Summen bereits bekannt):\n$$r_{xy} = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2 \\cdot \\sum(y_i-\\bar{y})^2}} = \\frac{169\\,000}{\\sqrt{900\\,000 \\cdot 40\\,000}} = \\frac{169\\,000}{\\sqrt{36\\,000\\,000\\,000}} = \\frac{169\\,000}{189\\,736{,}7} \\approx 0{,}8907$$\n$$\\boxed{R^2 = r_{xy}^2 \\approx 0{,}8907^2 \\approx 0{,}7934}$$\n\nAlternativ über Residuen:\n$$\\hat{u}_1 = 100 - 76{,}11 = 23{,}89 \\Rightarrow \\hat{u}_1^2 \\approx 570{,}7$$\n$$\\hat{u}_2 = 70 - 113{,}67 = -43{,}67 \\Rightarrow \\hat{u}_2^2 \\approx 1907{,}1$$\n$$\\dots$$\n$$\\sum \\hat{u}_i^2 = \\text{RSS} \\approx 8\\,265{,}6$$\n$$R^2 = 1 - \\frac{\\text{RSS}}{\\text{TSS}} = 1 - \\frac{8\\,265{,}6}{40\\,000} = 1 - 0{,}2066 = 0{,}7934$$\n\n**Interpretation:** Die Regressionsgerade erklärt **79,3 %** der gesamten Streuung der Energieausgaben. Das ist eine gute Anpassung.\n\n### (cb) Warum maximiert KQ das Bestimmtheitsmaß?\n\n$$R^2 = 1 - \\frac{\\text{RSS}}{\\text{TSS}} = 1 - \\frac{\\sum(y_i - \\hat{y}_i)^2}{\\sum(y_i - \\bar{y})^2}$$\n\nDa $\\text{TSS} = \\sum(y_i-\\bar{y})^2$ **fest** (von $a$ und $b$ unabhängig) ist, ist $R^2$ genau dann maximal, wenn $\\text{RSS} = \\sum(y_i - \\hat{y}_i)^2$ minimal ist. Die KQ-Methode minimiert aber gerade $\\text{RSS}$. **Daher ist die KQ-Methode äquivalent zur Maximierung von $R^2$.**\n\n### (cc) Stichprobenumfang und Signifikanz bei konstantem $R^2$\n\n**Stellungnahme: Die Behauptung ist korrekt.**\n\nDie Prüfgröße für den Test $H_0: b = 0$ gegen $H_1: b \\neq 0$ kann über den Korrelationskoeffizienten $r = \\sqrt{R^2}$ geschrieben werden als:\n$$T = r \\cdot \\frac{\\sqrt{n-2}}{\\sqrt{1-r^2}} \\sim t_{n-2}$$\n\nBei konstantem $R^2$ (und damit konstantem $r$) wächst $|T|$ mit wachsendem $n$ (wegen $\\sqrt{n-2}$ im Zähler). Gleichzeitig sinkt der kritische Wert $t_{n-2,\\,1-\\alpha/2}$ mit wachsenden Freiheitsgraden.\n\n**Fazit:** Beide Effekte (größere Prüfgröße, kleinerer kritischer Wert) führen dazu, dass $H_0$ bei gleichem $R^2$ mit wachsendem $n$ leichter abgelehnt wird. Selbst ein kleines, inhaltlich wenig bedeutsames $R^2$ kann bei sehr großem $n$ hochsignifikant werden — daher sollte man statistische Signifikanz nicht mit praktischer Bedeutsamkeit verwechseln.",
+      "hasOfficialSolution": false
+    },
+    {
+      "id": "linreg-ex-2",
+      "topicId": "lineare-regression",
+      "label": "Übungsblatt 5, Aufgabe 2 — Schätzung aus Aggregatsummen",
+      "source": "Übungsblatt 5 (Lineare Regression), Prof. Dr. Sibbertsen, Leibniz Universität Hannover",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "prompt": "Aus 42 Wertepaaren $(x_i, y_i)$ ermittelt man:\n$$\\sum x_i = 252, \\quad \\sum y_i = 210, \\quad \\sum(x_i - \\bar{x})(y_i - \\bar{y}) = 30$$\n$$\\sum(x_i - \\bar{x})^2 = 100, \\quad \\sum(y_i - \\bar{y})^2 = 49$$\nSchätzen Sie die Regressionsgerade $\\hat{y}_i = \\hat{a} + \\hat{b} x_i$.",
+      "hint": "Berechne zunächst $\\bar{x}$ und $\\bar{y}$ aus den gegebenen Summen. Dann kannst du $\\hat{b}$ und $\\hat{a}$ direkt einsetzen.",
+      "solution": "**Schritt 1: Mittelwerte aus den Summen berechnen**\n$$\\bar{x} = \\frac{\\sum x_i}{n} = \\frac{252}{42} = 6, \\qquad \\bar{y} = \\frac{\\sum y_i}{n} = \\frac{210}{42} = 5$$\n\n**Schritt 2: Steigung schätzen**\n$$\\hat{b} = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2} = \\frac{30}{100} = 0{,}3$$\n\n**Schritt 3: Achsenabschnitt schätzen**\n$$\\hat{a} = \\bar{y} - \\hat{b} \\cdot \\bar{x} = 5 - 0{,}3 \\cdot 6 = 5 - 1{,}8 = 3{,}2$$\n\n**Ergebnis:**\n$$\\boxed{\\hat{y}_i = 3{,}2 + 0{,}3 \\cdot x_i}$$\n\n**Interpretation:** Steigt $x$ um 1 Einheit, so steigt $\\hat{y}$ um 0,3 Einheiten. Bei $x = 0$ beträgt $\\hat{y} = 3{,}2$.\n\n**Kontrollrechnung (Schwerpunkt):** $\\hat{y}(\\bar{x}) = 3{,}2 + 0{,}3 \\cdot 6 = 3{,}2 + 1{,}8 = 5 = \\bar{y}$ ✓\n\n**Bonus — Bestimmtheitsmaß:**\n$$r = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2 \\cdot \\sum(y_i-\\bar{y})^2}} = \\frac{30}{\\sqrt{100 \\cdot 49}} = \\frac{30}{70} = \\frac{3}{7} \\approx 0{,}4286$$\n$$R^2 = r^2 = \\left(\\frac{3}{7}\\right)^2 = \\frac{9}{49} \\approx 0{,}184$$\n\nDie Regressionsgerade erklärt nur ca. 18,4 % der Streuung von $y$ — ein schwacher linearer Zusammenhang.",
+      "hasOfficialSolution": false
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "id": "mkt-vl3-marktforschung-marketingforschung",
+  "subjectId": "bwl",
+  "title": "VL3 - Marktforschung (Marketingforschung)",
+  "summary": "Was ist Marktforschung, wozu dient sie, und wie geht man methodisch vor? Diese Lerneinheit erklaert den 5D-Forschungsprozess, die Unterschiede zwischen Primaer- und Sekundaerforschung sowie Befragung, Beobachtung und Experiment. Ausserdem: Skalenniveaus, Fragebogengestaltung, Panel-Probleme und Datenanalyseverfahren -- alles anfaengerfreundlich mit Beispielen aus der Vorlesung Walsh.",
+  "order": 3,
+  "estMinutes": 55,
+  "group": "Marketing",
+  "sections": [
+    {
+      "id": "s1-begriff-funktion",
+      "heading": "3.1 Begriff und Funktion der Marktforschung",
+      "body": "## Was ist Marktforschung?\n\n**Marktforschung** (auch: Marketingforschung) bedeutet: Daten ueber Maerkte systematisch **sammeln, aufbereiten, analysieren und interpretieren**. Sie liefert die Informationsgrundlage, auf der Marketingentscheidungen getroffen werden.\n\n## Wozu braucht man Marktforschung?\n\nEin Unternehmen muss laufend vier Akteursgruppen im Blick behalten: **Kunden** (Was brauchen sie? Wie zufrieden sind sie?), **Wettbewerber** (Wer sind sie? Was sind ihre Staerken?), **Lieferanten** (Wer kann uns beliefern?) und **Absatzmittler** (Wer hilft uns in neue Maerkte?).\n\n## Marktforschung im Marketingprozess\n\nDie Marktforschungsabteilung sitzt beim Marketingdirektor und liefert Informationen fuer alle Bereiche des Marketing-Managements: Informationsmanagement, Marketingplanung/-kontrolle und Marketing-Implementierung. Den zustaendigen Mitarbeiter nennt man **Consumer/Customer Insight Manager**.\n\n## Umsatzpotenzial -- eine typische Fragestellung\n\nWie hoch ist unser Umsatzpotenzial? Das Umsatz-/Absatzpotenzial ist der **maximal erreichbare Absatz** eines Unternehmens in seinem Markt.\n\n$$\\text{Umsatzpotenzial} = \\sum_{i} (\\text{Kunde}_i \\times \\text{Kaufpreis}_i)$$\n\n**Beispiel Erfrischungsgetraenk-Hersteller:** Das Umsatzpotenzial ergibt sich aus der Summe ueber alle Kanaele (LEH, Tankstellen, Flughafen/Bahnhof), jeweils multipliziert mit dem kanalspezifischen Kaufpreis.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Marktforschung (Definition)",
+          "body": "Aufgabe der Marktforschung = Daten ueber Maerkte (Grundlage des strategischen Marketing) und Marktbeeinflussungsmoeglichkeiten (Grundlage des operativen Marketing) systematisch zu sammeln, aufzubereiten, zu analysieren und zu interpretieren."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Informationsbedarf je Marketingbereich",
+          "body": "- **Strategisches Marketing / Marktfeld:** Umsatzpotenzial des neuen Marktes\n- **Produktpolitik:** Wichtigste Produktmerkmale (Conjoint-Analyse)\n- **Preispolitik:** Preisbereitschaft der Kunden\n- **Distributionspolitik:** Bevorzugte Absatzkanaele\n- **Kommunikationspolitik:** Werbewirkung (Day-after-recall-Test)"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-mfo-bereiche",
+          "title": "Informationserfordernisse in verschiedenen Marketingbereichen",
+          "headers": ["Marketingbereich", "Informationsgrundlage"],
+          "rows": [
+            ["Strategisches Marketing: Marktfeld", "Umsatzpotenzial des neuen Marktes"],
+            ["Marktstimulierungsstrategien", "Kaufverhalten (preis- vs. markenbewusst)"],
+            ["Produktpolitik", "Wichtigste Produktmerkmale (Conjoint-Analyse)"],
+            ["Preispolitik", "Preisbereitschaft der Kunden"],
+            ["Distributionspolitik", "Bevorzugte Absatzkanaele der Kunden"],
+            ["Kommunikationspolitik", "Werbewirkung (Day-after-recall-Test)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2-prozess",
+      "heading": "3.2 Prinzipien und 5D-Forschungsprozess",
+      "body": "## Prinzipien der Marktforschung\n\nVor jeder Studie gelten fuenf Grundregeln:\n\n1. **Zielorientierung** -- Daten sind Mittel zum Zweck, nicht Selbstzweck. Erst Ziel definieren, dann erheben.\n2. **Kostenprinzip** -- Erst kostenguenstige Erhebungsformen nutzen, dann teurere.\n3. **Vom Allgemeinen zum Speziellen** -- Erst generelle Infos beschaffen, dann Details.\n4. **Methodeneffekte vermeiden** -- Die Methode selbst darf das Ergebnis nicht verzerren (Messproblematik).\n5. **Schwachstellenanalyse** -- Qualitaet der Studie kontinuierlich pruefen.\n\n**CATI** (Computer Assisted Telephone Interviewing) und **CAPI** (Computer Assisted Personal Interviewing) sind zwei computergestuetzte Befragungsformen.\n\n## Der 5D-Forschungsprozess\n\nJede Marktforschungsstudie durchlaeuft fuenf Phasen:\n\n1. **Definition** -- Problem identifizieren, Forschungsziele formulieren. *Was wollen wir wissen?*\n2. **Design** -- Forschungsdesign entwickeln: Welche Methode? Welche Stichprobe? Welches Instrument?\n3. **Datenerhebung** -- Daten sammeln (Befragung, Beobachtung, Experiment, Panel).\n4. **Datenanalyse** -- Daten auswerten (univariat, bivariat, multivariat).\n5. **Dokumentation** -- Ergebnisse interpretieren und in den Entscheidungsprozess einbinden.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "5D-Schema auswendig lernen",
+          "body": "**D**efinition -- **D**esign -- **D**atenerhebung -- **D**atenanalyse -- **D**okumentation\n\nAlle fuenf Phasen beginnen mit D -- das macht sie leicht merkbar."
+        },
+        {
+          "kind": "tip",
+          "title": "Pruefungstipp",
+          "body": "Das 5D-Schema und die Prinzipien der Marktforschung sind klassische Pruefungsfragen. Lerne sowohl die Namen der Phasen als auch, was in jeder Phase konkret passiert."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-5d-prozess",
+          "title": "5D-Forschungsprozess der Marktforschung",
+          "caption": "Die fuenf Phasen laufen sequenziell ab, koennen aber iterativ wiederholt werden.",
+          "code": "graph LR\n  A[\"1. Definition\\nProblem und Ziel\"] --> B[\"2. Design\\nForschungsdesign\"]\n  B --> C[\"3. Datenerhebung\\nBefragung/Beobachtung\"]\n  C --> D[\"4. Datenanalyse\\nunivar./bivar./multivar.\"]\n  D --> E[\"5. Dokumentation\\nInterpretation und Entscheidung\"]"
+        }
+      ]
+    },
+    {
+      "id": "s3-methoden",
+      "heading": "3.3 Methoden der Marktforschung",
+      "body": "## Das grosse Bild: Wie laesst sich Marktforschung einteilen?\n\n### 1. Wer forscht? -- Selbst- vs. Fremdforschung\n- **Selbstforschung:** Das Unternehmen forscht selbst (eigene Abteilung).\n- **Fremdforschung:** Ein externes Institut (z.B. GfK, AC Nielsen) wird beauftragt.\n\n### 2. Werden neue Daten erhoben? -- Primaer- vs. Sekundaerforschung\n- **Primaerforschung** (Field Research): Neue Daten werden **eigens fuer das aktuelle Forschungsproblem** erhoben. Aufwaendig, aber zielgenau. Methoden: Befragung, Beobachtung, Experiment.\n- **Sekundaerforschung** (Desk Research): **Bereits vorhandene Daten** werden genutzt. Intern: Buchhaltung, CRM-Daten. Extern: Statistiken, Branchenberichte.\n\n**Faustregel:** Immer zuerst Sekundaerforschung (billig und schnell), dann Primaerforschung (teuer und aufwaendig).\n\n### 3. Wie standardisiert? -- Quantitativ vs. Qualitativ\n- **Quantitativ:** Standardisierte Fragen, grosse Stichproben, statistische Auswertung. Ziel: repraesentative Zahlen.\n- **Qualitativ:** Offene Fragen, kleine Gruppen, tiefes Verstehen. Ziel: Motive und Einstellungen erkunden.\n\n### 4. Wie oft? -- Einmalige Erhebung vs. Panel\n- **Einmalige Erhebung:** Einmalige Befragung oder Beobachtung.\n- **Panel:** Dieselbe Gruppe wird regelmaessig befragt (mehr in Abschnitt 3.4).\n\n## Die drei Primaererhebungsmethoden\n\n### Befragung\nDie haeufigste Methode. Unterscheidung nach muendlich (persoenlich oder telefonisch/CATI) vs. schriftlich (Fragebogen, Online-Umfrage).\n\n### Beobachtung\nVerhalten wird systematisch beobachtet, ohne dass die Person befragt wird. Beispiele: Mystery Shopping, Scanner-Kassen, Eye Tracking.\n\n### Experiment\nUntersuchung unter **kontrollierten, vorher festgelegten Bedingungen**. Man veraendert gezielt eine Variable (z.B. Anzeigenformat) und misst die Auswirkung. **Konfundierende Variablen** (stoerende Drittvariablen wie Licht, Lautstaerke, Geruch) koennen so kontrolliert werden.\n\n**Praxisbeispiel Eye Tracking (Nivea Beaute):** Nivea testete, ob ein 2/1-Anzeigenformat mehr Aufmerksamkeit erzeugt als ein 1/1-Format. Per Eye Tracking wurde gemessen, wie lange Testpersonen auf Anzeigenelemente schauten. Ergebnis: Im 2/1-Format verweilten Probanden ca. **20% laenger** auf der Anzeige (6,2 Sek. vs. 5,2 Sek.).\n\n### Fokusgruppe (qualitative Methode)\nEine **moderierte Gruppendiskussion** mit i.d.R. **6 bis 10 Personen**, die 1 bis 2 Stunden ein festgelegtes Thema diskutieren. Fokusgruppen liefern qualitative Einblicke in Einstellungen, Meinungen und die Lebenswelt der Zielgruppe.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Primaer- vs. Sekundaerforschung",
+          "body": "**Primaerforschung:** Neue Daten werden fuer das konkrete Problem erhoben (teuer, aber massgeschneidert).\n\n**Sekundaerforschung:** Bereits vorhandene Daten werden genutzt (guenstig und schnell, aber evtl. nicht passgenau)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Experiment: Eye Tracking bei Nivea Beaute",
+          "body": "**Forschungsfrage:** Erzeugt ein doppelseitiges Format (2/1) mehr Aufmerksamkeit als ein einseitiges (1/1)?\n\n**Methode:** Eye Tracking -- Blickbewegungen werden aufgezeichnet.\n\n**Ergebnis:** Mittlere Betrachtungsdauer Nivea 2/1: 6,2 Sek.; Nivea 1/1: 5,2 Sek. => +20% mehr Aufmerksamkeit."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-methoden-baum",
+          "title": "Systematik der Marktforschungsansaetze",
+          "caption": "Quelle: Walsh/Deseniss/Kilian (2020), S. 107",
+          "code": "graph TD\n  A[Ansaetze der Marktforschung] --> B[Selbstforschung]\n  A --> C[Fremdforschung]\n  B --> D[sekundaer]\n  B --> E[primaer]\n  C --> F[primaer]\n  C --> G[sekundaer]\n  D --> H[intern]\n  D --> I[extern]\n  E --> J[Befragung]\n  E --> K[Beobachtung]\n  E --> L[Experiment]\n  J --> M[quantitativ]\n  J --> N[qualitativ]\n  J --> O[Einmalig]\n  J --> P[Panel]"
+        }
+      ]
+    },
+    {
+      "id": "s4-panel",
+      "heading": "3.4 Panel -- Dauerbefragung derselben Gruppe",
+      "body": "## Was ist ein Panel?\n\n**Panel** = Erhebung bei einem **gleichbleibenden Kreis** von Erhebungseinheiten (Personen, Unternehmen) in **regelmaessigen zeitlichen Abstaenden** zum **gleichen Untersuchungsgegenstand**.\n\nBeispiel: 1.000 Haushalte werden jeden Monat befragt, welche Waschmittel sie gekauft haben. So laessen sich Veraenderungen im Kaufverhalten ueber die Zeit beobachten.\n\n## Paneltypen im Ueberblick\n\n**Hauptanbieter im FMCG-Bereich** (Fast Moving Consumer Goods = schnelldrehende Konsumgueter): GfK und AC Nielsen.\n\n**Single-Source-Panel:** Besonders wertvolle Sonderform -- Daten zum Konsumverhalten *und* zum Mediennutzungsverhalten stammen aus **derselben Quelle**. Das erlaubt besonders valide Aussagen (z.B. Zusammenhang TV-Werbung und Kaufverhalten), ist aber sehr aufwaendig.\n\n## Probleme von Paneldaten (Klausurrelevant!)\n\n### 1. Marktabdeckung (Coverage)\nPanels erfassen nur **Teilmengen** der Grundgesamtheit (systematischer Auswahlfehler). Haushaltspanels erfassen z.B. keine Grossverbraucher oder Ausser-Haus-Konsum. Handelspanels koennen Aldi, Warenhauser oder Versandhandel teilweise nicht erfassen.\n\n### 2. Verweigerung der Mitarbeit\nBestimmte Gruppen verweigern haeufiger (z.B. berufstaetige Muetter, Haushalte mit sehr niedrigem/hohem Einkommen). Loesung: **Quotenverfahren** -- Ausfaelle werden durch Personen mit aehnlichen Merkmalen ersetzt.\n\n### 3. Panelsterblichkeit\nViele Teilnehmer hoeren im Laufe der Zeit auf mitzumachen. Beim Einzelhandels-Panel ca. **15% jaehrlich**. Ersatz ebenfalls durch Quotenverfahren.\n\n### 4. Paneleffekte\n- **Overreporting/Underreporting:** Teilnehmer berichten mehr oder weniger Kaeufe als tatsaechlich.\n- **Verhaltensaenderung:** Weil man weiss, dass man beobachtet wird, kauft man bewusster.\n- **Ermuedung:** Mit der Zeit nimmt die Sorgfalt beim Ausfuellen ab.\n- Loesung: **Panelrotation** -- regelmaessiger Austausch von Teilnehmern.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die 4 Panel-Probleme (Klausur!)",
+          "body": "1. Marktabdeckung (Coverage)\n2. Verweigerung der Mitarbeit\n3. Panelsterblichkeit (ca. 15% p.a.)\n4. Paneleffekte (Over-/Underreporting, Verhaltensaenderung, Ermuedung)"
+        },
+        {
+          "kind": "warning",
+          "title": "Tradeoff: Aufwand vs. Aussagekraft",
+          "body": "Single-Source-Panels erlauben besonders valide Aussagen. Sie sind aber in Datenerhebung und -auswertung **besonders aufwaendig** -- ein klassischer Tradeoff in der Marktforschung."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-paneltypen",
+          "title": "Ueberblick ueber Paneltypen",
+          "headers": ["Paneltyp", "Beispiele", "Wer wird befragt?"],
+          "rows": [
+            ["Handelspanel", "AC Nielsen", "Einzelhandel, Grosshandel"],
+            ["Unternehmenspanel", "GfK", "Repraesentative Unternehmen"],
+            ["Verbraucherpanel", "GfK Consumer Panel", "Haushalte, Einzelpersonen"],
+            ["Spezialpanel", "Fernsehpanel, Onlinepanel", "Themenspezifisch"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5-fragebogen-skalen",
+      "heading": "3.5 Fragebogen und Skalenniveaus",
+      "body": "## Der Fragebogen: Geschlossene vs. Offene Fragen\n\n### Geschlossene Fragen\n- Antwortmoeglichkeiten sind **vorgegeben** (z.B. Ja/Nein, Skala 1 bis 5).\n- **Vorteile:** Leicht auswertbar, grosse Stichproben moeglich, kein Interpretationsspielraum.\n- **Nachteil:** Man braucht Vorwissen ueber moegliche Antworten.\n- Verwendung: Hauptteil quantitativer Studien.\n\n### Offene Fragen\n- Befragte antworten in **eigenen Worten** (Freitext).\n- **Vorteile:** Kein Vorwissen noetig, sehr hoher Informationsgehalt.\n- **Nachteile:** Schwer auszuwerten (viel Text), stark subjektiv.\n- Verwendung: Vorstudien mit 10 bis 20 Personen, um Antwortkategorien zu entwickeln.\n\n**Weitere Regeln fuer gute Frageboegen:** Soziale Erwuenschtheit vermeiden (heikle Fragen zum Ende stellen), nicht zu lang, einfache und eindeutige Sprache.\n\n## Formulierungsfehler -- Was man unbedingt vermeiden muss\n\nDie Vorlesung nennt zehn typische Formulierungsfehler:\n\n1. Zu allgemeine Formulierungen\n2. Extreme Formulierungen\n3. Mehrdeutige, unklare Formulierungen\n4. Negationen in Fragen\n5. Zu lange Formulierungen/Aussagen\n6. Bezug zu aktuellen Ereignissen\n7. Suggestive oder stereotype Formulierungen\n8. Mehrere Gedanken pro Item\n9. Unklarer Antwortbezug (Ort, Zeit, Zusammenhang unklar)\n10. Fremdwoerter, Dialektausdruecke, Woerter mit Doppelbedeutung\n\n**Praxisbeispiel -- Fragebogen eines Waschmaschinenherstellers (fehlerhaft!):**\n\n- Frage: 'Wie hoch ist Ihr auf die naechsten hundert Euro aufgerundetes Jahreseinkommen?' -- Fehler: Heikle Frage gehoert ans Ende.\n- Frage: 'Waschen Sie gelegentlich oder oefter?' -- Fehler: Unklare Grenze zwischen den Kategorien.\n- Frage: 'Finden Sie unser Waschmittel angenehm?' -- Fehler: Suggestiv (impliziert positive Antwort).\n- Frage: 'Wie viele TV-Spots ... in diesem Monat und im selben Monat des Vorjahres?' -- Fehler: Zwei Fragen in einer.\n- Frage: 'Halten Sie es fuer richtig, wenn die Regierung Waschmittel besteuert und damit Menschen die Koerperhygiene vorenthaelt?' -- Fehler: Suggestiv und emotional.\n\n## Skalenniveaus: Wie genau messen wir?\n\nDas **Skalenniveau** bestimmt, welche statistischen Auswertungen erlaubt sind. Es gibt vier Stufen:\n\n**Nominalskala:** Nur Kategorien, keine Rangordnung. Beispiele: Berufsgruppe, Wohnort, Geschlecht, Marke. Erlaubte Statistik: Haeufigkeiten, Modus.\n\n**Ordinalskala:** Rangordnung (groesser/kleiner), aber Abstaende unkontrolliert. Beispiele: Schulnoten (1 bis 6), Platzierungen, Likert-Skala (streng). Erlaubte Statistik: Median, Rangkorrelation.\n\n**Intervallskala:** Gleiche Abstaende zwischen den Skalenstufen, aber **kein absoluter Nullpunkt**. Beispiele: Temperatur in Grad Celsius, Geburtsjahr. Erlaubte Statistik: Mittelwert, Standardabweichung.\n\n**Ratio-/Absolutskala:** Gleiche Abstaende + **absoluter Nullpunkt** (0 = wirklich nichts). Beispiele: Alter, Einkommen, Laenge, Gewicht. Alle Rechenoperationen erlaubt, auch Verhaeltnisse.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Warum sind Skalenniveaus wichtig?",
+          "body": "Wer das Skalenniveau kennt, weiss, welche Statistik erlaubt ist: Mittelwert berechnen auf Nominalskala? Verboten! Auf Intervallskala? Erlaubt. Das ist klausurrelevant."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Die Likert-Skala -- ein Spezialfall",
+          "body": "Die **Likert-Skala** (z.B. 1 = stimme ueberhaupt nicht zu ... 5 = stimme voll und ganz zu) ist **streng genommen ordinal**, weil unklar ist, ob die Abstaende zwischen den Stufen gleich wahrgenommen werden. In der MaFo-Praxis wird sie aber haeufig **wie eine Intervallskala** behandelt, wenn die Annahme gleicher Abstaende plausibel erscheint."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-skalenniveaus",
+          "title": "Die vier Skalenniveaus im Ueberblick",
+          "headers": ["Skala", "Eigenschaft", "Erlaubte Statistik", "Beispiele"],
+          "rows": [
+            ["Nominalskala", "Eindeutige Zuordnung zu Kategorien, keine Rangordnung", "Haeufigkeiten, Modus", "Berufsgruppe, Wohnort, Geschlecht, Marke"],
+            ["Ordinalskala", "Rangordnung (mehr/weniger), Abstaende unkontrolliert", "Median, Rangkorrelation", "Schulnoten, Platzierungen, Likert (streng)"],
+            ["Intervallskala", "Gleiche Abstaende, kein absoluter Nullpunkt", "Mittelwert, Standardabweichung", "Temperatur in Grad Celsius, Geburtsjahr"],
+            ["Ratio-/Absolutskala", "Gleiche Abstaende + absoluter Nullpunkt (0 = wirklich nichts)", "Alle Operationen inkl. Verhaeltnisse", "Alter, Einkommen, Laenge, Gewicht"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6-datenanalyse-guete",
+      "heading": "3.6 Datenanalyse, Guetekriterien und Fehlerquellen",
+      "body": "## Datenanalyseverfahren: drei Ebenen\n\n### Univariate Analyse (eine Variable)\nZiel: Beschreibung einzelner Merkmale.\n- Haeufigkeiten (Wie oft tritt ein Wert auf?)\n- Mittelwert (arithmetisches Mittel)\n- Median (Zentralwert, 50%-Punkt)\n- Modalwert (haeufigster Wert)\n- Streuung (Varianz, Standardabweichung)\n\n### Bivariate Analyse (zwei Variablen)\nZiel: Zusammenhaenge zwischen zwei Merkmalen analysieren.\n- $\\chi^2$-Test (Chi-Quadrat-Test): Zusammenhang zwischen zwei nominalen Variablen\n- Korrelationsanalyse: Staerke des linearen Zusammenhangs\n- Einfache Regression: eine unabhaengige Variable, eine abhaengige\n- t-Test: Mittelwertvergleich zweier Gruppen\n\n### Multivariate Analyse (mehr als zwei Variablen)\nZiel: Komplexe Zusammenhaenge zwischen mehreren Merkmalen.\n- Multiple Regression, Varianzanalyse (ANOVA)\n- Diskriminanzanalyse, Faktorenanalyse (Dimensionsreduktion)\n- Clusteranalyse (Gruppenbildung), Multidimensionale Skalierung (MDS), Kausalanalyse\n\n## Guetekriterien guter Messung\n\n**Validitaet:** Messe ich wirklich das, was ich messen will? (Triffsicherheit)\n\n**Reliabilitaet:** Liefert die Messung bei Wiederholung dasselbe Ergebnis? (Zuverlaessigkeit)\n\n**Objektivitaet:** Ist das Ergebnis unabhaengig davon, wer die Messung durchfuehrt? (Neutralitaet)\n\nDiese drei Kriterien gelten als **Guetekriterien der Marktforschung** und sind die Grundlage fuer die Qualitaetsbeurteilung jeder Studie.\n\n## Fehlerquellen in der Marktforschung\n\nFehler koennen in **jeder Phase** des 5D-Prozesses auftreten: Fehler in der Zielsetzung, Design- und Instrumentfehler, Fehler in der Datenerhebungsphase, Stichprobenfehler, Timingfehler, Datenanalysefehler und unredliche Geschaeftspraktiken.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Guetekriterien: Validitaet, Reliabilitaet, Objektivitaet",
+          "body": "**Validitaet** = Misst das Instrument wirklich das richtige Konstrukt?\n\n**Reliabilitaet** = Reproduzierbarkeit. Wuerde dieselbe Messung morgen dasselbe Ergebnis liefern?\n\n**Objektivitaet** = Unabhaengigkeit vom Interviewer. Kaemen zwei verschiedene Interviewer zum gleichen Ergebnis?"
+        },
+        {
+          "kind": "tip",
+          "title": "Zusammenfassung fuer die Klausur",
+          "body": "Lernziele VL3:\n1. 5D-Schema nennen und erklaeren\n2. Primaer vs. Sekundaer unterscheiden\n3. Befragung/Beobachtung/Experiment abgrenzen\n4. Panel-Probleme (4 Stueck) aufzaehlen\n5. Vier Skalenniveaus und Beispiele\n6. Formulierungsfehler im Fragebogen erkennen\n7. Guetekriterien: Validitaet, Reliabilitaet, Objektivitaet"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-datenanalyse",
+          "title": "Ueberblick Datenanalyseverfahren",
+          "headers": ["Ebene", "Anzahl Variablen", "Ziel", "Methoden (Auswahl)"],
+          "rows": [
+            ["Univariat", "1", "Beschreibung", "Haeufigkeiten, Mittelwert, Median, Modalwert, Streuung"],
+            ["Bivariat", "2", "Zusammenhaenge zwischen 2 Merkmalen", "Chi2-Test, Korrelation, einfache Regression, t-Test"],
+            ["Multivariat", "> 2", "Zusammenhaenge zwischen mehr als 2 Merkmalen", "Multiple Regression, Faktorenanalyse, Clusteranalyse, ANOVA"]
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl3-fc-1",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was ist die Aufgabe der Marktforschung?",
+      "back": "Daten ueber Maerkte systematisch **sammeln, aufbereiten, analysieren und interpretieren** -- als Grundlage fuer strategische und operative Marketingentscheidungen."
+    },
+    {
+      "id": "mkt-vl3-fc-2",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Nenne die 5 Phasen des 5D-Schemas.",
+      "back": "**D**efinition -- **D**esign -- **D**atenerhebung -- **D**atenanalyse -- **D**okumentation"
+    },
+    {
+      "id": "mkt-vl3-fc-3",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was unterscheidet Primaer- von Sekundaerforschung?",
+      "back": "**Primaerforschung:** Neue Daten werden eigens fuer das aktuelle Problem erhoben (teuer, massgeschneidert). **Sekundaerforschung:** Bereits vorhandene Daten werden genutzt (guenstig, schnell). Faustregel: zuerst Sekundaer, dann Primaer."
+    },
+    {
+      "id": "mkt-vl3-fc-4",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Welche vier Skalenniveaus gibt es und was unterscheidet sie?",
+      "back": "1. **Nominal:** nur Kategorien (Geschlecht, Marke)\n2. **Ordinal:** Rangordnung, Abstaende unkontrolliert (Schulnoten)\n3. **Intervall:** gleiche Abstaende, kein absoluter Nullpunkt (Temperatur Grad Celsius)\n4. **Ratio/Absolut:** gleiche Abstaende + echter Nullpunkt (Gewicht, Alter)"
+    },
+    {
+      "id": "mkt-vl3-fc-5",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Nenne die vier Hauptprobleme von Paneldaten.",
+      "back": "1. **Marktabdeckung (Coverage)** -- nur Teilmengen der Grundgesamtheit\n2. **Verweigerung** -- bestimmte Gruppen verweigern haeufiger\n3. **Panelsterblichkeit** -- Teilnehmer hoeren auf (ca. 15% p.a.)\n4. **Paneleffekte** -- Over-/Underreporting, Verhaltensaenderung, Ermuedung"
+    },
+    {
+      "id": "mkt-vl3-fc-6",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was sind die drei Guetekriterien der Marktforschung?",
+      "back": "**Validitaet** (misst man wirklich das Richtige?), **Reliabilitaet** (ist das Ergebnis bei Wiederholung stabil?) und **Objektivitaet** (ist das Ergebnis unabhaengig vom Interviewer?)."
+    },
+    {
+      "id": "mkt-vl3-fc-7",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was ist ein Panel?",
+      "back": "Erhebung bei einem **gleichbleibenden Kreis** von Einheiten in **regelmaessigen Abstaenden** zum **gleichen Untersuchungsgegenstand**. Typen: Handelspanel, Unternehmenspanel, Verbraucherpanel, Spezialpanel. Hauptanbieter: GfK, AC Nielsen."
+    },
+    {
+      "id": "mkt-vl3-fc-8",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Warum ist die Likert-Skala streng genommen nur ordinal?",
+      "back": "Weil man nicht sicher wissen kann, ob Befragte die Abstaende zwischen den Stufen als gleich gross wahrnehmen. In der Praxis wird sie oft trotzdem als intervallskaliert behandelt, wenn die Annahme gleicher Abstaende plausibel ist."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q1",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "leicht",
+      "prompt": "Was bedeutet 'Primaerforschung' in der Marktforschung?",
+      "options": [
+        "Nutzung bereits vorhandener Daten aus internen/externen Quellen",
+        "Neu erhobene Daten, die eigens fuer das aktuelle Forschungsproblem gesammelt werden",
+        "Forschung, die ausschliesslich von externen Instituten durchgefuehrt wird",
+        "Forschung mit computergestuetzten Methoden (CATI/CAPI)"
+      ],
+      "correct": [1],
+      "explanation": "Primaerforschung (Field Research) bedeutet, dass neue Daten eigens fuer das aktuelle Forschungsproblem erhoben werden -- durch Befragung, Beobachtung oder Experiment. Sekundaerforschung (Desk Research) nutzt dagegen vorhandene Daten."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q2",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "leicht",
+      "prompt": "Welche Phasen enthaelt das 5D-Schema der Marktforschung? (Alle richtigen Antworten waehlen)",
+      "options": [
+        "Definition",
+        "Differenzierung",
+        "Datenerhebung",
+        "Dokumentation",
+        "Diversifikation"
+      ],
+      "correct": [0, 2, 3],
+      "multiple": true,
+      "explanation": "Das 5D-Schema besteht aus: Definition, Design, Datenerhebung, Datenanalyse, Dokumentation. Differenzierung und Diversifikation gehoeren nicht dazu -- das sind Marketingstrategien."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl3-q3",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "leicht",
+      "prompt": "Sekundaerforschung ist in der Regel teurer und aufwaendiger als Primaerforschung.",
+      "answer": false,
+      "explanation": "Falsch. Sekundaerforschung nutzt bereits vorhandene Daten -- sie ist daher guenstiger und schneller als Primaerforschung. Das Prinzip lautet: zuerst Sekundaerforschung, dann wenn noetig Primaerforschung."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q4",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "mittel",
+      "prompt": "Ein Unternehmen befragt jedes Quartal dieselben 500 Haushalte zu ihrem Waschmittelkauf. Um welche Forschungsform handelt es sich?",
+      "options": [
+        "Einmalige Primaererhebung (quantitativ)",
+        "Fokusgruppe (qualitativ)",
+        "Panel",
+        "Sekundaerforschung (intern)"
+      ],
+      "correct": [2],
+      "explanation": "Ein Panel ist definiert als Erhebung bei einem gleichbleibenden Kreis von Einheiten in regelmaessigen Abstaenden zum gleichen Untersuchungsgegenstand. Genau das passiert hier: dieselben 500 Haushalte, jedes Quartal, Thema Waschmittelkauf."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q5",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "mittel",
+      "prompt": "Welches Skalenniveau hat die Variable 'Koerpergroesse in cm'?",
+      "options": [
+        "Nominalskala",
+        "Ordinalskala",
+        "Intervallskala",
+        "Ratio-/Absolutskala"
+      ],
+      "correct": [3],
+      "explanation": "Koerpergroesse in cm ist ratio-/absolutskaliert: Die Abstaende sind gleich (1 cm ist immer 1 cm) und es gibt einen absoluten Nullpunkt (0 cm = keine Groesse). Damit sind alle Rechenoperationen erlaubt, auch Verhaeltnisse."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q6",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "mittel",
+      "prompt": "Welcher Formulierungsfehler liegt bei der Frage vor: 'Wie viele TV-Spots haben Sie in diesem Monat und im selben Monat des Vorjahres gesehen?'",
+      "options": [
+        "Zu allgemeine Formulierung",
+        "Mehrere Gedanken pro Item (Doppelfrage)",
+        "Negation in der Frage",
+        "Zu kurze Formulierung"
+      ],
+      "correct": [1],
+      "explanation": "Die Frage enthaelt zwei separate Fragen in einer: (1) Wie viele TV-Spots in diesem Monat? und (2) Wie viele im selben Vorjahresmonat? Befragte koennen beide Aspekte nicht in einer Antwort angeben -- das ist ein klassischer Formulierungsfehler ('Mehrere Gedanken pro Item')."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl3-q7",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "mittel",
+      "prompt": "Das Experiment ist eine Erhebungsmethode der Primaerforschung, bei der konfundierende Variablen kontrolliert werden koennen.",
+      "answer": true,
+      "explanation": "Richtig. Beim Experiment werden Untersuchungsbedingungen (z.B. Licht, Lautstaerke, Geruch) kontrolliert festgelegt. So koennen stoerende Drittvariablen (konfundierende Variablen) ausgeschaltet werden. Das ist der Hauptvorteil gegenueber Befragung und Beobachtung."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q8",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen zur Likert-Skala sind korrekt? (Mehrfachauswahl moeglich)",
+      "options": [
+        "Sie ist streng genommen ordinalskaliert",
+        "Sie hat immer einen absoluten Nullpunkt",
+        "In der MaFo-Praxis wird sie oft als intervallskaliert behandelt",
+        "Sie ermoeglicht keine Rangordnung der Antworten",
+        "Typisches Beispiel: 1 = stimme ueberhaupt nicht zu, 5 = stimme voll zu"
+      ],
+      "correct": [0, 2, 4],
+      "multiple": true,
+      "explanation": "Die Likert-Skala ist streng genommen ordinal (kein garantierter gleicher Abstand zwischen den Stufen). In der Praxis wird sie oft intervallskaliert behandelt. Einen absoluten Nullpunkt hat sie nicht. Rangordnung ist natuerlich moeglich."
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl3-q9",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "schwer",
+      "prompt": "Erklaere die drei Guetekriterien der Marktforschung (Validitaet, Reliabilitaet, Objektivitaet) in eigenen Worten und nenne jeweils ein Beispiel.",
+      "sampleAnswer": "Validitaet: Eine Messung ist valide, wenn sie wirklich das misst, was sie messen soll. Beispiel: Ein Fragebogen zur Markenloyalitaet ist nur dann valide, wenn er tatsaechlich Loyalitaet erfasst und nicht nur Gewohnheit.\n\nReliabilitaet: Eine Messung ist reliabel, wenn sie bei Wiederholung unter gleichen Bedingungen dasselbe Ergebnis liefert. Beispiel: Wenn dieselbe Person denselben Fragebogen zweimal ausfuellt, sollte das Ergebnis aehnlich sein.\n\nObjektivitaet: Eine Messung ist objektiv, wenn das Ergebnis unabhaengig davon ist, wer die Messung durchfuehrt. Beispiel: Ein standardisierter Fragebogen ist objektiver als ein Tiefeninterview.",
+      "keywords": ["validitaet", "reliabilitaet", "objektivitaet", "misst", "wiederholung", "interviewer"],
+      "explanation": "Die drei Guetekriterien bilden die Qualitaetsbasis jeder wissenschaftlichen Messung. Validitaet ist das wichtigste Kriterium -- eine reliable, aber nicht valide Messung misst das Falsche immer gleich."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl3-q10",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "leicht",
+      "prompt": "Offene Fragen im Fragebogen sind leichter auszuwerten als geschlossene Fragen.",
+      "answer": false,
+      "explanation": "Falsch. Offene Fragen sind schwer auszuwerten, weil viel Text verarbeitet werden muss und die Antworten stark subjektiv und heterogen sind. Geschlossene Fragen sind einfacher auszuwerten, da die Kategorien vorgegeben sind."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q11",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "schwer",
+      "prompt": "Welche Analysemethode setzt man ein, wenn man den Zusammenhang zwischen zwei nominalen Variablen (z.B. Geschlecht und Markenpraeferenz) pruefen will?",
+      "options": [
+        "Mittelwertvergleich (t-Test)",
+        "Chi-Quadrat-Test",
+        "Einfache lineare Regression",
+        "Faktorenanalyse"
+      ],
+      "correct": [1],
+      "explanation": "Der Chi-Quadrat-Test ist das klassische Verfahren der bivariaten Analyse fuer den Zusammenhang zwischen zwei nominalen (kategorischen) Variablen. Der t-Test vergleicht Mittelwerte, Regression setzt metrische Variablen voraus, die Faktorenanalyse ist multivariat."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl3-q12",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "difficulty": "mittel",
+      "prompt": "Was versteht man unter 'Paneleffekten'? (Alle zutreffenden Antworten waehlen)",
+      "options": [
+        "Over- oder Underreporting (mehr/weniger Kaeufe angeben als tatsaechlich)",
+        "Bewussteres Einkaufsverhalten durch Wissen, dass man beobachtet wird",
+        "Zu geringe Marktabdeckung durch Ausschluss bestimmter Vertriebskanaele",
+        "Nachlaessigkeit und Ermuedungserscheinungen bei der Dateneingabe"
+      ],
+      "correct": [0, 1, 3],
+      "multiple": true,
+      "explanation": "Paneleffekte (Antworten 0, 1, 3) entstehen durch die Teilnahme am Panel selbst. Antwort 2 beschreibt das Coverage-Problem (ungenuegend Marktabdeckung) -- das ist ein separates Problem, kein Paneleffekt."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl3-ex-1",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "label": "Nutzwertanalyse zum Angebotsvergleich (VL3, Folie 7)",
+      "source": "PoM__VL_3_MaFo_WebCT.pdf, Folie 7",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Unternehmen moechte eine Marktforschungsstudie vergeben und hat drei Institute (A, B, C) evaluiert. Die folgende Nutzwertanalyse zeigt die Bewertungen (Skala 1 bis 5, wobei 1 = sehr niedrig/schlecht und 5 = sehr hoch/sehr gut) und die Gewichtungsfaktoren:\n\n| Kriterium | Gewicht | Institut A | Institut B | Institut C |\n|---|---|---|---|---|\n| Erfahrung mit dem Institut | 0,10 | 5 | 4 | 2 |\n| Branchenkenntnisse | 0,05 | 1 | 1 | 5 |\n| Methodische Kenntnis (spez. Fragestellung) | 0,15 | 3 | 5 | 4 |\n| Inhaltliche Kenntnis (spez. Fragestellung) | 0,15 | 2 | 5 | 4 |\n| Renommee des Instituts | 0,30 | 5 | 5 | 2 |\n| Oertliche Naehe | 0,05 | 1 | 5 | 4 |\n| Kosten | 0,20 | 3 | 4 | 3 |\n\nBerechne den gewichteten Nutzwert (Gesamtsumme) fuer jedes Institut und bestimme, welches Institut beauftragt werden sollte.",
+      "hint": "Multipliziere fuer jedes Kriterium den Punktwert mit dem Gewichtungsfaktor. Addiere alle gewichteten Punktwerte pro Institut. Das Institut mit der hoechsten Gesamtsumme wird empfohlen.",
+      "solution": "**Schritt 1: Gewichtete Punktwerte je Institut berechnen**\n\nFormel: Gewichteter Wert = Punktwert x Gewichtungsfaktor\n\n| Kriterium | Gewicht | Institut A | Institut B | Institut C |\n|---|---|---|---|---|\n| Erfahrung | 0,10 | 5 x 0,10 = 0,50 | 4 x 0,10 = 0,40 | 2 x 0,10 = 0,20 |\n| Branchenkenntnisse | 0,05 | 1 x 0,05 = 0,05 | 1 x 0,05 = 0,05 | 5 x 0,05 = 0,25 |\n| Methodische Kenntnis | 0,15 | 3 x 0,15 = 0,45 | 5 x 0,15 = 0,75 | 4 x 0,15 = 0,60 |\n| Inhaltliche Kenntnis | 0,15 | 2 x 0,15 = 0,30 | 5 x 0,15 = 0,75 | 4 x 0,15 = 0,60 |\n| Renommee | 0,30 | 5 x 0,30 = 1,50 | 5 x 0,30 = 1,50 | 2 x 0,30 = 0,60 |\n| Oertliche Naehe | 0,05 | 1 x 0,05 = 0,05 | 5 x 0,05 = 0,25 | 4 x 0,05 = 0,20 |\n| Kosten | 0,20 | 3 x 0,20 = 0,60 | 4 x 0,20 = 0,80 | 3 x 0,20 = 0,60 |\n\n**Schritt 2: Gesamtsummen je Institut addieren**\n\n- Institut A: 0,50 + 0,05 + 0,45 + 0,30 + 1,50 + 0,05 + 0,60 = **3,45**\n- Institut B: 0,40 + 0,05 + 0,75 + 0,75 + 1,50 + 0,25 + 0,80 = **4,50**\n- Institut C: 0,20 + 0,25 + 0,60 + 0,60 + 0,60 + 0,20 + 0,60 = **3,05**\n\n**Schritt 3: Entscheidung**\n\nInstitut B erzielt mit **4,50** die hoechste gewichtete Gesamtpunktzahl und wird daher empfohlen.\n\n**Interpretation:** Institut B ueberzeugt besonders bei methodischer und inhaltlicher Kenntnis (je 5 Punkte), Renommee (5 Punkte) und oertlicher Naehe (5 Punkte). Trotz etwas hoeherer Kosten gewinnt B aufgrund des sehr hohen Renommee-Gewichts (30%) deutlich."
+    },
+    {
+      "id": "mkt-vl3-ex-2",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "label": "Fragebogen-Fehleranalyse: Waschmaschinenhersteller (VL3, Folie 28)",
+      "source": "PoM__VL_3_MaFo_WebCT.pdf, Folie 28",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Ein Waschmaschinenhersteller hat folgenden Fragebogen entwickelt. Analysiere jede Frage und identifiziere den jeweiligen Formulierungsfehler. Begruende deine Antwort.\n\nFrage 1: Wie hoch ist Ihr auf die naechsten hundert Euro aufgerundetes Jahreseinkommen?\n\nFrage 2: Waschen Sie gelegentlich oder oefter? (Optionen: gelegentlich / oefter)\n\nFrage 3: Finden Sie unser Waschmittel angenehm? (Optionen: Ja / Nein)\n\nFrage 4: Wie viele TV-Spots unseres Unternehmens haben Sie in diesem Monat und im selben Monat des Vorjahres gesehen?\n\nFrage 5: Welche Attribute sind, wenn Sie Waschmittel beurteilen, besonders herausragend und bestimmend?\n\nFrage 6: Halten Sie es fuer richtig, wenn die Regierung Waschmittel staerker besteuert und damit vielen Menschen die Chance einer besseren Koerperhygiene vorenthaelt?",
+      "hint": "Orientiere dich an den Formulierungsfehlern aus der Vorlesung: suggestiv, mehrdeutig, Doppelfrage, zu intrusiv, unklarer Antwortbezug, extreme Formulierung, Fremdwoerter, soziale Erwuenschtheit.",
+      "solution": "**Frage 1 -- Fehler: Heikle Frage zu frueh / Verletzung der Privatsphaere**\nDas Jahreseinkommen ist eine sehr persoenliche, heikle Information. Laut den Regeln der Fragebogengestaltung sollten solche Fragen ans **Ende des Fragebogens** gestellt werden (erst Vertrauen aufbauen). Ausserdem ist 'auf die naechsten hundert Euro aufgerundet' unnoetig komplex.\n\n**Frage 2 -- Fehler: Unklare, mehrdeutige Kategorien**\nDie Grenze zwischen 'gelegentlich' und 'oefter' ist nicht definiert. Was ist 'gelegentlich' -- einmal pro Woche? Pro Monat? Jeder Befragte interpretiert das anders. Die Antwortkategorien sind zudem nicht erschoepfend (was ist mit 'nie'?).\n\n**Frage 3 -- Fehler: Suggestive Formulierung**\nDie Formulierung 'unser Waschmittel' und das Adjektiv 'angenehm' legen eine positive Antwort nahe. Neutraler: 'Wie bewerten Sie [Produktname] insgesamt?' Eine Ja/Nein-Skala ist zudem zu grob.\n\n**Frage 4 -- Fehler: Mehrere Gedanken pro Item (Doppelfrage)**\nDie Frage enthaelt zwei separate Fragen: (1) Spots in diesem Monat und (2) Spots im Vorjahresmonat. Ausserdem: Gedaechtnisproblem (wer erinnert sich an TV-Spots vor einem Jahr?).\n\n**Frage 5 -- Fehler: Fremdwoerter / zu abstrakte Formulierung**\n'Attribute' ist ein Fremdwort, das nicht alle Befragten kennen. Ausserdem enthaelt 'herausragend und bestimmend' zwei Aspekte. Besser: 'Welche Eigenschaften sind Ihnen bei Waschmitteln am wichtigsten?'\n\n**Frage 6 -- Fehler: Suggestive und stereotype Formulierung**\nDie Formulierung 'vielen Menschen die Chance einer besseren Koerperhygiene vorenthalten' impliziert, dass die Steuer ungerecht ist. Befragte werden beeinflusst, eine bestimmte Antwort zu geben. Klassischer Suggestivfehler, verbunden mit einem politisch sensiblen Thema (soziale Erwuenschtheit)."
+    }
+  ]
+}

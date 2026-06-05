@@ -1,0 +1,371 @@
+{
+  "id": "reihen",
+  "subjectId": "mathe-2",
+  "title": "Unendliche Reihen",
+  "summary": "Was passiert, wenn man unendlich viele Zahlen addiert? Dieses Thema erklärt Reihen als Grenzwerte von Partialsummen, die geometrische Reihe mit vollständiger Herleitung, die harmonische Reihe, Konvergenzkriterien sowie Anwendungen in der Zins- und Rentenrechnung.",
+  "order": 7,
+  "estMinutes": 45,
+  "sections": [
+    {
+      "id": "was-ist-reihe",
+      "heading": "Was ist eine unendliche Reihe? — Von der Folge zur Summe",
+      "body": "## Ausgangssituation: Eine Folge von Zahlen\n\nEine **Folge** ist eine unendlich lange Liste von Zahlen, z.B. $a_1, a_2, a_3, \\ldots$ Man denke an:\n$$a_k = \\frac{1}{2^k}: \\quad \\frac{1}{2},\\; \\frac{1}{4},\\; \\frac{1}{8},\\; \\frac{1}{16}, \\ldots$$\n\n## Die Frage: Was ergibt die Summe aller Glieder?\n\nEine **unendliche Reihe** ist der Versuch, alle diese Zahlen zu addieren:\n$$\\sum_{k=1}^{\\infty} a_k = a_1 + a_2 + a_3 + \\cdots$$\n\nAber wie summiert man unendlich viele Zahlen? Man kann nicht einfach bis Unendlich rechnen — stattdessen nutzt man den Trick der **Partialsummen**.\n\n## Partialsummen — endliche Zwischenstopps\n\nDie $n$-te **Partialsumme** $s_n$ ist die Summe der ersten $n$ Glieder:\n$$s_n = \\sum_{k=1}^{n} a_k = a_1 + a_2 + \\cdots + a_n$$\n\nMan erhält so eine *neue* Folge $(s_1, s_2, s_3, \\ldots)$ der Partialsummen.\n\n**Beispiel** mit $a_k = \\frac{1}{2^k}$:\n\n| $n$ | $s_n$ | Dezimal |\n|-----|-------|---------|\n| 1 | $\\frac{1}{2}$ | 0{,}5 |\n| 2 | $\\frac{3}{4}$ | 0{,}75 |\n| 3 | $\\frac{7}{8}$ | 0{,}875 |\n| 5 | $\\frac{31}{32}$ | 0{,}96875 |\n| 10 | $\\frac{1023}{1024}$ | 0{,}9990... |\n\nDie Partialsummen nähern sich immer mehr der Zahl **1** an.\n\n## Definition: Konvergenz einer Reihe\n\nEine unendliche Reihe **konvergiert** (hat einen endlichen Wert), wenn die Folge der Partialsummen einen Grenzwert besitzt:\n$$\\sum_{k=1}^{\\infty} a_k := \\lim_{n \\to \\infty} s_n = \\lim_{n \\to \\infty} \\sum_{k=1}^{n} a_k$$\n\nAndernfalls heißt die Reihe **divergent**.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kernidee Partialsummen",
+          "body": "Reihe $\\sum a_k$ = Grenzwert der Partialsummenfolge $(s_n)$. Konvergenz der Reihe = Konvergenz von $(s_n)$."
+        },
+        {
+          "kind": "info",
+          "title": "Notwendige Bedingung für Konvergenz",
+          "body": "Wenn $\\sum a_k$ konvergiert, dann muss $\\lim_{k\\to\\infty} a_k = 0$ gelten. Umkehrung gilt **nicht**! (Gegenbeispiel: harmonische Reihe.)"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "reihen-fig-partialsummen",
+          "title": "Partialsummen von 1/2^k nähern sich 1",
+          "caption": "Jeder Punkt zeigt s_n = 1 - (1/2)^n. Die Partialsummen konvergieren gegen 1.",
+          "functions": [{ "fn": "1 - (1/2)^x", "label": "s_n = 1 − (1/2)^n", "color": "#2563eb" }],
+          "domain": [1, 15],
+          "range": [0, 1.1],
+          "points": [
+            { "x": 1, "y": 0.5, "label": "s₁=0,5" },
+            { "x": 5, "y": 0.96875, "label": "s₅≈0,97" },
+            { "x": 10, "y": 0.999, "label": "s₁₀≈0,999" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geometrische-reihe",
+      "heading": "Die geometrische Reihe — der wichtigste Sonderfall",
+      "body": "## Was ist eine geometrische Reihe?\n\nEine **geometrische Reihe** entsteht, wenn man eine geometrische Folge aufaddiert — also eine Folge, bei der jedes Glied durch Multiplikation mit derselben Zahl $q$ (dem **Quotienten**) entsteht:\n$$\\sum_{k=0}^{\\infty} q^k = 1 + q + q^2 + q^3 + \\cdots$$\n\nAllgemeiner mit erstem Glied $a$ und Startindex $k=0$:\n$$\\sum_{k=0}^{\\infty} a \\cdot q^k = a + a\\,q + a\\,q^2 + \\cdots$$\n\n## Herleitung der Partialsummenformel\n\nBetrachte zunächst die endliche geometrische Summe (erste $n+1$ Glieder):\n$$s_n = \\sum_{k=0}^{n} q^k = 1 + q + q^2 + \\cdots + q^n$$\n\n**Trick:** Multipliziere $s_n$ mit $q$ und subtrahiere:\n$$q \\cdot s_n = q + q^2 + \\cdots + q^n + q^{n+1}$$\n$$s_n - q \\cdot s_n = 1 - q^{n+1}$$\n$$s_n(1-q) = 1 - q^{n+1}$$\n\nFür $q \\neq 1$ folgt:\n$$\\boxed{s_n = \\sum_{k=0}^{n} q^k = \\frac{1-q^{n+1}}{1-q}}$$\n\n## Grenzwert für $|q| < 1$\n\nWenn $|q| < 1$, gilt $\\lim_{n\\to\\infty} q^{n+1} = 0$, also:\n$$\\sum_{k=0}^{\\infty} q^k = \\lim_{n\\to\\infty} \\frac{1-q^{n+1}}{1-q} = \\frac{1-0}{1-q} = \\frac{1}{1-q}$$\n\nMit erstem Glied $a$:\n$$\\boxed{\\sum_{k=0}^{\\infty} a \\cdot q^k = \\frac{a}{1-q} \\quad (|q|<1)}$$\n\n## Konvergenz — Fallunterscheidung\n\nWie verhält sich die Reihe je nach Wert von $q$?\n\n| Bedingung | Verhalten | Begründung |\n|-----------|-----------|------------|\n| $|q| < 1$ | konvergiert gegen $\\frac{1}{1-q}$ | $q^n \\to 0$ |\n| $q \\geq 1$ | divergiert ($\\to +\\infty$) | Glieder wachsen |\n| $q \\leq -1$, $q \\neq -1$ | divergiert | Glieder explodieren |\n| $q = -1$ | divergiert (alterniert) | $s_n$ springt zwischen 0 und 1 |\n\n## Durchgerechnetes Beispiel\n\n**Aufgabe:** Berechne $\\displaystyle\\sum_{k=0}^{\\infty} \\left(\\frac{2}{3}\\right)^k$.\n\n**Lösung:**\n- Quotient: $q = \\frac{2}{3}$, also $|q| = \\frac{2}{3} < 1$ ✓ (konvergent)\n- Erstes Glied: $a = 1$ (bei $k=0$)\n- Formel: $\\displaystyle\\frac{a}{1-q} = \\frac{1}{1-\\frac{2}{3}} = \\frac{1}{\\frac{1}{3}} = 3$\n\n**Probe mit Partialsummen:**\n$$s_0=1,\\quad s_1=1{,}\\overline{6},\\quad s_2=2{,}\\overline{1},\\quad s_5 \\approx 2{,}737,\\quad s_{10} \\approx 2{,}965$$\nTatsächlich nähern sich die Werte der **3** an.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Geometrische Reihe (merken!)",
+          "body": "$$\\sum_{k=0}^{\\infty} a \\cdot q^k = \\frac{a}{1-q} \\quad \\text{für } |q|<1$$\n\nAlternativ mit Start $k=1$: $\\displaystyle\\sum_{k=1}^{\\infty} a \\cdot q^{k-1} = \\frac{a}{1-q}$"
+        },
+        {
+          "kind": "tip",
+          "title": "Klausurtipp: Reihe auf geometrische Form bringen",
+          "body": "Erkenne $q$ und $a$, prüfe ob $|q|<1$, dann Formel anwenden. Oft muss man erst Terme umformen (Quotienten-Schreibweise, Indexverschiebung)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "reihen-tab-geom",
+          "title": "Konvergenz geometrischer Reihen — Übersicht",
+          "headers": ["q", "|q|<1?", "Summe", "Konvergenz"],
+          "rows": [
+            ["1/2", "ja", "1/(1-1/2) = 2", "konvergiert"],
+            ["2/3", "ja", "1/(1-2/3) = 3", "konvergiert"],
+            ["3/5", "ja", "1/(1-3/5) = 5/2", "konvergiert"],
+            ["1", "nein (=1)", "—", "divergiert"],
+            ["-1", "nein (=1)", "—", "divergiert (alterniert)"],
+            ["2", "nein (>1)", "—", "divergiert"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harmonische-reihe",
+      "heading": "Die harmonische Reihe — eine überraschend divergente Reihe",
+      "body": "## Was ist die harmonische Reihe?\n\nDie **harmonische Reihe** ist:\n$$\\sum_{k=1}^{\\infty} \\frac{1}{k} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\cdots$$\n\nIntuitiv denkt man: Die Glieder $\\frac{1}{k}$ werden immer kleiner, also muss die Summe doch konvergieren! Diese Intuition ist **falsch**.\n\n## Warum divergiert die harmonische Reihe?\n\nBeweis durch Abschätzungsgruppen (Cauchy 1821):\n\n$$\\frac{1}{3}+\\frac{1}{4} \\geq \\frac{1}{4}+\\frac{1}{4} = \\frac{1}{2}$$\n$$\\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8} \\geq 4 \\cdot \\frac{1}{8} = \\frac{1}{2}$$\n$$\\frac{1}{9}+\\cdots+\\frac{1}{16} \\geq 8 \\cdot \\frac{1}{16} = \\frac{1}{2}$$\n\nJede dieser Gruppen ergibt mindestens $\\frac{1}{2}$, und es gibt unendlich viele solcher Gruppen. Daher ist die Gesamtsumme $\\geq 1 + \\frac{1}{2} + \\frac{1}{2} + \\frac{1}{2} + \\cdots = \\infty$.\n\n**Fazit:** Die harmonische Reihe divergiert, obwohl $\\frac{1}{k} \\to 0$.\n\n## Merke: Notwendige $\\neq$ hinreichende Bedingung\n\n$$a_k \\to 0 \\text{ ist notwendig, aber nicht hinreichend für Konvergenz!}$$\n\n| Reihe | Glieder $\\to 0$? | Konvergenz? |\n|-------|-----------------|-------------|\n| $\\sum 1/2^k$ | ja | ja (geometrisch, $q=1/2$) |\n| $\\sum 1/k$ (harmonisch) | ja | **nein** (divergiert!) |\n| $\\sum 1/k^2$ | ja | ja (Wert: $\\pi^2/6$) |\n| $\\sum 1$ | nein | nein |",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Häufiger Denkfehler",
+          "body": "\"Die Glieder gehen gegen 0, also konvergiert die Reihe.\" — Das ist **falsch**! Die harmonische Reihe ist das klassische Gegenbeispiel."
+        }
+      ]
+    },
+    {
+      "id": "konvergenzkriterien",
+      "heading": "Konvergenzkriterien — Quotienten- und Wurzelkriterium",
+      "body": "## Wozu braucht man Konvergenzkriterien?\n\nNicht jede Reihe lässt sich auf geometrische Form bringen. Konvergenzkriterien geben ein **Ja/Nein zur Konvergenz**, ohne den exakten Wert zu berechnen.\n\n## Das Quotientenkriterium\n\n**Idee:** Verhält sich die Reihe wie eine geometrische Reihe?\n\nSei $a_k > 0$ für alle $k$. Berechne den Grenzwert:\n$$L = \\lim_{k \\to \\infty} \\frac{a_{k+1}}{a_k}$$\n\nDann gilt:\n- $L < 1$: Reihe **konvergiert** (absolut)\n- $L > 1$: Reihe **divergiert**\n- $L = 1$: **keine Aussage** möglich (z.B. harmonische Reihe: $L=1$, divergiert; $\\sum 1/k^2$: $L=1$, konvergiert)\n\n**Merkregel:** $L$ ist der \"effektive Quotient\" der Reihe. Ist er kleiner als 1, schrumpfen die Glieder schnell genug.\n\n### Beispiel Quotientenkriterium\n\nUntersuche $\\displaystyle\\sum_{k=1}^{\\infty} \\frac{k}{2^k}$.\n\n$$\\frac{a_{k+1}}{a_k} = \\frac{(k+1)/2^{k+1}}{k/2^k} = \\frac{k+1}{k} \\cdot \\frac{1}{2} = \\frac{k+1}{2k}$$\n\n$$L = \\lim_{k\\to\\infty} \\frac{k+1}{2k} = \\lim_{k\\to\\infty} \\frac{1+1/k}{2} = \\frac{1}{2} < 1$$\n\n$\\Rightarrow$ Reihe **konvergiert**.\n\n## Das Wurzelkriterium\n\nSei $a_k \\geq 0$. Berechne:\n$$L = \\lim_{k\\to\\infty} \\sqrt[k]{a_k} = \\lim_{k\\to\\infty} a_k^{1/k}$$\n\nAussage: genau wie beim Quotientenkriterium ($L<1$ konv., $L>1$ div., $L=1$ keine Aussage).\n\n**Vorteil** des Wurzelkriteriums: bei Ausdrücken der Form $a^k$ (z.B. $(f(k))^k$).\n\n### Beispiel Wurzelkriterium\n\nUntersuche $\\displaystyle\\sum_{k=1}^{\\infty} \\left(\\frac{k}{k+1}\\right)^k$.\n\n$$\\sqrt[k]{a_k} = \\frac{k}{k+1} = \\frac{1}{1+1/k}$$\n\n$$L = \\lim_{k\\to\\infty} \\frac{1}{1+1/k} = \\frac{1}{1+0} = 1$$\n\nKeine Aussage — hier hilft das Wurzelkriterium nicht direkt. Man kann aber zeigen, dass $a_k \\to 1/e \\neq 0$, also divergiert die Reihe.\n\n## Entscheidungsdiagramm für Konvergenzuntersuchung",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Quotientenkriterium auf einen Blick",
+          "body": "$L = \\lim_{k\\to\\infty} \\dfrac{a_{k+1}}{a_k}$: Konvergenz für $L<1$, Divergenz für $L>1$, keine Aussage für $L=1$."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "reihen-fig-entscheidung",
+          "title": "Konvergenzuntersuchung — Entscheidungsdiagramm",
+          "caption": "Systematisches Vorgehen bei der Konvergenzprüfung einer Reihe.",
+          "code": "graph TD\n  A[Reihe sum a_k gegeben] --> B{Gilt a_k -> 0?}\n  B -->|Nein| C[Divergent!]\n  B -->|Ja| D{Geometrische Form a*q^k erkennbar?}\n  D -->|Ja, |q|<1| E[Konvergiert: Summe = a/1-q]\n  D -->|Ja, |q|>=1| F[Divergiert]\n  D -->|Nein| G{Quotientenkriterium: L = lim a_{k+1}/a_k}\n  G -->|L < 1| H[Konvergiert]\n  G -->|L > 1| I[Divergiert]\n  G -->|L = 1| J[Keine Aussage, anderes Kriterium nötig]"
+        }
+      ]
+    },
+    {
+      "id": "summenzeichen-indexverschiebung",
+      "heading": "Umgang mit dem Summenzeichen und Indexverschiebung",
+      "body": "## Das Summenzeichen $\\Sigma$ — Kurzschreibweise für Summen\n\n$$\\sum_{k=m}^{n} a_k = a_m + a_{m+1} + \\cdots + a_n$$\n\nDabei ist $k$ der **Laufindex**, $m$ die **untere** und $n$ die **obere Grenze**.\n\n## Rechenregeln (Linearität)\n\n$$\\sum_{k=1}^{n}(a_k + b_k) = \\sum_{k=1}^{n} a_k + \\sum_{k=1}^{n} b_k$$\n$$\\sum_{k=1}^{n} c \\cdot a_k = c \\cdot \\sum_{k=1}^{n} a_k \\quad (c \\text{ konstant})$$\n\n## Nützliche Summenformeln\n\n$$\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2} \\quad \\text{(Gaußsche Summenformel)}$$\n$$\\sum_{k=1}^{n} k^2 = \\frac{n(n+1)(2n+1)}{6}$$\n$$\\sum_{k=0}^{n} 1 = n+1$$\n\n## Indexverschiebung — Warum und wie?\n\nManchmal möchte man denselben Ausdruck mit anderen Grenzen schreiben. Man ersetzt den Laufindex $k$ durch $j = k + c$ (verschiebt um $c$).\n\n**Regel:** Wenn $k$ durch $j-c$ ersetzt wird (d.h. $j = k+c$, also $k = j-c$):\n- Untere Grenze: $m \\to m+c$\n- Obere Grenze: $n \\to n+c$\n- Im Summanden: $k$ durch $j-c$ ersetzen\n\n**Beispiel** (aus dem Übungsblatt): Zeige, dass alle drei Summen gleich sind:\n\n$$\\sum_{k=1}^{9}(k^2+2k) = \\sum_{k=2}^{10}(k^2-1) = \\sum_{k=0}^{8}(k^2+4k+3)$$\n\n**Schritt 1:** Erster $\\to$ zweiter Ausdruck (Verschiebung $j = k+1$, d.h. $k = j-1$):\n\nErsetze $k$ durch $j-1$, Grenzen $1\\to 2$, $9\\to 10$:\n$$\\sum_{j=2}^{10}\\bigl[(j-1)^2 + 2(j-1)\\bigr] = \\sum_{j=2}^{10}\\bigl[j^2 - 2j + 1 + 2j - 2\\bigr] = \\sum_{j=2}^{10}(j^2 - 1) \\checkmark$$\n\n**Schritt 2:** Erster $\\to$ dritter Ausdruck (Verschiebung $j = k-1$, d.h. $k = j+1$):\n\nErsetze $k$ durch $j+1$, Grenzen $1\\to 0$, $9\\to 8$:\n$$\\sum_{j=0}^{8}\\bigl[(j+1)^2 + 2(j+1)\\bigr] = \\sum_{j=0}^{8}\\bigl[j^2+2j+1+2j+2\\bigr] = \\sum_{j=0}^{8}(j^2+4j+3) \\checkmark$$\n\n**Numerischer Check:** Alle drei Summen ergeben $375$.\n\n## Endliche Summe berechnen: Beispiel $\\sum_{k=0}^{n}(3k+1)$\n\n$$\\sum_{k=0}^{n}(3k+1) = 3\\sum_{k=0}^{n}k + \\sum_{k=0}^{n}1 = 3\\cdot\\frac{n(n+1)}{2} + (n+1) = (n+1)\\left(\\frac{3n}{2}+1\\right) = \\frac{(n+1)(3n+2)}{2}$$\n\n**Probe** für $n=4$: $1+4+7+10+13=35$. Formel: $\\frac{5\\cdot14}{2}=35$ ✓",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Indexverschiebung — Merkregel",
+          "body": "\"Grenze + Konstante = Index - Konstante im Summanden.\" Probiere immer aus: Summiere beide Versionen für kleines $n$ und prüfe, ob die Werte übereinstimmen."
+        }
+      ]
+    },
+    {
+      "id": "anwendung-zins-rente",
+      "heading": "Anwendung: Zins- und Rentenrechnung mit geometrischen Reihen",
+      "body": "## Motivation: Sparvertrag und geometrische Reihe\n\nAngenommen, man zahlt monatlich den Betrag $R$ auf ein Konto ein, das mit dem monatlichen Zinssatz $r$ verzinst wird. Was ist das Kapital nach $n$ Einzahlungen?\n\n## Monatlicher Zinssatz aus Jahreszinssatz\n\nBei jährlichem Zinssatz $p$ (in %) und **monatlicher** Zinsgutschrift ist der monatliche Zinssatz:\n$$r_{\\text{monat}} = \\frac{p}{12 \\cdot 100}$$\n\nDer **Aufzinsungsfaktor** pro Monat: $q = 1 + r_{\\text{monat}}$.\n\n## Herleitung der Rentenformel\n\nDie $j$-te Einzahlung (erfolgt am Anfang des $j$-ten Monats) wächst bis nach der $n$-ten Einzahlung um $(n-j)$ Monate an — sie hat also den Wert $R \\cdot q^{n-j}$.\n\nDas Gesamtkapital direkt **nach** der $n$-ten Einzahlung:\n$$K_n = R \\cdot q^{n-1} + R \\cdot q^{n-2} + \\cdots + R \\cdot q^0 = R \\sum_{j=0}^{n-1} q^j = R \\cdot \\frac{q^n - 1}{q - 1}$$\n\n(endliche geometrische Summe mit Quotient $q$ und $n$ Gliedern)\n\n$$\\boxed{K_n = R \\cdot \\frac{q^n - 1}{q - 1}}$$\n\n## Durchgerechnetes Beispiel (Klausur SoSe 2019)\n\n**Aufgabe:** Herr L. zahlt monatlich $R = 70\\,€$ ein. Jährlicher Zinssatz $0{,}6\\,\\%$ bei monatlicher Gutschrift. Wie groß ist das Kapital direkt nach der 200. Einzahlung?\n\n**Schritt 1 — Monatlicher Zinssatz:**\n$$r = \\frac{0{,}6\\%}{12} = 0{,}05\\% = 0{,}0005$$\n$$q = 1 + 0{,}0005 = 1{,}0005$$\n\n**Schritt 2 — Rentenformel anwenden ($n=200$):**\n$$K_{200} = 70 \\cdot \\frac{q^{200}-1}{q-1} = 70 \\cdot \\frac{(1{,}0005)^{200}-1}{0{,}0005}$$\n\n**Schritt 3 — Berechnung von $q^{200}$:**\n$$(1{,}0005)^{200} \\approx 1{,}10514$$\n\n**Schritt 4 — Einsetzen:**\n$$K_{200} = 70 \\cdot \\frac{1{,}10514 - 1}{0{,}0005} = 70 \\cdot \\frac{0{,}10514}{0{,}0005} = 70 \\cdot 210{,}28 \\approx 14\\,719{,}60\\,€$$\n\n**Interpretation:** Die 200 Einzahlungen ergeben $200 \\times 70 = 14\\,000\\,€$ ohne Zinsen. Mit Zinseszins bekommt man ca. $14\\,720\\,€$ — also ca. $720\\,€$ Zinsen über die Laufzeit.\n\n## Verbindung zur unendlichen Reihe (Rentenbarwert)\n\nWas wäre eine **ewige Rente** — eine unendlich lange Zahlungsreihe mit $n\\to\\infty$ — heute wert?\n\nBei konstantem Abzinsungsfaktor $v = \\frac{1}{q}$ mit $|v|<1$:\n$$\\text{Barwert} = R \\sum_{k=0}^{\\infty} v^k = \\frac{R}{1-v} = \\frac{R \\cdot q}{q-1}$$\n\nDies ist eine direkte Anwendung der geometrischen Reihe.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Faustformel: Verdopplungszeit",
+          "body": "Mit Jahreszinssatz $p$ verdoppelt sich eine Anlage nach ca. $\\frac{72}{p}$ Jahren (\"72er-Regel\"). Bei $3\\%$ also nach ca. 24 Jahren."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "reihen-fig-kapitalwachstum",
+          "title": "Kapitalwachstum Sparvertrag (R=70€, q=1,0005)",
+          "caption": "K_n = 70*(q^n - 1)/(q-1) mit q=1,0005. Nach 200 Einzahlungen ca. 14.720 €.",
+          "functions": [
+            { "fn": "70*(1.0005^x - 1)/0.0005", "label": "K_n (mit Zinsen)", "color": "#16a34a" },
+            { "fn": "70*x", "label": "70·n (ohne Zinsen)", "color": "#9ca3af", "dashed": true }
+          ],
+          "domain": [0, 200],
+          "points": [
+            { "x": 200, "y": 14720, "label": "K₂₀₀ ≈ 14.720 €" }
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "reihen-fc-1",
+      "topicId": "reihen",
+      "front": "Was ist die $n$-te Partialsumme einer Reihe $\\sum a_k$?",
+      "back": "$s_n = \\sum_{k=1}^{n} a_k = a_1 + a_2 + \\cdots + a_n$. Die Reihe konvergiert, wenn $\\lim_{n\\to\\infty} s_n$ existiert."
+    },
+    {
+      "id": "reihen-fc-2",
+      "topicId": "reihen",
+      "front": "Wie lautet die Summenformel für die (unendliche) geometrische Reihe?",
+      "back": "$$\\sum_{k=0}^{\\infty} a\\,q^k = \\frac{a}{1-q} \\quad \\text{für } |q|<1$$\nFür $|q|\\geq 1$ divergiert die Reihe."
+    },
+    {
+      "id": "reihen-fc-3",
+      "topicId": "reihen",
+      "front": "Notwendige Bedingung für Konvergenz einer Reihe?",
+      "back": "$\\lim_{k\\to\\infty} a_k = 0$. Diese Bedingung ist notwendig, aber **nicht hinreichend** (Gegenbeispiel: harmonische Reihe $\\sum 1/k$ divergiert trotzdem)."
+    },
+    {
+      "id": "reihen-fc-4",
+      "topicId": "reihen",
+      "front": "Was besagt das Quotientenkriterium?",
+      "back": "Sei $L = \\lim_{k\\to\\infty} \\frac{a_{k+1}}{a_k}$. Dann: $L<1 \\Rightarrow$ konvergiert; $L>1 \\Rightarrow$ divergiert; $L=1 \\Rightarrow$ keine Aussage."
+    },
+    {
+      "id": "reihen-fc-5",
+      "topicId": "reihen",
+      "front": "Rentenformel: Kapital nach $n$ Einzahlungen von $R$ mit Aufzinsungsfaktor $q$?",
+      "back": "$$K_n = R \\cdot \\frac{q^n - 1}{q-1}$$\nDabei ist $q = 1 + r_{\\text{Periode}}$ und $r_{\\text{Periode}}$ der Zinssatz pro Periode."
+    },
+    {
+      "id": "reihen-fc-6",
+      "topicId": "reihen",
+      "front": "Wie lautet die endliche geometrische Summe?",
+      "back": "$$\\sum_{k=0}^{n} q^k = \\frac{1 - q^{n+1}}{1-q} \\quad (q\\neq 1)$$\nHerleitung: $s_n - q\\cdot s_n = 1 - q^{n+1}$, also $s_n(1-q)=1-q^{n+1}$."
+    },
+    {
+      "id": "reihen-fc-7",
+      "topicId": "reihen",
+      "front": "Was ist die Gaußsche Summenformel?",
+      "back": "$$\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}$$\nBeispiel: $\\sum_{k=1}^{100}k = \\frac{100\\cdot101}{2}=5050$."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "reihen-q1",
+      "topicId": "reihen",
+      "difficulty": "leicht",
+      "prompt": "Was versteht man unter der $n$-ten Partialsumme $s_n$ einer Reihe $\\sum_{k=1}^{\\infty} a_k$?",
+      "options": [
+        "Das $n$-te Glied der Folge $(a_k)$",
+        "Die Summe der ersten $n$ Glieder: $s_n = a_1 + a_2 + \\cdots + a_n$",
+        "Den Grenzwert der Reihe",
+        "Das Verhältnis aufeinanderfolgender Glieder $a_{n+1}/a_n$"
+      ],
+      "correct": [1],
+      "explanation": "Die $n$-te Partialsumme ist die endliche Summe $s_n = \\sum_{k=1}^{n}a_k$. Der Grenzwert von $(s_n)$ — falls er existiert — ist der Wert der Reihe."
+    },
+    {
+      "kind": "truefalse",
+      "id": "reihen-q2",
+      "topicId": "reihen",
+      "difficulty": "leicht",
+      "prompt": "Wenn die Reihenglieder $a_k$ gegen 0 gehen ($\\lim_{k\\to\\infty}a_k=0$), dann konvergiert die Reihe $\\sum a_k$ sicher.",
+      "answer": false,
+      "explanation": "Das ist falsch! $a_k \\to 0$ ist nur eine notwendige, keine hinreichende Bedingung. Die harmonische Reihe $\\sum 1/k$ divergiert, obwohl $1/k \\to 0$."
+    },
+    {
+      "kind": "numeric",
+      "id": "reihen-q3",
+      "topicId": "reihen",
+      "difficulty": "leicht",
+      "prompt": "Berechne den Wert der geometrischen Reihe $\\displaystyle\\sum_{k=0}^{\\infty} \\left(\\frac{1}{3}\\right)^k$.",
+      "answer": 1.5,
+      "tolerance": 0.001,
+      "explanation": "$q=1/3$, also $|q|<1$. Formel: $\\frac{a}{1-q}=\\frac{1}{1-1/3}=\\frac{1}{2/3}=\\frac{3}{2}=1{,}5$."
+    },
+    {
+      "kind": "numeric",
+      "id": "reihen-q4",
+      "topicId": "reihen",
+      "difficulty": "mittel",
+      "prompt": "Berechne $\\displaystyle\\sum_{k=0}^{\\infty} 5 \\cdot \\left(\\frac{2}{5}\\right)^k$.",
+      "answer": 8.333,
+      "tolerance": 0.01,
+      "unit": "",
+      "explanation": "$a=5$, $q=2/5$, also $\\frac{a}{1-q}=\\frac{5}{1-2/5}=\\frac{5}{3/5}=\\frac{25}{3}\\approx 8{,}333$."
+    },
+    {
+      "kind": "mc",
+      "id": "reihen-q5",
+      "topicId": "reihen",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Reihen konvergiert?",
+      "options": [
+        "$\\displaystyle\\sum_{k=1}^{\\infty} 1$ (alle Glieder gleich 1)",
+        "$\\displaystyle\\sum_{k=1}^{\\infty} \\frac{1}{k}$ (harmonische Reihe)",
+        "$\\displaystyle\\sum_{k=0}^{\\infty} \\left(\\frac{3}{4}\\right)^k$ (geometrisch mit $q=3/4$)",
+        "$\\displaystyle\\sum_{k=1}^{\\infty} (-1)^k$ (alternierende Konstante)"
+      ],
+      "correct": [2],
+      "explanation": "Nur die geometrische Reihe mit $|q|=3/4<1$ konvergiert, Wert $=\\frac{1}{1-3/4}=4$. Die anderen divergieren: (a) Glieder $\\to 1\\neq 0$; (b) harmonisch; (d) Glieder $\\to\\pm 1\\neq 0$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "reihen-q6",
+      "topicId": "reihen",
+      "difficulty": "mittel",
+      "prompt": "Die geometrische Reihe $\\sum_{k=0}^{\\infty} (-0{,}9)^k$ konvergiert.",
+      "answer": true,
+      "explanation": "$q=-0{,}9$, also $|q|=0{,}9<1$. Die Reihe konvergiert gegen $\\frac{1}{1-(-0{,}9)}=\\frac{1}{1{,}9}\\approx 0{,}526$."
+    },
+    {
+      "kind": "numeric",
+      "id": "reihen-q7",
+      "topicId": "reihen",
+      "difficulty": "mittel",
+      "prompt": "Berechne die endliche Summe $\\displaystyle\\sum_{k=0}^{4} k^2$.",
+      "answer": 30,
+      "tolerance": 0.001,
+      "explanation": "$0^2+1^2+2^2+3^2+4^2 = 0+1+4+9+16=30$."
+    },
+    {
+      "kind": "freetext",
+      "id": "reihen-q8",
+      "topicId": "reihen",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, wie man die Summenformel der geometrischen Reihe herleitet. Welcher algebraische Trick wird verwendet?",
+      "sampleAnswer": "Man multipliziert die Partialsumme $s_n = 1+q+q^2+\\cdots+q^n$ mit dem Quotienten $q$, erhält $q\\cdot s_n = q+q^2+\\cdots+q^{n+1}$, und subtrahiert: $s_n - q\\cdot s_n = 1-q^{n+1}$, also $s_n(1-q)=1-q^{n+1}$. Division durch $(1-q)$ (geht für $q\\neq 1$) liefert $s_n=(1-q^{n+1})/(1-q)$. Für $|q|<1$ gilt $q^{n+1}\\to 0$, also Grenzwert $1/(1-q)$.",
+      "keywords": ["multiplizieren", "subtrahieren", "teleskop", "1-q^{n+1}", "grenzwert"],
+      "explanation": "Der Trick: $s_n$ und $q\\cdot s_n$ haben fast dieselben Terme, ihre Differenz kollabiert zu zwei Termen."
+    },
+    {
+      "kind": "numeric",
+      "id": "reihen-q9",
+      "topicId": "reihen",
+      "difficulty": "schwer",
+      "prompt": "Berechne $\\displaystyle\\sum_{k=0}^{n}(3k+1)$ für allgemeines $n\\in\\mathbb{N}$. Welchen Wert hat die Summe für $n=4$?",
+      "answer": 35,
+      "tolerance": 0.001,
+      "explanation": "$\\sum_{k=0}^{n}(3k+1)=3\\cdot\\frac{n(n+1)}{2}+(n+1)=\\frac{(n+1)(3n+2)}{2}$. Für $n=4$: $\\frac{5\\cdot14}{2}=35$. Probe: $1+4+7+10+13=35$ ✓."
+    },
+    {
+      "kind": "mc",
+      "id": "reihen-q10",
+      "topicId": "reihen",
+      "difficulty": "schwer",
+      "prompt": "Das Quotientenkriterium wird auf $\\sum_{k=1}^{\\infty} \\frac{k}{2^k}$ angewendet. Was ergibt der Grenzwert $L = \\lim_{k\\to\\infty}\\frac{a_{k+1}}{a_k}$?",
+      "options": [
+        "$L = 2$ (Reihe divergiert)",
+        "$L = 1$ (keine Aussage möglich)",
+        "$L = \\frac{1}{2}$ (Reihe konvergiert)",
+        "$L = 0$ (Reihe konvergiert)"
+      ],
+      "correct": [2],
+      "explanation": "$\\frac{a_{k+1}}{a_k}=\\frac{(k+1)/2^{k+1}}{k/2^k}=\\frac{k+1}{2k}\\to\\frac{1}{2}$. Da $L=1/2<1$, konvergiert die Reihe."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "reihen-ex-1",
+      "topicId": "reihen",
+      "label": "Übungsblatt 6, Aufgabe 6.7 — Summen berechnen (Zusatzaufgabe)",
+      "source": "Übungsblatt 6, SoSe 2026",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Berechnen Sie die folgenden Summen:\n\n(a) $\\displaystyle\\sum_{k=0}^{4} k^2$\n\n(b) $\\displaystyle\\sum_{i=0}^{5}(i^2+2)$\n\n(c) $\\displaystyle\\sum_{k=2}^{5} 10\\cdot\\left(\\frac{1}{3}\\right)^k$\n\n(d) $\\displaystyle\\sum_{k=1}^{10}\\frac{1}{k(k+1)}$\n\n(e) Es gelten $\\displaystyle\\sum_{i=1}^{10}a_i=3$ und $\\displaystyle\\sum_{i=1}^{10}a_i^2=6$. Wie lautet $\\displaystyle\\sum_{i=1}^{10}(2a_i+1)(3a_i-2)$?",
+      "hint": "Bei (d) Partialbruchzerlegung $\\frac{1}{k(k+1)}=\\frac{1}{k}-\\frac{1}{k+1}$ verwenden (Teleskopsumme). Bei (e) den Ausdruck ausmultiplizieren.",
+      "solution": "**(a)** Direkt ausrechnen:\n$$\\sum_{k=0}^{4}k^2 = 0^2+1^2+2^2+3^2+4^2 = 0+1+4+9+16 = \\mathbf{30}$$\n\n**(b)** Linearität des Summenzeichens:\n$$\\sum_{i=0}^{5}(i^2+2) = \\sum_{i=0}^{5}i^2 + \\sum_{i=0}^{5}2 = (0+1+4+9+16+25)+6\\cdot 2 = 55+12 = \\mathbf{67}$$\n\n**(c)** Endliche geometrische Summe mit $q=1/3$, $a=10$:\n$$\\sum_{k=2}^{5}10\\cdot\\left(\\frac{1}{3}\\right)^k = 10\\sum_{k=2}^{5}\\left(\\frac{1}{3}\\right)^k$$\n\nEndliche geometrische Summe: $\\sum_{k=2}^{5}q^k = \\frac{q^2 - q^6}{1-q} = q^2\\cdot\\frac{1-q^4}{1-q}$\n\nOder direkt: $\\frac{10}{9}+\\frac{10}{27}+\\frac{10}{81}+\\frac{10}{243}$\n\nHauptnenner 243: $\\frac{270+90+30+10}{243}=\\frac{400}{243}\\approx\\mathbf{1{,}646}$\n\n**Probe:** $10/9\\approx1{,}111$; $10/27\\approx0{,}370$; $10/81\\approx0{,}123$; $10/243\\approx0{,}041$. Summe $\\approx1{,}646$ ✓\n\n**(d)** Teleskopsumme (Partialbruchzerlegung):\n$$\\frac{1}{k(k+1)}=\\frac{1}{k}-\\frac{1}{k+1}$$\n$$\\sum_{k=1}^{10}\\left(\\frac{1}{k}-\\frac{1}{k+1}\\right) = \\left(\\frac{1}{1}-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\cdots+\\left(\\frac{1}{10}-\\frac{1}{11}\\right)$$\n\nAlles kürzt sich weg bis auf den ersten und letzten Term:\n$$= 1 - \\frac{1}{11} = \\frac{10}{11} \\approx \\mathbf{0{,}909}$$\n\n**(e)** Ausmultiplizieren:\n$$(2a_i+1)(3a_i-2) = 6a_i^2 - 4a_i + 3a_i - 2 = 6a_i^2 - a_i - 2$$\n$$\\sum_{i=1}^{10}(2a_i+1)(3a_i-2) = 6\\sum a_i^2 - \\sum a_i - 2\\cdot10 = 6\\cdot6 - 3 - 20 = 36-3-20 = \\mathbf{13}$$"
+    },
+    {
+      "id": "reihen-ex-2",
+      "topicId": "reihen",
+      "label": "Übungsblatt 6, Aufgabe 6.8 — Indexverschiebung",
+      "source": "Übungsblatt 6, SoSe 2026",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Zeigen Sie durch Indexverschiebung:\n$$\\sum_{k=1}^{9}(k^2+2k) = \\sum_{k=2}^{10}(k^2-1) = \\sum_{k=0}^{8}(k^2+4k+3)$$",
+      "hint": "Für den ersten Schritt: setze $j = k+1$ (d.h. $k=j-1$). Für den zweiten Schritt ausgehend vom ersten Ausdruck: setze $j=k-1$ (d.h. $k=j+1$).",
+      "solution": "**Vorüberlegung:** Alle drei Summen müssen denselben Wert haben:\n$$\\sum_{k=1}^{9}(k^2+2k) = (1+2)+(4+4)+(9+6)+(16+8)+(25+10)+(36+12)+(49+14)+(64+16)+(81+18)$$\n$$= 3+8+15+24+35+48+63+80+99 = 375$$\n\n**Schritt 1:** Erster $=$ Zweiter Ausdruck.\n\nSubstitution: $j = k+1$, also $k = j-1$. Wenn $k$ von 1 bis 9 läuft, läuft $j$ von 2 bis 10:\n$$\\sum_{k=1}^{9}(k^2+2k) = \\sum_{j=2}^{10}\\bigl[(j-1)^2+2(j-1)\\bigr]$$\n$$= \\sum_{j=2}^{10}\\bigl[j^2-2j+1+2j-2\\bigr] = \\sum_{j=2}^{10}(j^2-1) \\qquad \\checkmark$$\n\n**Schritt 2:** Erster $=$ Dritter Ausdruck.\n\nSubstitution: $j = k-1$, also $k = j+1$. Wenn $k$ von 1 bis 9 läuft, läuft $j$ von 0 bis 8:\n$$\\sum_{k=1}^{9}(k^2+2k) = \\sum_{j=0}^{8}\\bigl[(j+1)^2+2(j+1)\\bigr]$$\n$$= \\sum_{j=0}^{8}\\bigl[j^2+2j+1+2j+2\\bigr] = \\sum_{j=0}^{8}(j^2+4j+3) \\qquad \\checkmark$$\n\n**Numerischer Check:** Alle drei Summen ergeben $375$. ✓"
+    },
+    {
+      "id": "reihen-ex-3",
+      "topicId": "reihen",
+      "label": "Übungsblatt 6, Aufgabe 6.9 — Mit Summenzeichen schreiben (Zusatzaufgabe)",
+      "source": "Übungsblatt 6, SoSe 2026",
+      "type": "zusatzaufgabe",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Schreiben Sie unter Verwendung des Summenzeichens:\n\n(a) $\\dfrac{1}{2}+\\dfrac{1}{4}+\\dfrac{1}{8}+\\dfrac{1}{16}+\\cdots+\\dfrac{1}{1024}$\n\n(b) $3+8+15+24+\\cdots+99$\n\n(c) $a+\\dfrac{1}{2}a^2+\\dfrac{1}{4}a^3+\\cdots+\\dfrac{1}{128}a^8$",
+      "hint": "Bei (a): alle Terme sind Potenzen von 1/2. Bei (b): die Terme haben die Form $k^2-1$ oder $k(k+2)$ — Tabelle der Terme aufstellen und Muster erkennen. Bei (c): Basis und Exponent gleichzeitig wachsen.",
+      "solution": "**(a)** Terme: $\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{8}, \\ldots, \\frac{1}{1024}$.\n\nDies sind $\\frac{1}{2^1}, \\frac{1}{2^2}, \\frac{1}{2^3}, \\ldots, \\frac{1}{2^{10}}$ (denn $2^{10}=1024$).\n\n$$\\boxed{\\sum_{k=1}^{10}\\frac{1}{2^k} = \\sum_{k=1}^{10}\\left(\\frac{1}{2}\\right)^k}$$\n\n**Probe:** $1/2+1/4+\\cdots+1/1024 = \\frac{1/2(1-(1/2)^{10})}{1-1/2}=1-(1/2)^{10}=1-1/1024=1023/1024$ ✓\n\n**(b)** Terme: $3, 8, 15, 24, 35, \\ldots, 99$. Tabelle:\n\n| $k$ | Term | Muster |\n|-----|------|--------|\n| 1 | 3 | $1\\cdot3=1^2+2$ |\n| 2 | 8 | $2\\cdot4=2^2+4$ |\n| 3 | 15 | $3\\cdot5=3^2+6$ |\n| 4 | 24 | $4\\cdot6$ |\n| ... | ... | ... |\n| 9 | 99 | $9\\cdot11=9^2+18$ |\n\nMuster: $k$-ter Term $= k(k+2)$. Letzter Term: $k=9$: $9\\cdot11=99$ ✓\n\n$$\\boxed{\\sum_{k=1}^{9}k(k+2)}$$\n\n**(c)** Terme: $a^1\\cdot 1,\\; a^2\\cdot\\frac{1}{2},\\; a^3\\cdot\\frac{1}{4},\\; \\ldots,\\; a^8\\cdot\\frac{1}{128}$.\n\nDie Faktoren $1, 1/2, 1/4, \\ldots, 1/128 = (1/2)^0, (1/2)^1, \\ldots, (1/2)^7$.\n\nDer $k$-te Term ($k$ von 1 bis 8): $a^k \\cdot \\left(\\frac{1}{2}\\right)^{k-1}$.\n\n$$\\boxed{\\sum_{k=1}^{8}a^k\\cdot\\left(\\frac{1}{2}\\right)^{k-1}}$$\n\n**Probe** bei $k=3$: $a^3 \\cdot (1/2)^2 = \\frac{1}{4}a^3$ ✓"
+    },
+    {
+      "id": "reihen-ex-4",
+      "topicId": "reihen",
+      "label": "Übungsblatt 6, Aufgabe 6.10 — Summe berechnen",
+      "source": "Übungsblatt 6, SoSe 2026",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Berechnen Sie $\\displaystyle\\sum_{k=0}^{n}(3k+1)$ für $n \\in \\mathbb{N}$.",
+      "hint": "Summe aufspalten und die Gaußsche Summenformel $\\sum_{k=0}^{n}k = \\frac{n(n+1)}{2}$ verwenden (Achtung: Startindex ist 0, nicht 1).",
+      "solution": "**Schritt 1 — Linearität ausnützen:**\n$$\\sum_{k=0}^{n}(3k+1) = 3\\sum_{k=0}^{n}k + \\sum_{k=0}^{n}1$$\n\n**Schritt 2 — Gaußsche Summe (mit Start bei 0):**\n$$\\sum_{k=0}^{n}k = 0+1+2+\\cdots+n = \\frac{n(n+1)}{2}$$\n$$\\sum_{k=0}^{n}1 = n+1 \\quad \\text{(es gibt } n+1 \\text{ Terme: } k=0,1,\\ldots,n\\text{)}$$\n\n**Schritt 3 — Zusammenfassen:**\n$$3\\cdot\\frac{n(n+1)}{2} + (n+1) = (n+1)\\left(\\frac{3n}{2}+1\\right) = \\frac{(n+1)(3n+2)}{2}$$\n\n$$\\boxed{\\sum_{k=0}^{n}(3k+1) = \\frac{(n+1)(3n+2)}{2}}$$\n\n**Probe** für $n=4$: $1+4+7+10+13=35$. Formel: $\\frac{5\\cdot14}{2}=35$ ✓\n\n**Probe** für $n=2$: $1+4+7=12$. Formel: $\\frac{3\\cdot8}{2}=12$ ✓"
+    },
+    {
+      "id": "reihen-ex-5",
+      "topicId": "reihen",
+      "label": "Klausur SoSe 2019, Aufgabe 3 — Grenzwert, Reihe, Sparvertrag",
+      "source": "Klausur SoSe 2019, 25. Juli 2019",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "**(a)** Berechnen Sie den Grenzwert:\n$$\\lim_{n\\to\\infty}\\left(1+\\frac{2}{n}\\right)^{\\frac{n}{4}}$$\n\n**(b)** Berechnen Sie ausführlich:\n$$\\sum_{k=2}^{\\infty}2\\cdot\\frac{3^{k+1}}{5^k}$$\n\n**(c)** Herr L. zahlt auf einen Sparvertrag monatlich $70\\,€$ ein. Es ist ein jährlicher Zinssatz von $0{,}6\\,\\%$ bei monatlicher Zinsgutschrift vereinbart. Wie groß ist sein Kapital direkt nach der 200. Einzahlung?",
+      "hint": "Bei (a): $e$-Grenzwert-Formel $\\lim_{n\\to\\infty}(1+r/n)^n = e^r$ verwenden, Exponent umschreiben. Bei (b): $3^{k+1}/5^k = 3\\cdot(3/5)^k$, dann als geometrische Reihe erkennen. Bei (c): Monatsrate $q=1+0{,}006/12$ und Rentenformel.",
+      "solution": "**(a) Grenzwert berechnen:**\n\nWir schreiben den Ausdruck um, um die bekannte Formel $\\lim_{n\\to\\infty}(1+r/n)^n = e^r$ anzuwenden:\n\n$$\\left(1+\\frac{2}{n}\\right)^{n/4} = \\left[\\left(1+\\frac{2}{n}\\right)^n\\right]^{1/4}$$\n\nDa $\\lim_{n\\to\\infty}\\left(1+\\frac{2}{n}\\right)^n = e^2$ (mit $r=2$), folgt:\n$$\\lim_{n\\to\\infty}\\left[\\left(1+\\frac{2}{n}\\right)^n\\right]^{1/4} = (e^2)^{1/4} = e^{2/4} = e^{1/2} = \\sqrt{e} \\approx 1{,}6487$$\n\n$$\\boxed{\\lim_{n\\to\\infty}\\left(1+\\frac{2}{n}\\right)^{n/4} = \\sqrt{e}}$$\n\n---\n\n**(b) Geometrische Reihe berechnen:**\n\n**Schritt 1 — Umformen:**\n$$2\\cdot\\frac{3^{k+1}}{5^k} = 2\\cdot 3\\cdot\\frac{3^k}{5^k} = 6\\cdot\\left(\\frac{3}{5}\\right)^k$$\n\n**Schritt 2 — Reihe aufschreiben:**\n$$\\sum_{k=2}^{\\infty}6\\cdot\\left(\\frac{3}{5}\\right)^k = 6\\sum_{k=2}^{\\infty}\\left(\\frac{3}{5}\\right)^k$$\n\n**Schritt 3 — Quotient prüfen:** $q = 3/5 < 1$ ✓ (konvergiert)\n\n**Schritt 4 — Summe ab $k=2$ als Gesamtsumme minus erste Glieder:**\n$$\\sum_{k=2}^{\\infty}q^k = \\sum_{k=0}^{\\infty}q^k - q^0 - q^1 = \\frac{1}{1-q} - 1 - q$$\n\nMit $q=3/5$:\n$$\\frac{1}{1-3/5} - 1 - \\frac{3}{5} = \\frac{1}{2/5} - \\frac{8}{5} = \\frac{5}{2} - \\frac{8}{5} = \\frac{25}{10} - \\frac{16}{10} = \\frac{9}{10}$$\n\n**Schritt 5 — Gesamtergebnis:**\n$$\\sum_{k=2}^{\\infty}6\\cdot\\left(\\frac{3}{5}\\right)^k = 6\\cdot\\frac{9}{10} = \\frac{54}{10} = \\frac{27}{5} = \\mathbf{5{,}4}$$\n\n**Probe:** $6\\cdot(9/25+27/125+81/625+\\cdots) \\approx 6\\cdot(0{,}36+0{,}216+0{,}1296+\\cdots) \\approx 6\\cdot 0{,}9 = 5{,}4$ ✓\n\n---\n\n**(c) Sparvertrag — Kapital nach 200 Einzahlungen:**\n\n**Schritt 1 — Monatlichen Aufzinsungsfaktor bestimmen:**\n\nJährlicher Zinssatz $p = 0{,}6\\%$, monatliche Gutschrift:\n$$r_{\\text{monat}} = \\frac{0{,}6\\%}{12} = 0{,}05\\% = 0{,}0005$$\n$$q = 1 + 0{,}0005 = 1{,}0005$$\n\n**Schritt 2 — Rentenformel aufstellen:**\n\nDie $j$-te Einzahlung ($j=1,\\ldots,200$) wächst bis nach Einzahlung 200 noch $(200-j)$ Monate:\n$$K_{200} = 70\\cdot q^{199} + 70\\cdot q^{198} + \\cdots + 70\\cdot q^0 = 70\\sum_{j=0}^{199}q^j$$\n\nEndliche geometrische Summe:\n$$K_{200} = 70\\cdot\\frac{q^{200}-1}{q-1}$$\n\n**Schritt 3 — Zahlenwert:**\n$$q^{200} = (1{,}0005)^{200} \\approx 1{,}10514$$\n\n$$K_{200} = 70\\cdot\\frac{1{,}10514-1}{0{,}0005} = 70\\cdot\\frac{0{,}10514}{0{,}0005} = 70\\cdot 210{,}28 \\approx \\mathbf{14\\,719{,}60\\,€}$$\n\n**Interpretation:** Ohne Zinsen: $200\\times 70=14\\,000\\,€$. Mit Zinseszins: ca. $14\\,720\\,€$ — Zinsgewinn ca. $720\\,€$."
+    }
+  ]
+}

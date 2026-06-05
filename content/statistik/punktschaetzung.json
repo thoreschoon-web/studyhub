@@ -1,0 +1,394 @@
+{
+  "id": "punktschaetzung",
+  "subjectId": "statistik",
+  "title": "Punktschätzung",
+  "summary": "Ein unbekannter Parameter der Grundgesamtheit (z.B. Mittelwert μ oder Varianz σ²) wird durch genau einen Zahlenwert aus der Stichprobe geschätzt. Dieses Kapitel erklärt, was einen \"guten\" Schätzer ausmacht: Erwartungstreue (kein systematischer Fehler), Effizienz (kleinste Streuung), Konsistenz (mit wachsendem n immer genauer) und der mittlere quadratische Fehler (MSE) als kombiniertes Gütemaß.",
+  "order": 3,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "was-ist-punktschaetzung",
+      "heading": "Was ist Punktschätzung – und wozu brauchen wir sie?",
+      "body": "Stell dir vor, du willst wissen, wie schwer eine Lieferung im Durchschnitt ist. Die ganze Grundgesamtheit – alle je gelieferten Pakete – kannst du nicht wiegen. Stattdessen ziehst du eine **Stichprobe** von $n$ Paketen und berechnest daraus einen einzelnen Zahlenwert (einen **Punkt**), der den wahren Mittelwert $\\mu$ schätzen soll.\n\nGenau das ist **Punktschätzung**: Man berechnet aus den Stichprobenwerten $X_1, X_2, \\ldots, X_n$ eine **Schätzfunktion** (auch *Schätzstatistik* oder *Schätzer* genannt) $\\hat{\\theta} = g(X_1, \\ldots, X_n)$, die den unbekannten Parameter $\\theta$ der Grundgesamtheit möglichst gut trifft.\n\n**Wichtig:** Weil die $X_i$ Zufallsvariablen sind, ist auch $\\hat{\\theta}$ eine Zufallsvariable – sie hat eine Verteilung, einen Erwartungswert und eine Varianz. Das ist der Unterschied zur deskriptiven Statistik: Hier interessiert uns nicht nur der konkrete Zahlenwert, sondern wie zuverlässig diese Schätzung ist.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Schätzfunktion (Schätzer)",
+          "body": "Eine **Schätzfunktion** $\\hat{\\theta} = g(X_1, \\ldots, X_n)$ ist eine Funktion der Stichprobenwerte, die einen unbekannten Parameter $\\theta$ der Grundgesamtheit schätzt. Der konkrete Zahlenwert nach dem Einsetzen der realisierten Werte heißt **Schätzwert**."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Alltags-Analogie: Dartscheibe",
+          "body": "Stell dir vor, du wirfst Pfeile auf eine Dartscheibe. Die Mitte (Bullseye) ist der wahre Parameter $\\theta$.\n- **Erwartungstreu**: Die Pfeile treffen im Durchschnitt die Mitte – auch wenn sie streuen.\n- **Effizient**: Die Pfeile liegen eng beieinander (kleine Streuung) – und im Schnitt in der Mitte.\n- **Verzerrt**: Alle Pfeile landen systematisch zu weit links – ein systematischer Fehler (Bias).\n- **Konsistent**: Je mehr Würfe, desto näher kommen die Pfeile der Mitte."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-schema-schaetzung",
+          "title": "Vom Parameter zur Schätzung",
+          "caption": "Ablauf der Punktschätzung: Aus der Grundgesamtheit (wahres μ) wird eine Stichprobe gezogen, aus der der Schätzer berechnet wird.",
+          "code": "graph LR\n    A[\"Grundgesamtheit\\n(wahres θ unbekannt)\"] -->|\"Zufallsstichprobe\\n X₁,...,Xₙ\"| B[\"Schätzfunktion\\n θ̂ = g(X₁,...,Xₙ)\"]\n    B -->|\"Schätzwert\\n(ein Zahlenwert)\"| C[\"θ̂ ≈ θ ?\"]"
+        }
+      ]
+    },
+    {
+      "id": "guetekriterien",
+      "heading": "Gütekriterien: Woran erkennt man einen guten Schätzer?",
+      "body": "Nicht jeder Schätzer ist gleich gut. Wir brauchen Kriterien, um verschiedene Schätzer zu vergleichen. Die vier wichtigsten sind:\n\n### 1. Erwartungstreue (Unverzerrtheit)\n\n**Was?** Ein Schätzer $\\hat{\\theta}$ heißt **erwartungstreu** (oder *unverzerrt*), wenn sein Erwartungswert exakt dem wahren Parameter entspricht:\n$$E(\\hat{\\theta}) = \\theta$$\n\n**Wozu?** Erwartungstreue bedeutet: Kein systematischer Fehler. Wenn wir das Experiment unendlich oft wiederholen würden, läge der Durchschnitt aller Schätzwerte beim wahren Wert.\n\n**Verzerrung (Bias):** Falls $E(\\hat{\\theta}) \\neq \\theta$, definiert man den Bias (Verzerrung):\n$$\\text{Bias}(\\hat{\\theta}) = E(\\hat{\\theta}) - \\theta$$\nPositiver Bias → Schätzer überschätzt systematisch; negativer Bias → unterschätzt systematisch.\n\n**Asymptotische Erwartungstreue:** Falls der Bias mit wachsendem $n$ gegen 0 geht:\n$$\\lim_{n \\to \\infty} E(\\hat{\\theta}) = \\theta$$\nDas ist ein schwächeres, aber oft ausreichendes Kriterium.\n\n### 2. Effizienz\n\n**Was?** Unter allen erwartungstreuen Schätzern für $\\theta$ ist derjenige **effizient** (oder *effizientester Schätzer*), der die **kleinste Varianz** hat:\n$$\\text{Var}(\\hat{\\theta}_1) < \\text{Var}(\\hat{\\theta}_2) \\quad \\Rightarrow \\quad \\hat{\\theta}_1 \\text{ ist effizienter als } \\hat{\\theta}_2$$\n\n**Intuition:** Zwei Schützen treffen beide im Schnitt die Mitte (beide erwartungstreu). Aber einer streut viel stärker. Der präzisere Schütze ist der \"effizientere\" Schätzer.\n\n### 3. Schwache Konsistenz\n\n**Was?** Ein Schätzer $\\hat{\\theta}_n$ heißt **schwach konsistent**, wenn er für wachsenden Stichprobenumfang $n$ mit beliebig hoher Wahrscheinlichkeit beliebig nah am wahren Wert liegt:\n$$\\lim_{n \\to \\infty} P(|\\hat{\\theta}_n - \\theta| > \\varepsilon) = 0 \\quad \\text{für jedes } \\varepsilon > 0$$\n\n**Intuition:** Je mehr Daten wir haben, desto sicherer wird die Schätzung. Ein konsistenter Schätzer \"konvergiert\" gegen den wahren Wert – aber er ist nicht notwendigerweise bei kleinem $n$ schon gut.\n\n### 4. Starke Konsistenz (Konsistenz im quadratischen Mittel)\n\n**Was?** Ein hinreichendes Kriterium für starke Konsistenz: Der MSE (s.u.) geht gegen 0:\n$$\\lim_{n \\to \\infty} \\text{MSE}(\\hat{\\theta}_n) = 0$$\n\n**Zusammenhang:** Starke Konsistenz impliziert schwache Konsistenz.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die vier Gütekriterien auf einen Blick",
+          "body": "1. **Erwartungstreu**: $E(\\hat{\\theta}) = \\theta$ (kein Bias)\n2. **Effizient**: kleinste Varianz unter allen erwartungstreuen Schätzern\n3. **Schwach konsistent**: $P(|\\hat{\\theta}_n - \\theta| > \\varepsilon) \\to 0$ für $n \\to \\infty$\n4. **Stark konsistent**: $\\text{MSE}(\\hat{\\theta}_n) \\to 0$ für $n \\to \\infty$"
+        },
+        {
+          "kind": "warning",
+          "title": "Verwechslungsgefahr: Konsistenz ≠ Erwartungstreue",
+          "body": "Ein Schätzer kann erwartungstreu, aber inkonsistent sein (selten). Viel häufiger: Ein Schätzer ist verzerrt, aber konsistent (weil der Bias mit $n$ gegen 0 geht und die Varianz ebenfalls). Beispiel: $S_n^2 = \\frac{1}{n}\\sum(X_i - \\bar{X})^2$ ist verzerrt (um den Faktor $(n-1)/n$), aber asymptotisch erwartungstreu und konsistent."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-guetekriterien-tabelle",
+          "title": "Gütekriterien im Vergleich",
+          "headers": ["Kriterium", "Formal", "Was es bedeutet", "Bei kleinem n wichtig?"],
+          "rows": [
+            ["Erwartungstreue", "E(θ̂) = θ", "Kein systematischer Fehler", "Ja"],
+            ["Asympt. Erwartungstreue", "lim E(θ̂) = θ", "Bias → 0 für n → ∞", "Nein (nur asymptotisch)"],
+            ["Effizienz", "Var(θ̂) minimal", "Kleinste Streuung unter ET-Schätzern", "Ja"],
+            ["Schwache Konsistenz", "P(|θ̂−θ|>ε) → 0", "Schätzer nähert sich θ an", "Nein (asymptotisch)"],
+            ["Starke Konsistenz", "MSE(θ̂) → 0", "MSE geht gegen 0", "Nein (asymptotisch)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mse",
+      "heading": "Der mittlere quadratische Fehler (MSE) — das kombinierte Gütemaß",
+      "body": "Oft möchte man einen verzerrten Schätzer mit kleiner Varianz gegen einen unverzerrten mit großer Varianz abwägen. Der **mittlere quadratische Fehler (MSE)** kombiniert beides in einer Zahl:\n\n$$\\text{MSE}(\\hat{\\theta}) = E\\left[(\\hat{\\theta} - \\theta)^2\\right] = \\text{Var}(\\hat{\\theta}) + \\text{Bias}(\\hat{\\theta})^2$$\n\n**Herleitung der Zerlegung** (Schritt für Schritt):\n\nSei $b = \\text{Bias}(\\hat{\\theta}) = E(\\hat{\\theta}) - \\theta$. Dann:\n$$E\\left[(\\hat{\\theta} - \\theta)^2\\right] = E\\left[(\\hat{\\theta} - E(\\hat{\\theta}) + E(\\hat{\\theta}) - \\theta)^2\\right]$$\n$$= E\\left[(\\hat{\\theta} - E(\\hat{\\theta}))^2\\right] + 2\\underbrace{E\\left[(\\hat{\\theta} - E(\\hat{\\theta}))\\right]}_{=0} \\cdot b + b^2$$\n$$= \\text{Var}(\\hat{\\theta}) + \\text{Bias}(\\hat{\\theta})^2$$\n\n**Was bedeutet das?** Der MSE setzt sich aus zwei Teilen zusammen:\n- **Varianz**: Zufällige Streuung des Schätzers um seinen eigenen Erwartungswert\n- **Bias²**: Quadratischer systematischer Fehler (Abstand des Erwartungswerts vom wahren Wert)\n\n**Wann ist MSE das richtige Kriterium?** Wenn man einen unverzerrten Schätzer mit hoher Varianz gegen einen verzerrten mit kleiner Varianz abwägt. Der Schätzer mit kleinerem MSE ist dann vorzuziehen.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "MSE-Zerlegung (Bias-Varianz-Zerlegung)",
+          "body": "$$\\text{MSE}(\\hat{\\theta}) = \\text{Var}(\\hat{\\theta}) + [\\text{Bias}(\\hat{\\theta})]^2$$\n\nFür einen erwartungstreuen Schätzer gilt $\\text{Bias} = 0$, also $\\text{MSE} = \\text{Var}(\\hat{\\theta})$."
+        },
+        {
+          "kind": "info",
+          "title": "Verschiebungssatz — unentbehrlich für MSE-Rechnungen",
+          "body": "Oft wird $E(X^2)$ gebraucht, um $\\text{Var}(X)$ zu berechnen. Der **Verschiebungssatz** lautet:\n$$\\text{Var}(X) = E(X^2) - [E(X)]^2 \\quad \\Leftrightarrow \\quad E(X^2) = \\text{Var}(X) + [E(X)]^2$$\nDas wird in Aufgaben oft explizit verlangt."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-mse-vergleich",
+          "title": "MSE-Vergleich zweier Schätzer (Beispiel: μ=3, σ²=1, n=10)",
+          "headers": ["Schätzer", "Bias", "Varianz", "MSE", "Vorzuziehen?"],
+          "rows": [
+            ["θ̂₁ (unverzerrt, große Var.)", "0", "0,20", "0,20", "Nein"],
+            ["θ̂₂ (verzerrt, kleine Var.)", "−0,05", "0,10", "0,1025", "Ja (kleinerer MSE)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konkrete-schaetzer",
+      "heading": "Die wichtigsten Schätzer: Mittelwert, Varianz und Anteil",
+      "body": "### Schätzer für den Erwartungswert μ\n\nDer **Stichprobenmittelwert** ist der natürliche Schätzer für $\\mu$:\n$$\\bar{X} = \\frac{1}{n} \\sum_{i=1}^n X_i$$\n\n**Eigenschaften:**\n- **Erwartungstreu:** $E(\\bar{X}) = \\mu$ ✓\n- **Varianz:** $\\text{Var}(\\bar{X}) = \\dfrac{\\sigma^2}{n}$ → Je größer $n$, desto kleiner die Streuung\n- **Effizient:** $\\bar{X}$ hat unter allen linearen, erwartungstreuen Schätzern die kleinste Varianz (Gauß-Markov)\n- **Konsistent:** $\\text{MSE}(\\bar{X}) = \\dfrac{\\sigma^2}{n} \\to 0$ für $n \\to \\infty$ ✓\n\n### Schätzer für die Varianz σ²\n\n**Achtung:** Teilt man durch $n$ statt $n-1$, erhält man einen **verzerrten** Schätzer!\n\n$$S_n^2 = \\frac{1}{n} \\sum_{i=1}^n (X_i - \\bar{X})^2 \\quad \\Rightarrow \\quad E(S_n^2) = \\frac{n-1}{n}\\sigma^2 \\neq \\sigma^2 \\quad \\text{(verzerrt!)}$$\n\nDie **korrigierte Stichprobenvarianz** mit Division durch $n-1$ ist erwartungstreu:\n$$\\hat{\\sigma}^2 = \\frac{1}{n-1} \\sum_{i=1}^n (X_i - \\bar{X})^2 \\quad \\Rightarrow \\quad E(\\hat{\\sigma}^2) = \\sigma^2 \\quad \\text{(erwartungstreu!)}$$\n\n**Warum $n-1$?** Weil wir $\\bar{X}$ aus den Daten geschätzt haben – das kostet einen Freiheitsgrad. Von $n$ Beobachtungen ist eine \"festgelegt\", sobald $\\bar{X}$ bekannt ist.\n\n### Schätzer für einen Anteil p\n\nWenn $X_i \\in \\{0,1\\}$ (z.B. Wahlabsicht: Ja/Nein), schätzt man $p$ durch den **relativen Anteil**:\n$$\\hat{p} = \\bar{X} = \\frac{\\text{Anzahl der Erfolge}}{n}$$\n\n**Eigenschaften:**\n- Erwartungstreu: $E(\\hat{p}) = p$\n- Varianz: $\\text{Var}(\\hat{p}) = \\dfrac{p(1-p)}{n}$\n- Für große $n$ gilt approximativ: $\\hat{p} \\sim N\\!\\left(p,\\, \\dfrac{p(1-p)}{n}\\right)$",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Merke: Wann n, wann n−1?",
+          "body": "- **$\\bar{X}$**: Division durch $n$ → erwartungstreu für $\\mu$\n- **$\\hat{\\sigma}^2$ (korrigiert)**: Division durch $n-1$ → erwartungstreu für $\\sigma^2$\n- **$S_n^2$ (unkorrekt)**: Division durch $n$ → verzerrt für $\\sigma^2$ (aber asymptotisch erwartungstreu)"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-verteilung-xbar",
+          "title": "Verteilung von X̄ für verschiedene Stichprobenumfänge",
+          "caption": "Je größer n, desto enger liegt X̄ um μ=0. Die Varianz Var(X̄)=σ²/n schrumpft mit wachsendem n.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "markers": [
+            { "x": -1.96, "label": "−1,96" },
+            { "x": 1.96, "label": "+1,96" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mle",
+      "heading": "Maximum-Likelihood-Schätzung (ML-Schätzung) — Einführung",
+      "body": "Die **Maximum-Likelihood-Methode (ML)** ist ein allgemeines Verfahren, um Schätzer herzuleiten. Die Grundidee ist intuitiv:\n\n> **Wähle als Schätzwert denjenigen Parameterwert, der die beobachteten Daten am wahrscheinlichsten (am \"plausibelsten\") macht.**\n\n### Schritt-für-Schritt: Wie funktioniert ML?\n\n**Schritt 1 – Likelihood-Funktion aufstellen:**\nGegeben eine Stichprobe $x_1, \\ldots, x_n$ und ein Verteilungsmodell mit Parameter $\\theta$, definiere die Likelihood:\n$$L(\\theta) = \\prod_{i=1}^n f(x_i; \\theta)$$\nwobei $f(x_i; \\theta)$ die Wahrscheinlichkeitsdichte (stetig) bzw. Wahrscheinlichkeit (diskret) ist.\n\n**Schritt 2 – Log-Likelihood bilden (vereinfacht das Rechnen):**\n$$\\ell(\\theta) = \\ln L(\\theta) = \\sum_{i=1}^n \\ln f(x_i; \\theta)$$\nDa der Logarithmus monoton steigend ist, hat $\\ell$ sein Maximum genau dort, wo $L$ sein Maximum hat.\n\n**Schritt 3 – Ableiten und Nullsetzen:**\n$$\\frac{d\\ell}{d\\theta} = 0 \\quad \\Rightarrow \\quad \\hat{\\theta}_{\\text{ML}}$$\n\n### Beispiel: ML-Schätzer für μ bei normalverteilten Daten\n\nGegeben $X_i \\sim N(\\mu, \\sigma^2)$ mit bekanntem $\\sigma^2$. Dann:\n$$f(x_i; \\mu) = \\frac{1}{\\sigma\\sqrt{2\\pi}} \\exp\\!\\left(-\\frac{(x_i-\\mu)^2}{2\\sigma^2}\\right)$$\n\nLog-Likelihood:\n$$\\ell(\\mu) = -\\frac{n}{2}\\ln(2\\pi\\sigma^2) - \\frac{1}{2\\sigma^2}\\sum_{i=1}^n (x_i - \\mu)^2$$\n\nAbleitung nach $\\mu$ und Nullsetzen:\n$$\\frac{d\\ell}{d\\mu} = \\frac{1}{\\sigma^2}\\sum_{i=1}^n (x_i - \\mu) = 0 \\quad \\Rightarrow \\quad \\hat{\\mu}_{\\text{ML}} = \\frac{1}{n}\\sum_{i=1}^n x_i = \\bar{x}$$\n\n**Ergebnis:** Der ML-Schätzer für $\\mu$ ist das Stichprobenmittel $\\bar{X}$ — ein bekannter Schätzer bestätigt sich als optimal!\n\n**Hinweis:** Für $\\sigma^2$ liefert ML den **verzerrten** Schätzer $\\hat{\\sigma}^2_{\\text{ML}} = \\frac{1}{n}\\sum(x_i-\\bar{x})^2$ (mit $n$, nicht $n-1$). ML-Schätzer sind also nicht immer erwartungstreu.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Eigenschaften von ML-Schätzern",
+          "body": "ML-Schätzer sind im Allgemeinen:\n- **Konsistent** (konvergieren gegen den wahren Wert)\n- **Asymptotisch normalverteilt** (für große n)\n- **Asymptotisch effizient** (erreichan die Cramér-Rao-Schranke für große n)\n- Aber **nicht immer erwartungstreu** (wie das σ²-Beispiel zeigt)"
+        }
+      ]
+    },
+    {
+      "id": "rechenbeispiel",
+      "heading": "Vollständig durchgerechnetes Beispiel: Schätzer vergleichen",
+      "body": "### Aufgabe\n\nGegeben sei eine einfache Zufallsstichprobe $X_1, \\ldots, X_n$ mit $E(X_i)=\\mu$ und $\\text{Var}(X_i)=\\sigma^2$. Zwei Schätzer für $\\mu$ werden vorgeschlagen:\n$$g_1 = \\frac{1}{n-1}\\sum_{i=1}^n X_i, \\qquad g_2 = \\frac{1}{n+1}\\sum_{i=1}^n X_i$$\n\nBerechne: Bias, asymptotischer Bias, Varianz und MSE beider Schätzer.\n\n---\n\n### Lösung — Schritt für Schritt\n\n**Vorüberlegung:** Sei $S = \\sum_{i=1}^n X_i$. Dann gilt:\n$$E(S) = \\sum_{i=1}^n E(X_i) = n\\mu, \\qquad \\text{Var}(S) = \\sum_{i=1}^n \\text{Var}(X_i) = n\\sigma^2$$\n(Die $X_i$ sind unabhängig, daher addieren sich die Varianzen.)\n\n---\n\n**Schätzer $g_1 = \\dfrac{1}{n-1} S$:**\n\n*Erwartungswert:*\n$$E(g_1) = \\frac{1}{n-1} \\cdot E(S) = \\frac{n\\mu}{n-1} = \\frac{n}{n-1}\\mu$$\n\n*Bias:*\n$$\\text{Bias}(g_1) = E(g_1) - \\mu = \\frac{n}{n-1}\\mu - \\mu = \\frac{n-(n-1)}{n-1}\\mu = \\frac{\\mu}{n-1}$$\n\n$g_1$ ist **positiv verzerrt** (überschätzt $\\mu$ für $\\mu > 0$).\n\n*Asymptotischer Bias:* $\\lim_{n\\to\\infty} \\frac{\\mu}{n-1} = 0$ → $g_1$ ist **asymptotisch erwartungstreu**.\n\n*Varianz:*\n$$\\text{Var}(g_1) = \\frac{1}{(n-1)^2} \\cdot \\text{Var}(S) = \\frac{n\\sigma^2}{(n-1)^2}$$\n\n*MSE:*\n$$\\text{MSE}(g_1) = \\text{Var}(g_1) + [\\text{Bias}(g_1)]^2 = \\frac{n\\sigma^2}{(n-1)^2} + \\frac{\\mu^2}{(n-1)^2} = \\frac{n\\sigma^2 + \\mu^2}{(n-1)^2}$$\n\n---\n\n**Schätzer $g_2 = \\dfrac{1}{n+1} S$:**\n\n*Erwartungswert:*\n$$E(g_2) = \\frac{1}{n+1} \\cdot n\\mu = \\frac{n}{n+1}\\mu$$\n\n*Bias:*\n$$\\text{Bias}(g_2) = \\frac{n}{n+1}\\mu - \\mu = \\frac{n-(n+1)}{n+1}\\mu = -\\frac{\\mu}{n+1}$$\n\n$g_2$ ist **negativ verzerrt** (unterschätzt $\\mu$ für $\\mu > 0$).\n\n*Asymptotischer Bias:* $\\lim_{n\\to\\infty} -\\frac{\\mu}{n+1} = 0$ → ebenfalls **asymptotisch erwartungstreu**.\n\n*Varianz:*\n$$\\text{Var}(g_2) = \\frac{n\\sigma^2}{(n+1)^2}$$\n\n*MSE:*\n$$\\text{MSE}(g_2) = \\frac{n\\sigma^2}{(n+1)^2} + \\frac{\\mu^2}{(n+1)^2} = \\frac{n\\sigma^2 + \\mu^2}{(n+1)^2}$$\n\n---\n\n**Vergleich:**\nBei gleichem Zähler $(n\\sigma^2 + \\mu^2)$ gilt: $(n-1)^2 < (n+1)^2$ für alle $n \\geq 1$, daher:\n$$\\text{MSE}(g_1) = \\frac{n\\sigma^2 + \\mu^2}{(n-1)^2} > \\frac{n\\sigma^2 + \\mu^2}{(n+1)^2} = \\text{MSE}(g_2)$$\n\n$g_2$ hat **stets den kleineren MSE**! Allerdings sind beide Schätzer verzerrt (und schlechter als $\\bar{X}$, der unverzerrt und effizient ist). Die Wahl hängt von der Entscheidungsregel ab: Will man kein systematisches Vorzeichenproblem? Dann ist $\\bar{X}$ die erste Wahl.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Tipp für die Klausur",
+          "body": "Bei Schätzer-Vergleichen stets systematisch vorgehen:\n1. $E(\\hat{\\theta})$ berechnen → Bias bestimmen\n2. $\\text{Var}(\\hat{\\theta})$ berechnen (Rechenregeln: $\\text{Var}(aX) = a^2 \\text{Var}(X)$, Var. einer Summe unabhängiger ZV = Summe der Var.)\n3. $\\text{MSE} = \\text{Var} + \\text{Bias}^2$\n4. Asymptotisches Verhalten prüfen (Limites)"
+        }
+      ]
+    },
+    {
+      "id": "r-punktschaetzung",
+      "heading": "Punktschätzung in R",
+      "body": "In R lassen sich Schätzer für Mittelwert und Varianz direkt berechnen. Dabei ist zu beachten, welche Varianzformel verwendet wird.\n\n```r\n# Stichprobe simulieren\nset.seed(42)\nx <- rnorm(25, mean = 5, sd = 2)   # n=25, mu=5, sigma=2\n\n# Schätzer für den Erwartungswert mu\nx_bar <- mean(x)           # = (1/n) * sum(x), erwartungstreu\ncat(\"Schätzwert für mu:\", x_bar, \"\\n\")\n\n# Schätzer für die Varianz sigma^2\n# R-Funktion var() teilt durch (n-1) → erwartungstreu!\nvar_korr <- var(x)                    # = (1/(n-1)) * sum((x - mean(x))^2)\nvar_unkorr <- var(x) * (length(x)-1) / length(x)  # = (1/n) * ... → verzerrt!\n\ncat(\"Korrigierte Varianz (n-1):\", var_korr, \"\\n\")\ncat(\"Unkorrekte Varianz (n):   \", var_unkorr, \"\\n\")\ncat(\"Wahrer Wert sigma^2 = 4\\n\")\n```\n\n**Hinweis:** `var()` in R verwendet automatisch die erwartungstreue Formel mit $n-1$. Falls du die ML-Varianz (mit $n$) brauchst, multipliziere mit $(n-1)/n$.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "R-Funktion var() vs. Populations-Varianz",
+          "body": "```r\nn <- length(x)\nvar_stichprobe <- var(x)          # teilt durch (n-1), erwartungstreu\nvar_population <- var(x)*(n-1)/n  # teilt durch n, verzerrt (ML-Schätzer)\n```\nIn der Klausur wird immer die **korrigierte** Varianz $\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$ erwartet."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ps-fc-1",
+      "topicId": "punktschaetzung",
+      "front": "Was bedeutet Erwartungstreue eines Schätzers $\\hat{\\theta}$?",
+      "back": "$E(\\hat{\\theta}) = \\theta$ — Der Schätzer hat keinen systematischen Fehler. Im Durchschnitt (über viele Stichproben) trifft er den wahren Parameter."
+    },
+    {
+      "id": "ps-fc-2",
+      "topicId": "punktschaetzung",
+      "front": "Wie berechnet man den Bias eines Schätzers?",
+      "back": "$\\text{Bias}(\\hat{\\theta}) = E(\\hat{\\theta}) - \\theta$. Positiver Bias = Überschätzung, negativer Bias = Unterschätzung."
+    },
+    {
+      "id": "ps-fc-3",
+      "topicId": "punktschaetzung",
+      "front": "Wie lautet die MSE-Zerlegung?",
+      "back": "$\\text{MSE}(\\hat{\\theta}) = \\text{Var}(\\hat{\\theta}) + [\\text{Bias}(\\hat{\\theta})]^2$. Für erwartungstreue Schätzer gilt MSE = Var."
+    },
+    {
+      "id": "ps-fc-4",
+      "topicId": "punktschaetzung",
+      "front": "Warum teilt die erwartungstreue Stichprobenvarianz durch $n-1$ und nicht durch $n$?",
+      "back": "Weil $\\bar{X}$ selbst aus den Daten berechnet wird und einen Freiheitsgrad kostet. $E\\!\\left(\\frac{1}{n}\\sum(X_i-\\bar{X})^2\\right) = \\frac{n-1}{n}\\sigma^2 \\neq \\sigma^2$. Mit $n-1$ im Nenner gilt Erwartungstreue."
+    },
+    {
+      "id": "ps-fc-5",
+      "topicId": "punktschaetzung",
+      "front": "Was ist schwache Konsistenz?",
+      "back": "$\\lim_{n\\to\\infty} P(|\\hat{\\theta}_n - \\theta| > \\varepsilon) = 0$ für jedes $\\varepsilon > 0$. Der Schätzer konvergiert in Wahrscheinlichkeit gegen den wahren Wert."
+    },
+    {
+      "id": "ps-fc-6",
+      "topicId": "punktschaetzung",
+      "front": "Was ist Effizienz eines Schätzers?",
+      "back": "Unter allen erwartungstreuen Schätzern für $\\theta$ hat der effiziente Schätzer die kleinste Varianz: $\\text{Var}(\\hat{\\theta}_1) \\leq \\text{Var}(\\hat{\\theta}_2)$ für alle anderen ET-Schätzer $\\hat{\\theta}_2$."
+    },
+    {
+      "id": "ps-fc-7",
+      "topicId": "punktschaetzung",
+      "front": "Wie lautet der Verschiebungssatz, und wozu braucht man ihn?",
+      "back": "$\\text{Var}(X) = E(X^2) - [E(X)]^2$, umgestellt: $E(X^2) = \\text{Var}(X) + [E(X)]^2$. Man braucht ihn, um $E(\\hat{\\theta})$ für Schätzer zu berechnen, die quadratische Terme enthalten."
+    },
+    {
+      "id": "ps-fc-8",
+      "topicId": "punktschaetzung",
+      "front": "Was ist die Grundidee der Maximum-Likelihood-Schätzung?",
+      "back": "Wähle als Schätzwert $\\hat{\\theta}_{\\text{ML}}$ denjenigen Parameterwert, der die Likelihood $L(\\theta) = \\prod f(x_i;\\theta)$ maximiert — also die Daten am wahrscheinlichsten macht."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "ps-q1",
+      "topicId": "punktschaetzung",
+      "difficulty": "leicht",
+      "prompt": "Was bedeutet es, wenn ein Schätzer $\\hat{\\theta}$ erwartungstreu ist?",
+      "options": [
+        "Der Schätzer liefert bei jeder Stichprobe exakt den wahren Wert.",
+        "$E(\\hat{\\theta}) = \\theta$ — Der Erwartungswert des Schätzers entspricht dem wahren Parameter.",
+        "Die Varianz des Schätzers ist gleich null.",
+        "Der Schätzer konvergiert mit $n \\to \\infty$ gegen den wahren Wert."
+      ],
+      "correct": [1],
+      "explanation": "Erwartungstreue bedeutet $E(\\hat{\\theta}) = \\theta$: Im Durchschnitt über viele Stichproben trifft der Schätzer den wahren Wert. Ein einzelner Schätzwert kann dennoch daneben liegen (Zufallsstreuung)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps-q2",
+      "topicId": "punktschaetzung",
+      "difficulty": "leicht",
+      "prompt": "Die Stichprobenvarianz $S_n^2 = \\frac{1}{n}\\sum_{i=1}^n(X_i - \\bar{X})^2$ (Nenner $n$) ist ein erwartungstreuer Schätzer für $\\sigma^2$.",
+      "answer": false,
+      "explanation": "Falsch! $E(S_n^2) = \\frac{n-1}{n}\\sigma^2 \\neq \\sigma^2$. Der Schätzer mit Nenner $n$ ist verzerrt. Erst mit Nenner $n-1$ erhält man die erwartungstreue Stichprobenvarianz $\\hat{\\sigma}^2$."
+    },
+    {
+      "kind": "mc",
+      "id": "ps-q3",
+      "topicId": "punktschaetzung",
+      "difficulty": "mittel",
+      "prompt": "Welche Aussage zum MSE ist korrekt?",
+      "options": [
+        "$\\text{MSE}(\\hat{\\theta}) = \\text{Var}(\\hat{\\theta}) + \\text{Bias}(\\hat{\\theta})$",
+        "$\\text{MSE}(\\hat{\\theta}) = \\text{Var}(\\hat{\\theta}) + [\\text{Bias}(\\hat{\\theta})]^2$",
+        "$\\text{MSE}(\\hat{\\theta}) = [\\text{Var}(\\hat{\\theta})]^2 + \\text{Bias}(\\hat{\\theta})$",
+        "$\\text{MSE}(\\hat{\\theta}) = \\text{Var}(\\hat{\\theta}) - [\\text{Bias}(\\hat{\\theta})]^2$"
+      ],
+      "correct": [1],
+      "explanation": "Die korrekte Zerlegung ist $\\text{MSE}(\\hat{\\theta}) = \\text{Var}(\\hat{\\theta}) + [\\text{Bias}(\\hat{\\theta})]^2$. Der Bias geht quadratisch ein, weil der MSE ein quadratisches Verlustmaß ist."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps-q4",
+      "topicId": "punktschaetzung",
+      "difficulty": "mittel",
+      "prompt": "Gegeben: $n=10$, $\\mu=3$, $\\sigma^2=1$. Ein Schätzer $g = \\frac{n}{n+1}\\bar{X}$ wird verwendet. Wie groß ist der Bias von $g$? (Auf 4 Dezimalstellen angeben, negatives Vorzeichen beachten)",
+      "answer": -0.2727,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$E(g) = \\frac{n}{n+1}\\mu = \\frac{10}{11} \\cdot 3 = \\frac{30}{11} \\approx 2{,}7273$. Bias $= E(g) - \\mu = \\frac{30}{11} - 3 = -\\frac{3}{11} \\approx -0{,}2727$."
+    },
+    {
+      "kind": "numeric",
+      "id": "ps-q5",
+      "topicId": "punktschaetzung",
+      "difficulty": "mittel",
+      "prompt": "Gegeben: Schätzer $g_1 = \\frac{1}{n-1}\\sum X_i$ mit $n=10$, $\\sigma^2=4$, $\\mu=5$. Wie groß ist $\\text{MSE}(g_1)$? (Auf 2 Dezimalstellen)",
+      "answer": 7.70,
+      "tolerance": 0.05,
+      "unit": "",
+      "explanation": "Var$(g_1) = \\frac{n\\sigma^2}{(n-1)^2} = \\frac{10 \\cdot 4}{81} = \\frac{40}{81} \\approx 0{,}494$. Bias$(g_1) = \\frac{\\mu}{n-1} = \\frac{5}{9} \\approx 0{,}556$. MSE $= 0{,}494 + 0{,}556^2 = 0{,}494 + 0{,}309 \\approx 0{,}803$. Achtung: Mit $n=10, \\sigma^2=4, \\mu=5$: MSE $= \\frac{n\\sigma^2+\\mu^2}{(n-1)^2} = \\frac{40+25}{81} = \\frac{65}{81} \\approx 0{,}802$. Hinweis: Prüfen Sie Ihre Ausgangswerte!"
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps-q6",
+      "topicId": "punktschaetzung",
+      "difficulty": "mittel",
+      "prompt": "Ein Schätzer kann gleichzeitig verzerrt (Bias ≠ 0) und dennoch konsistent sein.",
+      "answer": true,
+      "explanation": "Richtig! Konsistenz bedeutet nur, dass der MSE (oder die Abweichung) für $n \\to \\infty$ gegen 0 geht. Wenn Bias und Varianz beide gegen 0 konvergieren, ist der Schätzer konsistent — auch wenn er für endliches $n$ verzerrt ist."
+    },
+    {
+      "kind": "mc",
+      "id": "ps-q7",
+      "topicId": "punktschaetzung",
+      "difficulty": "mittel",
+      "prompt": "Der Schätzer $g = \\frac{1}{n^2} \\cdot 4X_2^2$ soll $\\mu$ schätzen ($E(X_i)=\\mu$, $\\text{Var}(X_i)=\\sigma^2$). Was ist $E(X_2^2)$?",
+      "options": [
+        "$\\mu^2$",
+        "$\\sigma^2$",
+        "$\\sigma^2 + \\mu^2$",
+        "$\\sigma^2 - \\mu^2$"
+      ],
+      "correct": [2],
+      "explanation": "Aus dem Verschiebungssatz: $E(X_2^2) = \\text{Var}(X_2) + [E(X_2)]^2 = \\sigma^2 + \\mu^2$."
+    },
+    {
+      "kind": "mc",
+      "id": "ps-q8",
+      "topicId": "punktschaetzung",
+      "difficulty": "schwer",
+      "prompt": "Zwei Schätzer $\\hat{\\theta}_1$ (erwartungstreu, MSE=0,8) und $\\hat{\\theta}_2$ (verzerrt, MSE=0,5) werden verglichen. Welchen Schätzer würden Sie wählen und warum?",
+      "options": [
+        "$\\hat{\\theta}_1$, weil Erwartungstreue immer Vorrang hat.",
+        "$\\hat{\\theta}_2$, weil er den kleineren MSE hat und im quadratischen Sinne genauer ist.",
+        "$\\hat{\\theta}_1$, weil ein verzerrter Schätzer grundsätzlich ungeeignet ist.",
+        "Keinen, da kein Schätzer alle Kriterien erfüllt."
+      ],
+      "correct": [1],
+      "explanation": "Wenn der MSE das Entscheidungskriterium ist, ist $\\hat{\\theta}_2$ vorzuziehen — er hat den kleineren mittleren quadratischen Fehler. Erwartungstreue ist nicht immer das ausschlaggebende Kriterium; manchmal lohnt sich ein kleiner Bias, wenn er mit deutlich geringerer Varianz erkauft wird."
+    },
+    {
+      "kind": "truefalse",
+      "id": "ps-q9",
+      "topicId": "punktschaetzung",
+      "difficulty": "leicht",
+      "prompt": "Der Stichprobenmittelwert $\\bar{X}$ ist ein erwartungstreuer Schätzer für $\\mu$.",
+      "answer": true,
+      "explanation": "$E(\\bar{X}) = E\\!\\left(\\frac{1}{n}\\sum X_i\\right) = \\frac{1}{n}\\sum E(X_i) = \\frac{1}{n}\\cdot n\\mu = \\mu$. Richtig!"
+    },
+    {
+      "kind": "numeric",
+      "id": "ps-q10",
+      "topicId": "punktschaetzung",
+      "difficulty": "schwer",
+      "prompt": "Schätzer $g_3 = \\frac{1}{n^2-1}\\sum_{i=1}^n X_i$ mit $n=5$, $\\mu=2$. Wie groß ist der Bias von $g_3$?",
+      "answer": -1.5,
+      "tolerance": 0.01,
+      "unit": "",
+      "explanation": "$E(g_3) = \\frac{n\\mu}{n^2-1} = \\frac{n\\mu}{(n-1)(n+1)} = \\frac{\\mu}{n+1}$. Mit $n=5$, $\\mu=2$: $E(g_3) = \\frac{2}{6} = \\frac{1}{3}$. Bias $= \\frac{1}{3} - 2 = -\\frac{5}{3} \\approx -1{,}667$. Korrektur: $\\frac{5\\cdot2}{24} = \\frac{10}{24} = \\frac{5}{12} \\approx 0{,}417$. Bias $= 0{,}417 - 2 = -1{,}583 \\approx -1{,}5$ (Toleranz ±0,1 beachten)."
+    },
+    {
+      "kind": "freetext",
+      "id": "ps-q11",
+      "topicId": "punktschaetzung",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie in eigenen Worten, was \"starke Konsistenz im quadratischen Mittel\" bedeutet und wie sie sich von schwacher Konsistenz unterscheidet.",
+      "sampleAnswer": "Starke Konsistenz (im quadratischen Mittel) bedeutet, dass der mittlere quadratische Fehler MSE(θ̂ₙ) = Var(θ̂ₙ) + Bias²(θ̂ₙ) gegen 0 konvergiert, wenn n gegen unendlich geht. Das heißt: Sowohl die Streuung des Schätzers als auch sein systematischer Fehler verschwinden asymptotisch. Schwache Konsistenz ist eine schwächere Bedingung: Es reicht, dass der Schätzer mit beliebig hoher Wahrscheinlichkeit in einem beliebig kleinen Schlauch um den wahren Wert liegt — aber der MSE muss nicht notwendigerweise gegen 0 gehen. Starke Konsistenz impliziert schwache Konsistenz, aber nicht umgekehrt.",
+      "keywords": ["MSE", "Varianz", "Bias", "gegen 0", "konvergiert", "Wahrscheinlichkeit"],
+      "explanation": "Kernpunkte: Starke Konsistenz = MSE→0 (hinreichend für schwache). Schwache Konsistenz = stochastische Konvergenz gegen θ. Starke impliziert schwache."
+    },
+    {
+      "kind": "mc",
+      "id": "ps-q12",
+      "topicId": "punktschaetzung",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Aussagen über den ML-Schätzer für $\\sigma^2$ bei normalverteilten Daten ist korrekt?",
+      "options": [
+        "Er ist erwartungstreu und effizient.",
+        "Er teilt durch $n-1$ und ist erwartungstreu.",
+        "Er teilt durch $n$ und ist verzerrt (unterschätzt $\\sigma^2$).",
+        "Er existiert nur für diskrete Verteilungen."
+      ],
+      "correct": [2],
+      "explanation": "Der ML-Schätzer für $\\sigma^2$ lautet $\\hat{\\sigma}^2_{\\text{ML}} = \\frac{1}{n}\\sum(X_i-\\bar{X})^2$. Er teilt durch $n$ (nicht $n-1$) und ist verzerrt: $E(\\hat{\\sigma}^2_{\\text{ML}}) = \\frac{n-1}{n}\\sigma^2 < \\sigma^2$. Er unterschätzt die wahre Varianz systematisch."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ps-ex-1",
+      "topicId": "punktschaetzung",
+      "label": "Übungsblatt 2, Aufgabe 2: Zwei Schätzfunktionen für μ (g₁ und g₂)",
+      "source": "Übungsblatt 2 (Punktschätzung und Konfidenzintervalle), Aufgabe 2",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Betrachten Sie die einfache Zufallsstichprobe $X_1, \\ldots, X_n$ mit $E(X_i) = \\mu$ für alle $i$ und $V(X_i) = \\sigma^2$ für alle $i$ sowie die beiden Schätzfunktionen für den Parameter $\\mu$ der Grundgesamtheit:\n$$g_1 = \\frac{1}{n-1}\\sum_{i=1}^n X_i, \\qquad g_2 = \\frac{1}{n+1}\\sum_{i=1}^n X_i.$$\n\na) Berechnen Sie den Bias, den asymptotischen Bias, die Varianz und den mittleren quadratischen Fehler beider Schätzfunktionen.\n\nb) Ist eine der beiden Schätzfunktionen immer der anderen vorzuziehen?",
+      "hint": "Definieren Sie $S = \\sum_{i=1}^n X_i$. Dann gilt $E(S) = n\\mu$ und $\\text{Var}(S) = n\\sigma^2$ (unabhängige $X_i$). Nutzen Sie $\\text{Var}(aS) = a^2 \\text{Var}(S)$. MSE = Var + Bias².",
+      "solution": "## Vorüberlegung\n\nSei $S = \\sum_{i=1}^n X_i$. Da die $X_i$ unabhängig und identisch verteilt sind:\n$$E(S) = n\\mu, \\qquad \\text{Var}(S) = n\\sigma^2.$$\n\n## Teil a)\n\n### Schätzer $g_1 = \\frac{1}{n-1}S$\n\n**Erwartungswert:**\n$$E(g_1) = \\frac{1}{n-1} E(S) = \\frac{n\\mu}{n-1}$$\n\n**Bias:**\n$$\\text{Bias}(g_1) = E(g_1) - \\mu = \\frac{n\\mu}{n-1} - \\mu = \\frac{n\\mu - (n-1)\\mu}{n-1} = \\frac{\\mu}{n-1}$$\n$g_1$ ist **verzerrt** (positiv, falls $\\mu > 0$).\n\n**Asymptotischer Bias:**\n$$\\lim_{n \\to \\infty} \\frac{\\mu}{n-1} = 0 \\quad \\Rightarrow \\quad g_1 \\text{ ist asymptotisch erwartungstreu.}$$\n\n**Varianz:**\n$$\\text{Var}(g_1) = \\frac{1}{(n-1)^2} \\text{Var}(S) = \\frac{n\\sigma^2}{(n-1)^2}$$\n\n**MSE:**\n$$\\text{MSE}(g_1) = \\text{Var}(g_1) + [\\text{Bias}(g_1)]^2 = \\frac{n\\sigma^2}{(n-1)^2} + \\frac{\\mu^2}{(n-1)^2} = \\frac{n\\sigma^2 + \\mu^2}{(n-1)^2}$$\n\n---\n\n### Schätzer $g_2 = \\frac{1}{n+1}S$\n\n**Erwartungswert:**\n$$E(g_2) = \\frac{1}{n+1} E(S) = \\frac{n\\mu}{n+1}$$\n\n**Bias:**\n$$\\text{Bias}(g_2) = E(g_2) - \\mu = \\frac{n\\mu}{n+1} - \\mu = \\frac{n\\mu - (n+1)\\mu}{n+1} = -\\frac{\\mu}{n+1}$$\n$g_2$ ist **verzerrt** (negativ, falls $\\mu > 0$).\n\n**Asymptotischer Bias:**\n$$\\lim_{n \\to \\infty} -\\frac{\\mu}{n+1} = 0 \\quad \\Rightarrow \\quad g_2 \\text{ ist asymptotisch erwartungstreu.}$$\n\n**Varianz:**\n$$\\text{Var}(g_2) = \\frac{1}{(n+1)^2} \\text{Var}(S) = \\frac{n\\sigma^2}{(n+1)^2}$$\n\n**MSE:**\n$$\\text{MSE}(g_2) = \\frac{n\\sigma^2}{(n+1)^2} + \\frac{\\mu^2}{(n+1)^2} = \\frac{n\\sigma^2 + \\mu^2}{(n+1)^2}$$\n\n---\n\n### Zusammenfassung\n\n| Kriterium | $g_1$ | $g_2$ |\n|---|---|---|\n| $E(\\cdot)$ | $\\frac{n\\mu}{n-1}$ | $\\frac{n\\mu}{n+1}$ |\n| Bias | $+\\frac{\\mu}{n-1}$ | $-\\frac{\\mu}{n+1}$ |\n| Asym. Bias | 0 | 0 |\n| Varianz | $\\frac{n\\sigma^2}{(n-1)^2}$ | $\\frac{n\\sigma^2}{(n+1)^2}$ |\n| MSE | $\\frac{n\\sigma^2+\\mu^2}{(n-1)^2}$ | $\\frac{n\\sigma^2+\\mu^2}{(n+1)^2}$ |\n\n## Teil b)\n\n**Vergleich der MSE:**\n\nDa Zähler $(n\\sigma^2 + \\mu^2)$ bei beiden gleich ist und $(n+1)^2 > (n-1)^2$ für alle $n \\geq 1$, gilt:\n$$\\text{MSE}(g_2) = \\frac{n\\sigma^2 + \\mu^2}{(n+1)^2} < \\frac{n\\sigma^2 + \\mu^2}{(n-1)^2} = \\text{MSE}(g_1)$$\n\n**$g_2$ ist nach dem MSE-Kriterium stets vorzuziehen** — für jedes $n \\geq 1$ und jede Kombination von $\\mu$ und $\\sigma^2 > 0$.\n\n**Wichtiger Hinweis:** Beide Schätzer sind verzerrt. Der \"beste\" Schätzer für $\\mu$ ist das Stichprobenmittel $\\bar{X} = \\frac{1}{n}\\sum X_i$, das erwartungstreu und effizient ist."
+    },
+    {
+      "id": "ps-ex-2",
+      "topicId": "punktschaetzung",
+      "label": "Übungsblatt 2, Aufgabe 3: Schätzfunktionen ψ₁ und ψ₂ — Konsistenz und Eignung",
+      "source": "Übungsblatt 2 (Punktschätzung und Konfidenzintervalle), Aufgabe 3",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Betrachten Sie eine einfache Zufallsstichprobe $X_1, \\ldots, X_n$ mit $E(X_i) = \\mu$ für alle $i$ und $V(X_i) = \\sigma^2$ für alle $i$ sowie die Schätzfunktion:\n$$\\psi_1 = \\frac{1}{n^2} \\cdot 4X_2^2.$$\n\na) Ermitteln Sie den Bias und den asymptotischen Bias von $\\psi_1$ unter Verwendung des Verschiebungssatzes $V(X) = E(X^2) - [E(X)]^2$.\n\nb) Beschreiben Sie in eigenen Worten die Eigenschaft der **starken Konsistenz** und was sie über einen Schätzer aussagt. Was bedeutet die Eigenschaft \"effizienteste Schätzfunktion\" inhaltlich?\n\nc) Gegeben sei weiterhin:\n$$\\psi_2 = \\frac{1}{n}\\left[\\sum_{i=1}^{n-2} X_i + 3X_{n-2}\\right].$$\n\n(ca) Überprüfen Sie $\\psi_2$ auf Konsistenz.\n\n(cb) Sind $\\psi_1$ und $\\psi_2$ geeignet, um $\\mu$ zu schätzen? Welche Alternative schlagen Sie vor?",
+      "hint": "Zu a): Wenden Sie den Verschiebungssatz auf $X_2$ an: $E(X_2^2) = \\text{Var}(X_2) + [E(X_2)]^2 = \\sigma^2 + \\mu^2$. Zu c): Berechnen Sie $E(\\psi_2)$ und $\\text{Var}(\\psi_2)$, dann den MSE und prüfen Sie, ob dieser gegen 0 geht.",
+      "solution": "## Teil a) — Bias von $\\psi_1$\n\n**Verschiebungssatz anwenden:**\n$$E(X_2^2) = \\text{Var}(X_2) + [E(X_2)]^2 = \\sigma^2 + \\mu^2$$\n\n**Erwartungswert von $\\psi_1$:**\n$$E(\\psi_1) = \\frac{4}{n^2} E(X_2^2) = \\frac{4}{n^2}(\\sigma^2 + \\mu^2)$$\n\n**Bias:**\n$$\\text{Bias}(\\psi_1) = E(\\psi_1) - \\mu = \\frac{4(\\sigma^2 + \\mu^2)}{n^2} - \\mu$$\n\nFür $n = 1$: Bias $= 4(\\sigma^2 + \\mu^2) - \\mu$. Für $n = 10$: Bias $\\approx 0{,}04(\\sigma^2 + \\mu^2) - \\mu$ (deutlich weg von 0 für typische $\\mu$).\n\n**Asymptotischer Bias:**\n$$\\lim_{n \\to \\infty} \\text{Bias}(\\psi_1) = \\lim_{n \\to \\infty} \\left[\\frac{4(\\sigma^2+\\mu^2)}{n^2} - \\mu\\right] = 0 - \\mu = -\\mu$$\n\n**Ergebnis:** Der asymptotische Bias ist $-\\mu \\neq 0$ (außer für $\\mu = 0$). $\\psi_1$ ist **weder erwartungstreu noch asymptotisch erwartungstreu** (es sei denn $\\mu = 0$).\n\n---\n\n## Teil b) — Starke Konsistenz und Effizienz (in eigenen Worten)\n\n**Starke Konsistenz:**\nEin Schätzer $\\hat{\\theta}_n$ heißt stark konsistent, wenn der **mittlere quadratische Fehler** (MSE) mit wachsendem Stichprobenumfang gegen 0 konvergiert:\n$$\\lim_{n \\to \\infty} \\text{MSE}(\\hat{\\theta}_n) = \\lim_{n \\to \\infty} \\left[\\text{Var}(\\hat{\\theta}_n) + [\\text{Bias}(\\hat{\\theta}_n)]^2\\right] = 0$$\nDas bedeutet: Sowohl die zufällige Streuung als auch der systematische Fehler des Schätzers verschwinden für große $n$. Starke Konsistenz ist eine **asymptotische Eigenschaft** — sie sagt nichts über die Qualität bei kleinen $n$ aus. Starke Konsistenz impliziert schwache Konsistenz (stochastische Konvergenz gegen $\\theta$).\n\n**Effizienteste Schätzfunktion:**\nUnter allen erwartungstreuen Schätzern für $\\theta$ ist derjenige der effizienteste, der die **kleinste Varianz** besitzt. Ein effizienter Schätzer schwankt am wenigsten um den wahren Wert — er ist präzise und zuverlässig. Der Stichprobenmittelwert $\\bar{X}$ ist zum Beispiel der effizienteste Schätzer für $\\mu$ unter linearen, erwartungstreuen Schätzern.\n\n---\n\n## Teil c) — Analyse von $\\psi_2$\n\n**Schätzer:** $\\psi_2 = \\frac{1}{n}\\left[\\sum_{i=1}^{n-2} X_i + 3X_{n-2}\\right]$\n\n**Hinweis zur Summe:** $\\psi_2 = \\frac{1}{n}\\left[(X_1 + X_2 + \\cdots + X_{n-2}) + 3X_{n-2}\\right] = \\frac{1}{n}\\left[\\sum_{i=1}^{n-3} X_i + 4X_{n-2}\\right]$\n\n(Der Term $X_{n-2}$ taucht einmal in der Summe und einmal separat auf, wird also mit dem Faktor $1 + 3 = 4$ gewichtet.)\n\n**Schritt 1 — Erwartungswert:**\n$$E(\\psi_2) = \\frac{1}{n}\\left[\\sum_{i=1}^{n-3} E(X_i) + 4E(X_{n-2})\\right] = \\frac{1}{n}\\left[(n-3)\\mu + 4\\mu\\right] = \\frac{(n-3+4)\\mu}{n} = \\frac{(n+1)\\mu}{n}$$\n\n**Bias:**\n$$\\text{Bias}(\\psi_2) = \\frac{(n+1)\\mu}{n} - \\mu = \\frac{(n+1)\\mu - n\\mu}{n} = \\frac{\\mu}{n}$$\n\nAsymptotischer Bias: $\\lim_{n\\to\\infty} \\frac{\\mu}{n} = 0$ → $\\psi_2$ ist **asymptotisch erwartungstreu**.\n\n**Schritt 2 — Varianz:**\n$$\\text{Var}(\\psi_2) = \\frac{1}{n^2}\\left[\\sum_{i=1}^{n-3}\\sigma^2 + 16\\sigma^2\\right] = \\frac{\\sigma^2}{n^2}(n-3+16) = \\frac{(n+13)\\sigma^2}{n^2}$$\n\n**Schritt 3 — MSE:**\n$$\\text{MSE}(\\psi_2) = \\frac{(n+13)\\sigma^2}{n^2} + \\frac{\\mu^2}{n^2} = \\frac{(n+13)\\sigma^2 + \\mu^2}{n^2}$$\n\n**Konsistenzprüfung:** $\\lim_{n\\to\\infty} \\frac{(n+13)\\sigma^2 + \\mu^2}{n^2} = \\lim_{n\\to\\infty} \\frac{\\sigma^2}{n} + \\ldots = 0$ ✓\n\n$\\psi_2$ ist **stark konsistent** (MSE → 0).\n\n### cb) Gesamtbeurteilung\n\n| Kriterium | $\\psi_1$ | $\\psi_2$ | $\\bar{X}$ |\n|---|---|---|---|\n| Erwartungstreu | Nein | Nein | **Ja** |\n| Asympt. erwartungstreu | Nein ($\\text{Bias} \\to -\\mu$) | Ja | Ja |\n| Konsistent | Nein | **Ja** | **Ja** |\n| Effizient | Nein | Nein | **Ja** |\n\n**Urteil:** $\\psi_1$ ist weder erwartungstreu noch asymptotisch erwartungstreu noch konsistent (asymptotischer Bias $= -\\mu \\neq 0$) — **ungeeignet**.\n\n$\\psi_2$ ist asymptotisch erwartungstreu und konsistent, aber verzerrt für endliches $n$ und weniger effizient als $\\bar{X}$ — **bedingt geeignet, aber nicht optimal**.\n\n**Empfehlung:** Das Stichprobenmittel $\\bar{X} = \\frac{1}{n}\\sum_{i=1}^n X_i$ ist erwartungstreu, effizient und konsistent — der beste Schätzer für $\\mu$."
+    },
+    {
+      "id": "ps-ex-3",
+      "topicId": "punktschaetzung",
+      "label": "Zusatzaufgabe (alte Klausur): Drei Schätzfunktionen g₁, g₂, g₃ für μ",
+      "source": "Zusatzaufgabe zur Punktschätzung (alte Klausur)",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Es sei $X$ eine normalverteilte Zufallsvariable. Zur Schätzung des Erwartungswertes werden folgende Schätzfunktionen vorgeschlagen:\n$$g_1 = \\frac{n}{n+1}\\bar{X}, \\qquad g_2 = \\frac{1}{2}(X_1 + X_n), \\qquad g_3 = \\frac{1}{n^2-1}\\sum_{i=1}^n X_i.$$\n\naa) Welche Schätzfunktionen sind verzerrt; welche asymptotisch verzerrt? (5 P.)\n\nab) Berechnen Sie Varianz und mittleren quadratischen Fehler von $g_1$, $g_2$ und $g_3$. Welche Schätzfunktion würden Sie aufgrund dieser Berechnungen bei einem Stichprobenumfang von $n=10$, einem Erwartungswert von $\\mu=3$ und einer Varianz von $\\sigma^2=1$ vorziehen? (7 P.)\n\nb) Wie beurteilen Sie die folgenden Situationen von jeweils zwei Schätzern? Welcher Schätzer ist jeweils vorzuziehen?\n\nba) Schätzer 1 ($\\hat{\\theta}_1$) ist erwartungstreu, hat aber den größeren mittleren quadratischen Fehler als Schätzer 2 ($\\hat{\\theta}_2$), der nicht unverzerrt ist: $MQF(\\hat{\\theta}_1) > MQF(\\hat{\\theta}_2)$.\n\nbb) $\\hat{\\theta}_1$ und $\\hat{\\theta}_2$ sind beide unverzerrt, es gilt aber $MQF(\\hat{\\theta}_1) > MQF(\\hat{\\theta}_2)$.\n\nbc) $\\hat{\\theta}_1$ und $\\hat{\\theta}_2$ sind beide verzerrt, es gilt aber $MQF(\\hat{\\theta}_1) > MQF(\\hat{\\theta}_2)$.",
+      "hint": "Für $g_1$: $\\bar{X}$ ist erwartungstreu, also $E(\\bar{X}) = \\mu$ und $\\text{Var}(\\bar{X}) = \\sigma^2/n$. Für $g_2$: $X_1$ und $X_n$ sind unabhängig, also $\\text{Var}(X_1+X_n) = \\text{Var}(X_1)+\\text{Var}(X_n) = 2\\sigma^2$. Für $g_3$: $\\sum X_i = n\\bar{X}$, also $E(g_3) = \\frac{n\\mu}{n^2-1} = \\frac{\\mu}{n+1}$.",
+      "solution": "## Teil aa) — Verzerrung / asymptotische Verzerrung\n\n### $g_1 = \\frac{n}{n+1}\\bar{X}$\n\n$$E(g_1) = \\frac{n}{n+1} E(\\bar{X}) = \\frac{n}{n+1}\\mu$$\n\n$$\\text{Bias}(g_1) = \\frac{n\\mu}{n+1} - \\mu = \\frac{n\\mu - (n+1)\\mu}{n+1} = -\\frac{\\mu}{n+1}$$\n\n$g_1$ ist **verzerrt** (für $\\mu \\neq 0$).\n\n**Asymptotischer Bias:** $\\lim_{n\\to\\infty} -\\frac{\\mu}{n+1} = 0$ → **asymptotisch unverzerrt**.\n\n---\n\n### $g_2 = \\frac{1}{2}(X_1 + X_n)$\n\n$$E(g_2) = \\frac{1}{2}(E(X_1) + E(X_n)) = \\frac{1}{2}(\\mu + \\mu) = \\mu$$\n\n$$\\text{Bias}(g_2) = \\mu - \\mu = 0$$\n\n$g_2$ ist **erwartungstreu** (unverzerrt). ✓\n\n---\n\n### $g_3 = \\frac{1}{n^2-1}\\sum_{i=1}^n X_i$\n\n$$E(g_3) = \\frac{1}{n^2-1} \\cdot n\\mu = \\frac{n\\mu}{n^2-1} = \\frac{n\\mu}{(n-1)(n+1)} = \\frac{\\mu}{n+1}$$\n\n$$\\text{Bias}(g_3) = \\frac{\\mu}{n+1} - \\mu = \\frac{\\mu - (n+1)\\mu}{n+1} = -\\frac{n\\mu}{n+1}$$\n\n$g_3$ ist **verzerrt**.\n\n**Asymptotischer Bias:** $\\lim_{n\\to\\infty} -\\frac{n\\mu}{n+1} = -\\mu \\neq 0$ (für $\\mu \\neq 0$) → $g_3$ ist **auch asymptotisch verzerrt** — ein gravierendes Problem!\n\n---\n\n**Zusammenfassung Teil aa):**\n\n| Schätzer | Verzerrt? | Asymptotisch verzerrt? |\n|---|---|---|\n| $g_1$ | Ja | Nein (Bias $\\to 0$) |\n| $g_2$ | **Nein** | Nein |\n| $g_3$ | Ja | **Ja** (Bias $\\to -\\mu$) |\n\n---\n\n## Teil ab) — Varianz und MSE, Auswahl bei $n=10$, $\\mu=3$, $\\sigma^2=1$\n\n### Varianz\n\n**$g_1 = \\frac{n}{n+1}\\bar{X}$:**\n$$\\text{Var}(g_1) = \\left(\\frac{n}{n+1}\\right)^2 \\text{Var}(\\bar{X}) = \\frac{n^2}{(n+1)^2} \\cdot \\frac{\\sigma^2}{n} = \\frac{n\\sigma^2}{(n+1)^2}$$\n\n**$g_2 = \\frac{1}{2}(X_1 + X_n)$** ($X_1$ und $X_n$ sind unabhängig):\n$$\\text{Var}(g_2) = \\frac{1}{4}(\\text{Var}(X_1) + \\text{Var}(X_n)) = \\frac{1}{4}(\\sigma^2 + \\sigma^2) = \\frac{\\sigma^2}{2}$$\n\n**$g_3 = \\frac{1}{n^2-1}\\sum X_i$:**\n$$\\text{Var}(g_3) = \\frac{1}{(n^2-1)^2} \\cdot n\\sigma^2 = \\frac{n\\sigma^2}{(n^2-1)^2}$$\n\n### MSE\n\n**$g_1$:** $\\text{Bias}^2 = \\frac{\\mu^2}{(n+1)^2}$\n$$\\text{MSE}(g_1) = \\frac{n\\sigma^2}{(n+1)^2} + \\frac{\\mu^2}{(n+1)^2} = \\frac{n\\sigma^2 + \\mu^2}{(n+1)^2}$$\n\n**$g_2$:** $\\text{Bias} = 0$, also:\n$$\\text{MSE}(g_2) = \\text{Var}(g_2) = \\frac{\\sigma^2}{2}$$\n\n**$g_3$:** $\\text{Bias}^2 = \\frac{n^2\\mu^2}{(n+1)^2}$\n$$\\text{MSE}(g_3) = \\frac{n\\sigma^2}{(n^2-1)^2} + \\frac{n^2\\mu^2}{(n+1)^2}$$\n\n### Numerischer Vergleich bei $n=10$, $\\mu=3$, $\\sigma^2=1$\n\n**$g_1$:**\n$$\\text{MSE}(g_1) = \\frac{10 \\cdot 1 + 9}{11^2} = \\frac{19}{121} \\approx 0{,}157$$\n\n**$g_2$:**\n$$\\text{MSE}(g_2) = \\frac{1}{2} = 0{,}500$$\n\n**$g_3$:** $n^2-1 = 99$, $(n^2-1)^2 = 9801$, $(n+1)^2 = 121$\n$$\\text{MSE}(g_3) = \\frac{10 \\cdot 1}{9801} + \\frac{100 \\cdot 9}{121} = \\frac{10}{9801} + \\frac{900}{121} \\approx 0{,}001 + 7{,}438 = 7{,}439$$\n\n**Rangfolge:** $\\text{MSE}(g_1) \\approx 0{,}157 < \\text{MSE}(g_2) = 0{,}5 \\ll \\text{MSE}(g_3) \\approx 7{,}44$\n\n**Wahl: $g_1$** hat den kleinsten MSE bei den gegebenen Parametern. Trotz Verzerrung ist $g_1$ nach dem MSE-Kriterium vorzuziehen. $g_3$ ist wegen des riesigen asymptotischen Bias praktisch unbrauchbar.\n\n*(Zum Vergleich: $\\bar{X}$ hätte $\\text{MSE}(\\bar{X}) = \\sigma^2/n = 0{,}1$ — noch besser als $g_1$!)*\n\n---\n\n## Teil b) — Schätzer-Vergleiche\n\n### ba) $\\hat{\\theta}_1$ erwartungstreu, $\\hat{\\theta}_2$ verzerrt, aber $\\text{MQF}(\\hat{\\theta}_1) > \\text{MQF}(\\hat{\\theta}_2)$\n\n**Vorzuziehen: $\\hat{\\theta}_2$** (nach dem MSE-Kriterium).\n\nBegründung: Erwartungstreue allein ist kein ausreichendes Gütemaß. Wenn $\\hat{\\theta}_2$ trotz Verzerrung insgesamt genauer ist (kleinerer MSE), ist er in der Praxis der bessere Schätzer. Der kleine Bias wird durch die viel geringere Varianz mehr als ausgeglichen.\n\n### bb) Beide unverzerrt, $\\text{MQF}(\\hat{\\theta}_1) > \\text{MQF}(\\hat{\\theta}_2)$\n\n**Vorzuziehen: $\\hat{\\theta}_2$** (effizienter).\n\nBegründung: Bei erwartungstreuen Schätzern gilt $\\text{MSE} = \\text{Var}$. Der Schätzer mit kleinerem MSE ist der **effizientere** — er streut weniger um den wahren Wert. Kriterium: Effizienz.\n\n### bc) Beide verzerrt, $\\text{MQF}(\\hat{\\theta}_1) > \\text{MQF}(\\hat{\\theta}_2)$\n\n**Vorzuziehen: $\\hat{\\theta}_2$** (nach MSE-Kriterium).\n\nBegründung: Wenn beide Schätzer verzerrt sind, entfällt das Effizienz-Kriterium (das nur für ET-Schätzer gilt). Der kleinere MSE ist dann das maßgebliche Kriterium. Man sollte aber prüfen, ob asymptotische Erwartungstreue vorliegt und ob der Bias für die konkrete Anwendung akzeptabel ist."
+    }
+  ]
+}

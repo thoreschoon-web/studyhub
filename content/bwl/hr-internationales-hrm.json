@@ -1,0 +1,376 @@
+{
+  "id": "hr-internationales-hrm",
+  "subjectId": "bwl",
+  "title": "Internationales HRM",
+  "summary": "HRM im internationalen Kontext: kulturelle und institutionelle Besonderheiten, Stellenbesetzungsstrategien nach Perlmutter (EPRG), Kulturdimensionen nach Hofstede und Hall, Auslandsentsendungen und Repatriierung.",
+  "order": 18,
+  "estMinutes": 50,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "intro",
+      "heading": "Was ist internationales HRM – und warum ist es anders?",
+      "body": "Stell dir vor, du arbeitest für einen deutschen Autohersteller und sollst die Personalarbeit für Werke in Deutschland, China, Brasilien und den USA koordinieren. In jedem Land gelten andere Gesetze, andere Kulturen, andere Erwartungen an Führung und Vergütung. Genau das ist das Kernproblem des **internationalen Human Resource Management (IHRM)**.\n\n**Was ist IHRM?** IHRM umfasst alle Personalaktivitäten eines Unternehmens, das in mehreren Ländern tätig ist – also eines **multinationalen Unternehmens (MNU)**.\n\n**Worin unterscheidet es sich vom nationalen HRM?**\n- Mehr Komplexität durch verschiedene Rechtssysteme, Kulturen und Sprachen\n- Frage der **Standardisierung vs. lokalen Anpassung** von HR-Praktiken\n- Besondere Herausforderung: **Auslandsentsendungen** und die Rückkehr der Mitarbeitenden\n\n**Drei Typen von Mitarbeitenden** in einem MNU:\n- **PCNs** (*Parent Country Nationals*): Mitarbeitende aus dem Stammland (z. B. Deutsche im Ausland)\n- **HCNs** (*Host Country Nationals*): Einheimische im Gastland (z. B. Chinesen im chinesischen Werk)\n- **TCNs** (*Third Country Nationals*): Mitarbeitende aus einem dritten Land (z. B. ein Inder im brasilianischen Werk)",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-entsendungsrichtungen",
+          "title": "Entsendungsrichtungen in multinationalen Unternehmen",
+          "caption": "PCNs werden vom Stammhaus in Tochtergesellschaften entsendet. HCNs können ins Stammhaus kommen (Inpatriates). TCNs wechseln zwischen Tochtergesellschaften.",
+          "code": "graph TD\n  SH[Stammhaus\\nz.B. Deutschland]\n  TA[Tochter Land A\\nz.B. China]\n  TB[Tochter Land B\\nz.B. Brasilien]\n  SH -- PCNs --> TA\n  SH -- PCNs --> TB\n  TA -- HCNs als Inpatriates --> SH\n  TB -- HCNs als Inpatriates --> SH\n  TA -- TCNs --> TB"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Expatriates vs. Inpatriates",
+          "body": "**Expatriates** (kurz: Expats): Mitarbeitende, die temporär im Ausland leben und arbeiten – meist PCNs, die vom Stammhaus entsandt werden.\n\n**Inpatriates**: HCNs oder TCNs, die (meist temporär) ins Stammhaus entsandt werden – z. B. um die Konzernkultur kennenzulernen."
+        }
+      ]
+    },
+    {
+      "id": "kulturkontext",
+      "heading": "Kultureller Kontext: Hofstede und Hall",
+      "body": "Warum verhält sich ein Mitarbeiter in Japan ganz anders auf Kritik als ein Mitarbeiter in den USA? Kultur spielt eine entscheidende Rolle. Zwei wichtige Rahmenkonzepte helfen dabei, Kulturen zu verstehen und zu vergleichen.\n\n## Kulturdimensionen nach Geert Hofstede (2011)\n\nHofstede analysierte Daten von IBM-Mitarbeitenden aus über 50 Ländern und identifizierte **vier Kulturdimensionen**, auf denen sich Länder unterscheiden:\n\n**1. Machtdistanz** (*Power Distance*): Inwieweit akzeptieren die Menschen Ungleichheit bei Macht, Prestige und Wohlstand? → Hoher Wert = Hierarchien werden als normal empfunden (z. B. Russland: 93). Niedriger Wert = flache Strukturen bevorzugt (z. B. Österreich: 11).\n\n**2. Individualismus vs. Kollektivismus**: Definieren sich Menschen als Individuen oder als Teil einer Gruppe? → USA: 91 (stark individualistisch). Südkorea: 18 (stark kollektivistisch). Das beeinflusst z. B. ob Recruiting auf individuelle oder teambezogene Fähigkeiten setzt.\n\n**3. Maskulinität vs. Femininität**: Prägen traditionell maskuline Werte (Leistung, Wettbewerb, Erfolg) oder feminine Werte (Fürsorge, Kooperation, Lebensqualität) die Kultur? → Japan: 95 (sehr maskulin). Schweden (nicht in Tabelle): sehr feminin.\n\n**4. Unsicherheitsvermeidung** (*Uncertainty Avoidance*): Wie sehr fühlen sich Menschen durch Ungewissheit bedroht? → Hoher Wert = bevorzugen Regeln, klare Strukturen, fixe Vergütung (Portugal: 99). Niedriger Wert = akzeptieren Flexibilität und variable Vergütung besser (USA: 46).",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-hofstede-tabelle",
+          "title": "Hofstede-Werte im Ländervergleich (Quelle: Hofstede, 2011)",
+          "headers": ["Land", "Machtdistanz", "Individualismus", "Maskulinität", "Unsicherheitsvermeidung"],
+          "rows": [
+            ["UK", "35", "89", "66", "35"],
+            ["Japan", "54", "46", "95", "92"],
+            ["France", "68", "71", "43", "86"],
+            ["Germany", "35", "67", "66", "65"],
+            ["Spain", "57", "51", "42", "86"],
+            ["United States", "40", "91", "62", "46"],
+            ["Italy", "50", "76", "70", "75"],
+            ["Portugal", "63", "27", "31", "99"],
+            ["Russia", "93", "39", "36", "95"],
+            ["Austria", "11", "55", "79", "70"],
+            ["India", "77", "48", "56", "40"],
+            ["South Korea", "60", "18", "39", "85"],
+            ["United Arab Emirates", "90", "25", "50", "80"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: Kulturdimension und Vergütung",
+          "body": "Ein Land mit hoher Unsicherheitsvermeidung (z. B. Portugal: 99) bevorzugt **fixe Vergütung** – Mitarbeitende möchten wissen, was sie verdienen. Ein Land mit niedriger Unsicherheitsvermeidung (z. B. USA: 46) akzeptiert **variable, leistungsabhängige Vergütung** besser. Ein US-amerikanisches Bonussystem funktioniert in Portugal also unter Umständen schlechter."
+        },
+        {
+          "kind": "info",
+          "title": "Kulturdimensionen nach Edward T. Hall",
+          "body": "Hall (1976) beschreibt vier weitere Dimensionen für interkulturelle Kommunikation:\n\n1. **Kontextorientierung**: *High-context* Kulturen (z. B. Japan, China) kommunizieren indirekt – viel wird implizit, über Gestik und Kontext vermittelt. *Low-context* Kulturen (z. B. Deutschland, USA) sagen die Dinge direkt.\n2. **Raumorientierung**: Die akzeptierte persönliche Distanz (Privatsphäre) variiert stark zwischen Kulturen.\n3. **Informationsgeschwindigkeit**: Wie schnell fließen Informationen in einem Kommunikationsprozess (kodieren/dekodieren)?\n4. **Zeitorientierung**: *Monochrone* Kulturen (z. B. Deutschland) arbeiten Aufgaben nacheinander, sequenziell ab. *Polychrone* Kulturen (z. B. Lateinamerika) führen mehrere Aufgaben gleichzeitig durch."
+        }
+      ]
+    },
+    {
+      "id": "standardisierung",
+      "heading": "Standardisierung vs. lokale Anpassung",
+      "body": "Eine der grundlegendsten Fragen im IHRM: Sollen HR-Praktiken weltweit **einheitlich** sein (globale Standardisierung), oder sollen sie an das jeweilige Land **angepasst** werden (lokale Anpassung)?\n\n**Globale Standardisierung** bedeutet:\n- Gleiche HR-Prozesse, Richtlinien und Systeme für alle Standorte\n- Ausrichtung an der Strategie und Struktur des MNU\n- Vorteil: Konsistenz, Kontrolle, einfachere Koordination\n\n**Lokale Anpassung** bedeutet:\n- Berücksichtigung der kulturellen und institutionellen Umwelt des Gastlands\n- Anpassung z. B. an lokale Arbeitsgesetze, Gehaltsniveaus, Kulturerwartungen\n- Vorteil: bessere Akzeptanz vor Ort, weniger Reibungsverluste\n\nIn der Realität ist die Antwort meist **eine Balance** aus beidem.\n\n**Studie: Biemann, Mayrhofer & Koch-Bayram (2022)**\nDiese CRANET-Studie untersuchte 25.869 Organisationen aus 42 Ländern (1995–2015). Ergebnis:\n- Unternehmen zeigen **länderspezifische Muster** bei Personalauswahlpraktiken\n- **Keine weltweite Konvergenz** – HR-Praktiken werden nicht global gleicher\n- Unternehmen aus Ländern mit ähnlichen Kulturen und Institutionen nutzen ähnliche Praktiken\n\n**Fazit**: Trotz Globalisierung bleiben nationale Eigenheiten erhalten. Ein \"one size fits all\"-Ansatz funktioniert im IHRM nicht.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Praxisfall: Lokalisierung in China (Handelsblatt, 2024)",
+          "body": "Siemens Energy, BASF und andere deutsche Konzerne **lokalisieren** ihre Belegschaft in China: Sie schicken immer seltener deutsche Fachkräfte, sondern beschäftigen lokale chinesische Mitarbeitende. Vorteile: geringere Personalkosten, besseres Kundenverständnis. **Risiken der Lokalisierung**: Verlust von Kontrolle und Koordination, Gefahr einer rein nationalen statt globalen Denkweise, nachlassender Wissenstransfer aus der Zentrale."
+        }
+      ]
+    },
+    {
+      "id": "stellenbesetzung",
+      "heading": "Internationale Stellenbesetzungsstrategien nach Perlmutter",
+      "body": "Heenan und Perlmutter (1979) entwickelten ein Rahmenkonzept, das erklärt, wie ein MNU seine internationalen Stellen besetzt: das **EPRG-Modell** (auch: vier Orientierungen). Es beschreibt die grundlegende Einstellung (\"Gesinnung\") des Unternehmens gegenüber seinen ausländischen Einheiten.\n\nDie vier Orientierungen bestimmen, wer für welche Position eingesetzt wird – PCNs, HCNs oder TCNs.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-eprg",
+          "title": "Die vier Stellenbesetzungsstrategien nach Perlmutter (EPRG-Modell)",
+          "headers": ["Orientierung", "Kurzname", "Beschreibung", "Typische Besetzung", "Steuerung"],
+          "rows": [
+            ["Ethnozentrisch", "E", "Strategische Entscheidungen werden zentral in der Unternehmenszentrale getroffen. Tochtergesellschaften werden von der Zentrale gesteuert.", "PCNs für Schlüsselpositionen im Ausland", "Hoch zentralisiert"],
+            ["Polyzentrisch", "P", "Jede Tochtergesellschaft wird als nationale Einheit mit eigener Entscheidungskompetenz behandelt.", "HCNs für alle Positionen im Gastland", "Dezentral, lokal"],
+            ["Regiozentrisch", "R", "Regionale geografische Struktur. Pool regional einsetzbarer Manager mit Entscheidungskompetenzen für ihre Region.", "Manager innerhalb einer Region austauschbar", "Regional"],
+            ["Geozentrisch", "G", "Weltweit integrierte Unternehmensstrategie. Pool global einsetzbarer Manager ohne Berücksichtigung der Nationalität.", "Beste Person für die Stelle, egal welche Nationalität", "Global integriert"]
+          ]
+        },
+        {
+          "kind": "mermaid",
+          "id": "fig-eprg-einflussfaktoren",
+          "title": "Einflussfaktoren auf die Stellenbesetzungsentscheidung (Dowling, Festing & Engle 2008)",
+          "caption": "Die Wahl der Stellenbesetzungsstrategie wird von vier Faktorengruppen beeinflusst.",
+          "code": "graph TD\n  Kontext[Kontext\\n- Kultureller Kontext\\n- Institutioneller Kontext\\n- Verfügbarkeit lokaler AK\\n- Industriezweig] --> SB\n  Unternehmen[Unternehmen\\n- Strategie & Struktur\\n- Internationale Erfahrung\\n- Unternehmenskultur] --> SB\n  Lokal[Lokale Einheit\\n- Markteintrittsstrategie\\n- Kontrollnotwendigkeit\\n- Strategische Rolle] --> SB\n  IHRM[IHRM Praktiken\\n- Auswahl\\n- Training\\n- Vergütung] --> SB\n  SB((Stellenbesetzung\\nE / P / R / G))"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Vor- und Nachteile im Vergleich",
+          "body": "**PCNs** (ethnozentrisch): + Kontrolle, Wissenstransfer, internationale Karriereentwicklung für Talente. − Beförderungssperren für HCNs, Anpassungsprobleme, Gehaltsungleichheit, hohe Kosten.\n\n**HCNs** (polyzentrisch): + Keine Sprachbarriere, niedrigere Kosten, Kontinuität, Motivation lokaler MAs. − Risiko nationaler Denkweise, weniger globale Koordination.\n\n**TCNs** (regiozentrisch/geozentrisch): + Günstiger als PCNs, besseres Gastlandwissen als PCNs. − Nationale Konflikte möglich, Genehmigungsprobleme, evtl. kein Rückkehrwunsch."
+        }
+      ]
+    },
+    {
+      "id": "entsendung",
+      "heading": "Auslandsentsendung: Formen, Vergütung und Repatriierung",
+      "body": "## Formen des Auslandseinsatzes\n\nNicht jede Auslandsstation ist gleich. Man unterscheidet:\n\n**Standardentsendungen** (klassisch, mit Umzug ins Ausland):\n- **Kurzfristig**: bis 3 Monate\n- **Verlängert** (*extended*): bis 1 Jahr\n- **Langfristig**: bis zu 5 Jahren (typische Expat-Entsendung)\n\n**Nicht-Standard-Entsendungen** (neuere Formen):\n- **Pendler-Entsendungen**: MA pendelt wöchentlich zwischen Heimat- und Gastland\n- **Rotierende Entsendungen**: kurze Phasen im Gastland, dann zurück\n- **Vertraglich befristete Entsendungen** (*contractual*): befristeter Vertrag ohne Rückflugoption\n- **Virtuelle Entsendungen**: MA arbeitet für ausländische Einheit, aber ohne physischen Umzug (z. B. remote)\n\n## Vergütung von Expatriates (Entgeltpolitik)\n\nDie Vergütung von Expats muss mehrere Ziele gleichzeitig erfüllen (Festing et al. 2011):\n1. **Mobilitätsfunktion**: Anreiz zur Annahme einer Auslandsstelle schaffen\n2. **Transparenz und Gerechtigkeit**: Konsistente Behandlung aller Expats des MNU\n3. **Kosten-/Nutzen**: Balance aus Attraktivität und Kosteneffizienz\n4. **Integrationsfunktion**: Integration in die aufnehmende Gesellschaft über das Einkommen\n5. **Reintegrationsfunktion**: Reibungslose Rückkehr ins Gehaltssystem des Heimatlandes\n\n**Zwei Ansätze**:\n- **Heimatlandorientiertes System**: Vergütung basiert auf dem Gehaltsniveau im Stammland + Auslandszulagen → Expat behält seinen Lebensstandard aus dem Heimatland\n- **Gastlandorientiertes System**: Vergütung orientiert sich an lokalen Marktgehältern im Gastland\n- **Balanced-Sheet-Ansatz**: Mischform, die beide Systeme kombiniert und häufig praktisch angewendet wird\n\n## Repatriierung – die unterschätzte Herausforderung\n\n**Repatriierung** = der Prozess, den eine Mitarbeiterin oder ein Mitarbeiter durchläuft, wenn sie/er von einer Auslandstätigkeit ins Heimatland zurückkehrt.\n\nDiese Rückkehr ist für viele Expats eine große Enttäuschung – obwohl das Unternehmen die Entsendung als Karriereinvestition betrachtet, folgt danach oft Demotivation oder sogar Kündigung.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-repatriierung",
+          "title": "Repatriierungsprobleme nach Bereichen (Festing et al. 2011)",
+          "headers": ["Bereich", "Problem"],
+          "rows": [
+            ["Arbeitsaufgabe", "\"Aus den Augen – aus dem Sinn\": Keine herausfordernde, qualifikationsgerechte Position vakant"],
+            ["Karriere", "Position bei Rückkehr entspricht der vor der Ausreise – daheimgebliebene Kollegen haben inzwischen höhere Positionen erreicht"],
+            ["Erfahrungstransfer", "Das im Ausland gesammelte Wissen wird weder beachtet noch genutzt. Fachwissen kann veraltet sein."],
+            ["Persönlichkeitswandel", "Rückkehrer haben Werte, Gewohnheiten und Normen verinnerlicht, die nicht mehr zum Heimatland passen"],
+            ["Soziale Kontakte", "Beziehungen zu Freunden und Bekannten im Heimatland sind weniger intensiv. Auch die Partnerin/der Partner ist betroffen."]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Praxisfall \"Hin und weg\" (Tagesspiegel)",
+          "body": "Dirk Elwert (Name geändert) leitete sieben Jahre lang erfolgreich eine Division für einen Technologiekonzern in China. Bei seiner Rückkehr: Kein Schreibtisch war für ihn vorgesehen, geschweige denn ein Job. Von der vor der Abreise vereinbarten Beförderung wusste der neue Leiter seiner Abteilung nichts. Laut Ernst & Young wechseln **11% der Expats innerhalb von 2 Jahren** nach der Entsendung den Arbeitgeber. Nur ein Viertel kehrt mit Beförderung zurück. Ein Expat kostet das Unternehmen das **3- bis 6-fache** eines heimischen Mitarbeiters – mangelndes Repatriierungsmanagement ist also auch wirtschaftlich schädlich."
+        },
+        {
+          "kind": "tip",
+          "title": "Best Practice: Was gute Unternehmen anders machen",
+          "body": "Volkswagen spricht **vor der Ausreise** mit dem Expat über Karriereschritte, die im Ausland und später in der Zentrale möglich sind. VW gibt sogar eine **schriftliche Jobgarantie** und sorgt in Management-Planungsrunden dafür, dass Mitarbeitende im Ausland für Vakanzen daheim in Betracht gezogen werden. Interkulturelle Trainings + realistische Erwartungsgestaltung reduzieren Repatriierungsprobleme erheblich."
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung",
+      "heading": "Zusammenfassung und Klausur-Merksätze",
+      "body": "## Lessons Learned (Folie 194)\n\n1. **IHRM unterscheidet sich vom nationalen HRM**: Länderübergreifender Charakter – institutionelle und kulturelle Besonderheiten jedes Gastlands müssen berücksichtigt werden.\n\n2. **Grundfrage: Standardisierung vs. lokale Anpassung**: Es gibt keine universelle Antwort. Biemann et al. (2022) zeigen: Keine weltweite Konvergenz der HR-Praktiken – kulturelle und institutionelle Eigenheiten bleiben bestehen.\n\n3. **EPRG-Modell (Perlmutter 1979)** erklärt die Wahl der Stellenbesetzungsstrategie: ethno-, poly-, regio- oder geozentrisch – abhängig von Kontext, Unternehmen, lokaler Einheit und IHRM-Praktiken.\n\n4. **Hofstede (4 Dimensionen)**: Machtdistanz, Individualismus/Kollektivismus, Maskulinität/Femininität, Unsicherheitsvermeidung – diese Werte erklären, warum HR-Praktiken in verschiedenen Ländern unterschiedlich wirken.\n\n5. **Auslandsentsendung**: Teuer (3–6x Heimatkosten) und mit hohem Repatriierungsrisiko verbunden. Gutes Erwartungsmanagement und frühzeitige Karriereplanung sind entscheidend.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Klausur-Eselsbrücke: EPRG",
+          "body": "**E**thno = Zentrale regiert alles (PCNs)\n**P**oly = Jede Tochter ist ihr eigener Herr (HCNs)\n**R**egio = Regional denken und handeln\n**G**eo = Beste Person, egal woher (global)\n\nEin Merksatz: \"Erst Prägen Regionen, Global\"."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "hr-ihrm-fc-1",
+      "topicId": "hr-internationales-hrm",
+      "front": "Was sind PCNs, HCNs und TCNs?",
+      "back": "PCNs = Parent Country Nationals (aus dem Stammland des MNU). HCNs = Host Country Nationals (Einheimische im Gastland). TCNs = Third Country Nationals (aus einem dritten Land). Expatriates sind typischerweise PCNs, die temporär im Ausland arbeiten."
+    },
+    {
+      "id": "hr-ihrm-fc-2",
+      "topicId": "hr-internationales-hrm",
+      "front": "Was beschreibt das EPRG-Modell von Perlmutter (1979)?",
+      "back": "Das EPRG-Modell beschreibt vier internationale Stellenbesetzungsstrategien: Ethno-zentrisch (PCNs, Zentralsteuerung), Polyzentrisch (HCNs, dezentral), Regiozentrisch (regionale Manager), Geozentrisch (beste Person global, unabhängig von Nationalität)."
+    },
+    {
+      "id": "hr-ihrm-fc-3",
+      "topicId": "hr-internationales-hrm",
+      "front": "Nenne die vier Kulturdimensionen nach Hofstede.",
+      "back": "1. Machtdistanz (Akzeptanz von Ungleichheit). 2. Individualismus vs. Kollektivismus (Ich vs. Wir). 3. Maskulinität vs. Femininität (Leistung vs. Fürsorge). 4. Unsicherheitsvermeidung (Umgang mit Ungewissheit)."
+    },
+    {
+      "id": "hr-ihrm-fc-4",
+      "topicId": "hr-internationales-hrm",
+      "front": "Was ist Repatriierung und welche Problembereiche gibt es?",
+      "back": "Repatriierung = Rückkehrprozess eines Expats ins Heimatland. Problembereiche: Arbeitsaufgabe (keine passende Stelle), Karriere (Kollegen haben aufgeholt), Erfahrungstransfer (Wissen wird ignoriert), Persönlichkeitswandel (andere Werte), Soziale Kontakte (Beziehungen im Heimatland eingeschlafen)."
+    },
+    {
+      "id": "hr-ihrm-fc-5",
+      "topicId": "hr-internationales-hrm",
+      "front": "Was sind die fünf Ziele der Expatriate-Vergütung?",
+      "back": "1. Mobilitätsfunktion (Anreiz zur Entsendung). 2. Transparenz & Gerechtigkeit. 3. Kosten-/Nutzenaspekte. 4. Integrationsfunktion (in Gastland). 5. Reintegrationsfunktion (Rückkehr ins Heimatgehaltssystem)."
+    },
+    {
+      "id": "hr-ihrm-fc-6",
+      "topicId": "hr-internationales-hrm",
+      "front": "Was ist das zentrale Ergebnis der Studie von Biemann, Mayrhofer & Koch-Bayram (2022)?",
+      "back": "Die CRANET-Studie (25.869 Organisationen, 42 Länder, 1995–2015) zeigt: Es gibt keine weltweite Konvergenz der Personalauswahlpraktiken. Unternehmen zeigen länderspezifische Muster; ähnliche Kulturen und Institutionen führen zu ähnlichen HR-Praktiken."
+    },
+    {
+      "id": "hr-ihrm-fc-7",
+      "topicId": "hr-internationales-hrm",
+      "front": "Was ist der Unterschied zwischen monochroner und polychroner Zeitorientierung nach Hall?",
+      "back": "Monochron (z. B. Deutschland): Aufgaben werden nacheinander, sequenziell abgearbeitet. Polychron (z. B. Lateinamerika): Mehrere Aufgaben werden gleichzeitig / parallel bearbeitet. Führt im Arbeitsalltag zu unterschiedlichen Erwartungen an Planung und Verbindlichkeit."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "hr-ihrm-q1",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "leicht",
+      "prompt": "Ein deutsches Unternehmen entsendet einen deutschen Ingenieur in sein Werk in Indien. Welchem Mitarbeitertyp gehört er an?",
+      "options": ["HCN (Host Country National)", "PCN (Parent Country National)", "TCN (Third Country National)", "Inpatriate"],
+      "correct": [1],
+      "explanation": "Ein PCN (Parent Country National) ist ein Mitarbeiter aus dem Stammland des MNU. Da das Unternehmen deutsch ist und der Ingenieur ebenfalls Deutscher ist, ist er ein PCN."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-ihrm-q2",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "leicht",
+      "prompt": "Bei welcher internationalen Stellenbesetzungsstrategie werden Tochtergesellschaften von einheimischen Kräften (HCNs) geleitet und als selbstständige nationale Einheiten behandelt?",
+      "options": ["Ethnozentrisch", "Polyzentrisch", "Regiozentrisch", "Geozentrisch"],
+      "correct": [1],
+      "explanation": "Polyzentrisch: Die Unternehmenszentrale behandelt jede Tochtergesellschaft als nationale Einheit mit Entscheidungskompetenz. Tochtergesellschaften werden von HCNs gesteuert."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-ihrm-q3",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Aussagen über die geozentrische Orientierung sind korrekt? (Mehrfachauswahl möglich)",
+      "options": ["Die beste Person für eine Stelle wird unabhängig von ihrer Nationalität ausgewählt.", "Es wird ein globaler Pool einsetzbarer Manager aufgebaut.", "Tochtergesellschaften werden ausschließlich von PCNs geleitet.", "Es handelt sich um eine weltweit integrierte Unternehmensstrategie."],
+      "correct": [0, 1, 3],
+      "multiple": true,
+      "explanation": "Geozentrisch bedeutet: beste Person weltweit, egal welche Nationalität (kein PCN-Zwang), globaler Managerpool, weltweit integrierte Strategie. Aussage 3 beschreibt die ethnozentrische Orientierung."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hr-ihrm-q4",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "leicht",
+      "prompt": "Ein hoher Wert bei Hofstedes Dimension 'Unsicherheitsvermeidung' bedeutet, dass Mitarbeitende eher variable, leistungsabhängige Vergütung bevorzugen.",
+      "answer": false,
+      "explanation": "Falsch. Ein hoher Wert bei Unsicherheitsvermeidung bedeutet, dass Mitarbeitende Ungewissheit als bedrohlich empfinden und daher eher FIXE Vergütung bevorzugen. Variable Vergütung ist mit Unsicherheit verbunden und wird in Hochvermeidungs-Kulturen weniger akzeptiert."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hr-ihrm-q5",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "mittel",
+      "prompt": "Die Studie von Biemann, Mayrhofer & Koch-Bayram (2022) belegt, dass sich HR-Praktiken weltweit zunehmend angleichen (globale Konvergenz).",
+      "answer": false,
+      "explanation": "Falsch. Die CRANET-Studie findet KEINE weltweite Konvergenz. Unternehmen zeigen länderspezifische Muster; kulturelle und institutionelle Eigenheiten bleiben erhalten. Eine globale Standardisierung der HR-Praktiken findet nicht statt."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-ihrm-q6",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "mittel",
+      "prompt": "Welche Hofstede-Dimension erklärt am besten, warum in Japan (Wert: 92) fixe Vergütung bevorzugt wird, während in den USA (Wert: 46) variable Vergütung verbreiteter ist?",
+      "options": ["Machtdistanz", "Individualismus vs. Kollektivismus", "Maskulinität vs. Femininität", "Unsicherheitsvermeidung"],
+      "correct": [3],
+      "explanation": "Unsicherheitsvermeidung: Japan hat einen sehr hohen Wert (92) – Mitarbeitende vermeiden Ungewissheit und bevorzugen sichere, fixe Vergütung. Die USA haben einen niedrigen Wert (46) und akzeptieren die Ungewissheit variabler Vergütung besser."
+    },
+    {
+      "kind": "freetext",
+      "id": "hr-ihrm-q7",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "schwer",
+      "prompt": "Siemens Energy beschäftigt in China zunehmend lokale chinesische Kräfte statt deutsche Expats. Welche Risiken sind mit dieser Lokalisierungsstrategie verbunden? Nennen Sie mindestens drei.",
+      "sampleAnswer": "1. Kontrollverlust: Die organisationale Kontrolle und Koordination zwischen Zentrale und Tochtergesellschaft wird riskanter, da lokale Manager andere Prioritäten haben können. 2. Gefahr nationaler statt globaler Denkweise: HCNs denken möglicherweise stärker national und weniger im Sinne der globalen Unternehmensstrategie. 3. Wissenstransfer: Ohne PCNs wird der Transfer von Unternehmenswissen, -werten und -praktiken aus der Zentrale erschwert. 4. Image: Wenn PCNs fehlen, kann ein unangemessenes Image des Headquarters im Gastland entstehen.",
+      "keywords": ["kontrolle", "koordination", "national", "global", "wissenstransfer", "image"],
+      "explanation": "Die Vorlesungsfolien 186/187 nennen als Nachteile von HCNs: organisationale Kontrolle wird risikobehaftet, Gefahr nationaler statt globaler Denkweise. Aus dem Handelsblatt-Artikel: weniger Kontrollmöglichkeiten, aber auch politische Risiken und mögliche Abhängigkeit vom chinesischen Arbeitsmarkt."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-ihrm-q8",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "mittel",
+      "prompt": "Eine Mitarbeiterin kehrt nach 4 Jahren Auslandsentsendung zurück. Sie stellt fest, dass ihre früheren Kollegen inzwischen höhere Positionen innehaben, und bekommt dieselbe Stelle wie vor der Abreise. Welches Repatriierungsproblem wird hier beschrieben?",
+      "options": ["Persönlichkeitswandel", "Erfahrungstransfer", "Karriere", "Soziale Kontakte"],
+      "correct": [2],
+      "explanation": "Der Karriere-Problembereich: Die Rückkehrerin erhält eine Position, die in der Hierarchie der Position vor der Ausreise äquivalent ist, während daheimgebliebene Kollegen bereits höhere Positionen erreicht haben. Das führt zu Frustration und ist ein häufiger Auslöser für Kündigung nach der Rückkehr."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hr-ihrm-q9",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "leicht",
+      "prompt": "Beim Balanced-Sheet-Ansatz der Expatriate-Vergütung wird das Gehalt ausschließlich am Gehaltsniveau im Gastland ausgerichtet.",
+      "answer": false,
+      "explanation": "Falsch. Der Balanced-Sheet-Ansatz ist eine Mischform, die heimatland- und gastlandorientierte Vergütung kombiniert. Er stellt sicher, dass der Expat weder gegenüber Kollegen im Heimatland noch gegenüber Kolleginnen im Gastland deutlich besser- oder schlechtergestellt wird."
+    },
+    {
+      "kind": "mc",
+      "id": "hr-ihrm-q10",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "schwer",
+      "prompt": "Ein MNU baut einen Managerpool aus Fachkräften verschiedener Nationalitäten auf, der flexibel in verschiedenen Regionen eingesetzt werden kann, und strukturiert seine HR-Entscheidungen entlang geografischer Regionen (Europa, Asien, Amerika). Welche Orientierung trifft am ehesten zu?",
+      "options": ["Ethnozentrisch", "Polyzentrisch", "Regiozentrisch", "Geozentrisch"],
+      "correct": [2],
+      "explanation": "Regiozentrisch: Dieser Ansatz spiegelt eine regionale geografische Struktur wider. Ein Pool regional einsetzbarer Manager verfügt über Entscheidungskompetenzen für ihre Region. Im Gegensatz zur geozentrischen Orientierung bleibt die Mobilität auf Regionen begrenzt, nicht global."
+    },
+    {
+      "kind": "freetext",
+      "id": "hr-ihrm-q11",
+      "topicId": "hr-internationales-hrm",
+      "difficulty": "mittel",
+      "prompt": "Erklären Sie in eigenen Worten, warum die Kulturdimension 'Individualismus vs. Kollektivismus' (Hofstede) relevant für die Gestaltung von Personalauswahlpraktiken ist.",
+      "sampleAnswer": "In individualistischen Kulturen (z. B. USA, Wert 91) zählt die individuelle Leistung des Bewerbers – Interviews fragen nach persönlichen Stärken, Einzelleistungen und Karrierezielen. In kollektivistischen Kulturen (z. B. Südkorea, Wert 18) sind teambezogene Fähigkeiten, Gruppenharmonie und die Einbettung in soziale Netzwerke wichtiger. Ein US-amerikanisches Auswahlinterview, das auf individuelle Eigeninitiative setzt, kann in einer kollektivistischen Kultur kulturell unpassend oder sogar abschreckend wirken.",
+      "keywords": ["individuell", "kollektiv", "team", "leistung", "auswahl", "kultur"],
+      "explanation": "Festing et al. (2011): In Kulturen mit hohem Kollektivismus sind teambezogene Fähigkeiten im Recruiting wichtiger. In individualistischen Kulturen steht individuelle Leistung im Vordergrund."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hr-ihrm-ex-1",
+      "topicId": "hr-internationales-hrm",
+      "label": "V11 PINGO – HR-Praktiken in multinationalen Unternehmen",
+      "source": "Vorlesung Personal SoSe 2026, Folie 182 (PINGO #946638)",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Sie sind für die Personalpolitik eines multinationalen Unternehmens verantwortlich. Das Unternehmen hat Tochtergesellschaften in 15 Ländern mit sehr unterschiedlichen kulturellen und institutionellen Rahmenbedingungen. Sie müssen entscheiden:\n\na) **Globale Standardisierung**: Einheitliche HR-Praktiken weltweit, ausgerichtet an Strategie und Struktur des MNU.\nb) **Lokale Anpassung**: HR-Praktiken werden an die kulturelle und institutionelle Umwelt jedes Landes angepasst.\n\nWelche Option würden Sie wählen und warum? Welche Faktoren beeinflussen Ihre Entscheidung?",
+      "hint": "Denken Sie an die Studie von Biemann et al. (2022) und die Einflussfaktoren auf Stellenbesetzungsentscheidungen. Es gibt keine eindeutig richtige Antwort – die Begründung zählt!",
+      "solution": "**Antwort: Eine Balance aus beidem ist in der Regel optimal.**\n\n**Argumente für globale Standardisierung:**\n- Einheitliche HR-Prozesse vereinfachen Koordination und Kontrolle\n- Konsistente Unternehmenskultur weltweit\n- Leichtere Vergleichbarkeit von Mitarbeitenden für globale Karriereplanung\n- Kosteneffizienz durch skalierbare Systeme\n\n**Argumente für lokale Anpassung:**\n- Kulturdimensionen nach Hofstede: Was in Deutschland funktioniert (z. B. variable Vergütung, Wert Unsicherheitsvermeidung: 65) wirkt in Portugal (Wert: 99) kontraproduktiv\n- Institutioneller Kontext: Unterschiedliche Arbeitsgesetze, Mindestlöhne, Tarifverträge erzwingen Anpassung\n- Biemann et al. (2022): Keine weltweite Konvergenz – lokale Muster bleiben bestehen; standardisierte Praktiken stoßen auf Widerstand\n- Markteintrittsstrategie: Ein neuer Markt erfordert oft lokale Glaubwürdigkeit\n\n**Fazit / Transferleistung:**\nDie Entscheidung hängt von der Strategie und Struktur des MNU, dem kulturellen und institutionellen Kontext des Gastlands, der Markteintritts-strategie der lokalen Einheit und der Kontrollnotwendigkeit ab (Einflussfaktoren nach Dowling, Festing & Engle 2008). Für Kernprozesse (z. B. Performance-Management-Philosophie) kann Standardisierung sinnvoll sein; für operative HR-Praktiken (Vergütungsstruktur, Rekrutierungskanäle) ist lokale Anpassung oft besser."
+    },
+    {
+      "id": "hr-ihrm-ex-2",
+      "topicId": "hr-internationales-hrm",
+      "label": "V11 Diskussion – Welche Besonderheiten hat internationales HRM?",
+      "source": "Vorlesung Personal SoSe 2026, Folie 178 (Diskussionsfrage)",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "In der Vorlesung wird gezeigt, dass Entsendungsrichtungen in multinationalen Unternehmen komplex sind (PCNs, HCNs, TCNs).\n\n**Diskussionsfrage:** Welche besonderen Herausforderungen unterscheiden das internationale HRM vom nationalen HRM? Nennen und erläutern Sie mindestens vier Besonderheiten.",
+      "hint": "Denken Sie an: kulturelle Unterschiede, rechtliche Rahmenbedingungen, Personaltypen (PCN/HCN/TCN), Entsendungen, Standardisierungs-Dilemma.",
+      "solution": "**Besonderheiten des internationalen HRM gegenüber dem nationalen HRM:**\n\n**1. Kulturelle und institutionelle Vielfalt**\nIn verschiedenen Ländern gelten unterschiedliche Kulturnormen (Hofstede), Kommunikationsstile (Hall) und rechtliche Rahmenbedingungen (Arbeitsrecht, Tarifverträge). Ein HR-System, das in Deutschland funktioniert, muss in Japan oder Brasilien nicht funktionieren.\n\n**2. Mehr Mitarbeitertypen zu managen**\nIm nationalen HRM gibt es nur eine Gruppe. International muss man PCNs, HCNs und TCNs koordinieren, die unterschiedliche Erwartungen, Rechte und Vergütungsansprüche haben.\n\n**3. Auslandsentsendungen als eigener HR-Bereich**\nKomplexe Entsendungsprozesse: Visafragen, interkulturelle Vorbereitung, Sondergehälter, Wohnungszulage, Schulen für Kinder, Karriereplanung nach Rückkehr (Repatriierung) – all das existiert im nationalen HRM nicht.\n\n**4. Standardisierungsdilemma**\nIm nationalen HRM gibt es einen einheitlichen Kontext. International muss stets entschieden werden: Welche HR-Praktiken werden global standardisiert, welche werden lokal angepasst?\n\n**5. Höheres Koordinationsaufwand**\nVerschiedene Zeitzonen, Sprachen, rechtliche Anforderungen und HR-Systeme müssen synchronisiert werden – deutlich komplexer als in einem nationalen Unternehmen."
+    },
+    {
+      "id": "hr-ihrm-ex-3",
+      "topicId": "hr-internationales-hrm",
+      "label": "V11 Diskussion – Risiken der Lokalisierung in China",
+      "source": "Vorlesung Personal SoSe 2026, Folie 185 / Handelsblatt-Artikel (Benninghoff & Heide, 12.06.2024)",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "**Fallbeschreibung:**\nSiemens Energy in China tut es. BASF in China tut es. Andere Unternehmen in China tun es auch: Deutsche Konzerne und Mittelständler \"lokalisieren\" ihre Belegschaften. Das heißt, sie schicken immer seltener Fachkräfte aus dem Heimatmarkt in die Volksrepublik und beschäftigen stattdessen Chinesen – in der Produktion, in der Verwaltung, im Management. Sogar Schlüsselpositionen in den Chefetagen werden zunehmend lokal besetzt. Die Lokalisierung hat aus unternehmerischer Sicht viele Vorteile: Die Personalkosten sind geringer, die Bedürfnisse der chinesischen Kunden werden besser verstanden.\n\n**Frage:** Welche Risiken sind mit dieser Lokalisierungsstrategie verbunden? Analysieren Sie die Situation mithilfe der Konzepte aus der Vorlesung (PCN/HCN, EPRG-Modell, Vor-/Nachteile HCNs).",
+      "hint": "Nutzen Sie die Vor-/Nachteile-Tabelle von PCNs vs. HCNs (Folien 186/187). Denken Sie auch strategisch: Wissenstransfer, Kontrolle, globale Denkweise.",
+      "solution": "**Analyse der Risiken der Lokalisierungsstrategie in China:**\n\n**Einordnung:** Die Lokalisierung entspricht einer Bewegung hin zur **polyzentrischen Orientierung** – die Tochtergesellschaft in China wird als eigenständige nationale Einheit behandelt und mit HCNs (chinesischen Mitarbeitenden) besetzt.\n\n**Vorteile (wie im Fall beschrieben):**\n- Geringere Personalkosten (HCNs günstiger als PCNs inkl. Expat-Zulagen)\n- Aufhebung sprachlicher und kultureller Grenzen\n- Besseres Verständnis des chinesischen Markts und der Kundenbedürfnisse\n- Keine Visa-/Arbeitserlaubnis-Probleme\n\n**Risiken (Nachteile von HCNs laut Vorlesung):**\n\n1. **Verlust organisationaler Kontrolle und Koordination** (Folie 187): Ohne PCNs in Führungspositionen fällt ein wichtiger Kontrollmechanismus weg. Die Zentrale hat weniger direkten Einfluss auf strategische Entscheidungen vor Ort.\n\n2. **Gefahr nationaler statt globaler Denkweise** (Folie 187): HCNs optimieren möglicherweise für den chinesischen Markt, nicht für die globale Unternehmensstrategie. Langfristig können Zielkonflikte entstehen.\n\n3. **Wissenstransfer wird erschwert**: PCNs transportieren Unternehmenskultur, -know-how und -werte aus der Zentrale. Ohne PCNs ist dieser Transfer schwieriger – besonders relevant für Technologieunternehmen wie Siemens Energy.\n\n4. **Politische Risiken**: In China kann das Vertrauen der Regierung auf lokale Manager begünstigt werden – aber geopolitische Spannungen (z. B. Taiwan-Konflikt) können lokale Manager in Loyalitätskonflikte bringen.\n\n5. **Keine internationale Erfahrung für vielversprechende Heimatland-Talente**: PCN-Entsendungen dienen auch der Karriereentwicklung eigener Führungskräfte. Diese Möglichkeit entfällt bei vollständiger Lokalisierung.\n\n**Fazit / Transfer:** Die optimale Strategie ist eine **Balance**: Kernpositionen (z. B. CFO, Technologieleitung) könnten weiterhin mit PCNs oder TCNs besetzt werden (Kontrolle + Wissenstransfer), während operative Positionen mit HCNs besetzt werden (Kosten + Marktkenntnisse). Dies entspricht eher einer **regio- oder geozentrischen** als einer rein polyzentrischen Strategie."
+    },
+    {
+      "id": "hr-ihrm-ex-4",
+      "topicId": "hr-internationales-hrm",
+      "label": "V13 Artikel-Diskussion – Probleme der Entsendung (\"Hin und weg\")",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Tagesspiegel-Artikel (tagesspiegel.de/wirtschaft/hin-und-weg)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**Artikelhintergrund:**\nDer Tagesspiegel-Artikel \"Hin und weg\" schildert, wie Auslandseinsätze von vielen Mitarbeitenden nicht mehr als sinnvoller Karrierebaustein, sondern als Risiko wahrgenommen werden. Dirk Elwert (Name geändert) leitete sieben Jahre lang erfolgreich eine Division in China. Bei seiner Rückkehr war kein Schreibtisch für ihn vorgesehen, geschweige denn ein Job. Laut Ernst & Young wechseln 11% der Expats innerhalb von 2 Jahren nach Ende der Entsendung den Arbeitgeber; rund ein Drittel der wertvollen Know-how-Träger ist danach unzufrieden. Ein Entsandter kostet das Unternehmen das 3- bis 6-fache eines heimischen Mitarbeiters.\n\n**Frage:** Welche Probleme der Auslandsentsendung werden in dem Artikel angesprochen? Ordnen Sie diese den fünf Repatriierungsproblemfeldern aus der Vorlesung zu.",
+      "hint": "Die fünf Problembereiche der Repatriierung (Folie 193): Arbeitsaufgabe, Karriere, Erfahrungstransfer, Persönlichkeitswandel, Soziale Kontakte.",
+      "solution": "**Analyse der Entsendungsprobleme aus dem Artikel \"Hin und weg\":**\n\n**1. Arbeitsaufgabe** (\"Aus den Augen – aus dem Sinn\"):\nDirk Elwert hatte bei Rückkehr keinen Schreibtisch und keinen Job. Der neue Leiter seiner Abteilung wusste nichts von der vereinbarten Beförderung. → Problem: Keine qualifikationsgerechte Position vakant bei Rückkehr.\n\n**2. Karriere:**\nViele Expats erhalten bei Rückkehr lediglich eine Position, die der vor der Ausreise äquivalent ist – Kollegen haben in der Zwischenzeit aufgeholt oder sie überholt. Der Artikel beschreibt, dass \"etliche Rückkehrer statt des erwarteten Karrieresprungs das Ende des Aufstiegs im eigenen Haus\" erleben.\n\n**3. Erfahrungstransfer:**\nDas wertvolle Know-how, das Expats im Ausland erwerben, wird häufig vom Unternehmen nicht genutzt. Der Artikel: Die Firmen \"legen zu wenig Wert auf die persönliche Betreuung\" und das \"Prinzip Beckenbauer\" (\"Schau'n mer mal\") herrscht vor.\n\n**4. Persönlichkeitswandel** (implizit):\nExpats berichten von zu großen kulturellen Unterschieden und Belastungen des Alltags – sie haben sich verändert, kehren aber in eine unveranderte Heimatorganisation zurück.\n\n**5. Soziale Kontakte:**\nFamiliäre Belastungen werden erwähnt: Viele Expats nehmen für die Auslandsstation private große Opfer auf sich (Partner, Schule der Kinder). Bei Rückkehr sind soziale Netze in der Heimat geschrumpft.\n\n**Wirtschaftliche Konsequenz:** 11% Arbeitgeberwechsel innerhalb von 2 Jahren nach Entsendung, Kosten von 3–6x Heimatkosten – Unternehmen verschwenden Ihre Investition durch schlechtes Repatriierungsmanagement.\n\n**Best Practice (laut Artikel):** VW spricht vor der Ausreise mit Expats über Karriereperspektiven und gibt schriftliche Jobgarantien. Das reduziert Enttäuschungen erheblich."
+    },
+    {
+      "id": "hr-ihrm-ex-5",
+      "topicId": "hr-internationales-hrm",
+      "label": "V13 Studie – Globale Standardisierung vs. Lokale Anpassung (Biemann et al. 2022)",
+      "source": "Personal_Artikel_SoSe_2026.pdf / Vorlesung Folie 183",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Die Studie von Biemann, Mayrhofer & Koch-Bayram (2022) untersucht die Frage, ob sich HR-Praktiken in verschiedenen Ländern über die Zeit angleichen (Konvergenz).\n\n**Studiendesign:** CRANET-Datensatz, 25.869 Organisationen aus 42 Ländern, Beobachtungszeitraum 1995–2015.\n\n**Aufgabe:** \n1. Nennen Sie die zentrale Forschungsfrage und die wichtigsten Ergebnisse der Studie.\n2. Welche Bedeutung haben diese Ergebnisse für die Frage der globalen Standardisierung vs. lokalen Anpassung von HR-Praktiken in MNU?",
+      "solution": "**1. Forschungsfrage und Ergebnisse:**\n\nForschungsfrage: \"Gleichen sich HR-Praktiken in unterschiedlichen Ländern über die Zeit an?\" (d. h. gibt es eine weltweite Konvergenz?)\n\nZentrale Ergebnisse:\n- **Keine weltweite Konvergenz** der Personalauswahlpraktiken feststellbar – trotz 20 Jahren Globalisierung (1995–2015)\n- Unternehmen zeigen **länderspezifische Muster** in der Nutzung von Auswahlpraktiken\n- Unternehmen aus Ländern mit **ähnlichen kulturellen Werten und institutionellen Rahmenbedingungen** nutzen ähnliche Auswahlpraktiken → Kulturcluster erklären Ähnlichkeiten besser als globale Angleichung\n\n**2. Bedeutung für Standardisierung vs. lokale Anpassung:**\n\nDie Studie liefert empirische Evidenz **gegen** eine vollständige globale Standardisierung von HR-Praktiken:\n\n- Wenn HR-Praktiken sich trotz 20 Jahren Globalisierung nicht angleichen, liegt das an tief verwurzelten institutionellen und kulturellen Unterschieden (vgl. Hofstede, Hall)\n- MNU können also nicht einfach \"eine globale HR-Praxis\" einführen und erwarten, dass sie überall gleich wirkt\n- Stattdessen muss für jede HR-Praktik geprüft werden: In welchem kulturellen/institutionellen Cluster befindet sich das Gastland? Welche Anpassungen sind nötig?\n- Die Studie unterstützt das Argument für **lokale Anpassung** – zumindest in Bereichen wie Personalauswahl, die stark kulturell geprägt sind\n- Gleichzeitig können strategische Kernelemente (z. B. Grundphilosophie des Performance Managements) standardisiert werden, wenn dies kulturell kommuniziert wird"
+    }
+  ]
+}

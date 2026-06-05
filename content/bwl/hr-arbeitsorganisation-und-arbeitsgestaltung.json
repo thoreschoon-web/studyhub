@@ -1,0 +1,379 @@
+{
+  "id": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+  "subjectId": "bwl",
+  "title": "Arbeitsorganisation und Arbeitsgestaltung",
+  "summary": "Wie werden Arbeitsplätze und Aufgaben sinnvoll gestaltet? Von Taylors wissenschaftlicher Betriebsführung über Human Relations und motivationsorientierte Konzepte (Job Enlargement, Enrichment, Rotation, Job Characteristics Model nach Hackman & Oldham) bis zu flexiblen Modellen der New Work — anfängerfreundlich erklärt.",
+  "order": 10,
+  "group": "Personal",
+  "estMinutes": 45,
+  "sections": [
+    {
+      "id": "was-ist-arbeitsorganisation",
+      "heading": "Was ist Arbeitsorganisation — und warum ist sie wichtig?",
+      "body": "**Stell dir vor, du eröffnest eine Bäckerei.** Du musst entscheiden: Macht jeder Mitarbeitende alles (Teig kneten, formen, backen, verkaufen)? Oder spezialisiert sich jeder auf eine Aufgabe? Diese Frage ist **Arbeitsorganisation**: die bewusste Gestaltung von Aufgaben, Abläufen und Stellen im Unternehmen.\n\n**Arbeitsorganisation** (englisch: *Job Design*) umfasst:\n- Welche Aufgaben gehören zu einer Stelle?\n- Wie viel Entscheidungsfreiheit hat die Person?\n- Wie abwechslungsreich ist die Arbeit?\n- Wie stark ist die Arbeit kontrolliert?\n\n**Warum ist das wichtig?** Die Art, wie Arbeit gestaltet ist, beeinflusst direkt:\n1. Die **Motivation** der Mitarbeitenden (macht die Arbeit Spaß?)\n2. Die **Produktivität** (wird effizient gearbeitet?)\n3. Die **Innovation** (entstehen neue Ideen?)\n4. Die **Gesundheit** (sind Menschen gestresst oder zufrieden?)\n\nEin Beispiel aus der Praxis: 3M erlaubt seinen Entwicklern, 15 % ihrer Arbeitszeit für eigene Projekte zu nutzen. Google hatte eine '20-Prozent-Zeit'. Viele wichtige Innovationen (Post-it-Zettel, Google Maps) entstanden so — durch bewusst gestaltete Freiräume.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Job Design",
+          "body": "**Job Design** (= Arbeitsgestaltung) bezeichnet alle Entscheidungen darüber, welche Aufgaben, Verantwortlichkeiten und Befugnisse einer Stelle zugeordnet werden. Ziel ist es, sowohl Unternehmensleistung als auch Mitarbeiterzufriedenheit zu fördern."
+        },
+        {
+          "kind": "info",
+          "title": "Job Analysis: Erst verstehen, dann gestalten",
+          "body": "Bevor man eine Stelle gestaltet, muss man sie **analysieren**: Was genau wird dort gemacht (*Job Analysis*)? Das Ergebnis ist eine **Stellenbeschreibung** (*Job Description*: Aufgaben, Verantwortlichkeiten) und ein **Anforderungsprofil** (*Job Specification*: benötigte Qualifikationen). Erst dann kann man sinnvoll gestalten."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-job-analysis-prozess",
+          "title": "Vom Analysieren zum Gestalten",
+          "caption": "Der Weg von der Job Analysis zur fertigen Stelle",
+          "code": "graph LR\n    A[Job Analysis\\nWas wird gemacht?] --> B[Job Description\\nAufgaben & Verantwortlichkeiten]\n    A --> C[Job Specification\\nBenötigte Qualifikationen]\n    B --> D[Job Design\\nArbeitsgestaltung]\n    C --> D"
+        }
+      ]
+    },
+    {
+      "id": "taylorismus",
+      "heading": "Taylorismus: Alles nach Plan — Scientific Management",
+      "body": "**Frederick Winslow Taylor** (1856–1915) war US-amerikanischer Ingenieur. Im Jahr 1911 veröffentlichte er sein bahnbrechendes Buch *The Principles of Scientific Management* — auf Deutsch: **Wissenschaftliche Betriebsführung**.\n\n**Taylors Grundidee:** Es gibt für jeden Arbeitsvorgang einen *'one best way'* — einen einzigen besten Weg, den man durch systematische Beobachtung und Messung herausfinden kann. Diesen Weg sollen alle Arbeiter befolgen.\n\n**Die vier Kernprinzipien des Taylorismus:**\n\n1. **Wissenschaftliche Analyse** jedes Arbeitsschritts: Taylor ließ ab 1882 Zeit- und Bewegungsstudien durchführen. Jede Handbewegung wurde gemessen und optimiert.\n2. **Extreme Arbeitsteilung**: Jede Person macht genau *eine* einfache, wiederkehrende Tätigkeit. Kein Arbeiter muss denken — nur tun.\n3. **Trennung von Kopf- und Handarbeit**: Planung und Denken liegt bei der *Planungsabteilung* (= Management). Die Arbeiter führen aus. Taylors Zitat: \"Alle Denkarbeit muss aus dem Betrieb herausgenommen und in der Planungsabteilung konzentriert werden.\"\n4. **Leistungslohn**: Wer mehr produziert als die Norm, bekommt mehr Geld — Anreiz durch Akkordlohn.\n\n**Warum war das damals revolutionär?** Vor Taylor arbeiteten Handwerker nach eigenem Ermessen. Taylor machte Arbeit messbar und steuerbar — die Produktivität stieg massiv. Das Fließband von Henry Ford (Automobilproduktion) ist das bekannteste Produkt tayloristischer Prinzipien.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Schaufelexperiment: Taylors berühmtester Versuch",
+          "body": "Taylor beobachtete Arbeiter, die Kohle und Eisenerz schaufelten. Jeder benutzte seine eigene Schaufel. Taylor maß: Mit welchem Schaufelgewicht schafft ein Mensch am meisten? Ergebnis: **21 Pfund** (ca. 9,5 kg) pro Schaufelladung war optimal. Er ließ verschiedene Schaufeln bauen — leichte für schweres Material, schwere für leichtes. Die Produktivität stieg um rund 200 %."
+        },
+        {
+          "kind": "warning",
+          "title": "Kritik am Taylorismus",
+          "body": "**Dehumanisierung**: Menschen werden wie Maschinen behandelt. Die Arbeit ist geistig unterfordert, monoton und fremdbestimmt. Karl Marx nennt das **Entfremdung** — der Arbeiter hat keinen Bezug mehr zum Endprodukt. Gewerkschaften lehnten Taylorismus massiv ab. Das Modell ignoriert, dass Menschen soziale Wesen sind und Motivation brauchen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-taylorismus-zeitstrahl",
+          "title": "Historische Entwicklung der Arbeitsgestaltung",
+          "caption": "Von Taylorismus über Human Relations zu New Work",
+          "code": "graph LR\n    A[Taylorismus\\n1911\\nTaylor] --> B[Human Relations\\n1930er\\nHawthorne-Studien]\n    B --> C[Job Enrichment\\n1960–70er\\nHerzberg]\n    C --> D[Job Characteristics\\nModell 1976\\nHackman & Oldham]\n    D --> E[New Work\\nab 1990er\\nFlexibilität & Sinn]"
+        },
+        {
+          "kind": "table",
+          "id": "tab-taylorismus-merkmale",
+          "title": "Taylorismus auf einen Blick",
+          "headers": ["Merkmal", "Beschreibung", "Beispiel"],
+          "rows": [
+            ["Arbeitsteilung", "Extrem hohe Spezialisierung, jeder macht nur eine Tätigkeit", "Fließbandarbeiter schraubt nur Räder an"],
+            ["Planung vs. Ausführung", "Management plant, Arbeiter führen aus — strikte Trennung", "Ingenieure legen Bewegungsablauf fest"],
+            ["Zeit- & Bewegungsstudien", "Jeder Schritt wird gemessen und optimiert", "Stoppuhr am Fließband"],
+            ["Leistungslohn", "Mehr Leistung = mehr Geld (Akkordlohn)", "Bonus bei Überschreitung der Tagesnorm"],
+            ["'One best way'", "Es gibt genau eine optimale Methode für jeden Vorgang", "Standardisierter Schraubenanzugsmoment"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "human-relations-gegenbewegung",
+      "heading": "Human Relations: Der Mensch ist mehr als eine Maschine",
+      "body": "In den 1920er und 1930er Jahren führte Elton Mayo im Hawthorne-Werk der Western Electric Company in Chicago berühmte Experimente durch — die sogenannten **Hawthorne-Studien**.\n\n**Was wurde untersucht?** Ursprünglich wollten die Forscher herausfinden, wie Beleuchtung die Arbeitsproduktivität beeinflusst. Sie teilten Arbeiterinnen in zwei Gruppen auf und veränderten die Lichtverhältnisse für eine Gruppe.\n\n**Das überraschende Ergebnis:** Die Produktivität stieg in *beiden* Gruppen — auch bei der Gruppe, bei der nichts verändert wurde. Und sie stieg, egal ob die Beleuchtung heller oder dunkler wurde.\n\n**Die Erklärung — der Hawthorne-Effekt:** Allein die Tatsache, *beobachtet und beachtet zu werden*, steigerte die Leistung. Die Arbeiterinnen fühlten sich wichtig und wertgeschätzt. Das war eine Revolution: **Soziale Faktoren** und das **Gefühl der Zugehörigkeit** beeinflussen die Leistung mindestens genauso stark wie physische Arbeitsbedingungen.\n\n**Die Human-Relations-Bewegung** zog folgende Schlüsse:\n- Mitarbeitende haben **soziale Bedürfnisse** (Anerkennung, Zugehörigkeit, Freundschaft)\n- Informelle Gruppen und soziale Normen beeinflussen das Verhalten\n- Führungsstil und Kommunikation sind entscheidend\n- **Gruppenarbeit** und Teamzusammenhalt fördern die Motivation\n\nDie Human-Relations-Bewegung war die erste große **Gegenbewegung** zum Taylorismus: Der Mensch ist kein Rädchen im Getriebe, sondern ein soziales Wesen mit Gefühlen und Bedürfnissen.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Hawthorne-Effekt",
+          "body": "Menschen verhalten sich anders (meist besser), wenn sie wissen, dass sie beobachtet werden — unabhängig von der eigentlichen Veränderung der Arbeitsbedingungen. Dieses Phänomen nennt man **Hawthorne-Effekt**."
+        }
+      ]
+    },
+    {
+      "id": "job-design-massnahmen",
+      "heading": "Job Enlargement, Enrichment und Rotation — drei Wege zur besseren Arbeit",
+      "body": "Als Reaktion auf die Monotonie tayloristischer Arbeit entwickelte die Wissenschaft drei klassische Maßnahmen zur Arbeitsgestaltung. Alle drei bauen aufeinander auf:\n\n---\n\n### Job Enlargement — die Arbeit wird breiter\n\n**Was ist es?** *Job Enlargement* (= Arbeitserweiterung) bedeutet, einer Person **mehr Aufgaben auf demselben Niveau** zu geben. Statt nur Schrauben A anzuziehen, zieht sie auch Schrauben B und C an.\n\n**Ziel:** Monotonie reduzieren durch mehr Abwechslung.\n\n**Problem:** Die Aufgaben bleiben geistig anspruchslos — mehr vom Gleichen ist nicht wirklich befriedigend. Man nennt das auch *horizontale Erweiterung*.\n\n---\n\n### Job Enrichment — die Arbeit wird tiefer\n\n**Was ist es?** *Job Enrichment* (= Arbeitsbereicherung) gibt der Person **mehr Verantwortung, Planung und Kontrolle** über ihre Arbeit — also anspruchsvollere Aufgaben. Sie plant z. B. ihren Arbeitstag selbst, kontrolliert die Qualität ihrer Produkte oder betreut Kunden eigenständig.\n\n**Ziel:** Intrinsische Motivation durch Autonomie, Verantwortung und persönliches Wachstum fördern.\n\n**Hintergrund:** Der Psychologe Frederick Herzberg zeigte in seiner **Zwei-Faktoren-Theorie**, dass nur bestimmte Faktoren (er nannte sie *Motivatoren*: Verantwortung, Anerkennung, Wachstum) wirklich Motivation erzeugen. Job Enrichment setzt genau dort an. Man spricht von *vertikaler Erweiterung*.\n\n---\n\n### Job Rotation — die Arbeit wechselt\n\n**Was ist es?** *Job Rotation* (= Arbeitsplatzwechsel) bedeutet, dass Mitarbeitende **systematisch zwischen verschiedenen Stellen wechseln** — z. B. alle paar Monate eine neue Abteilung.\n\n**Ziel:**\n- Breites Wissen und Verständnis des Unternehmens aufbauen\n- Einseitigkeit und Überlastung vermeiden\n- Nachwuchsführungskräfte entwickeln\n\n**Beispiel:** Ein Trainee bei einer Bank rotiert durch Privatkundenberatung, Kreditabteilung und Controlling — je drei Monate. Am Ende kennt er/sie das gesamte Unternehmen.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Eselsbrücke: Enlargement, Enrichment, Rotation",
+          "body": "- **Enlargement** = *breiter* (mehr Aufgaben, gleiche Ebene) — horizontal\n- **Enrichment** = *tiefer* (mehr Verantwortung, höhere Ebene) — vertikal\n- **Rotation** = *wandernd* (Stellenwechsel über Zeit)"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-job-design-vergleich",
+          "title": "Vergleich der drei Arbeitsgestaltungsmaßnahmen",
+          "headers": ["Maßnahme", "Richtung", "Was ändert sich?", "Vorteil", "Nachteil"],
+          "rows": [
+            ["Job Enlargement", "Horizontal", "Mehr Aufgaben auf gleichem Niveau", "Weniger Monotonie", "Kein echter Zuwachs an Verantwortung"],
+            ["Job Enrichment", "Vertikal", "Mehr Verantwortung & Autonomie", "Höhere intrinsische Motivation", "Überforderung möglich"],
+            ["Job Rotation", "Zeitlich", "Systematischer Stellenwechsel", "Breites Wissen, Entwicklung", "Einarbeitungszeit, Produktivitätsdelle"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "job-characteristics-model",
+      "heading": "Das Job Characteristics Model nach Hackman & Oldham",
+      "body": "Das **Job Characteristics Model** (kurz: JCM), entwickelt von Richard Hackman und Greg Oldham (1976), ist das einflussreichste Modell der motivationsorientierten Arbeitsgestaltung. Es beantwortet präzise: *Welche Eigenschaften einer Stelle führen zu Motivation und Zufriedenheit?*\n\n### Die fünf Kernmerkmale einer Stelle\n\nHackman und Oldham identifizierten fünf zentrale Eigenschaften, die eine Stelle motivierend machen:\n\n**1. Aufgabenvielfalt** (*skill variety*): Wie viele verschiedene Fähigkeiten und Tätigkeiten erfordert die Stelle? Ein Chirurg braucht viele Fähigkeiten → hohe Vielfalt. Ein Kassierer führt immer dieselben Handgriffe aus → niedrige Vielfalt.\n\n**2. Ganzheitlichkeit der Aufgabe** (*task identity*): Erledigt die Person eine vollständige, sichtbare Aufgabe von Anfang bis Ende? Ein Schreiner, der einen Stuhl komplett baut, hat hohe Ganzheitlichkeit. Wer nur Schrauben zieht, hat niedrige Ganzheitlichkeit.\n\n**3. Bedeutungsgehalt** (*task significance*): Wie wichtig ist die Arbeit für andere Menschen — intern oder in der Gesellschaft? Eine Krankenpflegerin erlebt hohen Bedeutungsgehalt. Ein Büroadministrator, der Formulare ablegt, erlebt möglicherweise niedrigen.\n\n**4. Autonomie** (*autonomy*): Wie viel Freiheit und Eigenverantwortung hat die Person bei Planung und Durchführung? Ein selbstständiger Berater hat hohe Autonomie. Ein Callcenter-Mitarbeiter mit festem Skript hat niedrige Autonomie.\n\n**5. Feedback**: Bekommt die Person direkte, klare Rückmeldung über die Qualität ihrer Arbeit — durch die Arbeit selbst oder durch Vorgesetzte? Ein Pilot sieht sofort ob das Flugzeug landet. Ein Sachbearbeiter bekommt vielleicht gar keine Rückmeldung.\n\n### Die kritischen psychologischen Zustände\n\nDiese fünf Merkmale erzeugen drei **kritische psychologische Zustände**:\n\n- Vielfalt + Ganzheitlichkeit + Bedeutungsgehalt → **Erlebte Sinnhaftigkeit der Arbeit** (\"Meine Arbeit ist bedeutsam\")\n- Autonomie → **Erlebte Verantwortung für Ergebnisse** (\"Ich bin für das Resultat zuständig\")\n- Feedback → **Wissen über tatsächliche Ergebnisse** (\"Ich weiß, wie gut ich bin\")\n\n### Die Ergebnisse\n\nWenn alle drei psychologischen Zustände stark ausgeprägt sind, folgen:\n- Hohe **intrinsische Motivation**\n- Hohe **Arbeitsqualität**\n- Hohe **Arbeitszufriedenheit**\n- Niedrige **Fehlzeiten und Fluktuation**\n\n### Der Moderator: Growth Need Strength (GNS)\n\nNicht alle Menschen reagieren gleich auf anspruchsvolle Arbeit. **Growth Need Strength** (GNS) = das Bedürfnis nach persönlichem Wachstum und Entwicklung. Wer ein hohes GNS hat, profitiert stark von angereicherten Stellen. Wer ein niedriges GNS hat, empfindet hohe Autonomie vielleicht eher als Belastung.\n\n### Der MPS — Motivating Potential Score\n\nHackman und Oldham entwickelten eine Formel, mit der man das Motivationspotenzial einer Stelle berechnen kann:\n\n$$MPS = \\frac{Aufgabenvielfalt + Ganzheitlichkeit + Bedeutungsgehalt}{3} \\times Autonomie \\times Feedback$$\n\n**Wichtig:** Autonomie und Feedback werden *multipliziert* — sind sie null, ist der gesamte MPS null, egal wie hoch die anderen Werte sind. Das zeigt: Ohne Autonomie und Feedback kann keine Stelle wirklich motivierend sein.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "MPS berechnen: Beispiel Pflegekraft vs. Kassierer",
+          "body": "**Pflegekraft** (Skala 1–7):\n- Aufgabenvielfalt: 6, Ganzheitlichkeit: 6, Bedeutungsgehalt: 7, Autonomie: 5, Feedback: 6\n- MPS = ((6+6+7)/3) × 5 × 6 = 6,33 × 5 × 6 = **190**\n\n**Kassierer (Supermarkt, tayloristisch)**:\n- Aufgabenvielfalt: 2, Ganzheitlichkeit: 2, Bedeutungsgehalt: 3, Autonomie: 2, Feedback: 3\n- MPS = ((2+2+3)/3) × 2 × 3 = 2,33 × 2 × 3 = **14**\n\nEin MPS von 190 vs. 14 erklärt, warum Pflegekräfte trotz schwieriger Bedingungen oft motivierter sind."
+        },
+        {
+          "kind": "formel",
+          "title": "MPS-Formel",
+          "body": "$$MPS = \\frac{\\text{Aufgabenvielfalt} + \\text{Ganzheitlichkeit} + \\text{Bedeutungsgehalt}}{3} \\times \\text{Autonomie} \\times \\text{Feedback}$$\nAlle fünf Dimensionen werden auf einer Skala von 1 (niedrig) bis 7 (hoch) gemessen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-jcm-modell",
+          "title": "Job Characteristics Model (Hackman & Oldham, 1976)",
+          "caption": "Die fünf Kernmerkmale führen über psychologische Zustände zu Ergebnissen — moderiert durch GNS",
+          "code": "graph LR\n    subgraph Kernmerkmale\n        A1[Aufgabenvielfalt]\n        A2[Ganzheitlichkeit]\n        A3[Bedeutungsgehalt]\n        A4[Autonomie]\n        A5[Feedback]\n    end\n    subgraph Psych. Zustände\n        B1[Erlebte\\nSinnhaftigkeit]\n        B2[Erlebte\\nVerantwortung]\n        B3[Wissen über\\nErgebnisse]\n    end\n    subgraph Ergebnisse\n        C1[Hohe Motivation]\n        C2[Hohe Qualität]\n        C3[Zufriedenheit]\n        C4[Niedrige Fluktuation]\n    end\n    A1 --> B1\n    A2 --> B1\n    A3 --> B1\n    A4 --> B2\n    A5 --> B3\n    B1 --> C1\n    B2 --> C1\n    B3 --> C1\n    C1 --> C2\n    C1 --> C3\n    C1 --> C4\n    M[Moderator:\\nGrowth Need Strength] -.-> B1\n    M -.-> B2\n    M -.-> B3"
+        }
+      ]
+    },
+    {
+      "id": "new-work-flexible-gestaltung",
+      "heading": "New Work: Flexible Arbeitsgestaltung und Taylorismus 2.0",
+      "body": "### New Work — was steckt dahinter?\n\n**New Work** (= Neue Arbeit) ist ein Sammelbegriff für moderne Arbeitsformen, die auf Flexibilität, Selbstbestimmung und Sinnhaftigkeit setzen. Der Begriff geht auf den Philosophen Frithjof Bergmann zurück (1980er). Heute versteht man darunter konkrete Modelle:\n\n**Flexible Arbeitszeitmodelle:**\n\n| Modell | Beschreibung | Vorteil | Risiko |\n|--------|-------------|---------|--------|\n| **Gleitzeit** | Mitarbeitende wählen Start- und Endzeit (Kernarbeitszeit fix) | Work-Life-Balance | Koordination im Team |\n| **Jobsharing** | Zwei Personen teilen sich eine Vollzeitstelle | Flexibilität, Vereinbarkeit | Kommunikationsaufwand |\n| **Homeoffice/Telearbeit** | Arbeit von zu Hause oder unterwegs | Wegfall Pendelzeit, Fokus | Soziale Isolation, Kontrolle |\n| **Viertagewoche** | 32 statt 40 Stunden, gleiches Gehalt | Weniger Stress, höhere Produktivität | Koordination, Kundenerreichbarkeit |\n| **Gamification** | Spielelemente in der Arbeit (Punkte, Ranglisten) | Motivationssteigerung | Kann kontraproduktiv wirken |\n\n**Studienbefund zur Viertagewoche:** Die Studie von 4 Day Week Global (2022, 61 Unternehmen, 2.900 Angestellte) zeigte: 71 % berichteten niedrigeres Burnout-Level, 39 % weniger Stress, 65 % weniger Krankheitstage, Kündigungen sanken auf unter die Hälfte — bei nahezu unveränderter Produktivität (Einnahmen stiegen sogar leicht um 1,4 %). Aber: Studie von einer Interessengruppe durchgeführt, Langzeiteffekte unklar.\n\n### Taylorismus 2.0 — die digitale Neuauflage\n\nModerne Technologie ermöglicht heute eine neue Form tayloristischer Kontrolle: **Wearables** (tragbare Geräte) und elektronische Datenauswertung.\n\n**Beispiele aus der Praxis:**\n- **Hitachi** (Japan): ID-Badge mit Beschleunigungssensor erfasst 50-mal/Sekunde Bewegungen (Nicken, Gehen, Tippen) von 468 Mitarbeitenden — 5 Milliarden Datenpunkte — und korreliert diese mit dem Glücksempfinden der Gruppe.\n- **Percolata** (USA): Traffic-Sensoren in Supermärkten messen, wer sich wann wo aufhält — Echtzeit-Dashboard für das Management. Kunden: Seven Eleven, Telefónica.\n- **BP**: 24.000 Fitbit-Tracker an Belegschaft. Wer mehr Schritte geht, sammelt 'Wellnesspunkte' und bekommt Boni (bis 1.000 Dollar Gutschrift fürs Gesundheitssparkonto).\n\n**Kritik:** Unter dem Deckmantel von 'Wellness' und 'Gesundheit' entsteht ein Kontrollregime, das Menschen zu Datenpunkten macht. Wer viele Schritte geht, ist nicht zwingend produktiver. Datenschutz und ethische Fragen sind ungeklärt. Frederick W. Taylor hätte es sich nicht besser vorstellen können.",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Gamification: Motivation oder Druck?",
+          "body": "Amazon experimentierte in Versandzentren mit Spielen (Mission Racer, Dragon Duel): Mitarbeitende sehen, wie jedes verpackte Paket Punkte in einem Spiel bringt. Einige Mitarbeiter fanden die Arbeit dadurch weniger langweilig — andere kritisierten: 'Sobald die Leute anfangen, gegenüber Kollegen zurückzufallen, macht es weniger Spaß und kann sogar kontraproduktiv sein.' Gamification kann motivieren, aber auch Druck und Konkurrenz verstärken."
+        },
+        {
+          "kind": "info",
+          "title": "Innovation braucht Freiräume",
+          "body": "Der DIHK-Innovationsreport 2017 zeigte: Deutschlands Innovationsfähigkeit stagniert. Eine Ursache, die oft übersehen wird: fehlende Freiräume. Neurowissenschaftler bestätigen — das Gehirn braucht unstrukturierte Zeit, um kreativ zu werden. 3M (15%-Regel) und Google (20%-Zeit) haben das erkannt. Zu starre Arbeitsorganisation verhindert Innovation."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "v3-fc-1",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Was versteht man unter 'Scientific Management' (Taylorismus) und wer hat es entwickelt?",
+      "back": "Frederick W. Taylor (1911): Wissenschaftliche Betriebsführung mit extremer Arbeitsteilung, Zeit- und Bewegungsstudien, Trennung von Kopf- und Handarbeit sowie Leistungslohn. Ziel: den 'one best way' für jeden Arbeitsvorgang finden."
+    },
+    {
+      "id": "v3-fc-2",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Was ist der Unterschied zwischen Job Enlargement und Job Enrichment?",
+      "back": "**Job Enlargement** (horizontal): mehr Aufgaben auf gleichem Anspruchsniveau — mehr vom Gleichen. **Job Enrichment** (vertikal): mehr Verantwortung, Autonomie und Entscheidungsbefugnis — qualitativ anspruchsvollere Arbeit. Enrichment führt zu höherer intrinsischer Motivation."
+    },
+    {
+      "id": "v3-fc-3",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Nenne die fünf Kernmerkmale des Job Characteristics Model nach Hackman & Oldham.",
+      "back": "1. Aufgabenvielfalt (skill variety)\n2. Ganzheitlichkeit der Aufgabe (task identity)\n3. Bedeutungsgehalt (task significance)\n4. Autonomie\n5. Feedback"
+    },
+    {
+      "id": "v3-fc-4",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Wie lautet die MPS-Formel und was bedeutet MPS?",
+      "back": "MPS = Motivating Potential Score — misst das Motivationspotenzial einer Stelle.\n$$MPS = \\frac{Vielfalt + Ganzheitlichkeit + Bedeutungsgehalt}{3} \\times Autonomie \\times Feedback$$\nAutonomie und Feedback sind multipliziert: Ist einer der Werte null, ist der gesamte MPS null."
+    },
+    {
+      "id": "v3-fc-5",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Was ist der Hawthorne-Effekt und welche Bedeutung hat er für die Arbeitsgestaltung?",
+      "back": "Der Hawthorne-Effekt besagt: Menschen verändern ihr Verhalten, wenn sie beobachtet werden — unabhängig von der eigentlichen Intervention. Die Hawthorne-Studien (Mayo, 1930er) zeigten, dass soziale Faktoren und Aufmerksamkeit die Leistung mindestens so stark beeinflussen wie physische Arbeitsbedingungen."
+    },
+    {
+      "id": "v3-fc-6",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Was ist 'Growth Need Strength' (GNS) im JCM?",
+      "back": "GNS = das individuelle Bedürfnis nach persönlichem Wachstum und Entwicklung. Es moderiert den Zusammenhang zwischen Jobmerkmalen und Ergebnissen: Personen mit hohem GNS profitieren stärker von angereicherten Stellen als Personen mit niedrigem GNS."
+    },
+    {
+      "id": "v3-fc-7",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Was versteht man unter 'Taylorismus 2.0' und welche Unternehmen sind Beispiele?",
+      "back": "Taylorismus 2.0 = digitale Neuauflage tayloristischer Kontrolle durch Wearables und Datenanalyse. Beispiele: Hitachi (ID-Badge mit Bewegungssensor), Percolata (Traffic-Sensoren in Supermärkten), BP (24.000 Fitbit-Tracker mit Wellnesspunkte-System)."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "v3-q1",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Frederick W. Taylor forderte in seinem Scientific Management, dass ...",
+      "options": [
+        "... alle Mitarbeitenden selbst planen und entscheiden, wie sie ihre Arbeit erledigen.",
+        "... Denkarbeit aus dem Betrieb herausgenommen und in der Planungsabteilung konzentriert wird.",
+        "... soziale Bedürfnisse der Mitarbeitenden im Vordergrund stehen.",
+        "... Teamarbeit die effizienteste Arbeitsform ist."
+      ],
+      "correct": [1],
+      "explanation": "Taylor trennte strikt Kopf- (Planung durch Management) und Handarbeit (Ausführung durch Arbeiter). Das Zitat 'Alle Denkarbeit muss aus dem Betrieb herausgenommen werden' ist charakteristisch für sein Scientific Management."
+    },
+    {
+      "kind": "truefalse",
+      "id": "v3-q2",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Job Enrichment (Arbeitsbereicherung) bedeutet, einer Person mehr Aufgaben auf demselben Anforderungsniveau zu geben.",
+      "answer": false,
+      "explanation": "Das ist Job Enlargement (horizontale Erweiterung). Job Enrichment bedeutet eine vertikale Erweiterung: mehr Verantwortung, Autonomie und Entscheidungsbefugnis — qualitativ anspruchsvollere Aufgaben."
+    },
+    {
+      "kind": "mc",
+      "id": "v3-q3",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Welche zwei Merkmale des Job Characteristics Model werden in der MPS-Formel multipliziert (und nicht gemittelt)?",
+      "options": [
+        "Aufgabenvielfalt und Ganzheitlichkeit",
+        "Ganzheitlichkeit und Bedeutungsgehalt",
+        "Autonomie und Feedback",
+        "Aufgabenvielfalt und Autonomie"
+      ],
+      "correct": [2],
+      "explanation": "Autonomie und Feedback werden in der MPS-Formel multipliziert: MPS = ((Vielfalt + Ganzheitlichkeit + Bedeutungsgehalt)/3) × Autonomie × Feedback. Ist Autonomie oder Feedback null, ist der gesamte MPS null — sie sind also unverzichtbar."
+    },
+    {
+      "kind": "mc",
+      "id": "v3-q4",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Was ergab die Studie zur Viertagewoche (4 Day Week Global, 2022, 61 Unternehmen)?",
+      "options": [
+        "Die Produktivität sank signifikant, dafür war das Wohlbefinden deutlich höher.",
+        "71 % berichteten niedrigeres Burnout-Level, bei nahezu unveränderter oder leicht gestiegener Produktivität.",
+        "Die Mehrheit der Unternehmen brach das Pilotprogramm vorzeitig ab.",
+        "Nur Unternehmen aus dem Tech-Bereich profitierten von der Viertagewoche."
+      ],
+      "correct": [1],
+      "explanation": "Die Studie zeigte: 71 % niedrigeres Burnout, 65 % weniger Krankheitstage, Kündigungen halbierten sich — bei gleichbleibender oder leicht steigender Produktivität (Einnahmen +1,4 %). Kritisch zu beachten: Die Studie wurde von einer Interessengruppe durchgeführt."
+    },
+    {
+      "kind": "mc",
+      "id": "v3-q5",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Welches Merkmal des JCM beschreibt, ob eine Person eine vollständige Aufgabe von Anfang bis Ende erledigt?",
+      "options": [
+        "Aufgabenvielfalt (skill variety)",
+        "Bedeutungsgehalt (task significance)",
+        "Ganzheitlichkeit (task identity)",
+        "Autonomie"
+      ],
+      "correct": [2],
+      "explanation": "Task Identity (Ganzheitlichkeit) beschreibt das Ausmaß, in dem eine Person eine vollständige und sichtbare Aufgabeneinheit von Anfang bis Ende erledigt. Beispiel: Ein Schreiner, der einen ganzen Stuhl baut, hat hohe task identity; jemand, der nur eine Schraube anzieht, hat niedrige."
+    },
+    {
+      "kind": "truefalse",
+      "id": "v3-q6",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Der Hawthorne-Effekt zeigt, dass physische Arbeitsbedingungen (z. B. Beleuchtung) der einzige relevante Leistungsfaktor sind.",
+      "answer": false,
+      "explanation": "Genau das Gegenteil: Die Hawthorne-Studien zeigten, dass die Produktivität in beiden Gruppen stieg — auch ohne Veränderung der Lichtverhältnisse. Allein das Gefühl, beachtet und beobachtet zu werden, reichte aus. Soziale Faktoren sind mindestens genauso wichtig wie physische."
+    },
+    {
+      "kind": "mc",
+      "id": "v3-q7",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "schwer",
+      "prompt": "Eine Stelle hat folgende Werte auf der 7er-Skala: Aufgabenvielfalt=4, Ganzheitlichkeit=4, Bedeutungsgehalt=4, Autonomie=7, Feedback=1. Welche Aussage zum MPS ist korrekt?",
+      "options": [
+        "Der MPS ist hoch, weil Autonomie maximal ist.",
+        "Der MPS ist 28, weil alle Werte positiv sind.",
+        "Der MPS ist sehr niedrig, weil Feedback nur 1 beträgt und multipliziert wird.",
+        "Der MPS entspricht dem Durchschnitt aller fünf Werte: 4."
+      ],
+      "correct": [2],
+      "explanation": "MPS = ((4+4+4)/3) × 7 × 1 = 4 × 7 × 1 = 28. Weil Feedback nur 1 ist und multipliziert wird, bleibt der MPS trotz maximaler Autonomie sehr niedrig. Wäre Feedback = 0, wäre der MPS = 0. Das zeigt: Feedback ist unverzichtbar."
+    },
+    {
+      "kind": "freetext",
+      "id": "v3-q8",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "schwer",
+      "prompt": "Erläutere, warum moderne Wearable-Überwachung (z. B. Fitbit-Tracker bei BP) als 'Taylorismus 2.0' bezeichnet werden kann. Welche Kritikpunkte gibt es?",
+      "sampleAnswer": "Taylorismus 2.0 bezeichnet die digitale Neuauflage tayloristischer Kontrollprinzipien: Genau wie Taylor Zeit- und Bewegungsstudien nutzte, um Arbeitsabläufe zu optimieren und Mitarbeitende zu kontrollieren, setzen Unternehmen heute Wearables (Fitbit, Sensoren) ein, um biometrische Daten (Schritte, Puls, Aufenthaltsort) zu erfassen und daraus Rückschlüsse auf Produktivität zu ziehen. Kritikpunkte: (1) Datenschutz und ethische Bedenken, (2) Fehlinterpretation von Daten (viele Schritte ≠ hohe Produktivität), (3) Kontrollregime unter dem Deckmantel von 'Wellness', (4) Menschen werden zu Datenpunkten degradiert — ähnlich wie im klassischen Taylorismus zur Dehumanisierung.",
+      "keywords": ["kontrolle", "wearables", "daten", "überwachung", "taylor", "dehumanisierung", "datenschutz"],
+      "explanation": "Der Kern: Taylorismus setzt auf externe Kontrolle und Standardisierung von Arbeit. Digitale Tools ermöglichen heute eine noch umfassendere Kontrolle als Taylors Stoppuhr."
+    },
+    {
+      "kind": "truefalse",
+      "id": "v3-q9",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "mittel",
+      "prompt": "Laut dem Job Characteristics Model ist Autonomie für sich allein ausreichend, um hohe Arbeitsmotivation zu erzeugen — Feedback spielt eine untergeordnete Rolle.",
+      "answer": false,
+      "explanation": "Im JCM werden Autonomie und Feedback beide multipliziert. Fehlt Feedback, ist der MPS null — egal wie hoch die Autonomie ist. Man braucht beide: Wer eigenverantwortlich arbeitet, muss auch wissen, ob seine Ergebnisse gut sind, damit Motivation entstehen kann."
+    },
+    {
+      "kind": "mc",
+      "id": "v3-q10",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "difficulty": "leicht",
+      "prompt": "Was versteht man unter Job Rotation?",
+      "options": [
+        "Eine Stelle wird aufgewertet durch mehr Verantwortung und Entscheidungsfreiheit.",
+        "Mitarbeitende wechseln systematisch zwischen verschiedenen Stellen.",
+        "Die Arbeit wird durch Spielelemente (Punkte, Ranglisten) attraktiver gestaltet.",
+        "Mitarbeitende teilen sich eine Vollzeitstelle."
+      ],
+      "correct": [1],
+      "explanation": "Job Rotation = systematischer Wechsel zwischen verschiedenen Stellen oder Abteilungen über Zeit. Ziel: breites Wissen aufbauen, Einseitigkeit vermeiden, Nachwuchsführungskräfte entwickeln. Jobsharing wäre Option D, Gamification wäre Option C."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "v3-ex-1",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "label": "PINGO — Tayloristische Arbeitsorganisation heute",
+      "source": "Vorlesung Personal SoSe 2026, Folie V3 / PINGO #946638; Artikel: 'Taylorismus 2.0: Wie Unternehmen Mitarbeiter kontrollieren' (Der Standard, Adrian Lobe, 5.11.2016)",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Der Artikel 'Taylorismus 2.0' beschreibt, wie Unternehmen wie Hitachi, Percolata und BP Wearables und digitale Sensoren einsetzen, um Mitarbeitende zu überwachen und zu steuern.\n\n(a) Nennen Sie zwei konkrete Merkmale des klassischen Taylorismus (Taylor, 1911) und erläutern Sie jeweils kurz, inwiefern das beschriebene Vorgehen dieser Unternehmen diesem Merkmal entspricht. (ca. 4 Sätze)\n\n(b) Aus welchen Gründen ist eine solche digitale Kontrolle kritisch zu betrachten? Nennen Sie zwei Argumente. (ca. 3 Sätze)",
+      "hint": "Denke an Taylors Grundprinzipien: Zeit- und Bewegungsstudien, Trennung von Denken und Tun, Kontrolle und Leistungsanreize. Überlege dann, wie digitale Tools diese Prinzipien fortführen.",
+      "solution": "**Zu (a): Zwei Merkmale des Taylorismus und Übertragung auf Taylorismus 2.0**\n\n**Merkmal 1: Zeit- und Bewegungsstudien / lückenlose Messung und Optimierung**\nTaylor ließ jeden Arbeitsschritt mit der Stoppuhr messen, um den 'one best way' zu finden. Hitachi erfasst mit seinem ID-Badge 50-mal pro Sekunde Bewegungen von Mitarbeitenden (Nicken, Gehen, Tippen) und analysiert 5 Milliarden Datenpunkte. Percolata misst mittels Traffic-Sensoren, wer sich wann wo in Supermärkten aufhält. Beide Ansätze führen Taylors Idee fort, menschliche Arbeit durch kontinuierliche Datenmessung zu analysieren und steuerbar zu machen.\n\n**Merkmal 2: Externe Kontrolle und leistungsbasierte Anreize**\nTaylor kontrollierte Arbeiter von außen und setzte Akkordlohn ein (mehr Leistung = mehr Geld). BP verteilt 24.000 Fitbit-Tracker und belohnt Mitarbeitende mit 'Wellnesspunkten' für Schritte, biometrisches Screening etc. — bis zu 1.000 Dollar Gutschrift fürs Gesundheitssparkonto. Das Grundprinzip ist identisch: Verhalten wird durch technische Überwachung messbar gemacht und durch Anreize gesteuert.\n\n**Zu (b): Kritische Argumente**\n\n**Argument 1: Datenschutz und ethische Bedenken**\nDie flächendeckende Erfassung biometrischer Daten (Puls, Schlafqualität, Aufenthaltsort) ist datenschutzrechtlich heikel. Mitarbeitende werden zu 'Datenpunkten', ohne dass klar ist, wie Daten gespeichert, verwendet oder weitergegeben werden. Es entsteht ein Kontrollregime unter dem Deckmantel von 'Wellness' und 'Gesundheit'.\n\n**Argument 2: Fehlinterpretation von Produktivität**\nDie erhobenen Daten bilden Produktivität nur unzureichend ab. Wer viele Schritte geht, ist nicht zwingend produktiver — ein Lagerist, der planlos zwischen Regalen hin- und herläuft, hat mehr Schritte als einer, der die Ware auf Anhieb findet. Digitale Messung kann echte Leistung also falsch bewerten und führt zu kontraproduktiven Anreizen."
+    },
+    {
+      "id": "v3-ex-2",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "label": "Artikel — 'Finden, wonach man nicht sucht' (Innovation/Freiräume)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, V3; Welt/Bilanz, Günter Gressler, 12.10.2017",
+      "type": "beispiel",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Der Artikel 'Finden, wonach man nicht sucht' (Welt/Bilanz) argumentiert, dass die besten Innovationen entstehen, wenn man nicht gezielt nach ihnen sucht — und dass Freiräume ein entscheidender Erfolgsfaktor für Innovation sind.\n\nFragen:\n(a) Welche Unternehmen werden im Artikel als positive Beispiele für innovationsfördernde Arbeitsorganisation genannt und was tun sie konkret?\n(b) Inwiefern widerspricht diese Erkenntnis tayloristischen Prinzipien der Arbeitsorganisation? Begründen Sie in 2–3 Sätzen.",
+      "hint": "3M und Google werden explizit als Beispiele genannt. Denken Sie daran, was Taylorismus über Planung, Kontrolle und 'one best way' sagt.",
+      "solution": "**Zu (a): Positive Beispiele für innovationsfördernde Arbeitsorganisation**\n\n**3M — die 15-Prozent-Regel:** 3M erlaubt seinen Entwicklern, 15 % ihrer Arbeitszeit eigenen Projekten zu widmen — ohne vorgegebenes Ziel. Aus dieser informellen Freiheit entstanden bekannte Produkte wie der **Post-it-Zettel** (erfunden von Arthur Fry, ohne dass er bewusst danach suchte).\n\n**Google — die 20-Prozent-Zeit:** Jeder Google-Mitarbeiter durfte einen von fünf Arbeitstagen für eigene Ideen und Projekte nutzen. **Google Maps** soll auf diese Weise entstanden sein.\n\nBotschaft: Unstrukturierte Zeit und Freiräume ermöglichen kreatives Denken, weil das Gehirn Raum braucht, um unbewusst Verbindungen herzustellen.\n\n**Zu (b): Widerspruch zum Taylorismus**\n\nTaylorismus basiert auf totaler Planung, Kontrolle und dem 'one best way': Jede Minute der Arbeitszeit soll produktiv und messbar sein. Freiräume wären aus tayloristischer Perspektive pure Verschwendung. Die Erkenntnis, dass gerade diese ungeplante, freie Zeit die wertvollsten Innovationen hervorbringt, steht im direkten Widerspruch zum tayloristischen Kontrollgedanken. Innovation erfordert psychologische Sicherheit und Freiheit — beides ist mit strenger Arbeitsteilung und Kontrolle kaum vereinbar."
+    },
+    {
+      "id": "v3-ex-3",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "label": "Amazon Gamification — motivierende Arbeitsgestaltung",
+      "source": "Personal_Artikel_SoSe_2026.pdf, V3; Golem.de, 'Gamification: Amazon verpackt öde Arbeit als Spiel'",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Amazon experimentiert in Versandzentren mit Gamification: Mitarbeitende sehen auf Bildschirmen, wie jedes verpackte Paket Fortschritte in einem Spiel (z. B. 'Mission Racer', 'Dragon Duel') erzeugt. Teams konkurrieren gegeneinander; als Belohnung winken virtuelle Erfolgsabzeichen.\n\nAnalysieren Sie dieses Beispiel mit dem Job Characteristics Model (Hackman & Oldham):\n(a) Welche der fünf Kernmerkmale versucht Amazon durch Gamification zu verbessern? Begründen Sie.\n(b) Welche Kernmerkmale bleiben unverändert niedrig und warum könnte das ein Problem sein?\n(c) Nennen Sie einen kritischen Einwand gegen die Amazon-Gamification-Strategie.",
+      "hint": "Prüfen Sie jedes der fünf Kernmerkmale (Vielfalt, Ganzheitlichkeit, Bedeutungsgehalt, Autonomie, Feedback) und überlegen Sie, ob und wie Gamification dieses Merkmal beeinflusst.",
+      "solution": "**Zu (a): Welche Merkmale verbessert Gamification?**\n\n**Feedback:** Gamification liefert sofortiges Feedback — der Mitarbeiter sieht in Echtzeit, wie schnell er ist, wie viele Punkte er sammelt, ob sein Team gewinnt. Im JCM fördert klares Feedback das Wissen über tatsächliche Ergebnisse. Das ist das stärkste Element der Amazon-Strategie.\n\n**Bedeutungsgehalt (eingeschränkt):** Die Spielmechanik versucht, der monotonen Arbeit durch Wettkampf und Team-Zusammenhalt eine neue Bedeutung zu geben. Das ist jedoch künstlich aufgesetzt — der inhärente Bedeutungsgehalt der Aufgabe (Pakete einpacken) bleibt gering.\n\n**Zu (b): Merkmale, die niedrig bleiben**\n\n**Aufgabenvielfalt:** Pakete einzusortieren bleibt eine monotone, repetitive Tätigkeit — das Spiel daran ändert nichts. Die eigentlichen Handgriffe bleiben gleich und anspruchslos.\n\n**Autonomie:** Die Mitarbeitenden haben keine Entscheidungsfreiheit über ihre Arbeitsmethode — die Spielregeln sind vorgegeben, das Arbeitstempo wird extern durch das Spiel definiert (möglicherweise sogar erhöht). Das ist das Gegenteil von Autonomie.\n\n**Ganzheitlichkeit:** Niemand sieht das Gesamtergebnis seiner Arbeit (den Kunden, der das Paket bekommt). Die Tätigkeit bleibt ein kleiner Ausschnitt einer riesigen Lieferkette.\n\nDa Autonomie multipliziert wird im MPS und niedrig bleibt, kann Gamification den MPS nur begrenzt erhöhen.\n\n**Zu (c): Kritischer Einwand**\n\nGamification kann kontraproduktiv wirken: Eine Spielentwicklerin, die im Artikel zitiert wird, warnt: 'Sobald die Leute anfangen, gegenüber Kollegen zurückzufallen, macht es weniger Spaß und kann sogar kontraproduktiv sein.' Wenn der Wettbewerb zu stark wird, entsteht Druck statt Motivation — das Gegenteil des beabsichtigten Effekts. Zudem maskiert Gamification das Grundproblem: Die Arbeit selbst bleibt inhaltlich arm und wenig bedeutsam. Es ist eine oberflächliche Maßnahme, die echtes Job Enrichment nicht ersetzt."
+    },
+    {
+      "id": "v3-ex-4",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "label": "Diskussion — Viertagewoche als flexibles Arbeitsmodell",
+      "source": "Personal_Artikel_SoSe_2026.pdf, V3; Spektrum.de, 'Studie zur Viertagewoche: Weniger Stress, gleiche Produktivität' (4 Day Week Global / Cambridge, 2022)",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Die Studie '4 Day Week Global' (2022, in Zusammenarbeit mit Wissenschaftlern der University of Cambridge und des Boston College) untersuchte sechs Monate lang 61 Unternehmen mit rund 2.900 Angestellten. Ergebnisse: 71 % niedrigeres Burnout-Level, 39 % weniger gestresst, 65 % weniger Krankheitstage, Kündigungen auf weniger als die Hälfte gesunken, Unternehmenseinnahmen leicht gestiegen (+1,4 %).\n\nBeurteilen Sie die Viertagewoche aus Sicht der Arbeitsgestaltungskonzepte:\n(a) Welche Dimension(en) der Arbeitsgestaltung verändert die Viertagewoche primär — und warum? Nutzen Sie das JCM.\n(b) Welche Erkenntnisse aus der Studie sprechen für, welche gegen eine breite Einführung der Viertagewoche?\n(c) Stellen Sie einen kritischen Methodikeinwand gegen die Studie.",
+      "hint": "Die Viertagewoche verändert die Arbeitszeit, nicht die Arbeitsinhalte — überlegen Sie, welche JCM-Merkmale davon berührt werden. Zur Kritik: Wer hat die Studie durchgeführt?",
+      "solution": "**Zu (a): Welche JCM-Dimensionen werden verändert?**\n\nDie Viertagewoche verändert primär **keine der fünf inhaltlichen Kernmerkmale** des JCM direkt (Vielfalt, Ganzheitlichkeit, Bedeutungsgehalt, Autonomie, Feedback bleiben strukturell gleich). Jedoch beeinflusst sie:\n\n- **Autonomie (indirekt):** Wenn Mitarbeitende mehr Kontrolle darüber haben, wann und wie sie ihre Arbeit in vier Tagen erledigen, steigt die wahrgenommene Autonomie. Viele Unternehmen in der Studie mussten 'Zeitfresser' wie überlange Meetings streichen — das erhöht die Qualität der verbleibenden Arbeitszeit.\n- **Motivation und Wohlbefinden als Kontextfaktoren:** Das JCM-Modell erkennt, dass individuelle und organisationale Rahmenbedingungen (z. B. Stress, Arbeitsbelastung) Moderatoren sind. Weniger Stress und bessere Erholung verbessern die Voraussetzungen dafür, dass Kernmerkmale ihre Wirkung entfalten können.\n\nFazit: Die Viertagewoche ist kein klassisches Job-Design-Instrument (sie verändert nicht die Stelle selbst), sondern ein Arbeitszeitmodell — sie schafft günstigere Bedingungen für motivierendes Arbeiten.\n\n**Zu (b): Argumente für und gegen eine breite Einführung**\n\n**Dafür:**\n- Deutlich weniger Burnout, Stress und Krankheitstage → gesündere Belegschaft, weniger Fehlzeiten\n- Kündigungen halbierten sich → höhere Bindung wertvoller Mitarbeitender\n- Einnahmen blieben stabil oder stiegen leicht → kein Produktivitätsverlust\n- 92 % der teilnehmenden Unternehmen wollten das Modell weiter testen; 18 haben es dauerhaft eingeführt\n- Mitarbeitende nutzen den fünften Tag für Erholung, Familie und alltägliche Erledigungen → vollständiges Wochenende für Regeneration\n\n**Dagegen:**\n- Koordinationsherausforderungen: Kundenerreichbarkeit, Schichtarbeit, internationale Zusammenarbeit\n- Einige Branchen (Produktion, Pflege) können nicht einfach einen Tag streichen\n- Langzeiteffekte unbekannt: Gewöhnungseffekte könnten den Wohlbefindensvorteil aufheben\n\n**Zu (c): Methodischer Einwand**\n\nDie Studie wurde von der Kampagnenorganisation **4 Day Week Global** durchgeführt — einer Interessengruppe, die die Viertagewoche aktiv propagiert. Obwohl Wissenschaftler der University of Cambridge beteiligt waren, besteht ein klares Interessenkonflikt. Zusätzlich: Nur freiwillig teilnehmende, innovationsoffene Unternehmen machten mit — kein repräsentatives Sample. Der Testzeitraum von nur sechs Monaten ist zu kurz, um langfristige Effekte beurteilen zu können. Es fehlt eine randomisierte Kontrollgruppe (RCT), die sichere Kausalaussagen ermöglichen würde."
+    }
+  ]
+}

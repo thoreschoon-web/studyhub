@@ -1,0 +1,411 @@
+{
+  "id": "einfuehrung-und-grundlagen-der-veranstaltu",
+  "subjectId": "privatrecht",
+  "title": "Einführung und Grundlagen der Veranstaltung",
+  "summary": "Was ist Privatrecht, wozu braucht man es und wie ist die Vorlesung aufgebaut? Dieses Thema erklärt laienverständlich die Relevanz des Rechts im Alltag und Beruf, die drei Ziele der Veranstaltung (Grundlagen Privatrecht, juristische Fachsprache, Klausurvorbereitung), den Aufbau des BGB, die Abgrenzung von Privatrecht und öffentlichem Recht sowie die Normenpyramide – alles ohne Vorwissen.",
+  "order": 1,
+  "estMinutes": 55,
+  "sections": [
+    {
+      "id": "s1-relevanz",
+      "heading": "Warum überhaupt Recht? – Relevanz im Alltag und Beruf",
+      "body": "**Was ist Recht?**\n\nRecht ist die Gesamtheit der Regeln, die das Zusammenleben von Menschen in einer Gesellschaft ordnen und die vom Staat mit Zwang durchgesetzt werden können. Das klingt abstrakt – ist aber erschreckend alltäglich.\n\n**Von der Geburt bis zum Tod ist alles rechtlich geregelt:**\n- Bei der Geburt entsteht die Rechtsfähigkeit (§ 1 BGB).\n- Jeder Einkauf im Supermarkt ist ein Kaufvertrag (§ 433 BGB).\n- Jedes Arbeitsverhältnis basiert auf einem Arbeitsvertrag (§ 611a BGB).\n- Eine Eheschließung, ein Testament, der Kauf einer Wohnung – alles Recht.\n\n**Zwei Sphären, in denen Recht ständig eine Rolle spielt:**\n\n| Privater Bereich | Beruflicher Bereich |\n|---|---|\n| Familie, Nachbarschaft, Freunde | Geschäftspartner, Lieferanten, Kunden |\n| Kauf- und Mietverträge im Alltag | Unternehmensverträge, Rechte und Pflichten |\n| Kontakt mit Anwälten und Gerichten | Behörden, Genehmigungen, Haftung |\n\n**Wichtig:** Man muss nicht Jurist sein, um Grundkenntnisse zu brauchen. Wer Unternehmen gründet, Verträge schließt oder Mitarbeiter führt, braucht ein Grundverständnis des Privatrechts – auch um Probleme frühzeitig zu erkennen und Anwälte gezielt einsetzen zu können.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Recht prägt das Leben lückenlos",
+          "body": "Es gibt kaum einen Lebensbereich, der nicht rechtlich erfasst ist – vom Kauf eines Kaffees bis zur Unternehmensgründung. Diese Veranstaltung vermittelt das nötige Grundverständnis für den privaten und beruflichen Alltag."
+        }
+      ]
+    },
+    {
+      "id": "s2-ziele-gliederung",
+      "heading": "Ziele und Aufbau der Veranstaltung",
+      "body": "Die Veranstaltung verfolgt **drei Hauptziele**, die sich gegenseitig ergänzen:\n\n**1. Grundlagen Privatrecht (materielles Recht)**\nSie lernen, welche Regeln gelten – also zum Beispiel: Unter welchen Voraussetzungen entsteht ein gültiger Vertrag? Wann kann man ihn anfechten? Was passiert bei einer Leistungsstörung? Das Gesetz (BGB) bildet dabei den Ausgangspunkt, wichtiger ist aber zu verstehen, *wie man es auslegt und anwendet*.\n\n**2. Juristische Fachsprache und Methodik**\nJuristen kommunizieren in einer eigenen Sprache mit präzisen Begriffen. Diese Sprache zu verstehen und zu sprechen ist entscheidend – egal ob Sie mit Behörden, Anwälten oder Gerichten kommunizieren. Die Rechtswissenschaft ist keine exakte Wissenschaft (kein \"wahr oder falsch\"), sondern lebt von Begründungen und überzeugenden Argumenten.\n\n**3. Klausurvorbereitung (Gutachtenstil)**\nDie Klausur verlangt den sog. **Gutachtenstil**: Man beginnt mit einer Hypothese (Obersatz), prüft dann die Voraussetzungen (Definition + Subsumtion) und kommt zu einem Ergebnis. Dieser Stil wird in der Veranstaltung systematisch geübt.\n\n**Gliederung der Vorlesung in drei Teile:**",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-gliederung",
+          "title": "Aufbau der Vorlesung",
+          "caption": "Die drei Teile der Veranstaltung – Theorie, Praxis und Methodik – greifen ineinander.",
+          "code": "graph LR\n  A[Theorieteil\\nMaterielle Grundlagen\\ndes Privatrechts] --> C{Zusammenspiel}\n  B[Praxisteil\\nFallbearbeitung\\nGutachtenstil] --> C\n  C --> D[Methodikteil\\nRechtsanwendung\\nWiederholung\\nTutorium]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Das Ziel dieser Veranstaltung",
+          "body": "Es geht nicht darum, Gesetze auswendig zu lernen, sondern darum, Gesetze zu **verstehen**, **auszulegen** und **anzuwenden**. In der Klausur sind Gesetzestextsammlungen zugelassen – entscheidend ist die **Begründung**, nicht das bloße Ergebnis."
+        },
+        {
+          "kind": "warning",
+          "title": "Hilfsmittel in der Klausur",
+          "body": "Zugelassen sind ausschließlich **Gesetzestextsammlungen ohne jegliche Eintragungen** (keine Randbemerkungen, keine Unterstreichungen, keine Markierungen, keine Verweise). Nur unbeschriftete Registerfähnchen am Rand sind erlaubt. Verstöße werden als Täuschungsversuch gewertet (Note 5,0)."
+        }
+      ]
+    },
+    {
+      "id": "s3-privatrecht-oeffentliches-recht",
+      "heading": "Privatrecht vs. Öffentliches Recht – die wichtigste Unterscheidung",
+      "body": "**Was ist der Unterschied?**\n\nDas gesamte Recht lässt sich grob in zwei große Bereiche einteilen:\n\n- **Öffentliches Recht**: Regelt das Verhältnis zwischen Staat und Bürger (Über-/Unterordnung). Der Staat kann einseitig, ohne Zustimmung des Bürgers, handeln – z. B. eine Baugenehmigung erteilen oder versagen, Steuern festsetzen, eine Strafe verhängen.\n- **Privatrecht**: Regelt das Verhältnis zwischen gleichgeordneten Personen (Bürger zu Bürger, Unternehmen zu Unternehmen). Beide Seiten stehen sich rechtlich auf gleicher Ebene (Gleichordnung). Niemand kann dem anderen einseitig etwas aufzwingen – es bedarf grundsätzlich eines Vertrages.\n\n**Merkhilfe:** Im Privatrecht gilt der Grundsatz der **Privatautonomie** (Art. 2 Abs. 1 GG): Jeder darf seine Rechtsbeziehungen grundsätzlich selbst gestalten.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-oeffentlich-privat",
+          "title": "Öffentliches Recht vs. Privatrecht im Überblick",
+          "headers": ["Merkmal", "Öffentliches Recht", "Privatrecht"],
+          "rows": [
+            ["Verhältnis", "Über-/Unterordnung (Staat – Bürger)", "Gleichordnung (Bürger – Bürger)"],
+            ["Beispiele", "Staatsrecht, Verwaltungsrecht, Strafrecht, Sozialrecht", "Bürgerliches Recht (BGB), Handelsrecht, Gesellschaftsrecht, Arbeitsrecht"],
+            ["Gerichtszweig", "Verwaltungsgerichte, Strafgerichte", "Zivilgerichte (Amts-/Landgericht)"],
+            ["Grundprinzip", "Legalitätsprinzip – Staat darf nur, was erlaubt ist", "Privatautonomie – Bürger darf alles, was nicht verboten ist"],
+            ["Klausurrelevanz", "Nachbarveranstaltung \"Öffentliches Recht\"", "Diese Veranstaltung"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Abgrenzungstheorie: Modifizierte Subjektstheorie",
+          "body": "Öffentliches Recht liegt vor, wenn eine Rechtsnorm **nur den Staat** (als solchen) berechtigt oder verpflichtet. Privatrecht gilt dagegen für jedermann gleichmäßig. Diese sog. **modifizierte Subjektstheorie** ist die in der Praxis wichtigste Abgrenzungsformel."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Alltagsbeispiel zur Abgrenzung",
+          "body": "**Privatrecht:** A kauft bei B ein Fahrrad für 500 EUR. Beide sind gleichgestellt, A muss zahlen, B muss liefern – aus freiwilligem Vertrag (§ 433 BGB).\n\n**Öffentliches Recht:** Die Stadt Hannover untersagt dem B den Betrieb einer Gaststätte wegen Hygienemängeln. Die Behörde handelt einseitig aufgrund eines Gesetzes, ohne dass B zustimmen muss (§ 11 NPolG o. ä.)."
+        }
+      ]
+    },
+    {
+      "id": "s4-aufbau-bgb",
+      "heading": "Der Aufbau des BGB – wie ist das Gesetzbuch strukturiert?",
+      "body": "Das **Bürgerliche Gesetzbuch (BGB)** ist das zentrale Gesetz des deutschen Privatrechts. Es trat am 1. Januar 1900 in Kraft und gilt seitdem – mit vielen Änderungen – als das \"Grundgesetz des Privatrechts\".\n\n**Warum gibt es einen \"Allgemeinen Teil\"?**\n\nDas BGB ist nach dem sog. **Klammerprinzip** aufgebaut: Was in allen Bereichen gilt, wird einmal am Anfang vor die Klammer gezogen (= Allgemeiner Teil, AT). Was nur für bestimmte Bereiche gilt, steht im jeweiligen Besonderen Teil. Das spart Wiederholungen und macht das Gesetz konsistenter.\n\n**Die fünf Bücher des BGB:**",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-bgb-aufbau",
+          "title": "Aufbau des BGB",
+          "caption": "Das BGB besteht aus fünf Büchern. Der Allgemeine Teil (AT) gilt für alle anderen Bücher.",
+          "code": "graph TD\n  AT[1. Buch: Allgemeiner Teil AT\\nRechtssubjekte, Rechtsgeschäfte,\\nWillenserklärung, Fristen §§ 1–240] --> SchAT\n  AT --> SachenR\n  AT --> FamilR\n  AT --> ErbR\n  SchAT[2. Buch: Schuldrecht\\nAllgemeiner Teil: Pflichten, Leistungsstörungen\\nBesonderer Teil: Kauf, Miete, Werkvertrag... §§ 241–853]\n  SachenR[3. Buch: Sachenrecht\\nEigentum, Besitz, Pfandrecht §§ 854–1296]\n  FamilR[4. Buch: Familienrecht\\nEhe, Verwandtschaft, Vormundschaft §§ 1297–1921]\n  ErbR[5. Buch: Erbrecht\\nErbfolge, Testament §§ 1922–2385]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Was behandelt diese Veranstaltung?",
+          "body": "Schwerpunkt ist das **1. Buch (BGB AT)** sowie der **Allgemeine Teil des Schuldrechts (2. Buch)**. Das Schuldrecht BT (Kaufrecht, Mietrecht etc.) und das Sachenrecht werden in der Gliederung angesprochen, aber nicht vollständig ausgearbeitet."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Klammerprinzip des BGB",
+          "body": "Der BGB AT ist eine \"Klammer\" vor alle anderen Bücher: Was dort geregelt ist (z. B. wann eine Willenserklärung wirksam wird, wie man anficht, was Fristen bedeuten), gilt für das gesamte BGB – also auch für Kaufverträge, Mietrecht, Erbrecht usw."
+        }
+      ]
+    },
+    {
+      "id": "s5-normenpyramide-rechtsquellen",
+      "heading": "Rechtsquellen und Normenpyramide – wo steht das Recht?",
+      "body": "**Was sind Rechtsquellen?**\n\nRechtsnormen stehen nicht im luftleeren Raum – man muss wissen, wo man sie findet. Der Begriff **Rechtsquellen** bezeichnet alle Quellen, aus denen Rechtsnormen stammen.\n\nMan unterscheidet:\n- **Geschriebenes Recht** (formell: von einem Parlament beschlossen; materiell: Rechtsnormen mit Außenwirkung, z. B. Rechtsverordnungen und Satzungen)\n- **Ungeschriebenes Recht** (Gewohnheitsrecht, allgemeine Rechtsgrundsätze)\n\nZusätzlich gibt es drei Ebenen: **EU – Bund – Land**.\n\n**Die Normenpyramide** zeigt die Rangordnung: Höherrangiges Recht geht vor niederrangigem. Das EU-Recht hat Anwendungsvorrang vor dem Bundesrecht, das Bundesrecht hat Vorrang vor dem Landesrecht (Art. 31 GG).\n\n**Die Normenpyramide im Privatrecht** sieht etwas anders aus, weil viele privatrechtliche Normen **dispositiv** sind – das heißt: die Parteien können durch Vertrag etwas anderes vereinbaren als das Gesetz vorsieht. Nur wenn der Vertrag eine Lücke hat, gilt das dispositive Gesetz.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-normenpyramide-pr",
+          "title": "Normenpyramide im Privatrecht",
+          "caption": "Von oben nach unten: EU-Recht bricht nationales Recht, zwingendes Recht bricht Vertrag, Vertrag bricht dispositives Gesetz.",
+          "code": "graph TD\n  A[EU-Verträge / Richtlinien\\nz.B. Verbraucherschutz-RL] --> B\n  B[Grundgesetz +\\nzwingende Gesetze\\nz.B. §§ 134, 138 BGB] --> C\n  C[Vertrag\\nPrivatautonomie der Parteien\\nArt. 2 I GG] --> D\n  D[Dispositives Gesetz\\nz.B. § 433 BGB als Lückenfüller\\ngilt nur soweit kein Vertrag]"
+        },
+        {
+          "kind": "table",
+          "id": "tab-rechtsquellen",
+          "title": "Rechtsquellen und ihre Rangordnung (Kollisionsregeln)",
+          "headers": ["Kollisionsregel", "Bedeutung", "Beispiel"],
+          "rows": [
+            ["Lex superior (höherrangig)", "Höheres Recht geht vor niedrigerem", "GG bricht einfaches Gesetz; EU-Recht hat Anwendungsvorrang"],
+            ["Lex specialis (spezieller)", "Spezielleres Gesetz geht vor allgemeinerem", "Kaufrecht §§ 433 ff. BGB geht vor BGB AT als allg. Regelung"],
+            ["Lex posterior (jünger)", "Neueres Gesetz verdrängt älteres", "Weimarer Reichsverfassung wurde durch GG verdrängt"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Zwingendes vs. dispositives Recht",
+          "body": "**Zwingendes Recht** gilt immer – auch wenn die Parteien etwas anderes wollen (z. B. § 134 BGB: Gesetzesverbot, § 138 BGB: Sittenwidrigkeit). **Dispositives Recht** gilt nur, wenn die Parteien keine eigene Regelung getroffen haben – es ist sozusagen der gesetzliche \"Standardvertrag\", der durch eigene Vereinbarungen ersetzt werden kann."
+        }
+      ]
+    },
+    {
+      "id": "s6-rechtsnorm-und-methodik",
+      "heading": "Was ist eine Rechtsnorm? Aufbau, Merkmale und Zitieren",
+      "body": "**Was ist eine Rechtsnorm?**\n\nEine **Rechtsnorm** ist die kleinste Einheit des Rechts. Sie besteht immer aus:\n- einem **Tatbestand** (= die Voraussetzungen; das \"wenn...\")\n- einer **Rechtsfolge** (= was dann gilt; das \"...dann\")\n\nBeispiel: § 433 Abs. 1 S. 1 BGB: *\"Durch den Kaufvertrag wird der Verkäufer einer Sache verpflichtet, dem Käufer die Sache zu übergeben und das Eigentum an der Sache zu verschaffen.\"* → Tatbestand: Kaufvertrag liegt vor. Rechtsfolge: Übergabe- und Übereignungspflicht.\n\n**Merkmale einer Rechtsnorm** (damit sie Rechtsnorm und nicht bloß eine Sitte oder Moral ist):\n- **Generell-abstrakt**: gilt für viele Menschen (generell) und viele Situationen (abstrakt)\n- **Hoheitlich**: vom Staat in einem vorgesehenen Verfahren erlassen\n- **Allgemeinverbindlich**: kann mit staatlichem Zwang durchgesetzt werden\n- **Außenwirkung**: gilt nicht nur innerhalb des Staates, sondern gegenüber außenstehenden Personen\n\n**So zitiert man Rechtsnormen korrekt:**",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-zitierweise",
+          "title": "Zitierweise von Rechtsnormen: lang vs. kurz",
+          "headers": ["Element", "Langversion (für Klausur/Hausarbeit)", "Kurzversion (für Lösungsskizze)"],
+          "rows": [
+            ["Paragraf", "§ 1 BGB", "§ 1 BGB"],
+            ["Mit Absatz", "§ 92 Abs. 2 BGB", "§ 92 II BGB"],
+            ["Mit Absatz + Satz", "Art. 5 Abs. 1 S. 2 GG", "Art. 5 I 2 GG"],
+            ["Satz ohne Absatz", "§ 111 S. 2 BGB", "§ 111 S. 2 BGB"],
+            ["Mit Nummer", "§ 104 Nr. 1 BGB", "§ 104 Nr. 1 BGB"],
+            ["Mit Buchstabe", "§ 309 Nr. 1 lit. c BGB", "§ 309 Nr. 1 c) BGB"],
+            ["Mehrere §§", "§§ 145 ff. BGB", "§§ 145 ff. BGB"],
+            ["Verweis", "§ 108 i.V.m. § 184 BGB", "§ 108 i.V.m. § 184 BGB"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Aufbau jeder Rechtsnorm",
+          "body": "**Tatbestand (wenn)** → **Rechtsfolge (dann)**\n\nBeispiel: § 433 I 1 BGB: Wenn ein Kaufvertrag geschlossen wurde (Tatbestand), dann ist der Verkäufer zur Übergabe und Eigentumsübertragung verpflichtet (Rechtsfolge).\n\nTatbestandsmerkmale können **kumulativ** (alle müssen vorliegen, erkennbar an \"und\") oder **alternativ** (eines reicht, erkennbar an \"oder\") sein."
+        },
+        {
+          "kind": "tip",
+          "title": "Lang- oder Kurzversion?",
+          "body": "In der **Klausur** und in Hausarbeiten immer die **Langversion** verwenden. Die Kurzversion (römische Zahlen für Absätze) darf nur in Lösungsskizzen genutzt werden. Innerhalb eines Textes nie mischen!"
+        }
+      ]
+    },
+    {
+      "id": "s7-gutachtenstil-grundlagen",
+      "heading": "Der Gutachtenstil – die Grundlage jeder Klausur",
+      "body": "**Was ist der Gutachtenstil?**\n\nIn der Klausur löst man juristische Fälle im **Gutachtenstil** (nicht im Urteilsstil). Der Unterschied:\n\n- **Urteilsstil** (falsch für diese Klausur): Man nennt zuerst das Ergebnis, dann begründet man. \"A hat gegen B einen Anspruch, weil...\"\n- **Gutachtenstil** (richtig): Man formuliert zunächst eine Hypothese, prüft dann alle Voraussetzungen, und kommt am Ende zum Ergebnis.\n\n**Die vier Schritte des Gutachtenstils:**",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-gutachtenstil",
+          "title": "Die vier Schritte des Gutachtenstils",
+          "caption": "Jede Rechtsfrage wird nach diesem Schema bearbeitet – auch wenn es sich scheinbar wiederholt.",
+          "code": "graph TD\n  O[1. OBERSATZ\\nHypothese im Konjunktiv:\\n'A könnte gegen B einen Anspruch auf\\nZahlung von 500 EUR aus § 433 II BGB haben.'] --> D\n  D[2. DEFINITION\\nAbstrakte Voraussetzungen der Norm erläutern:\\n'Voraussetzung ist ein wirksam\\ngeschlossener Kaufvertrag.'] --> S\n  S[3. SUBSUMTION\\nSachverhalt unter die Definition bringen:\\n'A und B haben sich am 01.06. geeinigt,\\ndass A das Fahrrad für 500 EUR kauft.'] --> E\n  E[4. ERGEBNIS\\nIm Indikativ, kein Konjunktiv:\\n'Somit hat A gegen B einen\\nAnspruch auf Zahlung von 500 EUR.']"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Einstiegsfrage jedes Gutachtens: \"Wer will was von wem woraus?\"",
+          "body": "Diese vier Fragen strukturieren jede Fallbearbeitung:\n- **Wer?** = Anspruchsteller (Rechtssubjekt)\n- **Will was?** = das begehrte Rechtsobjekt (Zahlung, Herausgabe, Schadensersatz)\n- **Von wem?** = Anspruchsgegner (Rechtssubjekt)\n- **Woraus?** = Anspruchsgrundlage (die Norm, z. B. § 433 Abs. 2 BGB)\n\nDiese Formel stammt aus § 194 Abs. 1 BGB: Ein Anspruch ist \"das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen\"."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Kurzbeispiel Gutachtenstil: Hat K einen Anspruch auf das Buch?",
+          "body": "**Obersatz:** K könnte gegen V einen Anspruch auf Übereignung und Übergabe des Buches aus § 433 Abs. 1 S. 1 BGB haben.\n\n**Definition:** Dies setzt einen wirksam geschlossenen Kaufvertrag voraus. Ein Kaufvertrag kommt durch zwei übereinstimmende Willenserklärungen – Angebot und Annahme – zustande (§§ 145, 147 BGB).\n\n**Subsumtion:** V hat am Montag das Buch für 20 EUR angeboten (Angebot). K hat am selben Tag zugestimmt (Annahme). Die Erklärungen sind übereinstimmend.\n\n**Ergebnis:** K hat gegen V einen Anspruch auf Übereignung und Übergabe des Buches aus § 433 Abs. 1 S. 1 BGB."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-1",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Was ist der Unterschied zwischen Privatrecht und öffentlichem Recht?",
+      "back": "**Privatrecht** regelt Verhältnisse zwischen gleichgeordneten Personen (Gleichordnung, Privatautonomie). **Öffentliches Recht** regelt das Verhältnis Staat – Bürger (Über-/Unterordnung). Abgrenzung nach der **modifizierten Subjektstheorie**: ÖR liegt vor, wenn nur der Staat als solcher berechtigt/verpflichtet wird."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-2",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Wie sind die fünf Bücher des BGB aufgebaut?",
+      "back": "1. Buch: **Allgemeiner Teil** (§§ 1–240) – gilt als Klammer für alle anderen Bücher\n2. Buch: **Schuldrecht** (§§ 241–853) – AT + BT (Kauf, Miete, Werkvertrag…)\n3. Buch: **Sachenrecht** (§§ 854–1296)\n4. Buch: **Familienrecht** (§§ 1297–1921)\n5. Buch: **Erbrecht** (§§ 1922–2385)"
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-3",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Was sind die vier Schritte des Gutachtenstils?",
+      "back": "1. **Obersatz** (Hypothese im Konjunktiv: \"A könnte gegen B einen Anspruch auf … aus § … BGB haben.\")\n2. **Definition** (abstrakte Voraussetzungen der Norm)\n3. **Subsumtion** (Sachverhalt unter die Definition bringen)\n4. **Ergebnis** (im Indikativ: \"Somit hat A…\")"
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-4",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Was bedeutet die Formel \"Wer will was von wem woraus\"?",
+      "back": "Es ist die juristische Einstiegsfrage jeder Fallbearbeitung:\n- **Wer?** = Anspruchsteller\n- **Will was?** = das begehrte Rechtsobjekt\n- **Von wem?** = Anspruchsgegner\n- **Woraus?** = Anspruchsgrundlage (die einschlägige Norm)\n\nGesetzliche Grundlage: § 194 Abs. 1 BGB."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-5",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Was ist der Unterschied zwischen zwingendem und dispositivem Recht?",
+      "back": "**Zwingendes Recht** gilt immer, auch gegen den Willen der Parteien (z. B. § 134 BGB: Gesetzesverbot, § 138 BGB: Sittenwidrigkeit).\n\n**Dispositives Recht** kann durch vertragliche Vereinbarung abbedungen/ersetzt werden – es gilt nur als \"Lückenfüller\", wenn der Vertrag schweigt."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-6",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Welche vier Merkmale kennzeichnen eine Rechtsnorm?",
+      "back": "1. **Generell-abstrakt** (gilt für viele Personen und Sachverhalte)\n2. **Hoheitlich** (vom Staat im vorgesehenen Verfahren erlassen)\n3. **Allgemeinverbindlich** (mit staatlichem Zwang durchsetzbar)\n4. **Außenwirkung** (gilt gegenüber Personen außerhalb des Staatsapparats)\n\nAbgrenzung zu Sitte, Moral, Religion: Diese sind nicht hoheitlich und nicht allgemeinverbindlich."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-7",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Was besagt der Lex-specialis-Grundsatz?",
+      "back": "Von zwei kollidierenden Rechtsnormen ist die **speziellere** anzuwenden. Das allgemeinere Gesetz gilt dann nur **subsidiär** (d. h. als Lückenfüller). Beispiel: Das Kaufrecht (§§ 433 ff. BGB) ist lex specialis gegenüber dem BGB AT; der BGB AT ergänzt das Kaufrecht, soweit es keine eigene Regelung enthält."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-fc-8",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Wie zitiert man § 92 Absatz 2 BGB in der Langversion und der Kurzversion?",
+      "back": "**Langversion** (für Klausur/Hausarbeit): § 92 Abs. 2 BGB\n\n**Kurzversion** (nur für Lösungsskizzen): § 92 II BGB\n\nWichtig: In einem Text nie beide Varianten mischen!"
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q1",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "leicht",
+      "prompt": "Was regelt das Privatrecht?",
+      "options": [
+        "Das Verhältnis zwischen Staat und Bürger (Über-/Unterordnung)",
+        "Das Verhältnis zwischen gleichgeordneten Personen (Gleichordnung)",
+        "Ausschließlich Straftaten und ihre Folgen",
+        "Nur Vertragsbeziehungen zwischen Unternehmen"
+      ],
+      "correct": [1],
+      "explanation": "Privatrecht regelt das Verhältnis zwischen Personen, die rechtlich auf gleicher Ebene stehen (Gleichordnung). Das Über-/Unterordnungsverhältnis Staat–Bürger ist das Kennzeichen des öffentlichen Rechts. Das Strafrecht gehört zum öffentlichen Recht. Privatrecht gilt für alle Personen, nicht nur für Unternehmen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q2",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "leicht",
+      "prompt": "In der Klausur ist der Gutachtenstil verbindlich. Man beginnt also immer mit der Hypothese (Obersatz) und nennt das Ergebnis erst am Schluss.",
+      "answer": true,
+      "explanation": "Richtig. Der Gutachtenstil verlangt: Obersatz (Hypothese im Konjunktiv) → Definition → Subsumtion → Ergebnis (im Indikativ). Der Urteilsstil (Ergebnis zuerst) ist in dieser Klausur nicht erwünscht."
+    },
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q3",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "leicht",
+      "prompt": "Welche Bücher enthält das BGB? (Mehrfachauswahl – alle richtigen ankreuzen)",
+      "options": [
+        "Allgemeiner Teil",
+        "Strafrecht",
+        "Schuldrecht",
+        "Sachenrecht",
+        "Verwaltungsrecht",
+        "Familienrecht",
+        "Erbrecht"
+      ],
+      "correct": [0, 2, 3, 5, 6],
+      "multiple": true,
+      "explanation": "Das BGB besteht aus fünf Büchern: Allgemeiner Teil, Schuldrecht, Sachenrecht, Familienrecht und Erbrecht. Strafrecht (StGB) und Verwaltungsrecht gehören zum öffentlichen Recht und sind nicht im BGB geregelt."
+    },
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q4",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "mittel",
+      "prompt": "Was besagt die modifizierte Subjektstheorie zur Abgrenzung von öffentlichem Recht und Privatrecht?",
+      "options": [
+        "Öffentliches Recht liegt vor, wenn der Staat ausschließlich beteiligt ist",
+        "Öffentliches Recht liegt vor, wenn nur der Staat als solcher (einseitig) berechtigt oder verpflichtet wird",
+        "Privatrecht liegt vor, wenn eine Privatperson klagt",
+        "Öffentliches Recht gilt immer dann, wenn ein Gericht entscheidet"
+      ],
+      "correct": [1],
+      "explanation": "Die modifizierte Subjektstheorie: Öffentliches Recht liegt vor, wenn die Norm nur den Staat als hoheitlich handelndes Rechtssubjekt berechtigt oder verpflichtet. Privatrecht gilt dagegen für jedermann gleich. Option A ist zu weit (der Staat kann auch privatrechtlich handeln). C und D sind falsch."
+    },
+    {
+      "kind": "truefalse",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q5",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "mittel",
+      "prompt": "Der Allgemeine Teil des BGB (1. Buch) gilt auch für das Schuldrecht und das Sachenrecht, weil er nach dem Klammerprinzip vor diese \"vorgezogen\" wurde.",
+      "answer": true,
+      "explanation": "Richtig. Das Klammerprinzip bedeutet: Was in allen Rechtsgebieten des BGB gilt (z. B. Willenserklärungen, Fristen, Geschäftsfähigkeit), wird einmal im BGB AT geregelt. Dieser gilt dann als allgemeines Recht subsidiär neben und ergänzend zu den besonderen Büchern."
+    },
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q6",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "mittel",
+      "prompt": "Welche Kollisionsregel besagt: \"Das speziellere Gesetz geht dem allgemeineren vor\"?",
+      "options": [
+        "Lex posterior",
+        "Lex superior",
+        "Lex specialis",
+        "Lex generalis"
+      ],
+      "correct": [2],
+      "explanation": "Lex specialis derogat legi generali: Die speziellere Norm verdrängt die allgemeinere. Das allgemeinere Recht gilt dann nur noch subsidiär (ergänzend). Lex posterior = neueres Recht verdrängt älteres. Lex superior = höherrangiges Recht geht vor."
+    },
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q7",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "mittel",
+      "prompt": "Was sind die vier Merkmale einer Rechtsnorm? (Mehrfachauswahl)",
+      "options": [
+        "Generell-abstrakt",
+        "Freiwillig und unverbindlich",
+        "Hoheitlich erlassen",
+        "Allgemeinverbindlich",
+        "Nur für den Staat selbst geltend (keine Außenwirkung)",
+        "Außenwirkung"
+      ],
+      "correct": [0, 2, 3, 5],
+      "multiple": true,
+      "explanation": "Eine Rechtsnorm ist generell-abstrakt (für viele Personen/Sachverhalte), hoheitlich (staatlich erlassen), allgemeinverbindlich (Zwang möglich) und hat Außenwirkung (gilt gegenüber Außenstehenden). Sitte und Moral teilen manche dieser Merkmale, sind aber weder hoheitlich noch allgemeinverbindlich."
+    },
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q8",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "mittel",
+      "prompt": "Wie lautet die Langversion der Zitierweise für \"Paragraph 104 Nummer 1 BGB\"?",
+      "options": [
+        "§ 104 I BGB",
+        "§ 104 Nr. 1 BGB",
+        "§ 104 Abs. 1 BGB",
+        "Art. 104 Nr. 1 BGB"
+      ],
+      "correct": [1],
+      "explanation": "Nummern werden in beiden Versionen (lang und kurz) mit \"Nr.\" abgekürzt: § 104 Nr. 1 BGB. \"I\" steht für Absatz (Abs.) in der Kurzversion. Art. verwendet man nur für Artikel (z. B. im GG oder EU-Verträgen), nicht für BGB-Paragrafen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q9",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "schwer",
+      "prompt": "Dispositives Recht geht zwingendem Recht vor, weil die Parteien es durch Vertrag ersetzen können.",
+      "answer": false,
+      "explanation": "Falsch. Es ist genau umgekehrt: **Zwingendes Recht** hat Vorrang – es kann durch Vertrag NICHT abbedungen werden. Dispositives Recht ist nachrangig: Es gilt nur, wenn der Vertrag eine Lücke hat, und kann durch Vereinbarung der Parteien ersetzt werden. In der Normenpyramide des Privatrechts steht: zwingendes Gesetz > Vertrag > dispositives Gesetz."
+    },
+    {
+      "kind": "freetext",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q10",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie in eigenen Worten, warum im Privatrecht \"dispositives Recht\" existiert und welche Funktion es hat.",
+      "sampleAnswer": "Dispositives Recht existiert, weil im Privatrecht die Privatautonomie gilt: Jede Person soll ihre Rechtsbeziehungen grundsätzlich selbst gestalten können (Art. 2 Abs. 1 GG). Dennoch können Verträge lückenhaft sein – die Parteien regeln nicht jede Einzelheit. Dispositives Recht füllt diese Lücken mit sinnvollen Standardregelungen auf, die dem typischen Parteiwillen entsprechen. Es ist also ein \"gesetzlicher Standardvertrag\", der gilt, bis die Parteien etwas anderes vereinbaren.",
+      "keywords": ["privatautonomie", "lücke", "vertrag", "ergänzung", "standardregelung", "abbedingen"],
+      "explanation": "Kerngedanke: Dispositives Recht respektiert die Privatautonomie, indem es nur einspringt, wenn die Parteien keine eigene Regelung getroffen haben. Es ist kein Zwangsrecht, sondern gesetzgeberisches Angebot."
+    },
+    {
+      "kind": "freetext",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q11",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "schwer",
+      "prompt": "Formulieren Sie den Obersatz für folgende Fallkonstellation im Gutachtenstil: Käufer K hat bei Verkäufer V ein Fahrrad für 300 EUR gekauft. V verweigert nun die Lieferung. K möchte das Fahrrad erhalten.",
+      "sampleAnswer": "K könnte gegen V einen Anspruch auf Übergabe und Übereignung des Fahrrads aus § 433 Abs. 1 S. 1 BGB haben.",
+      "keywords": ["könnte", "anspruch", "§ 433", "übergabe", "übereignung", "haben"],
+      "explanation": "Der Obersatz nennt: (1) den Anspruchsteller (K), (2) den Anspruchsgegner (V), (3) den Inhalt des Anspruchs (Übergabe und Übereignung des Fahrrads), (4) die Anspruchsgrundlage (§ 433 Abs. 1 S. 1 BGB), und (5) die Formulierung im Konjunktiv II (\"könnte ... haben\"). Am Schluss steht ein Punkt, kein Ausrufezeichen."
+    },
+    {
+      "kind": "mc",
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-q12",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "difficulty": "leicht",
+      "prompt": "Welches der folgenden Rechtsgebiete gehört zum Privatrecht?",
+      "options": [
+        "Strafrecht",
+        "Verwaltungsrecht",
+        "Kaufrecht (§§ 433 ff. BGB)",
+        "Staatsrecht"
+      ],
+      "correct": [2],
+      "explanation": "Das Kaufrecht (§§ 433 ff. BGB) ist Teil des Schuldrechts im BGB und damit Privatrecht. Strafrecht, Verwaltungsrecht und Staatsrecht sind Teilgebiete des öffentlichen Rechts."
+    }
+  ],
+  "exercises": []
+}

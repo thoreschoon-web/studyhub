@@ -1,0 +1,356 @@
+{
+  "id": "methodik-grundlagen-der-rechtsanwendung-me",
+  "subjectId": "privatrecht",
+  "title": "Methodik: Grundlagen der Rechtsanwendung (Methodikteil 1)",
+  "summary": "Was ist Recht, wozu dient es, und wie ist es aufgebaut? Dieser Abschnitt erklärt die vier Aufgaben des Rechts, die Begriffe Recht / Gesetz / Rechtsnorm, die Merkmale einer Rechtsnorm (generell-abstrakt, hoheitlich, allgemeinverbindlich, Außenwirkung), die Abgrenzung von anderen Sozialnormen sowie den Unterschied zwischen objektivem und subjektivem Recht.",
+  "order": 8,
+  "estMinutes": 40,
+  "sections": [
+    {
+      "id": "aufgaben-des-rechts",
+      "heading": "1. Wozu gibt es überhaupt Recht?",
+      "body": "Stell dir vor, es gäbe keine Regeln: Jeder könnte dem anderen einfach etwas wegnehmen, Streitigkeiten würden endlos eskalieren, niemand wüsste, was ihm zusteht. Das Recht löst genau dieses Problem. Es erfüllt in unserer Gesellschaft vier eng miteinander verbundene **Aufgaben** (auch Funktionen genannt):\n\n**a) Gestaltungs- und Steuerungsfunktion**\nDas Recht ist ein Instrument des Staates, um unser Zusammenleben aktiv zu gestalten und zu steuern. Es ist die Verlängerung des demokratischen Mehrheitswillens: Was die Gesellschaft mehrheitlich für richtig hält, wird über das Recht für alle verbindlich gemacht. Gemeinsame Werte und Überzeugungen erhalten so eine rechtliche Form.\n\n*Beispiel:* Das BGB legt fest, dass Kaufverträge bindend sind — der Staat steuert damit, dass wirtschaftlicher Austausch verlässlich funktioniert.\n\n**b) Ordnungsfunktion**\nDas Recht schafft einen stabilen Rahmen, nach dem sich jede Person in der Gesellschaft richten kann. Diese Verlässlichkeit (Rechtssicherheit) ist die Voraussetzung für ein geordnetes Zusammenleben. Das Recht ist grundsätzlich auf Dauerhaftigkeit ausgelegt und legt selbst fest, wie es geändert werden darf.\n\n*Beispiel:* Ampelregeln (im weitesten Sinne Verkehrsrecht) schaffen Ordnung, ohne dass jeder Einzelfall neu verhandelt werden muss.\n\n**c) Zuordnungsfunktion (Rechtsgarantiefunktion)**\nMit dem Recht werden Interessen dem Einzelnen oder der Gesellschaft **zugeordnet** — und zwar mit einer staatlichen Garantie: Was mir rechtlich zusteht, kann ich notfalls vor Gericht durchsetzen. Das Recht schafft außerdem Freiräume, in denen der Einzelne selbstständig entscheiden darf (Privatautonomie, Art. 2 I GG).\n\n*Beispiel:* Das Eigentum (§ 903 BGB) ordnet eine Sache einer bestimmten Person zu und gibt ihr das Recht, andere davon auszuschließen.\n\n**d) Streitentscheidungs- und Befriedungsfunktion**\nWenn Interessen aufeinanderprallen, braucht es ein geordnetes Verfahren. Das Recht stellt die Regeln bereit, nach denen Konflikte gewaltfrei und verbindlich entschieden werden — und diese Entscheidung soll dauerhaft Rechtsfrieden schaffen.\n\n*Beispiel:* Ein Gericht entscheidet, wer einen Schaden bezahlen muss; danach ist der Streit rechtlich beendet.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die vier Aufgaben des Rechts",
+          "body": "1. **Gestaltung & Steuerung** — gemeinsame Werte verbindlich machen\n2. **Ordnung** — verlässlichen Rahmen schaffen\n3. **Zuordnung** — Interessen mit staatlicher Garantie zuweisen\n4. **Streitentscheidung & Befriedung** — Konflikte gewaltfrei und dauerhaft lösen"
+        },
+        {
+          "kind": "info",
+          "body": "Warum ist das klausurrelevant? Das Verstehen der Aufgaben hilft dir, den **Sinn** einer Rechtsnorm zu begreifen — das braucht man bei der teleologischen Auslegung (Sinn und Zweck der Norm, Methodikteil 4)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "me-fig-aufgaben",
+          "title": "Vier Aufgaben des Rechts",
+          "caption": "Das Recht erfüllt vier sich ergänzende Funktionen. Die Gestaltungsfunktion ist die übergeordnete; Streitentscheidung ist am deutlichsten sichtbar.",
+          "code": "graph TD\n    A[Das Recht] --> B[Gestaltung & Steuerung]\n    A --> C[Ordnung]\n    A --> D[Zuordnung]\n    A --> E[Streitentscheidung & Befriedung]\n    B --> F[gemeinsame Werte verbindlich machen]\n    C --> G[Verlässlichkeit & Rechtssicherheit]\n    D --> H[staatlich garantierte Rechtspositionen]\n    E --> I[gewaltfreier, dauerhafter Rechtsfrieden]"
+        }
+      ]
+    },
+    {
+      "id": "recht-gesetz-rechtsnorm",
+      "heading": "2. Recht, Gesetz und Rechtsnorm — wie hängt das zusammen?",
+      "body": "Diese drei Begriffe werden im Alltag oft durcheinandergeworfen. Im juristischen Studium musst du sie sauber auseinanderhalten.\n\n**Recht** ist der **Oberbegriff** für die gesamte Rechtsordnung — also die Gesamtheit aller geltenden Regeln, die das Zusammenleben verbindlich ordnen. Du kannst dir \"das Recht\" wie einen riesigen Container vorstellen.\n\n**Gesetze** sind die **Bücher und Texte** innerhalb dieses Containers, in denen Rechtsregeln niedergeschrieben sind. Das BGB ist ein Gesetz, das StGB ist ein Gesetz, die StVO ist ein Gesetz. Ein Gesetz besteht wiederum aus vielen einzelnen Paragraphen oder Artikeln.\n\n**Rechtsnormen** sind die **kleinsten Bausteine** — die einzelnen Regelungen. Eine Rechtsnorm ist der kleinste Teil der Rechtsordnung, der eine eigenständige Aussage (Tatbestand → Rechtsfolge) trifft. § 433 Absatz 1 Satz 1 BGB (\"Durch den Kaufvertrag wird der Verkäufer einer Sache verpflichtet, dem Käufer die Sache zu übergeben und das Eigentum an der Sache zu verschaffen.\") ist eine Rechtsnorm.\n\nDie Rechtsnorm ist der **Kern der Rechtsanwendung**: In der Klausur prüfst du immer, ob der Tatbestand einer bestimmten Rechtsnorm erfüllt ist und welche Rechtsfolge dann eintritt.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Schachtelstruktur: Recht > Gesetz > Rechtsnorm",
+          "body": "**Recht** (gesamte Rechtsordnung)\n  └── **BGB** (ein Gesetz)\n        ├── § 433 BGB (eine Rechtsnorm: Kaufvertrag)\n        ├── § 434 BGB (eine Rechtsnorm: Sachmangel)\n        └── § 812 BGB (eine Rechtsnorm: Bereicherungsrecht)"
+        },
+        {
+          "kind": "definition",
+          "title": "Rechtsnorm",
+          "body": "Eine **Rechtsnorm** ist die kleinste Einheit der Rechtsordnung. Sie besteht aus einem **Tatbestand** (\"wenn …\") und einer **Rechtsfolge** (\"dann …\") und ist generell-abstrakt, hoheitlich erlassen, allgemeinverbindlich und hat Außenwirkung."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "me-fig-hierarchie",
+          "title": "Recht > Gesetz > Rechtsnorm",
+          "caption": "Das Recht enthält viele Gesetze; jedes Gesetz enthält viele Rechtsnormen. Die Rechtsnorm ist der kleinste, selbstständige Baustein.",
+          "code": "graph TD\n    R[Das Recht\\ngesamte Rechtsordnung] --> G1[BGB]\n    R --> G2[StGB]\n    R --> G3[StVO ...]\n    G1 --> N1[§ 433 BGB\\nKaufvertrag]\n    G1 --> N2[§ 812 BGB\\nBereicherung]\n    G1 --> N3[§ 823 BGB\\nDelikt ...]"
+        }
+      ]
+    },
+    {
+      "id": "merkmale-rechtsnorm",
+      "heading": "3. Woran erkenne ich eine Rechtsnorm? — Die vier Merkmale",
+      "body": "Nicht jede Regel ist eine Rechtsnorm. Damit etwas als Rechtsnorm gilt, muss es vier Merkmale erfüllen. Du musst diese auswendig können, denn sie sind die Grundlage für die Abgrenzung des Rechts von anderen Sozialnormen.\n\n**Merkmal 1: Generell-abstrakt**\n- **Generell** bedeutet: Die Norm gilt für eine *Vielzahl von Personen*, nicht nur für eine bestimmte Einzelperson.\n- **Abstrakt** bedeutet: Die Norm gilt für eine *Vielzahl von Sachverhalten*, nicht nur für einen konkreten Einzelfall.\n\n*Gegenbeispiel:* Ein Urteil des Amtsgerichts Hannover, das Max Mustermann zur Zahlung von 500 € verurteilt, ist **kein** Gesetz — es ist konkret-individuell (gilt nur für Max Mustermann in genau diesem Fall).\n\n**Merkmal 2: Hoheitlich**\nEine Rechtsnorm muss durch staatlich legitimierte Instanzen in einem dafür vorgesehenen Verfahren erlassen worden sein. Der Deutsche Bundestag kann Gesetze erlassen; ein Privatunternehmen kann es nicht.\n\n*Gegenbeispiel:* Die Hausordnung eines privaten Vermieters ist nicht hoheitlich erlassen — sie gilt nur kraft Vertrag, nicht kraft staatlicher Autorität.\n\n**Merkmal 3: Allgemeinverbindlich**\nEine Rechtsnorm kann auch gegen den Willen einer Person mit (staatlichem) Zwang durchgesetzt werden. Das ist der entscheidende Unterschied zu moralischen Regeln: Wenn du gegen eine Rechtsnorm verstößt, drohen rechtliche Konsequenzen, die der Staat notfalls erzwingt.\n\n*Gegenbeispiel:* Eine moralische Regel wie \"Man soll nicht lügen\" ist nicht allgemeinverbindlich im Rechtssinn — niemand kann dich dafür verurteilen, dass du eine Lüge erzählst (außer es existiert eine spezifische Rechtsnorm, z. B. Betrug § 263 StGB).\n\n**Merkmal 4: Außenwirkung**\nDie Norm muss nicht nur für den Staat selbst oder für Teile seiner internen Organisation gelten, sondern für und gegenüber Personen **außerhalb** des staatlichen Rechtskreises verbindlich sein.\n\n*Gegenbeispiel:* Interne Geschäftsordnungen von Behörden (z. B. wie Akten abzulegen sind) haben grundsätzlich nur Innenwirkung — sie binden keine Bürger.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die vier Merkmale einer Rechtsnorm — Eselsbrücke: G-H-A-A",
+          "body": "**G**enerell-abstrakt · **H**oheitlich · **A**llgemeinverbindlich · **A**ußenwirkung\n\nFehlt auch nur eines dieser Merkmale, handelt es sich um keine Rechtsnorm im technischen Sinne."
+        },
+        {
+          "kind": "warning",
+          "title": "Ausnahme: Einzelfallgesetze",
+          "body": "Es gibt Ausnahmen vom Merkmal \"generell-abstrakt\", z. B. Einzelfallgesetze. Diese sind jedoch die absolute Ausnahme und im BGB-Studium nicht relevant. Für die Klausur gilt: Die vier Merkmale als Regel lernen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "me-table-merkmale",
+          "title": "Merkmale der Rechtsnorm im Überblick",
+          "headers": ["Merkmal", "Was es bedeutet", "Gegenbegriff"],
+          "rows": [
+            ["Generell-abstrakt", "Gilt für viele Personen & viele Sachverhalte", "Konkret-individuell (z. B. Urteil)"],
+            ["Hoheitlich", "Vom Staat in vorgeschriebenem Verfahren erlassen", "Privat (z. B. Hausordnung)"],
+            ["Allgemeinverbindlich", "Kann mit staatlichem Zwang durchgesetzt werden", "Unverbindlich (z. B. Moral)"],
+            ["Außenwirkung", "Gilt für Personen außerhalb des Staatsapparats", "Nur Innenwirkung (z. B. Behörden-GO)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abgrenzung-sozialnormen",
+      "heading": "4. Abgrenzung: Recht vs. andere Sozialnormen",
+      "body": "Neben Rechtsnormen gibt es andere Regeln, die unser Zusammenleben prägen — aber eben keine Rechtsnormen sind. Diese **sonstigen Sozialnormen** musst du vom Recht abgrenzen können.\n\n**Sitte (einschließlich Brauch, Tradition, Anstand)**\nDie Sitte zielt auf die Reglementierung äußerlich sichtbaren Verhaltens: Was ist in einer Gesellschaft üblich, was schickt sich? Die Sitte ist jedoch **weder hoheitlich** erlassen noch mit staatlichem Zwang durchsetzbar. Wer bei Tisch rülpst, verstößt gegen die Sitte, aber nicht gegen das Recht.\n\n*Überschneidungen:* Manchmal übernimmt das Recht Elemente der Sitte, z. B. die **Verkehrssitte** in §§ 157, 242 BGB (Treu und Glauben) oder der **Handelsbrauch** in § 346 HGB.\n\n**Ethik und Moral**\nMoral und Ethik zielen auf die innere Haltung des Menschen — nicht nur auf äußerlich sichtbares Verhalten. Moralische Regeln sind weder hoheitlich noch allgemeinverbindlich. Zudem gelten sie vielfach nur in bestimmten Kreisen (z. B. religiöse Gemeinschaft, Berufsgruppe).\n\nSanktionen gegen Verstöße gegen Moral und Sitte können nur gesellschaftliche oder religiöse Ächtung sein — kein staatlicher Zwang.\n\n*Überschneidungen:* Man spricht davon, dass das Recht das **\"ethische Minimum\"** verkörpert — also die Mindestanforderungen der Moral, die rechtlich verbindlich gemacht wurden. § 138 BGB (Sittenwidrigkeit) ist ein direktes Beispiel.\n\n**Religion**\nReligiöse Normen gleichen strukturell der Moral: Sie leiten die innere Haltung an, sind nicht hoheitlich und nicht mit staatlichem Zwang durchsetzbar. In einem säkularen Rechtsstaat trennt sich das staatliche Recht strikt von religiösen Normen.\n\n**Technische Normen (DIN-Normen, ISO-Standards)**\nTechnische Normen werden oft von privaten Organisationen (z. B. DIN e.V.) erlassen und sind zunächst nicht hoheitlich — daher keine Rechtsnormen. Allerdings übernimmt der Gesetzgeber vielfach technische Normen in Gesetze (**technische Vorschriften**), wodurch sie rechtlich verbindlich werden. Außerdem können technische Normen bei der Auslegung unbestimmter Rechtsbegriffe relevant werden (z. B. \"Fahrlässigkeit\" in § 276 Abs. 2 BGB).",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Prüfungsfrage: Ist das eine Rechtsnorm?",
+          "body": "**Frage:** Ist \"Ältere Menschen soll man im Bus einen Sitzplatz anbieten\" eine Rechtsnorm?\n\n**Antwort:** Nein. Es handelt sich um eine Sitte. Die Regel ist weder hoheitlich erlassen noch allgemeinverbindlich mit staatlichem Zwang durchsetzbar. Es fehlen die Merkmale einer Rechtsnorm."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "me-table-normen",
+          "title": "Rechtsnormen vs. sonstige Sozialnormen",
+          "headers": ["Norm", "Hoheitlich?", "Allgemeinverbindlich?", "Sanktion bei Verstoß"],
+          "rows": [
+            ["Rechtsnorm", "Ja", "Ja", "Staatlicher Zwang (Strafe, Schadensersatz, Vollstreckung)"],
+            ["Sitte / Brauch", "Nein", "Nein", "Gesellschaftliche Missbilligung"],
+            ["Moral / Ethik", "Nein", "Nein", "Moralische / soziale Ächtung"],
+            ["Religion", "Nein", "Nein", "Religiöse Ächtung"],
+            ["Technische Norm (privat)", "Nein (grds.)", "Nein (grds.)", "Keine direkte staatliche Sanktion"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "objektiv-subjektiv",
+      "heading": "5. Objektives Recht und subjektives Recht",
+      "body": "Der Begriff \"Recht\" wird in zwei grundlegend verschiedenen Bedeutungen gebraucht. Diesen Unterschied musst du sauber kennen.\n\n**Objektives Recht**\nDas **objektive Recht** ist die Gesamtheit aller Rechtsnormen — also das Recht als System. Wenn du sagst \"Das Recht erlaubt das\" oder \"Das ist gesetzlich geregelt\", meinst du das objektive Recht. Das BGB, das StGB, das GG — all das ist objektives Recht. Der Staat hat die Aufgabe, das objektive Recht zu wahren und durchzusetzen.\n\n**Subjektives Recht**\nDas **subjektive Recht** ist ein konkretes Recht, das einer bestimmten **Person** zugeordnet ist — ein Recht, das *mir* zusteht. Subjektive Rechte werden durch das objektive Recht verliehen und leiten sich davon ab.\n\nBeispiel: Das BGB (objektives Recht) regelt in § 433 Absatz 2, dass der Käufer den Kaufpreis zahlen muss. Sobald du einen Kaufvertrag abgeschlossen hast, hat der Verkäufer ein konkretes subjektives Recht auf Zahlung gegen genau dich.\n\n**Einteilung subjektiver Rechte**\n\nSubjektive Rechte werden weiter unterteilt in:\n\n- **Absolute Rechte**: Gelten gegenüber **jedermann** — du kannst sie gegen jeden durchsetzen. Das klassische Beispiel ist das Eigentum (§ 903 BGB): Du kannst jeden Dritten von deiner Sache ausschließen. Auch Persönlichkeitsrechte und Immaterialgüterrechte (Patent, Urheberrecht) sind absolute Rechte.\n\n- **Relative Rechte**: Gelten nur gegenüber **bestimmten Personen** — typischerweise aus einem Vertrag oder einem gesetzlichen Schuldverhältnis. Der Anspruch auf Lieferung aus einem Kaufvertrag gilt nur gegenüber dem Verkäufer, nicht gegenüber jedem beliebigen Dritten. Relative Rechte sind das Herzstück des Schuldrechts.\n\n**Anspruchsgrundlagen und Eingriffsgrundlagen**\n\nDamit subjektive Rechte auch durchgesetzt werden können, braucht man:\n- Eine **Anspruchsgrundlage** (z. B. § 433 Abs. 2 BGB): Sie gibt dem Rechtsinhaber das Recht, von einem anderen ein Tun oder Unterlassen zu fordern (§ 194 Abs. 1 BGB).\n- Eine **Eingriffsgrundlage**: Damit der Staat in subjektive Rechte eingreifen darf, braucht er seinerseits eine gesetzliche Grundlage — relevant vor allem im Öffentlichen Recht.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Objektives vs. subjektives Recht",
+          "body": "**Objektives Recht** = die Gesamtheit aller Rechtsnormen (das Rechtssystem als Ganzes, z. B. das BGB).\n\n**Subjektives Recht** = ein konkretes Recht, das einer bestimmten Person zusteht (z. B. mein Anspruch auf Kaufpreiszahlung gegen den Käufer).\n\nSubjektive Rechte werden durch das objektive Recht verliehen."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Alles zusammen am Kaufvertrag",
+          "body": "**Sachverhalt:** A kauft von B ein Fahrrad für 200 €.\n\n- **Objektives Recht:** § 433 BGB regelt allgemein den Kaufvertrag für alle Menschen.\n- **Subjektives Recht (absolut):** A wird Eigentümer des Fahrrads — Eigentumsrecht gilt gegenüber jedermann.\n- **Subjektives Recht (relativ):** B hat einen Anspruch auf Zahlung von 200 € — aber nur gegenüber A, nicht gegenüber C.\n- **Anspruchsgrundlage:** § 433 Abs. 2 BGB gibt B das Recht, von A die Zahlung zu fordern."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "me-fig-rechte",
+          "title": "Objektives und subjektives Recht",
+          "caption": "Das objektive Recht (Normensystem) verleiht subjektive Rechte an konkrete Personen. Subjektive Rechte sind entweder absolut (gegen jedermann) oder relativ (nur gegen bestimmte Personen).",
+          "code": "graph TD\n    O[Objektives Recht\\nGesamtheit der Rechtsnormen] -->|verleiht| S[Subjektives Recht\\nkonkretes Recht einer Person]\n    S --> A[Absolute Rechte\\ngelten gegenüber jedermann]\n    S --> R[Relative Rechte\\ngelten nur gegenüber bestimmten Personen]\n    A --> A1[Eigentum § 903 BGB]\n    A --> A2[Persönlichkeitsrecht]\n    R --> R1[Kaufpreisanspruch § 433 II BGB]\n    R --> R2[Schadensersatz § 280 I BGB]"
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung-pruefung",
+      "heading": "6. Zusammenfassung: Was bedeutet das für die Klausur?",
+      "body": "Dieser Methodikteil bildet das **Fundament** für alles, was in der Klausur kommt. Hier nochmals die wichtigsten Punkte auf einen Blick.\n\n**Was du können musst:**\n1. Die vier Aufgaben des Rechts nennen und erklären.\n2. Recht, Gesetz und Rechtsnorm sauber voneinander abgrenzen.\n3. Die vier Merkmale einer Rechtsnorm (G-H-A-A) benennen und auf einen konkreten Sachverhalt anwenden — d. h. prüfen, ob eine Regel eine Rechtsnorm ist oder nicht.\n4. Rechtsnormen von Sitte, Moral/Ethik, Religion und technischen Normen unterscheiden.\n5. Objektives und subjektives Recht unterscheiden und in absolute sowie relative Rechte einteilen.\n\n**Typische Klausurfrage:** \"Handelt es sich bei Regelung X um eine Rechtsnorm?\" — dann die vier Merkmale prüfen.\n\n**Verbindung zur Anspruchsprüfung:** In der Klausur prüfst du immer, ob der Tatbestand einer bestimmten **Rechtsnorm** (= Anspruchsgrundlage) erfüllt ist, damit die Rechtsfolge (= subjektives Recht auf Leistung) eintritt. Ohne das Verständnis von Tatbestand und Rechtsfolge kann keine Falllösung gelingen.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Lernstrategie",
+          "body": "Lerne die vier Merkmale der Rechtsnorm (G-H-A-A) und die Unterscheidung objektiv/subjektiv auswendig. Übe dann, diese Begriffe an konkreten Beispielen anzuwenden — in der Klausur wird Subsumtion erwartet, nicht nur bloßes Aufzählen."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "me-fc-1",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Nenne die vier Aufgaben des Rechts.",
+      "back": "1. Gestaltungs- und Steuerungsfunktion\n2. Ordnungsfunktion\n3. Zuordnungsfunktion (Rechtsgarantiefunktion)\n4. Streitentscheidungs- und Befriedungsfunktion"
+    },
+    {
+      "id": "me-fc-2",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist der Unterschied zwischen Recht, Gesetz und Rechtsnorm?",
+      "back": "**Recht** = Oberbegriff für die gesamte Rechtsordnung.\n**Gesetz** = ein Regelwerk innerhalb der Rechtsordnung (z. B. BGB, StGB).\n**Rechtsnorm** = kleinste selbstständige Einheit (ein einzelner Paragraph/Absatz), bestehend aus Tatbestand und Rechtsfolge."
+    },
+    {
+      "id": "me-fc-3",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Welche vier Merkmale muss eine Rechtsnorm aufweisen?",
+      "back": "**G**enerell-abstrakt (für viele Personen & Sachverhalte)\n**H**oheitlich (staatlich erlassen)\n**A**llgemeinverbindlich (mit staatlichem Zwang durchsetzbar)\n**A**ußenwirkung (gilt gegenüber Personen außerhalb des Staatsapparats)"
+    },
+    {
+      "id": "me-fc-4",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist der Unterschied zwischen objektivem und subjektivem Recht?",
+      "back": "**Objektives Recht** = die Gesamtheit aller Rechtsnormen (das Rechtssystem als Ganzes).\n**Subjektives Recht** = ein konkretes Recht, das einer bestimmten Person zusteht (z. B. Kaufpreisanspruch des Verkäufers)."
+    },
+    {
+      "id": "me-fc-5",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist der Unterschied zwischen absoluten und relativen subjektiven Rechten?",
+      "back": "**Absolute Rechte** gelten gegenüber jedermann (z. B. Eigentum § 903 BGB, Persönlichkeitsrecht).\n**Relative Rechte** gelten nur gegenüber bestimmten Personen (z. B. Ansprüche aus Vertrag oder Delikt)."
+    },
+    {
+      "id": "me-fc-6",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Warum ist eine Sitte (z. B. \"Herren lassen Damen den Vortritt\") keine Rechtsnorm?",
+      "back": "Die Sitte ist weder **hoheitlich** (nicht vom Staat erlassen) noch **allgemeinverbindlich** (kein staatlicher Zwang bei Verstoß). Es fehlen mindestens zwei der vier Merkmale einer Rechtsnorm."
+    },
+    {
+      "id": "me-fc-7",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was versteht man unter dem \"ethischen Minimum\" des Rechts?",
+      "back": "Das Recht verkörpert die Mindestanforderungen der Moral, die rechtlich verbindlich gemacht wurden. Sitte, Moral und Religion gehen in ihren Anforderungen über das Recht hinaus. § 138 BGB (Sittenwidrigkeit) ist ein Beispiel, wo Moral und Recht sich überschneiden."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "me-q1",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Antworten gibt ALLE vier Aufgaben des Rechts korrekt wieder?",
+      "options": [
+        "Gestaltung, Ordnung, Zuordnung, Streitentscheidung",
+        "Gestaltung, Kontrolle, Bestrafung, Befriedung",
+        "Ordnung, Sanktionierung, Regelung, Befriedung",
+        "Steuerung, Auslegung, Subsumtion, Befriedung"
+      ],
+      "correct": [0],
+      "explanation": "Die vier Aufgaben des Rechts sind: (1) Gestaltungs- und Steuerungsfunktion, (2) Ordnungsfunktion, (3) Zuordnungsfunktion, (4) Streitentscheidungs- und Befriedungsfunktion. Option A fasst diese korrekt zusammen."
+    },
+    {
+      "kind": "mc",
+      "id": "me-q2",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Aussagen beschreibt das Verhältnis von Recht, Gesetz und Rechtsnorm korrekt?",
+      "options": [
+        "Recht ist der Oberbegriff; Gesetze bestehen aus Rechtsnormen.",
+        "Rechtsnorm ist der Oberbegriff; Gesetze bestehen aus Rechten.",
+        "Gesetz ist der Oberbegriff; das Recht besteht aus Rechtsnormen.",
+        "Alle drei Begriffe sind gleichbedeutend."
+      ],
+      "correct": [0],
+      "explanation": "Das Recht ist der Oberbegriff (die gesamte Rechtsordnung). Gesetze (z. B. BGB) sind Teile des Rechts und bestehen jeweils aus Rechtsnormen (den kleinsten selbstständigen Einheiten)."
+    },
+    {
+      "kind": "mc",
+      "id": "me-q3",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "mittel",
+      "prompt": "Welche ZWEI der folgenden Merkmale sind zwingend erforderlich, damit eine Regel als Rechtsnorm gilt? (Mehrfachauswahl)",
+      "options": [
+        "Generell-abstrakt",
+        "Schriftlich niedergelegt",
+        "Hoheitlich erlassen",
+        "Von einer Mehrheit befürwortet"
+      ],
+      "correct": [0, 2],
+      "multiple": true,
+      "explanation": "Rechtsnormen müssen u. a. generell-abstrakt und hoheitlich erlassen sein. Das Merkmal \"schriftlich\" ist nicht zwingend (Gewohnheitsrecht ist ungeschrieben). Eine Mehrheitsbefürwortung ist für die Eigenschaft als Rechtsnorm nicht entscheidend (auch wenn Demokratie zugrunde liegt)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "me-q4",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "leicht",
+      "prompt": "Ein Urteil eines Amtsgerichts, das Max Mustermann zur Zahlung von 500 € verurteilt, ist eine Rechtsnorm im technischen Sinne.",
+      "answer": false,
+      "explanation": "Falsch. Ein Urteil ist konkret-individuell — es gilt nur für Max Mustermann in genau diesem Fall. Rechtsnormen müssen dagegen generell-abstrakt sein, d. h. für eine Vielzahl von Personen und Sachverhalten gelten. Dem Urteil fehlt das Merkmal \"generell-abstrakt\"."
+    },
+    {
+      "kind": "truefalse",
+      "id": "me-q5",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "mittel",
+      "prompt": "Die Hausordnung eines privaten Vermieters ist eine Rechtsnorm, weil sie für alle Mieter des Hauses verbindlich ist.",
+      "answer": false,
+      "explanation": "Falsch. Die Hausordnung gilt zwar für alle Mieter, ist aber nicht hoheitlich erlassen — sie wird nicht durch staatliche Legitimation, sondern durch Vertrag (Mietvertrag) verbindlich. Außerdem ist sie nicht allgemeinverbindlich im Sinne staatlichen Zwangs. Es fehlen die Merkmale \"hoheitlich\" und \"allgemeinverbindlich\"."
+    },
+    {
+      "kind": "truefalse",
+      "id": "me-q6",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "mittel",
+      "prompt": "Subjektive Rechte werden durch das objektive Recht verliehen und leiten sich von ihm ab.",
+      "answer": true,
+      "explanation": "Richtig. Das objektive Recht (die Gesamtheit der Rechtsnormen) verleiht subjektive Rechte. Ohne eine entsprechende Rechtsgrundlage im objektiven Recht gibt es kein subjektives Recht. Z. B. verleiht § 433 Abs. 2 BGB (objektives Recht) dem Verkäufer ein konkretes Recht auf Kaufpreiszahlung (subjektives Recht)."
+    },
+    {
+      "kind": "mc",
+      "id": "me-q7",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "mittel",
+      "prompt": "Das Eigentum (§ 903 BGB) ist ein Beispiel für welche Kategorie subjektiver Rechte?",
+      "options": [
+        "Relatives Recht, da es nur im Verhältnis zum Vertragspartner gilt",
+        "Absolutes Recht, da es gegenüber jedermann gilt",
+        "Objektives Recht, da es im BGB geregelt ist",
+        "Hoheitliches Recht, da es vom Staat verliehen wird"
+      ],
+      "correct": [1],
+      "explanation": "Das Eigentum ist ein absolutes Recht: Es wirkt gegenüber jedermann — jeder Dritte ist verpflichtet, das Eigentum des Eigentümers zu respektieren. \"Objektives Recht\" (Option C) wäre die Bezeichnung für das Rechtssystem als Ganzes, nicht für ein individuelles Recht."
+    },
+    {
+      "kind": "mc",
+      "id": "me-q8",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "mittel",
+      "prompt": "Welche Aussage zur Abgrenzung von Moral und Recht trifft zu?",
+      "options": [
+        "Moral und Recht sind identisch — alles Unmoralische ist auch rechtswidrig.",
+        "Moral ist hoheitlich erlassen und kann mit staatlichem Zwang durchgesetzt werden.",
+        "Das Recht verkörpert das \"ethische Minimum\": Sitte und Moral gehen in ihren Anforderungen über das Recht hinaus.",
+        "Moralische Regeln haben stets Außenwirkung, Rechtsnormen dagegen nicht."
+      ],
+      "correct": [2],
+      "explanation": "Sitte, Moral und Religion zielen auf mehr als das Recht: Sie fordern oft auch innere Haltungen und gelten in ihren Forderungen weiter als das Recht. Das Recht beschränkt sich auf das \"ethische Minimum\" — das Mindestmaß, das rechtlich erzwingbar ist. § 138 BGB (Sittenwidrigkeit) zeigt, wo Moral ins Recht einfließt."
+    },
+    {
+      "kind": "mc",
+      "id": "me-q9",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "schwer",
+      "prompt": "DIN-Normen (technische Normen, die von einem privaten Verein erlassen werden) sind zunächst keine Rechtsnormen. Welches der vier Merkmale fehlt ihnen vor allem?",
+      "options": [
+        "Generell-abstrakt — DIN-Normen gelten nur für Einzelfälle",
+        "Hoheitlich — DIN-Normen werden nicht durch staatlich legitimierte Instanzen erlassen",
+        "Außenwirkung — DIN-Normen haben nur Innenwirkung",
+        "Allgemeinverbindlich — DIN-Normen werden von niemandem befolgt"
+      ],
+      "correct": [1],
+      "explanation": "DIN-Normen sind generell-abstrakt (sie gelten für viele Produkte und Verfahren), haben Außenwirkung und werden in der Praxis weitgehend befolgt. Was fehlt, ist das Merkmal \"hoheitlich\": Sie werden von einem privaten Verein (DIN e.V.) erlassen, nicht von einer staatlich legitimierten Instanz in einem dafür vorgesehenen Verfahren. Erst wenn der Gesetzgeber sie übernimmt (\"technische Vorschriften\"), werden sie zu Rechtsnormen."
+    },
+    {
+      "kind": "freetext",
+      "id": "me-q10",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in 3-5 Sätzen: Was ist der Unterschied zwischen objektivem und subjektivem Recht? Nenne jeweils ein Beispiel.",
+      "sampleAnswer": "Das objektive Recht bezeichnet die Gesamtheit aller Rechtsnormen — also das Rechtssystem als Ganzes, z. B. das BGB oder das StGB. Es gilt abstrakt für alle Menschen. Das subjektive Recht ist dagegen ein konkretes Recht, das einer bestimmten Person zusteht, z. B. der Anspruch des Verkäufers auf Zahlung des Kaufpreises gegen den Käufer aus § 433 Abs. 2 BGB. Subjektive Rechte werden durch das objektive Recht verliehen. Ein weiteres Beispiel: Das Eigentumsrecht (§ 903 BGB, objektives Recht) verleiht mir als Eigentümer ein subjektives Recht, andere von meiner Sache auszuschließen.",
+      "keywords": ["objektiv", "gesamtheit", "rechtsnormen", "subjektiv", "person", "zugeordnet", "verliehen"],
+      "explanation": "Kernunterschied: Objektives Recht = Normensystem (für alle). Subjektives Recht = konkretes Recht einer Person (verliehen durch das objektive Recht). Diese Unterscheidung ist grundlegend für die gesamte Rechtsanwendung."
+    },
+    {
+      "kind": "truefalse",
+      "id": "me-q11",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "leicht",
+      "prompt": "Die Zuordnungsfunktion des Rechts bedeutet, dass Interessen dem Einzelnen oder der Gesellschaft rechtlich zugeordnet werden — und zwar mit einer staatlichen Garantie der Durchsetzbarkeit.",
+      "answer": true,
+      "explanation": "Richtig. Die Zuordnungsfunktion (auch Rechtsgarantiefunktion) ordnet Interessen zu und garantiert, dass diese Zuordnung mit rechtlichen Mitteln durchgesetzt werden kann. Das ist der entscheidende Unterschied zu bloßen moralischen Ansprüchen."
+    },
+    {
+      "kind": "mc",
+      "id": "me-q12",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "difficulty": "schwer",
+      "prompt": "A schuldete B 1.000 €. Das Amtsgericht verurteilt A zur Zahlung von 1.000 €. Welche der folgenden Aussagen ist juristisch korrekt?",
+      "options": [
+        "Das Urteil ist eine Rechtsnorm, da es für A und B verbindlich ist.",
+        "Das Urteil ist keine Rechtsnorm, da es konkret-individuell ist und das Merkmal generell-abstrakt fehlt.",
+        "Das Urteil ist eine Rechtsnorm, da es hoheitlich durch ein Gericht erlassen wurde.",
+        "Das Urteil ist eine Rechtsnorm, da es Außenwirkung hat."
+      ],
+      "correct": [1],
+      "explanation": "Das Urteil ist eine konkret-individuelle Entscheidung — es gilt nur für A und B in genau diesem Fall. Rechtsnormen müssen dagegen generell-abstrakt sein (für viele Personen und Sachverhalte gelten). Zwar ist das Urteil hoheitlich erlassen und hat Außenwirkung, aber das Merkmal \"generell-abstrakt\" fehlt. Daher ist es keine Rechtsnorm, sondern ein Einzelfallakt."
+    }
+  ],
+  "exercises": []
+}

@@ -1,0 +1,340 @@
+{
+  "id": "grundlagen-der-induktiven-statistik",
+  "subjectId": "statistik",
+  "title": "Grundlagen der induktiven Statistik",
+  "summary": "Von der Stichprobe auf die Grundgesamtheit schließen: Was ist eine einfache Zufallsstichprobe, was ist eine Stichprobenfunktion, und wie verhalten sich Stichprobenmittel und relative Häufigkeit statistisch? Das Kapitel legt das Fundament für alle Schätz- und Testverfahren.",
+  "order": 2,
+  "estMinutes": 40,
+  "sections": [
+    {
+      "id": "motivation",
+      "heading": "Warum überhaupt Induktive Statistik?",
+      "body": "Stell dir vor, du willst wissen, wie lange eine Glühbirne eines bestimmten Typs im Durchschnitt hält. Du kannst nicht alle jemals produzierten Glühbirnen testen – das wäre unmöglich und viel zu teuer. Stattdessen testest du eine **Stichprobe** von z. B. 100 Glühbirnen und schließt von diesem Ergebnis auf alle Glühbirnen.\n\nGenau das ist die Aufgabe der **induktiven Statistik** (auch: *schließende* oder *inferentielle* Statistik):\n\n> **Ziel:** Aus einer kleinen, zufällig gezogenen Stichprobe Rückschlüsse auf die unbekannten Eigenschaften der gesamten Grundgesamtheit ziehen.\n\nDie **beschreibende Statistik** (letztes Semester) hat nur das zusammengefasst, was direkt beobachtet wurde. Die induktive Statistik geht einen Schritt weiter: Sie macht Aussagen über Dinge, die man *nicht* direkt beobachtet hat – mit einer messbaren Unsicherheit.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Drei Hauptaufgaben der induktiven Statistik",
+          "body": "1. **Punktschätzung** – Einen unbekannten Parameter (z. B. Mittelwert μ) durch eine einzige Zahl schätzen.\n2. **Intervallschätzung** – Ein Intervall angeben, das den wahren Parameter mit hoher Wahrscheinlichkeit enthält.\n3. **Hypothesentests** – Überprüfen, ob eine Behauptung über die Grundgesamtheit mit den Stichprobendaten vereinbar ist."
+        }
+      ]
+    },
+    {
+      "id": "grundbegriffe",
+      "heading": "Grundbegriffe: Grundgesamtheit, Stichprobe und Zufallsvariable",
+      "body": "Bevor wir rechnen, müssen wir die wichtigsten Begriffe klären.\n\n**Grundgesamtheit** ist die Menge *aller* Elemente, über die man eine Aussage treffen möchte. Beispiele:\n- Alle Glühbirnen eines Herstellers\n- Alle Wahlberechtigten Deutschlands\n- Alle Fahrzeuge eines Logistikunternehmens\n\n**Stichprobe** ist die tatsächlich beobachtete Teilmenge der Grundgesamtheit. Sie muss **zufällig** gezogen werden, damit sie repräsentativ ist.\n\n**Zufallsvariable $X$** beschreibt das Merkmal, das wir messen. Die **Verteilungsfunktion** von $X$ ist die \"Verteilung der Grundgesamtheit\". Ihr Erwartungswert $\\mu$ und ihre Varianz $\\sigma^2$ sind in der Realität meist *unbekannt* – genau deshalb schätzen wir sie.\n\nWenn wir die $i$-te Beobachtung ziehen, interpretieren wir das Ergebnis als Realisation einer Zufallsvariablen $X_i$. Die gesamte Stichprobe ist dann $(X_1, X_2, \\ldots, X_n)$.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Einfache Zufallsstichprobe (i.i.d.)",
+          "body": "Eine Stichprobe $X_1, X_2, \\ldots, X_n$ heißt **einfache Zufallsstichprobe** vom Umfang $n$, wenn:\n1. Jedes Element wird gemäß einer uneingeschränkten Zufallsauswahl gezogen (jedes Element hat gleiche Ziehungswahrscheinlichkeit).\n2. Die Ziehungen sind **unabhängig** voneinander.\n3. Alle $X_i$ haben **dieselbe Verteilung** wie $X$ (die Grundgesamtheit).\n\nDiese drei Eigenschaften fasst man kurz als **i.i.d.** zusammen: *independent and identically distributed* (unabhängig und identisch verteilt)."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Stichprobenwerte vs. Stichprobenvariablen",
+          "body": "- **Vor** der Ziehung: $X_1, \\ldots, X_n$ sind *Zufallsvariablen* (wir wissen noch nicht, was rauskommt).\n- **Nach** der Ziehung: $x_1, \\ldots, x_n$ sind die konkreten *Messwerte* (Realisierungen). Man spricht von der **beobachteten Stichprobe**.\n\nDieser Unterschied ist wichtig: Solange wir noch nicht gemessen haben, können wir über die Verteilung von Stichprobengrößen sprechen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-grundbegriffe",
+          "title": "Vom Schließen von der Stichprobe auf die Grundgesamtheit",
+          "caption": "Die induktive Statistik schließt von der beobachteten Stichprobe (rechts) auf die unbekannte Grundgesamtheit (links).",
+          "code": "graph LR\n  A[\"Grundgesamtheit\\n(alle Elemente)\\nParameter: μ, σ² unbekannt\"] -->|\"zufällige Ziehung\\n(i.i.d.)\"| B[\"Stichprobe\\n(n Elemente)\\nX₁, X₂, ..., Xₙ\"]\n  B -->|\"induktiver Schluss\\n(Schätzung / Test)\"| A"
+        }
+      ]
+    },
+    {
+      "id": "stichprobenfunktionen",
+      "heading": "Stichprobenfunktionen (Schätzstatistiken)",
+      "body": "Eine **Stichprobenfunktion** (auch: *Schätzstatistik*) ist eine Funktion, die aus den Stichprobenwerten $X_1, \\ldots, X_n$ eine einzige Zahl berechnet. Da die $X_i$ Zufallsvariablen sind, ist auch die Stichprobenfunktion selbst eine Zufallsvariable – sie hat also eine eigene Verteilung, einen Erwartungswert und eine Varianz.\n\n**Beispiele für Stichprobenfunktionen:**\n\n| Funktion | Formel | Schätzt |\n|---|---|---|\n| Stichprobenmittel | $\\bar{X} = \\frac{1}{n}\\sum_{i=1}^n X_i$ | Erwartungswert $\\mu$ |\n| Stichprobenvarianz | $\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum_{i=1}^n (X_i - \\bar{X})^2$ | Varianz $\\sigma^2$ |\n| Relative Häufigkeit | $\\bar{p} = \\frac{\\text{Anzahl Erfolge}}{n}$ | Anteil $p$ |\n\nDas Stichprobenmittel $\\bar{X}$ ist die **wichtigste** Stichprobenfunktion. Wir analysieren sie jetzt genauer.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Warum n-1 bei der Stichprobenvarianz?",
+          "body": "Teilt man durch $n$ statt $n-1$, unterschätzt man systematisch die wahre Varianz $\\sigma^2$ der Grundgesamtheit. Mit $n-1$ im Nenner ist die Stichprobenvarianz **erwartungstreu**: $E(\\hat{\\sigma}^2) = \\sigma^2$. Den Faktor $n-1$ nennt man die **Freiheitsgrade** – man verliert einen Freiheitsgrad, weil $\\bar{X}$ in der Formel steckt."
+        }
+      ]
+    },
+    {
+      "id": "verteilung-stichprobenmittel",
+      "heading": "Verteilung des Stichprobenmittels $\\bar{X}$",
+      "body": "Das Stichprobenmittel $\\bar{X} = \\frac{1}{n}\\sum_{i=1}^n X_i$ ist selbst eine Zufallsvariable. Die zentrale Frage lautet: **Wie ist $\\bar{X}$ verteilt?**\n\n### Erwartungswert von $\\bar{X}$\n\n$$E(\\bar{X}) = E\\!\\left(\\frac{1}{n}\\sum_{i=1}^n X_i\\right) = \\frac{1}{n}\\sum_{i=1}^n E(X_i) = \\frac{1}{n}\\cdot n\\mu = \\mu$$\n\nDas bedeutet: **Im Mittel trifft $\\bar{X}$ den wahren Erwartungswert $\\mu$ genau.** Daher nennt man $\\bar{X}$ *erwartungstreu* für $\\mu$.\n\n### Varianz von $\\bar{X}$\n\n$$Var(\\bar{X}) = Var\\!\\left(\\frac{1}{n}\\sum_{i=1}^n X_i\\right) = \\frac{1}{n^2}\\sum_{i=1}^n Var(X_i) = \\frac{1}{n^2}\\cdot n\\sigma^2 = \\frac{\\sigma^2}{n}$$\n\nWichtige Erkenntnis: Je größer $n$, desto kleiner die Varianz von $\\bar{X}$. Mit wachsender Stichprobengröße wird $\\bar{X}$ immer genauer!\n\nDer **Standardfehler** (Standardabweichung von $\\bar{X}$) ist:\n$$\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}$$\n\n### Verteilung von $\\bar{X}$ bei normalverteilter Grundgesamtheit\n\nIst die Grundgesamtheit normalverteilt, $X_i \\sim N(\\mu, \\sigma^2)$, dann gilt:\n$$\\bar{X} \\sim N\\!\\left(\\mu,\\, \\frac{\\sigma^2}{n}\\right)$$\n\nNach Standardisierung:\n$$Z = \\sqrt{n} \\cdot \\frac{\\bar{X} - \\mu}{\\sigma} \\sim N(0,1)$$\n\nDiese standardisierte Größe wird später für Konfidenzintervalle und Tests verwendet.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Satz 3.4 (Skript) – Eigenschaften von $\\bar{X}$",
+          "body": "Seien $X_1, \\ldots, X_n$ i.i.d. mit $E(X_i) = \\mu$ und $Var(X_i) = \\sigma^2$. Dann gilt:\n- $E(\\bar{X}) = \\mu$\n- $Var(\\bar{X}) = \\frac{\\sigma^2}{n}$, also $\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}$\n- Falls zusätzlich $X_i \\sim N(\\mu, \\sigma^2)$: $\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$ und $\\sqrt{n}\\cdot\\frac{\\bar{X}-\\mu}{\\sigma} \\sim N(0,1)$."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Durchgerechnetes Beispiel: Stichprobenmittel",
+          "body": "**Situation:** Die Körpergröße von Männern sei normalverteilt mit $\\mu = 178$ cm und $\\sigma = 8$ cm. Du ziehst eine Stichprobe von $n = 16$ Männern.\n\n**Frage:** Mit welcher Wahrscheinlichkeit liegt das Stichprobenmittel $\\bar{X}$ zwischen 176 cm und 180 cm?\n\n**Lösung:**\n$$Var(\\bar{X}) = \\frac{64}{16} = 4, \\quad \\sigma_{\\bar{X}} = 2$$\n$$P(176 \\le \\bar{X} \\le 180) = P\\!\\left(\\frac{176-178}{2} \\le Z \\le \\frac{180-178}{2}\\right) = P(-1 \\le Z \\le 1)$$\n$$= \\Phi(1) - \\Phi(-1) = 2\\Phi(1) - 1 = 2 \\cdot 0{,}8413 - 1 = 0{,}6827$$\n\n**Ergebnis:** In ca. 68 % aller Stichproben liegt das Stichprobenmittel innerhalb von ±1 Standardfehler um den wahren Mittelwert."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-xbar-verengung",
+          "title": "Stichprobenmittel wird mit wachsendem n genauer",
+          "caption": "Mit wachsendem n verengt sich die Verteilung von X̄ um den wahren Mittelwert μ=0. Für n=1 entspricht sie der Grundgesamtheit (σ=1), für n=9 ist der Standardfehler 1/3, für n=25 ist er 1/5.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 0.2 },
+          "markers": [{ "x": 0, "label": "μ = 0" }]
+        }
+      ]
+    },
+    {
+      "id": "relative-haeufigkeit",
+      "heading": "Relative Häufigkeit als Stichprobenfunktion",
+      "body": "Manchmal interessiert uns nicht ein Mittelwert, sondern ein **Anteil**: Wie viele Prozent der Grundgesamtheit haben eine bestimmte Eigenschaft? Zum Beispiel: Wie viele Wähler bevorzugen Partei A?\n\nDen unbekannten wahren Anteil nennen wir $p$. Wir schätzen ihn durch die **relative Häufigkeit** in der Stichprobe:\n$$\\bar{p} = \\frac{\\text{Anzahl der Beobachtungen mit der Eigenschaft}}{n} = \\frac{x}{n}$$\n\nDie einzelnen Beobachtungen modellieren wir als Bernoulli-Variablen: $X_i = 1$, wenn die Eigenschaft vorliegt, $X_i = 0$ sonst. Dann ist $\\bar{p} = \\bar{X}$.\n\n### Eigenschaften von $\\bar{p}$\n\n**Erwartungswert:**\n$$E(\\bar{p}) = p$$\n$\\bar{p}$ ist erwartungstreu für den wahren Anteil $p$.\n\n**Varianz:**\n$$Var(\\bar{p}) = \\frac{p(1-p)}{n}$$\nAuch hier gilt: Größere Stichprobe → kleinere Unsicherheit.\n\n**Asymptotische Normalverteilung:**\n\nFür große $n$ (Faustregel: $n \\ge 30$, $np \\ge 10$, $n(1-p) \\ge 10$) gilt:\n$$\\sqrt{n} \\cdot \\frac{\\bar{p} - p}{\\sqrt{p(1-p)}} \\sim N(0,1)$$\n\nDas erlaubt es, mit der Normalverteilungstabelle zu arbeiten.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: Wahlumfrage",
+          "body": "**Situation:** In einer Umfrage mit $n = 400$ Personen geben 180 an, Partei A zu wählen.\n\n**Schätzung:** $\\bar{p} = \\frac{180}{400} = 0{,}45$\n\n**Standardfehler:** $\\sigma_{\\bar{p}} = \\sqrt{\\frac{0{,}45 \\cdot 0{,}55}{400}} = \\sqrt{\\frac{0{,}2475}{400}} = \\sqrt{0{,}00061875} \\approx 0{,}0249$\n\n**Interpretation:** Der geschätzte Anteil beträgt 45 %, mit einem Standardfehler von ca. 2,5 Prozentpunkten."
+        }
+      ]
+    },
+    {
+      "id": "standardisierung-und-tabellen",
+      "heading": "Standardisierung und Ablesen aus Tabellen",
+      "body": "In der Klausur stehen keine Computer zur Verfügung – stattdessen gibt es die **Verteilungstabelle der Standardnormalverteilung** $N(0,1)$. Das Ablesen erfordert eine Technik namens **Standardisierung**.\n\n### Schritt-für-Schritt: Standardisierung\n\nGegeben: $X \\sim N(\\mu, \\sigma^2)$ (oder $\\bar{X}$ mit entsprechenden Parametern).\n\n**Schritt 1:** Umformen auf eine standardnormalverteilte Größe $Z$:\n$$Z = \\frac{X - \\mu}{\\sigma} \\sim N(0,1)$$\n\nFür das Stichprobenmittel:\n$$Z = \\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} = \\sqrt{n} \\cdot \\frac{\\bar{X} - \\mu}{\\sigma} \\sim N(0,1)$$\n\n**Schritt 2:** Wahrscheinlichkeiten in $Z$-Terme umschreiben:\n$$P(a \\le X \\le b) = P\\!\\left(\\frac{a-\\mu}{\\sigma} \\le Z \\le \\frac{b-\\mu}{\\sigma}\\right) = \\Phi\\!\\left(\\frac{b-\\mu}{\\sigma}\\right) - \\Phi\\!\\left(\\frac{a-\\mu}{\\sigma}\\right)$$\n\n**Schritt 3:** Tabellenwerte ablesen. Die Tabelle gibt $\\Phi(z) = P(Z \\le z)$ für $z \\ge 0$. Für negative $z$:\n$$\\Phi(-z) = 1 - \\Phi(z)$$\n\n### Wichtige Quantile der Standardnormalverteilung\n\nDiese Werte solltest du auswendig kennen (oder aus der Tabelle ablesen):",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-quantile-tabelle",
+          "title": "Häufig verwendete Quantile der Standardnormalverteilung",
+          "headers": ["Konfidenzniveau 1-α", "α", "α/2", "z_{1-α/2} (zweiseitig)", "z_{1-α} (einseitig)"],
+          "rows": [
+            ["90 %", "0,10", "0,05", "1,645", "1,282"],
+            ["95 %", "0,05", "0,025", "1,960", "1,645"],
+            ["99 %", "0,01", "0,005", "2,576", "2,326"]
+          ]
+        },
+        {
+          "kind": "distribution",
+          "id": "fig-standardisierung",
+          "title": "Standardnormalverteilung mit zweiseitigem Bereich (95 %)",
+          "caption": "Die schraffierten Randflächen haben je die Größe α/2 = 2,5 %. Der mittlere Bereich (95 %) liegt zwischen den Quantilen -1,96 und +1,96.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "from": -1.96, "to": 1.96 },
+          "markers": [
+            { "x": -1.96, "label": "-z_{0.975} = -1,96" },
+            { "x": 1.96, "label": "z_{0.975} = 1,96" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Symmetrietrick bei der Normalverteilung",
+          "body": "Die Standardnormalverteilung ist symmetrisch um 0. Daher gilt:\n$$\\Phi(-z) = 1 - \\Phi(z)$$\nBeispiel: $\\Phi(-1{,}96) = 1 - \\Phi(1{,}96) = 1 - 0{,}9750 = 0{,}0250$."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Durchgerechnetes Beispiel: Standardisierung",
+          "body": "**Situation:** $X \\sim N(50, 25)$ (d.h. $\\mu = 50$, $\\sigma = 5$).\n\n**Gesucht:** $P(45 \\le X \\le 58)$\n\n**Lösung:**\n$$P(45 \\le X \\le 58) = \\Phi\\!\\left(\\frac{58-50}{5}\\right) - \\Phi\\!\\left(\\frac{45-50}{5}\\right) = \\Phi(1{,}6) - \\Phi(-1{,}0)$$\n$$= \\Phi(1{,}6) - (1 - \\Phi(1{,}0)) = 0{,}9452 - (1 - 0{,}8413) = 0{,}9452 - 0{,}1587 = 0{,}7865$$\n\n**Ergebnis:** Mit ca. 78,65 % Wahrscheinlichkeit liegt $X$ im Intervall [45, 58]."
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung",
+      "heading": "Zusammenfassung und Überblick",
+      "body": "Das Kapitel legt das Fundament für alle folgenden Methoden. Die wichtigsten Erkenntnisse:\n\n1. **Grundgesamtheit und Stichprobe:** Die Grundgesamtheit hat unbekannte Parameter $\\mu$ und $\\sigma^2$. Wir beobachten nur eine Stichprobe $(x_1, \\ldots, x_n)$.\n\n2. **i.i.d.-Annahme:** Die Stichprobenvariablen $X_1, \\ldots, X_n$ sind unabhängig und identisch verteilt wie die Grundgesamtheit.\n\n3. **Stichprobenmittel $\\bar{X}$:**\n   - $E(\\bar{X}) = \\mu$ (erwartungstreu)\n   - $Var(\\bar{X}) = \\frac{\\sigma^2}{n}$ (wird mit $n$ kleiner)\n   - Bei normalverteilter GG: $\\bar{X} \\sim N(\\mu, \\frac{\\sigma^2}{n})$\n\n4. **Relative Häufigkeit $\\bar{p}$:**\n   - $E(\\bar{p}) = p$, $Var(\\bar{p}) = \\frac{p(1-p)}{n}$\n   - Für große $n$ asymptotisch normalverteilt\n\n5. **Standardisierung:** Durch $Z = \\frac{\\bar{X} - \\mu}{\\sigma/\\sqrt{n}}$ erhält man eine $N(0,1)$-verteilte Größe, mit der man aus der Tabelle ablesen kann.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-uebersicht",
+          "title": "Übersicht: Stichprobenfunktionen und ihre Eigenschaften",
+          "headers": ["Schätzgröße", "Formel", "Erwartungswert", "Varianz", "Verteilung (normal. GG)"],
+          "rows": [
+            ["Stichprobenmittel $\\bar{X}$", "$\\frac{1}{n}\\sum X_i$", "$\\mu$", "$\\frac{\\sigma^2}{n}$", "$N(\\mu, \\sigma^2/n)$"],
+            ["Rel. Häufigkeit $\\bar{p}$", "$\\frac{x}{n}$", "$p$", "$\\frac{p(1-p)}{n}$", "asympt. $N(p, \\frac{p(1-p)}{n})$"],
+            ["Stichprobenvar. $\\hat{\\sigma}^2$", "$\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$", "$\\sigma^2$", "komplex", "–"]
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "gis-fc-1",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was versteht man unter einer einfachen Zufallsstichprobe (i.i.d.)?",
+      "back": "Eine Stichprobe $X_1, \\ldots, X_n$, bei der (1) alle Elemente zufällig mit gleicher Wahrscheinlichkeit gezogen werden, (2) die Ziehungen unabhängig sind und (3) alle $X_i$ dieselbe Verteilung wie die Grundgesamtheit haben. Kurz: **i**ndependent and **i**dentically **d**istributed."
+    },
+    {
+      "id": "gis-fc-2",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wie sind Erwartungswert und Varianz des Stichprobenmittels $\\bar{X}$?",
+      "back": "$E(\\bar{X}) = \\mu$ und $Var(\\bar{X}) = \\frac{\\sigma^2}{n}$. Der Standardfehler ist $\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}$."
+    },
+    {
+      "id": "gis-fc-3",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wie ist $\\bar{X}$ verteilt, wenn die Grundgesamtheit $N(\\mu, \\sigma^2)$ ist?",
+      "back": "$\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$ und nach Standardisierung: $Z = \\sqrt{n}\\cdot\\frac{\\bar{X}-\\mu}{\\sigma} \\sim N(0,1)$."
+    },
+    {
+      "id": "gis-fc-4",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was ist die Formel für den Standardfehler des Stichprobenmittels, und was sagt er aus?",
+      "back": "$\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}$. Er misst die durchschnittliche Abweichung des Stichprobenmittels vom wahren Mittelwert. Mit wachsendem $n$ sinkt er – größere Stichproben liefern genauere Schätzungen."
+    },
+    {
+      "id": "gis-fc-5",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wie standardisiert man $\\bar{X}$, um die Normalverteilungstabelle nutzen zu können?",
+      "back": "$Z = \\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} = \\sqrt{n} \\cdot \\frac{\\bar{X} - \\mu}{\\sigma} \\sim N(0,1)$. Dann kann man $\\Phi(z)$ direkt aus der Tabelle ablesen."
+    },
+    {
+      "id": "gis-fc-6",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wie sind Erwartungswert und Varianz der relativen Häufigkeit $\\bar{p}$?",
+      "back": "$E(\\bar{p}) = p$ (erwartungstreu) und $Var(\\bar{p}) = \\frac{p(1-p)}{n}$. Für große $n$: $\\sqrt{n}\\cdot\\frac{\\bar{p}-p}{\\sqrt{p(1-p)}} \\sim N(0,1)$."
+    },
+    {
+      "id": "gis-fc-7",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Warum teilt man bei der Stichprobenvarianz durch $n-1$ statt durch $n$?",
+      "back": "Damit $\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$ erwartungstreu ist: $E(\\hat{\\sigma}^2) = \\sigma^2$. Division durch $n$ würde die wahre Varianz systematisch unterschätzen. Der Nenner $n-1$ heißt Freiheitsgrade."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "gis-q1",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "leicht",
+      "prompt": "Was ist das Ziel der induktiven Statistik?",
+      "options": [
+        "Die vorliegenden Daten grafisch und tabellarisch zusammenfassen.",
+        "Von einer Stichprobe auf Eigenschaften der Grundgesamtheit schließen.",
+        "Alle Elemente einer Grundgesamtheit vermessen.",
+        "Die Stichprobengröße möglichst klein halten."
+      ],
+      "correct": [1],
+      "explanation": "Die induktive (schließende) Statistik schließt von einer kleinen Stichprobe auf die unbekannten Parameter der Grundgesamtheit. Die deskriptive Statistik (Option A) fasst nur das Beobachtete zusammen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "gis-q2",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "leicht",
+      "prompt": "Das Stichprobenmittel $\\bar{X}$ ist eine Zufallsvariable – es hat also eine eigene Verteilung.",
+      "answer": true,
+      "explanation": "Ja! Weil $\\bar{X}$ von den zufällig gezogenen $X_i$ abhängt, ist es selbst zufällig. Bei jeder neuen Stichprobe ergibt sich ein (leicht) anderes $\\bar{X}$. Die Verteilung von $\\bar{X}$ ist bei normalverteilter GG wieder eine Normalverteilung."
+    },
+    {
+      "kind": "numeric",
+      "id": "gis-q3",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "leicht",
+      "prompt": "Die Grundgesamtheit hat Varianz $\\sigma^2 = 36$. Sie ziehen eine Stichprobe der Größe $n = 9$. Wie groß ist die Varianz des Stichprobenmittels $Var(\\bar{X})$?",
+      "answer": 4,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$Var(\\bar{X}) = \\frac{\\sigma^2}{n} = \\frac{36}{9} = 4$. Der Standardfehler ist $\\sigma_{\\bar{X}} = \\sqrt{4} = 2$."
+    },
+    {
+      "kind": "numeric",
+      "id": "gis-q4",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Das Ladungsgewicht pro Fahrt sei normalverteilt mit $\\mu = 10$ t und $\\sigma = 2$ t. Wie groß ist die Wahrscheinlichkeit (in %), dass bei 25 zufällig ausgewählten Fahrten das **durchschnittliche** Ladungsgewicht zwischen 9 und 11 t liegt? (Auf eine Nachkommastelle gerundet.)",
+      "answer": 98.8,
+      "tolerance": 0.1,
+      "unit": "%",
+      "explanation": "$\\bar{X} \\sim N(10,\\, 4/25)$, also $\\sigma_{\\bar{X}} = 2/5 = 0{,}4$. Standardisierung: $z_u = (9-10)/0{,}4 = -2{,}5$ und $z_o = (11-10)/0{,}4 = 2{,}5$. Wahrscheinlichkeit: $\\Phi(2{,}5) - \\Phi(-2{,}5) = 2\\cdot\\Phi(2{,}5) - 1 = 2 \\cdot 0{,}9938 - 1 = 0{,}9876 \\approx 98{,}8\\%$."
+    },
+    {
+      "kind": "numeric",
+      "id": "gis-q5",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Das Ladungsgewicht sei normalverteilt mit $\\mu = 10$ t, $\\sigma = 2$ t. Welches Gewicht wird in **95 %** aller einzelnen Fahrten nicht überschritten? (Auf zwei Nachkommastellen gerundet.)",
+      "answer": 13.29,
+      "tolerance": 0.01,
+      "unit": "t",
+      "explanation": "Gesucht: $x_{0,95}$ mit $P(X \\le x) = 0{,}95$. Standardisierung: $z_{0,95} = 1{,}645$. Rückrechnung: $x_{0,95} = \\mu + z_{0,95} \\cdot \\sigma = 10 + 1{,}645 \\cdot 2 = 13{,}29$ t."
+    },
+    {
+      "kind": "mc",
+      "id": "gis-q6",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Aussagen zum Standardfehler $\\sigma_{\\bar{X}} = \\sigma / \\sqrt{n}$ sind korrekt?",
+      "options": [
+        "Er misst, wie stark das Stichprobenmittel im Mittel vom wahren $\\mu$ abweicht.",
+        "Er nimmt zu, wenn $n$ größer wird.",
+        "Bei doppeltem $n$ halbiert sich der Standardfehler.",
+        "Er ist unabhängig von $\\sigma$."
+      ],
+      "correct": [0, 2],
+      "multiple": true,
+      "explanation": "Option A: korrekt – der Standardfehler ist die Standardabweichung von $\\bar{X}$. Option B: falsch – er wird kleiner mit wachsendem $n$. Option C: korrekt – $\\sigma/\\sqrt{2n} = (\\sigma/\\sqrt{n})/\\sqrt{2}$; Halbierung braucht Vervierfachung von $n$. Option C ist die Faustregel: man braucht 4-mal so viele Beobachtungen für halb so großen Fehler. Option D: falsch."
+    },
+    {
+      "kind": "truefalse",
+      "id": "gis-q7",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Wenn die Grundgesamtheit normalverteilt ist und man $n = 5$ Beobachtungen zieht, dann ist das Stichprobenmittel $\\bar{X}$ exakt normalverteilt.",
+      "answer": true,
+      "explanation": "Ja! Die Normalverteilung ist stabil unter Summenbildung und Skalierung. Wenn die $X_i \\sim N(\\mu, \\sigma^2)$ sind, dann ist $\\bar{X} = \\frac{1}{n}\\sum X_i \\sim N(\\mu, \\sigma^2/n)$ – unabhängig von der Stichprobengröße $n$. Der zentrale Grenzwertsatz ist hier nicht nötig."
+    },
+    {
+      "kind": "freetext",
+      "id": "gis-q8",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Erkläre in eigenen Worten, warum der Standardfehler $\\sigma_{\\bar{X}} = \\sigma/\\sqrt{n}$ mit wachsendem $n$ sinkt. Was bedeutet das praktisch?",
+      "sampleAnswer": "Das Stichprobenmittel $\\bar{X}$ ist der Durchschnitt von $n$ unabhängigen Beobachtungen. Zufällige Abweichungen einzelner Werte nach oben und unten gleichen sich beim Mitteln teilweise aus – je mehr Werte man mittelt, desto stärker. Mathematisch teilt man die Varianz durch $n$, was die Standardabweichung um Faktor $\\sqrt{n}$ reduziert. Praktisch: Mit mehr Daten wird die Schätzung präziser.",
+      "keywords": ["ausgleichen", "mitteln", "präziser", "varianz", "stichprobengröße"],
+      "explanation": "Der Schlüssel ist die i.i.d.-Annahme: Da die $X_i$ unabhängig sind, addieren sich ihre Varianzen. Division durch $n^2$ ergibt $\\sigma^2/n$ für die Varianz des Mittels."
+    },
+    {
+      "kind": "numeric",
+      "id": "gis-q9",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "schwer",
+      "prompt": "Das Ladungsgewicht pro Fahrt sei normalverteilt mit $\\mu = 10$ t, $\\sigma = 2$ t. Pro Jahr werden **225 Fahrten** durchgeführt. Der Frachtsatz beträgt **50 € pro Tonne**. Wie groß ist die Wahrscheinlichkeit (in %), dass der jährliche Umsatz **108 000 €** unterschreitet? (Auf zwei Nachkommastellen gerundet, nutze $\\Phi(3) = 0{,}9987$.)",
+      "answer": 0.13,
+      "tolerance": 0.01,
+      "unit": "%",
+      "explanation": "Der Jahresumsatz ist $U = 50 \\cdot \\sum_{i=1}^{225} X_i$. Erwartungswert: $E(U) = 50 \\cdot 225 \\cdot 10 = 112\\,500$ €. Varianz: $Var(U) = 50^2 \\cdot 225 \\cdot 4 = 2\\,500 \\cdot 900 = 2\\,250\\,000$, also $\\sigma_U = 1\\,500$ €. Standardisierung: $z = (108\\,000 - 112\\,500)/1\\,500 = -3$. Wahrscheinlichkeit: $P(U < 108\\,000) = \\Phi(-3) = 1 - 0{,}9987 = 0{,}0013 = 0{,}13\\%$."
+    },
+    {
+      "kind": "mc",
+      "id": "gis-q10",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "schwer",
+      "prompt": "Die relative Häufigkeit $\\bar{p}$ in einer Stichprobe der Größe $n$ schätzt den wahren Anteil $p$. Welche Aussagen sind korrekt?",
+      "options": [
+        "$E(\\bar{p}) = p$ – der Schätzer ist erwartungstreu.",
+        "$Var(\\bar{p}) = p(1-p)/n$ – die Unsicherheit sinkt mit wachsendem $n$.",
+        "Für große $n$ gilt näherungsweise $\\bar{p} \\sim N(p, p(1-p)/n)$.",
+        "$Var(\\bar{p})$ ist maximal, wenn $p = 0{,}5$."
+      ],
+      "correct": [0, 1, 2, 3],
+      "multiple": true,
+      "explanation": "Alle vier Aussagen sind korrekt. A: Erwartungstreue folgt aus $E(\\bar{p}) = E(X/n) = p$. B: Varianzformel für relative Häufigkeit. C: Zentraler Grenzwertsatz bzw. Satz 3.13 aus dem Skript. D: $p(1-p)$ ist maximal bei $p = 0{,}5$ mit Wert $0{,}25$ – das ist die Worst-Case-Varianz."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "gis-ex-1",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "label": "Übungsblatt 2, Aufgabe 1 – Transportunternehmen",
+      "source": "Übungsblatt 2 (Punktschätzung und Konfidenzintervalle), Aufgabe 1",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "prompt": "Ein Transportunternehmen befördert seit vielen Jahren auf der Strecke AB durchschnittlich **10 t** Stückgut pro Fahrt bei einer Standardabweichung von **2 t**. Pro Jahr werden **225 Fahrten** durchgeführt. Es wird angenommen, dass das Ladungsgewicht normalverteilt ist und die Gewichte bei den einzelnen Fahrten unabhängig voneinander sind.\n\na) Welches Ladungsgewicht wird in **95 %** aller Fahrten nicht überschritten?\n\nb) Wie groß ist die Wahrscheinlichkeit dafür, dass bei **25 zufällig ausgewählten Fahrten** das durchschnittliche Ladungsgewicht zwischen **9 und 11 t** liegt?\n\nc) Wie groß ist die Wahrscheinlichkeit dafür, dass bei einem Frachtsatz von **50 € pro Tonne** der **jährliche Umsatz 108 000 €** unterschreitet?",
+      "hint": "a) Du suchst das 95%-Quantil von $X \\sim N(10, 4)$: $x_{0,95} = \\mu + z_{0,95}\\cdot\\sigma$. b) $\\bar{X}$ bei $n=25$ hat Standardfehler $\\sigma/\\sqrt{25}$. c) Der Jahresumsatz ist $U = 50 \\cdot \\sum_{i=1}^{225} X_i$; nutze Rechenregeln für Erwartungswert und Varianz von Summen.",
+      "solution": "## Lösung: Transportunternehmen\n\n**Gegeben:** $X \\sim N(\\mu, \\sigma^2) = N(10, 4)$, also $\\mu = 10$ t, $\\sigma = 2$ t, $n_{\\text{Jahr}} = 225$ Fahrten.\n\n---\n\n### Teilaufgabe a) 95%-Quantil des Ladungsgewichts\n\n**Frage:** Welches Gewicht $x_{0,95}$ wird in 95 % aller Fahrten **nicht überschritten**?\n\nGesucht ist das 0,95-Quantil: $P(X \\le x_{0,95}) = 0{,}95$.\n\n**Schritt 1:** Standardisieren. Aus der Tabelle: $z_{0,95} = 1{,}645$\n(da $\\Phi(1{,}645) = 0{,}95$).\n\n**Schritt 2:** Rückrechnen:\n$$x_{0,95} = \\mu + z_{0,95} \\cdot \\sigma = 10 + 1{,}645 \\cdot 2 = 10 + 3{,}29 = \\mathbf{13{,}29}\\text{ t}$$\n\n**Ergebnis:** In 95 % aller Fahrten werden höchstens **13,29 t** befördert.\n\n---\n\n### Teilaufgabe b) Wahrscheinlichkeit für das Stichprobenmittel bei n = 25\n\n**Gegeben:** Stichprobenumfang $n = 25$.\n\n**Schritt 1:** Verteilung von $\\bar{X}$ bestimmen:\n$$\\bar{X} \\sim N\\!\\left(\\mu,\\, \\frac{\\sigma^2}{n}\\right) = N\\!\\left(10,\\, \\frac{4}{25}\\right)$$\n$$\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{2}{\\sqrt{25}} = \\frac{2}{5} = 0{,}4 \\text{ t}$$\n\n**Schritt 2:** Standardisieren der Grenzen:\n$$z_u = \\frac{9 - 10}{0{,}4} = \\frac{-1}{0{,}4} = -2{,}5$$\n$$z_o = \\frac{11 - 10}{0{,}4} = \\frac{1}{0{,}4} = 2{,}5$$\n\n**Schritt 3:** Wahrscheinlichkeit berechnen:\n$$P(9 \\le \\bar{X} \\le 11) = \\Phi(2{,}5) - \\Phi(-2{,}5)$$\n$$= \\Phi(2{,}5) - (1 - \\Phi(2{,}5)) = 2\\Phi(2{,}5) - 1$$\n$$= 2 \\cdot 0{,}9938 - 1 = 1{,}9876 - 1 = \\mathbf{0{,}9876}$$\n\n**Ergebnis:** Mit Wahrscheinlichkeit **98,76 %** liegt der Durchschnitt aus 25 Fahrten zwischen 9 und 11 t.\n\n---\n\n### Teilaufgabe c) Wahrscheinlichkeit für den jährlichen Umsatz\n\n**Situation:** Der Jahresumsatz ist $U = 50 \\cdot \\sum_{i=1}^{225} X_i$ (50 € je Tonne, 225 Fahrten).\n\n**Schritt 1:** Erwartungswert von $U$:\n$$E(U) = 50 \\cdot E\\!\\left(\\sum_{i=1}^{225} X_i\\right) = 50 \\cdot 225 \\cdot \\mu = 50 \\cdot 225 \\cdot 10 = 112\\,500 \\text{ €}$$\n\n**Schritt 2:** Varianz von $U$ (Unabhängigkeit der Fahrten!):\n$$Var\\!\\left(\\sum_{i=1}^{225} X_i\\right) = 225 \\cdot Var(X_i) = 225 \\cdot 4 = 900$$\n$$Var(U) = 50^2 \\cdot 900 = 2\\,500 \\cdot 900 = 2\\,250\\,000$$\n$$\\sigma_U = \\sqrt{2\\,250\\,000} = 1\\,500 \\text{ €}$$\n\n**Schritt 3:** Verteilung von $U$:\nDa die $X_i$ normalverteilt und unabhängig sind:\n$$U \\sim N(112\\,500,\\; 1\\,500^2)$$\n\n**Schritt 4:** Standardisieren und Wahrscheinlichkeit ablesen:\n$$P(U < 108\\,000) = \\Phi\\!\\left(\\frac{108\\,000 - 112\\,500}{1\\,500}\\right) = \\Phi\\!\\left(\\frac{-4\\,500}{1\\,500}\\right) = \\Phi(-3)$$\n$$= 1 - \\Phi(3) = 1 - 0{,}9987 = \\mathbf{0{,}0013}$$\n\n**Ergebnis:** Die Wahrscheinlichkeit, dass der Jahresumsatz unter 108 000 € liegt, beträgt nur **0,13 %** – das ist sehr unwahrscheinlich.",
+      "hasOfficialSolution": false
+    }
+  ]
+}

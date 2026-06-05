@@ -1,0 +1,377 @@
+{
+  "id": "lineare-optimierung-graphisch",
+  "subjectId": "mathe-2",
+  "title": "Lineare Optimierung: graphische Lösung, Basislösungen und Polyederecken",
+  "summary": "Lineare Optimierungsprobleme (LP) aus der Produktionsplanung: Aufstellung in Standardform, graphische Lösung über Isogewinnlinien, Schlupfvariablen, Basislösungen und der Satz, dass Ecken des Polyeders genau den zulässigen Basislösungen entsprechen.",
+  "order": 10,
+  "estMinutes": 55,
+  "sections": [
+    {
+      "id": "was-ist-lp",
+      "heading": "Was ist ein lineares Optimierungsproblem?",
+      "body": "Stell dir vor, du betreibst eine kleine Fabrik und produzierst zwei Produkte — zum Beispiel Stühle ($x_1$) und Tische ($x_2$). Für jedes Produkt kennst du:\n- den **Deckungsbeitrag** (Gewinn pro Stück),\n- den **Ressourcenverbrauch** (z. B. Holz, Arbeitszeit) pro Einheit,\n- die **verfügbaren Ressourcen** (Kapazitätsgrenzen).\n\nDu willst den Gewinn **maximieren**, ohne die Grenzen zu überschreiten. Weil Gewinn und Beschränkungen alle **linear** in $x_1, x_2$ sind, heißt das ganze **Lineares Optimierungsproblem (LP)**.\n\n### Allgemeine Form (Maximierungsproblem)\n\n$$\\max\\; z = c_1 x_1 + c_2 x_2 + \\dots + c_n x_n$$\n\nso dass (subject to, kurz s.t.):\n\n$$a_{11}x_1 + a_{12}x_2 + \\dots + a_{1n}x_n \\leq b_1$$\n$$a_{21}x_1 + a_{22}x_2 + \\dots + a_{2n}x_n \\leq b_2$$\n$$\\vdots$$\n$$a_{m1}x_1 + a_{m2}x_2 + \\dots + a_{mn}x_n \\leq b_m$$\n$$x_1 \\geq 0,\\; x_2 \\geq 0,\\; \\dots,\\; x_n \\geq 0$$\n\n**Bedeutung der Symbole:**\n- $c_j$: Gewinn (Koeffizient) pro Einheit von $x_j$ — das ist dein **Zielfunktionskoeffizient**.\n- $a_{ij}$: Ressourcenverbrauch von Produkt $j$ in Ressource $i$ — die **Technologiematrix**.\n- $b_i$: verfügbare Menge von Ressource $i$ — die **rechte Seite**.\n- $x_j \\geq 0$: Du kannst keine negativen Mengen produzieren (**Nichtnegativitätsbedingungen**).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Lineares Optimierungsproblem (LP)",
+          "body": "Ein LP besteht aus:\n1. einer **linearen Zielfunktion** $z = \\vec{c}^T \\vec{x}$ (maximieren oder minimieren),\n2. **linearen Nebenbedingungen** $A\\vec{x} \\leq \\vec{b}$ (oder $\\geq$ oder $=$),\n3. **Nichtnegativitätsbedingungen** $\\vec{x} \\geq \\vec{0}$.\n\nAlle Variablen kommen nur in der ersten Potenz vor — keine $x^2$, keine $x_1 x_2$."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Laufendes Beispiel: Möbelfabrik",
+          "body": "**Gegeben:** Stühle ($x_1$) bringen 5 € Gewinn, Tische ($x_2$) bringen 8 €. Ressourcen:\n- Holz: $2x_1 + 4x_2 \\leq 24$ (24 Einheiten verfügbar)\n- Arbeit: $3x_1 + 2x_2 \\leq 18$ (18 Stunden verfügbar)\n- $x_1 \\geq 0,\\; x_2 \\geq 0$\n\n**Zielfunktion:** $\\max\\; z = 5x_1 + 8x_2$\n\nDieses Beispiel begleitet uns durch das gesamte Kapitel."
+        }
+      ]
+    },
+    {
+      "id": "graphische-loesung",
+      "heading": "Graphische Lösung: zulässiger Bereich und Isogewinnlinien",
+      "body": "Bei **zwei Entscheidungsvariablen** $x_1, x_2$ kann man die Lösung zeichnen. Das ist die wichtigste Methode, um LP intuitiv zu verstehen.\n\n## Schritt 1: Zulässigen Bereich einzeichnen\n\nJede Ungleichung $a_1 x_1 + a_2 x_2 \\leq b$ entspricht einer **Halbebene** in der $(x_1, x_2)$-Ebene. Die Grenze ist die Gerade $a_1 x_1 + a_2 x_2 = b$. Der zulässige Bereich ist der **Schnitt aller Halbebenen** — geometrisch ein konvexes Vieleck (Polyeder), oft ein **Polygon**.\n\n**Für unser Beispiel:**\n\n*Gerade 1 (Holz):* $2x_1 + 4x_2 = 24 \\Rightarrow x_1 = 12, x_2 = 0$ und $x_1 = 0, x_2 = 6$.\n\n*Gerade 2 (Arbeit):* $3x_1 + 2x_2 = 18 \\Rightarrow x_1 = 6, x_2 = 0$ und $x_1 = 0, x_2 = 9$.\n\nDer zulässige Bereich ist das Polygon mit den Ecken:\n- $E_0 = (0, 0)$ (Ursprung)\n- $E_1 = (6, 0)$ (Holz noch frei, Arbeit ausgeschöpft)\n- $E_2 = ?$ (Schnittpunkt der beiden Geraden)\n- $E_3 = (0, 6)$ (Holz ausgeschöpft)\n\n**Schnittpunkt der Geraden berechnen:**\n$$2x_1 + 4x_2 = 24 \\quad (\\text{I})$$\n$$3x_1 + 2x_2 = 18 \\quad (\\text{II})$$\n\nMultipliziere (II) mit 2: $6x_1 + 4x_2 = 36$. Subtrahiere (I): $4x_1 = 12 \\Rightarrow x_1 = 3$.\n\nEinsetzen in (I): $6 + 4x_2 = 24 \\Rightarrow 4x_2 = 18 \\Rightarrow x_2 = 4{,}5$.\n\nAlso $E_2 = (3,\\; 4{,}5)$.\n\n## Schritt 2: Isogewinnlinien verschieben\n\nEine **Isogewinnlinie** (auch: Isoertragslinie, Niveaulinie der Zielfunktion) ist die Menge aller Punkte mit demselben Zielwert:\n$$\\{(x_1, x_2) \\mid 5x_1 + 8x_2 = z\\}$$\nFür verschiedene Werte von $z$ erhält man **parallele Geraden**.\n\nDie Idee: Beginne mit einer niedrigen Isogewinnlinie (z. B. $z = 0$) und **verschiebe sie** in Richtung wachsender $z$-Werte, solange du im zulässigen Bereich bleibst. Das Optimum liegt im letzten berührten Punkt des zulässigen Bereichs.\n\n## Schritt 3: Optimum ablesen und prüfen\n\nIn den Ecken auswerten:\n- $E_0 = (0,0)$: $z = 0$\n- $E_1 = (6,0)$: $z = 5 \\cdot 6 + 8 \\cdot 0 = 30$\n- $E_2 = (3, 4{,}5)$: $z = 5 \\cdot 3 + 8 \\cdot 4{,}5 = 15 + 36 = 51$\n- $E_3 = (0,6)$: $z = 5 \\cdot 0 + 8 \\cdot 6 = 48$\n\n**Optimum:** $E_2 = (3, 4{,}5)$ mit $z^* = 51$.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Fundamentalsatz der Linearen Optimierung",
+          "body": "Falls ein LP ein endliches Optimum besitzt, wird es **in einer Ecke** des zulässigen Bereichs angenommen. Es reicht also, nur die Ecken zu testen!"
+        },
+        {
+          "kind": "tip",
+          "title": "Richtung der Verbesserung ablesen",
+          "body": "Der Gradient der Zielfunktion $\\nabla z = (c_1, c_2)^T = (5, 8)^T$ zeigt die Richtung des steilsten Anstiegs. Die Isogewinnlinien werden **senkrecht dazu** verschoben."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "lp-fig-zulaessig",
+          "title": "Zulässiger Bereich und optimale Ecke",
+          "caption": "Zulässiges Polygon (grau) mit den Nebenbedingungsgeraden (Holz und Arbeit) und einer Isogewinnlinie z=51 durch das Optimum E2=(3; 4,5).",
+          "functions": [
+            { "fn": "(24 - 2*x) / 4", "label": "Holz: 2x₁+4x₂=24", "color": "blue" },
+            { "fn": "(18 - 3*x) / 2", "label": "Arbeit: 3x₁+2x₂=18", "color": "red" },
+            { "fn": "(51 - 5*x) / 8", "label": "Isogewinn z=51", "color": "green", "dashed": true }
+          ],
+          "domain": [0, 8],
+          "range": [0, 10],
+          "points": [
+            { "x": 0, "y": 0, "label": "E0" },
+            { "x": 6, "y": 0, "label": "E1" },
+            { "x": 3, "y": 4.5, "label": "E2* Optimum" },
+            { "x": 0, "y": 6, "label": "E3" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "standardform-schlupf",
+      "heading": "LP-Standardform und Schlupfvariablen",
+      "body": "Um LP algebraisch zu behandeln (und später den Simplex-Algorithmus anzuwenden), formen wir Ungleichungen in **Gleichungen** um. Dafür führen wir **Schlupfvariablen** ein.\n\n## Was ist eine Schlupfvariable?\n\nFür eine Ungleichung $a_1 x_1 + a_2 x_2 \\leq b$ gilt: Die linke Seite ist kleiner oder gleich $b$. Der **Schlupf** $s = b - (a_1 x_1 + a_2 x_2) \\geq 0$ gibt an, wie viel Kapazität noch **ungenutzt** bleibt.\n\nSomit: $a_1 x_1 + a_2 x_2 + s = b$ mit $s \\geq 0$.\n\n## Standardform\n\nDas allgemeine LP mit $n$ echten Variablen und $m$ Ungleichungen wird zu:\n\n$$\\max\\; z = c_1 x_1 + \\dots + c_n x_n + 0 \\cdot s_1 + \\dots + 0 \\cdot s_m$$\n\n$$A\\vec{x} + I\\vec{s} = \\vec{b},\\quad \\vec{x} \\geq \\vec{0},\\quad \\vec{s} \\geq \\vec{0}$$\n\nDie erweiterte Matrix $[A \\mid I]$ hat $m$ Zeilen und $N = n + m$ Spalten. Das Gleichungssystem hat mehr Unbekannte als Gleichungen ($N > m$), daher gibt es unendlich viele Lösungen — wir suchen die **beste zulässige**.\n\n## Für unser Beispiel\n\nMit $x_1, x_2$ und Schlupfvariablen $s_1$ (Holz), $s_2$ (Arbeit):\n\n$$2x_1 + 4x_2 + s_1 = 24$$\n$$3x_1 + 2x_2 + s_2 = 18$$\n$$x_1, x_2, s_1, s_2 \\geq 0$$\n\nDie erweiterte Systemmatrix ist:\n$$[A \\mid I] = \\begin{pmatrix} 2 & 4 & 1 & 0 \\\\ 3 & 2 & 0 & 1 \\end{pmatrix}, \\quad \\vec{b} = \\begin{pmatrix} 24 \\\\ 18 \\end{pmatrix}$$\n\nWir haben $m = 2$ Gleichungen und $N = 4$ Variablen.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Schlupf = nicht genutzte Kapazität",
+          "body": "$s_i = 0$: die $i$-te Nebenbedingung ist **aktiv** (genau ausgeschöpft, Rand).\n$s_i > 0$: die $i$-te Nebenbedingung ist **inaktiv** (noch Luft nach oben, Inneres)."
+        },
+        {
+          "kind": "formel",
+          "title": "LP-Standardform (Matrixschreibweise)",
+          "body": "$$\\max\\; \\vec{c}^T \\vec{x} \\quad \\text{u.d.NB} \\quad A\\vec{x} = \\vec{b},\\; \\vec{x} \\geq \\vec{0}$$\nHier sind $\\vec{x}$ alle Variablen inkl. Schlupf, und $A$ enthält die Einheitsmatrix als rechten Teil."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "lp-tab-schlupf",
+          "title": "Schlupfvariablen an den Ecken des Beispiels",
+          "headers": ["Ecke", "x₁", "x₂", "s₁ = 24−2x₁−4x₂", "s₂ = 18−3x₁−2x₂", "aktive Restr."],
+          "rows": [
+            ["E0 = (0,0)", "0", "0", "24", "18", "keine"],
+            ["E1 = (6,0)", "6", "0", "12", "0", "Arbeit"],
+            ["E2 = (3,4.5)", "3", "4.5", "0", "0", "Holz + Arbeit"],
+            ["E3 = (0,6)", "0", "6", "0", "6", "Holz"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basisloesung",
+      "heading": "Basislösungen und zulässige Basislösungen",
+      "body": "Jetzt kommt das algebraische Herzstück: Was ist eine **Basislösung** und wie findet man sie?\n\n## Idee\n\nWir haben $m$ Gleichungen und $N$ Variablen, also $N - m$ \"Freiheitsgrade\". Eine **Basislösung** entsteht, wenn man genau $N - m$ Variablen auf **Null setzt** und das verbleibende $(m \\times m)$-Gleichungssystem eindeutig löst.\n\n## Formale Definition (Def. 12)\n\nSei $A\\vec{x} = \\vec{b}$ mit $A \\in \\mathbb{R}^{m \\times N}$, $m < N$. Wähle $m$ Spalten von $A$ — die **Basisvariablen** $x_{j_1}, \\dots, x_{j_m}$ — so, dass die zugehörige $(m \\times m)$-Teilmatrix $B$ **invertierbar** (regulär) ist. Dann:\n\n$$\\text{setze die übrigen } N - m \\text{ Variablen (Nichtbasisvariablen) auf } 0$$\n$$\\text{löse } B \\vec{x}_B = \\vec{b} \\Rightarrow \\vec{x}_B = B^{-1}\\vec{b}$$\n\nDer resultierende Vektor $\\vec{x}$ heißt **Basislösung**.\n\n- Gilt zusätzlich $\\vec{x}_B \\geq \\vec{0}$, so heißt sie **zulässige Basislösung** (ZBL).\n\n## Satz 10: Ecken = Zulässige Basislösungen\n\n$$\\text{(ZBL)} \\iff \\text{Ecke des Polyeders}$$\n\nDas ist der zentrale Satz: Jede Ecke des zulässigen Bereichs entspricht genau einer zulässigen Basislösung — und umgekehrt. Deshalb reicht es, nur Basislösungen zu betrachten!\n\n## Beispiel: Alle Basislösungen finden\n\nWir haben $N = 4$ Variablen, $m = 2$ Gleichungen, also $\\binom{4}{2} = 6$ mögliche Basen.\n\n**Systemmatrix:**\n$$[A \\mid I] = \\begin{pmatrix} 2 & 4 & 1 & 0 \\\\ 3 & 2 & 0 & 1 \\end{pmatrix}$$\n\n| Basis (Spalten) | Nichtbasisvar. = 0 | $x_B = B^{-1}b$ | zulässig? |\n|---|---|---|---|\n| $\\{s_1, s_2\\}$ | $x_1=x_2=0$ | $s_1=24, s_2=18$ | ✓ → $E_0$ |\n| $\\{x_1, s_1\\}$ | $x_2=s_2=0$ | Aus $3x_1=18 \\Rightarrow x_1=6$; $s_1=24-12=12$ | ✓ → $E_1$ |\n| $\\{x_1, x_2\\}$ | $s_1=s_2=0$ | Löse $2x_1+4x_2=24,\\; 3x_1+2x_2=18 \\Rightarrow x_1=3,\\; x_2=4{,}5$ | ✓ → $E_2$ |\n| $\\{x_2, s_2\\}$ | $x_1=s_1=0$ | Aus $4x_2=24 \\Rightarrow x_2=6$; $s_2=18-12=6$ | ✓ → $E_3$ |\n| $\\{x_1, x_2\\}$-Variante mit $\\{x_2, s_1\\}$ | $x_1=s_2=0$ | $4x_2=24 \\Rightarrow x_2=6$; $s_1=0$ | (das ist $E_3$) |\n| $\\{x_1, s_2\\}$ | $x_2=s_1=0$ | $2x_1=24 \\Rightarrow x_1=12$; $3 \\cdot 12 = 36 > 18$: Widerspruch | ✗ (nicht zulässig) |\n\nDie 4 zulässigen Basislösungen entsprechen genau den 4 Ecken $E_0, E_1, E_2, E_3$.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Basislösung — Kochrezept",
+          "body": "1. Wähle $m$ Spalten aus $[A \\mid I]$, die linear unabhängig sind (= Basis).\n2. Setze alle anderen $N-m$ Variablen auf **Null** (Nichtbasisvariablen).\n3. Löse das $m \\times m$-System (z. B. per Gauß) für die Basisvariablen.\n4. Prüfe: Sind alle Basisvariablen $\\geq 0$? → **Zulässige** Basislösung (= Ecke)."
+        },
+        {
+          "kind": "warning",
+          "title": "Viele mögliche Basen",
+          "body": "Bei $N$ Variablen und $m$ Gleichungen gibt es $\\binom{N}{m}$ Basen. Für große LP ist das riesig — deshalb brauchen wir den Simplex-Algorithmus (nächstes Kapitel), der schlau durch die Ecken navigiert."
+        }
+      ]
+    },
+    {
+      "id": "optimum-ecke",
+      "heading": "Warum liegt das Optimum immer in einer Ecke?",
+      "body": "Das klingt zunächst überraschend. Hier ist die Intuition:\n\n## Geometrische Begründung\n\nDie Zielfunktion $z = c_1 x_1 + c_2 x_2$ ist **linear** — ihre Niveaumengen (Isogewinnlinien) sind parallele Geraden. Wenn du eine solche Gerade durch den zulässigen Bereich (ein konvexes Polygon) schiebst, berührt sie das Polygon zuerst in einer **Ecke** (oder einer ganzen Kante, wenn die Zielfunktionsgerade parallel zu einer Restriktionsgerade liegt — dann sind beide Endpunkte der Kante optimal).\n\n## Algebraische Begründung (Skizze)\n\nAngenommen, der Optimalpunkt $\\vec{x}^*$ liegt im **Inneren** des zulässigen Bereichs, also strikt $A\\vec{x}^* < \\vec{b}$. Da $\\vec{c} \\neq \\vec{0}$, gibt es eine Richtung, in der $z$ wächst — also kann man $\\vec{x}^*$ verbessern, Widerspruch!\n\nAngenommen, $\\vec{x}^*$ liegt auf einer **Kante** (aber nicht in einer Ecke). Dann kann man wieder entlang der Kante in Richtung höheres $z$ wandern, bis man eine Ecke erreicht.\n\n**Fazit:** Das Optimum wird stets in einer Ecke angenommen.\n\n## Was wenn der zulässige Bereich leer ist?\n\nDann heißt das LP **unzulässig** — es gibt keine Lösung.\n\n## Was wenn der zulässige Bereich unbeschränkt ist?\n\nDann kann $z$ u. U. beliebig groß werden — das LP ist **unbeschränkt** (kein endliches Maximum).",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Drei Fälle für ein LP",
+          "body": "1. **Einzige optimale Ecke** — Normalfall.\n2. **Kante optimal** — unendlich viele optimale Punkte auf einer Strecke zwischen zwei optimalen Ecken.\n3. **Unzulässig** oder **Unbeschränkt** — kein endliches Optimum."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "lp-mermaid-ablauf",
+          "title": "Lösungsablauf: Graphische LP-Methode",
+          "caption": "Schritt-für-Schritt-Ablauf der graphischen Methode",
+          "code": "graph TD\n  A[LP aufstellen: Zielfunktion und Nebenbedingungen] --> B[Zulässigen Bereich zeichnen]\n  B --> C{Bereich leer?}\n  C -- Ja --> D[LP unzulässig — keine Lösung]\n  C -- Nein --> E[Isogewinnlinie einzeichnen]\n  E --> F[Isogewinnlinie verschieben bis letzter Kontakt]\n  F --> G{Bereich unbeschränkt?}\n  G -- Ja, z wächst unbegrenzt --> H[LP unbeschränkt]\n  G -- Nein --> I[Optimale Ecke ablesen und Wert berechnen]"
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung-beispiel2",
+      "heading": "Vollständig durchgerechnetes zweites Beispiel",
+      "body": "Damit das Verfahren sitzt, hier ein weiteres LP von Grund auf.\n\n**Aufgabe:** Maximiere $z = 3x_1 + 5x_2$ unter:\n$$x_1 \\leq 4 \\quad (\\text{I})$$\n$$2x_2 \\leq 12 \\quad (\\text{II})$$\n$$3x_1 + 5x_2 \\leq 25 \\quad (\\text{III})$$\n$$x_1 \\geq 0,\\; x_2 \\geq 0$$\n\n## Schritt 1: Geraden zeichnen\n\n- (I): Senkrechte $x_1 = 4$. Halbebene: $x_1 \\leq 4$ (links davon).\n- (II): Waagrechte $x_2 = 6$. Halbebene: $x_2 \\leq 6$ (darunter).\n- (III): Gerade durch $(25/3,\\, 0) \\approx (8{,}33,\\; 0)$ und $(0,\\; 5)$.\n\n## Schritt 2: Ecken bestimmen\n\nEcken durch paarweise Schnittpunkte der Grenzen (und der Achsen):\n\n- $E_0 = (0, 0)$: Ursprung.\n- $E_1 = (4, 0)$: $x_1 = 4$, $x_2 = 0$.\n- $E_2$: Schnitt (I) und (III): $x_1 = 4$, $3 \\cdot 4 + 5x_2 = 25 \\Rightarrow 5x_2 = 13 \\Rightarrow x_2 = 2{,}6$.\n  Also $E_2 = (4,\\; 2{,}6)$.\n- $E_3$: Schnitt (II) und (III): $x_2 = 6$, $3x_1 + 30 = 25 \\Rightarrow 3x_1 = -5$ — **negativ!** Kein gültiger Punkt.\n- $E_3$: stattdessen Schnitt (II) und $x_1 = 0$: $x_1 = 0$, $x_2 = 6$. Prüfe (III): $0 + 30 = 30 > 25$ — **nicht zulässig**.\n- Schnittpunkt (II) und (III): $x_2 = 6$, $3x_1 = 25 - 30 = -5$ → nicht zulässig.\n- $E_3$: Schnitt $x_2$-Achse und (III): $x_1 = 0$, $5x_2 = 25 \\Rightarrow x_2 = 5$. Prüfe (II): $2 \\cdot 5 = 10 \\leq 12$ ✓. Also $E_3 = (0, 5)$.\n- $E_4 = (0, 0)$: schon $E_0$.\n\nZulässige Ecken: $E_0=(0,0)$, $E_1=(4,0)$, $E_2=(4,2{,}6)$, $E_3=(0,5)$.\n\n## Schritt 3: Zielfunktion auswerten\n\n| Ecke | $3x_1 + 5x_2$ |\n|---|---|\n| $E_0 = (0,0)$ | $0$ |\n| $E_1 = (4,0)$ | $12$ |\n| $E_2 = (4;\\, 2{,}6)$ | $12 + 13 = 25$ |\n| $E_3 = (0,5)$ | $25$ |\n\n**Beide Ecken** $E_2$ und $E_3$ liefern $z^* = 25$. Die Isogewinnlinie $3x_1 + 5x_2 = 25$ ist **parallel** zu Nebenbedingung (III). Das gesamte Segment von $E_2$ bis $E_3$ ist optimal.\n\n## Schritt 4: Standardform (Schlupfvariablen)\n\n$$x_1 + s_1 = 4$$\n$$2x_2 + s_2 = 12$$\n$$3x_1 + 5x_2 + s_3 = 25$$\n$$x_1, x_2, s_1, s_2, s_3 \\geq 0$$\n\nWir haben $m = 3$ Gleichungen und $N = 5$ Variablen, also $\\binom{5}{3} = 10$ mögliche Basen.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Parallele Zielfunktionsgerade",
+          "body": "Wenn die Isogewinnlinie parallel zu einer aktiven Nebenbedingung ist, sind **beide Endpunkte** der entsprechenden Kante optimal. In der Praxis gibt man dann eine der optimalen Ecken an (z. B. $E_2$ oder $E_3$)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "lp-fig-beispiel2",
+          "title": "Zweites LP-Beispiel: zwei optimale Ecken",
+          "caption": "Zulässiges Polygon mit den drei Nebenbedingungsgeraden. Die Isogewinnlinie z=25 ist parallel zu NB (III) und berührt die Kante E2–E3.",
+          "functions": [
+            { "fn": "6", "label": "x₂=6 (NB II)", "color": "blue" },
+            { "fn": "(25 - 3*x) / 5", "label": "3x₁+5x₂=25 (NB III)", "color": "red" },
+            { "fn": "(25 - 3*x) / 5", "label": "Isogewinn z=25", "color": "green", "dashed": true }
+          ],
+          "domain": [0, 6],
+          "range": [0, 8],
+          "points": [
+            { "x": 0, "y": 0, "label": "E0" },
+            { "x": 4, "y": 0, "label": "E1" },
+            { "x": 4, "y": 2.6, "label": "E2*" },
+            { "x": 0, "y": 5, "label": "E3*" }
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "lp-fc-1",
+      "topicId": "lineare-optimierung-graphisch",
+      "front": "Was ist die LP-Standardform?",
+      "back": "$$\\max\\; \\vec{c}^T \\vec{x} \\quad \\text{s.t.} \\quad A\\vec{x} = \\vec{b},\\; \\vec{x} \\geq \\vec{0}$$\nUngleichungen werden durch Schlupfvariablen $s_i \\geq 0$ in Gleichungen umgewandelt."
+    },
+    {
+      "id": "lp-fc-2",
+      "topicId": "lineare-optimierung-graphisch",
+      "front": "Was ist eine Schlupfvariable?",
+      "back": "Für $a_1 x_1 + a_2 x_2 \\leq b$ setzt man $s = b - a_1 x_1 - a_2 x_2 \\geq 0$. $s$ misst die nicht genutzte Kapazität. $s = 0$: Restriktion aktiv; $s > 0$: Restriktion inaktiv."
+    },
+    {
+      "id": "lp-fc-3",
+      "topicId": "lineare-optimierung-graphisch",
+      "front": "Was ist eine Basislösung?",
+      "back": "Bei $m$ Gleichungen und $N$ Variablen: wähle $m$ linear unabhängige Spalten (Basis), setze die übrigen $N - m$ Variablen auf 0 und löse das verbleibende $m \\times m$-System."
+    },
+    {
+      "id": "lp-fc-4",
+      "topicId": "lineare-optimierung-graphisch",
+      "front": "Was besagt Satz 10 (Ecken = ZBL)?",
+      "back": "Die **Ecken** des zulässigen Polyeders entsprechen genau den **zulässigen Basislösungen** (ZBL). Das Optimum eines LP wird stets in einer Ecke angenommen."
+    },
+    {
+      "id": "lp-fc-5",
+      "topicId": "lineare-optimierung-graphisch",
+      "front": "Was ist eine Isogewinnlinie?",
+      "back": "Die Menge $\\{(x_1, x_2) \\mid c_1 x_1 + c_2 x_2 = z\\}$ für festes $z$. Alle Punkte auf dieser Gerade haben denselben Zielwert. Man verschiebt sie in Richtung des Gradienten $(c_1, c_2)$, um $z$ zu maximieren."
+    },
+    {
+      "id": "lp-fc-6",
+      "topicId": "lineare-optimierung-graphisch",
+      "front": "Wie viele mögliche Basen gibt es bei $N$ Variablen und $m$ Gleichungen?",
+      "back": "$$\\binom{N}{m} = \\frac{N!}{m!(N-m)!}$$\nNur die zulässigen Basen (alle $x_B \\geq 0$) sind Ecken des Polyeders."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "lp-q1",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "leicht",
+      "prompt": "Was wird bei einem LP minimiert oder maximiert?",
+      "options": [
+        "Eine quadratische Funktion der Entscheidungsvariablen",
+        "Eine lineare Zielfunktion $z = \\vec{c}^T \\vec{x}$",
+        "Der Gradient der Nebenbedingungen",
+        "Die Anzahl der Variablen"
+      ],
+      "correct": [1],
+      "explanation": "Per Definition ist beim LP sowohl die Zielfunktion als auch alle Nebenbedingungen **linear** in den Variablen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lp-q2",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "leicht",
+      "prompt": "Schlupfvariablen können negative Werte annehmen.",
+      "answer": false,
+      "explanation": "Schlupfvariablen messen die nicht genutzte Kapazität und sind immer $\\geq 0$. Ein negativer Schlupf würde bedeuten, dass die Kapazitätsgrenze überschritten wird — das ist nicht zulässig."
+    },
+    {
+      "kind": "mc",
+      "id": "lp-q3",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "mittel",
+      "prompt": "Was gilt für Isogewinnlinien verschiedener Zielwerte $z_1 \\neq z_2$?",
+      "options": [
+        "Sie schneiden sich in genau einem Punkt",
+        "Sie sind parallel zueinander",
+        "Sie sind senkrecht zueinander",
+        "Sie haben unterschiedliche Steigungen"
+      ],
+      "correct": [1],
+      "explanation": "Alle Isogewinnlinien $c_1 x_1 + c_2 x_2 = z$ haben dieselbe Steigung $-c_1/c_2$ und unterscheiden sich nur im $y$-Achsenabschnitt $z/c_2$. Sie sind daher **parallel**."
+    },
+    {
+      "kind": "numeric",
+      "id": "lp-q4",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "mittel",
+      "prompt": "Im Möbelfabrik-Beispiel ($\\max\\, z = 5x_1 + 8x_2$, Restr.: $2x_1+4x_2 \\leq 24$, $3x_1+2x_2 \\leq 18$, $x_1,x_2 \\geq 0$): Wie groß ist der optimale Zielwert $z^*$?",
+      "answer": 51,
+      "tolerance": 0.01,
+      "unit": "€",
+      "explanation": "Das Optimum liegt in der Ecke $E_2 = (3,\\; 4{,}5)$. Zielwert: $z = 5 \\cdot 3 + 8 \\cdot 4{,}5 = 15 + 36 = 51$."
+    },
+    {
+      "kind": "numeric",
+      "id": "lp-q5",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "mittel",
+      "prompt": "Im Möbelfabrik-Beispiel: Wie viele Basisvariablen hat eine Basislösung? ($m=2$ Gleichungen, $N=4$ Variablen)",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "Eine Basislösung hat genau $m = 2$ Basisvariablen. Die übrigen $N - m = 4 - 2 = 2$ Variablen werden auf Null gesetzt (Nichtbasisvariablen)."
+    },
+    {
+      "kind": "mc",
+      "id": "lp-q6",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "mittel",
+      "prompt": "Welche Aussage über eine zulässige Basislösung ist korrekt? (Mehrfachauswahl)",
+      "options": [
+        "Alle $N - m$ Nichtbasisvariablen sind gleich Null",
+        "Die $m$ Basisvariablen sind alle $\\geq 0$",
+        "Sie entspricht einer Ecke des Polyeders",
+        "Die Zielfunktion ist dort immer minimal"
+      ],
+      "correct": [0, 1, 2],
+      "multiple": true,
+      "explanation": "Eine ZBL hat $N-m$ Nullen (Nichtbasisvariablen), alle Basisvariablen $\\geq 0$, und entspricht per Satz 10 einer Ecke. Die Zielfunktion kann in einer Ecke minimal oder maximal oder keines von beidem sein."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lp-q7",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "mittel",
+      "prompt": "Das Optimum eines LP mit endlichem zulässigen Bereich wird stets in einer Ecke des Polyeders angenommen.",
+      "answer": true,
+      "explanation": "Das ist der Fundamentalsatz der LP. Die lineare Zielfunktion nimmt ihr Maximum auf einem konvexen Polyeder stets in einem Extrempunkt (= Ecke) an."
+    },
+    {
+      "kind": "numeric",
+      "id": "lp-q8",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "mittel",
+      "prompt": "Ein LP hat $n = 3$ echte Variablen und $m = 2$ Ungleichungen. Nach Einführung von Schlupfvariablen: Wie viele Variablen hat das System insgesamt ($N$)?",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "$N = n + m = 3 + 2 = 5$. Jede Ungleichung bekommt genau eine Schlupfvariable."
+    },
+    {
+      "kind": "mc",
+      "id": "lp-q9",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen über die Basislösung mit Basis $\\{s_1, s_2\\}$ im Möbelfabrik-Beispiel ($2x_1+4x_2+s_1=24$, $3x_1+2x_2+s_2=18$) ist korrekt?",
+      "options": [
+        "Es gilt $x_1 = 0$, $x_2 = 0$, $s_1 = 24$, $s_2 = 18$ — das ist die Ecke $E_0$",
+        "Es gilt $x_1 = 6$, $x_2 = 0$, $s_1 = 12$, $s_2 = 0$ — das ist die Ecke $E_1$",
+        "Es gilt $x_1 = 3$, $x_2 = 4{,}5$, $s_1 = 0$, $s_2 = 0$ — das ist die Ecke $E_2$",
+        "Die Lösung ist nicht zulässig"
+      ],
+      "correct": [0],
+      "explanation": "Mit Basis $\\{s_1, s_2\\}$ werden $x_1 = x_2 = 0$ gesetzt (Nichtbasisvariablen). Dann folgt direkt $s_1 = 24$, $s_2 = 18$ — der Ursprung $E_0$."
+    },
+    {
+      "kind": "freetext",
+      "id": "lp-q10",
+      "topicId": "lineare-optimierung-graphisch",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum man bei der graphischen LP-Lösung die Isogewinnlinie in Richtung des Gradienten der Zielfunktion verschiebt.",
+      "sampleAnswer": "Der Gradient $(c_1, c_2)$ der Zielfunktion $z = c_1 x_1 + c_2 x_2$ zeigt die Richtung des steilsten Anstiegs. Eine Parallelverschiebung der Isogewinnlinie in diese Richtung erhöht den Zielwert $z$. Man verschiebt so lange, bis die Gerade den zulässigen Bereich gerade noch berührt — das ist die optimale Ecke.",
+      "keywords": ["gradient", "verschieben", "parallel", "anstieg", "isogewinnlinie", "optimum"],
+      "explanation": "Kernidee: Normalenvektor der Isogewinnlinie ist $\\vec{c}$. Verschiebung in Richtung $\\vec{c}$ maximiert $z$ — solange man im zulässigen Bereich bleibt."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "lp-ex-1",
+      "topicId": "lineare-optimierung-graphisch",
+      "label": "Graphische LP-Lösung: Produktionsplanung",
+      "source": "Eigene Aufgabe (Mathe 2 — LP)",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Ein Unternehmen produziert zwei Produkte A ($x_1$) und B ($x_2$). Pro Stück erzielt A einen Gewinn von 4 € und B einen von 6 €. Folgende Kapazitätsgrenzen gelten:\n- Maschine M1: $x_1 + 2x_2 \\leq 8$\n- Maschine M2: $2x_1 + x_2 \\leq 10$\n- Nichtnegativität: $x_1, x_2 \\geq 0$\n\n**(a)** Zeichne den zulässigen Bereich und bestimme alle Ecken.\n**(b)** Maximiere den Gewinn $z = 4x_1 + 6x_2$ graphisch.\n**(c)** Führe Schlupfvariablen ein und verifiziere die optimale Ecke als zulässige Basislösung.",
+      "hint": "Schnittpunkt der beiden Geraden: Gleichungssystem $x_1 + 2x_2 = 8$ und $2x_1 + x_2 = 10$ lösen.",
+      "solution": "## (a) Zulässiger Bereich und Ecken\n\n**Gerade M1:** $x_1 + 2x_2 = 8$: Punkte $(8, 0)$ und $(0, 4)$.\n**Gerade M2:** $2x_1 + x_2 = 10$: Punkte $(5, 0)$ und $(0, 10)$.\n\n**Ecken des Polygons:**\n- $E_0 = (0, 0)$: Ursprung, trivial zulässig.\n- $E_1$: Schnitt M2 mit $x_2 = 0$: $2x_1 = 10 \\Rightarrow x_1 = 5$. Also $E_1 = (5, 0)$.\n- $E_2$: Schnitt M1 und M2:\n$$x_1 + 2x_2 = 8 \\quad (\\text{I})$$\n$$2x_1 + x_2 = 10 \\quad (\\text{II})$$\n$(\\text{II}) \\cdot 2 - (\\text{I})$: $3x_1 = 12 \\Rightarrow x_1 = 4$. Einsetzen in (I): $4 + 2x_2 = 8 \\Rightarrow x_2 = 2$.\nAlso $E_2 = (4, 2)$. Prüfung: M1: $4 + 4 = 8 \\leq 8$ ✓, M2: $8 + 2 = 10 \\leq 10$ ✓.\n- $E_3$: Schnitt M1 mit $x_1 = 0$: $2x_2 = 8 \\Rightarrow x_2 = 4$. Prüfe M2: $0 + 4 = 4 \\leq 10$ ✓. Also $E_3 = (0, 4)$.\n\n## (b) Gewinnmaximierung\n\nZielfunktion in den Ecken auswerten:\n- $E_0$: $z = 4 \\cdot 0 + 6 \\cdot 0 = 0$\n- $E_1$: $z = 4 \\cdot 5 + 6 \\cdot 0 = 20$\n- $E_2$: $z = 4 \\cdot 4 + 6 \\cdot 2 = 16 + 12 = 28$\n- $E_3$: $z = 4 \\cdot 0 + 6 \\cdot 4 = 24$\n\n**Optimum:** $E_2 = (4, 2)$ mit $z^* = 28$ €.\n\n## (c) Standardform und Basislösung\n\nSchlupfvariablen $s_1$ (M1), $s_2$ (M2):\n$$x_1 + 2x_2 + s_1 = 8, \\quad 2x_1 + x_2 + s_2 = 10$$\n\nAn der optimalen Ecke $E_2 = (4, 2)$: Beide Restriktionen aktiv → $s_1 = 0$, $s_2 = 0$.\n\n**Basis:** $\\{x_1, x_2\\}$ (Spalten 1 und 2 der Matrix $[A \\mid I]$).\n**Nichtbasisvariablen:** $s_1 = s_2 = 0$.\n\nTeilmatrix: $B = \\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix}$, $\\det(B) = 1 - 4 = -3 \\neq 0$ → invertierbar ✓.\n\n$$B\\vec{x}_B = \\vec{b}: \\begin{pmatrix}1 & 2 \\\\ 2 & 1\\end{pmatrix}\\begin{pmatrix}x_1 \\\\ x_2\\end{pmatrix} = \\begin{pmatrix}8 \\\\ 10\\end{pmatrix} \\Rightarrow x_1 = 4,\\; x_2 = 2 \\geq 0 \\checkmark$$\n\nDies ist eine **zulässige Basislösung** und entspricht per Satz 10 der Ecke $E_2$."
+    },
+    {
+      "id": "lp-ex-2",
+      "topicId": "lineare-optimierung-graphisch",
+      "label": "Basislösungen algebraisch bestimmen",
+      "source": "Eigene Aufgabe (Mathe 2 — LP)",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Gegeben sei das LP in Standardform:\n$$x_1 + x_2 + s_1 = 6$$\n$$2x_1 + x_2 + s_2 = 8$$\n$$x_1, x_2, s_1, s_2 \\geq 0$$\n\n**(a)** Wie viele mögliche Basen gibt es ($N = 4$, $m = 2$)?\n**(b)** Bestimme **alle** Basislösungen und prüfe jeweils die Zulässigkeit.\n**(c)** Welche zulässige Basislösung maximiert $z = 3x_1 + 2x_2$?",
+      "hint": "Setze jeweils zwei Variablen auf Null und löse das 2×2-System. Prüfe dann, ob alle verbleibenden Variablen ≥ 0 sind.",
+      "solution": "## (a) Anzahl möglicher Basen\n\n$$\\binom{N}{m} = \\binom{4}{2} = \\frac{4!}{2! \\cdot 2!} = 6$$\n\n## (b) Alle Basislösungen\n\nSystemmatrix: $[A \\mid I] = \\begin{pmatrix} 1 & 1 & 1 & 0 \\\\ 2 & 1 & 0 & 1 \\end{pmatrix}$, $\\vec{b} = (6, 8)^T$.\n\n**Basis $\\{s_1, s_2\\}$** (setze $x_1 = x_2 = 0$):\n$s_1 = 6$, $s_2 = 8$. Beide $\\geq 0$ → **zulässig**. Ecke $E_0 = (0, 0)$. $z = 0$.\n\n**Basis $\\{x_1, s_1\\}$** (setze $x_2 = s_2 = 0$):\n$2x_1 = 8 \\Rightarrow x_1 = 4$; $s_1 = 6 - 4 = 2 \\geq 0$ → **zulässig**. Ecke $(4, 0)$. $z = 12$.\n\n**Basis $\\{x_2, s_1\\}$** (setze $x_1 = s_2 = 0$):\n$x_2 = 8$; $s_1 = 6 - 8 = -2 < 0$ → **nicht zulässig**.\n\n**Basis $\\{x_1, s_2\\}$** (setze $x_2 = s_1 = 0$):\n$x_1 = 6$; $s_2 = 8 - 12 = -4 < 0$ → **nicht zulässig**.\n\n**Basis $\\{x_2, s_2\\}$** (setze $x_1 = s_1 = 0$):\n$x_2 = 6$; $s_2 = 8 - 6 = 2 \\geq 0$ → **zulässig**. Ecke $(0, 6)$. $z = 12$.\n\n**Basis $\\{x_1, x_2\\}$** (setze $s_1 = s_2 = 0$):\n$$x_1 + x_2 = 6, \\quad 2x_1 + x_2 = 8$$\nSubtraktion: $x_1 = 2$, dann $x_2 = 4$. Beide $\\geq 0$ → **zulässig**. Ecke $(2, 4)$. $z = 6 + 8 = 14$.\n\n**Zusammenfassung:**\n| Basis | Lösung | zulässig? | $z$ |\n|---|---|---|---|\n| $\\{s_1,s_2\\}$ | $(0,0,6,8)$ | ✓ | 0 |\n| $\\{x_1,s_1\\}$ | $(4,0,2,0)$ | ✓ | 12 |\n| $\\{x_2,s_1\\}$ | $(0,8,-2,0)$ | ✗ | — |\n| $\\{x_1,s_2\\}$ | $(6,0,0,-4)$ | ✗ | — |\n| $\\{x_2,s_2\\}$ | $(0,6,0,2)$ | ✓ | 12 |\n| $\\{x_1,x_2\\}$ | $(2,4,0,0)$ | ✓ | 14 |\n\n## (c) Optimum\n\n**Maximales $z = 14$** in der Ecke $(x_1, x_2) = (2, 4)$."
+    },
+    {
+      "id": "lp-ex-3",
+      "topicId": "lineare-optimierung-graphisch",
+      "label": "Klausuraufgabe: LP graphisch und algebraisch",
+      "source": "Eigene Aufgabe (Mathe 2 — Klausurtyp)",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Maximiere $z = 2x_1 + 3x_2$ unter:\n$$3x_1 + x_2 \\leq 9$$\n$$x_1 + 2x_2 \\leq 8$$\n$$x_1 \\geq 0, \\quad x_2 \\geq 0$$\n\n**(a)** Stelle das LP in Standardform (mit Schlupfvariablen $s_1, s_2$) auf und gib die Matrix $[A \\mid I]$ an.\n**(b)** Bestimme alle zulässigen Basislösungen algebraisch.\n**(c)** Bestimme das Optimum. Prüfe außerdem, ob das Ergebnis graphisch plausibel ist.",
+      "hint": "Schnittpunkt der Geraden $3x_1 + x_2 = 9$ und $x_1 + 2x_2 = 8$ bestimmen. Dann: $\\binom{4}{2} = 6$ mögliche Basen durchgehen.",
+      "solution": "## (a) Standardform\n\nSchlupfvariablen $s_1, s_2 \\geq 0$:\n$$3x_1 + x_2 + s_1 = 9$$\n$$x_1 + 2x_2 + s_2 = 8$$\n\n$$[A \\mid I] = \\begin{pmatrix} 3 & 1 & 1 & 0 \\\\ 1 & 2 & 0 & 1 \\end{pmatrix}, \\quad \\vec{b} = \\begin{pmatrix}9 \\\\ 8\\end{pmatrix}$$\n\n$N = 4$ Variablen, $m = 2$ Gleichungen, $\\binom{4}{2} = 6$ Basen.\n\n## (b) Alle Basislösungen\n\n**Basis $\\{s_1, s_2\\}$** ($x_1 = x_2 = 0$): $s_1 = 9$, $s_2 = 8$. **ZBL**: $E_0 = (0,0)$, $z = 0$.\n\n**Basis $\\{x_1, s_1\\}$** ($x_2 = s_2 = 0$): $x_1 = 8/1 = 8$ (aus 2. Gl.); $s_1 = 9 - 24 = -15 < 0$ → **nicht zulässig**.\n\nWarte: aus $x_1 + 2 \\cdot 0 = 8 \\Rightarrow x_1 = 8$; $s_1 = 9 - 3 \\cdot 8 - 0 = 9 - 24 = -15 < 0$ → **nicht zulässig**.\n\n**Basis $\\{x_1, s_2\\}$** ($x_2 = s_1 = 0$): $3x_1 = 9 \\Rightarrow x_1 = 3$; $s_2 = 8 - 3 = 5 \\geq 0$ → **ZBL**: $E_1 = (3, 0)$, $z = 6$.\n\n**Basis $\\{x_2, s_1\\}$** ($x_1 = s_2 = 0$): $2x_2 = 8 \\Rightarrow x_2 = 4$; $s_1 = 9 - 4 = 5 \\geq 0$ → **ZBL**: $E_3 = (0, 4)$, $z = 12$.\n\n**Basis $\\{x_2, s_2\\}$** ($x_1 = s_1 = 0$): $x_2 = 9/1 = 9$ (aus 1. Gl.); $s_2 = 8 - 18 = -10 < 0$ → **nicht zulässig**.\n\n**Basis $\\{x_1, x_2\\}$** ($s_1 = s_2 = 0$):\n$$3x_1 + x_2 = 9 \\quad (\\text{I})$$\n$$x_1 + 2x_2 = 8 \\quad (\\text{II})$$\n$(\\text{I}) \\cdot 2 - (\\text{II})$: $5x_1 = 10 \\Rightarrow x_1 = 2$.\nEinsetzen in (I): $6 + x_2 = 9 \\Rightarrow x_2 = 3$. Beide $\\geq 0$ → **ZBL**: $E_2 = (2, 3)$, $z = 4 + 9 = 13$.\n\n## (c) Optimum und graphische Plausibilität\n\n| Ecke | $(x_1, x_2)$ | $z = 2x_1 + 3x_2$ |\n|---|---|---|\n| $E_0$ | $(0, 0)$ | $0$ |\n| $E_1$ | $(3, 0)$ | $6$ |\n| $E_2$ | $(2, 3)$ | $13$ |\n| $E_3$ | $(0, 4)$ | $12$ |\n\n**Optimum:** $E_2 = (2, 3)$ mit $z^* = 13$.\n\n**Graphische Plausibilität:** Die Isogewinnlinie $2x_1 + 3x_2 = 13$ hat Steigung $-2/3$. Die Restriktionsgerade $x_1 + 2x_2 = 8$ hat Steigung $-1/2$ und die Gerade $3x_1 + x_2 = 9$ hat Steigung $-3$. Die Isogewinnsteigung ($-2/3$) liegt zwischen $-3$ und $-1/2$ → Das Optimum liegt im Schnittpunkt beider Restriktionen, also in $E_2 = (2,3)$ ✓."
+    },
+    {
+      "id": "lp-ex-4",
+      "topicId": "lineare-optimierung-graphisch",
+      "label": "Minimierungs-LP und Ecken",
+      "source": "Eigene Aufgabe (Mathe 2 — LP Minimierung)",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Minimiere $z = x_1 + 2x_2$ unter:\n$$x_1 + x_2 \\geq 4 \\quad (\\text{Mindestmenge})$$\n$$x_1 \\leq 6$$\n$$x_2 \\leq 5$$\n$$x_1, x_2 \\geq 0$$\n\n**(a)** Forme in ein Maximierungsproblem um ($\\min z \\iff \\max(-z)$).\n**(b)** Bestimme alle Ecken des zulässigen Bereichs und berechne $z$ in jeder Ecke.\n**(c)** Nenne das Minimum und interpretiere das Ergebnis.",
+      "hint": "Die Ungleichung $x_1 + x_2 \\geq 4$ wird zu $-x_1 - x_2 \\leq -4$ umgeformt. Zum Finden der Ecken: alle paarweisen Schnittpunkte der Grenzgeraden prüfen.",
+      "solution": "## (a) Umformung in Maximierung\n\n$$\\min\\; z = x_1 + 2x_2 \\iff \\max\\; w = -x_1 - 2x_2$$\n\nNebenbedingungen bleiben: $x_1 + x_2 \\geq 4$, $x_1 \\leq 6$, $x_2 \\leq 5$, $x_1, x_2 \\geq 0$.\n\nAls Standardungleichungen:\n$$-x_1 - x_2 \\leq -4$$\n$$x_1 \\leq 6$$\n$$x_2 \\leq 5$$\n\n## (b) Ecken bestimmen\n\nDer zulässige Bereich wird durch $x_1 + x_2 \\geq 4$ nach oben begrenzt (der Bereich **oberhalb** der Geraden $x_1 + x_2 = 4$ muss erfüllt sein).\n\n**Kandidaten-Ecken** (Schnittpunkte paarweiser Grenzen im zulässigen Bereich):\n\n- **Schnitt $x_1 + x_2 = 4$ und $x_2 = 0$:** $x_1 = 4$. Prüfe $x_1 \\leq 6$ ✓, $x_2 \\leq 5$ ✓. → $E_1 = (4, 0)$, $z = 4$.\n- **Schnitt $x_1 + x_2 = 4$ und $x_1 = 0$:** $x_2 = 4$. Prüfe $x_2 \\leq 5$ ✓. → $E_2 = (0, 4)$, $z = 8$.\n- **Schnitt $x_1 = 6$ und $x_2 = 0$:** $z = 6$. Prüfe $6 + 0 = 6 \\geq 4$ ✓, $x_2 \\leq 5$ ✓. → $E_3 = (6, 0)$, $z = 6$.\n- **Schnitt $x_1 = 6$ und $x_2 = 5$:** $z = 16$. Prüfe $6 + 5 = 11 \\geq 4$ ✓. → $E_4 = (6, 5)$, $z = 16$.\n- **Schnitt $x_1 = 0$ und $x_2 = 5$:** $z = 10$. Prüfe $0 + 5 = 5 \\geq 4$ ✓. → $E_5 = (0, 5)$, $z = 10$.\n- Punkt $(0, 0)$: $0 + 0 = 0 < 4$ → **nicht zulässig**.\n\n## (c) Minimum\n\n| Ecke | $z = x_1 + 2x_2$ |\n|---|---|\n| $E_1 = (4, 0)$ | $4$ |\n| $E_2 = (0, 4)$ | $8$ |\n| $E_3 = (6, 0)$ | $6$ |\n| $E_4 = (6, 5)$ | $16$ |\n| $E_5 = (0, 5)$ | $10$ |\n\n**Minimum:** $z^* = 4$ in der Ecke $E_1 = (4, 0)$.\n\n**Interpretation:** Es wird genau die Mindestmenge von 4 Einheiten produziert, alles von Produkt 1 ($x_1 = 4$, $x_2 = 0$), da Produkt 1 mit Kosten 1 günstiger ist als Produkt 2 mit Kosten 2."
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "id": "methodik-rechtsquellen-normenpyramide-und",
+  "subjectId": "privatrecht",
+  "title": "Methodik: Rechtsquellen, Normenpyramide und Rangfragen (Methodikteil 5)",
+  "summary": "Wo kommt Recht her? Dieses Kapitel erklaert geschriebene und ungeschriebene Rechtsquellen, zeigt wie die Normenpyramide (EU -> Bund -> Land; GG -> Gesetz -> Verordnung) und ihre privatrechtliche Sondervariante funktionieren, grenzt oeffentliches Recht vom Privatrecht ab und stellt die drei Kollisionsregeln lex superior, lex specialis und lex posterior vor.",
+  "order": 12,
+  "estMinutes": 40,
+  "sections": [
+    {
+      "id": "was-sind-rechtsquellen",
+      "heading": "Was sind Rechtsquellen?",
+      "body": "Stell dir vor, du moechtest wissen, ob du deinen Vermieter auf Schadenersatz verklagen kannst. Du musst eine **Rechtsnorm** finden, die das erlaubt. Aber wo schaust du nach? Genau dafuer gibt es den Begriff **Rechtsquellen** -- sie sind die 'Fundstellen', aus denen Rechtsnormen geschoepft werden.\n\nMan unterscheidet zwei grosse Gruppen:\n\n**1. Geschriebenes Recht** -- alles, was irgendwo aufgeschrieben und offiziell verabschiedet wurde. Es gibt zwei Unterarten:\n- **Formelle Gesetze**: Von einem Parlament (Bundestag, Landtag, EU-Parlament) im offiziellen Gesetzgebungsverfahren beschlossen. Beispiel: das BGB, das GG, das HGB.\n- **Materielle Gesetze**: Enthaelt hoheitliche, allgemeinverbindliche Regelungen mit Aussenwirkung, muss aber nicht durch ein Parlament erlassen worden sein. Beispiele: **Rechtsverordnungen** (z. B. die Strassenverkehrsordnung, erlassen durch die Bundesregierung per Ermaachtigung) und **Satzungen** (z. B. eine Gemeindesatzung). Viele Gesetze sind beides zugleich -- formell (Parlament) und materiell (Rechtsnorm-Merkmale).\n\n**2. Ungeschriebenes Recht** -- Normen, die nirgendwo kodifiziert sind, aber trotzdem gelten:\n- **Gewohnheitsrecht**: Normen, die eine Vielzahl von Menschen ueber einen langen Zeitraum als rechtsverbindlich ansieht. Beispiel: manche Handelsgebraeauche.\n- **Allgemeine Rechtsgrundsaetze**: Grundlegende Wertungen, die das Recht als selbstverstaendlich voraussetzt, z. B. das Verbot widerspruechlichen Verhaltens (venire contra factum proprium).\n\nZusaetzlich unterscheidet man, auf welcher **Ebene** das Recht erlassen wurde: **EU**, **Bund** oder **Land** (z. B. Niedersachsen).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Rechtsquelle",
+          "body": "Eine Rechtsquelle ist eine Erkenntnisquelle des Rechts, d. h. ein Ort, dem man Rechtsnormen entnehmen kann. Rechtsquellen koennen geschrieben (formell/materiell) oder ungeschrieben (Gewohnheitsrecht, allgemeine Rechtsgrundsaetze) sein."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Formell vs. materiell -- ein Vergleich",
+          "body": "Das **Haushaltsgesetz des Bundes** ist ein *formelles* Gesetz (Bundestag hat es beschlossen), aber kein *materielles*, weil es keine Rechtsnormen mit Aussenwirkung enthaelt -- es regelt nur die staatlichen Finanzen intern.\n\nEine **Rechtsverordnung** (z. B. die StVO) ist ein *materielles* Gesetz (allgemeinverbindliche Regeln mit Aussenwirkung), aber wurde nicht vom Parlament selbst, sondern von der Regierung per Ermaachtigung erlassen -- also kein *formelles* Gesetz im strengen Sinne."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "rechtsquellen-tabelle",
+          "title": "Uebersicht: Rechtsquellen",
+          "headers": [
+            "Art",
+            "Unterart",
+            "Beispiel",
+            "Besonderheit"
+          ],
+          "rows": [
+            [
+              "Geschrieben",
+              "Formelles Gesetz",
+              "BGB, GG, HGB",
+              "Parlamentsbeschluss"
+            ],
+            [
+              "Geschrieben",
+              "Materielles Gesetz (Verordnung)",
+              "StVO, EU-VO",
+              "Hoheitlich, Aussenwirkung"
+            ],
+            [
+              "Geschrieben",
+              "Satzung",
+              "Gemeindesatzung",
+              "Koerperschaft erlaesst selbst"
+            ],
+            [
+              "Ungeschrieben",
+              "Gewohnheitsrecht",
+              "Handelsgebraeuche",
+              "Lange Uebung + Rechtsueberzeugun"
+            ],
+            [
+              "Ungeschrieben",
+              "Allg. Rechtsgrundsaetze",
+              "Treu und Glauben, SS 242 BGB",
+              "Rechtsordnung setzt voraus"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "normenpyramide-allgemein",
+      "heading": "Die Normenpyramide -- wer hat das letzte Wort?",
+      "body": "Was passiert, wenn zwei Rechtsnormen gleichzeitig auf denselben Sachverhalt passen, aber unterschiedliche Rechtsfolgen anordnen? Dann braucht man eine **Rangordnung**. Genau das leistet die **Normenpyramide**.\n\nDie Grundidee ist einfach: **Hoehererrangiges Recht geht vor niederrangigem Recht.** Ein niederrangiges Gesetz, das dem hoehererrangigen widerspricht, ist nichtig oder unanwendbar.\n\n**Aufbau der Pyramide (von oben nach unten):**\n\n**Ebene EU:**\n- Ganz oben steht das **Primaerrecht** der EU: die EU-Vertraege (EUV, AEUV) und die EU-Grundrechtecharta.\n- Darunter folgt das **Sekundaerrecht**: Verordnungen (gelten direkt in allen Mitgliedstaaten), Richtlinien (muessen von den Mitgliedstaaten umgesetzt werden), Beschluesse etc.\n- EU-Recht hat **Anwendungsvorrang** vor nationalem Recht -- d. h. nationales Recht wird im Konfliktfall *nicht angewandt* (aber nicht aufgehoben).\n\n**Ebene Bund:**\n- Das **Grundgesetz (GG)** ist die Verfassung und steht ganz oben auf Bundesebene. Kein Gesetz darf ihm widersprechen.\n- Darunter folgen die **formellen Bundesgesetze** (BGB, StGB, HGB etc.).\n- Noch weiter unten: **Rechtsverordnungen** des Bundes (z. B. StVO).\n- Gemaess **Art. 31 GG** gilt: Bundesrecht bricht Landesrecht. Bundesrecht hat also Vorrang vor Landesrecht.\n\n**Ebene Land (z. B. Niedersachsen):**\n- Die **Landesverfassung** (z. B. Nds. Verfassung) steht ganz oben auf Landesebene.\n- Darunter die **formellen Landesgesetze**.\n- Ganz unten: **Rechtsverordnungen des Landes** und **Satzungen** (z. B. Gemeindesatzungen).\n\nUngeschriebenes Recht (Gewohnheitsrecht, allgemeine Rechtsgrundsaetze) hat im Regelfall den **Rang eines einfachen formellen Gesetzes**.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Zwei Vorrangsregeln auf einen Blick",
+          "body": "1. **EU-Recht geht vor nationalem Recht** (Anwendungsvorrang -- nationales Recht wird im Konfliktfall beiseitegeschoben).\n2. **Bundesrecht geht vor Landesrecht** (Art. 31 GG -- Bundesrecht bricht Landesrecht)."
+        },
+        {
+          "kind": "info",
+          "title": "Anwendungsvorrang -- was bedeutet das genau?",
+          "body": "Der EU-Anwendungsvorrang bedeutet: Das nationale Gesetz bleibt formal in Kraft, wird aber im konkreten Fall nicht angewendet, wenn es dem EU-Recht widerspricht. Das nationale Gesetz wird nicht automatisch aufgehoben -- es gilt nur nicht, solange EU-Recht entgegensteht."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "normenpyramide-mermaid",
+          "title": "Normenpyramide (allgemein)",
+          "caption": "Hierarchie der Rechtsquellen. Hoeherrangiges Recht hat immer Vorrang vor niederrangigem Recht. EU-Recht steht ganz oben (Anwendungsvorrang); auf Bundesebene gilt Art. 31 GG.",
+          "code": "graph TD\n    A[\"EU-Primaerrecht\\n(EUV, AEUV, Grundrechtecharta)\"]\n    B[\"EU-Sekundaerrecht\\n(Verordnungen, Richtlinien)\"]\n    C[\"Grundgesetz (GG)\"]\n    D[\"Formelle Bundesgesetze\\n(BGB, StGB, HGB)\"]\n    E[\"Rechtsverordnungen Bund\\n(z. B. StVO)\"]\n    F[\"Landesverfassung\\n(z. B. Nds. Verfassung)\"]\n    G[\"Formelle Landesgesetze\"]\n    H[\"Landesrechtsverordnungen\\nSatzungen\"]\n    A -->|Anwendungsvorrang| B\n    B -->|EU vor nationalem Recht| C\n    C --> D\n    D --> E\n    E -->|Art. 31 GG| F\n    F --> G\n    G --> H\n    style A fill:#1a5276,color:#fff\n    style B fill:#2e86c1,color:#fff\n    style C fill:#1e8449,color:#fff\n    style D fill:#27ae60,color:#fff\n    style E fill:#82e0aa,color:#000\n    style F fill:#b7950b,color:#fff\n    style G fill:#f0b27a,color:#000\n    style H fill:#fad7a0,color:#000"
+        }
+      ]
+    },
+    {
+      "id": "normenpyramide-privatrecht",
+      "heading": "Die Normenpyramide im Privatrecht -- Sonderfall dispositives Recht",
+      "body": "Im Privatrecht sieht die Hierarchie etwas anders aus als im oeffentlichen Recht. Warum? Weil viele privatrechtliche Gesetze **dispositiv** sind -- das heisst, die Parteien koennen sie durch einen Vertrag abaendern oder ausschliessen.\n\nBeispiel: Das BGB regelt, dass der Kaeufer den Kaufpreis grundsaetzlich am Ort des Verkaeufers zahlen muss (SS 269 BGB). Aber A und B koennen in ihrem Kaufvertrag vereinbaren, dass die Zahlung per Ueberweisung bis zum 15. des Monats erfolgt -- diese vertragliche Regelung geht dann vor.\n\n**Die Privatrecht-Pyramide (von oben nach unten):**\n\n1. **EU-Primaerrecht** (EUV, AEUV, Grundrechtecharta) -- Anwendungsvorrang\n2. **EU-Sekundaerrecht** (z. B. Richtlinien, die im BGB umgesetzt wurden, wie das Verbraucherrecht)\n3. **Grundgesetz (GG)** -- z. B. schuetzt Art. 2 I GG die Privatautonomie\n4. **Zwingende Gesetze** -- Normen, die die Parteien nicht abbedingen koennen, z. B. Verbraucherschutzvorschriften, SS 134 BGB (gesetzliches Verbot), SS 138 BGB (Sittenwidrigkeit)\n5. **Vertrag** -- was die Parteien individuell vereinbart haben, geht dispositiven Gesetzen vor\n6. **Dispositives Gesetz** -- gilt nur, wenn der Vertrag dazu schweigt (Lueckenfueller-Funktion)\n\n**Merke:** Im Privatrecht kann der Vertrag also zwischen zwingenden und dispositiven Gesetzen eingeschoben werden. Das ist Ausdruck der **Privatautonomie** (Art. 2 I GG): Die Parteien duerfen ihre Rechtsbeziehungen selbst gestalten -- aber nur innerhalb der Grenzen, die das zwingende Recht setzt.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Dispositives Recht",
+          "body": "Eine Rechtsnorm ist **dispositiv** (= nachgiebig), wenn die Parteien durch Vertrag von ihr abweichen duerfen. Sie gilt nur, wenn der Vertrag die betreffende Frage nicht regelt. Beispiel: SS 269 BGB (Leistungsort) -- gilt, sofern nichts anderes vereinbart wurde."
+        },
+        {
+          "kind": "definition",
+          "title": "Zwingendes Recht",
+          "body": "Eine Rechtsnorm ist **zwingend** (= ius cogens), wenn die Parteien nicht davon abweichen duerfen. Verstoesse sind nichtig (SS 134 BGB). Beispiel: Wucherverbot (SS 138 II BGB), Verbraucherschutzregeln."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Dispositiv vs. zwingend -- Alltagsbeispiel",
+          "body": "**Dispositiv:** SS 433 II BGB sagt, der Kaeufer zahlt den Kaufpreis. Wie und wann, regeln A und B frei im Vertrag -- der Vertrag geht dem Gesetz vor.\n\n**Zwingend:** SS 138 BGB verbietet wucherische Vertraege. Auch wenn A und B einen ueberhoeahten Preis vereinbaren -- das Gesetz setzt sich durch, der Vertrag ist nichtig."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "normenpyramide-privatrecht-mermaid",
+          "title": "Normenpyramide im Privatrecht",
+          "caption": "Im Privatrecht schiebt sich der Vertrag zwischen zwingendes und dispositives Gesetz. Dispositives Recht gilt nur, wenn der Vertrag schweigt.",
+          "code": "graph TD\n    A[\"EU-Primaerrecht\"]\n    B[\"EU-Sekundaerrecht\\n(z. B. Richtlinien)\"]\n    C[\"Grundgesetz (GG)\\nArt. 2 I GG Privatautonomie\"]\n    D[\"Zwingende Gesetze\\n(SS 134, SS 138 BGB; Verbraucherschutz)\"]\n    E[\"Vertrag\\n(individuelle Vereinbarung)\"]\n    F[\"Dispositives Gesetz\\n(gilt bei Vertragslucken)\"]\n    A --> B\n    B --> C\n    C --> D\n    D --> E\n    E --> F\n    style A fill:#1a5276,color:#fff\n    style B fill:#2e86c1,color:#fff\n    style C fill:#1e8449,color:#fff\n    style D fill:#922b21,color:#fff\n    style E fill:#f39c12,color:#fff\n    style F fill:#f9e79f,color:#000"
+        }
+      ]
+    },
+    {
+      "id": "oeffentlich-privatrecht",
+      "heading": "Oeffentliches Recht und Privatrecht -- wo ist der Unterschied?",
+      "body": "Die gesamte Rechtsordnung teilt sich in zwei grosse Bereiche:\n\n**Oeffentliches Recht:** Regelt das Verhaeltnis zwischen dem Staat und dem Buerger. Der Staat tritt dem Buerger dabei typischerweise uebergeordnet gegenueber (Ueber-/Unterordnungsverhaeltnis). Wichtige Teilgebiete:\n- Staatsrecht (GG, Staatsorganisation)\n- Verwaltungsrecht (mit Ordnungsrecht, Kommunalrecht, Beamtenrecht)\n- Sozialrecht\n- Strafrecht\n\n**Privatrecht:** Regelt Rechtsbeziehungen zwischen gleichgeordneten Personen (Buerger zu Buerger, Unternehmen zu Unternehmen). Wichtige Teilgebiete:\n- Buergerliches Recht (BGB)\n- Handelsrecht (HGB)\n- Gesellschaftsrecht (GmbHG, AktG)\n- Arbeitsrecht (Mischgebiet -- teils oeffentlich, teils privat)\n\n**Warum ist die Abgrenzung wichtig?** Je nachdem, welchem Bereich ein Streit zugeordnet wird, sind unterschiedliche Gerichte zustaendig (Verwaltungsgericht vs. Zivilgericht) und unterschiedliche Verfahrensregeln gelten (VwGO vs. ZPO).\n\n**Abgrenzungstheorien:**\n\n| Theorie | Kernaussage |\n|---|---|\n| **Subordinationstheorie** | Oeffentliches Recht liegt vor, wenn Staat und Buerger in einem Ueber-/Unterordnungsverhaeltnis stehen (Staat kann einseitig handeln) |\n| **Modifizierte Subjektstheorie** | Oeffentliches Recht liegt vor, wenn nur der Staat (als Traeger hoheitlicher Gewalt) durch die Norm berechtigt oder verpflichtet wird -- nicht Jedermann |\n| **Zwei-Stufen-Theorie** | Bei staatlichem Handeln fragt man: ob der Staat handelt (immer oeffentlich-rechtlich) und wie er handelt (kann oeffentlich-rechtlich oder privatrechtlich sein) |\n| **Zweck-/Zusammenhangslehre** | Wenn eine Zuordnung nach obigen Theorien unklar bleibt, wird auf den Zweck der Handlung oder den inneren Zusammenhang mit anderen Handlungen abgestellt |",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Merksatz: Privatrecht = Gleichordnung",
+          "body": "Im Privatrecht stehen sich die Beteiligten auf Augenhoehe gegenueber -- niemand kann dem anderen einseitig Pflichten auferlegen (ausser durch Vertrag). Im oeffentlichen Recht kann der Staat einseitig handeln (z. B. Bussggeldbescheid)."
+        },
+        {
+          "kind": "tip",
+          "title": "Praxisrelevanz der Abgrenzung",
+          "body": "Kauft die Stadt Muenchen Schreibwaren fuer das Rathaus, handelt sie privatrechtlich (gleichgeordnet wie ein normaler Kaeufer). Erlaesst die Stadt einen Baugenehmigungsbescheid, handelt sie oeffentlich-rechtlich (hoheitlich, uebergeordnet). Fuer Streitigkeiten ueber den Schreibwarenkauf ist das Zivilgericht zustaendig, fuer den Baugenehmigungsstreit das Verwaltungsgericht."
+        }
+      ]
+    },
+    {
+      "id": "lex-grundsaetze",
+      "heading": "Die drei Kollisionsregeln: lex superior, lex specialis, lex posterior",
+      "body": "Was passiert, wenn zwei Rechtsnormen auf denselben Fall gleichzeitig passen und unterschiedliche Rechtsfolgen anordnen? Man braucht Regeln, um Konflikte aufzuloesen. Das Recht kennt drei klassische **Kollisionsregeln** (auch 'lex-Grundsaetze' genannt). Sie gelten als allgemeine Rechtsgrundsaetze (ungeschriebenes Recht), sind aber vielfach auch kodifiziert.\n\n---\n\n### 1. Lex superior -- hoehererrangiges Recht geht vor\n\n**Lateinisch:** lex superior derogat legi inferiori (das hoehere Gesetz verdraengt das niedrigere)\n\nEine Norm der hoeheren Ebene in der Normenpyramide setzt sich immer gegen eine Norm der niedrigeren Ebene durch. Widerspricht ein Landesgesetz dem Grundgesetz, ist das Landesgesetz verfassungswidrig und unanwendbar.\n\n**Beispiel:** Ein Landesgesetz verbietet eine Taetigkeit, die Art. 12 I GG (Berufsfreiheit) schuetzt. Das GG als hoeherrangiges Recht setzt sich durch -- das Landesgesetz ist verfassungswidrig.\n\n---\n\n### 2. Lex specialis -- spezielleres Recht geht vor\n\n**Lateinisch:** lex specialis derogat legi generali (das besondere Gesetz verdraengt das allgemeine)\n\nWenn eine speziellere Norm denselben Sachverhalt regelt wie eine allgemeinere, geht die speziellere vor. Die speziellere Norm hat typischerweise einen **engeren Anwendungsbereich** oder **zusaetzliche Tatbestandsvoraussetzungen**.\n\nDie allgemeine Norm wird dann **subsidiaer** -- sie gilt nur noch ergaenzend, wenn das spezielle Recht Luecken hat.\n\n**Beispiel im Privatrecht:** Das Kaufrecht (SS 433 ff. BGB) ist spezieller als das allgemeine Schuldrecht. Kaufrechtliche Maengelgewaehrleistungsregeln (SS 437 BGB) gehen den allgemeinen Schadensersatzregeln (SS 280 BGB) vor -- aber wo das Kaufrecht schweigt, gilt ergaenzend das allgemeine Schuldrecht.\n\n**Privatrecht-Struktur:** BGB AT ist allgemeines Recht; Kaufrecht (BGB BT), Handelsrecht, Gesellschaftsrecht sind besonderes Recht. Das besondere Recht geht vor; BGB AT gilt ergaenzend.\n\n---\n\n### 3. Lex posterior -- spaeteres Recht geht vor\n\n**Lateinisch:** lex posterior derogat legi priori (das spaetere Gesetz verdraengt das fruehere)\n\nEin neueres Gesetz, das dieselbe Materie regelt, verdraengt das aeltere -- auch ohne ausdrueckliche Aufhebung. Das aeltere Gesetz wird implizit ausser Kraft gesetzt.\n\n**Beispiel:** Die Weimarer Reichsverfassung von 1919 wurde nicht foermlich aufgehoben, sondern durch das Inkrafttreten des Grundgesetzes am 23.5.1949 nach dem lex-posterior-Grundsatz verdraengt.\n\n---\n\n**Rangverhaeltnis der drei Grundsaetze:**\n- **Lex superior** hat absoluten Vorrang -- auch eine spaetere oder speziellere Norm kann eine hoeherrangige Norm nicht verdraengen.\n- Im Verhaeltnis lex specialis zu lex posterior gilt in der Regel: lex specialis geht vor, weil das speziellere Gesetz eine bewusste Sonderregelung darstellt.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Die drei Kollisionsregeln im Ueberblick",
+          "body": "- **Lex superior:** Hoeherrangig geht vor (GG > Gesetz > Verordnung)\n- **Lex specialis:** Spezieller geht vor (Kaufrecht > allg. Schuldrecht)\n- **Lex posterior:** Juenger geht vor (Neues Gesetz verdraengt altes)\n\nMerkhilfe: Su-Spe-Po (Superior, Specialis, Posterior). Rang schlaegt alles."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Lex specialis im BGB-System -- Schritt fuer Schritt",
+          "body": "Kaeufer K kauft bei Haendler V ein Fahrrad, das einen versteckten Defekt hat. Welche Normen gelten?\n\n1. Zuerst pruefen: Gibt es eine **speziellere** Norm? Ja: SS 437 BGB (Maengelgewaehrleistung im Kaufrecht).\n2. Der allgemeinere SS 280 I BGB (Schadensersatz) tritt **zurueck** (subsidiaer), soweit SS 437 BGB greift.\n3. Wo das Kaufrecht schweigt (z. B. allgemeine Verjaehrung), gilt **ergaenzend** BGB AT (SS 195 ff. BGB)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "kollisionsregeln-mermaid",
+          "title": "Die drei Kollisionsregeln",
+          "caption": "Bei Normkonflikten loesen diese drei Grundsaetze die Kollision auf. Lex superior hat absoluten Vorrang.",
+          "code": "graph LR\n    Konflikt[\"Zwei Normen kollidieren\"]\n    S[\"Lex superior\\nHoeherrangig geht vor\\n(GG > Gesetz > VO)\"]\n    SP[\"Lex specialis\\nSpezieller geht vor\\n(bes. > allg. Gesetz)\"]\n    P[\"Lex posterior\\nJuenger geht vor\\n(neues > altes Gesetz)\"]\n    Konflikt --> S\n    Konflikt --> SP\n    Konflikt --> P\n    style S fill:#1e8449,color:#fff\n    style SP fill:#2e86c1,color:#fff\n    style P fill:#b7950b,color:#fff"
+        },
+        {
+          "kind": "table",
+          "id": "allg-besonderes-privatrecht",
+          "title": "Allgemeines und besonderes Privatrecht im Ueberblick",
+          "headers": [
+            "Allgemeines Privatrecht",
+            "Besonderes Privatrecht",
+            "Verhaeltnis"
+          ],
+          "rows": [
+            [
+              "BGB AT (SS 1-240 BGB)",
+              "Schuldrecht BGB BT, Sachenrecht",
+              "BGB AT subsidiaer, ergaenzend"
+            ],
+            [
+              "BGB allgemein",
+              "Handelsrecht (HGB)",
+              "HGB geht vor; BGB ergaenzt"
+            ],
+            [
+              "BGB allgemein",
+              "Gesellschaftsrecht (GmbHG, AktG)",
+              "Spezialgesetze gehen vor"
+            ],
+            [
+              "BGB allgemein",
+              "Arbeitsrecht (AGG, KSchG)",
+              "Arbeitsrecht geht vor; BGB ergaenzt"
+            ],
+            [
+              "Nationales BGB",
+              "EU-Verordnungen (z. B. DSGVO)",
+              "EU-Recht hat Anwendungsvorrang"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zusammenfassung",
+      "heading": "Zusammenfassung und Klausurtipps",
+      "body": "**Das Wichtigste auf einen Blick:**\n\n**Rechtsquellen:**\n- Geschrieben: formelle Gesetze (Parlament), materielle Gesetze (Verordnungen, Satzungen)\n- Ungeschrieben: Gewohnheitsrecht, allgemeine Rechtsgrundsaetze\n- Ebenen: EU, Bund, Land\n\n**Normenpyramide (allgemein):**\n- EU-Primaerrecht > EU-Sekundaerrecht > GG > Formelle Bundesgesetze > Rechtsverordnungen Bund > Landesverfassung > Landesgesetze > Satzungen\n- EU-Recht: Anwendungsvorrang; Bundesrecht: Art. 31 GG bricht Landesrecht\n\n**Normenpyramide Privatrecht (Sonderfall):**\n- EU-Recht > GG > Zwingende Gesetze > **Vertrag** > Dispositives Gesetz\n- Dispositives Recht gilt nur bei Vertragslluecken\n\n**Abgrenzung OeR/Privatrecht:**\n- OeR: Ueber-/Unterordnung, Staat handelt hoheitlich\n- Privatrecht: Gleichordnung, Privatautonomie\n- Theorien: Subordination, modifizierte Subjekts-, Zwei-Stufen-, Zweck-/Zusammenhangstheorie\n\n**Kollisionsregeln:**\n- Lex superior: Hoeherrangig geht vor (absolut)\n- Lex specialis: Spezieller geht vor (allg. Recht wird subsidiaer + Ergaenzungsfunktion)\n- Lex posterior: Juenger geht vor (nur gleiche Rangebene!)\n\n**Klausurtipps:**\n- Immer zuerst lex superior pruefen (hat absolute Wirkung), dann lex specialis, dann lex posterior.\n- Bei der Fallbearbeitung: Zuerst pruefen, ob EU-Recht oder zwingendes deutsches Recht entgegenstehen, dann ob ein Vertrag vorliegt, zuletzt auf dispositives Gesetz zurueckgreifen.",
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Haeufiger Fehler: dispositiv ist nicht unwirksam",
+          "body": "Dispositives Recht ist nicht 'schwaecher' als Vertragsrecht -- es gilt vollstaendig, wo kein Vertrag besteht. Erst wenn ein wirksamer Vertrag eine abweichende Regelung enthaelt, tritt das dispositive Gesetz zurueck. Ist der Vertrag in einem Punkt lueckenhaft, springt das dispositive Gesetz als Lueckenfueller ein."
+        },
+        {
+          "kind": "tip",
+          "title": "Merkhilfe fuer die drei lex-Grundsaetze",
+          "body": "**Su-Spe-Po:** Superior (Rang), Specialis (Spezialitaet), Posterior (Zeit). Immer in dieser Prueffolge -- Rang schlaegt alles."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "fc-m5-01",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist der Unterschied zwischen einem formellen und einem materiellen Gesetz?",
+      "back": "Formelles Gesetz: Von einem Parlament im dafuer vorgesehenen Verfahren beschlossen (z. B. BGB, HGB).\nMaterielles Gesetz: Enthaelt hoheitliche, allgemeinverbindliche Regeln mit Aussenwirkung -- muss aber nicht durch ein Parlament erlassen worden sein (z. B. Rechtsverordnungen, Satzungen).\nViele Gesetze sind beides zugleich."
+    },
+    {
+      "id": "fc-m5-02",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was bedeutet der Anwendungsvorrang des EU-Rechts?",
+      "back": "EU-Recht geht im Konfliktfall vor nationalem Recht. Das nationale Gesetz wird nicht aufgehoben, aber im konkreten Fall nicht angewandt. Grundlage: Rechtsprechung des EuGH."
+    },
+    {
+      "id": "fc-m5-03",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was regelt Art. 31 GG?",
+      "back": "Bundesrecht bricht Landesrecht. Bundesrecht hat Vorrang vor Landesrecht. Widerspricht ein Landesgesetz einem Bundesgesetz, ist das Landesgesetz unanwendbar."
+    },
+    {
+      "id": "fc-m5-04",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Wie unterscheidet sich die Normenpyramide im Privatrecht von der allgemeinen Pyramide?",
+      "back": "Im Privatrecht schiebt sich der **Vertrag** zwischen zwingendes und dispositives Gesetz. Dispositives Recht gilt nur, wo der Vertrag schweigt. Reihenfolge: EU-Recht -> GG -> Zwingende Gesetze -> Vertrag -> Dispositives Gesetz."
+    },
+    {
+      "id": "fc-m5-05",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist der lex-specialis-Grundsatz?",
+      "back": "Das speziellere Gesetz verdraengt das allgemeinere (lex specialis derogat legi generali). Das allgemeine Recht wird subsidiaer, gilt aber ergaenzend bei Luecken im Spezialrecht (Ergaenzungsfunktion)."
+    },
+    {
+      "id": "fc-m5-06",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist der lex-posterior-Grundsatz?",
+      "back": "Das juengere Gesetz verdraengt das aeltere (lex posterior derogat legi priori). Ein spaeteres Gesetz muss das aeltere nicht ausdruecklich aufheben -- allein das Inkrafttreten des neuen Gesetzes reicht."
+    },
+    {
+      "id": "fc-m5-07",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist der Unterschied zwischen Subordinationstheorie und modifizierter Subjektstheorie?",
+      "back": "Subordinationstheorie: OeR liegt vor, wenn Staat und Buerger im Ueber-/Unterordnungsverhaeltnis stehen.\nModifizierte Subjektstheorie: OeR liegt vor, wenn nur der Staat (als Hoeheitsstraeger) durch die Norm berechtigt/verpflichtet wird -- nicht Jedermann."
+    },
+    {
+      "id": "fc-m5-08",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist Gewohnheitsrecht und welchen Rang hat es?",
+      "back": "Gewohnheitsrecht entsteht, wenn eine Vielzahl von Menschen eine Norm ueber einen laengeren Zeitraum als allgemein rechtsverbindlich ansieht. Es ist ungeschriebenes Recht und hat im Regelfall den Rang eines einfachen formellen Gesetzes."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "q-m5-01",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Normen ist ein Beispiel fuer ein nur materielles Gesetz (kein formelles)?",
+      "options": [
+        "Das Buergerliche Gesetzbuch (BGB)",
+        "Das Grundgesetz (GG)",
+        "Eine Rechtsverordnung (z. B. die Strassenverkehrsordnung StVO)",
+        "Das Handelsgesetzbuch (HGB)"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Rechtsverordnungen sind materielle Gesetze (hoheitlich, allgemeinverbindlich, Aussenwirkung), aber keine formellen Gesetze, weil sie nicht von einem Parlament im Gesetzgebungsverfahren erlassen wurden, sondern von der Exekutive aufgrund gesetzlicher Ermaachtigung."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-m5-02",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "leicht",
+      "prompt": "Der Anwendungsvorrang des EU-Rechts bedeutet, dass nationales Recht, das EU-Recht widerspricht, automatisch aufgehoben wird.",
+      "answer": false,
+      "explanation": "Falsch. Der Anwendungsvorrang bedeutet nur, dass das nationale Recht im konkreten Konfliktfall nicht angewendet wird -- es bleibt formal in Kraft. Nur ein Gericht (EuGH bzw. BVerfG) kann Normen fuer nichtig erklaeren."
+    },
+    {
+      "kind": "mc",
+      "id": "q-m5-03",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "leicht",
+      "prompt": "Art. 31 GG: Bundesrecht bricht Landesrecht. Was bedeutet das konkret?",
+      "options": [
+        "Bundesgesetze sind inhaltlich immer besser als Landesgesetze.",
+        "Bundesrecht hat Vorrang vor Landesrecht; widersprechendes Landesrecht ist unanwendbar.",
+        "Landesrecht gilt nur in Bundesangelegenheiten.",
+        "Bundesrecht gilt nur, wenn das Land keine eigene Regelung getroffen hat."
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Art. 31 GG normiert den Vorrang des Bundesrechts vor dem Landesrecht. Widerspricht ein Landesgesetz einem Bundesgesetz, ist das Landesgesetz im Kollisionsfall unanwendbar -- unabhaengig davon, welches inhaltlich besser ist."
+    },
+    {
+      "kind": "mc",
+      "id": "q-m5-04",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "mittel",
+      "prompt": "In der privatrechtlichen Normenpyramide steht der Vertrag zwischen welchen beiden Ebenen?",
+      "options": [
+        "Zwischen Grundgesetz und zwingenden Gesetzen",
+        "Zwischen EU-Recht und Grundgesetz",
+        "Zwischen zwingenden Gesetzen und dispositivem Gesetz",
+        "Unterhalb des dispositiven Gesetzes"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Im Privatrecht gilt: Zwingende Gesetze (z. B. SS 134, SS 138 BGB) gehen dem Vertrag vor -- von ihnen kann nicht abgewichen werden. Der Vertrag geht dem dispositiven Gesetz vor -- dispositives Recht gilt nur, wenn der Vertrag eine Frage offen laesst."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-m5-05",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "mittel",
+      "prompt": "Dispositives Recht hat keine praktische Bedeutung, weil die Parteien stets Vertraege schliessen, die es ersetzen.",
+      "answer": false,
+      "explanation": "Falsch. Dispositives Recht erfuellt eine wichtige Lueckenfueller-Funktion: Es regelt alle Fragen, zu denen der Vertrag schweigt. Ohne dispositives Recht muessten Parteien jeden einzelnen denkbaren Punkt im Vertrag regeln -- was praktisch unmoeglich waere."
+    },
+    {
+      "kind": "mc",
+      "id": "q-m5-06",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "mittel",
+      "prompt": "Was versteht man unter dem lex-specialis-Grundsatz?",
+      "options": [
+        "Das juengere Gesetz verdraengt das aeltere.",
+        "Das hoeherrangige Gesetz verdraengt das niederrangige.",
+        "Das speziellere Gesetz geht dem allgemeineren vor; das allgemeine gilt ergaenzend bei Luecken.",
+        "Spezialgesetze duerfen niemals durch allgemeine Gesetze ergaenzt werden."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Lex specialis: Das speziellere Gesetz verdraengt das allgemeinere (das allgemeine wird subsidiaer). Aber: Das allgemeine Recht hat eine Ergaenzungsfunktion -- es gilt dort, wo das Spezialrecht planwidrige Luecken hat."
+    },
+    {
+      "kind": "mc",
+      "id": "q-m5-07",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "mittel",
+      "prompt": "Welche Abgrenzungstheorie fragt danach, ob nur der Staat als Hoeheitsstraeger durch eine Norm berechtigt oder verpflichtet wird?",
+      "options": [
+        "Subordinationstheorie",
+        "Modifizierte Subjektstheorie",
+        "Zwei-Stufen-Theorie",
+        "Zwecktheorie"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Die modifizierte Subjektstheorie: Oeffentliches Recht liegt vor, wenn nur der Staat (als Traeger hoheitlicher Gewalt, nicht als Jedermann) durch die Norm berechtigt oder verpflichtet wird. Privatrecht gilt hingegen fuer jedermann gleich (Gleichordnung)."
+    },
+    {
+      "kind": "mc",
+      "id": "q-m5-08",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "mittel",
+      "prompt": "Kaufrecht (SS 433 ff. BGB) und allgemeines Schuldrecht (SS 241 ff. BGB) stehen in welchem Verhaeltnis?",
+      "options": [
+        "Das allgemeine Schuldrecht geht immer vor dem Kaufrecht.",
+        "Das Kaufrecht ist spezieller und geht vor; das allgemeine Schuldrecht gilt ergaenzend.",
+        "Beide gelten gleichrangig nebeneinander.",
+        "Das Kaufrecht verdraengt das allgemeine Schuldrecht vollstaendig und endgueltig ohne Ergaenzungsfunktion."
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Das Kaufrecht (SS 433 ff. BGB) ist lex specialis gegenueber dem allgemeinen Schuldrecht. Es geht vor, soweit es Regelungen trifft. Das allgemeine Schuldrecht gilt ergaenzend dort, wo das Kaufrecht Luecken hat."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-m5-09",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "schwer",
+      "prompt": "Eine spaeter erlassene Rechtsverordnung des Bundes kann das Grundgesetz verdraengen, weil lex posterior (juenger geht vor) gilt.",
+      "answer": false,
+      "explanation": "Falsch. Lex superior hat absoluten Vorrang. Eine Rechtsverordnung ist niederrangig gegenueber dem Grundgesetz. Lex posterior wirkt nur innerhalb derselben Rangebene -- die zeitlich juengere Norm kann niemals die hoeherrangige Norm verdraengen."
+    },
+    {
+      "kind": "freetext",
+      "id": "q-m5-10",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "schwer",
+      "prompt": "Erklaeren Sie anhand eines Beispiels, wie lex specialis und die Ergaenzungsfunktion des allgemeinen Rechts zusammenwirken.",
+      "sampleAnswer": "Beispiel: Kaeufer K kauft bei Haendler V eine fehlerhafte Waschmaschine. Das Kaufrecht (SS 433 ff. BGB) ist lex specialis. SS 437 BGB regelt die Rechte bei Maengeln. Fuer Schadensersatz verweist SS 437 Nr. 3 BGB auf SS 280 I BGB des allgemeinen Schuldrechts (Ergaenzungsfunktion). Die allgemeine Verjaehrung (SS 195 ff. BGB) gilt ergaenzend, soweit SS 438 BGB als Spezialregel keine Regelung trifft.",
+      "keywords": [
+        "lex specialis",
+        "kaufrecht",
+        "allgemeines schuldrecht",
+        "subsidiaer",
+        "ergaenzungsfunktion",
+        "luecke"
+      ],
+      "explanation": "Kernidee: Das speziellere Recht verdraengt das allgemeinere, aber nur soweit es Regelungen trifft. Wo das Spezialrecht planwidrige Luecken hat, springt das allgemeine Recht ergaenzend ein."
+    },
+    {
+      "kind": "mc",
+      "id": "q-m5-11",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Rechtsgebiete zaehlen zum Privatrecht? (Mehrfachauswahl moeglich)",
+      "options": [
+        "Strafrecht",
+        "Buergerliches Recht (BGB)",
+        "Verwaltungsrecht",
+        "Handelsrecht (HGB)",
+        "Gesellschaftsrecht"
+      ],
+      "correct": [
+        1,
+        3,
+        4
+      ],
+      "multiple": true,
+      "explanation": "Zum Privatrecht gehoeren das Buergerliche Recht, das Handelsrecht und das Gesellschaftsrecht. Strafrecht und Verwaltungsrecht sind oeffentliches Recht. Das Arbeitsrecht ist ein Mischgebiet."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-m5-12",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "difficulty": "leicht",
+      "prompt": "EU-Primaerrecht (z. B. EUV, AEUV) steht in der Normenpyramide hoeher als EU-Sekundaerrecht (z. B. Verordnungen).",
+      "answer": true,
+      "explanation": "Richtig. Das EU-Primaerrecht (EUV, AEUV, EU-Grundrechtecharta) ist die Verfassung der EU und hat Vorrang vor dem EU-Sekundaerrecht (Verordnungen, Richtlinien, Beschluesse). Eine EU-Verordnung, die gegen EU-Primaerrecht verstoesst, ist nichtig."
+    }
+  ],
+  "exercises": []
+}

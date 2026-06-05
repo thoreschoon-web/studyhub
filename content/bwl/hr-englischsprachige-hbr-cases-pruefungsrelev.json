@@ -1,0 +1,395 @@
+{
+  "id": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+  "subjectId": "bwl",
+  "title": "Englischsprachige HBR-Cases (prüfungsrelevant)",
+  "summary": "Vier Harvard-Business-Review-Artikel bilden die englischsprachige Pflichtlektüre im Personal-Teil von BWL 2. Jeder Case beleuchtet ein zentrales HR-Konzept aus der Vorlesung und ist klausurrelevant im Sinne von Anwendungs- und Transferfragen.",
+  "order": 19,
+  "estMinutes": 60,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "intro",
+      "heading": "Warum HBR-Cases? -- Einführung und Überblick",
+      "body": "Harvard Business Review (HBR) ist eine der weltweit renommiertesten Management-Zeitschriften. Die dort veröffentlichten **Cases** (Fallstudien und Erfahrungsberichte) beschreiben reale oder realitätsnahe Unternehmenssituationen und fordern Lesende dazu auf, selbst eine fundierte Meinung zu entwickeln.\n\nIn der Vorlesung *BWL 2 -- Personal* (Prof. Piening, LU Hannover) sind vier HBR-Texte **Pflichtlektüre** -- auf Englisch. Sie werden nicht auswendig gelernt, sondern sollen auf neue Situationen **übertragen** werden. Genau das ist der Klausurcharakter: *Anwendungs- und Transferfragen*.\n\n**Die vier Cases im Überblick:**\n\n| # | Titel (Kurzform) | Autoren | Jahr | Vorlesungsbezug |\n|---|---|---|---|---|\n| 1 | A Players or A Positions? | Huselid, Beatty, Becker | 2005 | V4 Talent Management |\n| 2 | The Risky Business of Hiring Stars | Groysberg, Nanda, Nohria | 2004 | V5 Rekrutierung |\n| 3 | The Gentleman's Three | Hall, Wasynczuk | 2011 | V7 Performance Management |\n| 4 | How Honeywell Avoided Layoffs | Cote | 2013 | V9 Personalfreisetzung |",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "hbr-overview-table",
+          "title": "Überblick: Vier HBR-Cases und ihre Vorlesungszuordnung",
+          "headers": ["Case", "Kernbegriff (EN)", "Deutsch", "Vorlesung"],
+          "rows": [
+            ["A Players or A Positions?", "Workforce Differentiation", "Differenzierte Belegschaftssteuerung", "V4 Talent Management"],
+            ["Risky Business of Hiring Stars", "Star Portability", "Portabilität von Starleistung", "V5 Rekrutierung"],
+            ["The Gentleman's Three", "Grade Inflation / Compression", "Notenaufblähung / Notenkompression", "V7 Performance Management"],
+            ["How Honeywell Avoided Layoffs", "Furlough vs. Layoff", "Zwangsurlaub vs. Entlassung", "V9 Personalfreisetzung"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case1-a-positions",
+      "heading": "Case 1: A Players or A Positions? (Huselid, Beatty & Becker, 2005)",
+      "body": "### Was ist der Kerngedanke?\n\nDie meisten Unternehmen versuchen, überall die besten Mitarbeitenden zu haben -- sogenannte **A-Players** (Spitzenkräfte). Huselid, Beatty und Becker sagen: Das ist der falsche Ansatz. Entscheidend ist nicht, ob jemand ein A-Player ist, sondern ob er oder sie auf einer **A-Position** (strategisch kritischen Stelle) sitzt.\n\n### Die drei Positionstypen\n\n**A-Positionen (strategisch):** Diese Stellen haben *direkten strategischen Einfluss* auf die Unternehmensstrategie UND zeigen *hohe Leistungsvariabilität* -- d.h. die Unterschiede zwischen einem sehr guten und einem mittelmäßigen Stelleninhaber sind enorm (Umsatzunterschied Faktor 5-10x möglich). Sie machen weniger als 20 % der Belegschaft aus.\n\n**B-Positionen (unterstützend, engl. Support):** Stellen, die A-Positionen absichern oder selbst strategisch wichtig wären, aber kaum Leistungsunterschiede zeigen (z.B. Piloten -- wichtig, aber alle fliegen ähnlich gut dank Training und Regulierung).\n\n**C-Positionen (überschüssig, engl. Surplus):** Stellen mit wenig bis gar keinem strategischen Einfluss; können oft automatisiert oder outsourct werden.\n\n### Warum ist das wichtig?\n\nUnternehmen haben begrenzte Ressourcen (Geld, Managementaufmerksamkeit). Wenn man überall investiert, investiert man nirgendwo richtig. Die Lösung: **Überproportional in A-Positionen investieren** -- beste Rekrutierung, höchste Vergütung, intensivste Entwicklung. Auf C-Positionen nur das Nötigste ausgeben.\n\n### Wichtigste Argumente\n- Ein Spitzenverkäufer (85. Perzentile) generiert 5-10x so viel Umsatz wie ein Mittelmäßiger (50. Perzentile) -- bei gleicher Gehaltsdifferenz.\n- Es gibt keine *inherently* strategischen Positionen: Was bei Nordstrom (Verkäufer) A-Position ist, ist es bei Costco (Einkauf) nicht.\n- A-Positionen sind oft **quer durch die Hierarchie** verteilt, nicht nur ganz oben.\n- Firmen, die die *richtigen* Talente auf den *richtigen* Stellen haben, gewinnen den Talentwettbewerb -- nicht die mit den meisten Talenten insgesamt.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kernformel des Case",
+          "body": "**Nicht:** A-Player auf alle Stellen verteilen.\n**Sondern:** A-Player gezielt auf A-Positionen setzen, B-Player auf B-Positionen -- und C-Positionen möglichst abbauen."
+        },
+        {
+          "kind": "definition",
+          "title": "A-Position -- Definition",
+          "body": "Eine Stelle gilt als A-Position, wenn sie (1) **direkten strategischen Einfluss** hat (trägt zur Umsetzung der Wettbewerbsstrategie bei) UND (2) **hohe Leistungsvariabilität** zeigt (große Unterschiede zwischen guten und schlechten Stelleninhabern)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: Gallup-Studie Kundenservice",
+          "body": "Gallup befragte 45.000 Kunden eines serviceorientierten Unternehmens zu 4.600 Kundenservicemitarbeitern. Ergebnis: Das obere Viertel hatte positiven Effekt auf 61 % der Kunden, das unterste Viertel hatte sogar **negativen** Effekt. Kostenpunkt für die schlechten Kräfte: ca. 40 Mio. USD/Jahr an zerstörtem Wert -- obwohl ihr Gehalt dasselbe war."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "abc-positions-table",
+          "title": "A-, B-, C-Positionen im Vergleich",
+          "headers": ["Merkmal", "A-Position (Strategisch)", "B-Position (Support)", "C-Position (Surplus)"],
+          "rows": [
+            ["Strategischer Einfluss", "Direkt, hoch", "Indirekt / gering", "Kaum vorhanden"],
+            ["Leistungsvariabilität", "Hoch (großer Unterschied zwischen gut/schlecht)", "Gering (kaum Unterschied)", "Sehr gering"],
+            ["Vergütungslogik", "Nach Leistung (Performance)", "Nach Stellenniveau", "Nach Marktpreis"],
+            ["Fehlerkonsequenz", "Sehr teuer (Umsatzverlust)", "Teuer, aber behebbar", "Leicht behebbar"],
+            ["Falsche Person eingestellt", "Großer Schaden", "Moderat", "Leicht zu ersetzen"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case2-risky-stars",
+      "heading": "Case 2: The Risky Business of Hiring Stars (Groysberg, Nanda & Nohria, 2004)",
+      "body": "### Was ist der Kerngedanke?\n\nViele Unternehmen kaufen externe Spitzenkräfte (sogenannte **Stars**) ein -- mit riesigen Gehältern, Signing-Boni (Unterzeichnungsbonus) und Aktienoptionen. Groysberg, Nanda und Nohria zeigen anhand einer Studie mit **1.052 Star-Aktienanalysten** aus 78 US-Investmentbanken (1988-1996): Das ist riskant und lohnt sich meist nicht.\n\n### Die zentrale Erkenntnis: Leistung ist nicht portabel\n\nDie **Leistung eines Stars bricht um ~20 % ein**, sobald er oder sie das Unternehmen wechselt -- und erholt sich über Jahre kaum wieder. 46 % der untersuchten Analysten schnitten im Jahr nach dem Wechsel schlechter ab als vorher.\n\nWarum? Weil Spitzenleistung nicht allein vom Individuum abhängt, sondern zu einem großen Teil **firmenspezifisch** ist:\n- Systeme, Prozesse, Datenbanken\n- Beziehungen zu Kollegen, Kunden, internen Netzwerken\n- Unternehmenskultur und Ressourcenzugang\n\nAll das kann der Star nicht mitnehmen. Die Leistung ist also **kontext- und firmenabhängig** -- nicht rein individuell.\n\n### Drei Dinge passieren, wenn ein Unternehmen einen Star einstellt\n\n1. **Der Stern des Stars verblasst:** Leistungseinbruch, weil er oder sie das neue System erst lernen muss, alte Praktiken ablegen muss und die neue Organisation noch nicht kennt.\n\n2. **Die Teamleistung leidet:** Kollegen werden demotiviert (sie müssen sich Entwicklungschancen mit dem Neuankömmling teilen), Kommunikation bricht ein, Resentment (Verbitterung, Groll) entsteht.\n\n3. **Der Star bleibt nicht lange:** Stars mit Jobwechselneigung wechseln erneut -- 36 % verließen die neue Bank innerhalb von 36 Monaten, weitere 29 % innerhalb von 24 Monaten danach.\n\n### Wichtigste Argumente\n- **Grow stars, don't buy them:** Es ist wirksamer, interne Talente zu entwickeln, als teure externe Stars einzukaufen.\n- Sanford Bernstein (intern züchtet) outperformte Merrill Lynch (extern einkauft) nachhaltig.\n- Stars, die ihre eigenen Teams mitbringen dürfen, schneiden im neuen Unternehmen deutlich besser ab -- weil sie ihr soziales Kapital (Netzwerk, Vertrauen) übertragen können.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kernaussage",
+          "body": "**Leistung = individuelle Faktoren + firmenspezifische/Kontext-Faktoren.** Beim Wechsel nimmt der Star nur den individuellen Teil mit -- der firmenspezifische Teil bleibt zurück. Deshalb: Star-Einkauf ist teuer und riskant, internes Talent-Development ist nachhaltiger."
+        },
+        {
+          "kind": "warning",
+          "title": "Klausur-Falle",
+          "body": "Der Artikel sagt nicht, dass Stars grundsätzlich schlecht sind. Er sagt, dass **extern eingekaufte** Stars unter ihrem bisherigen Niveau bleiben. Intern gezüchtete Stars behalten ihre Leistung -- weil das firmenspezifische Kapital erhalten bleibt."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: James Cunningham, Chemieanalyst",
+          "body": "James Cunningham war von 1983-1986 der Top-Chemieanalyst seines Hauses. Als er zu F. Eberstadt für First Boston wechselte, fiel er sofort auf Platz 3 zurück. Ähnliches galt für Paul Mlotok: Nummer 1 bei internationalen Ölaktien bei Salomon Brothers -- nach Wechsel zu Morgan Stanley fiel er auf Platz 3."
+        }
+      ]
+    },
+    {
+      "id": "case3-gentlemans-three",
+      "heading": "Case 3: The Gentleman's Three (Hall & Wasynczuk, 2011)",
+      "body": "### Was ist der Kerngedanke?\n\nDieser Case ist eine **fiktive Fallstudie** (basierend auf einem echten HBS-Fall zu Arrow Electronics): Nils Ekdahl, HR-Chef der fiktiven Circale Corporation, stellt fest, dass das neue Leistungsbeurteilungssystem (Skala 1-5) völlig versagt -- praktisch alle Mitarbeitenden bekommen eine 4 oder 5. Durchschnittswert: **4,6 von 5**. Kaum jemand bekommt eine 2 oder 1.\n\n### Die Probleme: Grade Inflation und Grade Compression\n\n**Grade Inflation** (Notenaufblähung): Alle bekommen hohe Bewertungen, egal wie gut sie wirklich sind. Ursache: Manager wollen keine unangenehmen Gespräche führen, wollen Mitarbeitende nicht demotivieren oder riskieren keinen Ärger.\n\n**Grade Compression** (Notenkompression): Die Noten häufen sich in einem engen Bereich (hier: fast alle zwischen 4 und 5). Das ist eine Unterform der Grade Inflation: Es gibt zwar formal Unterschiede, aber sie sind so gering, dass sie bedeutungslos sind.\n\n**Konsequenz:** Das Beurteilungssystem ist wertlos. Es kann nicht genutzt werden für:\n- Identifikation von Hochleistenden und Schwachleistenden\n- Nachfolgeplanung (Succession Planning)\n- Gehaltsentscheidungen\n- Entlassungsentscheidungen nach Fusionen\n\n### Wichtigste Argumente\n- Manager verlieren das Bewusstsein für das eigentliche Ziel: **verbesserte Unternehmensleistung und persönliches Wachstum**.\n- Ehrliches Feedback ist der Kern jedes funktionierenden Performance-Management-Systems.\n- Lösung nach Berisford (Experte im Case): (1) Qualität des Gesprächs zählt, nicht nur die Zahl. (2) Manager sollten Beurteilungen als Chance sehen, Talente zu formen. (3) Manager, die gute Entwicklungsgespräche führen, sollten belohnt werden.\n- Der Titel *The Gentleman's Three* bezieht sich auf die alte akademische Praxis: Jeder bekommt eine 3 (Drei), ohne wirklich bewertet zu werden -- als höfliche Geste ('gentlemanly' = rücksichtsvoll, nicht konfrontativ).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Grade Inflation vs. Grade Compression",
+          "body": "**Grade Inflation** (Notenaufblähung): Systematisch zu hohe Bewertungen -- alle bekommen mehr als sie verdient haben.\n\n**Grade Compression** (Notenkompression): Alle Bewertungen liegen in einem engen Band zusammen -- keine Differenzierung mehr möglich, selbst wenn die Noten nominal unterschiedlich sind."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Kernbotschaft des Case",
+          "body": "Leistungsbeurteilung funktioniert nur, wenn Manager bereit sind, **unangenehme aber ehrliche** Gespräche zu führen. Systeme allein lösen das Problem nicht -- es braucht eine Kultur und Anreize für Ehrlichkeit. Die Frage 'Soll Ekdahl eine weitere Runde anordnen?' ist eine Diskussionsfrage ohne eindeutige Antwort."
+        },
+        {
+          "kind": "info",
+          "title": "Bezug zur Vorlesung V7",
+          "body": "Der Case illustriert Probleme des **vergleichenden Ansatzes** der Leistungsbeurteilung: Forced Distribution (z.B. 20-70-10 nach Welch/GE) wäre eine mögliche Gegenstrategie, weil sie die Kurve mathematisch erzwingt. Aber auch das hat Probleme (Yahoo/Marissa Mayer). Der tiefere Punkt: Kein System ersetzt Kultur und Haltung."
+        }
+      ]
+    },
+    {
+      "id": "case4-honeywell",
+      "heading": "Case 4: How Honeywell Avoided Layoffs (Cote, 2013)",
+      "body": "### Was ist der Kerngedanke?\n\nDavid Cote, CEO von Honeywell, beschreibt in diesem Erfahrungsbericht (First-Person-Artikel), wie das Unternehmen die Rezession 2008/09 ohne Massenentlassungen überstand -- durch sogenannte **Furloughs** (unbezahlter Zwangsurlaub).\n\n### Was sind Furloughs?\n\nEin **Furlough** (dt. unbezahlter Zwangsurlaub / Kurzarbeit ohne Lohnfortzahlung) bedeutet: Mitarbeitende nehmen für eine bestimmte Zeit unbezahlten Urlaub, bleiben aber **Beschäftigte des Unternehmens**. Sie werden nicht entlassen. Bei Honeywell: durchschnittlich 3-5 Wochen pro Person im ersten Halbjahr 2009, in einwöchigen Blöcken.\n\n### Das zentrale Argument: Die falsche Verheißung von Entlassungen\n\nCote nennt Entlassungen (Layoffs) eine **\"falsche Verheißung\"** (*False Promise of Layoffs*), weil:\n1. **Entlassungen dauern 6 Monate bis sie sich rechnen:** Jeder Entlassene erhält im Schnitt 6 Monate Abfindung (Severance Pay). Das heißt: Die ersten 6 Monate nach der Entlassung spart das Unternehmen gar nichts.\n2. **Rezessionen dauern meist nur 12-18 Monate:** Danach muss das Unternehmen wieder einstellen -- und zahlt dann erneut Rekrutierungs- und Einarbeitungskosten.\n3. **Firmenspezifisches Wissen geht verloren:** Entlassene nehmen ihr Wissen, ihre Kundenkontakte und ihr Know-how mit.\n4. **Survivor-Syndrom:** Verbliebene Mitarbeitende sind verängstigt, unproduktiv und wechselwillig.\n5. **Regrettable Turnover sinkt:** Bei Honeywell verließen die Mitarbeitenden, die man eigentlich halten wollte, das Unternehmen weniger häufig -- weil sie Vertrauen in die Unternehmensführung hatten.\n\n### Herausforderungen der Furloughs\n- Logistische Komplexität (verschiedene Arbeitsgesetze in US-Bundesstaaten und anderen Ländern)\n- Fairness-Fragen: Warum müssen Topmanager nicht auch in Furlough?\n- Angst und Unsicherheit steigen im Laufe des Programms\n- Einige Mitarbeiter begannen zu ärgern: \"Ich wäre sowieso nicht entlassen worden\"\n\n### Ergebnis\n- Honeywell war beim Aufschwung 2010 **besser vorbereitet als Wettbewerber**: kürzere Lieferzeiten, bessere Lagerbestände, erfahrene Belegschaft.\n- Der **regrettable Turnover** (die Fluktuation der Leute, die man behalten wollte) **sank** -- entgegen der Erwartung, dass Furloughs Leistungsträger vertreiben.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Furlough (Zwangsurlaub) vs. Layoff (Entlassung)",
+          "body": "**Furlough:** Mitarbeiter bleibt angestellt, nimmt temporär unbezahlten Urlaub. Beschäftigungsverhältnis besteht fort.\n\n**Layoff (betriebsbedingte Entlassung):** Das Arbeitsverhältnis wird beendet. Mit Abfindung und Verlust des firmenspezifischen Wissens."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Vorlesung V9 -- Personalfreisetzung",
+          "body": "Der Honeywell-Case illustriert direkt das **Stufenmodell der Personalfreisetzung** aus der Vorlesung: Furloughs sind eine *vorbeugende / personalpolitische Maßnahme* -- eine Alternative zum direkten Personalabbau (Entlassungen). Sie passen zum Konzept, dass gutes Trennungsmanagement (oder dessen Vermeidung) Unternehmenskultur und Mitarbeiterbindung langfristig stärkt."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Zahlenbeispiel: Warum Entlassungen sich nicht rechnen",
+          "body": "Honeywell wäre durch Furloughs in weniger als einem Quartal 'break even' gegangen. Bei Entlassungen wäre der Break-Even erst nach 6 Monaten erreicht worden -- wenn die Rezession dann schon vorbei ist und man wieder einstellen muss. Cotes Analogie: 10 Mio. USD in eine Fabrik investieren, die 6 Monate baut und dann schon wieder abgerissen wird."
+        }
+      ]
+    },
+    {
+      "id": "klausur-transfer",
+      "heading": "Klausur-Transferfragen: So fragt Prof. Piening",
+      "body": "Die Klausur im Personal-Teil (30 Punkte, 1 aus 2 Fragen, ~30 Min.) verlangt **Anwendung und Transfer** -- keine reine Wiedergabe. Typische Frageformen:\n\n**Typ A -- Fall beschreiben und einordnen:** \"Ein Unternehmen kauft regelmäßig externe Stars ein, aber die Leistung enttäuscht. Erklären Sie mit Bezug auf den HBR-Artikel von Groysberg et al. (2004), warum das so ist, und geben Sie eine alternative Empfehlung.\"\n\n**Typ B -- Pro/Contra-Diskussion:** \"Sollte ein Unternehmen in der Rezession auf Furloughs statt Entlassungen setzen? Nehmen Sie Stellung und beziehen Sie den Cote-Artikel (2013) ein.\"\n\n**Typ C -- Konzept auf eigene Situation anwenden:** \"Ein HR-Manager stellt fest, dass alle Mitarbeitenden top-bewertet wurden. Was ist das Problem (Fachbegriff), welche Konsequenzen hat es und was würden Sie empfehlen?\"\n\n**Bewertungshinweis:** Punkte gibt es für: (1) korrekten Fachbegriff, (2) Erklärung des Konzepts, (3) Bezug zum konkreten Fall/Artikel, (4) eigenständige Schlussfolgerung.\n\n**Wichtige englische Begriffe und ihre Übersetzungen:**\n\n| Englisch | Deutsch |\n|---|---|\n| A/B/C Position | Strategische / unterstützende / überschüssige Stelle |\n| Workforce Differentiation | Differenzierte Belegschaftssteuerung |\n| Star Portability | Portabilität von Starleistung |\n| Grow stars, don't buy them | Talente intern entwickeln statt extern einkaufen |\n| Grade Inflation | Notenaufblähung |\n| Grade Compression | Notenkompression |\n| Furlough | Unbezahlter Zwangsurlaub |\n| Layoff | Betriebsbedingte Entlassung |\n| Regrettable Turnover | Bedauerliche Fluktuation (Verlust gewünschter Mitarbeiter) |\n| False Promise of Layoffs | Die falsche Verheißung von Entlassungen |",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "hbr-cases-map",
+          "title": "Zuordnung der HBR-Cases zu den Vorlesungsthemen",
+          "caption": "Jeder HBR-Case vertieft ein Thema aus der Personalvorlesung.",
+          "code": "graph LR\n  A[HBR-Cases] --> B[A Players or A Positions?]\n  A --> C[Risky Business of Hiring Stars]\n  A --> D[The Gentleman's Three]\n  A --> E[How Honeywell Avoided Layoffs]\n  B --> F[V4 Talent Management]\n  C --> G[V5 Rekrutierung]\n  D --> H[V7 Performance Management]\n  E --> I[V9 Personalfreisetzung]"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "hbr-fc-1",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Was ist eine A-Position laut Huselid, Beatty & Becker (2005)?",
+      "back": "Eine Stelle mit (1) direktem strategischem Einfluss auf die Unternehmensstrategie UND (2) hoher Leistungsvariabilität zwischen Stelleninhabern. Weniger als 20 % der Belegschaft."
+    },
+    {
+      "id": "hbr-fc-2",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Was bedeutet 'Star Portability' und was zeigt die Studie von Groysberg et al. (2004)?",
+      "back": "Portabilität von Starleistung: Kann ein Star seine Spitzenleistung in ein neues Unternehmen 'mitnehmen'? Antwort: Kaum. 46 % der Analysten schnitten im Jahr nach dem Wechsel schlechter ab; Leistungseinbruch von ~20 % -- weil firmenspezifisches Kapital (Systeme, Netzwerke, Kultur) nicht übertragbar ist."
+    },
+    {
+      "id": "hbr-fc-3",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Was versteht man unter 'Grade Inflation' und 'Grade Compression' (The Gentleman's Three)?",
+      "back": "Grade Inflation: Systematisch zu hohe Leistungsbewertungen, weil Manager keine negativen Gespräche führen wollen. Grade Compression: Alle Noten häufen sich in einem engen Bereich, Differenzierung wird unmöglich. Folge: Das Beurteilungssystem ist wertlos."
+    },
+    {
+      "id": "hbr-fc-4",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Was ist ein Furlough und warum wählte Honeywell diesen Ansatz statt Entlassungen?",
+      "back": "Furlough = unbezahlter Zwangsurlaub; Mitarbeiter bleibt angestellt. Honeywell: Rezessionen enden schnell, Entlassungen kosten 6 Monate bis Break-Even, und firmenspezifisches Wissen bleibt erhalten. Ergebnis: bessere Aufstelllung in der Erholung, gesunkener 'regrettable turnover'."
+    },
+    {
+      "id": "hbr-fc-5",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Welcher HBR-Case wird welcher Vorlesungssitzung zugeordnet?",
+      "back": "A Players or A Positions? → V4 Talent Management. Risky Business of Hiring Stars → V5 Rekrutierung. The Gentleman's Three → V7 Performance Management. How Honeywell Avoided Layoffs → V9 Personalfreisetzung."
+    },
+    {
+      "id": "hbr-fc-6",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Was ist die 'False Promise of Layoffs' (Cote, 2013)?",
+      "back": "Entlassungen rechnen sich oft nicht: (1) Break-Even erst nach 6 Monaten Abfindung. (2) Rezessionen dauern nur 12-18 Monate → man muss kurz nach den Entlassungen wieder einstellen. (3) Firmenspezifisches Wissen geht verloren. (4) Survivor-Syndrom belastet die Belegschaft."
+    },
+    {
+      "id": "hbr-fc-7",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Was meint 'Grow stars, don't buy them' (Groysberg et al.)?",
+      "back": "Empfehlung: Unternehmen sollten interne Talente systematisch entwickeln, statt teure externe Stars einzukaufen. Intern entwickelte Stars behalten ihre Leistung, weil ihr firmenspezifisches Kapital (Netzwerke, Systeme, Kultur) erhalten bleibt."
+    },
+    {
+      "id": "hbr-fc-8",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Warum leidet die Teamleistung, wenn ein extern eingekaufter Star kommt?",
+      "back": "Kollegen werden demotiviert (Karrierechancen blockiert), es entsteht Verbitterung (Resentment), Kommunikation bricht ein. Junior-Manager werten die Star-Anstellung als Signal, dass das Unternehmen interne Entwicklung nicht wertschätzt."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "hbr-q1",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "leicht",
+      "prompt": "Welche zwei Merkmale definieren eine 'A-Position' laut Huselid, Beatty & Becker (2005)?",
+      "options": [
+        "Hohes Gehalt und lange Betriebszugehörigkeit",
+        "Direkter strategischer Einfluss UND hohe Leistungsvariabilität",
+        "Viele Mitarbeitende auf dieser Stelle und hoher Ausbildungsgrad",
+        "Schwierige Besetzbarkeit und hohe Verantwortung in der Hierarchie"
+      ],
+      "correct": [1],
+      "explanation": "A-Positionen sind nicht über Gehalt oder Hierarchie definiert, sondern über (1) direkten strategischen Einfluss auf die Unternehmenstrategie und (2) hohe Leistungsunterschiede zwischen den Stelleninhabern. Ein Kassierer bei Nordstrom kann eine A-Position sein -- bei Costco nicht."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hbr-q2",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "leicht",
+      "prompt": "Laut Huselid, Beatty & Becker (2005) sollten Unternehmen versuchen, auf jeder Stelle A-Player einzusetzen.",
+      "answer": false,
+      "explanation": "Falsch. Die Kernaussage ist genau das Gegenteil: Unternehmen können es sich nicht leisten, überall A-Player zu haben. Stattdessen sollen A-Player gezielt auf A-Positionen gesetzt werden. Auf C-Positionen lohnt sich die Investition in Spitzenkräfte nicht, da dort die Leistungsvariabilität minimal ist."
+    },
+    {
+      "kind": "mc",
+      "id": "hbr-q3",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "mittel",
+      "prompt": "Was passiert laut Groysberg et al. (2004) typischerweise mit der Leistung eines extern eingekauften Stars im ersten Jahr nach dem Wechsel?",
+      "options": [
+        "Die Leistung steigt um ca. 20 %, weil der Star motiviert ist, sich zu beweisen",
+        "Die Leistung bleibt stabil, weil Talent universell ist",
+        "Die Leistung bricht um ca. 20 % ein und erholt sich kaum über Jahre",
+        "Die Leistung schwankt stark -- bei manchen steigt sie, bei anderen fällt sie"
+      ],
+      "correct": [2],
+      "explanation": "46 % der untersuchten Analysten schnitten im Jahr nach dem Wechsel schlechter ab. Der durchschnittliche Leistungseinbruch betrug ca. 20 % und hielt über mehrere Jahre an. Ursache: firmenspezifisches Kapital (Systeme, Netzwerke, Prozesse) kann nicht mitgenommen werden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hbr-q4",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "mittel",
+      "prompt": "Im Case 'The Gentleman's Three' zeigt sich, dass das neue Beurteilungssystem bei Circale Corp gut funktioniert, weil der Durchschnittswert bei 4,6 von 5 liegt.",
+      "answer": false,
+      "explanation": "Falsch. Ein Durchschnitt von 4,6 auf einer 5er-Skala ist ein klares Zeichen für Grade Inflation und Grade Compression. Das System versagt -- es liefert keine verwertbaren Daten zur Unterscheidung von Leistungsträgern und Schwachleistenden. Es ist damit für Personalentscheidungen wertlos."
+    },
+    {
+      "kind": "mc",
+      "id": "hbr-q5",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "mittel",
+      "prompt": "Welchen Begriff verwendet Cote (2013), um die langfristige Überlegenheit von Furloughs gegenüber Layoffs zu belegen?",
+      "options": [
+        "Der Survivor-Effekt: Verbliebene arbeiten härter nach Entlassungen",
+        "Der regrettable Turnover sank bei Honeywell trotz Furloughs",
+        "Furloughs sind rechtlich sicherer als Entlassungen in den USA",
+        "Die Produktivität stieg sofort um 30 % nach Ende der Furloughs"
+      ],
+      "correct": [1],
+      "explanation": "'Regrettable Turnover' (bedauerliche Fluktuation) bezeichnet den Verlust von Mitarbeitern, die man eigentlich halten wollte. Entgegen der Erwartung, dass Furloughs Leistungsträger vertreiben, sank dieser Wert bei Honeywell -- weil Mitarbeitende Vertrauen in die Unternehmensführung hatten."
+    },
+    {
+      "kind": "freetext",
+      "id": "hbr-q6",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie in 3-4 Sätzen, warum Spitzenleistung laut Groysberg et al. (2004) nicht vollständig 'portabel' ist. Nennen Sie mindestens zwei Gründe.",
+      "sampleAnswer": "Spitzenleistung entsteht nicht allein aus individuellen Fähigkeiten, sondern zu einem erheblichen Teil aus firmenspezifischen Ressourcen: Systemen, Prozessen, Netzwerken und Unternehmenskultur. Beim Arbeitgeberwechsel bleibt dieses firmenspezifische Kapital zurück -- der Star kann es nicht mitnehmen. Hinzu kommt, dass Kollegen im neuen Unternehmen oft nicht kooperativ sind (Ressentiments gegenüber dem hochbezahlten Neuankömmling), was die Einarbeitungszeit verlängert. Außerdem sind Stars oft schlecht darin, alte Gewohnheiten abzulegen und neue Praktiken anzunehmen.",
+      "keywords": ["firmenspezifisch", "netzwerk", "systeme", "ressentiment", "portabel", "kontext"],
+      "explanation": "Die Kernunterscheidung: individuelle Kompetenz vs. firmenspezifisches Kapital. Nur ersteres ist portabel. Der Rest bleibt beim alten Arbeitgeber."
+    },
+    {
+      "kind": "mc",
+      "id": "hbr-q7",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "mittel",
+      "prompt": "Welcher HBR-Case wird der Vorlesungssitzung 'Personalfreisetzung' (V9) zugeordnet?",
+      "options": [
+        "A Players or A Positions? (Huselid et al.)",
+        "The Risky Business of Hiring Stars (Groysberg et al.)",
+        "The Gentleman's Three (Hall & Wasynczuk)",
+        "How Honeywell Avoided Layoffs (Cote)"
+      ],
+      "correct": [3],
+      "explanation": "Der Honeywell-Case von CEO David Cote (2013) behandelt unbezahlte Furloughs als Alternative zu Massenentlassungen in der Rezession 2008/09 -- damit gehört er direkt zur Vorlesung Personalfreisetzung (V9)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hbr-q8",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "leicht",
+      "prompt": "Der Titel 'The Gentleman's Three' bezieht sich auf eine alte akademische Praxis: Jeder Student bekommt automatisch eine mittelmäßige Note als höfliche Geste.",
+      "answer": true,
+      "explanation": "Richtig. Analog dazu geben Manager bei Circale Corp fast allen Mitarbeitenden hohe Noten (4 oder 5), um Konflikte zu vermeiden -- ähnlich wie die alte Praxis, jedem automatisch eine 3 zu geben ('Gentleman's C' im US-System), ohne echte Beurteilung."
+    },
+    {
+      "kind": "mc",
+      "id": "hbr-q9",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen zur 'False Promise of Layoffs' (Cote, 2013) ist KORREKT?",
+      "options": [
+        "Entlassungen sparen sofort ab dem ersten Monat Geld, weil das Gehalt entfällt",
+        "Entlassungen rechnen sich oft erst nach ca. 6 Monaten, weil vorher Abfindungen gezahlt werden -- und Rezessionen enden häufig nach 12-18 Monaten",
+        "Furloughs kosten mehr als Entlassungen, weil das Unternehmen weiterhin Sozialleistungen zahlt",
+        "Entlassungen verbessern die Moral der verbliebenen Mitarbeiter, weil Unsicherheit endet"
+      ],
+      "correct": [1],
+      "explanation": "Richtig: Jeder Entlassene bekommt im Schnitt 6 Monate Abfindung. Erst danach beginnt das Unternehmen zu sparen. Da Rezessionen typischerweise 12-18 Monate dauern, muss man kurz nach Beginn der Einsparphase wieder einstellen -- und zahlt erneut Rekrutierungskosten. Das Survivor-Syndrom (Angst und Demotivation der Verbliebenen) macht Aussage D falsch."
+    },
+    {
+      "kind": "freetext",
+      "id": "hbr-q10",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "schwer",
+      "prompt": "Ein Pharmaunternehmen identifiziert folgende Stellen als am schwierigsten zu besetzen: (a) Leiter Klinische Studien, (b) Direktor Finanzen, (c) Kassiererin im Betriebsrestaurant. Welche ist laut Huselid et al. (2005) die A-Position -- und warum nicht unbedingt die anderen?",
+      "sampleAnswer": "Laut Huselid et al. ist (a) der Leiter Klinische Studien die A-Position: Die Fähigkeit, Produktsicherheit und -wirksamkeit zu testen, ist eine strategisch kritische Kompetenz des Pharmaunternehmens. Zudem gibt es große Leistungsunterschiede zwischen herausragenden und mittelmäßigen klinischen Prüfern. (b) Der Finanzdirektor ist wichtig für das Funktionieren des Unternehmens, hat aber weniger direkte Auswirkung auf Innovationsfähigkeit und Wettbewerbsvorteil -- eher eine B-Position (Support). (c) Die Kassiererin ist eindeutig eine C-Position (Surplus): kein strategischer Einfluss, geringe Leistungsvariabilität.",
+      "keywords": ["strategisch", "leistungsvariabilität", "a-position", "b-position", "c-position", "kontext"],
+      "explanation": "Entscheidend sind immer zwei Kriterien: strategischer Einfluss (aus der Unternehmensstrategie abgeleitet) und Leistungsvariabilität. Schwer zu besetzen ist kein Kriterium für A-Position."
+    },
+    {
+      "kind": "mc",
+      "id": "hbr-q11",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "mittel",
+      "prompt": "Welche Empfehlung geben Groysberg et al. (2004) Unternehmen im Umgang mit Talenten?",
+      "options": [
+        "Stars sollten sofort in Führungspositionen gesetzt werden, damit sie schnell Netzwerke aufbauen",
+        "Unternehmen sollten die Star-Wars gewinnen und so viele externe Stars wie möglich einkaufen",
+        "Unternehmen sollten Talente intern entwickeln und halten, statt externe Stars einzukaufen",
+        "Nur Stars aus direkten Wettbewerbern sind portabel genug und daher sinnvoll anzuwerben"
+      ],
+      "correct": [2],
+      "explanation": "'Grow stars, don't buy them' ist die Kernempfehlung. Intern entwickelte Stars behalten ihre Leistung, weil ihr firmenspezifisches Kapital (Netzwerke, Vertrautheit mit Systemen, Kulturpassung) erhalten bleibt. Extern eingekaufte Stars verlieren typischerweise ~20 % ihrer Leistung."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hbr-q12",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "difficulty": "mittel",
+      "prompt": "Laut dem Honeywell-Case (Cote, 2013) sank der 'regrettable turnover' (bedauerliche Fluktuation) während des Furlough-Programms -- entgegen der Erwartung.",
+      "answer": true,
+      "explanation": "Richtig. Man hätte erwartet, dass Leistungsträger das Unternehmen verlassen, wenn sie auf Gehalt verzichten müssen. Stattdessen sank der regrettable turnover, weil viele Mitarbeitende Vertrauen in die Unternehmensführung hatten, die Transparenz schätzten und glaubten, dass sich die Lage bessern würde."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hbr-ex-1",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "label": "HBR-Case -- A Players or A Positions? (Huselid, Beatty & Becker 2005)",
+      "source": "/Users/thore/Desktop/UNI semester 2/BWL/Personal/HBR_A_Players_or_A_Positions.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Ein mittelgroßes Logistikunternehmen möchte eine 'War for Talent'-Strategie umsetzen und plant, in den nächsten zwei Jahren ausschließlich A-Player auf allen Stellen zu beschäftigen. Das HR-Team investiert gleich viel in Rekrutierung, Training und Vergütung -- unabhängig von der Stelle. \n\n(a) Erläutern Sie mit Bezug auf Huselid, Beatty & Becker (2005), warum dieser Ansatz problematisch ist.\n(b) Welche Alternative schlagen die Autoren vor? Nennen Sie die drei Positionstypen und deren wichtigste Merkmale.\n(c) Welche Stelle im Logistikunternehmen könnte eine A-Position sein -- und welche eher eine C-Position? Begründen Sie.",
+      "hint": "Denken Sie an die zwei Definitionskriterien einer A-Position: (1) strategischer Einfluss, (2) Leistungsvariabilität. Fragen Sie sich: Wo ist der Unterschied zwischen einem guten und einem schlechten Stelleninhaber am größten?",
+      "solution": "**Lösung:**\n\n**(a) Problem des uniformen Ansatzes:**\n\nDer Ansatz, überall A-Player einzusetzen und gleichmäßig zu investieren, ist aus mehreren Gründen problematisch:\n- Erstens sind A-Player auf Stellen ohne strategischen Einfluss 'verschwendet': Sie bringen keinen Mehrwert gegenüber einem guten Durchschnittsmitarbeiter, weil die Leistungsunterschiede bei diesen Stellen minimal sind.\n- Zweitens haben Unternehmen begrenzte finanzielle und personelle Ressourcen. Gleichmäßige Verteilung bedeutet, dass keine Stelle die optimale Aufmerksamkeit und Investition bekommt.\n- Drittens: Hohe Performer wollen strategisch wichtige Aufgaben. Werden sie auf bedeutungslose Stellen gesetzt, verlassen sie das Unternehmen.\n- Laut Huselid et al. gilt: Nicht die Firma mit den meisten Talenten gewinnt, sondern die, die die **richtigen** Talente auf den **richtigen** Stellen hat.\n\n**(b) Die drei Positionstypen:**\n\n**A-Positionen (strategisch):** Direkter strategischer Einfluss auf die Unternehmensstrategie UND hohe Leistungsvariabilität. Vergütung leistungsbasiert. Fehler sind sehr teuer (hohe Umsatzverluste). Weniger als 20 % der Belegschaft.\n\n**B-Positionen (unterstützend / Support):** Indirekt strategisch wichtig -- sichern A-Positionen ab -- ODER potenzial-strategisch, aber mit geringer Leistungsvariabilität (z.B. Pilot: wichtig, aber alle fliegen ähnlich gut). Vergütung nach Stellenniveau.\n\n**C-Positionen (überschüssig / Surplus):** Kein oder minimaler strategischer Einfluss. Leicht zu ersetzen. Vergütung nach Marktpreis. Können eventuell outsourct oder automatisiert werden.\n\n**(c) Beispiele im Logistikunternehmen:**\n\n**A-Position:** Key-Account-Manager für Großkunden. Diese Position hat direkten Einfluss auf Kundenbindung und Umsatz (strategisch zentral für ein Logistikunternehmen). Der Unterschied zwischen einem exzellenten und einem mittelmäßigen Key-Account-Manager in Bezug auf Kundenzufriedenheit, Vertragsvolumen und Kundenbindung ist enorm (hohe Leistungsvariabilität).\n\n**C-Position:** Sachbearbeiter für standardisierte Dateneingabe von Versandbelegen. Kein strategischer Einfluss, niedrige Leistungsvariabilität (wer auch immer die Stelle innehat, das Ergebnis ist nahezu identisch), leicht durch Software oder andere Kräfte ersetzbar."
+    },
+    {
+      "id": "hbr-ex-2",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "label": "HBR-Case -- The Risky Business of Hiring Stars (Groysberg, Nanda & Nohria 2004)",
+      "source": "/Users/thore/Desktop/UNI semester 2/BWL/Personal/HBR_The_Risky_Business_of_Hiring_Stars__2004.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Eine Unternehmensberatung verliert einen ihrer besten Branchenexperten (langjährig top-bewertet, von Kunden hoch geschätzt) an einen Konkurrenten. Daraufhin kauft sie ihrerseits einen Star-Berater vom Wettbewerber ein -- für ein deutlich höheres Gehalt und einen großen Signing-Bonus.\n\n(a) Welche drei negativen Konsequenzen beschreiben Groysberg et al. (2004), wenn ein Star-Analyst zu einem neuen Unternehmen wechselt?\n(b) Erklären Sie, warum die Leistung des neu eingekauften Stars wahrscheinlich nicht das Niveau des alten Stars erreichen wird.\n(c) Was hätte die Beratung stattdessen tun können, um langfristig wettbewerbsfähig zu bleiben?",
+      "hint": "Die Autoren unterscheiden zwischen individuellem Kapital (Fähigkeiten, Wissen) und firmenspezifischem Kapital (Netzwerke, Systeme, Unternehmenskultur). Überlegen Sie, welches davon beim Firmenwechsel verloren geht.",
+      "solution": "**Lösung:**\n\n**(a) Drei Konsequenzen des Star-Hiring laut Groysberg et al.:**\n\n1. **Der Stern des Stars verblasst (The star's luster fades):** Die Leistung des eingekauften Stars bricht im Durchschnitt um ca. 20 % ein und erholt sich über Jahre nicht wieder. 46 % der untersuchten Analysten schnitten im ersten Jahr nach dem Wechsel schlechter ab. Grund: Der Star verlässt vertraute Systeme, Netzwerke und Prozesse, auf die er sich bisher gestützt hat.\n\n2. **Die Teamleistung leidet (The group's performance suffers):** Die Kollegen des Stars werden demotiviert, weil interne Aufstiegschancen blockiert werden. Es entstehen Ressentiments (Verbitterung, Groll), Kommunikation bricht ein. Das Team kehrt zur alten Leistung oft erst zurück, wenn der Star das Unternehmen wieder verlassen hat.\n\n3. **Der Star bleibt nicht lange (Stars don't stay):** Stars mit Wechselerfahrung wechseln erneut. In der Studie verließen 36 % der eingekauften Stars die neue Bank innerhalb von 36 Monaten, weitere 29 % innerhalb der folgenden 24 Monate. Die hohe Mobilität macht eine stabile langfristige Investition unmöglich.\n\n**(b) Warum der neue Star das alte Niveau nicht erreicht:**\n\nLeistung = individuelle Fähigkeiten + firmenspezifisches Kapital (Kontextfaktoren). Beim Wechsel nimmt der Star nur den individuellen Teil mit -- das firmenspezifische Kapital (Kundennetzwerke der alten Firma, vertraute interne Prozesse, Zugang zu Unternehmensressourcen, etablierte Kollegenbeziehungen) bleibt bei der alten Firma. Im neuen Unternehmen muss der Star alles neu aufbauen -- das dauert Jahre. Dazu kommt: Stars sind oft langsam darin, alte Gewohnheiten abzulegen.\n\n**(c) Alternative Strategie -- 'Grow stars, don't buy them':**\n\n- **Interne Talente systematisch identifizieren und entwickeln:** Aufbau eines strukturierten Talent-Management-Programms, das vielversprechende Mitarbeitende frühzeitig erkennt (Talent Pool).\n- **Retention-Maßnahmen für den verlorenen Star:** Warum hat er die Firma verlassen? Hätte man ihn halten können (bessere Vergütung, Entwicklungsperspektive, Autonomie)?\n- **Team-basiertes Wissen aufbauen:** Statt alles an einen Star zu knüpfen, Wissen auf mehrere Schultern verteilen -- so ist der Verlust eines einzelnen weniger disruptiv.\n- Sanford Bernstein als positives Gegenbeispiel: Die Firma wuchs ihre Stars intern groß und übertraf den auf externe Stars setzenden Konkurrenten Merrill Lynch nachhaltig."
+    },
+    {
+      "id": "hbr-ex-3",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "label": "HBR-Case -- The Gentleman's Three (Hall & Wasynczuk 2011)",
+      "source": "/Users/thore/Desktop/UNI semester 2/BWL/Personal/HBR_The_Gentlemans_Three.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Nils Ekdahl, HR-Chef von Circale Corporation, hat ein neues Leistungsbeurteilungssystem eingeführt (5-Punkte-Skala). Nach der ersten Runde stellt er fest: Durchschnittsnote 4,6, kaum jemand bekam eine 2 oder 1, nahezu alle bekamen 4 oder 5.\n\n(a) Welche zwei Probleme beschreiben Hall & Wasynczuk? Nennen Sie die Fachbegriffe und erklären Sie sie kurz.\n(b) Welche Konsequenzen hat dieser Zustand für das Unternehmen (nennen Sie mindestens drei)?\n(c) Sollte Ekdahl eine zweite Beurteilungsrunde anordnen? Diskutieren Sie Pro und Contra.",
+      "hint": "Die Fachbegriffe sind 'Grade Inflation' und 'Grade Compression'. Überlegen Sie, für welche HR-Entscheidungen man verwertbare Leistungsbeurteilungen braucht.",
+      "solution": "**Lösung:**\n\n**(a) Die zwei Probleme:**\n\n**Grade Inflation (Notenaufblähung):** Systematisch zu hohe Bewertungen über das gesamte System hinweg. Manager vergeben aus Bequemlichkeit, Konfliktscheu oder dem Wunsch nach Harmonie hohe Noten, unabhängig von der tatsächlichen Leistung. Bei Circale: Durchschnitt 4,6 auf einer 5er-Skala.\n\n**Grade Compression (Notenkompression):** Alle Noten häufen sich in einem engen Bereich (bei Circale: fast alle zwischen 4 und 5). Selbst wenn es nominale Unterschiede gibt, sind sie so klein, dass keine Differenzierung möglich ist. Ein Sonderfall der Grade Inflation: Die Streuung ist minimal.\n\n**(b) Konsequenzen für das Unternehmen (mindestens drei):**\n\n1. **Keine Identifikation von Hochleistenden:** Wer tatsächlich exzellent ist, wird nicht erkannt -- und damit auch nicht gezielt gefördert, befördert oder belohnt.\n2. **Keine Identifikation von Schwachleistenden:** Mitarbeitende, die eigentlich Entwicklungsbedarf haben oder sogar entlassen werden sollten, werden nicht erkannt. Das ist besonders problematisch bei Umstrukturierungen (wie bei Circale nach der Fusion: Wer soll gehen?).\n3. **Gehalts- und Beförderungsentscheidungen sind nicht begründbar:** Wenn alle gleich gut bewertet sind, gibt es keine objektive Grundlage mehr für differenzierte Gehaltserhöhungen.\n4. **Nachfolgeplanung (Succession Planning) funktioniert nicht:** Man weiß nicht, wer für Führungspositionen geeignet ist.\n5. **Mitarbeitende können sich nicht verbessern:** Ehrliches Feedback ist die Grundlage für persönliches Wachstum. Wer immer eine 5 bekommt, hat keinen Anreiz, sich zu entwickeln.\n\n**(c) Soll Ekdahl eine zweite Runde anordnen? -- Pro und Contra:**\n\n**Pro (zweite Runde):**\n- Die aktuellen Daten sind wertlos -- ohne Neustart kann das System seinen Zweck nicht erfüllen.\n- Eine zweite Runde mit klaren Anweisungen (z.B. Pflicht zur Verteilung: mindestens eine 1 oder 2 pro Dimension) könnte verwertbare Daten liefern.\n- Ohne verlässliche Daten riskiert Ekdahl, bei den anstehenden Personalkürzungen willkürlich zu entscheiden -- mit rechtlichen und moralischen Konsequenzen.\n\n**Contra (keine zweite Runde):**\n- Manager haben viel Zeit investiert -- eine erneute Runde erzeugt Widerstand und kostet weitere Ressourcen.\n- CFO Fierst hat recht: Auch ein neues System ändert nichts, wenn Manager nicht bereit sind, ehrlich zu sein. Das ist ein Kulturproblem, kein Systemproblem.\n- Alternativ: Entscheidungen auf andere Datenbasis stützen (P&L-Verantwortung, Projektergebnisse) und Leistungsbeurteilungen als mittelfristiges Projekt angehen -- mit Training, Kulturarbeit und Anreizen für ehrliche Manager.\n\n**Fazit:** Es gibt keine eindeutige Antwort -- die Diskussion zeigt, dass gute Performance-Management-Systeme Kultur und System brauchen, nicht nur eines von beiden."
+    },
+    {
+      "id": "hbr-ex-4",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "label": "HBR-Case -- How Honeywell Avoided Layoffs (Cote 2013)",
+      "source": "/Users/thore/Desktop/UNI semester 2/BWL/Personal/How_Honeywell_Avoided_Layoffs.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Ein mittelständischer Maschinenbauer mit 5.000 Mitarbeitenden sieht sich in der Rezession 2025 mit einem Auftragsrückgang von 30 % konfrontiert. Der Vorstand diskutiert zwei Optionen: (A) 500 Mitarbeitende entlassen (10 % der Belegschaft), sofortige Kosteneinsparung. (B) Furlough-Programm: Alle Mitarbeitenden nehmen 3-5 Wochen unbezahlten Urlaub.\n\n(a) Erklären Sie anhand des Honeywell-Artikels (Cote, 2013), warum Option A möglicherweise weniger sinnvoll ist als gedacht ('False Promise of Layoffs').\n(b) Welche Vorteile hätte Option B (Furloughs) für den Maschinenbauer?\n(c) Nennen Sie zwei konkrete Herausforderungen, die Honeywell bei der Umsetzung des Furlough-Programms hatte.",
+      "hint": "Beachten Sie: Jede entlassene Person erhält im Schnitt 6 Monate Abfindung. Rezessionen dauern typischerweise 12-18 Monate. Denken Sie auch an den Aufschwung: Was braucht ein Unternehmen, wenn Aufträge zurückkommen?",
+      "solution": "**Lösung:**\n\n**(a) 'False Promise of Layoffs' -- warum Option A trügerisch ist:**\n\nLaut Cote (2013) hat Option A folgende Schwächen:\n\n- **Keine sofortige Einsparung:** Jeder der 500 Entlassenen bekommt durchschnittlich 6 Monate Abfindung (Severance Pay). Das heißt: Die ersten 6 Monate nach der Entlassung zahlt das Unternehmen faktisch weiter -- nur ohne Gegenleistung. Der Break-Even (Beginn echter Einsparungen) tritt erst nach ca. 6 Monaten ein.\n\n- **Rezession endet schnell:** Wenn die Rezession nach 12-18 Monaten endet und Aufträge zurückkommen, muss der Maschinenbauer wieder einstellen -- mit erneuten Rekrutierungs- und Einarbeitungskosten. Die Einsparungen werden teilweise oder vollständig aufgefressen.\n\n- **Verlust von firmenspezifischem Wissen:** 500 Mitarbeitende nehmen ihr Know-how, ihre Kundenkontakte und ihre Erfahrung mit Maschinen und Prozessen mit. Das ist schwer wiederherstellbar.\n\n- **Survivor-Syndrom:** Die verbleibenden 4.500 Mitarbeitenden sind verängstigt ('Wer ist der Nächste?'), unproduktiv und wechselwilliger -- was die Leistung weiter senkt.\n\n**(b) Vorteile von Furloughs für den Maschinenbauer:**\n\n- **Wissen bleibt erhalten:** Alle 5.000 Mitarbeitenden bleiben angestellt, ihr firmenspezifisches Wissen bleibt im Unternehmen.\n- **Bessere Aufstellung für den Aufschwung:** Wenn Aufträge zurückkehren, kann der Maschinenbauer sofort liefern -- ohne monatelangen Rekrutierungs- und Einarbeitungsaufwand. Das ist ein klarer Wettbewerbsvorteil gegenüber Konkurrenten, die entlassen haben.\n- **Fairness und geteilte Last:** Der Schmerz wird auf alle Schultern verteilt -- das stärkt das Wir-Gefühl und Vertrauen in die Unternehmensführung.\n- **Geringerer regrettable Turnover:** Leistungsträger verlassen das Unternehmen seltener, weil sie das faire Vorgehen schätzen und an die Zukunft glauben.\n- **Schnellerer Break-Even:** Ein Furlough-Programm spart sofort (ab Beginn des unbezahlten Urlaubs), ohne Abfindungskosten.\n\n**(c) Zwei Herausforderungen bei der Umsetzung (aus dem Honeywell-Artikel):**\n\n1. **Rechtliche Komplexität:** In den USA variieren die Gesetze zum unbezahlten Urlaub von Bundesstaat zu Bundesstaat. Honeywell musste zum Teil Smartphones und Laptops einziehen, um sicherzustellen, dass Mitarbeitende während des Furloughs nicht arbeiteten (was rechtlich als Arbeit gewertet würde). In manchen Ländern waren Furloughs durch Arbeitsrecht ganz unmöglich.\n\n2. **Sinkende Moral mit der Zeit:** Anfangs war die Reaktion positiv (Menschen wollten Opfer bringen). Mit zunehmender Dauer wurde Unzufriedenheit lauter: 'Ich kann nicht von diesem Gehalt leben' oder 'Ich wäre sowieso nicht entlassen worden -- warum soll ich Opfer bringen?' Das Management musste kontinuierlich kommunizieren und Vertrauen aufrechterhalten."
+    }
+  ]
+}

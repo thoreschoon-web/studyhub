@@ -1,0 +1,418 @@
+{
+  "id": "hr-personalfreisetzung",
+  "subjectId": "bwl",
+  "title": "Personalfreisetzung",
+  "summary": "Wenn ein Unternehmen zu viele Mitarbeitende hat (Personalüberhang), muss es handeln. Dieses Thema erklärt alle Instrumente vom sanften Einstellungsstopp bis zur Kündigung, die wichtigsten Gesetze (KSchG, BetrVG, BGB), die Folgen für Betroffene und Verbleibende sowie professionelles Trennungsmanagement — inklusive des HBR-Falls Honeywell.",
+  "order": 16,
+  "estMinutes": 55,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "heading": "Was ist Personalfreisetzung und warum ist sie nötig?",
+      "body": "**Personalfreisetzung** (englisch: *workforce reduction* oder *downsizing*) bezeichnet alle Maßnahmen, mit denen ein Unternehmen einen **Personalüberhang** abbaut — also den Zustand, in dem mehr Mitarbeitende beschäftigt sind, als das Unternehmen aktuell oder zukünftig braucht.\n\n**Warum entsteht ein Personalüberhang?**\n- Wirtschaftskrisen (Aufträge brechen weg)\n- Technologischer Wandel (z.B. Automatisierung durch KI)\n- Strukturwandel (eine Branche schrumpft)\n- Strategiewechsel (Unternehmen konzentriert sich auf andere Produkte)\n- Fusionen (zwei Unternehmen verschmelzen, doppelte Stellen entstehen)\n\n**Aktuelle Beispiele aus der Praxis:**\n- Bayer: erheblicher Personalabbau (Handelsblatt, 2024)\n- Lufthansa: 4.000 Stellen gestrichen, KI soll Organisation straffen (WDR, 2025)\n- Mercedes-Benz: Stellenabbau mit bis zu 500.000 € Abfindung (Welt, 2025)\n\n**Wichtige Grundregel:** Je besser die Personalplanung, desto eher lassen sich Personalüberhänge früh erkennen und sanft abbauen — bevor drastische Maßnahmen nötig werden.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Personalüberhang",
+          "body": "Ein Personalüberhang liegt vor, wenn der **Ist-Bestand** an Mitarbeitenden den **Soll-Bedarf** übersteigt: Das Unternehmen beschäftigt mehr Menschen, als es für seine Aufgaben benötigt. Das verursacht unnötige Kosten und muss behoben werden."
+        },
+        {
+          "kind": "info",
+          "title": "Diskussion: Wird KI zum Jobkiller?",
+          "body": "Elon Musk prophezeit, dass irgendwann keine menschliche Arbeit mehr nötig sei. Ford-Chef Jim Farley erwartet, dass KI die Hälfte aller Bürojobs in den USA ersetzen könnte. Die Realität ist differenzierter: Studien (IAB, IW) zeigen, dass KI zwar Stellen abbaut, aber auch neue schafft. Besonders problematisch ist der Wegfall von **Einstiegsjobs**, da Berufsanfänger dann keine Chance mehr haben, Erfahrung zu sammeln."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-freisetzung-ursachen",
+          "title": "Ursachen und Reaktion auf Personalüberhang",
+          "caption": "Verschiedene Auslöser führen zu einem Personalüberhang, auf den das Unternehmen mit abgestuften Maßnahmen reagiert.",
+          "code": "graph TD\n    A[Wirtschaftskrise] --> E[Personalüberhang]\n    B[KI / Automatisierung] --> E\n    C[Strategiewechsel] --> E\n    D[Fusion / Übernahme] --> E\n    E --> F[Vorbeugende Maßnahmen]\n    E --> G[Personalpolitische Maßnahmen]\n    E --> H[Direkter Personalabbau]\n    F --> I[sanft]\n    G --> I\n    H --> J[direkt / schmerzhaft]"
+        }
+      ]
+    },
+    {
+      "id": "instrumente",
+      "heading": "Instrumente des Personalabbaus — von sanft bis direkt",
+      "body": "Die Vorlesung (nach Ridder 2009) unterscheidet drei Stufen. Grundprinzip: **Je früher und weicher, desto besser** — sowohl für die Betroffenen als auch für das Unternehmensimage.\n\n### Stufe 1: Vorbeugende Maßnahmen\nDiese Maßnahmen setzen an, **bevor** überhaupt jemand entlassen werden muss. Sie schaffen Handlungsspielraum:\n- **Einstellungsstopp**: Keine neuen Stellen mehr besetzen; offene Stellen werden durch natürliche Fluktuation abgebaut.\n- **Abbau von Überstunden**: Mitarbeitende arbeiten wieder in der normalen Stundenzahl.\n- **Arbeitszeitverkürzung / Kurzarbeit**: Die Wochenarbeitszeit wird gesenkt (ggf. mit staatlicher Unterstützung durch die Agentur für Arbeit).\n- **Viertagewoche** (wie VW 1994): Alle arbeiten kürzer, dafür bleibt jeder im Job.\n- **Vorziehen von Investitionen**: Reparatur- und Erneuerungsarbeiten, die ohnehin geplant waren, werden vorgezogen — um die Belegschaft auszulasten.\n\n### Stufe 2: Personalpolitische Maßnahmen\nWenn Stufe 1 nicht ausreicht, werden personalwirtschaftliche Hebel eingesetzt:\n- **Versetzung (Inplacement)**: Mitarbeitende wechseln in andere Abteilungen oder Standorte, in denen Bedarf besteht.\n- **Natürliche Fluktuation nutzen**: Stellen, die durch Eigenkündigungen oder Renten frei werden, werden nicht nachbesetzt.\n- **Frühverrentung**: Ältere Mitarbeitende gehen früher in den Ruhestand (mit Abfindung oder Vorruhestandsregelung).\n- **Qualifizierung (Weiterbildung)**: Mitarbeitende werden für andere Aufgaben fit gemacht.\n- **Aufhebungsverträge**: Beide Seiten einigen sich einvernehmlich auf eine Beendigung des Arbeitsverhältnisses (meist mit Abfindung).\n\n### Stufe 3: Direkter Personalabbau\nWenn alle anderen Maßnahmen nicht reichen:\n- **Einzelentlassung**: Eine bestimmte Person wird gekündigt.\n- **Massenentlassung**: Viele Mitarbeitende werden gleichzeitig entlassen (unterliegt besonderen Meldepflichten nach §§ 17 ff. KSchG).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Stufenprinzip nach Ridder",
+          "body": "Das Stufenmodell lautet: **vorbeugend → personalpolitisch → direkt**. Der Handlungsspielraum nimmt von Stufe zu Stufe ab. Unternehmen sollten immer zunächst die weicheren Stufen ausschöpfen, bevor sie zur Kündigung greifen."
+        },
+        {
+          "kind": "beispiel",
+          "title": "VW 1994 — Das \"Wunder von Wolfsburg\"",
+          "body": "Als VW Anfang der 1990er in eine schwere Krise geriet, drohten ca. 30.000 Entlassungen. Stattdessen wurde 1994 die **Viertagewoche** eingeführt: Die Wochenarbeitszeit sank von 36 auf 28,8 Stunden (-20%), der Lohn sank um ca. 10% (nur Sonderzahlungen wurden gekürzt, nicht das Grundgehalt). VW produzierte weiterhin fünf Tage, aber die Mitarbeitenden wechselten sich ab. Jobs blieben erhalten. 2006 wurde das Modell wieder aufgehoben. Prof. Piening kommentiert: kein Dauermodell, aber möglicherweise eine Brücke in Krisenzeiten."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-instrumente-tabelle",
+          "title": "Instrumente der Personalfreisetzung im Überblick",
+          "headers": ["Stufe", "Instrument", "Wirkung", "Beispiel"],
+          "rows": [
+            ["1 – Vorbeugend", "Einstellungsstopp", "Langsamer natürlicher Abbau", "Keine Neueinstellungen"],
+            ["1 – Vorbeugend", "Kurzarbeit", "Kostenreduktion, Jobs bleiben", "Kurzarbeitergeld (Arbeitsagentur)"],
+            ["1 – Vorbeugend", "Viertagewoche", "Arbeitszeitreduktion", "VW 1994, Honeywell Furloughs 2009"],
+            ["2 – Personalpolitisch", "Versetzung (Inplacement)", "Mitarbeiter bleibt im Unternehmen", "Abteilungswechsel"],
+            ["2 – Personalpolitisch", "Aufhebungsvertrag", "Einvernehmliche Trennung", "Mit Abfindungszahlung"],
+            ["2 – Personalpolitisch", "Frühverrentung", "Ältere scheiden freiwillig aus", "Vorruhestandsregelung"],
+            ["3 – Direkter Abbau", "Ordentliche Kündigung", "Fristgebundene Beendigung", "Betriebsbedingte Kündigung"],
+            ["3 – Direkter Abbau", "Massenentlassung", "Viele gleichzeitig", "Mercedes, Bayer, Lufthansa"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rechtliche-rahmenbedingungen",
+      "heading": "Rechtliche Rahmenbedingungen — KSchG, BetrVG, BGB",
+      "body": "In Deutschland ist das Arbeitsrecht sehr stark ausgebaut. Wer kündigen will, muss zahlreiche Vorschriften beachten. Die wichtigsten im Überblick:\n\n## Kündigungsschutzgesetz (KSchG)\nDas **KSchG** schützt Arbeitnehmende, die länger als 6 Monate in einem Betrieb mit mehr als 10 Beschäftigten arbeiten. Eine Kündigung ist nur wirksam, wenn sie **sozial gerechtfertigt** ist. Das Gesetz kennt drei Kündigungsgründe:\n\n**1. Personenbedingte Kündigung**\nGrund liegt in der Person des Arbeitnehmers — er kann seine Arbeit nicht (mehr) erbringen.\n- Beispiel: Dauerkrankheit, Verlust des Führerscheins bei einem Berufskraftfahrer.\n- Kein Verschulden des Arbeitnehmers nötig.\n\n**2. Verhaltensbedingte Kündigung**\nGrund ist ein **Fehlverhalten** des Arbeitnehmers, das er hätte vermeiden können.\n- Beispiel: Diebstahl, dauernde Unpünktlichkeit trotz Abmahnungen, Beleidigungen.\n- In der Regel ist eine vorherige **Abmahnung** erforderlich.\n\n**3. Betriebsbedingte Kündigung**\nGrund liegt nicht in der Person, sondern im **Betrieb**: dringende betriebliche Erfordernisse machen den Wegfall des Arbeitsplatzes notwendig.\n- Beispiel: Auftragsrückgang, Schließung einer Abteilung, Automatisierung.\n- **Wichtig: Sozialauswahl** (§ 1 Abs. 3 KSchG) — der Arbeitgeber darf nicht willkürlich auswählen, wer geht. Er muss soziale Gesichtspunkte berücksichtigen:\n  - **Betriebszugehörigkeit** (je länger, desto mehr Schutz)\n  - **Lebensalter** (ältere Mitarbeitende sind schwerer vermittelbar)\n  - **Unterhaltspflichten** (Kinder, pflegebedürftige Angehörige)\n  - **Schwerbehinderung**\n\n## Kündigungsfristen (§ 622 BGB)\nDas Bürgerliche Gesetzbuch regelt, **wie viel Vorlaufzeit** eine ordentliche Kündigung braucht:\n- Grundkündigungsfrist: 4 Wochen zum 15. oder zum Monatsende\n- Mit steigender Betriebszugehörigkeit verlängert sich die Frist bis auf 7 Monate (bei 20+ Jahren).\n\n## Betriebsverfassungsgesetz (BetrVG)\nDer **Betriebsrat** (= demokratisch gewählte Arbeitnehmervertretung im Betrieb) hat weitreichende Rechte:\n\n**§ 102 BetrVG — Anhörungsrecht bei Kündigungen:**\nVor jeder Kündigung muss der Arbeitgeber den Betriebsrat **anhören**. Ohne Anhörung ist die Kündigung unwirksam! Der Betriebsrat kann der Kündigung widersprechen (was dem Arbeitnehmer ermöglicht, weiterzuarbeiten bis zum Gerichtsurteil).\n\n**§ 111 BetrVG — Unterrichtung bei Betriebsänderungen:**\nBei größeren Umstrukturierungen (z.B. Massenentlassungen, Verlagerungen) muss der Arbeitgeber den Betriebsrat rechtzeitig und umfassend informieren und beraten.\n\n**§ 112 BetrVG — Sozialplan:**\nBei größeren Betriebsänderungen, die wesentliche Nachteile für viele Mitarbeitende haben, muss ein **Sozialplan** ausgehandelt werden. Darin werden Leistungen geregelt, die die wirtschaftlichen Nachteile der Betroffenen ausgleichen oder mildern sollen:\n- Abfindungszahlungen\n- Qualifizierungsmaßnahmen\n- Übernahme durch Beschäftigungsgesellschaften\n\n**Besonderer Kündigungsschutz** gilt für: werdende Mütter, Auszubildende, Betriebsratsmitglieder, Schwerbehinderte und Menschen mit langer Betriebszugehörigkeit.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Sozialauswahl bei betriebsbedingter Kündigung",
+          "body": "Wenn der Arbeitgeber mehrere Mitarbeitende für eine betriebsbedingte Kündigung auswählen muss, darf er **nicht willkürlich** entscheiden. Er muss nach sozialen Kriterien auswählen: Wer am wenigsten schutzbedürftig ist (jung, kurz dabei, keine Kinder, nicht behindert), wird zuerst entlassen. Fehler bei der Sozialauswahl machen die Kündigung unwirksam."
+        },
+        {
+          "kind": "info",
+          "title": "§ 87 BetrVG — Mitbestimmung bei Kurzarbeit",
+          "body": "Auch die Einführung von Kurzarbeit ist mitbestimmungspflichtig! Der Arbeitgeber braucht die Zustimmung des Betriebsrats (§ 87 Abs. 1 Nr. 3 BetrVG). Dies zeigt, dass schon in Stufe 1 (vorbeugende Maßnahmen) der Betriebsrat eingebunden werden muss."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-kuendigungsarten",
+          "title": "Überblick: Kündigungsarten nach KSchG",
+          "headers": ["Kündigungsart", "Grund", "Beispiel", "Besonderheit"],
+          "rows": [
+            ["Personenbedingt", "In der Person des AN", "Dauerkrankheit, Führerscheinverlust", "Kein Verschulden nötig"],
+            ["Verhaltensbedingt", "Fehlverhalten des AN", "Diebstahl, Beleidigung", "Meist Abmahnung vorher nötig"],
+            ["Betriebsbedingt", "Unternehmerische Entscheidung", "Auftragsrückgang, Automatisierung", "Sozialauswahl zwingend"],
+            ["Außerordentlich (fristlos)", "Schwere Pflichtverletzung", "Straftat am Arbeitsplatz", "Sofort, §626 BGB, ohne Frist"]
+          ]
+        },
+        {
+          "kind": "mermaid",
+          "id": "fig-betrVG-prozess",
+          "title": "Mitbestimmung des Betriebsrats bei Kündigung (§ 102 BetrVG)",
+          "caption": "Ohne Anhörung des Betriebsrats ist jede Kündigung unwirksam.",
+          "code": "graph TD\n    A[Arbeitgeber plant Kündigung] --> B[Anhörung des Betriebsrats §102 BetrVG]\n    B --> C{Betriebsrat reagiert}\n    C -->|Keine Stellungnahme in 1 Woche| D[Zustimmung gilt als erteilt]\n    C -->|Zustimmung| D\n    C -->|Widerspruch| E[Kündigung trotzdem möglich]\n    E --> F[Arbeitnehmer kann Weiterbeschäftigung verlangen bis Urteil]\n    D --> G[Kündigung rechtswirksam zugestellt]\n    G --> H[Arbeitnehmer kann Kündigungsschutzklage einreichen — 3 Wochen Frist]"
+        }
+      ]
+    },
+    {
+      "id": "konsequenzen",
+      "heading": "Folgen von Entlassungen — für Betroffene, Verbliebene und das Unternehmen",
+      "body": "Entlassungen haben weitreichende Konsequenzen auf drei Ebenen:\n\n## Für die entlassenen Mitarbeitenden\nDie **Marienthalstudie** (Jahoda, Lazarsfeld & Zeisel, 1933) ist eine der bekanntesten sozialwissenschaftlichen Studien überhaupt. Als eine österreichische Textilfabrik schloss und fast alle Einwohner des Dorfes Marienthal arbeitslos wurden, untersuchten Forscher die Folgen. Sie zeigten:\n\n| Ebene | Auswirkung |\n|-------|------------|\n| **Individuell** | Störung des Selbstwertgefühls, psychische Probleme, Stress, Einkommensverlust, beruflicher Abstieg, Langzeitarbeitslosigkeit |\n| **Sozial** | Wegfall beruflicher und privater Anerkennung, Ehe- und Familienprobleme, Rückgang der Sozialkontakte, soziale Isolation |\n| **Gesellschaftlich** | Perspektivenverlust, Diskriminierung, Ablehnung der Wirtschaftsordnung (z.B. bei Jugendarbeitslosigkeit) |\n\n## Für die verbleibenden Mitarbeitenden (\"Survivors\")\nEntlassungen lösen einen **Schock** bei denen aus, die bleiben — auch wenn sie selbst ihren Job behalten. Studien zeigen:\n- **Voluntary Turnover steigt**: Ausgerechnet die leistungsstarken Mitarbeitenden verlassen das Unternehmen freiwillig, weil sie am meisten Alternativen haben und das gestörte Vertrauen spüren.\n- **Drei Ängste** in der Belegschaft:\n  1. **Existenzangst**: Bin ich der Nächste?\n  2. **Verteilungsangst**: Muss ich jetzt mehr Arbeit mit weniger Kollegen erledigen?\n  3. **Statusangst**: Verliere ich meine Rolle oder Position?\n- Geringere Zufriedenheit, weniger Commitment (Bindung ans Unternehmen), Vertrauensverlust gegenüber dem Management.\n- Insbesondere **High Potentials** verlassen das Unternehmen — die können sich das leisten.\n\n## Für das Unternehmen\n- **Wissensverlust**: Mit jedem entlassenen Mitarbeitenden geht implizites Wissen verloren.\n- **Zersetzung von Teams**: Bewährte Zusammenarbeit wird zerstört.\n- **Kosten für Neubesetzungen**: Wenn die Krise vorbei ist und wieder eingestellt werden muss, entstehen hohe Rekrutierungs- und Einarbeitungskosten.\n- **Schlechtes Image**: Das Unternehmen wirkt als unattraktiver Arbeitgeber (*Employer Branding* leidet).\n\n**Wichtiger Hinweis:** Manche Unternehmen wie die Big Four der Wirtschaftsprüfung wollen hohe Fluktuation — sie haben ein Geschäftsmodell, das auf dem \"Up-or-out\"-Prinzip basiert. Hier ist Fluktuation nicht unerwünscht.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Voluntary Turnover vs. Regrettable Turnover",
+          "body": "**Voluntary Turnover** = Mitarbeitende kündigen freiwillig (sie entscheiden sich zu gehen). **Regrettable Turnover** = darunter der Anteil der freiwilligen Kündigungen von Mitarbeitenden, die das Unternehmen *eigentlich behalten wollte* (also leistungsstarke, wichtige Personen). Entlassungen erhöhen paradoxerweise den regrettable turnover — weil die Guten gehen."
+        },
+        {
+          "kind": "warning",
+          "title": "\"False Promise of Layoffs\" (Cote / Honeywell)",
+          "body": "Viele Manager unterschätzen die **wahren Kosten von Entlassungen**: Jede entlassene Person erhält im Schnitt ca. 6 Monate Abfindung und Outplacement. Bis erste Einsparungen realisiert werden, dauert es also 6 Monate. Danach endet die Rezession in der Regel — und man muss teuer neu einstellen. Honeywell-CEO Dave Cote berechnete: Es ist wie eine Fabrik zu bauen, die man nach 6 Monaten Betrieb sofort wieder schließt. Kein rationaler Manager würde das tun."
+        }
+      ]
+    },
+    {
+      "id": "honeywell-hbr",
+      "heading": "HBR-Fall: Wie Honeywell Entlassungen vermied (Cote, 2013)",
+      "body": "Der Harvard-Business-Review-Artikel von Honeywell-CEO Dave Cote (2013) ist **prüfungsrelevant** und illustriert die Vorlesungsinhalte perfekt.\n\n## Ausgangssituation\nAls die Finanzkrise 2008/09 zuschlug, brachen die Aufträge bei Honeywell (einem großen US-Industriekonzern) ein. Personalkosten machen bei einem Industrieunternehmen typischerweise **30–40% der Gesamtkosten** aus. Die übliche Reaktion: 10% der Belegschaft entlassen (\"restructuring\").\n\n## Honeywells Weg: Furloughs (= bezahlte Kurzarbeit)\nStatt Entlassungen bat Honeywell alle Mitarbeitenden, **unbezahlte Freistellungen** (*furloughs*) zu nehmen — im Durchschnitt 3–5 Wochen, in einwöchigen Blöcken. Alle machten mit, auch (und gerade) das Top-Management.\n\n**Warum Furloughs statt Layoffs?**\n1. **Rezessionen enden**: Cote hatte drei Rezessionen miterlebt. Er wusste: Wenn man in der Krise kürzt, muss man danach teuer neu einstellen.\n2. **Disruption durch Entlassungen ist enorm**: Der Schock bei verbleibenden Mitarbeitenden stört die gesamte Organisation über ein Jahr.\n3. **Abfindungskosten verzögern Einsparungen um 6 Monate**: In dieser Zeit ist die Rezession oft schon vorbei.\n4. **Know-how bleibt im Unternehmen**: Bei der Erholung war Honeywell sofort handlungsfähig.\n\n## Ergebnis\n- Honeywell hielt seine **Segmentmargen stabil** trotz niedrigerer Umsätze — sehr selten in einer Rezession.\n- Im 4. Quartal 2009 erholten sich die Aufträge. Honeywell war **besser positioniert als Wettbewerber**: bessere Lagerbestände, kürzere Lieferzeiten, sofort einsatzfähige Belegschaft.\n- Der **\"regrettable turnover\" sank signifikant**: Die guten Mitarbeitenden blieben, weil sie sahen, dass das Unternehmen fair mit ihnen umging.\n\n## Herausforderungen der Furloughs\n- Unterschiedliche staatliche Gesetze in verschiedenen US-Bundesstaaten machten Umsetzung komplex.\n- Im Ausland (z.B. China, wachsender Markt) waren Furloughs schwer umsetzbar.\n- Nach einigen Wochen wuchs die Unzufriedenheit: Manche sagten, sie könnten von dem Gehalt nicht leben.\n- Leistungsträger befürchteten zunächst, dass sie als erste entlassen würden (was nicht der Fall war).\n\n## Bezug zur Vorlesung\n| Konzept | Im Honeywell-Fall |\n|---------|------------------|\n| Vorbeugende Maßnahmen (Ridder) | Furloughs = Arbeitszeitverkürzung, nicht direkter Abbau |\n| Voluntary / Regrettable Turnover | Sank dank fairer Behandlung |\n| False Promise of Layoffs | Zentrale Botschaft des Artikels |\n| Trennungsmanagement | CEO kommuniziert offen, erklärt Entscheidung |\n| Survivor-Syndrom | Vermieden durch Einbeziehung aller |",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kernaussage Cote (2013) für die Klausur",
+          "body": "Honeywell hat Personalabbau durch **unbezahlte Kurzarbeit (Furloughs)** vermieden. Vorteile gegenüber Entlassungen: (1) Wissen bleibt, (2) sofortige Handlungsfähigkeit in der Erholung, (3) kein Disruptions-Schock, (4) sinkender regrettable turnover, (5) keine 6-monatige Amortisationszeit für Abfindungen. Der Artikel kritisiert die \"False Promise of Layoffs\" — die trügerische Erwartung, dass Entlassungen sofort und dauerhaft sparen."
+        }
+      ]
+    },
+    {
+      "id": "trennungsmanagement",
+      "heading": "Trennungsmanagement und Outplacement",
+      "body": "Wenn Entlassungen unvermeidbar sind, kommt es entscheidend darauf an, **wie** sie durchgeführt werden. \"Trennungsmanagement\" bezeichnet alle Maßnahmen, um die Trennung so fair und professionell wie möglich zu gestalten — für Betroffene und Verbleibende.\n\n## Das Coping-Modell nach Latack et al. (1995)\nDas Modell erklärt, **wie Menschen mit Jobverlust umgehen** (*coping* = Bewältigung):\n\n1. **Goals/Standards**: Jeder Mensch hat Ziele (wirtschaftliche Absicherung, psychologisches Wohlbefinden, soziale Anerkennung).\n2. **Feedback**: Die Realität des Jobverlustes wird mit diesen Standards verglichen.\n3. **Discrepancy Appraisal**: Wird die Situation als Schaden/Verlust oder als Bedrohung wahrgenommen?\n4. **Coping Goals**: Was will die Person jetzt erreichen?\n5. **Coping Efficacy**: Glaubt die Person, das zu schaffen?\n6. **Coping Resources**: Welche Ressourcen stehen zur Verfügung (Geld, Netzwerk, Qualifikationen)?\n7. **Coping Strategies**: Aktive Kontrolle (neuen Job suchen), Flucht/Rückzug, oder Suche nach sozialer Unterstützung.\n\nDas Modell unterstreicht: Ein gutes Trennungsmanagement stärkt die **Coping Resources** der Betroffenen.\n\n## Typische Fehler im Kündigungsgespräch\nDas Handelsblatt listet sechs häufige Fehler beim Entlassen:\n1. Das Gespräch überraschend und unvorbereitet führen\n2. Den Mitarbeitenden öffentlich bloßstellen (z.B. per Zoom vor 900 Kollegen — Fall Better.com)\n3. Keine klare Begründung nennen\n4. Zu lang diskutieren oder die Entscheidung wieder infrage stellen\n5. Den Mitarbeitenden nicht zu Wort kommen lassen\n6. Keine konkreten nächsten Schritte kommunizieren (Was passiert jetzt?)\n\n**Negativbeispiel Better.com:** CEO Vishal Garg entließ ~900 Mitarbeitende in einem Zoom-Anruf mit den Worten: \"Wenn Sie in diesem Call sind, gehören Sie zur unglücklichen Gruppe. Ihr Arbeitsverhältnis ist mit sofortiger Wirkung beendet.\" Das ist ein Lehrbuch-Beispiel für schlechtes Trennungsmanagement.\n\n## Outplacement-Beratung\n**Outplacement** bedeutet, dass das Unternehmen externe Berater bezahlt, die den entlassenen Mitarbeitenden helfen, einen neuen Job zu finden.\n\n**Vier Schritte:**\n1. Emotionale Hilfe und Stabilisierung\n2. Analyse marktfähiger Qualifikationen und Entwicklungspotenziale\n3. Planung der Stellensuche\n4. Durchführung der Stellensuche\n\n**Vorteile für das Unternehmen:**\n- Vermeidung von Rechtsstreitigkeiten (Abfindung wird auf Kosten angerechnet)\n- Verbleibende Mitarbeitende sehen, dass das Unternehmen fair mit Entlassenen umgeht → weniger Voluntary Turnover\n- Besseres Unternehmensimage nach außen\n\n**Nachteile:**\n- Hohe Kosten\n- Meist nur für Führungskräfte verfügbar\n- Empirische Wirksamkeit nicht eindeutig belegt",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Do's & Don'ts im Kündigungsgespräch",
+          "body": "**DO:** Gespräch vorbereiten, unter vier Augen führen, klare und respektvolle Begründung geben, konkrete nächste Schritte erläutern (Abfindung, Fristen, Outplacement), Mitarbeiter zu Wort kommen lassen.\n\n**DON'T:** Überraschend anrufen, öffentlich bloßstellen, lange diskutieren, Entscheidung wieder in Frage stellen, per Videokonferenz mit 900 Leuten gleichzeitig entlassen."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "fc-pfr-1",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was sind die drei Stufen der Personalfreisetzungsinstrumente nach Ridder (2009)?",
+      "back": "1. **Vorbeugende Maßnahmen** (z.B. Einstellungsstopp, Kurzarbeit, Viertagewoche)\n2. **Personalpolitische Maßnahmen** (z.B. Versetzung, Aufhebungsvertrag, Frühverrentung)\n3. **Direkter Personalabbau** (Einzel- oder Massenentlassung)"
+    },
+    {
+      "id": "fc-pfr-2",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was versteht man unter der \"Sozialauswahl\" bei einer betriebsbedingten Kündigung?",
+      "back": "Bei betriebsbedingten Kündigungen muss der Arbeitgeber nach sozialen Kriterien auswählen, wen er entlässt (§ 1 Abs. 3 KSchG). Kriterien: **Betriebszugehörigkeit, Lebensalter, Unterhaltspflichten, Schwerbehinderung**. Der am wenigsten sozial Schutzbedürftige wird zuerst entlassen. Fehler bei der Sozialauswahl machen die Kündigung unwirksam."
+    },
+    {
+      "id": "fc-pfr-3",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Welche Rechte hat der Betriebsrat bei einer Kündigung (§ 102 BetrVG)?",
+      "back": "Der Betriebsrat muss **vor jeder Kündigung angehört** werden. Ohne Anhörung ist die Kündigung **unwirksam**. Der BR kann widersprechen — dann kann der Arbeitnehmer bis zum Gerichtsurteil die Weiterbeschäftigung verlangen. Der Betriebsrat hat jedoch kein Vetorecht; die Kündigung kann trotz Widerspruch ausgesprochen werden."
+    },
+    {
+      "id": "fc-pfr-4",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was ist \"Regrettable Turnover\"?",
+      "back": "**Voluntary Turnover** = Mitarbeitende kündigen freiwillig. **Regrettable Turnover** = der Anteil der freiwilligen Kündigungen von Mitarbeitenden, die das Unternehmen **eigentlich behalten wollte** (Leistungsträger, High Potentials). Entlassungen erhöhen paradoxerweise den regrettable turnover, weil gerade die guten Mitarbeitenden Alternativen haben und das Unternehmen verlassen."
+    },
+    {
+      "id": "fc-pfr-5",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was ist die Kernaussage des Honeywell-HBR-Falls (Cote 2013)?",
+      "back": "Honeywell vermied 2008/09 Massenentlassungen durch **unbezahlte Kurzarbeit (Furloughs)**. Kernaussage: Entlassungen sind die \"**False Promise of Layoffs**\" — die Einsparungen sind wegen Abfindungskosten (ca. 6 Monate) verspätet, und wenn die Rezession endet, muss teuer neu eingestellt werden. Furloughs hielten Know-how im Unternehmen und senkten den regrettable turnover."
+    },
+    {
+      "id": "fc-pfr-6",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was regelt § 112 BetrVG?",
+      "back": "§ 112 BetrVG regelt den **Sozialplan**: Bei größeren Betriebsänderungen (z.B. Massenentlassungen, Standortschließungen), die wesentliche Nachteile für Arbeitnehmer mit sich bringen, müssen Arbeitgeber und Betriebsrat einen Sozialplan aushandeln. Dieser regelt Abfindungen, Qualifizierungsmaßnahmen und andere Ausgleichsleistungen."
+    },
+    {
+      "id": "fc-pfr-7",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was sind die drei Ängste, die Entlassungen bei verbleibenden Mitarbeitenden auslösen?",
+      "back": "1. **Existenzangst**: \"Bin ich der Nächste?\"\n2. **Verteilungsangst**: \"Muss ich jetzt die Arbeit der Entlassenen mitmachen?\"\n3. **Statusangst**: \"Verliere ich meine Rolle oder Position?\" — Diese Ängste erhöhen den Voluntary Turnover der Verbleibenden."
+    },
+    {
+      "id": "fc-pfr-8",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Was ist Outplacement-Beratung und welche Vorteile hat sie für das entlassende Unternehmen?",
+      "back": "**Outplacement** = das Unternehmen bezahlt externe Berater, die entlassenen Mitarbeitenden bei der Jobsuche helfen. Vorteile für das Unternehmen: (1) Vermeidung von Rechtsstreitigkeiten, (2) Motivation der Verbleibenden (Zeichen fairen Umgangs), (3) besseres Image als Arbeitgeber. Nachteile: hohe Kosten, meist nur für Führungskräfte, empirisch schwach belegt."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "q-pfr-1",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Maßnahmen gehört zur Stufe der **vorbeugenden** Personalfreisetzungsinstrumente nach Ridder?",
+      "options": [
+        "Betriebsbedingte Einzelkündigung",
+        "Einstellungsstopp und Abbau von Überstunden",
+        "Aufhebungsvertrag mit Abfindung",
+        "Massenentlassung mit Sozialplan"
+      ],
+      "correct": [1],
+      "explanation": "Vorbeugende Maßnahmen (Stufe 1) umfassen Einstellungsstopp, Abbau von Überstunden, Kurzarbeit und Viertagewoche — sie sollen verhindern, dass es überhaupt zu direktem Personalabbau kommt. Aufhebungsvertrag ist Stufe 2, Kündigung/Massenentlassung ist Stufe 3."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-pfr-2",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "leicht",
+      "prompt": "Eine betriebsbedingte Kündigung ist auch dann wirksam, wenn der Arbeitgeber bei der Auswahl der zu entlassenden Mitarbeitenden die sozialen Kriterien (Betriebszugehörigkeit, Alter, Unterhaltspflichten) nicht berücksichtigt hat.",
+      "answer": false,
+      "explanation": "Falsch. Nach § 1 Abs. 3 KSchG ist eine betriebsbedingte Kündigung **sozial ungerechtfertigt** und damit unwirksam, wenn der Arbeitgeber bei der Auswahl die Sozialkriterien nicht oder fehlerhaft berücksichtigt hat. Die Sozialauswahl ist zwingend."
+    },
+    {
+      "kind": "mc",
+      "id": "q-pfr-3",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "mittel",
+      "prompt": "Was passiert laut § 102 BetrVG, wenn ein Arbeitgeber eine Kündigung ausspricht, ohne den Betriebsrat vorher angehört zu haben?",
+      "options": [
+        "Die Kündigung ist wirksam, aber der Arbeitgeber zahlt eine Geldstrafe.",
+        "Der Betriebsrat kann die Kündigung nachträglich genehmigen.",
+        "Die Kündigung ist unwirksam.",
+        "Der Arbeitgeber muss die Kündigung innerhalb von 3 Tagen wiederholen."
+      ],
+      "correct": [2],
+      "explanation": "§ 102 Abs. 1 Satz 3 BetrVG ist eindeutig: Eine Kündigung ohne vorherige Anhörung des Betriebsrats ist **unwirksam**. Dies ist eine der wichtigsten Formvorschriften im deutschen Kündigungsrecht."
+    },
+    {
+      "kind": "mc",
+      "id": "q-pfr-4",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "mittel",
+      "prompt": "Welche Aussage über den HBR-Fall \"How Honeywell Avoided Layoffs\" (Cote 2013) ist **korrekt**?",
+      "options": [
+        "Honeywell entließ 10% der Belegschaft, wie es branchenüblich war.",
+        "Honeywell nutzte unbezahlte Kurzarbeit (Furloughs) statt Entlassungen.",
+        "Die Furloughs führten dazu, dass der regrettable turnover stark anstieg.",
+        "CEO Cote empfiehlt Entlassungen für Unternehmen, die schnell Kosten senken wollen."
+      ],
+      "correct": [1],
+      "explanation": "Honeywell bat Mitarbeitende, unbezahlte Freistellungen (Furloughs) zu nehmen. Entgegen der üblichen Kritik sank der regrettable turnover sogar. Cote kritisiert die \"False Promise of Layoffs\" und empfiehlt stattdessen Furloughs."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-pfr-5",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "mittel",
+      "prompt": "Studien zeigen, dass Entlassungen häufig dazu führen, dass auch leistungsstarke verbleibende Mitarbeitende freiwillig das Unternehmen verlassen (erhöhter Voluntary Turnover).",
+      "answer": true,
+      "explanation": "Richtig. Entlassungen lösen Schockwellen in der Belegschaft aus: Zukunftsängste, Vertrauensverlust, weniger Commitment. Insbesondere High Potentials — die die meisten Alternativen haben — verlassen das Unternehmen freiwillig (Batt et al. 2002; Trevor & Nyberg 2008)."
+    },
+    {
+      "kind": "mc",
+      "id": "q-pfr-6",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "mittel",
+      "prompt": "Was regelt der **Sozialplan** nach § 112 BetrVG?",
+      "options": [
+        "Die Reihenfolge, in der Mitarbeitende bei betriebsbedingten Kündigungen ausgewählt werden.",
+        "Die Fristen, die ein Arbeitgeber vor einer Kündigung einhalten muss.",
+        "Maßnahmen zum Ausgleich wirtschaftlicher Nachteile der Arbeitnehmer bei Betriebsänderungen.",
+        "Die maximale Höhe einer Abfindungszahlung."
+      ],
+      "correct": [2],
+      "explanation": "Der Sozialplan (§ 112 BetrVG) enthält Regelungen, die wirtschaftliche Nachteile der Arbeitnehmer bei Betriebsänderungen ausgleichen oder mildern — z.B. Abfindungen, Qualifizierungsmaßnahmen, Übernahme in Beschäftigungsgesellschaften. Er wird zwischen Arbeitgeber und Betriebsrat ausgehandelt."
+    },
+    {
+      "kind": "mc",
+      "id": "q-pfr-7",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "schwer",
+      "prompt": "Warum argumentiert Honeywell-CEO Cote, dass Entlassungen in einer Rezession oft eine \"False Promise\" (falsche Verheißung) sind? Welche Aussage trifft am besten zu?",
+      "options": [
+        "Weil Entlassungen illegal sind und zu Gerichtsverfahren führen.",
+        "Weil die Einsparungen durch Abfindungskosten erst nach ca. 6 Monaten realisiert werden, Rezessionen aber nur 12–18 Monate dauern — weshalb man danach wieder teuer einstellen muss.",
+        "Weil Entlassungen die Produktivität der verbleibenden Mitarbeitenden sofort um 50% steigern.",
+        "Weil staatliche Subventionen für Kurzarbeit Entlassungen ohnehin unrentabel machen."
+      ],
+      "correct": [1],
+      "explanation": "Cotes Kernargument: Entlassene erhalten im Schnitt 6 Monate Abfindung + Outplacement. Also dauert es 6 Monate, bis überhaupt Einsparungen fließen. Da Rezessionen typischerweise 12–18 Monate dauern, muss das Unternehmen oft schon wieder einstellen — und zahlt dann erneut Rekrutierungs- und Einarbeitungskosten. Netto: kaum gespart, aber viel Know-how verloren."
+    },
+    {
+      "kind": "freetext",
+      "id": "q-pfr-8",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie das Konzept des \"Survivor-Syndroms\" bei Entlassungen. Was sind die typischen Reaktionen verbleibender Mitarbeitender und welche Konsequenzen hat das für das Unternehmen?",
+      "sampleAnswer": "Das Survivor-Syndrom beschreibt die negativen psychologischen Reaktionen von Mitarbeitenden, die eine Entlassungswelle im Unternehmen \"überlebt\" haben. Typische Reaktionen: Zukunftsängste (Existenz-, Verteilungs- und Statusangst), sinkende Arbeitszufriedenheit, Verlust von Vertrauen in das Management und Commitment. Paradoxerweise steigt der freiwillige Abgang (Voluntary Turnover) — gerade leistungsstarke High Potentials verlassen das Unternehmen, weil sie am meisten Alternativen haben. Konsequenzen für das Unternehmen: Wissensverlust, zerstörte Teams, hohe Kosten für Neubesetzungen, schlechteres Employer Branding. HR-Praktiken (z.B. Kommunikation, faires Trennungsmanagement, Outplacement) können die negativen Effekte abmildern.",
+      "keywords": ["survivor", "angst", "voluntary turnover", "vertrauen", "high potentials", "wissensverlust", "commitment"],
+      "explanation": "Das Survivor-Syndrom ist zentral in der Vorlesung: Entlassungen betreffen nicht nur die Entlassenen, sondern destabilisieren die gesamte verbleibende Belegschaft. Gutes Trennungsmanagement ist daher nicht nur für die Betroffenen wichtig, sondern auch für das Gesamtunternehmen."
+    },
+    {
+      "kind": "mc",
+      "id": "q-pfr-9",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "leicht",
+      "prompt": "Welche Ebenen nennt die Vorlesung (nach Ridder, angelehnt an die Marienthalstudie) als Auswirkungen von Entlassungen auf die Betroffenen?",
+      "options": [
+        "Rechtliche, finanzielle und reputationale Ebene",
+        "Individuelle, soziale und gesellschaftliche Ebene",
+        "Operative, taktische und strategische Ebene",
+        "Kurz-, mittel- und langfristige Ebene"
+      ],
+      "correct": [1],
+      "explanation": "Die Vorlesung unterscheidet drei Ebenen der Konsequenzen: (1) individuelle Ebene (psychische Probleme, Einkommensverlust), (2) soziale Ebene (Isolation, Familienprobleme) und (3) gesellschaftliche Ebene (Perspektivenverlust, Ablehnung der Wirtschaftsordnung). Grundlage ist die Marienthalstudie (Jahoda et al. 1933)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "q-pfr-10",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "mittel",
+      "prompt": "Gemäß § 622 BGB beträgt die Grundkündigungsfrist für Arbeitnehmer stets 6 Monate, unabhängig von der Betriebszugehörigkeit.",
+      "answer": false,
+      "explanation": "Falsch. Die **Grundkündigungsfrist** nach § 622 BGB beträgt nur **4 Wochen** zum 15. oder zum Monatsende. Mit zunehmender Betriebszugehörigkeit verlängert sich die Frist — nach 20 Jahren auf bis zu 7 Monate. Die 6-Monate-Frist gilt erst ab 16 Jahren Betriebszugehörigkeit."
+    },
+    {
+      "kind": "mc",
+      "id": "q-pfr-11",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen mit 200 Mitarbeitenden möchte aufgrund sinkender Umsätze 15 Stellen abbauen. Welche der folgenden Schritte sind dabei zwingend erforderlich? (Mehrfachauswahl möglich)",
+      "options": [
+        "Anhörung des Betriebsrats vor jeder Kündigung (§ 102 BetrVG)",
+        "Durchführung einer Sozialauswahl bei betriebsbedingten Kündigungen (§ 1 KSchG)",
+        "Abschluss eines Sozialplans mit dem Betriebsrat (§ 112 BetrVG)",
+        "Zustimmung des Arbeitsgerichts vor Ausspruch der Kündigungen"
+      ],
+      "correct": [0, 1, 2],
+      "multiple": true,
+      "explanation": "Alle drei ersten Optionen sind zwingend: § 102 BetrVG (Anhörung vor jeder Kündigung), § 1 KSchG (Sozialauswahl bei betriebsbedingter Kündigung), § 112 BetrVG (Sozialplan bei wesentlichen Betriebsänderungen mit erheblichen Nachteilen für Arbeitnehmer — 15 von 200 ist eine deutliche Betriebsänderung). Die Zustimmung des Arbeitsgerichts ist vor den Kündigungen nicht erforderlich; das Arbeitsgericht wird nur im Nachhinein angerufen, wenn der Arbeitnehmer klagt."
+    },
+    {
+      "kind": "freetext",
+      "id": "q-pfr-12",
+      "topicId": "hr-personalfreisetzung",
+      "difficulty": "schwer",
+      "prompt": "Nennen und erklären Sie drei konkrete Fehler, die Unternehmen beim Führen von Kündigungsgesprächen typischerweise machen, und warum diese problematisch sind.",
+      "sampleAnswer": "1. **Überraschendes Gespräch ohne Vorbereitung**: Wenn die Kündigung für den Mitarbeitenden vollkommen aus heiterem Himmel kommt, ist er emotional nicht in der Lage, die Informationen aufzunehmen. Außerdem zeigt es mangelnden Respekt und wird als unfair wahrgenommen. 2. **Öffentliche Bloßstellung** (z.B. Massenentlassung per Zoom vor 900 Kollegen wie bei Better.com): Das verletzt die Würde des Betroffenen massiv und signalisiert allen Verbleibenden: 'Mit Ihnen gehen wir so um.' Das zerstört Vertrauen nachhaltig und erhöht den Voluntary Turnover. 3. **Keine klaren nächsten Schritte kommunizieren**: Wenn dem Mitarbeitenden nicht klar ist, was jetzt passiert (Fristen, Abfindung, Outplacement, Übergabe), entsteht zusätzliche Unsicherheit und Hilflosigkeit. Ein gutes Kündigungsgespräch gibt dem Betroffenen trotz der schlechten Nachricht die nötige Orientierung.",
+      "keywords": ["vorbereitung", "respekt", "öffentlich", "würde", "zoom", "better.com", "nächste schritte", "abfindung", "outplacement", "vertrauen"],
+      "explanation": "Gutes Trennungsmanagement ist nicht nur eine moralische Frage, sondern hat handfeste wirtschaftliche Konsequenzen: Es reduziert das Survivor-Syndrom, schützt das Employer Branding und senkt den regrettable turnover."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-pfr-1",
+      "topicId": "hr-personalfreisetzung",
+      "label": "V10 Diskussion — Personalabbau durch KI: Jobkiller oder Jobmotor?",
+      "source": "Vorlesung Personal SoSe 2026, Folie 145 + ZDFheute-Artikel",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie folgenden Kontext:\n\nImmer mehr Unternehmen begründen Stellenabbau mit Künstlicher Intelligenz: Amazon und HP haben Tausende Stellen abgebaut, Lufthansa streicht 4.000 Stellen mit Verweis auf KI-gestützte Prozesse. Gleichzeitig sagen Forschungsinstitute wie IAB und IW, dass KI auch neue Jobs schafft.\n\n**Frage 1:** Ist KI aus Ihrer Sicht eher Jobkiller oder Jobmotor? Begründen Sie Ihre Position.\n\n**Frage 2:** Welche Branchen und Jobprofile sind besonders anfällig für KI-basierten Personalabbau?\n\n**Frage 3:** Warum ist es ein besonderes Problem, wenn vor allem **Einstiegsjobs** wegfallen?",
+      "hint": "Denken Sie an die Freisetzungsinstrumente: KI-bedingter Abbau ist klassisch betriebsbedingt. Überlegen Sie, welche Jobmerkmale (Routine vs. Kreativität, analog vs. digital) KI-Anfälligkeit bestimmen. Bei Einstiegsjobs: Wie lernen Berufsanfänger ihre Fähigkeiten?",
+      "solution": "**Frage 1 — Jobkiller oder Jobmotor?**\n\nKorrekte Antwort: **Beides, aber verteilt auf verschiedene Gruppen und Zeiträume.**\n- Kurzfristig: KI ist ein Jobkiller für routinebasierte, klar strukturierte Aufgaben (Dateneingabe, einfache Analyse, Standardkommunikation).\n- Langfristig: Historisch haben technologische Revolutionen (Dampfmaschine, Computer) per Saldo mehr Jobs geschaffen als vernichtet — allerdings andere Jobs.\n- IAB/IW-Studien: KI schafft neue Berufsbilder (KI-Trainer, Prompt-Engineer, Datenanalysten), verdrängt aber gleichzeitig Routineberufe.\n- Für die Klausur: Eine differenzierte Position, die beide Seiten benennt und mit Beispielen belegt, ist besser als eine einseitige Antwort.\n\n**Frage 2 — Besonders KI-anfällige Branchen/Jobs:**\n- Stark gefährdet: Buchhaltung/Controlling (Datenverarbeitung), Callcenter (Sprachbots), Lagerlogistik (Roboter), Sachbearbeitung, einfache Rechts- und Steuerberatung.\n- Weniger gefährdet: Berufe mit hohem Empathiebedarf (Pflege, Therapie), kreative Berufe (Design, Kunst), Handwerk mit komplexen Situationen, strategische Führungsaufgaben.\n- Systematisches Kriterium: Je mehr eine Tätigkeit **regelbasiert und gut strukturiert** ist, desto leichter ist sie automatisierbar.\n\n**Frage 3 — Problem der Einstiegsjobs:**\n- Einstiegsjobs sind der klassische Weg, auf dem Berufsanfänger **grundlegende Fähigkeiten und Berufserfahrung** erwerben.\n- Beispiel: Der Junior-Analyst lernt durch einfache Datenauswertungen, wie Geschäftsberichte zu lesen sind — diese Aufgaben macht bald KI.\n- Konsequenz: Wenn Einstiegsjobs wegfallen, gibt es keine Karriereleiter mehr — junge Menschen können keine Kompetenz aufbauen.\n- Gesellschaftliche Dimension: Hohe Jugendarbeitslosigkeit (keine Einstiegschancen) führt laut Marienthalstudie zu Perspektivenverlust und Ablehnung der Wirtschaftsordnung.\n- HRM-Relevanz: Unternehmen müssen aktiv neue Ausbildungsformate schaffen (Simulation, KI-gestützte Lernumgebungen), um den Erwerb von Grundkompetenzen zu ermöglichen."
+    },
+    {
+      "id": "ex-pfr-2",
+      "topicId": "hr-personalfreisetzung",
+      "label": "V10 — Personalabbau bei VW: Die 4-Tage-Woche als Lösung?",
+      "source": "Vorlesung Personal SoSe 2026, Folie 148 + NDR-Artikel",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**Kontext:** 1994 führte VW die Viertagewoche ein, um ca. 30.000 Entlassungen zu verhindern. Arbeitszeit: 28,8 Stunden statt 36 Stunden (-20%). Lohn: ca. -10% (nur Sonderzahlungen). VW produzierte weiterhin fünf Tage pro Woche, aber die Mitarbeitenden wechselten sich ab. 2006 wurde das Modell wieder aufgehoben.\n\nAktuell (2024/25) steht VW erneut vor massiven Umstrukturierungen.\n\n**Frage:** Halten Sie die Viertagewoche für eine geeignete Lösung, um aktuelle Entlassungen bei VW zu vermeiden? Begründen Sie Ihre Antwort unter Bezug auf die Freisetzungsinstrumente (Ridder) und den Honeywell-Fall.",
+      "hint": "Viertagewoche = Stufe 1 (vorbeugende Maßnahme). Was sind die Bedingungen für Erfolg? Und wo liegen die Grenzen (dauerhafter Strukturwandel vs. konjunkturelle Krise)?",
+      "solution": "**Strukturierte Antwort:**\n\n**1. Einordnung nach Ridder:**\nDie Viertagewoche ist eine **vorbeugende Maßnahme** (Stufe 1) — die sanfteste Form der Personalfreisetzung. Sie vermeidet direkte Entlassungen, indem sie die Arbeitszeit und damit Kosten reduziert, ohne Stellen zu streichen.\n\n**2. Vorteile (für Viertagewoche):**\n- Kein Verlust von Know-how (Mitarbeitende bleiben im Betrieb)\n- Kein Survivor-Syndrom, kein erhöhter Voluntary Turnover\n- Schnelle Handlungsfähigkeit bei Aufschwung (analog zu Honeywell: \"prepared for recovery\")\n- Sozial verträglich: Jobs bleiben, Lohnverzicht ist begrenzt\n- Hat 1994 bei VW funktioniert — als **Brücke** in der Krise\n\n**3. Grenzen und Gegenargumente:**\n- Die aktuelle VW-Krise ist **struktureller** Natur (Transformation zur Elektromobilität), nicht nur konjunkturell. Strukturwandel bedeutet: Manche Jobs sind **dauerhaft** nicht mehr nötig — da hilft Kurzarbeit nur zeitlich begrenzt.\n- Prof. Piening: Viertagewoche ist \"kein Dauermodell\" — nur eine Brücke. VW hat das Modell 2006 auch wieder aufgehoben.\n- Kostenfrage: Lohnverzicht der Mitarbeitenden ist nur begrenzt akzeptabel und durchhaltbar.\n- Tarifverhandlungen: Gewerkschaften und Betriebsrat müssen zustimmen (§ 87 BetrVG, § 112 BetrVG).\n\n**4. Vergleich mit Honeywell:**\n- Honeywell: Konjunkturelle Krise (2008/09 Finanzkrise) → Furloughs als temporäre Lösung → funktioniert.\n- VW: Strukturwandel (Verbrenner → Elektro, Kostenstruktur, chinesische Konkurrenz) → Viertagewoche kann Zeit kaufen, löst aber das strukturelle Problem nicht.\n\n**5. Fazit:**\nDie Viertagewoche ist als kurzfristige Überbrückungsmaßnahme sinnvoll, wenn die Krise temporär ist. Für VWs strukturelle Transformation allein ist sie nicht ausreichend — sie muss mit Umschulungen (Inplacement) und einer klaren Zukunftsstrategie kombiniert werden."
+    },
+    {
+      "id": "ex-pfr-3",
+      "topicId": "hr-personalfreisetzung",
+      "label": "V10 — Entlassungen: Wie man es NICHT macht (Better.com Zoom-Kündigung)",
+      "source": "Vorlesung Personal SoSe 2026, Folie 154 + Spiegel-Artikel",
+      "type": "fall",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "**Kontext:** Im Dezember 2021 entließ Vishal Garg, CEO von Better.com (US-Hypothekenplattform), rund **900 Mitarbeitende in einem einzigen Zoom-Anruf**. Sein Einstieg: \"Wenn Sie in diesem Call sind, gehören Sie zur unglücklichen Gruppe. Ihr Arbeitsverhältnis ist mit sofortiger Wirkung beendet.\"\n\nDer Fall sorgte weltweit für Empörung und gilt als Paradebeispiel für schlechtes Trennungsmanagement.\n\n**Frage 1:** Welche konkreten Fehler des Trennungsmanagements sind hier zu identifizieren?\n\n**Frage 2:** Welche Konsequenzen hat dieses Vorgehen für die **verbleibenden** Mitarbeitenden (Stichwort: Survivor-Syndrom)?\n\n**Frage 3:** Wie hätte Better.com die Entlassungen besser gestalten können?",
+      "hint": "Nutzen Sie die \"Do's & Don'ts\" des Trennungsmanagements aus der Vorlesung. Denken Sie an Fairness, Würde, Kommunikation und die Auswirkungen auf Verbleibende.",
+      "solution": "**Frage 1 — Fehler des Trennungsmanagements:**\n\n1. **Massenbenachrichtigung statt Einzelgespräch**: 900 Menschen gleichzeitig in einem Call — keine Möglichkeit für persönliche Gespräche, individuelle Fragen, emotionale Reaktionen.\n2. **Öffentliche Bloßstellung**: Die Entlassung geschah vor allen 900 Kollegen gleichzeitig — Verlust der Würde, keine Privatsphäre.\n3. **Kalt und respektlos**: Die Formulierung \"unglückliche Gruppe\" und \"sofortiger Wirkung\" ohne jegliche menschliche Wärme zeigt Missachtung.\n4. **Keine Begründung**: Es wurde keine nachvollziehbare, respektvolle Erklärung gegeben.\n5. **Keine nächsten Schritte**: Was passiert jetzt mit Abfindung, Krankenversicherung, Zeugnissen? Völlig unklar.\n6. **Kein Ausdruck von Wertschätzung** für die geleistete Arbeit.\n\n**Frage 2 — Konsequenzen für Verbleibende:**\n\n- **Survivor-Syndrom**: Die 900 nicht Entlassenen denken sofort: \"Wer bin ich als Nächster?\" → Existenzangst.\n- **Vertrauensverlust**: Wer sieht, wie Kollegen behandelt werden, verliert das Vertrauen ins Management.\n- **Erhöhter Voluntary Turnover**: Leistungsstarke Mitarbeitende, die Alternativen haben, werden kündigen — genau die, die das Unternehmen behalten will (Regrettable Turnover).\n- **Produktivitätsverlust**: Mitarbeitende sind abgelenkt, ängstlich, demotiviert.\n- **Schaden für Employer Branding**: Der Fall wurde weltweit bekannt → zukünftige Rekrutierung wird massiv erschwert.\n\n**Frage 3 — Bessere Vorgehensweise:**\n\n1. **Individuelle Einzelgespräche** unter vier Augen, mit ausreichend Zeit für jede Person.\n2. **Vorbereitung**: Betroffene vorher einzeln informieren, nicht überrumpeln.\n3. **Klare, respektvolle Begründung** (betriebsbedingt, wirtschaftliche Lage etc.).\n4. **Konkrete nächste Schritte** kommunizieren: Abfindung, Outplacement, Fristen, Zeugnis.\n5. **Outplacement-Beratung** anbieten: Externe Berater helfen beim Jobwechsel.\n6. **Wertschätzung** für die erbrachte Leistung ausdrücken.\n7. **Transparenz gegenüber Verbleibenden**: Erklären, warum Entlassungen nötig waren und wie es weitergeht."
+    },
+    {
+      "id": "ex-pfr-4",
+      "topicId": "hr-personalfreisetzung",
+      "label": "V10 — Entlassungen: Wie man es besser macht (Trennungsmanagement Handelsblatt)",
+      "source": "Vorlesung Personal SoSe 2026, Folie 155 + Handelsblatt-Artikel \"Besser feuern\"",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Das Handelsblatt beschreibt in seinem Artikel \"Besser feuern\" die Gratwanderung des Trennungsmanagements: Entlassungen sind immer schmerzhaft — für Betroffene und für das Unternehmen. Aber Führungskräfte können den Prozess entweder erträglicher gestalten oder mit falschen Gesten Vertrauen dauerhaft zerstören.\n\n**Frage:** Was sollten Unternehmen bei Entlassungen beachten?\n\nGehen Sie in Ihrer Antwort auf folgende Aspekte ein:\na) Welche Interessen müssen beim Trennungsmanagement berücksichtigt werden (Betroffene, Verbleibende, Unternehmen)?\nb) Welche Rolle spielt Fairness und Transparenz?\nc) Inwiefern kann Outplacement-Beratung helfen?",
+      "hint": "Denken Sie an das Coping-Modell (Latack), an das Survivor-Syndrom und an die drei Ängste der Belegschaft. Outplacement hat Vor- und Nachteile.",
+      "solution": "**a) Interessen beim Trennungsmanagement:**\n\nGutes Trennungsmanagement muss **drei Gruppen** gleichzeitig im Blick behalten:\n\n1. **Betroffene (Entlassene)**: Sie verlieren ihren Job und brauchen emotionale Unterstützung, klare Information über nächste Schritte (Abfindung, Zeugnis), Würde und Respekt. Das Coping-Modell (Latack et al. 1995) zeigt: Je besser die Coping Resources (Netzwerk, Qualifikation, finanzielle Absicherung), desto besser verkraften Menschen den Jobverlust. Outplacement stärkt diese Resources.\n\n2. **Verbleibende (Survivors)**: Sie beobachten genau, wie das Unternehmen mit den Entlassenen umgeht. Behandelt das Unternehmen Kollegen würdevoll → steigt Vertrauen. Werden Kollegen bloßgestellt (wie bei Better.com) → Vertrauen bricht ein, Voluntary Turnover steigt.\n\n3. **Unternehmen**: Kurzsichtig sind Kosteneinsparungen das Ziel. Aber: Schlechtes Trennungsmanagement erhöht Voluntary Turnover (Regrettable Turnover), schadet dem Employer Branding, kann zu Klagen führen und macht zukünftige Rekrutierung teurer.\n\n**b) Fairness und Transparenz:**\n\n- **Prozedurale Gerechtigkeit**: War das Verfahren fair? (Wurde jeder angehört? Waren die Kriterien klar?) → Beeinflusst Akzeptanz der Entscheidung, auch wenn die Betroffenen unglücklich sind.\n- **Interaktionale Gerechtigkeit**: Wurden die Betroffenen mit Respekt und Würde behandelt? → Massiver Einfluss auf Vertrauen der Verbleibenden.\n- **Transparenz**: Wenn das Unternehmen ehrlich kommuniziert, warum Entlassungen nötig sind, und klar über nächste Schritte informiert, reduziert das die drei Ängste der Belegschaft (Existenz-, Verteilungs-, Statusangst).\n\n**c) Outplacement-Beratung:**\n\n**Funktion:** Externe Berater helfen Entlassenen in vier Schritten:\n1. Emotionale Stabilisierung\n2. Analyse marktfähiger Qualifikationen\n3. Planung der Jobsuche\n4. Durchführung der Jobsuche\n\n**Vorteile für das Unternehmen:**\n- Entlassene fühlen sich wertgeschätzt → weniger Rechtsstreitigkeiten, Abfindung wird teilweise angerechnet.\n- Verbleibende sehen: \"Das Unternehmen kümmert sich um Kollegen\" → weniger Survivor-Syndrom, weniger Voluntary Turnover.\n- Besseres Image nach außen als verantwortungsvoller Arbeitgeber.\n\n**Grenzen des Outplacements:**\n- Sehr kostenintensiv.\n- Wird meist nur Führungskräften angeboten — fraglich für breitere Belegschaft.\n- Empirische Wirksamkeit nicht eindeutig belegt.\n\n**Fazit:** Trennungsmanagement ist keine \"weiche\" Nebensache, sondern hat harte wirtschaftliche Konsequenzen. Unternehmen, die fair und transparent entlassen, behalten ihr Employer Branding, senken den regrettable turnover und kommen gestärkt aus der Krise — wie Honeywell 2008/09 gezeigt hat."
+    },
+    {
+      "id": "ex-pfr-5",
+      "topicId": "hr-personalfreisetzung",
+      "label": "HBR-Case — How Honeywell Avoided Layoffs (Cote 2013)",
+      "source": "Cote (2013): Honeywell's CEO on how he avoided layoffs. Harvard Business Review, June 2013.",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den HBR-Artikel von Dave Cote (2013) und beantworten Sie folgende Fragen:\n\n**Frage 1:** Wie hat Honeywell es geschafft, Personalabbau in der Rezession 2008/09 zu verhindern? Beschreiben Sie das konkrete Vorgehen.\n\n**Frage 2:** Welche Vorteile hatte diese Vorgehensweise gegenüber klassischen Entlassungen (\"Layoffs\")?\n\n**Frage 3:** Welche Herausforderungen beschreibt Cote bei der Umsetzung der Furloughs?\n\n**Frage 4:** Welche zwei Fehler räumt Cote selbst ein?",
+      "hint": "Furlough = unbezahlte Freistellung (Kurzarbeit auf Amerikanisch). Achten Sie auf den Begriff \"False Promise of Layoffs\" und auf die Frage, wie Cote die Entscheidung gegenüber seinen direkten Berichten (Top-Executives) begründet.",
+      "solution": "**Frage 1 — Honeywells Vorgehen:**\n\nAls im September 2008 die Aufträge einbrachen, entschied Honeywell-CEO Dave Cote gegen die übliche \"Restrukturierung\" (10% der Belegschaft entlassen). Stattdessen wurden alle Mitarbeitenden gebeten, **unbezahlte Freistellungen (Furloughs)** zu nehmen:\n- Im Durchschnitt **3–5 Wochen**, aufgeteilt in einwöchige Blöcke.\n- Jede Geschäftseinheit reassessierte alle paar Wochen, ob weitere Furloughs nötig sind.\n- **Alle** Mitarbeitenden machten mit — auch das Top-Management (CEO ausgenommen, aber Cote verzichtete auf seinen Jahresbonus von ~4 Mio. $).\n- Honeywells Restructuring (das sie parallel durchführten) war auf echte, strukturelle Effizienzgewinne beschränkt — nicht auf konjunkturelle Kostensenkung.\n\n**Frage 2 — Vorteile gegenüber Layoffs:**\n\n1. **Kein Disruptions-Schock**: Entlassungen lähmen eine Organisation über ein Jahr. Furloughs verteilen den Schmerz gleichmäßig, ohne den Organisationsschock.\n2. **Know-how bleibt**: Alle Mitarbeitenden bleiben im Unternehmen → bei der Erholung sofort handlungsfähig.\n3. **Bessere Wettbewerbsposition in der Erholung**: Im Q4 2009 und Q1 2010 konnte Honeywell schneller auf Aufträge reagieren als Wettbewerber, die wieder einstellen mussten.\n4. **False Promise of Layoffs widerlegt**: Abfindung + Outplacement kostet ~6 Monate Gehalt → Einsparungen setzen erst nach 6 Monaten ein. Rezessionen dauern 12–18 Monate → danach Neueinstellungskosten. Per Saldo: kaum Ersparnis, aber enormer Know-how-Verlust.\n5. **Sinkender regrettable turnover**: Die leistungsstarken Mitarbeitenden blieben, weil das Unternehmen Vertrauen und Fairness demonstrierte.\n\n**Frage 3 — Herausforderungen der Umsetzung:**\n\n- **Rechtliche Komplexität**: Verschiedene US-Bundesstaaten haben unterschiedliche Gesetze zu Freistellungen. In manchen Staaten mussten Laptops und Smartphones der Mitarbeitenden eingezogen werden, damit diese während der Freistellung keine E-Mails checken (würde als Arbeitszeit gelten).\n- **Auslandsstandorte**: In manchen Ländern (z.B. China mit wachsendem Markt) waren Furloughs rechtlich oder praktisch nicht möglich.\n- **Stimmungswandel**: Anfangs positives Feedback (\"Wir opfern uns für die Kollegen\"). Nach mehreren Wochen wuchs Unmut: \"Ich kann von diesem Gehalt nicht leben\" oder \"Ich wäre eh nicht entlassen worden\".\n- **Top-Management**: Direkte Berichte von Cote wollten ebenfalls gefurlought werden (symbolische Geste). Cote lehnte ab: Führungskräfte erhalten >50% Jahresgehalt als Bonus — sie verloren prozentual mehr als normale Mitarbeitende, und das Unternehmen brauchte sie an der Arbeit.\n\n**Frage 4 — Cotes eigene Fehler:**\n\n1. **Kommunikation der eigenen Opfer**: Als Mitarbeitende fragten, wie die Rezession sein Gehalt betrifft, antwortete Cote stets: \"Das entscheidet der Vorstand.\" In Wahrheit hatte er bereits entschieden, auf seinen ~4-Mio.-$-Bonus zu verzichten. Hätte er das offen kommuniziert, wäre Vertrauen und Moral stärker gestärkt worden.\n\n2. **Keine klare Begrenzung der Furloughs pro Einheit**: Cote ließ jede Geschäftseinheit selbst entscheiden, wie viele Furlough-Wochen nötig sind. Manche Einheiten (z.B. in China, wachsender Markt) furlouglhten Mitarbeitende unnötigerweise — was HR-Probleme und Unmut schuf. Einheitliche Richtlinien wären besser gewesen."
+    }
+  ]
+}

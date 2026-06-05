@@ -1,0 +1,346 @@
+{
+  "id": "hr-grundlagen-des-human-resource-management",
+  "subjectId": "bwl",
+  "title": "Grundlagen des Human Resource Management",
+  "summary": "Einführung in Begriff, Aufgaben und Bedeutung des Personalmanagements. Was ist HRM, was unterscheidet es vom klassischen Personalwesen, welche Rollen nimmt die Personalabteilung ein (Ulrich-Modell) und warum sind Mitarbeitende die wichtigste Ressource eines Unternehmens?",
+  "order": 8,
+  "estMinutes": 50,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "was-ist-hrm",
+      "heading": "Was ist Human Resource Management (HRM)?",
+      "body": "**Human Resource Management** — auf Deutsch: **Personalmanagement** oder **Personalwirtschaft** — ist das systematische Management von Mitarbeitenden in einem Unternehmen.\n\nDer Begriff setzt sich zusammen aus:\n- **Human** = Mensch\n- **Resource** = Ressource, d. h. etwas Wertvolles, das man einsetzt, um Ziele zu erreichen\n- **Management** = planvolles Steuern und Gestalten\n\nDie in der Vorlesung verwendete **Definition nach Noe et al. (2010)**:\n\n> Policies, practices, and systems that influence employees' behavior, attitudes and performance.\n\nAuf Deutsch: **Richtlinien (Politiken), Praktiken und Systeme, die das Verhalten, die Einstellungen und die Leistung der Mitarbeitenden beeinflussen.**\n\nWas bedeutet das konkret?\n\n| Begriff | Erklärung | Beispiel |\n|---|---|---|\n| **Politiken** (policies) | Grundsatzentscheidungen und Regeln | Wir foerdern interne Befoerderungen |\n| **Praktiken** (practices) | konkrete Maßnahmen, die man umsetzt | Bewerbungsgespräche, Gehaltsverhandlungen |\n| **Systeme** (systems) | zusammenhängende Prozesse und IT-Tools | Software für Gehaltsabrechnung, Lernplattform |\n\nZiel: Durch all diese Maßnahmen soll das **Verhalten** der Mitarbeitenden (z. B. Pünktlichkeit, Teamarbeit), ihre **Einstellungen** (z. B. Zufriedenheit, Motivation) und ihre **Leistung** (z. B. Verkaufszahlen, Qualität) positiv beeinflusst werden.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kerndefinition (klausurrelevant)",
+          "body": "HRM = Politiken, Praktiken und Systeme, die das **Verhalten**, die **Einstellungen** und die **Leistung** von Mitarbeitenden beeinflussen (Noe et al., 2010, S. 4)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Alltagsbeispiel: Was macht eine Personalabteilung?",
+          "body": "Stell dir vor, du fängst einen neuen Job an. Die Personalabteilung hat\n- die Stellenanzeige geschaltet und Bewerbungen gesichtet (Rekrutierung)\n- das Vorstellungsgespräch organisiert (Personalauswahl)\n- deinen Arbeitsvertrag aufgesetzt (Verwaltung)\n- ein Einarbeitungsprogramm vorbereitet (Entwicklung)\n- dein Gehalt festgelegt (Vergütung)\n\nAll das ist HRM."
+        }
+      ]
+    },
+    {
+      "id": "personalwesen-vs-hrm",
+      "heading": "Betriebliches Personalwesen vs. modernes HRM",
+      "body": "Früher gab es in Unternehmen das sogenannte **Betriebliche Personalwesen** (englisch: personnel management). Das war im Wesentlichen eine Verwaltungsabteilung: Gehalt auszahlen, Verträge schreiben, Urlaub verwalten.\n\nModernes **HRM** ist viel mehr: Es denkt strategisch, langfristig und sieht Mitarbeitende nicht als Kostenfaktor, sondern als **Wertschöpfungsfaktor** — also als Quelle von Leistung und Wettbewerbsvorteilen.\n\nDie folgende Tabelle (nach Oechsler, 2011, S. 22) zeigt die Unterschiede:",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-personalwesen-vs-hrm",
+          "title": "Betriebliches Personalwesen vs. Human Resource Management",
+          "headers": ["Merkmal", "Betriebliches Personalwesen", "Human Resource Management"],
+          "rows": [
+            ["Unternehmenspolitische Einordnung", "Nachgelagerte betriebliche Funktion", "Integrierter Bestandteil der Unternehmensstrategie"],
+            ["Aktivitätshorizont", "Kurzfristig-reaktiv", "Langfristig-proaktiv"],
+            ["Personalpolitisches Instrumentarium", "Bürokratisch-vereinheitlicht, zentralisiert-standardisiert", "Organisch-flexibel, dezentral-situativ"],
+            ["Kontrolle", "Fremdkontrolle", "Selbstkontrolle"],
+            ["Erfolgskriterien", "Konformität, Kostenreduzierung", "Selbstverpflichtung, Intensivierung der Arbeit"],
+            ["Grundhaltung", "Verwaltend", "Unternehmerisch"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Einfach erklärt",
+          "body": "**Personalwesen** fragt: *Wie verwalten wir Mitarbeitende möglichst günstig und regelkonform?*\n\n**HRM** fragt: *Wie gewinnen, entwickeln und binden wir die besten Mitarbeitenden, damit das Unternehmen erfolgreich ist?*"
+        },
+        {
+          "kind": "tip",
+          "title": "Merkhilfe",
+          "body": "Personalwesen = **Verwaltung** (reaktiv, kurzfristig, Kosten senken)\nHRM = **Strategie** (proaktiv, langfristig, Wert schaffen)"
+        }
+      ]
+    },
+    {
+      "id": "hrm-als-funktion",
+      "heading": "HRM als Funktion im Unternehmen — der Employee Life Cycle",
+      "body": "Die Personalabteilung ist für den gesamten **Lebenszyklus eines Mitarbeitenden im Unternehmen** zuständig. Man nennt das den **Employee Life Cycle** (= Mitarbeiterlebenszyklus).\n\nDieser umfasst alle Phasen von der Planung bis zur Freisetzung:",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-employee-life-cycle",
+          "title": "Employee Life Cycle — Mitarbeiterlebenszyklus",
+          "caption": "Die Personalabteilung begleitet Mitarbeitende durch alle Phasen ihres Beschäftigungsverhältnisses.",
+          "code": "graph LR\n    A[Personalplanung\\nWie viele? Welche?] --> B[Rekrutierung\\nStellenanzeige, Bewerbung]\n    B --> C[Personalauswahl\\nInterview, Assessment]\n    C --> D[Onboarding\\nEinarbeitung]\n    D --> E[Entwicklung\\nTraining, Karriere]\n    E --> F[Vergütung\\nGehalt, Boni]\n    F --> G[Freisetzung\\nKündigung, Rente]\n    G --> A"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Warum ist das eine Funktion der ganzen Führung?",
+          "body": "Wichtig: HRM ist **nicht nur** Aufgabe der Personalabteilung. Jede Führungskraft hat Personalverantwortung — sie führt, motiviert, beurteilt und entwickelt ihre Mitarbeitenden. Die Personalabteilung stellt dafür die Rahmenbedingungen bereit."
+        }
+      ]
+    },
+    {
+      "id": "rollen-ulrich",
+      "heading": "Die vier Rollen der Personalabteilung nach Ulrich (1997)",
+      "body": "Der Managementprofessor **Dave Ulrich** hat 1997 ein sehr einflussreiches Modell entwickelt, das beschreibt, welche vier Rollen eine moderne Personalabteilung einnehmen soll.\n\nDas Modell hat **zwei Achsen**:\n- **Horizontale Achse**: Fokus auf **Prozesse** (linke Seite) vs. **Menschen/Personen** (rechte Seite)\n- **Vertikale Achse**: Fokus auf **strategische/zukunftsorientierte** Fragen (oben) vs. **operative/tagesaktuelle** Fragen (unten)\n\nDaraus ergeben sich vier Felder mit je einer Rolle:",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-ulrich-rollen",
+          "title": "Vier HR-Rollen nach Ulrich (1997)",
+          "caption": "Die Personalabteilung balanciert zwischen strategischen und operativen, prozess- und menschenorientierten Aufgaben.",
+          "code": "graph TD\n    subgraph Zukunft/Strategisch\n        A[Strategische Partnerschaft\\nstrategic partner\\n---\\nStrategische Personalentscheidungen\\nAusrichtung HR an Unternehmensstrategie]\n        B[Change Agent\\nVeraenderungsmanager\\n---\\nVerhandlungen\\nKommunikation\\nChange Management]\n    end\n    subgraph Gegenwart/Operativ\n        C[Verwaltungsexperte\\nadministrative expert\\n---\\nRechtliche Fragen\\nVertragsverwaltung\\ne-HRM und IT-Systeme]\n        D[Partnerschaft mit Arbeitnehmenden\\nemployee champion\\n---\\nBeratung\\nTeamentwicklung\\nMitarbeitendenbelange]\n    end\n    A --- Prozesse\n    C --- Prozesse\n    B --- Menschen\n    D --- Menschen"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Die vier Rollen im Detail",
+          "body": "**1. Strategische Partnerschaft** (strategic partner) — strategisch & prozessorientiert\nDie HR-Abteilung sitzt mit am Tisch, wenn die Unternehmensstrategie entwickelt wird. Sie stellt sicher, dass genug qualifizierte Mitarbeitende für die geplanten Ziele vorhanden sind.\n*Beispiel: VW plant eine E-Auto-Offensive → HR plant, welche Ingenieure gebraucht werden.*\n\n**2. Change Agent** (Veraenderungsmanager) — strategisch & menschenorientiert\nHR begleitet Veraenderungsprozesse im Unternehmen (z. B. Digitalisierung, Restrukturierung). Es kommuniziert Veraenderungen und hilft Mitarbeitenden, sich anzupassen.\n*Beispiel: Ein Konzern fuehrt neue Software ein → HR schult Mitarbeitende und managt Widerstaende.*\n\n**3. Verwaltungsexperte** (administrative expert) — operativ & prozessorientiert\nHR erledigt die notwendigen administrativen Aufgaben effizient: Gehaltsabrechnung, Vertragserstellung, Einhaltung von Arbeitsrecht, HR-IT-Systeme.\n*Beispiel: Korrekte Auszahlung von Gehaeltern und Verwaltung von Urlaubstagen.*\n\n**4. Partnerschaft mit Arbeitnehmenden** (employee champion) — operativ & menschenorientiert\nHR ist Ansprechpartner fuer die Mitarbeitenden bei persoenlichen und beruflichen Anliegen. Es foerdert Zufriedenheit, Motivation und Teamarbeit.\n*Beispiel: Ein Mitarbeitender hat Konflikte im Team → HR vermittelt und bietet Coaching an.*"
+        },
+        {
+          "kind": "warning",
+          "title": "Wichtige Ergaenzung",
+          "body": "Digitalisierung und KI veraendern die Arbeit der Personalabteilung erheblich. Administrative Aufgaben werden automatisiert (z. B. Gehaltsabrechnung per Software), wodurch HR mehr Zeit fuer strategische und menschenbezogene Rollen gewinnen kann."
+        }
+      ]
+    },
+    {
+      "id": "human-capital",
+      "heading": "Human Capital — Mitarbeitende als strategische Ressource",
+      "body": "**Human Capital** (= Humankapital) bezeichnet das Wissen, die Faehigkeiten, die Erfahrungen und die Motivation der Mitarbeitenden eines Unternehmens.\n\nDer Begriff kommt aus der Oekonomie: Genau wie physisches Kapital (Maschinen, Gebaeude) kann auch das **menschliche Kapital** investiert, entwickelt und genutzt werden — mit dem Ziel, Mehrwert zu schaffen.\n\n**Warum ist Human Capital so wichtig?**\n\nIn der heutigen Wirtschaft sind Maschinen und Technologien oft leicht kopierbar. Was ein Unternehmen wirklich einzigartig macht, sind seine **Mitarbeitenden**: ihr Wissen, ihre Erfahrung, ihre Kreativitaet.\n\nDas HR-Praktiken-Wirkungsmodell (Folie 25 der Vorlesung) zeigt, wie HRM zum Unternehmenserfolg beitraegt:\n\n**HR-Praktiken → HR-Ergebnisse → Unternehmensperformance**",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-hr-wirkungskette",
+          "title": "Wirkungskette: HR-Praktiken und Unternehmenserfolg",
+          "caption": "HR-Massnahmen verbessern Mitarbeiterergebnisse, die sich dann positiv auf die Unternehmensperformance auswirken.",
+          "code": "graph LR\n    A[HR-Praktiken\\nPlanung\\nRekrutierung/Auswahl\\nBezahlung und Anreize\\nLeistungsbeurteilung\\nTraining und Entwicklung\\nArbeitsorganisation] -->|positiv| B[HR-Ergebnisse\\nWissen/Faehigkeiten\\nZufriedenheit\\nMotivation\\nCommitment\\nBindung]\n    B -->|positiv| C[Unternehmens-\\nperformance\\nGewinn\\nMarktanteil\\nQualitaet\\nInnovation]\n    D[Kontingenzfaktoren\\nGr&ouml;&szlig;e, Branche, Strategie\\nAlter, Erfahrung] --> A\n    D --> B\n    D --> C"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Commitment erklaert",
+          "body": "**Commitment** (= Bindung/Verpflichtungsgefuehl) bezeichnet, wie stark sich Mitarbeitende mit ihrem Unternehmen identifizieren und bereit sind, sich ueberdurchschnittlich einzusetzen. Hohes Commitment senkt die Fluktuation (= Mitarbeiterwechsel) und erhoht die Leistung."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Konkrete Beispiele aus der Praxis",
+          "body": "- **Pilotenkrise 2025**: Airlines suchen verzweifelt nach Besatzung (Capital, Juli 2025) — Folge schlechter Personalplanung\n- **Rekordzahl unzufriedener Mitarbeitender**: Kostet Unternehmen Milliarden (Focus, Nov. 2025) — Folge schlechter Mitarbeiterbindung\n- **Google**: 3 Millionen Bewerbungen pro Jahr — Ergebnis exzellenten Employer Brandings\n- **DAX-Firmen wollen Mitarbeiter loswerden** (Bild, Nov. 2025) — zeigt Bedeutung der Personalfreisetzung"
+        }
+      ]
+    },
+    {
+      "id": "warum-hrm-wichtig",
+      "heading": "Warum ist HRM wichtig? Gesellschaftliche Treiber",
+      "body": "Die Bedeutung des Personalmanagements waechst, weil sich die Gesellschaft und Arbeitswelt rasant veraendern. Die Vorlesung nennt drei grosse Treiber (nach Noe et al., 2010, S. 13 ff.):\n\n**1. Globalisierung**\n- Unternehmen agieren international — Mitarbeitende aus vielen Kulturen arbeiten zusammen\n- Urbanisierung: Talente ziehen in Staedte — laendliche Regionen haben Fachkraeftemangel\n\n**2. New Economy (Neue Wirtschaft)**\n- Digitalisierung und E-Business veraendern Arbeitsprozesse grundlegend\n- **Wissensgesellschaft**: Wissen und Kompetenzen sind der Hauptwettbewerbsvorteil — Human Capital wird zum entscheidenden Faktor\n\n**3. Veraenderungen im Arbeitsverhaeltnis**\n- **Demographischer Wandel** (= Bevoelkerungsveraenderung): Aeltere Belegschaft, weniger Nachwuchs → **\"War for Talents\"** (= Kampf um qualifizierte Fachkraefte)\n- Diversitaet (= Vielfalt): Verschiedene Generationen, Kulturen, Hintergruende arbeiten zusammen\n- **New Work**: Neue Arbeitsformen wie Homeoffice, Viertagewoche, agile Teams\n- Veraenderte Erwartungen: Junge Mitarbeitende wollen Sinn, Flexibilitaet und Entwicklung",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Lessons Learned aus V1 (Folie 22)",
+          "body": "1. HRM ist ein **zentraler Erfolgsfaktor** fuer Organisationen — insbesondere in einer dynamischen, komplexen Umwelt.\n2. Die Personalabteilung hat **unterschiedliche Rollen** — der Schwerpunkt variiert je nach Unternehmensstrategie.\n3. Personalarbeit ist **nicht auf die Personalabteilung begrenzt** — sie ist originaere Aufgabe **aller Fuehrungskraefte**."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "hrg-fc-1",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Wie lautet die Definition von HRM nach Noe et al. (2010)?",
+      "back": "\"Policies, practices, and systems that influence employees' behavior, attitudes and performance.\" — Richtlinien, Praktiken und Systeme, die das Verhalten, die Einstellungen und die Leistung der Mitarbeitenden beeinflussen."
+    },
+    {
+      "id": "hrg-fc-2",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Was sind die vier Rollen der Personalabteilung nach Ulrich (1997)?",
+      "back": "1. Strategische Partnerschaft (strategic partner) — strategisch + prozessorientiert\n2. Change Agent (Veraenderungsmanager) — strategisch + menschenorientiert\n3. Verwaltungsexperte (administrative expert) — operativ + prozessorientiert\n4. Partnerschaft mit Arbeitnehmenden (employee champion) — operativ + menschenorientiert"
+    },
+    {
+      "id": "hrg-fc-3",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Welche zwei Achsen bilden das Ulrich-Modell der HR-Rollen?",
+      "back": "Achse 1 (horizontal): Prozesse vs. Menschen/Personen\nAchse 2 (vertikal): Strategisch/Zukunft vs. Operativ/Arbeitsalltag"
+    },
+    {
+      "id": "hrg-fc-4",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Wie unterscheidet sich das moderne HRM vom klassischen Betrieblichen Personalwesen? (3 Punkte)",
+      "back": "1. HRM ist langfristig-proaktiv (Personalwesen: kurzfristig-reaktiv)\n2. HRM ist integrierter Teil der Unternehmensstrategie (Personalwesen: nachgelagerte Funktion)\n3. HRM hat unternehmerische Grundhaltung (Personalwesen: verwaltende Grundhaltung)\nQuelle: Oechsler, 2011"
+    },
+    {
+      "id": "hrg-fc-5",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Was versteht man unter Human Capital (Humankapital)?",
+      "back": "Das Wissen, die Faehigkeiten, die Erfahrungen und die Motivation der Mitarbeitenden. Human Capital gilt als strategische Ressource, weil es schwer imitierbar ist und Wettbewerbsvorteile schafft."
+    },
+    {
+      "id": "hrg-fc-6",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Welche drei gesellschaftlichen Treiber erhoehen die Bedeutung von HRM (nach Noe et al.)?",
+      "back": "1. Globalisierung (Internationalitaet, Urbanisierung)\n2. New Economy (Digitalisierung, Wissensgesellschaft)\n3. Veraenderungen im Arbeitsverhaeltnis (demographischer Wandel, War for Talents, New Work)"
+    },
+    {
+      "id": "hrg-fc-7",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Was bedeutet der Begriff 'War for Talents'?",
+      "back": "Wettbewerb der Unternehmen um qualifizierte Fachkraefte (Talente). Entsteht durch demographischen Wandel (weniger Nachwuchs) und steigende Anforderungen in der Wissensgesellschaft."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "hrg-q1",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "leicht",
+      "prompt": "Welche Definition von HRM stammt laut Vorlesung von Noe et al. (2010)?",
+      "options": [
+        "Politiken, Praktiken und Systeme, die das Verhalten, die Einstellungen und die Leistung der Mitarbeitenden beeinflussen",
+        "Die Verwaltung von Personalakten und Gehaltsabrechnungen im Unternehmen",
+        "Die strategische Planung des Personalbedarfs auf Basis von Marktanalysen",
+        "Die rechtliche Regulierung des Arbeitsverhaeltnisses zwischen Arbeitgeber und Arbeitnehmer"
+      ],
+      "correct": [0],
+      "explanation": "Noe et al. (2010, S. 4) definieren HRM als 'policies, practices, and systems that influence employees' behavior, attitudes and performance' — also Politiken, Praktiken und Systeme, die Verhalten, Einstellungen und Leistung beeinflussen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hrg-q2",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "leicht",
+      "prompt": "Das klassische Betriebliche Personalwesen ist nach Oechsler (2011) langfristig-proaktiv ausgerichtet.",
+      "answer": false,
+      "explanation": "Falsch. Das klassische Betriebliche Personalwesen ist KURZFRISTIG-REAKTIV ausgerichtet. Langfristig-proaktiv ist hingegen das moderne HRM."
+    },
+    {
+      "kind": "mc",
+      "id": "hrg-q3",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Rollen gehoert im Ulrich-Modell (1997) zum Quadranten 'strategisch UND menschenorientiert'?",
+      "options": [
+        "Verwaltungsexperte (administrative expert)",
+        "Strategische Partnerschaft (strategic partner)",
+        "Change Agent (Veraenderungsmanager)",
+        "Partnerschaft mit Arbeitnehmenden (employee champion)"
+      ],
+      "correct": [2],
+      "explanation": "Der Change Agent ist strategisch (Zukunftsfokus) UND menschenorientiert (er begleitet Menschen durch Veraenderungsprozesse). Die Strategische Partnerschaft ist strategisch + prozessorientiert, der Verwaltungsexperte operativ + prozessorientiert, der Employee Champion operativ + menschenorientiert."
+    },
+    {
+      "kind": "mc",
+      "id": "hrg-q4",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "mittel",
+      "prompt": "Welche ZWEI Achsen bilden das Vier-Felder-Modell der HR-Rollen nach Ulrich? (Mehrfachauswahl)",
+      "options": [
+        "Strategisch vs. Operativ",
+        "Intern vs. Extern",
+        "Prozesse vs. Menschen",
+        "Kosten vs. Nutzen"
+      ],
+      "correct": [0, 2],
+      "multiple": true,
+      "explanation": "Das Ulrich-Modell hat die Achsen 'Strategisch/Zukunft vs. Operativ/Arbeitsalltag' und 'Prozesse vs. Menschen'. Aus diesen vier Kombinationen ergeben sich die vier Rollen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hrg-q5",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "leicht",
+      "prompt": "Laut den Lessons Learned der Vorlesung ist Personalarbeit ausschliesslich Aufgabe der Personalabteilung.",
+      "answer": false,
+      "explanation": "Falsch. Laut Folie 22 ist Personalarbeit NICHT auf die Personalabteilung begrenzt — sie ist die originaere Aufgabe ALLER Fuehrungskraefte im Unternehmen."
+    },
+    {
+      "kind": "mc",
+      "id": "hrg-q6",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "mittel",
+      "prompt": "Ein HR-Manager bei Volkswagen hilft der Unternehmensleitung dabei, die Personalstrategie fuer die Elektromobilitaets-Offensive zu entwickeln. Welche Ulrich-Rolle nimmt er dabei ein?",
+      "options": [
+        "Verwaltungsexperte",
+        "Strategische Partnerschaft",
+        "Change Agent",
+        "Partnerschaft mit Arbeitnehmenden"
+      ],
+      "correct": [1],
+      "explanation": "Bei der Entwicklung der Personalstrategie in Abstimmung mit der Unternehmensstrategie nimmt HR die Rolle der Strategischen Partnerschaft (strategic partner) ein — strategischer Fokus auf Prozesse."
+    },
+    {
+      "kind": "freetext",
+      "id": "hrg-q7",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "mittel",
+      "prompt": "Erklaere in 3-4 Saetzen den Unterschied zwischen dem klassischen Betrieblichen Personalwesen und dem modernen Human Resource Management.",
+      "sampleAnswer": "Das klassische Betriebliche Personalwesen ist reaktiv und kurzfristig ausgerichtet; es verwaltet Personalangelegenheiten wie Gehaltsabrechnung und Vertragserstellung und sieht Mitarbeitende eher als Kostenfaktor. Das moderne HRM hingegen ist proaktiv und langfristig: Es ist integrierter Bestandteil der Unternehmensstrategie und sieht Mitarbeitende als Wertschopfungsfaktor. Statt Fremdkontrolle setzt HRM auf Selbstkontrolle der Mitarbeitenden, und statt Konformitaet strebt es Selbstverpflichtung und hohe Leistungsbereitschaft an.",
+      "keywords": ["strategisch", "proaktiv", "langfristig", "wertschoepfung", "kostenfaktor", "verwaltend", "unternehmerisch"],
+      "explanation": "Kerndimension: Personalwesen = kurzfristig, reaktiv, verwaltend, Kostenfokus. HRM = langfristig, proaktiv, unternehmerisch, Wertschoepfungsfokus (Oechsler, 2011)."
+    },
+    {
+      "kind": "mc",
+      "id": "hrg-q8",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen fuehrt ein neues ERP-System ein. Die HR-Abteilung organisiert Schulungen, fuehrt Mitarbeitergespraeche, um Aengste abzubauen, und kommuniziert die Vorteile der Veraenderung. Welche Ulrich-Rolle nimmt HR PRIMAER ein?",
+      "options": [
+        "Verwaltungsexperte, weil es ein IT-System ist",
+        "Strategische Partnerschaft, weil es um die Zukunft des Unternehmens geht",
+        "Change Agent, weil HR einen Veraenderungsprozess begleitet und Menschen einbezieht",
+        "Employee Champion, weil HR mit Mitarbeitenden kommuniziert"
+      ],
+      "correct": [2],
+      "explanation": "Die primaere Rolle ist hier der Change Agent: Das Unternehmen befindet sich in einem Veraenderungsprozess (neues System), HR begleitet diesen durch Schulung, Kommunikation und Change Management. Das ist der Kern der Change-Agent-Rolle (strategisch + menschenorientiert)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "hrg-q9",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "mittel",
+      "prompt": "Human Capital (Humankapital) bezeichnet hauptsaechlich die Maschinen und technischen Anlagen, die ein Unternehmen besitzt.",
+      "answer": false,
+      "explanation": "Falsch. Human Capital bezeichnet das Wissen, die Faehigkeiten, die Erfahrungen und die Motivation der MITARBEITENDEN — also das 'Kapital', das in den Menschen steckt, nicht in Maschinen."
+    },
+    {
+      "kind": "mc",
+      "id": "hrg-q10",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen zur Wirkungskette von HRM und Unternehmenserfolg ist KORREKT?",
+      "options": [
+        "HR-Praktiken beeinflussen direkt den Gewinn, ohne Umweg ueber Mitarbeiterergebnisse",
+        "HR-Praktiken verbessern HR-Ergebnisse (wie Motivation und Bindung), die wiederum die Unternehmensperformance steigern",
+        "Unternehmensperformance beeinflusst HR-Praktiken, aber nicht umgekehrt",
+        "Kontingenzfaktoren spielen fuer die Wirkung von HR-Praktiken keine Rolle"
+      ],
+      "correct": [1],
+      "explanation": "Die Wirkungskette lautet: HR-Praktiken → HR-Ergebnisse (Motivation, Wissen, Bindung) → Unternehmensperformance. Zudem wirken Kontingenzfaktoren (Unternehmensgroesse, Branche, etc.) auf alle drei Ebenen ein. Es gibt auch Reverse Causality (erfolgreiche Unternehmen koennen mehr in HR investieren)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hrg-ex-1",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "label": "Vorlesung Folie 14 — Beispiel-Klausurfrage (Arbeitsorganisation/Homeoffice)",
+      "source": "Vorlesung Personal SoSe 2026, Folie 14",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "**Aufgabe 1: Arbeitsorganisation (30 Pkt.)**\n\nSie lesen ein interessantes Interview mit dem CEO eines grossen Versicherungskonzerns mit Sitz in Hannover. Im Interview sagt er, dass die COVID-19-Pandemie ihm gezeigt hat, dass Homeoffice erstaunlich gut funktioniert und er zukunftig den flaechendeckenden Einsatz dieses Arbeitsmodells im Unternehmen plant. Er berichtet auch davon, dass er schon ein Konzept im Kopf hat: Er moechte auf maximale Flexibilitaet setzen, das heisst, dass alle Mitarbeitenden taeglich entscheiden koennen, ob sie zuhause oder in der Firma arbeiten wollen.\n\nDiskutieren Sie die Vor- und Nachteile dieser Idee aus Sicht der Mitarbeitenden und des Unternehmens. Glauben Sie in diesem Zusammenhang, dass sich Homeoffice positiv auf die Motivation der Mitarbeitenden auswirken wird? Analysieren Sie diese Frage auf Basis der Job Characteristics Theory.",
+      "hint": "Die Job Characteristics Theory (Hackman & Oldham) kennt fuenf Kernmerkmale: Aufgabenvielfalt, Ganzheitlichkeit, Bedeutungsgehalt, Autonomie und Feedback. Ueberlegen Sie, welche davon durch Homeoffice verbessert oder verschlechtert werden koennen.",
+      "solution": "**Schritt 1: Vorteile und Nachteile strukturieren**\n\n**Vorteile aus Sicht der Mitarbeitenden:**\n- Erhoehte Flexibilitaet und Selbstbestimmung (Work-Life-Balance)\n- Wegfall von Pendelzeiten und -kosten\n- Ruhigere Arbeitsumgebung (weniger Ablenkung im Grossraumbuero)\n- Eigenverantwortliches Arbeiten foerdert Zufriedenheit\n\n**Nachteile aus Sicht der Mitarbeitenden:**\n- Soziale Isolation und fehlende Kollegialitaet\n- Verschwimmen von Berufs- und Privatleben (immer erreichbar?)\n- Schlechtere Ausstattung zuhause (Ergonomie, Internet)\n- Taeglich entscheiden zu muessen kann Stress erzeugen ('Entscheidungsmuedigkeit')\n- Moegliche Benachteiligung bei Karriere ('out of sight, out of mind')\n\n**Vorteile aus Sicht des Unternehmens:**\n- Einsparungen bei Bueroflaeche\n- Hoeheres Employer Branding (moderner Arbeitgeber)\n- Moeglicherweise hoehere Produktivitaet bei konzentrierten Taetigkeiten\n- Groesseres Rekrutierungsgebiet (orts-unabhaengige Fachkraefte)\n\n**Nachteile aus Sicht des Unternehmens:**\n- Erschwerter Wissenstransfer und Kollaboration (Spontangespraeche fallen weg)\n- Steuerung und Kontrolle wird schwieriger\n- Kulturaufbau und Teamidentitaet leiden\n- IT-Sicherheitsrisiken\n- Taeglich wechselnde Praesenzzahlen machen Bueroplanung schwierig\n\n**Schritt 2: Analyse mit der Job Characteristics Theory (Hackman & Oldham)**\n\nDie Job Characteristics Theory besagt: Arbeit ist dann motivierend, wenn sie fuenf Kernmerkmale aufweist.\n\n| Kernmerkmal | Auswirkung des Homeoffice |\n|---|---|\n| Aufgabenvielfalt | Neutral — haengt nicht vom Ort ab |\n| Ganzheitlichkeit | Neutral — haengt nicht vom Ort ab |\n| Bedeutungsgehalt | Neutral — haengt nicht vom Ort ab |\n| **Autonomie** | **Stark positiv** — Mitarbeitende entscheiden selbst, wo und wie sie arbeiten |\n| **Feedback** | **Potenziell negativ** — weniger direktes Feedback von Kolleginnen und Vorgesetzten |\n\n**Zwischenergebnis:** Homeoffice erhoht vor allem die **Autonomie** — ein zentrales Motivationsmerkmal. Dies kann die Motivation steigern.\n\nALLERDINGS gilt dies nur, wenn auch **Growth Need Strength** (das Beduerfnis nach persoenlicher Entwicklung) des Mitarbeitenden hoch ist. Mitarbeitende mit geringer Growth Need Strength profitieren weniger oder gar nicht.\n\n**Schritt 3: Kritische Wuerdigung**\n\nDas Modell des CEOs — taeglich frei entscheiden — klingt gut, hat aber Tuecken:\n- Maximale Flexibilitaet erhoht Autonomie, kann aber zu **mangelhafter Koordination** fuehren\n- **Feedback** und soziales Eingebundensein (wichtige Motivationsfaktoren) koennen leiden\n- Die Pauschalisierung ist problematisch: Fuer kreative Wissensarbeit mag Homeoffice prima sein; fuer enge Teamarbeit oder Ausbildungsaufgaben kann es motivationshemmend wirken\n\n**Fazit:** Aus Sicht der Job Characteristics Theory kann Homeoffice die Motivation steigern (erhoehte Autonomie), aber nur, wenn gleichzeitig Feedback-Mechanismen und soziale Einbindung sichergestellt werden. Eine differenzierte Loesung (z. B. 2-3 Tage Homeoffice, 2-3 Tage Buero) waere sinnvoller als maximale taeglich-wechselnde Flexibilitaet."
+    },
+    {
+      "id": "hrg-ex-2",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "label": "Vorlesung Folien 15-16 — Tutoriumsplan: Uebungsaufgaben V1 und V2",
+      "source": "Vorlesung Personal SoSe 2026, Folien 15-16",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**Tutorium 1 (18.05.–22.05.) behandelt Vorlesungen 1 & 2:** Einfuehrung (Grundlagen HRM) und Strategisches HRM.\n\nBereiten Sie sich auf folgende Diskussionsfragen vor, die typischerweise im Tutorium besprochen werden:\n\n**(a)** Was ist der Kern der HRM-Definition nach Noe et al. (2010) — erklaeren Sie in eigenen Worten.\n\n**(b)** Ein mittelstaendisches Unternehmen hat bislang nur eine klassische Lohnbuchhaltung und eine Sekretaerin, die Vertraege tippt. Welche Ulrich-Rollen fehlen? Was wuerde modernes HRM zusaetzlich umfassen?\n\n**(c)** Lesen Sie den Artikel *'Diversity-Umschwung in den USA: Wie sieht es hierzulande aus?'* (Pflichtlektuere V2). Inwiefern illustriert der Artikel die Bedeutung von HRM als gesellschaftlich eingebettete Funktion?",
+      "hint": "Zu (b): Pruefen Sie alle vier Ulrich-Rollen. Zu (c): Denken Sie an die drei gesellschaftlichen Treiber aus der Vorlesung.",
+      "solution": "**Zu (a) — HRM-Definition:**\nHRM umfasst alle Massnahmen (Politiken, Praktiken, Systeme), die darauf abzielen, das Verhalten, die Einstellungen und die Leistung der Mitarbeitenden positiv zu beeinflussen. Es geht also nicht nur um Verwaltung, sondern um gezielte Gestaltung des Mitarbeiter-Inputs fuer den Unternehmenserfolg.\n\n**Zu (b) — Fehlende Ulrich-Rollen:**\nDas beschriebene Unternehmen hat ansatzweise die **Verwaltungsexpertenfunktion** (Lohnbuchhaltung, Vertragsverwaltung). Es fehlen:\n- **Strategische Partnerschaft**: Es gibt keine HR-Beteiligung an strategischen Entscheidungen (z. B. Wachstumsplanung, Qualifikationsanforderungen)\n- **Change Agent**: Es gibt kein Change Management — Veraenderungsprozesse werden nicht professionell begleitet\n- **Employee Champion**: Mitarbeitende haben keine HR-Ansprechperson fuer Beratung, Konflikte, Entwicklung\n\nModernes HRM wuerde ergaenzen: strukturierte Rekrutierung, Leistungsbeurteilung, Weiterbildungsprogramme, Employer Branding, strategische Personalplanung.\n\n**Zu (c) — Gesellschaftlicher Einbettung:**\nDer Diversity-Artikel illustriert, dass HR-Strategien nicht im Vakuum entstehen: Politische Entwicklungen (in den USA: Abkehr von DEI-Programmen unter Trump) wirken auf HR-Entscheidungen. Der Artikel zeigt den Treiber 'Veraenderungen im Arbeitsverhaeltnis' aus Folie 20: Diversitaet und gesellschaftliche Werte beeinflussen, was Unternehmen personalpolitisch tun (koennen oder muessen). HRM muss gesellschaftliche Entwicklungen antizipieren — das ist genau die proaktive, strategische Ausrichtung des modernen HRM."
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "id": "statistische-signifikanztests",
+  "subjectId": "statistik",
+  "title": "Statistische Signifikanztests",
+  "summary": "Hypothesentests sind das wichtigste Werkzeug der schließenden Statistik: Wir überprüfen anhand von Stichprobendaten, ob eine Behauptung über die Grundgesamtheit haltbar ist. Dieses Kapitel erklärt das komplette Testschema von H0/H1 über Fehlerarten und Signifikanzniveau bis zum p-Wert — und zeigt Gauß-, t-, Binomial-, Chi-Quadrat- und Korrelationstests mit vollständig durchgerechneten Beispielen.",
+  "order": 5,
+  "estMinutes": 90,
+  "sections": [
+    {
+      "id": "grundidee",
+      "heading": "Was ist ein statistischer Test? — Die Grundidee",
+      "body": "Stell dir vor, ein Hersteller behauptet, seine Maschine produziert im Durchschnitt Schrauben mit einer Länge von genau 50 mm. Du misst 25 Schrauben und erhältst einen Mittelwert von 49,2 mm. Ist die Maschine jetzt wirklich falsch eingestellt — oder ist das einfach normaler Zufall bei einer kleinen Stichprobe?\n\nEin **statistischer Test** gibt uns eine klare, nachvollziehbare Entscheidungsregel, wann ein Ergebnis **zu weit** vom behaupteten Wert entfernt ist, um es noch als Zufall zu akzeptieren.\n\n**Die Kernidee in drei Sätzen:**\n1. Wir nehmen zunächst an, die Behauptung stimmt (das heißt die **Nullhypothese H0** gilt).\n2. Wir berechnen, wie wahrscheinlich unser Stichprobenergebnis wäre, **wenn** H0 wirklich gilt.\n3. Ist diese Wahrscheinlichkeit sehr klein, glauben wir H0 nicht mehr und **verwerfen** sie.\n\nDas ist ähnlich wie in einem Gerichtssaal: Man geht zunächst von Unschuld aus (H0). Erst wenn die Beweise stark genug sind, wird die Unschuldsannahme aufgegeben.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wichtig: Was wird bewiesen?",
+          "body": "Ein Test **beweist** H0 niemals — er kann H0 nur **ablehnen** oder **nicht ablehnen**. \"Nicht ablehnen\" bedeutet: Die Daten sind verträglich mit H0, aber nicht, dass H0 sicher wahr ist."
+        }
+      ]
+    },
+    {
+      "id": "hypothesen-fehler",
+      "heading": "H0 und H1, Fehler 1./2. Art, Signifikanzniveau und p-Wert",
+      "body": "### Nullhypothese H0 und Alternativhypothese H1\n\nJeder Test braucht zwei sich ausschließende Aussagen:\n\n- **H0 (Nullhypothese):** Die \"Status-quo\"-Annahme, die wir zunächst für wahr halten. H0 enthält immer das Gleichheitszeichen (≥, ≤ oder =).\n- **H1 (Alternativhypothese, Gegenhypothese):** Was wir eigentlich nachweisen wollen. H1 widerspricht H0.\n\n**Beispiele für Hypothesenpaare:**\n\n| Testtyp | H0 | H1 | Ablehnbereich |\n|---|---|---|---|\n| Rechtsseitig | $\\mu \\le \\mu_0$ | $\\mu > \\mu_0$ | rechte Seite |\n| Linksseitig | $\\mu \\ge \\mu_0$ | $\\mu < \\mu_0$ | linke Seite |\n| Zweiseitig | $\\mu = \\mu_0$ | $\\mu \\ne \\mu_0$ | beide Seiten |\n\n### Die zwei Fehlerarten\n\nBei jeder Entscheidung können wir falsch liegen — auf zwei verschiedene Arten:\n\n**Fehler 1. Art (α-Fehler):** Wir verwerfen H0, obwohl H0 in Wirklichkeit wahr ist. Das ist der schlimmste Fehler, denn wir greifen fälschlicherweise ein.\n$$P(\\text{Fehler 1. Art}) = P(H_0 \\text{ ablehnen} \\mid H_0 \\text{ wahr}) = \\alpha$$\n\n**Fehler 2. Art (β-Fehler):** Wir behalten H0 bei, obwohl H1 in Wirklichkeit gilt. Wir verpassen einen echten Effekt.\n$$P(\\text{Fehler 2. Art}) = P(H_0 \\text{ nicht ablehnen} \\mid H_1 \\text{ wahr}) = \\beta$$\n\nDie folgende Tabelle zeigt alle vier möglichen Situationen:\n\n| | H0 ist wahr | H1 ist wahr |\n|---|---|---|\n| H0 abgelehnt | **Fehler 1. Art** $(\\alpha)$ | Richtige Entscheidung |\n| H0 nicht abgelehnt | Richtige Entscheidung | **Fehler 2. Art** $(\\beta)$ |\n\n**Faustregel:** Man kann α und β nicht gleichzeitig beliebig klein machen — bei festem n vergrößert sich β, wenn man α verkleinert. Der einzige Ausweg ist ein größeres n.\n\n### Signifikanzniveau α\n\nDas **Signifikanzniveau α** ist die vom Forscher vorab festgelegte maximale Wahrscheinlichkeit für einen Fehler 1. Art. Typische Werte: α = 0,05 (5 %) oder α = 0,01 (1 %).\n\nDurch die Wahl von α legen wir fest, wie streng wir beim Verwerfen von H0 sind. Je kleiner α, desto stärker müssen die Daten gegen H0 sprechen, bevor wir sie ablehnen.\n\n### p-Wert — die wichtigste Kennzahl\n\nDer **p-Wert** ist die Wahrscheinlichkeit, ein so extremes oder extremeres Stichprobenergebnis zu beobachten, **wenn H0 wahr wäre**.\n\n$$p\\text{-Wert} = P(\\text{Prüfgröße so extrem wie beobachtet} \\mid H_0 \\text{ wahr})$$\n\n**Entscheidungsregel mit p-Wert:**\n- p-Wert ≤ α → H0 **ablehnen** (Ergebnis ist statistisch signifikant)\n- p-Wert > α → H0 **nicht ablehnen**\n\n**Intuition:** Ein kleiner p-Wert bedeutet: \"Falls H0 stimmt, waere das, was ich gemessen habe, extrem unwahrscheinlich.\" Das ist ein Hinweis darauf, dass H0 vielleicht nicht stimmt.",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-fehler-zweiseitig",
+          "title": "Ablehnbereiche und Fehlerarten (zweiseitiger Test)",
+          "caption": "Die schraffierten Flächen links und rechts (je α/2) sind die Ablehnbereiche. Fällt die Prüfgröße hinein, wird H0 abgelehnt. Die Gesamtfläche der Ablehnbereiche ist genau α.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "tail": "two" },
+          "markers": [
+            { "x": -1.96, "label": "-z_{1-α/2}" },
+            { "x": 1.96, "label": "+z_{1-α/2}" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "warning",
+          "title": "Häufiger Irrtum",
+          "body": "Der p-Wert ist NICHT die Wahrscheinlichkeit, dass H0 wahr ist. Er ist die Wahrscheinlichkeit des beobachteten Ergebnisses unter der Annahme, H0 sei wahr."
+        }
+      ]
+    },
+    {
+      "id": "testschema",
+      "heading": "Das universelle 5-Schritte-Testschema",
+      "body": "Egal welcher Test — dieses Schema funktioniert immer:\n\n**Schritt 1: Hypothesen formulieren**\nFestlegen von H0 und H1. Entscheiden: einseitig (links oder rechts) oder zweiseitig?\n\n**Schritt 2: Signifikanzniveau α wählen**\nMeistens vorgegeben: α = 0,05 oder α = 0,01.\n\n**Schritt 3: Prüfgröße (Teststatistik) berechnen**\nDie Prüfgröße T fasst die Stichprobeninformation in einer einzigen Zahl zusammen und ist so standardisiert, dass wir ihre Verteilung unter H0 kennen.\n\n**Schritt 4: Kritischen Wert / Ablehnbereich bestimmen**\nMithilfe der Verteilungstabelle (Normal-, t-, Chi²-Tabelle) den kritischen Wert ablesen, der dem Signifikanzniveau α entspricht.\n\n**Schritt 5: Entscheidung treffen**\n- Fällt T in den Ablehnbereich → H0 **ablehnen** (Ergebnis signifikant)\n- Fällt T nicht in den Ablehnbereich → H0 **nicht ablehnen**\n\nAlternativ: p-Wert berechnen und mit α vergleichen.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Ablesen aus der Tabelle in der Klausur",
+          "body": "In der Klausur hast du die Verteilungstabellen. Für die **Standardnormalverteilung** gilt: Der kritische Wert $z_{1-\\alpha}$ ist das $(1-\\alpha)$-Quantil. Für α=0,05 einseitig: $z_{0{,}95}=1{,}645$. Für α=0,05 zweiseitig: $z_{0{,}975}=1{,}96$. Für α=0,01 einseitig: $z_{0{,}99}=2{,}326$. Für α=0,01 zweiseitig: $z_{0{,}995}=2{,}576$."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-testuebersicht",
+          "title": "Übersicht: Prüfgrößen und Ablehnbereiche der wichtigsten Tests",
+          "headers": ["Test", "Prüfgröße T", "Verteilung unter H0", "Ablehnbereich (zweiseitig)"],
+          "rows": [
+            ["Gauß-Test (σ bekannt)", "$(\\bar{X}-\\mu_0)\\cdot\\sqrt{n}/\\sigma$", "$N(0,1)$", "$|T|>z_{1-\\alpha/2}$"],
+            ["t-Test (σ unbekannt)", "$(\\bar{X}-\\mu_0)\\cdot\\sqrt{n}/\\hat{\\sigma}$", "$t_{n-1}$", "$|T|>t_{n-1,\\,1-\\alpha/2}$"],
+            ["Anteilstest", "$(\\hat{p}-p_0)\\cdot\\sqrt{n}/\\sqrt{p_0(1-p_0)}$", "$N(0,1)$", "$|T|>z_{1-\\alpha/2}$"],
+            ["Chi²-Anpassungstest", "$\\sum(n_i-\\tilde{n}_i)^2/\\tilde{n}_i$", "$\\chi^2_{K-1}$ bzw. $\\chi^2_{K-m-1}$", "$T>\\chi^2_{K-1,\\,1-\\alpha}$"],
+            ["Chi²-Unabhängigkeitstest", "$\\sum\\sum(n_{jl}-\\tilde{n}_{jl})^2/\\tilde{n}_{jl}$", "$\\chi^2_{(J-1)(L-1)}$", "$T>\\chi^2_{(J-1)(L-1),\\,1-\\alpha}$"],
+            ["Korrelationstest (ρ=0)", "$r\\cdot\\sqrt{n-2}/\\sqrt{1-r^2}$", "$t_{n-2}$", "$|T|>t_{n-2,\\,1-\\alpha/2}$"],
+            ["Fisher-Z-Test (ρ=ρ₀)", "$\\frac{1}{2}[\\ln\\frac{1+r}{1-r}-\\ln\\frac{1+\\rho_0}{1-\\rho_0}]\\cdot\\sqrt{n-3}$", "$N(0,1)$", "$|Z|>z_{1-\\alpha/2}$"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gauss-t-test",
+      "heading": "Gauß-Test und t-Test: Mittelwert testen",
+      "body": "### Wann welcher Test?\n\n- **Gauß-Test:** Die Varianz σ² ist **bekannt** (oder n ≥ 30, dann approximativ).\n- **t-Test:** Die Varianz σ² ist **unbekannt** und wird durch $\\hat{\\sigma}^2$ geschätzt. Normalverteilung der Grundgesamtheit nötig (oder n ≥ 30).\n\n### Gauß-Test — Prüfgröße und Ablehnbereiche\n\nDie Prüfgröße ist:\n$$Z = \\frac{\\bar{X} - \\mu_0}{\\sigma} \\cdot \\sqrt{n} \\sim N(0,1) \\text{ unter } H_0$$\n\nSie gibt an, wie viele Standardfehler der Stichprobenmittelwert von μ₀ entfernt ist.\n\n**Die drei Ablehnbereiche:**\n\n| Hypothesenpaar | Ablehnbereich B |\n|---|---|\n| $H_0: \\mu \\le \\mu_0$ vs. $H_1: \\mu > \\mu_0$ | $B = (z_{1-\\alpha}, \\infty)$ |\n| $H_0: \\mu \\ge \\mu_0$ vs. $H_1: \\mu < \\mu_0$ | $B = (-\\infty, -z_{1-\\alpha})$ |\n| $H_0: \\mu = \\mu_0$ vs. $H_1: \\mu \\ne \\mu_0$ | $B = (-\\infty, -z_{1-\\alpha/2}) \\cup (z_{1-\\alpha/2}, \\infty)$ |\n\n### t-Test — Prüfgröße\n\nWenn σ unbekannt, ersetzen wir σ durch die Stichprobenstandardabweichung $\\hat{\\sigma} = \\sqrt{\\frac{1}{n-1}\\sum_{i=1}^n (X_i - \\bar{X})^2}$:\n\n$$T = \\frac{\\bar{X} - \\mu_0}{\\hat{\\sigma}} \\cdot \\sqrt{n} \\sim t_{n-1} \\text{ unter } H_0$$\n\nDie t-Verteilung hat breitere Ränder als die Normalverteilung — das spiegelt die zusätzliche Unsicherheit durch die Schätzung von σ wider. Bei n ≥ 30 ist der Unterschied vernachlässigbar.\n\n### Durchgerechnetes Beispiel: Gauß-Test (linksseitig)\n\n**Situation:** Normalverteilte Grundgesamtheit, σ² = 16, n = 49, α = 0,01. Teste: H0: μ ≥ 10 vs. H1: μ < 10.\n\n**Schritt 1:** H0: μ ≥ 10, H1: μ < 10 → linksseitiger Test.\n\n**Schritt 2:** α = 0,01.\n\n**Schritt 3:** Prüfgröße: $Z = (\\bar{X} - 10) \\cdot \\sqrt{49} / 4 = (\\bar{X} - 10) \\cdot 7/4$.\n\n**Schritt 4:** Kritischer Wert: $-z_{0{,}99} = -2{,}326$. Ablehnbereich: $B = (-\\infty,\\, -2{,}326)$.\n\n**Schritt 5:** Gesucht ist der kritische Wert für $\\bar{x}$:\n$$Z < -2{,}326 \\Rightarrow (\\bar{x}-10)\\cdot\\frac{7}{4} < -2{,}326 \\Rightarrow \\bar{x} < 10 - 2{,}326\\cdot\\frac{4}{7} = 10 - 1{,}329 = 8{,}671$$\nH0 wird also abgelehnt, wenn $\\bar{x} < 8{,}671$.",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-links-test",
+          "title": "Linksseitiger Gauß-Test (α = 0,01)",
+          "caption": "Der Ablehnbereich liegt links von -z_{0,99} = -2,326. Fällt die Prüfgröße Z in die schraffierte Fläche (α = 1%), wird H0 abgelehnt.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "tail": "left" },
+          "markers": [
+            { "x": -2.326, "label": "-2,326" }
+          ]
+        },
+        {
+          "kind": "distribution",
+          "id": "fig-rechts-test",
+          "title": "Rechtsseitiger Gauß-Test (α = 0,05)",
+          "caption": "Der Ablehnbereich liegt rechts von z_{0,95} = 1,645. Prüfgröße Z > 1,645 → H0 ablehnen.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "tail": "right" },
+          "markers": [
+            { "x": 1.645, "label": "1,645" }
+          ]
+        },
+        {
+          "kind": "distribution",
+          "id": "fig-t-verteilung",
+          "title": "t-Verteilung vs. Standardnormalverteilung",
+          "caption": "Die t-Verteilung (df = 5, rote Kurve) hat breitere Ränder als N(0,1). Mit wachsendem n nähert sie sich der Normalverteilung an — ab n ≈ 30 ist der Unterschied klein.",
+          "dist": "t",
+          "params": { "df": 5 },
+          "shade": { "tail": "two" },
+          "markers": [
+            { "x": -2.571, "label": "-t_{5;0,975}" },
+            { "x": 2.571, "label": "+t_{5;0,975}" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Durchgerechnetes Beispiel: t-Test (zweiseitig)",
+          "body": "**Metallplättchen:** n=21, $\\bar{x}=4{,}052$ mm, $\\hat{\\sigma}^2=0{,}12^2=0{,}0144$, μ₀=4 mm, α=0,05.\n\n**H0:** μ=4 vs. **H1:** μ≠4 (zweiseitig).\n\n**Prüfgröße:**\n$$T = \\frac{4{,}052 - 4}{0{,}12}\\cdot\\sqrt{21} = \\frac{0{,}052}{0{,}12}\\cdot 4{,}583 = 0{,}4333 \\cdot 4{,}583 = 1{,}986$$\n\n**Kritischer Wert:** $t_{20;\\,0{,}975} = 2{,}086$ (aus t-Tabelle, df=20).\n\n**Entscheidung:** $|T| = 1{,}986 < 2{,}086$ → H0 **nicht ablehnen**. Die Daten geben keinen signifikanten Hinweis, dass die Solldicke nicht eingehalten wird.\n\n**Bei n=200:** $T = 0{,}052 \\cdot \\sqrt{200}/0{,}12 = 0{,}052 \\cdot 14{,}142/0{,}12 = 6{,}13$. Da n≥30: kritischer Wert $z_{0{,}975}=1{,}96$. $|T|=6{,}13>1{,}96$ → H0 **ablehnen**. Mehr Daten decken denselben Effekt als signifikant auf."
+        }
+      ]
+    },
+    {
+      "id": "binomial-anteilstest",
+      "heading": "Binomial- und Anteilstest",
+      "body": "### Worum geht es?\n\nManchmal interessiert uns nicht ein Mittelwert, sondern ein **Anteil** in der Bevölkerung. Beispiel: Wie groß ist der Anteil p der Kunden, die ein Produkt weiterempfehlen?\n\nDer Anteilstest testet:\n$$H_0: p = p_0 \\quad\\text{vs.}\\quad H_1: p \\ne p_0 \\quad (\\text{oder einseitig})$$\n\n### Prüfgröße\n\nFür große n (Faustregel: n ≥ 30, np₀ ≥ 10, n(1−p₀) ≥ 10) gilt nach dem zentralen Grenzwertsatz:\n$$T = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}} \\cdot \\sqrt{n} \\stackrel{a}{\\sim} N(0,1) \\text{ unter } H_0$$\n\nHierbei ist $\\hat{p} = X/n$ der beobachtete Stichprobenanteil (X = Anzahl der Erfolge). **Wichtig:** Im Nenner steht p₀ (der Hypothesenwert), nicht $\\hat{p}$!\n\n### Durchgerechnetes Beispiel: Hannover-Messe\n\n**Situation:** Von 100 befragten Unternehmen sind 45 zufrieden. Teste, ob mindestens die Hälfte aller Unternehmen zufrieden ist (α = 0,05).\n\n**Schritt 1:** H0: p ≥ 0,5 (mindestens die Hälfte zufrieden), H1: p < 0,5 → **linksseitiger Test**.\n\n**Schritt 2:** α = 0,05.\n\n**Schritt 3:** $\\hat{p} = 45/100 = 0{,}45$.\n$$T = \\frac{0{,}45 - 0{,}5}{\\sqrt{0{,}5 \\cdot 0{,}5}} \\cdot \\sqrt{100} = \\frac{-0{,}05}{0{,}5} \\cdot 10 = -1{,}0$$\n\n**Schritt 4:** Kritischer Wert: $-z_{0{,}95} = -1{,}645$. Ablehnbereich: $B = (-\\infty,\\,-1{,}645)$.\n\n**Schritt 5:** $T = -1{,}0 > -1{,}645$ → T liegt **nicht** im Ablehnbereich → H0 **nicht ablehnen**.\n\n**Interpretation:** Obwohl nur 45 % zufrieden sind, ist dieser Unterschied zu 50 % bei n=100 statistisch nicht signifikant. Die Hypothese, dass mindestens die Hälfte zufrieden ist, muss nicht verworfen werden.",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-anteilstest",
+          "title": "Anteilstest (linksseitig, α = 0,05)",
+          "caption": "Ablehnbereich links von -1,645. Die berechnete Prüfgröße T = -1,0 liegt außerhalb des Ablehnbereichs → H0 nicht ablehnen.",
+          "dist": "normal",
+          "params": { "mu": 0, "sigma": 1 },
+          "shade": { "tail": "left" },
+          "markers": [
+            { "x": -1.645, "label": "-1,645" },
+            { "x": -1.0, "label": "T = -1,0" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chi2-test",
+      "heading": "Chi-Quadrat-Anpassungstest",
+      "body": "### Was testet der Chi-Quadrat-Anpassungstest?\n\nBisher haben wir Parameter (μ oder p) getestet. Der **Chi-Quadrat-Anpassungstest** (kurz: χ²-Test) testet etwas viel Grundlegenderes: Folgt meine Zufallsvariable X überhaupt einer bestimmten Verteilung F₀?\n\n$$H_0: X \\sim F_0 \\quad\\text{vs.}\\quad H_1: X \\nsim F_0$$\n\n### Idee: Beobachtete vs. erwartete Häufigkeiten\n\nWir teilen die Daten in K Klassen ein. Dann vergleichen wir:\n- $n_i$: **beobachtete** Häufigkeit in Klasse i\n- $\\tilde{n}_i = n \\cdot p_i$: **erwartete** Häufigkeit unter H0 (mit $p_i$ = Wahrscheinlichkeit der Klasse laut F₀)\n\nIst der Unterschied zwischen $n_i$ und $\\tilde{n}_i$ groß, passt F₀ schlecht → H0 ablehnen.\n\n### Prüfgröße\n\n$$T = \\sum_{i=1}^{K} \\frac{(n_i - \\tilde{n}_i)^2}{\\tilde{n}_i} \\stackrel{H_0}{\\sim} \\chi^2_{\\nu}$$\n\nDie Freiheitsgrade hängen davon ab, ob wir Parameter aus den Daten schätzen müssen:\n$$\\nu = K - 1 - m$$\nwobei m = Anzahl der geschätzten Parameter. Werden keine Parameter geschätzt: $\\nu = K-1$.\n\n**Ablehnregel:** $T > \\chi^2_{\\nu,\\,1-\\alpha}$ → H0 ablehnen (nur rechtsseitig!)\n\n**Voraussetzung:** Alle erwarteten Häufigkeiten $\\tilde{n}_i \\ge 5$. Ggf. Klassen zusammenfassen!\n\n### Durchgerechnetes Beispiel: Dreiecksverteilung\n\n**Daten:** n=100 Beobachtungen in 4 Klassen.\n\n| Klasse | $n_i$ (beobachtet) |\n|---|---|\n| [0;1) | 11 |\n| [1;2) | 41 |\n| [2;3) | 35 |\n| [3;4) | 13 |\n\n**H0:** X dreiecksverteilt mit $f(x) = 0{,}25x$ für $0 \\le x \\le 2$ und $f(x) = 1 - 0{,}25x$ für $2 \\le x \\le 4$.\n\n**Schritt 1 — Klassenwahrscheinlichkeiten berechnen:**\n$$p_1 = \\int_0^1 0{,}25x\\,dx = 0{,}25 \\cdot \\left[\\frac{x^2}{2}\\right]_0^1 = 0{,}125$$\n$$p_2 = \\int_1^2 0{,}25x\\,dx = 0{,}25 \\cdot \\left[\\frac{x^2}{2}\\right]_1^2 = 0{,}25 \\cdot (2 - 0{,}5) = 0{,}375$$\n$$p_3 = \\int_2^3 (1-0{,}25x)\\,dx = \\left[x - 0{,}125x^2\\right]_2^3 = (3-1{,}125)-(2-0{,}5) = 0{,}375$$\n$$p_4 = \\int_3^4 (1-0{,}25x)\\,dx = \\left[x - 0{,}125x^2\\right]_3^4 = (4-2)-(3-1{,}125) = 0{,}125$$\n\n**Schritt 2 — Erwartete Häufigkeiten:**\n$\\tilde{n}_1 = 100 \\cdot 0{,}125 = 12{,}5$; $\\tilde{n}_2 = 37{,}5$; $\\tilde{n}_3 = 37{,}5$; $\\tilde{n}_4 = 12{,}5$. Alle ≥ 5 ✓\n\n**Schritt 3 — Prüfgröße:**\n$$T = \\frac{(11-12{,}5)^2}{12{,}5} + \\frac{(41-37{,}5)^2}{37{,}5} + \\frac{(35-37{,}5)^2}{37{,}5} + \\frac{(13-12{,}5)^2}{12{,}5}$$\n$$= \\frac{2{,}25}{12{,}5} + \\frac{12{,}25}{37{,}5} + \\frac{6{,}25}{37{,}5} + \\frac{0{,}25}{12{,}5} = 0{,}18 + 0{,}327 + 0{,}167 + 0{,}02 = 0{,}693$$\n\n**Schritt 4:** ν = K−1 = 3 (kein Parameter geschätzt). $\\chi^2_{3;\\,0{,}95} = 7{,}815$ (aus Tabelle).\n\n**Schritt 5:** $T = 0{,}693 < 7{,}815$ → H0 **nicht ablehnen**. Die Dreiecksverteilung passt gut zu den Daten.",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-chi2-test",
+          "title": "Chi-Quadrat-Verteilung (df = 3, α = 0,05)",
+          "caption": "Der Ablehnbereich liegt rechts von χ²_{3; 0,95} = 7,815. Der berechnete Testwert T = 0,693 liegt weit links davon — H0 wird nicht abgelehnt.",
+          "dist": "chi2",
+          "params": { "df": 3 },
+          "shade": { "tail": "right" },
+          "markers": [
+            { "x": 7.815, "label": "7,815" },
+            { "x": 0.693, "label": "T = 0,693" }
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "fig-chi2-berechnung",
+          "title": "Chi-Quadrat-Berechnung: beobachtete vs. erwartete Häufigkeiten",
+          "headers": ["Klasse", "n_i (beob.)", "ñ_i (erw.)", "(n_i − ñ_i)²/ñ_i"],
+          "rows": [
+            ["[0; 1)", "11", "12,5", "0,180"],
+            ["[1; 2)", "41", "37,5", "0,327"],
+            ["[2; 3)", "35", "37,5", "0,167"],
+            ["[3; 4)", "13", "12,5", "0,020"],
+            ["Summe", "100", "100", "**T = 0,693**"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zweidimensionale-tests",
+      "heading": "Tests bei zweidimensionalen Verteilungen: Korrelation und Unabhängigkeit",
+      "body": "### Korrelationskoeffizient — Erinnerung\n\nDer empirische Korrelationskoeffizient r misst den linearen Zusammenhang zwischen zwei Variablen:\n$$r_{XY} = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum_{i=1}^n (x_i-\\bar{x})^2 \\cdot \\sum_{i=1}^n (y_i-\\bar{y})^2}}$$\n\n$r$ liegt immer zwischen −1 und +1. Aber: Selbst wenn ρ = 0 (kein Zusammenhang in der Grundgesamtheit), wird r in der Stichprobe fast nie genau 0 sein.\n\n### Test auf ρ = 0 (t-Test für Korrelation)\n\nH0: ρ = 0 (kein linearer Zusammenhang) vs. H1: ρ ≠ 0 (zweiseitig).\n\nVoraussetzung: (X, Y) bivariate Normalverteilung.\n$$T = \\frac{r}{\\sqrt{1-r^2}} \\cdot \\sqrt{n-2} \\sim t_{n-2} \\text{ unter } H_0$$\n\nAblehne H0, wenn $|T| > t_{n-2;\\,1-\\alpha/2}$.\n\n### Test auf allgemeines ρ₀ ≠ 0 (Fisher-Z-Transformation)\n\nFür H0: ρ = ρ₀ mit ρ₀ ≠ 0 verwendet man die **Fisher-Z-Transformation**, da r keine Normalverteilung hat:\n$$Z = \\frac{1}{2}\\left[\\ln\\frac{1+r}{1-r} - \\ln\\frac{1+\\rho_0}{1-\\rho_0}\\right]\\cdot\\sqrt{n-3} \\stackrel{a}{\\sim} N(0,1)$$\n\nAblehne H0, wenn $|Z| > z_{1-\\alpha/2}$.\n\n### Chi-Quadrat-Unabhängigkeitstest (Kontingenztafel)\n\nDieser Test prüft, ob zwei **kategoriale** Merkmale X (L Kategorien) und Y (J Kategorien) **stochastisch unabhängig** sind:\n$$H_0: X \\text{ und } Y \\text{ sind stoch. unabhängig} \\quad\\text{vs.}\\quad H_1: X \\text{ und } Y \\text{ sind abhängig}$$\n\nDie **erwarteten Häufigkeiten** unter H0 (wenn X und Y unabhängig sind) berechnen sich als:\n$$\\tilde{n}_{jl} = \\frac{n_{j\\cdot} \\cdot n_{\\cdot l}}{n}$$\n(Zeilensumme mal Spaltensumme geteilt durch Gesamtanzahl)\n\n**Prüfgröße:**\n$$T = \\sum_{j=1}^{J} \\sum_{l=1}^{L} \\frac{(n_{jl} - \\tilde{n}_{jl})^2}{\\tilde{n}_{jl}} \\sim \\chi^2_{(J-1)(L-1)} \\text{ unter } H_0$$\n\nAblehne H0, wenn $T > \\chi^2_{(J-1)(L-1);\\,1-\\alpha}$.\n\n### Durchgerechnetes Beispiel: Kaufintensität nach Region\n\n**Daten:** 1.000 Personen, 3 Regionen (A, B, C) × 3 Kategorien (0-1; 2-3; ≥4).\n\n**Beobachtete Häufigkeiten $n_{jl}$:**\n\n| | 0-1 | 2-3 | ≥4 | Zeilensumme |\n|---|---|---|---|---|\n| A | 200 | 140 | 60 | **400** |\n| B | 60 | 80 | 60 | **200** |\n| C | 140 | 180 | 80 | **400** |\n| **Spaltensumme** | **400** | **400** | **200** | **1000** |\n\n**Erwartete Häufigkeiten $\\tilde{n}_{jl} = n_{j\\cdot} \\cdot n_{\\cdot l} / n$:**\n\n| | 0-1 | 2-3 | ≥4 |\n|---|---|---|---|\n| A | 400·400/1000 = **160** | 400·400/1000 = **160** | 400·200/1000 = **80** |\n| B | 200·400/1000 = **80** | 200·400/1000 = **80** | 200·200/1000 = **40** |\n| C | 400·400/1000 = **160** | 400·400/1000 = **160** | 400·200/1000 = **80** |\n\n**Prüfgröße:**\n$$T = \\frac{(200-160)^2}{160} + \\frac{(140-160)^2}{160} + \\frac{(60-80)^2}{80} + \\frac{(60-80)^2}{80} + \\frac{(80-80)^2}{80} + \\frac{(60-40)^2}{40} + \\frac{(140-160)^2}{160} + \\frac{(180-160)^2}{160} + \\frac{(80-80)^2}{80}$$\n$$= 10 + 2{,}5 + 5 + 5 + 0 + 10 + 2{,}5 + 2{,}5 + 0 = 37{,}5$$\n\n**Freiheitsgrade:** ν = (3−1)(3−1) = 4. **Kritischer Wert:** $\\chi^2_{4;\\,0{,}95} = 9{,}488$.\n\n**Entscheidung:** $T = 37{,}5 > 9{,}488$ → H0 **ablehnen**. Die Kaufintensität ist **nicht** unabhängig von der Region.",
+      "figures": [
+        {
+          "kind": "distribution",
+          "id": "fig-chi2-unabhaengigkeit",
+          "title": "Chi-Quadrat-Unabhängigkeitstest (df = 4, α = 0,05)",
+          "caption": "Kritischer Wert χ²_{4; 0,95} = 9,488. Die Prüfgröße T = 37,5 liegt weit rechts im Ablehnbereich — starke Abhängigkeit zwischen Region und Kaufintensität.",
+          "dist": "chi2",
+          "params": { "df": 4 },
+          "shade": { "tail": "right" },
+          "markers": [
+            { "x": 9.488, "label": "9,488" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Stochastische Unabhängigkeit vs. Unkorreliertheit",
+          "body": "Lehnen wir H0: ρ=0 nicht ab, bedeutet das nur: kein **linearer** Zusammenhang. Stochastische Unabhängigkeit ist stärker (sie schließt alle Zusammenhänge aus). Unabhängigkeit impliziert Unkorreliertheit, aber nicht umgekehrt."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "sig-fc-1",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was ist der Unterschied zwischen Fehler 1. Art und Fehler 2. Art?",
+      "back": "**Fehler 1. Art (α):** H0 wird abgelehnt, obwohl sie wahr ist. **Fehler 2. Art (β):** H0 wird nicht abgelehnt, obwohl H1 wahr ist. Das Signifikanzniveau α kontrolliert den Fehler 1. Art."
+    },
+    {
+      "id": "sig-fc-2",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wann verwendet man den Gauß-Test, wann den t-Test?",
+      "back": "**Gauß-Test:** Varianz σ² ist bekannt (oder n ≥ 30 → Approximation). Prüfgröße ~ N(0,1). **t-Test:** Varianz σ² unbekannt, wird durch $\\hat{\\sigma}^2$ geschätzt. Prüfgröße ~ t_{n-1}. Normalverteilung der GG erforderlich (oder n ≥ 30)."
+    },
+    {
+      "id": "sig-fc-3",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wie lautet die Prüfgröße des Anteilstests?",
+      "back": "$$T = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}} \\cdot \\sqrt{n} \\stackrel{a}{\\sim} N(0,1)$$\nIm Nenner steht $p_0$ (Hypothesenwert), nicht $\\hat{p}$! Voraussetzung: n ≥ 30, np₀ ≥ 10, n(1−p₀) ≥ 10."
+    },
+    {
+      "id": "sig-fc-4",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wie werden die Freiheitsgrade beim Chi-Quadrat-Anpassungstest bestimmt?",
+      "back": "$\\nu = K - 1 - m$, wobei K = Anzahl der Klassen und m = Anzahl der aus den Daten geschätzten Parameter. Werden keine Parameter geschätzt: ν = K−1."
+    },
+    {
+      "id": "sig-fc-5",
+      "topicId": "statistische-signifikanztests",
+      "front": "Warum verwendet man beim Test auf ρ = ρ₀ ≠ 0 die Fisher-Z-Transformation?",
+      "back": "Der Stichprobenkorrelationskoeffizient r ist für ρ ≠ 0 nicht normalverteilt. Die Fisher-Z-Transformation $\\frac{1}{2}\\ln\\frac{1+r}{1-r}$ ist es jedoch (approximativ), was die Verwendung der Standardnormalverteilung ermöglicht."
+    },
+    {
+      "id": "sig-fc-6",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was bedeutet ein p-Wert von 0,02 bei Signifikanzniveau α = 0,05?",
+      "back": "Da p-Wert = 0,02 < α = 0,05: H0 **ablehnen**. Das Ergebnis ist statistisch signifikant. Der p-Wert gibt an, wie wahrscheinlich das beobachtete (oder extremere) Ergebnis wäre, wenn H0 wahr wäre."
+    },
+    {
+      "id": "sig-fc-7",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wie berechnet man die erwarteten Häufigkeiten im Chi-Quadrat-Unabhängigkeitstest?",
+      "back": "$$\\tilde{n}_{jl} = \\frac{n_{j\\cdot} \\cdot n_{\\cdot l}}{n}$$\nAlso: Zeilensumme mal Spaltensumme geteilt durch Gesamtstichprobengröße n. Dies gilt unter der Annahme stochastischer Unabhängigkeit."
+    },
+    {
+      "id": "sig-fc-8",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wie lautet die Prüfgröße für den Korrelationstest (H0: ρ = 0)?",
+      "back": "$$T = \\frac{r}{\\sqrt{1-r^2}} \\cdot \\sqrt{n-2} \\sim t_{n-2} \\text{ unter } H_0$$\nAblehne H0: ρ=0, wenn $|T| > t_{n-2;\\,1-\\alpha/2}$."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "sig-q1",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Aussagen beschreibt den Fehler 1. Art korrekt?",
+      "options": [
+        "H0 wird nicht abgelehnt, obwohl H1 wahr ist.",
+        "H0 wird abgelehnt, obwohl H0 wahr ist.",
+        "H1 wird bewiesen, obwohl H0 gilt.",
+        "Der Test hat keine Aussagekraft."
+      ],
+      "correct": [1],
+      "explanation": "Der Fehler 1. Art (α-Fehler) tritt auf, wenn H0 abgelehnt wird, obwohl sie in Wirklichkeit wahr ist. Das ist genau Option (2). Das Signifikanzniveau α ist die maximal zulässige Wahrscheinlichkeit für diesen Fehler."
+    },
+    {
+      "kind": "truefalse",
+      "id": "sig-q2",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "leicht",
+      "prompt": "Die Nullhypothese H0 schließt auch bei einseitigen Tests die Gleichheit mit ein (z.B. H0: μ ≥ μ₀).",
+      "answer": true,
+      "explanation": "Richtig. Bei einem linksseitigen Test lautet H0: μ ≥ μ₀ (also auch μ = μ₀ eingeschlossen) und H1: μ < μ₀. Ebenso bei rechtsseitigem Test: H0: μ ≤ μ₀. Das Gleichheitszeichen ist immer in H0."
+    },
+    {
+      "kind": "truefalse",
+      "id": "sig-q3",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "leicht",
+      "prompt": "Wird die Nullhypothese verworfen, ist die Alternativhypothese H1 mit 100 % Sicherheit wahr.",
+      "answer": false,
+      "explanation": "Falsch. Auch wenn wir H0 ablehnen, können wir einen Fehler 1. Art begangen haben — wir haben H0 abgelehnt, obwohl sie wahr war. Die Irrtumswahrscheinlichkeit dafür ist genau α. H1 ist niemals 100 % sicher."
+    },
+    {
+      "kind": "numeric",
+      "id": "sig-q4",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Normalverteilte GG, σ² = 16, n = 49. Teste H0: μ = 10 vs. H1: μ ≠ 10 (α = 0,01). Ab welchem Wert von |$\\bar{x}$ − 10| wird H0 abgelehnt? (Kritischen Wert für |$\\bar{x}$ − 10| angeben, gerundet auf 3 Dezimalstellen.)",
+      "answer": 1.472,
+      "tolerance": 0.002,
+      "unit": "mm",
+      "explanation": "Prüfgröße: Z = (x̄ − 10)·√49/4 = (x̄ − 10)·7/4. Kritischer Wert: z_{0,995} = 2,576. Ablehnbedingung: |Z| > 2,576, also |x̄ − 10| > 2,576·4/7 = 10,304/7 = 1,472."
+    },
+    {
+      "kind": "numeric",
+      "id": "sig-q5",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Beim linksseitigen Gauß-Test mit σ² = 16, n = 49, α = 0,01 (H0: μ ≥ 10): Unterhalb welches Stichprobenmittelwerts $\\bar{x}$ wird H0 abgelehnt? (Auf 3 Dezimalstellen runden.)",
+      "answer": 8.671,
+      "tolerance": 0.002,
+      "explanation": "Kritischer Wert: −z_{0,99} = −2,326. Ablehnbedingung: (x̄−10)·7/4 < −2,326, also x̄ < 10 − 2,326·4/7 = 10 − 1,329 = 8,671."
+    },
+    {
+      "kind": "mc",
+      "id": "sig-q6",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Beim Chi-Quadrat-Anpassungstest mit K = 5 Klassen, wobei 2 Parameter aus den Daten geschätzt werden: Wie viele Freiheitsgrade hat die Prüfgröße?",
+      "options": ["5", "4", "3", "2"],
+      "correct": [3],
+      "explanation": "ν = K − 1 − m = 5 − 1 − 2 = 2. K ist die Anzahl der Klassen, m die Anzahl der geschätzten Parameter. Jeder geschätzte Parameter kostet einen Freiheitsgrad."
+    },
+    {
+      "kind": "truefalse",
+      "id": "sig-q7",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Der kritische Wert eines Tests ist unabhängig vom Signifikanzniveau α.",
+      "answer": false,
+      "explanation": "Falsch. Der kritische Wert ist das Quantil der Verteilung der Prüfgröße zum Niveau α. Ein kleineres α führt zu einem betraglich größeren kritischen Wert (strengerer Test), ein größeres α zu einem kleineren kritischen Wert (weniger streng)."
+    },
+    {
+      "kind": "numeric",
+      "id": "sig-q8",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "schwer",
+      "prompt": "Anteilstest: Von n = 100 Befragten sind 45 zufrieden. Prüfgröße T für H0: p ≥ 0,5? (Auf 1 Dezimalstelle gerundet.)",
+      "answer": -1.0,
+      "tolerance": 0.05,
+      "explanation": "T = (0,45 − 0,5)/√(0,5·0,5)·√100 = (−0,05/0,5)·10 = −0,1·10 = −1,0. Kritischer Wert (linksseitig, α=0,05): −1,645. Da T = −1,0 > −1,645: H0 nicht ablehnen."
+    },
+    {
+      "kind": "mc",
+      "id": "sig-q9",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Im Chi-Quadrat-Unabhängigkeitstest mit einer 3×4-Kontingenztafel (3 Zeilen, 4 Spalten): Wie viele Freiheitsgrade hat die Prüfgröße?",
+      "options": ["12", "11", "6", "8"],
+      "correct": [2],
+      "explanation": "ν = (J−1)(L−1) = (3−1)(4−1) = 2·3 = 6."
+    },
+    {
+      "kind": "freetext",
+      "id": "sig-q10",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten: Warum verwendet man beim Anteilstest im Nenner der Prüfgröße den Hypothesenwert p₀ und nicht den geschätzten Wert p̂?",
+      "sampleAnswer": "Die Prüfgröße soll messen, wie weit p̂ von p₀ entfernt ist, unter der Annahme, dass H0 (d.h. p = p₀) wahr ist. Der Standardfehler von p̂ unter H0 ist √(p₀(1−p₀)/n). Würde man p̂ verwenden, würde man die Verteilung der Prüfgröße mit den Daten verändern, die man gerade testen möchte — das wäre zirkulär und mathematisch falsch.",
+      "keywords": ["h0", "p0", "standardfehler", "unter h0", "wahr"],
+      "explanation": "Unter H0 gilt p = p₀. Die Varianz von p̂ ist unter H0 gleich p₀(1−p₀)/n. Deshalb steht p₀ im Nenner."
+    },
+    {
+      "kind": "numeric",
+      "id": "sig-q11",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "schwer",
+      "prompt": "Chi-Quadrat-Unabhängigkeitstest: Region A hat Zeilensumme 400, Spalte '0 bis 1' hat Spaltensumme 400, n = 1000. Wie groß ist die erwartete Häufigkeit ñ_{A,1}?",
+      "answer": 160,
+      "tolerance": 0.1,
+      "explanation": "ñ_{A,1} = n_{A·}·n_{·1}/n = 400·400/1000 = 160."
+    },
+    {
+      "kind": "mc",
+      "id": "sig-q12",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "schwer",
+      "prompt": "Beim Test auf H0: ρ = 0,9 vs. H1: ρ ≠ 0,9 (n = 50, r = 0,85, α = 0,01) verwendet man:",
+      "options": [
+        "Den t-Test mit Prüfgröße $r\\sqrt{n-2}/\\sqrt{1-r^2}$",
+        "Die Fisher-Z-Transformation, da ρ₀ ≠ 0",
+        "Den Gauß-Test direkt mit r als Prüfgröße",
+        "Den Chi-Quadrat-Test"
+      ],
+      "correct": [1],
+      "explanation": "Für H0: ρ = 0 kann man den t-Test verwenden. Sobald ρ₀ ≠ 0, ist r nicht mehr normalverteilt, und man braucht die Fisher-Z-Transformation: Z = ½[ln((1+r)/(1−r)) − ln((1+ρ₀)/(1−ρ₀))]·√(n−3) ~ N(0,1)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "sig-ex-ub3-1",
+      "topicId": "statistische-signifikanztests",
+      "label": "Übungsblatt 3, Aufgabe 1 — Kritischer Wert für x̄",
+      "source": "Übungsblatt 3 (Einstichprobentests), Prof. Dr. Sibbertsen",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "In einer normalverteilten Grundgesamtheit sei die Varianz σ² = 16. Aufgrund einer Stichprobe von n = 49 sollen bei α = 0,01 folgende Hypothesen geprüft werden:\n\na) H0: μ ≥ 10 vs. H1: μ < 10\n\nb) H0: μ = 10 vs. H1: μ ≠ 10\n\nWelchen Wert darf x̄ jeweils annehmen bzw. muss es mindestens annehmen, damit H0 abgelehnt wird?",
+      "hint": "Prüfgröße: Z = (x̄ − μ₀)·√n/σ ~ N(0,1). Den Ablehnbereich für Z aus der Normalverteilungstabelle ablesen, dann nach x̄ auflösen.",
+      "solution": "**Gegeben:** σ² = 16, σ = 4, n = 49, μ₀ = 10, α = 0,01.\n\n**Prüfgröße (Gauß-Test):**\n$$Z = \\frac{\\bar{x} - 10}{4} \\cdot \\sqrt{49} = \\frac{(\\bar{x} - 10) \\cdot 7}{4}$$\n\n---\n\n**Teil a) H0: μ ≥ 10 vs. H1: μ < 10 — linksseitiger Test**\n\nAblehnbereich: $B = (-\\infty,\\; -z_{1-\\alpha}) = (-\\infty,\\; -z_{0{,}99})$.\n\nAus der Normalverteilungstabelle: $z_{0{,}99} = 2{,}326$.\n\nBedingung für Ablehnen:\n$$Z < -2{,}326 \\quad\\Rightarrow\\quad \\frac{(\\bar{x} - 10) \\cdot 7}{4} < -2{,}326$$\n$$\\bar{x} - 10 < -2{,}326 \\cdot \\frac{4}{7} = -2{,}326 \\cdot 0{,}5714 = -1{,}329$$\n$$\\boxed{\\bar{x} < 8{,}671}$$\n\nH0 wird also abgelehnt, wenn der Stichprobenmittelwert kleiner als **8,671** ist.\n\n---\n\n**Teil b) H0: μ = 10 vs. H1: μ ≠ 10 — zweiseitiger Test**\n\nAblehnbereich: $B = (-\\infty, -z_{1-\\alpha/2}) \\cup (z_{1-\\alpha/2}, \\infty) = (-\\infty, -z_{0{,}995}) \\cup (z_{0{,}995}, \\infty)$.\n\nAus der Normalverteilungstabelle: $z_{0{,}995} = 2{,}576$.\n\nBedingung für Ablehnen:\n$$|Z| > 2{,}576 \\quad\\Rightarrow\\quad \\left|\\frac{(\\bar{x}-10)\\cdot 7}{4}\\right| > 2{,}576$$\n$$|\\bar{x} - 10| > 2{,}576 \\cdot \\frac{4}{7} = 2{,}576 \\cdot 0{,}5714 = 1{,}472$$\n\nDas heißt: $\\bar{x} < 10 - 1{,}472 = 8{,}528$ oder $\\bar{x} > 10 + 1{,}472 = 11{,}472$.\n\n$$\\boxed{\\bar{x} < 8{,}528 \\quad\\text{oder}\\quad \\bar{x} > 11{,}472}$$\n\nH0 wird abgelehnt, wenn x̄ mehr als **1,472** Einheiten von 10 entfernt ist."
+    },
+    {
+      "id": "sig-ex-ub3-2",
+      "topicId": "statistische-signifikanztests",
+      "label": "Übungsblatt 3, Aufgabe 2 — Metallplättchen (t-Test und Gauß-Test)",
+      "source": "Übungsblatt 3 (Einstichprobentests), Prof. Dr. Sibbertsen",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "In einem Werk werden Metallplättchen hergestellt, deren Dicke normalverteilt sei. Die angegebene Dicke beträgt μ = 4 mm. Bei n = 21 erhält man x̄ = 4,052 mm und σ̂² = 0,12².\n\na) aa) Testen Sie, dass der Erwartungswert nicht vom Sollwert abweicht (α = 0,05).\n   ab) Wie verändert sich die Entscheidung bei n = 200, sonst gleich?\n\nb) Führen Sie den Test aus a) durch, wenn die Varianz mit σ² = 0,12² bekannt ist (α = 0,05). Was passiert, wenn die Normalverteilungsannahme ungültig wird?\n\nc) Nehmen Sie Stellung:\n   ca) Wird H0 verworfen, ist H1 100 % richtig.\n   cb) H0 schließt auch bei einseitigen Tests die Gleichheit mit ein.\n   cc) Der kritische Wert ist unabhängig vom Signifikanzniveau.",
+      "hint": "aa) t-Test mit df = n−1 = 20. ab) Bei n = 200 ≥ 30 Approximation durch N(0,1). b) Gauß-Test mit bekannter Varianz.",
+      "solution": "**Gegeben:** μ₀ = 4 mm, n = 21, x̄ = 4,052 mm, σ̂ = 0,12 mm, α = 0,05. H0: μ = 4 vs. H1: μ ≠ 4 (zweiseitig).\n\n---\n\n**Teil aa) t-Test (σ² unbekannt, n = 21)**\n\nPreüfgröße:\n$$T = \\frac{\\bar{x} - \\mu_0}{\\hat{\\sigma}} \\cdot \\sqrt{n} = \\frac{4{,}052 - 4}{0{,}12} \\cdot \\sqrt{21} = \\frac{0{,}052}{0{,}12} \\cdot 4{,}583 = 0{,}4333 \\cdot 4{,}583 = 1{,}986$$\n\nKritischer Wert: $t_{20;\\,0{,}975} = 2{,}086$ (aus t-Tabelle, df = 20).\n\nEntscheidung: $|T| = 1{,}986 < 2{,}086$ → H0 **nicht ablehnen**.\n\nDie Abweichung vom Sollwert ist statistisch nicht signifikant.\n\n---\n\n**Teil ab) n = 200**\n\nDa n ≥ 30: approximativ N(0,1) statt t-Verteilung.\n$$T = \\frac{4{,}052 - 4}{0{,}12} \\cdot \\sqrt{200} = \\frac{0{,}052}{0{,}12} \\cdot 14{,}142 = 0{,}4333 \\cdot 14{,}142 = 6{,}128$$\n\nKritischer Wert: $z_{0{,}975} = 1{,}960$.\n\nEntscheidung: $|T| = 6{,}128 > 1{,}960$ → H0 **ablehnen**.\n\nMit größerem Stichprobenumfang ist derselbe Effekt statistisch signifikant — mehr Daten liefern mehr Trennschärfe.\n\n---\n\n**Teil b) Gauß-Test (σ² = 0,12² bekannt)**\n\nPreüfgröße:\n$$Z = \\frac{4{,}052 - 4}{0{,}12} \\cdot \\sqrt{21} = 1{,}986$$\n\nKritischer Wert: $z_{0{,}975} = 1{,}960$.\n\nEntscheidung: $|Z| = 1{,}986 > 1{,}960$ → H0 **ablehnen** (knapp!).\n\nHier liefert der Gauß-Test eine andere Entscheidung als der t-Test, da der kritische Wert kleiner ist (1,960 < 2,086). Der Gauß-Test ist etwas \"schaerfer\".\n\n**Bei Verletzung der Normalverteilungsannahme (n = 21):** Der t-Test setzt Normalverteilung der Grundgesamtheit voraus. Bei kleinem n und nicht-normalverteilter GG sind die berechneten p-Werte nicht mehr exakt gültig. Bei n ≥ 30 liefert der zentrale Grenzwertsatz eine Approximation, sodass der Gauß-Test trotzdem verwendet werden kann.\n\n---\n\n**Teil c) Aussagen:**\n\n**ca) Falsch.** Wird H0 verworfen, ist die Gegenhypothese H1 nicht 100 % richtig. Es besteht die Möglichkeit eines Fehlers 1. Art (H0 wurde zu Unrecht abgelehnt) mit Wahrscheinlichkeit α.\n\n**cb) Richtig.** Auch bei einseitigen Tests enthält H0 das Gleichheitszeichen: z.B. H0: μ ≥ μ₀ (schließt μ = μ₀ ein) oder H0: μ ≤ μ₀. Das Gleichheitszeichen ist immer in H0.\n\n**cc) Falsch.** Der kritische Wert hängt direkt vom Signifikanzniveau α ab. Kleineres α → betraglich größerer kritischer Wert → strengerer Test. Beispiel: z_{0,975} = 1,96 bei α = 0,05, aber z_{0,995} = 2,576 bei α = 0,01."
+    },
+    {
+      "id": "sig-ex-ub3-3",
+      "topicId": "statistische-signifikanztests",
+      "label": "Übungsblatt 3, Aufgabe 3 — Hannover-Messe Anteilstest",
+      "source": "Übungsblatt 3 (Einstichprobentests), Prof. Dr. Sibbertsen",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Nach Abschluss der Hannover-Messe werden Unternehmen befragt. Um die Hypothese zu untersuchen, ob mindestens die Hälfte aller Unternehmen zufrieden ist, wurde eine Stichprobe von 100 Unternehmen gezogen. Von diesen waren nur 45 zufrieden. Testen Sie, ob die Hypothese abgelehnt werden muss (α = 0,05).",
+      "hint": "H0: p ≥ 0,5 (mindestens die Hälfte zufrieden). Das ist ein linksseitiger Anteilstest. Prüfgröße: T = (p̂ − p₀)/√(p₀(1−p₀))·√n.",
+      "solution": "**Gegeben:** n = 100, X = 45 zufriedene Unternehmen, α = 0,05.\n\n**Schritt 1 — Hypothesen:**\n$$H_0: p \\ge 0{,}5 \\quad\\text{vs.}\\quad H_1: p < 0{,}5 \\quad\\text{(linksseitig)}$$\n\n**Voraussetzungen prüfen:** n = 100 ≥ 30 ✓; np₀ = 100·0,5 = 50 ≥ 10 ✓; n(1−p₀) = 50 ≥ 10 ✓.\n\n**Schritt 2 — Stichprobenanteil:**\n$$\\hat{p} = \\frac{45}{100} = 0{,}45$$\n\n**Schritt 3 — Prüfgröße:**\n$$T = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}} \\cdot \\sqrt{n} = \\frac{0{,}45 - 0{,}5}{\\sqrt{0{,}5 \\cdot 0{,}5}} \\cdot \\sqrt{100} = \\frac{-0{,}05}{0{,}5} \\cdot 10 = -1{,}0$$\n\n**Schritt 4 — Kritischer Wert:**\nLinksseitiger Test: Ablehnbereich $B = (-\\infty,\\; -z_{0{,}95}) = (-\\infty,\\; -1{,}645)$.\n\n**Schritt 5 — Entscheidung:**\n$T = -1{,}0 > -1{,}645$ → T liegt **nicht** im Ablehnbereich → H0 **nicht ablehnen**.\n\n**Interpretation:** Obwohl nur 45 % der Befragten zufrieden sind (und damit weniger als die behauptete Hälfte), ist dieser Unterschied bei n = 100 statistisch nicht signifikant. Die Abweichung könnte durch Zufall entstanden sein. Die Hypothese, dass mindestens die Hälfte aller Unternehmen zufrieden ist, muss nicht verworfen werden."
+    },
+    {
+      "id": "sig-ex-ub3-4",
+      "topicId": "statistische-signifikanztests",
+      "label": "Übungsblatt 3, Aufgabe 4 — Chi-Quadrat-Anpassungstest",
+      "source": "Übungsblatt 3 (Einstichprobentests), Prof. Dr. Sibbertsen",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Aus einer Grundgesamtheit wird eine Stichprobe gezogen. Merkmal X:\n\n| X | [0;1) | [1;2) | [2;3) | [3;4) |\n|---|---|---|---|---|\n| nᵢ | 11 | 41 | 35 | 13 |\n\na) Ist X dreiecksverteilt mit f(x) = 0,25x für 0 ≤ x ≤ 2 und f(x) = 1 − 0,25x für 2 ≤ x ≤ 4? (α = 0,05)\n\nb) Ein anderer Statistiker vermutet f(x) = 6x(a−x)/a³ für 0 ≤ x ≤ a, mit E(X) = 0,5a.\n\n   ba) Zeigen Sie, dass â = 2X̄ eine erwartungstreue Schätzfunktion für a ist.\n\n   bb) Schätzen Sie a und führen Sie den Anpassungstest (α = 0,05) durch.",
+      "hint": "a) Klassenwahrscheinlichkeiten durch Integration der Dichte berechnen. Dann erwartete Häufigkeiten ñᵢ = n·pᵢ. ba) E(â) = E(2X̄) = 2E(X̄) = 2·E(X) = 2·0,5a = a. bb) â aus x̄ schätzen, dann Klassenwahrscheinlichkeiten mit neuem a berechnen; Freiheitsgrade: K−1−m = 4−1−1 = 2.",
+      "solution": "**Gegebene Daten:** n = 100, Klassen: [0;1), [1;2), [2;3), [3;4); nᵢ: 11, 41, 35, 13.\n\n---\n\n**Teil a) Test auf Dreiecksverteilung**\n\nH0: X dreiecksverteilt mit gegebener Dichte.\n\n**Klassenwahrscheinlichkeiten:**\n$$p_1 = \\int_0^1 0{,}25x\\,dx = 0{,}25 \\cdot \\left[\\frac{x^2}{2}\\right]_0^1 = 0{,}25 \\cdot 0{,}5 = 0{,}125$$\n$$p_2 = \\int_1^2 0{,}25x\\,dx = 0{,}25 \\cdot \\left[\\frac{x^2}{2}\\right]_1^2 = 0{,}25 \\cdot (2 - 0{,}5) = 0{,}375$$\n$$p_3 = \\int_2^3 (1 - 0{,}25x)\\,dx = \\left[x - 0{,}125x^2\\right]_2^3 = (3 - 1{,}125) - (2 - 0{,}5) = 1{,}875 - 1{,}5 = 0{,}375$$\n$$p_4 = \\int_3^4 (1 - 0{,}25x)\\,dx = \\left[x - 0{,}125x^2\\right]_3^4 = (4 - 2) - (3 - 1{,}125) = 2 - 1{,}875 = 0{,}125$$\n\n**Erwartete Häufigkeiten:** ñᵢ = 100·pᵢ\n\n| Klasse | nᵢ | pᵢ | ñᵢ | (nᵢ−ñᵢ)²/ñᵢ |\n|---|---|---|---|---|\n| [0;1) | 11 | 0,125 | 12,5 | (−1,5)²/12,5 = 0,180 |\n| [1;2) | 41 | 0,375 | 37,5 | (3,5)²/37,5 = 0,327 |\n| [2;3) | 35 | 0,375 | 37,5 | (−2,5)²/37,5 = 0,167 |\n| [3;4) | 13 | 0,125 | 12,5 | (0,5)²/12,5 = 0,020 |\n| **Σ** | 100 | 1 | 100 | **T = 0,693** |\n\nAlle ñᵢ ≥ 5 ✓. Kein Parameter geschätzt → **ν = K − 1 = 3**.\n\nKritischer Wert: $\\chi^2_{3;\\,0{,}95} = 7{,}815$.\n\nEntscheidung: T = 0,693 < 7,815 → H0 **nicht ablehnen**. Die Daten sind mit der Dreiecksverteilung verträglich.\n\n---\n\n**Teil ba) Erwartungstreue von â = 2X̄**\n\n$$E(\\hat{a}) = E(2\\bar{X}) = 2 \\cdot E(\\bar{X}) = 2 \\cdot E(X) = 2 \\cdot 0{,}5a = a$$\n\nDa $E(\\hat{a}) = a$, ist $\\hat{a} = 2\\bar{X}$ eine **erwartungstreue** Schätzfunktion für a. ✓\n\n---\n\n**Teil bb) Parameter schätzen und Anpassungstest**\n\n**Stichprobenmittelwert** (Klassenmitte als Repräsentant):\n$$\\bar{x} = \\frac{0{,}5 \\cdot 11 + 1{,}5 \\cdot 41 + 2{,}5 \\cdot 35 + 3{,}5 \\cdot 13}{100} = \\frac{5{,}5 + 61{,}5 + 87{,}5 + 45{,}5}{100} = \\frac{200}{100} = 2{,}0$$\n\n**Schätzwert:** $\\hat{a} = 2 \\cdot 2{,}0 = 4{,}0$.\n\nH0: X verteilt gemäß $f(x) = 6x(4-x)/64$ für $0 \\le x \\le 4$.\n\n**Klassenwahrscheinlichkeiten für a = 4:**\n$$p_i = \\int_{k_{i-1}}^{k_i} \\frac{6x(4-x)}{64}\\,dx = \\frac{6}{64} \\int_{k_{i-1}}^{k_i} (4x - x^2)\\,dx = \\frac{6}{64}\\left[2x^2 - \\frac{x^3}{3}\\right]_{k_{i-1}}^{k_i}$$\n\n$$p_1 = \\frac{6}{64}\\left[2x^2 - \\frac{x^3}{3}\\right]_0^1 = \\frac{6}{64}\\left(2 - \\frac{1}{3}\\right) = \\frac{6}{64} \\cdot \\frac{5}{3} = \\frac{30}{192} = 0{,}15625$$\n\n$$p_2 = \\frac{6}{64}\\left[2x^2 - \\frac{x^3}{3}\\right]_1^2 = \\frac{6}{64}\\left[\\left(8 - \\frac{8}{3}\\right) - \\left(2 - \\frac{1}{3}\\right)\\right] = \\frac{6}{64} \\cdot \\frac{11}{3} = \\frac{66}{192} = 0{,}34375$$\n\n$$p_3 = \\frac{6}{64}\\left[2x^2 - \\frac{x^3}{3}\\right]_2^3 = \\frac{6}{64}\\left[\\left(18 - 9\\right) - \\left(8 - \\frac{8}{3}\\right)\\right] = \\frac{6}{64} \\cdot \\frac{11}{3} = 0{,}34375$$\n\n$$p_4 = 1 - p_1 - p_2 - p_3 = 1 - 0{,}15625 - 0{,}34375 - 0{,}34375 = 0{,}15625$$\n\n**Erwartete Häufigkeiten:**\n\n| Klasse | nᵢ | ñᵢ = 100·pᵢ | (nᵢ−ñᵢ)²/ñᵢ |\n|---|---|---|---|\n| [0;1) | 11 | 15,625 | (−4,625)²/15,625 = 21,391/15,625 = 1,369 |\n| [1;2) | 41 | 34,375 | (6,625)²/34,375 = 43,891/34,375 = 1,277 |\n| [2;3) | 35 | 34,375 | (0,625)²/34,375 = 0,391/34,375 = 0,011 |\n| [3;4) | 13 | 15,625 | (−2,625)²/15,625 = 6,891/15,625 = 0,441 |\n| **Σ** | 100 | 100 | **T = 3,098** |\n\n**Freiheitsgrade:** ν = K − 1 − m = 4 − 1 − 1 = **2** (ein Parameter a geschätzt).\n\nKritischer Wert: $\\chi^2_{2;\\,0{,}95} = 5{,}991$.\n\nEntscheidung: T = 3,098 < 5,991 → H0 **nicht ablehnen**. Auch diese Verteilung passt zu den Daten."
+    },
+    {
+      "id": "sig-ex-ub4-1",
+      "topicId": "statistische-signifikanztests",
+      "label": "Übungsblatt 4, Aufgabe 1 — Chi-Quadrat-Unabhängigkeitstest (Kaufintensität)",
+      "source": "Übungsblatt 4 (Tests bei zweidimensionalen Verteilungen), Prof. Dr. Sibbertsen",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Bei einer Umfrage mit 1.000 Personen in Regionen A, B, C wird die Kaufintensität (Packungen/Monat) ermittelt:\n\n| | 0-1 | 2-3 | ≥4 |\n|---|---|---|---|\n| A | 200 | 140 | 60 |\n| B | 60 | 80 | 60 |\n| C | 140 | 180 | 80 |\n\nWird die Kaufintensität durch die Regionen beeinflusst? Testen Sie, ob X und Y stochastisch unabhängig sind (α = 0,05).",
+      "hint": "Rand- und Spaltensummen berechnen. Erwartete Häufigkeiten: ñ_{jl} = n_{j·}·n_{·l}/n. Freiheitsgrade: (J−1)(L−1) = (3−1)(3−1) = 4.",
+      "solution": "**Schritt 1 — Hypothesen:**\n$$H_0: \\text{Kaufintensität und Region sind stochastisch unabhängig}$$\n$$H_1: \\text{Kaufintensität und Region sind abhängig}$$\n\n**Schritt 2 — Randsummen:**\n\n| | 0-1 | 2-3 | ≥4 | Zeilensumme |\n|---|---|---|---|---|\n| A | 200 | 140 | 60 | **400** |\n| B | 60 | 80 | 60 | **200** |\n| C | 140 | 180 | 80 | **400** |\n| **Spaltensumme** | **400** | **400** | **200** | **1000** |\n\n**Schritt 3 — Erwartete Häufigkeiten** $\\tilde{n}_{jl} = n_{j\\cdot} \\cdot n_{\\cdot l} / n$:\n\n| | 0-1 | 2-3 | ≥4 |\n|---|---|---|---|\n| A | 400·400/1000 = **160** | 400·400/1000 = **160** | 400·200/1000 = **80** |\n| B | 200·400/1000 = **80** | 200·400/1000 = **80** | 200·200/1000 = **40** |\n| C | 400·400/1000 = **160** | 400·400/1000 = **160** | 400·200/1000 = **80** |\n\nAlle ñ_{jl} ≥ 5 ✓.\n\n**Schritt 4 — Prüfgröße:**\n$$T = \\frac{(200-160)^2}{160} + \\frac{(140-160)^2}{160} + \\frac{(60-80)^2}{80} + \\frac{(60-80)^2}{80} + \\frac{(80-80)^2}{80} + \\frac{(60-40)^2}{40} + \\frac{(140-160)^2}{160} + \\frac{(180-160)^2}{160} + \\frac{(80-80)^2}{80}$$\n$$= \\frac{1600}{160} + \\frac{400}{160} + \\frac{400}{80} + \\frac{400}{80} + 0 + \\frac{400}{40} + \\frac{400}{160} + \\frac{400}{160} + 0$$\n$$= 10 + 2{,}5 + 5 + 5 + 0 + 10 + 2{,}5 + 2{,}5 + 0 = \\mathbf{37{,}5}$$\n\n**Schritt 5 — Freiheitsgrade und kritischer Wert:**\n$$\\nu = (J-1)(L-1) = (3-1)(3-1) = 4$$\n$$\\chi^2_{4;\\,0{,}95} = 9{,}488 \\quad\\text{(aus Chi-Quadrat-Tabelle)}$$\n\n**Schritt 6 — Entscheidung:**\n$T = 37{,}5 > 9{,}488$ → H0 **ablehnen**.\n\n**Interpretation:** Es gibt einen **hochsignifikanten Zusammenhang** zwischen Region und Kaufintensität. Die Kaufintensität wird durch die Region beeinflusst — Unabhängigkeit kann nicht aufrechterhalten werden. Besonders Region B zeigt abweichendes Verhalten (deutlich mehr Käufer mit hoher Intensität als erwartet)."
+    },
+    {
+      "id": "sig-ex-ub4-2",
+      "topicId": "statistische-signifikanztests",
+      "label": "Übungsblatt 4, Aufgabe 2 — Korrelationstest und Fisher-Z",
+      "source": "Übungsblatt 4 (Tests bei zweidimensionalen Verteilungen), Prof. Dr. Sibbertsen",
+      "type": "uebung",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Ein Marktforschungsinstitut untersucht den Zusammenhang zwischen Umsatz (Mio. €) und Werbeausgaben (100.000 €) bei n = 12 Unternehmen:\n\n| Umsatz xᵢ | 12,0 | 11,0 | 9,0 | 7,0 | 6,5 | 5,0 | 4,5 | 4,0 | 2,0 | 2,0 | 1,5 | 1,5 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Werbeausg. yᵢ | 3,1 | 3,0 | 2,2 | 1,9 | 1,8 | 1,4 | 1,5 | 1,2 | 0,9 | 0,8 | 0,7 | 0,7 |\n\na) Kann bei α = 0,05 die Hypothese aufrechterhalten werden, dass kein linearer Zusammenhang besteht?\n\nb) Was lässt sich aus a) über stochastische Unabhängigkeit sagen?\n\nc) Bei n = 50 Unternehmen ergibt sich r = 0,85. Testen Sie H0: ρ = 0,9 vs. H1: ρ ≠ 0,9 bei α = 0,01.",
+      "hint": "a) Erst r berechnen: x̄ = 5,5, ȳ = 1,6. Dann T = r·√(n−2)/√(1−r²) ~ t_{n-2}. c) Fisher-Z-Transformation verwenden.",
+      "solution": "**Teil a) Korrelationstest H0: ρ = 0**\n\n**Berechnung des Stichprobenkorrelationskoeffizienten r:**\n\n$$\\bar{x} = \\frac{12+11+9+7+6{,}5+5+4{,}5+4+2+2+1{,}5+1{,}5}{12} = \\frac{66}{12} = 5{,}5$$\n$$\\bar{y} = \\frac{3{,}1+3{,}0+2{,}2+1{,}9+1{,}8+1{,}4+1{,}5+1{,}2+0{,}9+0{,}8+0{,}7+0{,}7}{12} = \\frac{19{,}2}{12} = 1{,}6$$\n\nAbweichungen $(x_i - \\bar{x})$ und $(y_i - \\bar{y})$:\n\n| xᵢ | xᵢ−x̄ | yᵢ | yᵢ−ȳ | (xᵢ−x̄)(yᵢ−ȳ) | (xᵢ−x̄)² | (yᵢ−ȳ)² |\n|---|---|---|---|---|---|---|\n| 12,0 | 6,5 | 3,1 | 1,5 | 9,75 | 42,25 | 2,25 |\n| 11,0 | 5,5 | 3,0 | 1,4 | 7,70 | 30,25 | 1,96 |\n| 9,0 | 3,5 | 2,2 | 0,6 | 2,10 | 12,25 | 0,36 |\n| 7,0 | 1,5 | 1,9 | 0,3 | 0,45 | 2,25 | 0,09 |\n| 6,5 | 1,0 | 1,8 | 0,2 | 0,20 | 1,00 | 0,04 |\n| 5,0 | −0,5 | 1,4 | −0,2 | 0,10 | 0,25 | 0,04 |\n| 4,5 | −1,0 | 1,5 | −0,1 | 0,10 | 1,00 | 0,01 |\n| 4,0 | −1,5 | 1,2 | −0,4 | 0,60 | 2,25 | 0,16 |\n| 2,0 | −3,5 | 0,9 | −0,7 | 2,45 | 12,25 | 0,49 |\n| 2,0 | −3,5 | 0,8 | −0,8 | 2,80 | 12,25 | 0,64 |\n| 1,5 | −4,0 | 0,7 | −0,9 | 3,60 | 16,00 | 0,81 |\n| 1,5 | −4,0 | 0,7 | −0,9 | 3,60 | 16,00 | 0,81 |\n| **Σ** | | | | **33,45** | **148,00** | **7,66** |\n\n$$r = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2 \\cdot \\sum(y_i-\\bar{y})^2}} = \\frac{33{,}45}{\\sqrt{148 \\cdot 7{,}66}} = \\frac{33{,}45}{\\sqrt{1133{,}68}} = \\frac{33{,}45}{33{,}671} = 0{,}9934$$\n\n**Prüfgröße** (H0: ρ = 0, zweiseitig):\n$$T = \\frac{r}{\\sqrt{1-r^2}} \\cdot \\sqrt{n-2} = \\frac{0{,}9934}{\\sqrt{1-0{,}9868}} \\cdot \\sqrt{10} = \\frac{0{,}9934}{\\sqrt{0{,}0132}} \\cdot 3{,}162 = \\frac{0{,}9934}{0{,}1149} \\cdot 3{,}162 = 8{,}645 \\cdot 3{,}162 = 27{,}32$$\n\nKritischer Wert: $t_{10;\\,0{,}975} = 2{,}228$ (df = n−2 = 10).\n\nEntscheidung: $|T| = 27{,}32 \\gg 2{,}228$ → H0 **ablehnen**. Es besteht ein hochsignifikanter linearer Zusammenhang zwischen Umsatz und Werbeausgaben.\n\n---\n\n**Teil b) Stochastische Unabhängigkeit**\n\nDa H0: ρ = 0 abgelehnt wird, ist r signifikant von 0 verschieden — es besteht ein **linearer** Zusammenhang. Stochastische Unabhängigkeit impliziert ρ = 0 (Unkorreliertheit). Da ρ ≠ 0, können Umsatz und Werbeausgaben **nicht stochastisch unabhängig** sein. (Hinweis: Unkorreliertheit allein würde Unabhängigkeit nicht beweisen, aber Korreliertheit schließt Unabhängigkeit aus.)\n\n---\n\n**Teil c) Fisher-Z-Test: H0: ρ = 0,9 vs. H1: ρ ≠ 0,9 (n = 50, r = 0,85, α = 0,01)**\n\n**Fisher-Z-Transformation:**\n$$Z = \\frac{1}{2}\\left[\\ln\\frac{1+r}{1-r} - \\ln\\frac{1+\\rho_0}{1-\\rho_0}\\right] \\cdot \\sqrt{n-3}$$\n\nFür r = 0,85:\n$$\\frac{1}{2}\\ln\\frac{1{,}85}{0{,}15} = \\frac{1}{2}\\ln(12{,}333) = \\frac{1}{2} \\cdot 2{,}5123 = 1{,}2562$$\n\nFür ρ₀ = 0,9:\n$$\\frac{1}{2}\\ln\\frac{1{,}9}{0{,}1} = \\frac{1}{2}\\ln(19) = \\frac{1}{2} \\cdot 2{,}9444 = 1{,}4722$$\n\n$$Z = (1{,}2562 - 1{,}4722) \\cdot \\sqrt{50-3} = (-0{,}2160) \\cdot \\sqrt{47} = (-0{,}2160) \\cdot 6{,}856 = -1{,}481$$\n\n**Kritischer Wert** (zweiseitig, α = 0,01): $z_{0{,}995} = 2{,}576$.\n\n**Entscheidung:** $|Z| = 1{,}481 < 2{,}576$ → H0 **nicht ablehnen**.\n\nDie Hypothese ρ = 0,9 kann bei α = 0,01 nicht verworfen werden. Der beobachtete Stichprobenkorrelationskoeffizient r = 0,85 ist nicht signifikant von 0,9 verschieden."
+    },
+    {
+      "id": "sig-ex-klausur-2015",
+      "topicId": "statistische-signifikanztests",
+      "label": "Zusatzaufgabe — Klausur 06.02.2015, Aufg. 5: Behandlungskosten Krankheit A",
+      "source": "Zusatzaufgabe Einstichprobentests (Klausur Statistik II, 06.02.2015, Aufg. 5)",
+      "type": "klausur",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Die Krankenkasse K1 zieht eine Stichprobe für Behandlungskosten der Krankheit A (normalverteilt). Die 10 Stichprobenwerte (in 1.000 Euro): 10, 15, 13, 8, 14, 17, 12, 11, 10, 15.\n\naa) Testen Sie H0: Durchschnittliche Kosten ≥ 15.000 € (α = 0,01).\n\nab) Bei n = 100 ändert sich der Wert der Teststatistik nicht (falls aa nicht gerechnet: T = −2,82). Bei bekannter Varianz σ² = 7,83: Wie hoch sind die durchschnittlichen Behandlungskosten?\n\nac) Ein Gutachter zweifelt die Normalverteilungsannahme an. Der Statistiker behauptet, er könne dann nur noch H0: μ = 15.000 € testen. Stellungnahme.",
+      "hint": "aa) t-Test (n=10, unbekannte Varianz). Erst x̄ und σ̂ aus den Daten berechnen. ab) T = (x̄ − μ₀)·√n/σ nach x̄ auflösen. ac) Zentraler Grenzwertsatz bei n ≥ 30.",
+      "solution": "**Teil aa) t-Test (einseitig links)**\n\n**Stichprobenwerte:** 10, 15, 13, 8, 14, 17, 12, 11, 10, 15 (n = 10).\n\n**Stichprobenmittelwert:**\n$$\\bar{x} = \\frac{10+15+13+8+14+17+12+11+10+15}{10} = \\frac{125}{10} = 12{,}5 \\quad\\text{(in 1.000 €)}$$\n\n**Stichprobenvarianz** (Abweichungen von 12,5):\n$$\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum_{i=1}^n (x_i - \\bar{x})^2$$\n\nAbweichungen: −2,5; +2,5; +0,5; −4,5; +1,5; +4,5; −0,5; −1,5; −2,5; +2,5.\n\nQuadrate: 6,25; 6,25; 0,25; 20,25; 2,25; 20,25; 0,25; 2,25; 6,25; 6,25. Summe = 70,5.\n\n$$\\hat{\\sigma}^2 = \\frac{70{,}5}{9} = 7{,}833, \\quad \\hat{\\sigma} = 2{,}799$$\n\n**Hypothesen:** H0: μ ≥ 15 vs. H1: μ < 15 (linksseitiger t-Test).\n\n**Prüfgröße:**\n$$T = \\frac{\\bar{x} - \\mu_0}{\\hat{\\sigma}} \\cdot \\sqrt{n} = \\frac{12{,}5 - 15}{2{,}799} \\cdot \\sqrt{10} = \\frac{-2{,}5}{2{,}799} \\cdot 3{,}162 = -0{,}8932 \\cdot 3{,}162 = -2{,}824$$\n\n**Kritischer Wert:** $-t_{9;\\,0{,}99} = -2{,}821$ (df = 9, α = 0,01, linksseitig).\n\n**Entscheidung:** $T = -2{,}824 < -2{,}821$ → H0 **ablehnen** (sehr knapp!).\n\nDie durchschnittlichen Behandlungskosten sind signifikant kleiner als 15.000 €.\n\n---\n\n**Teil ab) x̄ bei n = 100, T = −2,82, σ² = 7,83 bekannt**\n\nGauß-Test: $Z = (\\bar{x} - \\mu_0) \\cdot \\sqrt{n} / \\sigma$. Auflösen nach x̄:\n$$-2{,}82 = \\frac{\\bar{x} - 15}{\\sqrt{7{,}83}} \\cdot \\sqrt{100} = \\frac{(\\bar{x} - 15) \\cdot 10}{2{,}798}$$\n$$\\bar{x} - 15 = -2{,}82 \\cdot \\frac{2{,}798}{10} = -2{,}82 \\cdot 0{,}2798 = -0{,}789$$\n$$\\boxed{\\bar{x} = 15 - 0{,}789 = 14{,}211 \\quad\\text{(in 1.000 €, also 14.211 €)}}$$\n\n---\n\n**Teil ac) Stellungnahme zur Normalverteilungsannahme**\n\nDer Statistiker hat **teilweise Recht, aber macht einen wichtigen Fehler:**\n\n**Bei n = 10 (aa):** Der t-Test setzt Normalverteilung der Grundgesamtheit voraus. Ist diese verletzt und n klein, ist der Test nicht valide. In diesem Fall müsste man auf **nichtparametrische Tests** ausweichen (z.B. Vorzeichentest, Wilcoxon-Vorzeichen-Rang-Test). Diese erlauben auch einseitige Hypothesen (H0: μ ≥ 15).\n\n**Die Behauptung ist falsch:** Man ist nicht auf H0: μ = 15 beschränkt. Nichtparametrische Tests können alle Hypothesenformen (einseitig und zweiseitig) testen.\n\n**Bei n ≥ 30:** Durch den zentralen Grenzwertsatz ist der Stichprobenmittelwert X̄ approximativ normalverteilt, unabhängig von der Verteilung der Grundgesamtheit. Ab n ≥ 30 kann man den Gauß-Test auch ohne Normalverteilungsannahme näherungsweise anwenden — auch für einseitige Hypothesen."
+    }
+  ]
+}

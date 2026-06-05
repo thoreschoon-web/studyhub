@@ -1,0 +1,438 @@
+{
+  "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+  "subjectId": "privatrecht",
+  "title": "BGB AT: Rechtsgeschäft und Vertragsschluss (Theorieteil 2)",
+  "summary": "Was ist überhaupt ein Rechtsgeschäft? Wie kommt ein Vertrag zustande – und wann scheitert er? Dieses Kapitel erklärt Angebot und Annahme (§§ 145 ff. BGB), die wichtige Unterscheidung von invitatio ad offerendum und echtem Angebot, die Fälle des Dissens sowie Bedingung, Befristung und Fristberechnung – alles laienverständlich und mit konkreten Alltagsbeispielen.",
+  "order": 3,
+  "estMinutes": 75,
+  "sections": [
+    {
+      "id": "rechtsgeschaeft-begriff",
+      "heading": "Was ist ein Rechtsgeschäft? Begriff und Arten",
+      "body": "Stell dir vor, du kaufst im Supermarkt eine Flasche Wasser. Im selben Moment passiert rechtlich eine ganze Menge: Du und der Kassierer schließen einen **Kaufvertrag**, und wenige Sekunden später wird dir das **Eigentum** an der Flasche übertragen. Das sind zwei verschiedene **Rechtsgeschäfte** – obwohl sie im Alltag nahtlos ineinander fließen.\n\n**Definition:** Ein Rechtsgeschäft ist ein Vorgang, der aus einer oder mehreren **Willenserklärungen** besteht und eine **rechtlich gewollte Rechtsfolge** herbeiführt. Der entscheidende Punkt: Jemand will, dass eine bestimmte Rechtsfolge eintritt – und das Recht erkennt diesen Willen an.\n\n## Einseitige vs. mehrseitige Rechtsgeschäfte\n\nEin **einseitiges Rechtsgeschäft** braucht nur die Willenserklärung *einer* Person – die Gegenseite kann nichts dagegen tun. Klassische Beispiele:\n- **Kündigung** eines Mietvertrags\n- **Anfechtung** eines Vertrags\n- **Testament** (§ 2247 BGB)\n- **Rücktritt** von einem Vertrag\n\nDiese nennt man auch **Gestaltungsrechte**, weil sie die Rechtslage einseitig gestalten.\n\nEin **mehrseitiges Rechtsgeschäft** braucht übereinstimmende Willenserklärungen von mindestens zwei Personen. Der wichtigste Fall ist der **Vertrag**: Zwei Personen erklären wechselseitig und deckungsgleich ihren Willen.\n\n## Verpflichtende vs. verfügende Rechtsgeschäfte (Trennungsprinzip)\n\nHier kommt eines der wichtigsten Prinzipien des deutschen Privatrechts: das **Trennungsprinzip**.\n\nWenn du ein Auto kaufst, passieren *rechtlich* zwei völlig getrennte Dinge:\n\n1. **Verpflichtungsgeschäft** (Kaufvertrag, § 433 BGB): Du verpflichtest dich, den Kaufpreis zu zahlen. Der Verkäufer verpflichtet sich, das Auto zu übergeben und das Eigentum zu übertragen. Aber das Auto gehört dir noch *nicht*.\n\n2. **Verfügungsgeschäft** (Übereignung, § 929 BGB): Das Eigentum am Auto wird auf dich übertragen. Jetzt gehört dir das Auto wirklich.\n\nDiese beiden Geschäfte sind **rechtlich voneinander getrennt** – das ist das Trennungsprinzip. Warum ist das wichtig? Weil es z. B. möglich ist, dass der Kaufvertrag (wegen eines Fehlers) nichtig ist, die Übereignung aber trotzdem wirksam war – oder umgekehrt.\n\n## Kausale vs. abstrakte Rechtsgeschäfte (Abstraktionsprinzip)\n\nDas **Abstraktionsprinzip** geht noch einen Schritt weiter: Das Verfügungsgeschäft (die Eigentumsübertragung) ist in seiner Wirksamkeit **unabhängig** vom Schicksal des Verpflichtungsgeschäfts (dem Kaufvertrag).\n\n**Beispiel:** K kauft bei V ein Fahrrad. Der Kaufvertrag stellt sich später als nichtig heraus (weil K minderjährig war). Trotzdem war die Übereignung des Fahrrads zunächst wirksam! K ist Eigentümer geworden. V kann das Fahrrad nur über das **Bereicherungsrecht** (§ 812 BGB) zurückverlangen – nicht automatisch, weil der Kaufvertrag nichtig war.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Trennungs- und Abstraktionsprinzip auf einen Blick",
+          "body": "**Trennungsprinzip:** Verpflichtungsgeschäft (z. B. Kaufvertrag) und Verfügungsgeschäft (z. B. Eigentumsübertragung) sind rechtlich *getrennt*.\n\n**Abstraktionsprinzip:** Das Verfügungsgeschäft ist in seiner Wirksamkeit *unabhängig* vom Verpflichtungsgeschäft. Fehler im Kaufvertrag „infizieren” die Übereignung nicht automatisch."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Alltagsbeispiel: Kauf im Supermarkt",
+          "body": "1. Du nimmst die Flasche und legst Geld hin → **Kaufvertrag** (Verpflichtungsgeschäft)\n2. Die Kassiererin übergibt dir die Flasche; ihr seid euch einig, dass das Eigentum auf dich übergehen soll → **Übereignung** (Verfügungsgeschäft, § 929 BGB)\n\nZwei separate Rechtsgeschäfte – obwohl im Alltag alles in Sekunden passiert."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-arten-rechtsgeschaefte",
+          "title": "Arten von Rechtsgeschäften",
+          "caption": "Übersicht der wichtigsten Unterscheidungen bei Rechtsgeschäften",
+          "code": "graph TD\n    A[Rechtsgeschäft] --> B[Einseitig]\n    A --> C[Mehrseitig]\n    B --> B1[\"Gestaltungsrechte\\nKündigung, Anfechtung, Rücktritt\"]\n    C --> C1[\"Vertrag\\n(wechselseitige WE)\"]\n    A --> D[Verpflichtend]\n    A --> E[Verfügend]\n    D --> D1[\"Kaufvertrag, Mietvertrag\\n→ Trennungsprinzip\"]\n    E --> E1[\"Übereignung § 929 BGB\\n→ Abstraktionsprinzip\"]\n    A --> F[Kausal]\n    A --> G[Abstrakt]\n    F --> F1[\"Rechtsgrund für\\nVermögensverschiebung\"]\n    G --> G1[\"Unabhängig vom\\nkausalen Geschäft\"]"
+        }
+      ]
+    },
+    {
+      "id": "vertragsfreiheit",
+      "heading": "Vertragsfreiheit: Dein Recht, Verträge selbst zu gestalten",
+      "body": "Das Fundament des gesamten Privatrechts ist die **Privatautonomie** – das Recht, sein Leben und seine Rechtsbeziehungen selbst zu gestalten. Sie ist im Grundgesetz verankert (Art. 2 Abs. 1 GG: allgemeine Handlungsfreiheit).\n\nFür Verträge konkretisiert sich die Privatautonomie in drei Freiheiten:\n\n## 1. Abschlussfreiheit\n\nDu kannst frei entscheiden, **ob** und **mit wem** du einen Vertrag schließt. Niemand kann dich zwingen, ein Angebot anzunehmen oder jemanden als Vertragspartner zu akzeptieren.\n\n**Ausnahmen – der Kontrahierungszwang:** In bestimmten Fällen besteht eine Pflicht zum Vertragsabschluss:\n- Monopolisten (z. B. Strom- oder Wasserversorger)\n- Das allgemeine Gleichbehandlungsgesetz (§ 21 Abs. 1 S. 1 AGG) kann bei Diskriminierung eine Kontrahierungspflicht begründen\n- Das Vergaberecht bei staatlichen Aufträgen\n\n## 2. Inhaltsfreiheit (Gestaltungsfreiheit)\n\nDu kannst den **Inhalt** des Vertrages grundsätzlich frei aushandeln – Preis, Leistung, Nebenleistungen, alles.\n\n**Grenzen:** Gesetzliche Verbote (§ 134 BGB), Sittenwidrigkeit (§ 138 BGB) und AGB-Recht begrenzen diese Freiheit. Verträge über illegale Gegenstände (Drogen, Waffen) sind z. B. nichtig.\n\n## 3. Formfreiheit\n\nVerträge können grundsätzlich **formlos** geschlossen werden – mündlich, per E-Mail, durch Handschlag.\n\n**Ausnahmen – Formbindung:** Manche Verträge brauchen zwingend eine besondere Form:\n- Grundstückskaufvertrag: notarielle Beurkundung (§ 311b BGB)\n- Bürgschaft: Schriftform (§ 766 BGB)\n- Schenkungsversprechen: notarielle Beurkundung (§ 518 BGB)\n\nEin Verstoß gegen eine gesetzliche Formvorschrift macht den Vertrag grundsätzlich nichtig (§ 125 BGB).",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Privatautonomie (Art. 2 Abs. 1 GG)",
+          "body": "Das Recht jedes Menschen, seine privaten Rechtsbeziehungen nach eigenem Willen zu gestalten. Im Vertragsrecht bedeutet das: Abschlussfreiheit + Inhaltsfreiheit + Formfreiheit."
+        },
+        {
+          "kind": "tip",
+          "title": "Merkhilfe für die Klausur",
+          "body": "Wenn du prüfst, ob ein Vertrag wirksam ist, denke immer: Hat jemand zur Formfreiheit (Schriftform nötig?) oder Inhaltsfreiheit (Gesetzesverstoß?) eine Einschränkung gemacht? Wenn nein, ist Privatautonomie der Ausgangspunkt."
+        }
+      ]
+    },
+    {
+      "id": "angebot-willenserklarung",
+      "heading": "Das Angebot (§ 145 BGB): Die erste Hälfte des Vertrages",
+      "body": "Ein Vertrag braucht immer mindestens zwei übereinstimmende Willenserklärungen: ein **Angebot** und eine **Annahme**. Das Gesetz nennt das Angebot in § 145 BGB auch „Antrag” – beide Begriffe meinen dasselbe.\n\n**Chronologisch:** Die zeitlich *erste* Willenserklärung ist das Angebot, die *zweite* ist die Annahme.\n\n## Was muss ein wirksames Angebot enthalten?\n\nEin Angebot ist eine **empfangsbedürftige Willenserklärung** – es muss also dem Empfänger zugehen, um wirksam zu werden. Inhaltlich muss das Angebot so bestimmt sein, dass der Empfänger mit einem einfachen **„Ja”** den Vertrag zum Abschluss bringen könnte.\n\nDafür muss das Angebot die **essentialia negotii** (wesentlichen Vertragsbestandteile) enthalten:\n- Die **Vertragsparteien** (wer schließt mit wem?)\n- Die **Leistung(en)** (was soll geleistet werden?)\n- Die **Gegenleistung(en)** (z. B. der Kaufpreis)\n\n**Beispiel:** „Ich verkaufe dir mein Fahrrad für 200 Euro.” → Wirksames Angebot. Alle essentialia negotii sind enthalten.\n\n**Gegenbeispiel:** „Ich verkaufe dir irgendwas für irgendwann irgendwieviel.” → Kein wirksames Angebot, zu unbestimmt.\n\n## Bindungswirkung: Das Angebot bindet!\n\nWer ein wirksames Angebot macht, ist daran **gebunden** (§ 145 BGB). Er kann nicht einfach wieder „nein” sagen, wenn der andere annimmt. Das gibt dem Empfänger die Sicherheit, dass er durch seine Annahme wirklich einen Vertrag schließen kann.\n\n## Wann erlischt das Angebot?\n\n- **Ablehnung** durch den Empfänger (§ 146 BGB)\n- **Nicht rechtzeitige Annahme** (§ 146 BGB)\n- **Modifizierte Annahme** (§ 150 Abs. 2 BGB) – gilt gleichzeitig als Ablehnung\n- **Ausdrücklicher Ausschluss** der Bindungswirkung durch den Anbieter\n\n## Rechtzeitigkeit der Annahme\n\n- **Unter Anwesenden** (z. B. persönliches Gespräch, Telefonat): Annahme muss sofort erfolgen, § 147 Abs. 1 BGB\n- **Unter Abwesenden** (z. B. Brief, E-Mail): Annahme muss innerhalb der Frist erfolgen, die nach der Verkehrssitte erwartet wird, § 147 Abs. 2 BGB\n- **Mit gesetzter Frist:** Der Anbieter kann auch eine genaue **Annahmefrist** setzen, § 148 BGB\n\n## Der Sonderfall: § 150 BGB – Modifizierte und verspätete Annahme\n\nWas passiert, wenn der Empfänger zwar annimmt, aber mit Änderungen?\n\n**§ 150 Abs. 2 BGB:** Eine Annahme mit Änderungen ist **keine Annahme**, sondern:\n1. Eine **Ablehnung** des ursprünglichen Angebots (das Angebot erlischt)\n2. Gleichzeitig ein **neues Angebot** des Empfängers an den ursprünglichen Anbieter\n\n**Beispiel:** A bietet B sein Auto für 5.000 Euro an. B antwortet: „Ich nehme es für 4.500 Euro.” → B hat A's Angebot abgelehnt und ein neues Angebot über 4.500 Euro gemacht. A kann nun seinerseits annehmen oder ablehnen.\n\n**§ 150 Abs. 1 BGB:** Eine **verspätete Annahme** gilt ebenfalls als neues Angebot.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Empfangsbedürftige Willenserklärung",
+          "body": "Eine Willenserklärung, die erst wirksam wird, wenn sie dem Empfänger **zugegangen** ist (§ 130 BGB). Zugang = wenn die Erklärung so in den Machtbereich des Empfängers gelangt ist, dass er unter normalen Umständen von ihr Kenntnis nehmen kann. Ein Brief ist z. B. zugegangen, wenn er im Briefkasten liegt – auch wenn der Empfänger ihn noch nicht gelesen hat."
+        },
+        {
+          "kind": "merksatz",
+          "title": "§ 150 BGB – Die wichtige Regel für modifizierte Annahmen",
+          "body": "**Modifizierte Annahme = Ablehnung + neues Angebot.**\n\nSowohl eine inhaltlich veränderte Annahme (§ 150 Abs. 2 BGB) als auch eine verspätete Annahme (§ 150 Abs. 1 BGB) gelten als neues Angebot, nicht als wirksame Annahme. Der ursprüngliche Vertrag kommt damit *nicht* zustande."
+        }
+      ]
+    },
+    {
+      "id": "invitatio-und-vertragsschluss",
+      "heading": "Invitatio ad offerendum: Wenn ein 'Angebot' kein Angebot ist",
+      "body": "Im Alltag nennen wir vieles ein „Angebot”, was rechtlich gesehen gar keines ist. Genau hier liegt eine häufige Fehlerquelle in der Klausur.\n\n## Was ist eine invitatio ad offerendum?\n\nDer lateinische Begriff **invitatio ad offerendum** bedeutet wörtlich: „Aufforderung zur Abgabe eines Angebots”. Es ist die Einladung an andere, ihrerseits ein Angebot zu machen – selbst aber noch kein rechtlich bindendes Angebot.\n\n**Der entscheidende Unterschied:** Bei einer invitatio fehlt der **Rechtsbindungswille** – die Person will sich noch nicht verbindlich binden.\n\n## Warum gibt es die invitatio?\n\nStell dir vor, ein Supermarkt hätte nur 10 Flaschen Mineralwasser im Regal und würde durch sein Preisschild ein bindendes Angebot an *jeden* machen. Wenn nun 100 Kunden gleichzeitig „Ja” sagen, hätte der Supermarkt 100 Verträge abgeschlossen, aber nur 10 Flaschen. Das wäre nicht praktikabel.\n\nDeshalb gilt: Wenn eine Erklärung an eine **unbestimmte Anzahl von Personen** gerichtet ist und die Gefahr besteht, dass mehr Verträge abgeschlossen werden als erfüllt werden könnten, liegt in der Regel eine invitatio vor.\n\n## Klassische Fälle der invitatio\n\n| Situation | Rechtliche Einordnung |\n|---|---|\n| Preisschild im Supermarkt | invitatio ad offerendum |\n| Inserat in der Zeitung | invitatio ad offerendum |\n| Internetangebot (Produktseite) | invitatio ad offerendum |\n| Schaufensterauslage | invitatio ad offerendum |\n| Warenautomaten | **echtes Angebot** (Ausnahme!) |\n\n**Warenautomaten** sind eine Ausnahme: Hier lässt sich der Vertragspartner nach eindeutigen Kriterien bestimmen (wer Geld einwirft), und es können nie mehr Verträge als Waren abgeschlossen werden.\n\n## Ablauf beim Online-Shopping\n\n1. Produktseite des Händlers → **invitatio** (kein bindendes Angebot des Händlers)\n2. Du legst ins Warenkorb und bestätigst die Bestellung → **dein Angebot** an den Händler\n3. Der Händler sendet Bestellbestätigung / Lieferung → **Annahme** des Händlers\n\n→ Erst jetzt ist der Vertrag geschlossen!",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Invitatio ad offerendum",
+          "body": "Eine Aufforderung zur Abgabe eines Angebots, die selbst noch kein bindendes Angebot ist. Es fehlt der Rechtsbindungswille, weil die Erklärung an eine unbestimmte Personenzahl gerichtet ist oder weil die Gefahr besteht, mehr Verträge abzuschließen als erfüllt werden können."
+        },
+        {
+          "kind": "warning",
+          "title": "Häufiger Klausurfehler",
+          "body": "In der Klausur wird oft ein Internetangebot oder eine Zeitungsanzeige als „Angebot” im Rechtssinn behandelt. Das ist fast immer falsch! Internetseiten und Anzeigen sind in der Regel **invitatio ad offerendum** – das *Angebot* im Rechtssinn macht der Käufer, wenn er bestellt."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-vertragsschluss",
+          "title": "Schema des Vertragsschlusses (§§ 145 ff. BGB)",
+          "caption": "Von der invitatio über Angebot und Annahme zum wirksamen Vertrag",
+          "code": "graph TD\n    A[\"Warenpräsentation / Inserat / Internetseite\"] -->|\"invitatio ad offerendum\\n(kein Rechtsbindungswille)\"| B\n    B[\"Interessent macht\\nAngebot § 145 BGB\"] --> C{\"Annahme?\"}\n    C -->|\"Ja, rechtzeitig\\nund unverändert\"| D[\"✓ Vertrag\\nwirksam geschlossen\"]\n    C -->|\"Nein / Ablehnung\\n§ 146 BGB\"| E[\"✗ Kein Vertrag\\nAngebot erlischt\"]\n    C -->|\"Verspätet\\n§ 150 Abs. 1 BGB\"| F[\"= Neues Angebot\\ndes Empfängers\"]\n    C -->|\"Modifiziert (Änderungen)\\n§ 150 Abs. 2 BGB\"| F\n    F --> G{\"Ursprünglicher\\nAnbieter nimmt an?\"}\n    G -->|\"Ja\"| D\n    G -->|\"Nein\"| E"
+        }
+      ]
+    },
+    {
+      "id": "dissens",
+      "heading": "Dissens: Wenn Angebot und Annahme nicht übereinstimmen",
+      "body": "Manchmal glauben beide Seiten, einen Vertrag geschlossen zu haben – sind sich aber in Wirklichkeit über etwas Wesentliches nicht einig. Das nennt das Recht **Dissens** (Uneinigkeit, Gegenteil von Konsens).\n\n## Zwei Arten von Dissens\n\n### 1. Offener Dissens (§ 154 BGB)\n\nBeide Parteien **wissen**, dass sie sich noch nicht vollständig geeinigt haben. Sie verhandeln noch.\n\n**Beispiel:** A und B verhandeln über den Kauf eines Unternehmens. Über den Kaufpreis sind sie sich einig, aber über die genaue Übergabemodalität noch nicht. Beide wissen, dass der Vertrag noch nicht fertig ist.\n\n**Rechtsfolge:**\n- Offener Dissens über **wesentliche Vertragspunkte** (essentialia negotii): Kein Vertrag (Totaldissens, § 154 Abs. 1 BGB)\n- Offener Dissens über **Nebenpunkte**: Im Grundsatz ebenfalls kein Vertrag – außer der Parteiwille ergibt, dass sie den Vertrag auch ohne Einigung über den Nebenpunkt schließen wollten (z. B. durch Vertragsdurchführung)\n\n### 2. Versteckter Dissens (§ 155 BGB)\n\nBeide Parteien **glauben**, sich geeinigt zu haben, meinen aber in Wirklichkeit etwas Verschiedenes. Sie bemerken die Uneinigkeit nicht.\n\n**Beispiel – Besprechungsfall 2.3 (Küche ohne Griffe):** D bestellt eine Küche „ohne Griffe”. Er meint damit eine Küche mit versteckter Griffleiste (optisch grifflos). Der Verkäufer K versteht darunter eine Küche, an die der Käufer selbst Griffe anbringt. Beide glauben, sich geeinigt zu haben.\n\n**Rechtsfolge:**\n- Versteckter Dissens über **wesentliche Vertragspunkte**: Ebenfalls Totaldissens → kein Vertrag. Vorher ist jedoch durch **Auslegung** (§§ 133, 157 BGB) zu prüfen, ob eine der Deutungen objektiv überwiegt.\n- Versteckter Dissens über **Nebenpunkte** (§ 155 BGB): Der Vertrag ist wirksam, wenn anzunehmen ist, dass er auch ohne Einigung über diesen Punkt geschlossen worden wäre.\n\n## Abgrenzung: Wesentliche Punkte vs. Nebenpunkte\n\n**Wesentliche Vertragspunkte** (essentialia negotii) sind die Elemente, die den Vertragstyp bestimmen:\n- Beim Kaufvertrag: Kaufgegenstand und Kaufpreis\n- Beim Mietvertrag: Mietsache und Mietzins\n- Beim Dienstvertrag: Dienstleistung und Vergütung\n\n**Nebenpunkte** sind alles andere: Zahlungsmodalitäten, genaue Lieferzeit, Nebenleistungen etc.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Dissens-Tabelle",
+          "body": "| | Wesentliche Punkte | Nebenpunkte |\n|---|---|---|\n| **Offener Dissens** | Kein Vertrag (§ 154 I BGB) | Kein Vertrag (außer Parteiwille ergibt anderes) |\n| **Versteckter Dissens** | Kein Vertrag (Auslegung zuerst!) | Vertrag wirksam (§ 155 BGB), wenn anzunehmen, er wäre auch so geschlossen worden |"
+        },
+        {
+          "kind": "tip",
+          "title": "Prüfungsreihenfolge beim versteckten Dissens",
+          "body": "1. Zuerst **Auslegung** (§§ 133, 157 BGB): Gibt es eine objektiv richtige Deutung, über die sich beide hätten einigen sollen?\n2. Erst wenn die Auslegung keinen Konsens ergibt: Dissens prüfen\n3. Wesentlicher Punkt oder Nebenpunkt?"
+        }
+      ]
+    },
+    {
+      "id": "bedingung-befristung-zustimmung",
+      "heading": "Bedingung, Befristung und Zustimmung: Zusätzliche Wirksamkeitsvoraussetzungen",
+      "body": "Manchmal ist ein Rechtsgeschäft zwar geschlossen, aber seine Wirksamkeit hängt noch von etwas anderem ab. Das BGB kennt drei wichtige Zusatzelemente:\n\n## 1. Bedingung (§§ 158 ff. BGB)\n\nEine **Bedingung** macht die Rechtswirkung von einem **zukünftigen, ungewissen Ereignis** abhängig. Niemand weiß, ob das Ereignis eintritt.\n\n**Aufschiebende Bedingung (§ 158 Abs. 1 BGB):** Die Rechtswirkung tritt erst ein, *wenn* das Ereignis eintritt.\n\n*Beispiel:* „Ich verkaufe dir mein Auto, wenn ich den Führerschein verliere.” Der Vertrag ist bereits geschlossen, aber die Pflicht zur Übergabe entsteht erst, wenn B tatsächlich den Führerschein verliert.\n\n**Auflösende Bedingung (§ 158 Abs. 2 BGB):** Die Rechtswirkung tritt sofort ein, endet aber wieder, *wenn* das Ereignis eintritt.\n\n*Beispiel Eigentumsvorbehalt (Besprechungsfall 2.4):* K kauft einen Rasenmäher auf Raten. Im Kaufvertrag steht: „Das Eigentum bleibt bis zur vollständigen Kaufpreiszahlung bei O.” Das ist eine **aufschiebende Bedingung** für die Übereignung: Das Eigentum geht erst über, wenn K die letzte Rate zahlt.\n\n**Wichtig – Bedingungsfeindliche Rechtsgeschäfte:** Manche Rechtsgeschäfte können aus Gründen der Rechtssicherheit *nicht* mit einer Bedingung versehen werden:\n- Aufrechnung (§ 388 S. 2 BGB)\n- Eheschließung (§ 1311 S. 2 BGB)\n- Gestaltungsrechte (Anfechtung, Kündigung, Rücktritt)\n- Genehmigung\n\n## 2. Befristung (§ 163 BGB)\n\nEine **Befristung** macht die Rechtswirkung von einem **sicheren, aber zeitlich bestimmten Ereignis** abhängig. Der Unterschied zur Bedingung: Das Ereignis tritt *sicher* ein (z. B. ein bestimmtes Datum).\n\n*Beispiel:* „Der Mietvertrag beginnt am 1. Juli 2026.” (Befristung des Beginns) oder „Der Mietvertrag endet am 31. Dezember 2026.” (Befristung des Endes)\n\nAuf Befristungen sind die Regeln über Bedingungen entsprechend anwendbar (§ 163 BGB). Bedingungsfeindliche Rechtsgeschäfte sind damit auch befristungsfeindlich.\n\n## 3. Zustimmung (§§ 182–185 BGB)\n\nManche Rechtsgeschäfte brauchen die **Zustimmung** einer dritten Person oder einer Vertragspartei.\n\n- **Einwilligung (§ 183 BGB):** Zustimmung *vor* dem Rechtsgeschäft (z. B. Eltern willigen ein, dass ihr minderjähriges Kind einen Vertrag schließt). Kann bis zur Vornahme des Geschäfts widerrufen werden.\n\n- **Genehmigung (§ 184 BGB):** Zustimmung *nach* dem Rechtsgeschäft. Wirkt auf den Zeitpunkt des Rechtsgeschäfts zurück (§ 184 Abs. 1 BGB) – der Vertrag war schwebend unwirksam und wird rückwirkend wirksam.\n\n*Praxisbeispiel:* Der 17-jährige M kauft eine Spielekonsole ohne Erlaubnis der Eltern. Der Vertrag ist **schwebend unwirksam**. Wenn die Eltern genehmigen, wird er rückwirkend wirksam. Wenn sie verweigern, ist er endgültig unwirksam.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Aufschiebend vs. auflösend bedingt",
+          "body": "**Aufschiebend bedingt:** Rechtsfolge tritt erst ein, wenn Bedingung eintritt (§ 158 Abs. 1 BGB). Vorher: Schwebezustand.\n\n**Auflösend bedingt:** Rechtsfolge tritt sofort ein, endet aber, wenn Bedingung eintritt (§ 158 Abs. 2 BGB)."
+        },
+        {
+          "kind": "merksatz",
+          "title": "Einwilligung vs. Genehmigung",
+          "body": "**Einwilligung = vorher** (§ 183 BGB): Zustimmung vor dem Rechtsgeschäft. Widerruflich.\n\n**Genehmigung = nachher** (§ 184 BGB): Zustimmung nach dem Rechtsgeschäft. Wirkt rückwirkend."
+        }
+      ]
+    },
+    {
+      "id": "fristen-berechnung",
+      "heading": "Fristen berechnen: §§ 186–193 BGB",
+      "body": "Fristen spielen überall im Recht eine Rolle: Wann muss eine Annahme zugehen? Wann endet ein Kündigungsrecht? Das BGB enthält in §§ 186 ff. BGB klare Berechnungsregeln – die aber nur **Auslegungsregeln** sind; vertraglich kann Abweichendes vereinbart werden.\n\n## Schritt 1: Termin oder Frist?\n\n- **Termin:** Ein genau bestimmtes Datum (z. B. „am 15. Juni 2026”). Kein Rechenaufwand.\n- **Frist:** Durch Anfangspunkt und Dauer bestimmt (z. B. „innerhalb von 2 Wochen”). Hier muss gerechnet werden.\n\n## Schritt 2: Wie beginnt die Frist? (§ 187 BGB)\n\nDas ist die häufigste Fehlerquelle!\n\n**Ereignisfrist (§ 187 Abs. 1 BGB):** Die Frist beginnt mit dem Eintritt eines Ereignisses oder einem Zeitpunkt im Laufe eines Tages. Der Tag des Ereignisses wird **nicht mitgezählt** – die Frist beginnt erst am **nächsten Tag**.\n\n*Beispiel:* Vertragsschluss am Montag, 1-Wochen-Frist → Fristbeginn: Dienstag. Fristende: nächsten Montag 24:00 Uhr.\n\n**Tagesbeginnfrist (§ 187 Abs. 2 BGB):** Die Frist beginnt mit dem Beginn eines Tages. Dieser Tag wird **mitgezählt**.\n\n*Beispiel:* Frist beginnt „ab dem 1. Juni” → 1. Juni wird mitgezählt.\n\n## Schritt 3: Wann endet die Frist? (§ 188 BGB)\n\nDie Frist endet immer mit Ablauf des letzten Tages (24:00 Uhr = 23:59:59).\n\n**Tagesfrist (§ 188 Abs. 1 BGB):** Einfach die Anzahl der Tage addieren (unter Berücksichtigung von § 187 BGB).\n\n*Beispiel Ereignisfrist, 10 Tage:* Ereignis am 2. Juni → Fristbeginn: 3. Juni → Fristende: 12. Juni (10 Tage nach dem 3. Juni = 12. Juni), 24:00 Uhr.\n\n**Wochen-/Monatsfrist (§ 188 Abs. 2 BGB):**\n- Bei Ereignisfristen: Fristende am **gleichen Wochentag / gleicher Datumszahl** in der letzten Woche/dem letzten Monat.\n- Bei Tagesbeginnfristen: Fristende am Tag **davor**.\n\n*Beispiel Monatsfrist, Ereignisfrist:* Ereignis am 01. April → Fristbeginn: 02. April → Fristende: 01. Mai 24:00 Uhr (gleiche Zahl im nächsten Monat).\n\n## Schritt 4: Sonderregeln (§§ 188 Abs. 3, 193 BGB)\n\n- **§ 188 Abs. 3 BGB:** Gibt es den Fristablauftag nicht (z. B. 30. Februar), endet die Frist am **letzten Tag des Monats**.\n- **§ 193 BGB:** Fällt das Fristende auf einen **Samstag, Sonntag oder gesetzlichen Feiertag** und ist eine Willenserklärung abzugeben oder eine Leistung zu bewirken, verschiebt sich das Fristende auf den nächsten **Werktag**. Achtung: Gilt **nicht** für reine Erlöschensfristen (z. B. Kündigungsfristen)!\n\n**Merkhilfe für die Klausur:** Immer in dieser Reihenfolge prüfen:\n1. Ereignis- oder Tagesbeginnfrist?\n2. Tages-, Wochen- oder Monatsfrist?\n3. § 193 BGB prüfen!",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Durchgerechnetes Beispiel: 5-Monats-Frist (Besprechungsfall 2.5)",
+          "body": "**Sachverhalt:** Mietvertrag vom 10. April 2026. Kündigungsrecht innerhalb der ersten 5 Monate, beginnend mit dem 1. Juni 2026.\n\n**Fristberechnung:**\n- Fristbeginn: 1. Juni 2026 (= Tagesbeginnfrist, weil die Frist mit dem *Beginn* des 1. Juni beginnt, nicht mit einem im Laufe des Tages eintretenden Ereignis)\n- Fristtyp: Monatsfrist\n- Nach § 187 Abs. 2 BGB: Der 1. Juni wird mitgezählt\n- Nach § 188 Abs. 2 Alt. 2 BGB (Tagesbeginnfrist): Fristende am Tag, der der gleichen Zahl des Monats **vorgeht** in dem Monat, der nach Ablauf von 5 Monaten erreicht ist\n- 5 Monate ab 1. Juni → Oktober: Fristende wäre am 31. Oktober (= Vortag des 1. November)... \n- Einfacher: Tagesbeginnfrist, 5 Monate → Fristende am letzten Tag des 5. Monats = 31. Oktober 2026, 24:00 Uhr\n\n**Ergebnis:** B kann den Standplatz bis zum **31. Oktober 2026** einseitig beenden."
+        },
+        {
+          "kind": "warning",
+          "title": "§ 193 BGB nur bei Handlungsfristen!",
+          "body": "§ 193 BGB (Verschiebung auf nächsten Werktag) gilt **nur**, wenn innerhalb der Frist eine Willenserklärung abzugeben oder eine Leistung zu bewirken ist. Bei reinen Erlöschensfristen (z. B. „das Recht erlischt nach 6 Monaten”) gilt § 193 BGB nicht – das Recht erlischt auch am Sonntag!"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "bgb-at-rg-fc-1",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was besagt das Trennungsprinzip im deutschen Privatrecht?",
+      "back": "Verpflichtungsgeschäft (z. B. Kaufvertrag) und Verfügungsgeschäft (z. B. Eigentumsübertragung) sind **rechtlich voneinander getrennt** und müssen jeweils eigene Wirksamkeitsvoraussetzungen erfüllen."
+    },
+    {
+      "id": "bgb-at-rg-fc-2",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was ist eine invitatio ad offerendum und warum ist sie kein Angebot?",
+      "back": "Eine **Aufforderung zur Abgabe eines Angebots** – z. B. Preisschilder im Supermarkt, Internetproduktseiten. Kein rechtlich bindendes Angebot, weil der Rechtsbindungswille fehlt: Die Erklärung richtet sich an eine unbestimmte Anzahl von Personen und es bestünde die Gefahr, mehr Verträge als erfüllbare Leistungen abzuschließen."
+    },
+    {
+      "id": "bgb-at-rg-fc-3",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was ist eine modifizierte Annahme und welche Rechtsfolge hat sie (§ 150 BGB)?",
+      "back": "Eine Annahme, die vom Angebot inhaltlich abweicht (z. B. anderer Preis). Nach § 150 Abs. 2 BGB gilt sie als **Ablehnung** des ursprünglichen Angebots **und** gleichzeitig als **neues Angebot** des Empfängers. Das ursprüngliche Angebot erlischt."
+    },
+    {
+      "id": "bgb-at-rg-fc-4",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was ist der Unterschied zwischen offenem und verstecktem Dissens?",
+      "back": "**Offener Dissens (§ 154 BGB):** Parteien wissen, dass sie sich noch nicht geeinigt haben.\n\n**Versteckter Dissens (§ 155 BGB):** Parteien glauben irrtümlich, sich geeinigt zu haben, meinen aber objektiv verschiedene Dinge."
+    },
+    {
+      "id": "bgb-at-rg-fc-5",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was ist der Unterschied zwischen Einwilligung und Genehmigung?",
+      "back": "**Einwilligung (§ 183 BGB):** Zustimmung *vor* dem Rechtsgeschäft → widerruflich bis zur Vornahme.\n\n**Genehmigung (§ 184 BGB):** Zustimmung *nach* dem Rechtsgeschäft → wirkt rückwirkend auf den Zeitpunkt des Rechtsgeschäfts."
+    },
+    {
+      "id": "bgb-at-rg-fc-6",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Wie beginnt eine Ereignisfrist (§ 187 Abs. 1 BGB)?",
+      "back": "Bei einer Ereignisfrist wird der **Tag des Ereignisses nicht mitgezählt**. Die Frist beginnt erst mit dem Beginn des **nächsten Tages**."
+    },
+    {
+      "id": "bgb-at-rg-fc-7",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was sind die essentialia negotii und warum müssen sie im Angebot enthalten sein?",
+      "back": "Die **wesentlichen Vertragsbestandteile** – z. B. beim Kaufvertrag: Kaufgegenstand und Kaufpreis. Sie müssen im Angebot enthalten sein, damit der Empfänger mit einem einfachen **„Ja”** den Vertrag abschließen kann. Fehlen sie, liegt kein wirksames Angebot vor."
+    },
+    {
+      "id": "bgb-at-rg-fc-8",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Was bedeutet Abstraktionsprinzip?",
+      "back": "Die Wirksamkeit des **Verfügungsgeschäfts** (z. B. Eigentumsübertragung) ist rechtlich **unabhängig** von Fehlern des **Verpflichtungsgeschäfts** (z. B. Kaufvertrag). Ein nichtiger Kaufvertrag macht die Übereignung nicht automatisch nichtig – Rückforderung nur über § 812 BGB."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q1",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "leicht",
+      "prompt": "Was ist ein Angebot im Rechtssinn (§ 145 BGB)?",
+      "options": [
+        "Eine unverbindliche Aufforderung, ein Angebot zu machen",
+        "Eine empfangsbedürftige Willenserklärung mit allen essentialia negotii, die den Antragesteller bindet",
+        "Jede Werbung für ein Produkt",
+        "Eine schriftliche Erklärung, die nur wirksam ist, wenn sie unterschrieben ist"
+      ],
+      "correct": [1],
+      "explanation": "Ein Angebot (§ 145 BGB) ist eine empfangsbedürftige Willenserklärung, die alle wesentlichen Vertragsbestandteile enthält und so bestimmt ist, dass die Gegenseite mit einem einfachen 'Ja' annehmen kann. Es bindet den Antragesteller grundsätzlich."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rg-q2",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "leicht",
+      "prompt": "Ein Preisschild im Supermarkt ist ein verbindliches Angebot des Händlers an jeden Kunden.",
+      "answer": false,
+      "explanation": "Falsch. Ein Preisschild im Supermarkt ist eine invitatio ad offerendum – eine Aufforderung zur Abgabe eines Angebots. Das Angebot macht der Kunde an der Kasse. Der Händler bindet sich damit noch nicht."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q3",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "mittel",
+      "prompt": "A bietet B sein Fahrrad für 300 Euro an. B antwortet: 'Ich nehme es für 250 Euro.' Was ist die rechtliche Folge?",
+      "options": [
+        "Vertrag über 250 Euro ist wirksam zustande gekommen",
+        "Vertrag über 300 Euro ist wirksam zustande gekommen",
+        "A's Angebot ist abgelehnt; B's Erklärung ist ein neues Angebot über 250 Euro (§ 150 Abs. 2 BGB)",
+        "Kein Angebot und keine Annahme; alles ist nichtig"
+      ],
+      "correct": [2],
+      "explanation": "Eine modifizierte Annahme gilt nach § 150 Abs. 2 BGB als Ablehnung des ursprünglichen Angebots und gleichzeitig als neues Angebot. A's Angebot über 300 Euro ist damit erloschen. Nun hat B A ein neues Angebot über 250 Euro gemacht, das A noch annehmen müsste."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q4",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "mittel",
+      "prompt": "Was sind 'essentialia negotii'?",
+      "options": [
+        "Allgemeine Geschäftsbedingungen",
+        "Die wesentlichen Vertragsbestandteile, die ein Angebot mindestens enthalten muss",
+        "Lateinische Bezeichnung für den Vertragsschluss",
+        "Formvorschriften für notarielle Verträge"
+      ],
+      "correct": [1],
+      "explanation": "Essentialia negotii sind die wesentlichen Vertragsbestandteile – beim Kaufvertrag z. B. Kaufgegenstand und Kaufpreis. Ohne sie ist ein Angebot zu unbestimmt; der Empfänger kann nicht mit einem einfachen 'Ja' annehmen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rg-q5",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "mittel",
+      "prompt": "Eine aufschiebende Bedingung hat zur Folge, dass die Rechtswirkung des Rechtsgeschäfts sofort eintritt und beim Bedingungseintritt wieder endet.",
+      "answer": false,
+      "explanation": "Falsch. Das beschreibt die auflösende Bedingung (§ 158 Abs. 2 BGB). Bei der aufschiebenden Bedingung (§ 158 Abs. 1 BGB) tritt die Rechtswirkung erst mit Eintritt der Bedingung ein."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q6",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "mittel",
+      "prompt": "Bei einem versteckten Dissens über einen Nebenpunkt: Was gilt nach § 155 BGB?",
+      "options": [
+        "Der Vertrag ist auf jeden Fall nichtig",
+        "Der Vertrag ist wirksam, wenn anzunehmen ist, er wäre auch ohne Einigung über diesen Punkt geschlossen worden",
+        "Beide Parteien können den Vertrag anfechten",
+        "Es bedarf einer notariellen Beurkundung, um den Vertrag zu heilen"
+      ],
+      "correct": [1],
+      "explanation": "§ 155 BGB bestimmt: Bei verstecktem Dissens über Nebenpunkte ist der Vertrag wirksam, wenn anzunehmen ist, dass er auch ohne Einigung über diesen Punkt geschlossen worden wäre. Die fehlende Einigung über einen Nebenpunkt ist damit vernachlässigbar."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q7",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "schwer",
+      "prompt": "Ein Vertrag wird am Mittwoch, den 3. September 2025 geschlossen. Es gilt eine Widerrufsfrist von 2 Wochen (Ereignisfrist). Wann endet diese Frist?",
+      "options": [
+        "Mittwoch, 17. September 2025",
+        "Dienstag, 16. September 2025",
+        "Donnerstag, 18. September 2025",
+        "Mittwoch, 10. September 2025"
+      ],
+      "correct": [0],
+      "explanation": "Ereignisfrist: Der 3. September wird nicht mitgezählt (§ 187 Abs. 1 BGB), die Frist beginnt am 4. September. 2-Wochen-Ereignisfrist endet nach § 188 Abs. 2 Alt. 1 BGB am gleichen Wochentag 2 Wochen nach dem Ereignis: Ereignis war Mittwoch → Fristende: Mittwoch, 17. September 2025, 24:00 Uhr."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rg-q8",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "leicht",
+      "prompt": "Das Trennungsprinzip bedeutet, dass Verpflichtungsgeschäft und Verfügungsgeschäft rechtlich voneinander getrennt sind.",
+      "answer": true,
+      "explanation": "Richtig. Das Trennungsprinzip ist ein Grundprinzip des deutschen Privatrechts: Der Kaufvertrag (Verpflichtungsgeschäft) verpflichtet zur Übereignung, die Übereignung (Verfügungsgeschäft) überträgt das Eigentum. Beide Geschäfte sind rechtlich selbstständig."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q9",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Rechtsgeschäfte sind bedingungsfeindlich? (Mehrfachauswahl möglich)",
+      "options": [
+        "Anfechtungserklärung",
+        "Kaufvertrag",
+        "Aufrechnung (§ 388 S. 2 BGB)",
+        "Kündigung",
+        "Einwilligung"
+      ],
+      "correct": [0, 2, 3],
+      "multiple": true,
+      "explanation": "Bedingungsfeindlich sind Gestaltungsrechte (Anfechtung, Kündigung, Rücktritt) und die Aufrechnung (§ 388 S. 2 BGB) sowie die Genehmigung. Die Einwilligung kann bedingt erteilt werden. Ein Kaufvertrag kann grundsätzlich unter einer Bedingung geschlossen werden (z. B. Eigentumsvorbehalt)."
+    },
+    {
+      "kind": "freetext",
+      "id": "bgb-at-rg-q10",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "schwer",
+      "prompt": "A sieht auf der Website von Händler H ein Laptop für 999 Euro. Er klickt auf 'Kaufen' und schließt den Bestellvorgang ab. H sendet eine automatische Eingangsbestätigung, aber noch keine Auftragsbestätigung. Ist bereits ein Kaufvertrag zustande gekommen? Erläutern Sie kurz.",
+      "sampleAnswer": "Die Produktpräsentation auf der Website ist eine invitatio ad offerendum, da H sich gegenüber einer unbestimmten Anzahl von Personen noch nicht verbindlich binden wollte (Gefahr unerfüllbarer Verträge). Das Angebot im Rechtssinn (§ 145 BGB) macht A durch Abschluss des Bestellvorgangs. Die automatische Eingangsbestätigung ist keine Annahme, sondern nur die Bestätigung des Eingangs der Bestellung. H hat das Angebot noch nicht angenommen. Ein Kaufvertrag ist noch nicht zustande gekommen.",
+      "keywords": ["invitatio", "angebot", "annahme", "eingangsbestätigung", "keine annahme", "rechtsbindungswille"],
+      "explanation": "Kern der Antwort: Website = invitatio, Bestellung von A = Angebot, automatische Eingangsbestätigung = noch keine Annahme. Erst Versandbestätigung/Auftragsbestätigung = Annahme."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rg-q11",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "mittel",
+      "prompt": "Was besagt § 193 BGB hinsichtlich des Fristendes?",
+      "options": [
+        "Fristen enden immer am letzten Tag des Monats",
+        "Fällt das Fristende auf Samstag, Sonntag oder Feiertag und ist eine Willenserklärung abzugeben oder Leistung zu erbringen, verschiebt sich das Fristende auf den nächsten Werktag",
+        "Bei Fristende an einem Sonntag verlängert sich die Frist um 7 Tage",
+        "§ 193 BGB gilt für alle Fristen, also auch für Erlöschensfristen"
+      ],
+      "correct": [1],
+      "explanation": "§ 193 BGB verschiebt das Fristende auf den nächsten Werktag, wenn es auf Samstag, Sonntag oder Feiertag fällt – aber nur, wenn innerhalb der Frist eine Willenserklärung abzugeben oder eine Leistung zu bewirken ist (Handlungsfrist). Reine Erlöschensfristen (z. B. Kündigungsfristen) fallen nicht darunter."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rg-q12",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "difficulty": "mittel",
+      "prompt": "Beim offenen Dissens über Nebenpunkte kommt nach § 154 Abs. 1 BGB im Grundsatz kein Vertrag zustande, auch wenn beide Parteien den Vertrag eigentlich abschließen wollten.",
+      "answer": true,
+      "explanation": "Richtig. § 154 Abs. 1 BGB gilt dem Grundsatz nach auch für Nebenpunkte beim offenen Dissens. Abweichend kann jedoch der Parteiwille ergeben, dass der Vertrag auch ohne Einigung über den Nebenpunkt gelten soll – z. B. durch einvernehmliche Vertragsdurchführung."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "bgb-at-rg-ex-1",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Besprechungsfall 2.1 – Der neue Oldtimer",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "R ist frisch verrentet und möchte einen Oldtimer kaufen. Er stößt auf eine Zeitungsanzeige des K, der einen Pkw Daimler Benz 280 SE, Baujahr 1971, für 330.000 € anbietet. R ruft K an und erklärt, er wolle den Oldtimer zu diesem Preis kaufen. K erwidert, es hätten sich sehr viele Interessenten gemeldet, er verkaufe nur für 340.000 €. R erklärt nach kurzem Überlegen, er sei damit einverstanden, wenn er sich die Sache bis Anfang nächster Woche überlegen könne. K meint, R sei ihm zu kompliziert, und beendet das Telefonat. Am Folgetag ruft K zurück und erklärt, er gewähre doch die Bedenkzeit.\n\nIst ein wirksamer Kaufvertrag zustande gekommen?",
+      "hint": "Prüfe jeden Kommunikationsschritt auf Angebot und Annahme. Achte besonders auf § 150 BGB (modifizierte Annahme) und darauf, ob ein einmal erlöschenes Angebot wieder aufleben kann.",
+      "solution": "## Gutachten: Ist ein wirksamer Kaufvertrag zwischen R und K zustande gekommen?\n\n**Obersatz:** R könnte gegen K einen Anspruch auf Übereignung und Übergabe des Oldtimers aus § 433 Abs. 1 BGB haben, wenn ein wirksamer Kaufvertrag zustande gekommen ist.\n\nEin Kaufvertrag kommt durch zwei übereinstimmende Willenserklärungen – Angebot (§ 145 BGB) und Annahme (vgl. § 146 BGB) – zustande, die zur Einigkeit über die essentialia negotii führen.\n\n---\n\n### Schritt 1: Zeitungsanzeige des K\n\n**Fraglich** ist, ob die Zeitungsanzeige des K ein wirksames Angebot (§ 145 BGB) darstellt.\n\nEin Angebot muss alle wesentlichen Vertragsbestandteile enthalten und an einen oder mehrere bestimmte Empfänger gerichtet sein, sodass der Antragende durch ein einfaches „Ja” angenommen werden kann. Die Zeitungsanzeige richtet sich an eine **unbestimmte Anzahl von Personen** und stellt typischerweise eine **invitatio ad offerendum** dar, weil die Gefahr besteht, mehr Verträge abzuschließen als K erfüllen kann (er hat nur ein Auto).\n\n**Zwischenergebnis:** Die Zeitungsanzeige ist eine invitatio ad offerendum und kein wirksames Angebot.\n\n---\n\n### Schritt 2: Anruf des R – „Ich will zum ausgewiesenen Preis kaufen”\n\nR erklärt telefonisch, er wolle den Oldtimer für 330.000 € kaufen. Diese Erklärung enthält alle essentialia negotii (Kaufgegenstand: Oldtimer Daimler Benz 280 SE; Kaufpreis: 330.000 €) und ist an den bestimmten Empfänger K gerichtet.\n\n**Zwischenergebnis:** R macht K ein wirksames **Angebot** über 330.000 €.\n\n---\n\n### Schritt 3: Erklärung des K – „Nur für 340.000 €”\n\nK erklärt, er sei nur bereit zu verkaufen, wenn R 340.000 € zahle.\n\nEine Annahme müsste mit dem Angebot übereinstimmen. K weicht inhaltlich ab (Preis: 330.000 € → 340.000 €). Dies ist eine **modifizierte Annahme** i. S. d. § 150 Abs. 2 BGB.\n\nGemäß § 150 Abs. 2 BGB gilt eine modifizierte Annahme als **Ablehnung** des ursprünglichen Angebots und zugleich als **neues Angebot** des K an R (nun über 340.000 €).\n\n**Zwischenergebnis:** R's Angebot über 330.000 € ist durch K's Gegenangebot erloschen. K hat R nun ein neues Angebot über 340.000 € gemacht.\n\n---\n\n### Schritt 4: Erklärung des R – „Einverstanden, wenn ich Bedenkzeit bis Anfang nächster Woche habe”\n\nR erklärt, er sei mit dem Preis von 340.000 € einverstanden, **wenn** er sich bis Anfang nächster Woche bedenken könne.\n\nEine Annahme i. S. d. § 146 BGB muss unbedingt und unverändert erfolgen. R fügt eine Bedingung (Bedenkzeit) hinzu – er nimmt also nicht unbedingt an, sondern modifiziert K's Angebot.\n\nGemäß § 150 Abs. 2 BGB gilt auch diese Erklärung des R als **Ablehnung** von K's Angebot über 340.000 € und als neues Angebot des R (340.000 € mit Bedenkzeit).\n\n**Zwischenergebnis:** K's Angebot über 340.000 € ist durch R's Gegenangebot erloschen.\n\n---\n\n### Schritt 5: K beendet das Telefonat – Ablehnung durch konkludentes Verhalten\n\nK erklärt, R sei ihm zu kompliziert, und beendet das Gespräch. Dies ist als **Ablehnung** von R's neuem Angebot auszulegen.\n\nMit der Ablehnung erlischt R's Angebot (§ 146 BGB). Es gibt nunmehr kein offenes Angebot mehr.\n\n---\n\n### Schritt 6: Rückruf des K am Folgetag – „Ich gewähre die Bedenkzeit doch”\n\nK ruft am Folgetag an und erklärt, er gewähre die Bedenkzeit doch.\n\nFraglich ist, ob dies noch eine wirksame Annahme von R's Angebot darstellt. R's Angebot war jedoch durch K's Ablehnung (Telefonabbruch) bereits gemäß § 146 BGB **erloschen**. Ein einmal durch Ablehnung erloschenes Angebot kann nicht wieder aufleben.\n\nK's Erklärung am Folgetag könnte allenfalls als neues Angebot des K an R (zu R's ursprünglichen Konditionen) gewertet werden. Dieses neue Angebot des K hat R jedoch noch nicht angenommen.\n\n---\n\n### Endergebnis\n\n**Kein wirksamer Kaufvertrag ist zustande gekommen.** In keinem Stadium haben Angebot und Annahme übereingestimmt. Die Erklärungen R's und K's haben sich immer gegenseitig als modifizierte Annahmen (§ 150 Abs. 2 BGB) wechselseitig abgelehnt. K's Rückruf am Folgetag stellt allenfalls ein neues Angebot dar, das R noch annehmen müsste."
+    },
+    {
+      "id": "bgb-at-rg-ex-2",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Besprechungsfall 2.2 – Die neuen Fässer für die Winzerei",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Winzer A braucht neue Eichenfässer. Auf der Internetseite von Küfer K hat er gesehen, dass K Eichenfässer für 500 Euro/Stück innerhalb von zwei Wochen liefern kann. A schreibt K, er bestelle 15 Eichenholzfässer. K antwortet, er könne 15 Fässer aus europäischer Eiche für 500 Euro/Stück herstellen und liefern. A teilt daraufhin mit, er wolle nur Fässer aus amerikanischer Eiche. K antwortet, das sei möglich, erfordere aber einen Aufpreis von 100 Euro und eine Lieferzeit von mindestens einem Monat. A ist damit nicht einverstanden und verweist auf die Internetseite. K erwidert, das gelte nur für europäische Eiche.\n\nIst ein wirksamer Kaufvertrag zustande gekommen?\n\nAbwandlung 1: Was wäre, wenn A sich mit dem Aufpreis einverstanden erklärt, aber weiterhin auf der Lieferzeit von zwei Wochen besteht?\n\nAbwandlung 2: Wie wäre Abwandlung 1 zu entscheiden, wenn A zusätzlich den Kaufpreis überweist (mit dem Verwendungszweck: 2 Wochen Lieferzeit)?",
+      "hint": "Prüfe jeden Kommunikationsschritt. Handelt es sich bei K's Internetseite um ein Angebot oder eine invitatio? Was ist jeweils Angebot, was modifizierte Annahme (§ 150 Abs. 2 BGB)? In Abwandlung 2: Kann eine konkludente Handlung eine ausdrückliche Einschränkung überwinden?",
+      "solution": "## Grundfall: Ist ein wirksamer Kaufvertrag zustande gekommen?\n\n**Obersatz:** A könnte gegen K einen Anspruch auf Lieferung von 15 Fässern aus amerikanischer Eiche aus § 433 Abs. 1 BGB haben, wenn ein Kaufvertrag wirksam zustande gekommen ist.\n\n---\n\n### 1. Internetseite des K\n\nDie Internetseite des K enthält ein „Angebot” über Eichenfässer für 500 Euro/Stück mit 2-Wochen-Lieferzeit. Diese Erklärung richtet sich an eine **unbestimmte Vielzahl von Personen**. Es handelt sich damit um eine **invitatio ad offerendum**, nicht um ein bindendes Angebot i. S. d. § 145 BGB.\n\n**Zwischenergebnis:** K's Internetseite ist eine invitatio ad offerendum.\n\n---\n\n### 2. A's Bestellung: „15 Eichenholzfässer”\n\nA schreibt K, er bestelle 15 Eichenholzfässer. Diese Erklärung enthält die essentialia negotii (Kaufgegenstand: 15 Eichenholzfässer; Kaufpreis: 500 Euro/Stück laut Internetseite). Sie ist an K gerichtet.\n\n**Zwischenergebnis:** A's Schreiben ist ein **wirksames Angebot** (§ 145 BGB) auf Abschluss eines Kaufvertrags über 15 Eichenholzfässer zu 500 Euro/Stück.\n\n---\n\n### 3. K's Antwort: „15 Fässer aus europäischer Eiche zu 500 Euro”\n\nK antwortet, er könne 15 Fässer aus **europäischer** Eiche für 500 Euro/Stück liefern. A hatte schlicht „Eichenholzfässer” bestellt – die Holzart war damit noch offen. K konkretisiert nun auf europäische Eiche.\n\nFraglich ist, ob K damit das Angebot des A unverändert annimmt oder modifiziert. Da A's Bestellung keine Holzartspezifikation enthielt und K auf europäische Eiche konkretisiert, könnte darin eine inhaltliche Abweichung (Modifikation) gesehen werden. Dies ist durch Auslegung (§§ 133, 157 BGB) zu ermitteln. Da im deutschen Weinbau die Holzart durchaus geschmacklich relevant ist, liegt eine relevante Spezifikation und damit eine **modifizierte Annahme** i. S. d. § 150 Abs. 2 BGB vor, die als Ablehnung von A's Angebot und als neues Angebot des K gilt.\n\n**Zwischenergebnis:** K's Antwort ist ein neues Angebot: 15 Fässer aus europäischer Eiche zu 500 Euro/Stück.\n\n---\n\n### 4. A's Reaktion: „Nur amerikanische Eiche”\n\nA teilt mit, er wolle nur Fässer aus amerikanischer Eiche. Dies ist eine **Ablehnung** von K's Angebot (europäische Eiche) verbunden mit einem **neuen Angebot** auf Fässer aus amerikanischer Eiche (zu den ursprünglichen Konditionen 500 Euro/Stück, 2 Wochen Lieferzeit).\n\n---\n\n### 5. K's Reaktion: „Möglich, aber Aufpreis 100 Euro und 1 Monat Lieferzeit”\n\nK weicht nun in zwei Punkten von A's Angebot ab: Preis (600 Euro statt 500 Euro) und Lieferzeit (1 Monat statt 2 Wochen). Dies ist wiederum eine **modifizierte Annahme** i. S. d. § 150 Abs. 2 BGB: Ablehnung von A's Angebot + neues Angebot des K.\n\n---\n\n### 6. A: „Einverstanden mit Preis, besteht auf Lieferzeit” / K: „Gilt nur für europäische Eiche”\n\nA lehnt K's Angebot (mit 1-Monat-Lieferzeit) ab und besteht auf 2 Wochen. K bekräftigt seine Position.\n\n**Endergebnis Grundfall:** In keinem Stadium haben sich Angebot und Annahme vollständig gedeckt. Es besteht kein wirksamer Kaufvertrag.\n\n---\n\n## Abwandlung 1: A erklärt sich mit dem Aufpreis einverstanden, besteht aber auf der Lieferzeit von 2 Wochen\n\nA nimmt K's Angebot (amerikanische Eiche, 600 Euro, 1 Monat Lieferzeit) nur teilweise an: Er stimmt dem Aufpreis zu, weicht aber bei der Lieferzeit ab.\n\nGemäß § 150 Abs. 2 BGB liegt wiederum eine **modifizierte Annahme** vor (Ablehnung + neues Angebot mit 600 Euro/Stück, 2 Wochen Lieferzeit). Dieses Angebot müsste K noch annehmen.\n\nK hat das aber nicht getan – er hat auf seine Konditionen bestanden.\n\n**Ergebnis Abwandlung 1:** Kein wirksamer Kaufvertrag.\n\n---\n\n## Abwandlung 2: A überweist zusätzlich den Kaufpreis (mit Verwendungszweck: 2 Wochen Lieferzeit)\n\nA überweist den Kaufpreis. Fraglich ist, ob dies eine konkludente Annahme von K's Angebot (amerikanische Eiche, 600 Euro, 1 Monat Lieferzeit) darstellt.\n\nDie Überweisung könnte als konkludentes Verhalten (Annahmehandlung) ausgelegt werden. Allerdings hat A im Verwendungszweck ausdrücklich auf die 2-Wochen-Lieferzeit hingewiesen. Die Überweisung ist daher erneut als **modifizierte Annahme** zu qualifizieren: A stimmt dem Preis zu, besteht aber weiterhin auf 2 Wochen Lieferzeit. Eine eindeutige, vorbehaltlose Annahme von K's Angebot liegt damit nicht vor.\n\n**Ergebnis Abwandlung 2:** Auch hier kein wirksamer Kaufvertrag, da A durch den Verwendungszweck der Überweisung seine abweichende Position zur Lieferzeit eindeutig aufrechterhalten hat."
+    },
+    {
+      "id": "bgb-at-rg-ex-3",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Besprechungsfall 2.3 – Die Küche ohne Griffe",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "D bestellt im Küchencenter K eine Küche „ohne Griffe/Knopfbohrung” an den Fronten für 3.000 Euro. Als K liefert und montiert, ist D entsetzt: Er hatte eine optisch versteckte Griffleiste erwartet (was vielfach üblich ist). K hatte die Vereinbarung so verstanden, dass D sich selbst Griffe besorgt und anbringt (was ebenfalls Kunden vielfach wünschen).\n\nLiegt ein wirksamer Kaufvertrag vor?\n\nAbwandlung: D hatte während der Vertragsverhandlungen auch gewünscht, dass K eine Einweisung in die elektronischen Geräte vornimmt; Kosten wurden nur für die Montage vereinbart. Die Küche wird geliefert und abgenommen, eine Einweisung erfolgt nicht. Wie ist zu entscheiden?",
+      "hint": "Prüfe beim Grundfall: Haben sich die Parteien wirklich geeinigt oder liegt ein Dissens vor? Wichtig: Zuerst Auslegung (§§ 133, 157 BGB) prüfen, bevor Dissens angenommen wird. In der Abwandlung: Wesentlicher Punkt oder Nebenpunkt?",
+      "solution": "## Grundfall: Liegt ein wirksamer Kaufvertrag vor?\n\n**Obersatz:** D könnte gegen K einen Anspruch auf Lieferung einer Küche mit versteckter Griffleiste aus § 433 Abs. 1 BGB haben, wenn ein wirksamer Kaufvertrag mit entsprechendem Inhalt zustande gekommen ist.\n\n---\n\n### Angebot und Annahme\n\nD und K haben sich über eine Küche „ohne Griffe/Knopfbohrung” geeinigt und einen Preis von 3.000 Euro vereinbart. Angebot und Annahme liegen vor. Die essentialia negotii sind benannt (Kaufgegenstand: Küche; Kaufpreis: 3.000 Euro).\n\nFraglich ist jedoch, ob auch ein übereinstimmender Wille (**Einigkeit/Konsens**) über den Inhalt des Vertrages vorlag.\n\n---\n\n### Auslegung (§§ 133, 157 BGB)\n\nBeide Parteien verstehen unter „ohne Griffe/Knopfbohrung” etwas Verschiedenes:\n- D: Küche mit optisch versteckter Griffleiste\n- K: Küche ohne jede Griffvorrichtung (D bringt eigene Griffe an)\n\n**Auslegung nach §§ 133, 157 BGB** (objektiver Empfängerhorizont): Maßgebend ist, wie ein verständiger Empfänger die Erklärung verstehen durfte. Beide Interpretationen sind im Küchenmarkt verbreitet – es gibt keine eindeutig vorherrschende Branchenübung. Eine objektiv richtige Auslegung ergibt sich damit nicht eindeutig.\n\n---\n\n### Versteckter Dissens\n\nDa die Auslegung zu keinem eindeutigen Ergebnis führt, liegt ein **versteckter Dissens** vor: Beide Parteien glauben, sich geeinigt zu haben, meinen aber verschiedene Dinge.\n\nEs handelt sich um einen wesentlichen Vertragspunkt (die Art der Griffgestaltung gehört zur Beschaffenheit der Kaufsache und ist Hauptinhalt des Kaufgegenstands). Ein versteckter Dissens über wesentliche Vertragspunkte führt wie ein offener Dissens zum **Totaldissens** – es ist kein wirksamer Vertrag zustande gekommen.\n\n---\n\n**Endergebnis Grundfall:** Mangels Einigkeit über den wesentlichen Vertragsinhalt (Griffgestaltung) ist kein wirksamer Kaufvertrag zustande gekommen.\n\n---\n\n## Abwandlung: Fehlende Einweisung in elektronische Geräte\n\nHier ist ein Kaufvertrag über die Küche (inkl. Montage) wirksam geschlossen worden. Fraglich ist, ob die Einweisung in die elektronischen Geräte als Vertragsbestandteil gilt, obwohl Kosten dafür nicht vereinbart wurden.\n\n**Die Einweisung als Nebenpunkt:** D hatte zwar den Wunsch geäußert, aber Kosten wurden nur für die Montage vereinbart. Damit bestand über die Einweisung ein **offener Dissens** bzgl. eines Nebenpunktes.\n\nGemäß § 154 Abs. 1 S. 1 BGB ist im Zweifel kein Vertrag geschlossen, solange die Parteien sich über einen Punkt noch nicht geeinigt haben, über den eine Einigung aus Sicht auch nur einer Partei noch erzielt werden soll. Da die Kosten für die Einweisung nicht vereinbart wurden und D diese aber wollte, liegt ein offener Dissens über eine Nebenleistung vor. **Abweichend** kann jedoch der Parteiwille ergeben, dass der Vertrag trotzdem wirksam sein sollte – die Küche wurde geliefert und **abgenommen**, ohne dass D die fehlende Einweisung gerügt hat. Durch die einvernehmliche Vertragsdurchführung (Abnahme ohne Vorbehalt) ist der Kaufvertrag wirksam zustande gekommen.\n\nDie Einweisung in die elektronischen Geräte wäre ggf. als unentgeltliche **Nebenleistungspflicht** (§ 241 Abs. 1 BGB) aus dem Vertrag zu qualifizieren, wenn sie nach dem erkennbaren Willen beider Parteien Vertragsbestandteil werden sollte – was allerdings mangels Kostenvereinbarung fraglich ist.\n\n**Ergebnis Abwandlung:** Der Kaufvertrag über die Küche (mit Montage) ist wirksam. Ein durchsetzbarer Anspruch auf Einweisung in die elektronischen Geräte besteht mangels klarer Einigung und fehlender Kostenzusage nur dann, wenn die Einweisung nach Auslegung als unentgeltliche Nebenpflicht aus dem Vertrag folgt."
+    },
+    {
+      "id": "bgb-at-rg-ex-4",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Besprechungsfall 2.4 – Der neue Rasenmäher und die letzte Rate",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "K kauft bei O einen Rasenmäher (Marke D, Modell 301) für 3.000 Euro auf Raten (20 Raten à 100 Euro + Schlussrate 1.000 Euro). Die Lieferung erfolgt unter dem Vorbehalt der vollständigen Kaufpreiszahlung. K hat nun die Schlussrate gezahlt.\n\nLiegt ein wirksamer Vertrag hinsichtlich der Eigentumsübertragung (dinglicher Vertrag) vor?\n\nAbwandlung: Es war vereinbart, dass das Eigentum bis zur Zahlung des Kaufpreises bei O verbleibt, K den Rasenmäher aber weiterverkaufen darf. K verkauft und übereignet den Rasenmäher an T, bevor er den Kaufpreis vollständig gezahlt hat. Wie ist zu entscheiden?",
+      "hint": "Zur Eigentumsübertragung braucht man nach § 929 BGB: Einigung + Übergabe. Beachte das Trennungs- und Abstraktionsprinzip. Der 'Vorbehalt der vollständigen Bezahlung' ist eine aufschiebende Bedingung für das Verfügungsgeschäft. In der Abwandlung: § 185 Abs. 1 BGB (Verfügung eines Nichtberechtigten mit Einwilligung).",
+      "solution": "## Grundfall: Liegt ein wirksamer dinglicher Vertrag (Eigentumsübergang) vor?\n\n**Obersatz:** K könnte Eigentümer des Rasenmähers geworden sein, wenn ein wirksamer Eigentumsübergang nach § 929 BGB stattgefunden hat.\n\n---\n\n### Voraussetzungen des § 929 BGB\n\nGemäß § 929 S. 1 BGB ist zur Eigentumsübertragung erforderlich:\n1. **Einigung** (dinglicher Vertrag): Beide sind sich einig, dass das Eigentum übergehen soll\n2. **Übergabe**: Die Sache wird übergeben\n\n---\n\n### 1. Einigung\n\nK und O haben sich über die Übereignung des Rasenmähers geeinigt. Allerdings erfolgte die Lieferung **unter dem Vorbehalt der vollständigen Bezahlung des Kaufpreises**. Dies ist eine **aufschiebende Bedingung** (§ 158 Abs. 1 BGB) für das Verfügungsgeschäft (Eigentumsübertragung): Das Eigentum soll erst übergehen, wenn der vollständige Kaufpreis gezahlt ist (sogenannter **Eigentumsvorbehalt**).\n\nEine Einigung unter aufschiebender Bedingung ist grundsätzlich wirksam – sie führt nur dazu, dass die Eigentumswirkung bis zum Bedingungseintritt in der Schwebe bleibt.\n\n### 2. Übergabe\n\nO hat den Rasenmäher an K übergeben. Die Übergabe ist bereits bei Lieferung erfolgt.\n\n### 3. Bedingungseintritt\n\nK hat nunmehr die Schlussrate gezahlt und damit den vollen Kaufpreis entrichtet. Die aufschiebende Bedingung (vollständige Zahlung) ist eingetreten.\n\n---\n\n**Endergebnis Grundfall:** Mit Eintritt der Bedingung (vollständige Kaufpreiszahlung) ist das Eigentum an dem Rasenmäher auf K übergegangen. Ein wirksamer dinglicher Vertrag liegt vor.\n\n---\n\n## Abwandlung: K verkauft und übereignet den Rasenmäher an T, bevor er den Kaufpreis vollständig gezahlt hat\n\n**Obersatz:** T könnte Eigentümer des Rasenmähers geworden sein, wenn eine wirksame Eigentumsübertragung nach § 929 BGB i. V. m. § 185 Abs. 1 BGB stattgefunden hat.\n\n---\n\n### K als Nichtberechtigter\n\nZum Zeitpunkt der Übereignung an T ist K noch **kein Eigentümer** (das Eigentum steht unter aufschiebender Bedingung und ist noch bei O). K ist daher ein **Nichtberechtigter**.\n\nEine Verfügung eines Nichtberechtigten ist grundsätzlich unwirksam. Gemäß § 185 Abs. 1 BGB ist jedoch die Verfügung eines Nichtberechtigten über ein fremdes Recht mit **Einwilligung** des Berechtigten wirksam.\n\n### Einwilligung des O (§ 185 Abs. 1 BGB)\n\nO hat K ausdrücklich erlaubt, den Rasenmäher weiterzuverkaufen. Diese Erlaubnis ist eine **Einwilligung** i. S. d. § 185 Abs. 1 BGB (= vorherige Zustimmung eines Berechtigten zur Verfügung des Nichtberechtigten).\n\n### Übergabe\n\nK hat den Rasenmäher an T übergeben und eine Einigung über den Eigentumsübergang mit T getroffen (§ 929 S. 1 BGB).\n\n---\n\n**Endergebnis Abwandlung:** T ist wirksam Eigentümer des Rasenmähers geworden. Die Übereignung durch K als Nichtberechtigten ist gemäß § 185 Abs. 1 BGB wirksam, weil O seine Einwilligung erteilt hat."
+    },
+    {
+      "id": "bgb-at-rg-ex-5",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Besprechungsfall 2.5 – Der neue Marktstand für fünf Monate",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "B betreibt eine Bäckerei-GmbH und schließt am 10. April 2026 mit der Stadt S einen Mietvertrag über einen Standplatz. Schriftlich vereinbart ist, dass B den Standplatz innerhalb der ersten fünf Monate einseitig beenden kann, beginnend mit dem 1. Juni 2026.\n\nBis zu welchem Datum kann B den Standplatz einseitig beenden? (Nur die Befristung ist zu prüfen.)\n\nAbwandlung 1: Statt fünf Monate gilt eine Frist von 12 Wochen.\n\nAbwandlung 2: Jeder Vertragspartner kann innerhalb der ersten 10 Tage kündigen; der Vertrag wurde am 02.06.2025 um 9:00 Uhr geschlossen und unmittelbar begonnen.",
+      "hint": "Schritt-für-Schritt: 1. Ereignis- oder Tagesbeginnfrist? 2. Tages-, Wochen- oder Monatsfrist? 3. § 188 BGB anwenden. 4. § 193 BGB prüfen.",
+      "solution": "## Grundfall: 5-Monats-Frist ab 1. Juni 2026\n\n**Fristbestimmung:**\n- Fristbeginn: **1. Juni 2026** – Die Frist beginnt mit dem Beginn des Tages (Tagesbeginnfrist, § 187 Abs. 2 BGB), da vertraglich der 1. Juni als Beginn definiert ist. Der 1. Juni wird mitgezählt.\n- Fristtyp: **Monatsfrist**\n\n**Fristende nach § 188 Abs. 2 BGB:**\n\nBei einer Tagesbeginnfrist endet die Monatsfrist nach § 188 Abs. 2 Alt. 2 BGB am **Vortag** des Tages mit der gleichen Zahl im letzten Monat der Frist.\n\n- 5 Monate ab 1. Juni → letzter Monat der Frist: November 2026\n- Gleiche Zahl wie Fristbeginnstag (1.) im November 2026 = 1. November 2026\n- Vortag = **31. Oktober 2026**\n\n**Prüfung § 193 BGB:** 31. Oktober 2026 ist ein Samstag. Da hier ein Kündigungsrecht (= Willenserklärung) auszuüben ist, gilt § 193 BGB. Das Fristende verschiebt sich auf den nächsten Werktag: **Montag, 2. November 2026**, 24:00 Uhr.\n\n**Ergebnis Grundfall:** B kann den Standplatz noch bis zum **2. November 2026** einseitig beenden.\n\n---\n\n## Abwandlung 1: 12-Wochen-Frist ab 1. Juni 2026\n\n- Fristbeginn: **1. Juni 2026** (Tagesbeginnfrist, § 187 Abs. 2 BGB)\n- Fristtyp: **Wochenfrist**\n\n**Fristende nach § 188 Abs. 2 Alt. 2 BGB:**\n- Tagesbeginnfrist, Wochenfrist → Fristende am **Tag in der letzten Woche, der dem Tag mit der gleichen Benennung wie der Fristbeginn vorgeht**\n- 1. Juni 2026 ist ein **Montag**\n- 12 Wochen ab Montag, 1. Juni → letzte Woche: Woche beginnend 24. August 2026\n- Vortag des Montags in dieser Woche = **Sonntag, 23. August 2026**\n\n**Prüfung § 193 BGB:** 23. August 2026 ist ein Sonntag. § 193 BGB → Verschiebung auf **Montag, 24. August 2026**, 24:00 Uhr.\n\n**Ergebnis Abwandlung 1:** B kann den Standplatz noch bis zum **24. August 2026** einseitig beenden.\n\n---\n\n## Abwandlung 2: 10-Tage-Frist, Vertragsschluss 02.06.2025 um 9:00 Uhr\n\n- Ereignis: Vertragsschluss am **2. Juni 2025 um 9:00 Uhr** (ein Zeitpunkt im Laufe des Tages)\n- Fristtyp: **Tagesfrist (Ereignisfrist)**\n\n**Fristbeginn nach § 187 Abs. 1 BGB:**\n- Ereignisfrist: Der Tag des Ereignisses (2. Juni) wird **nicht mitgezählt**\n- Fristbeginn: **3. Juni 2025**, 0:00 Uhr\n\n**Fristende nach § 188 Abs. 1 BGB:**\n- 10-Tagesfrist: 10 Tage ab 3. Juni = Fristende am **12. Juni 2025**, 24:00 Uhr\n\n**Prüfung § 193 BGB:** 12. Juni 2025 ist ein Donnerstag → kein Wochenende, keine Verschiebung.\n\n**Ergebnis Abwandlung 2:** Jeder Vertragspartner kann den Standplatz noch bis zum **12. Juni 2025**, 24:00 Uhr, kündigen."
+    },
+    {
+      "id": "bgb-at-rg-ex-6",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Vertiefungsfall 2.1 – Der neue Rasenmäher und die verspätete Annahme",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "K hat sich selbstständig gemacht und bestellt per E-Mail bei O einen Rasenmäher (Marke D, Modell 301) für 3.000 Euro. Da K auch zwei Wochen später keine Antwort von O erhalten hat, sucht er erneut nach einem Rasenmäher und wird beim Großhändler G fündig. Einen Tag später meldet sich O und erklärt, er sei einverstanden und liefere den Rasenmäher am nächsten Tag.\n\nLiegt ein wirksamer Kaufvertrag zwischen K und O vor?",
+      "hint": "Prüfe, ob O's Annahme noch rechtzeitig war (§ 147 Abs. 2 BGB). Was passiert bei einer verspäteten Annahme (§ 150 Abs. 1 BGB)? Wurde das Angebot von K noch nicht durch eine andere Maßnahme aufgehoben?",
+      "solution": "## Gutachten: Ist ein wirksamer Kaufvertrag zwischen K und O zustande gekommen?\n\n**Obersatz:** K könnte gegen O einen Anspruch auf Lieferung des Rasenmähers aus § 433 Abs. 1 BGB haben, wenn ein wirksamer Kaufvertrag zustande gekommen ist.\n\n---\n\n### 1. Angebot des K\n\nK hat O per E-Mail einen Rasenmäher der Marke D, Modell 301, für 3.000 Euro bestellt. Diese Erklärung enthält alle essentialia negotii (§ 145 BGB) eines Kaufvertrags (Kaufgegenstand und Kaufpreis) und ist an den bestimmten Empfänger O gerichtet.\n\n**Zwischenergebnis:** K hat O ein wirksames **Angebot** auf Abschluss eines Kaufvertrags unterbreitet.\n\n---\n\n### 2. Rechtzeitigkeit der Annahme des O (§ 147 Abs. 2 BGB)\n\nK und O kommunizieren per E-Mail – sie sind daher als **Abwesende** zu behandeln. Für Angebote unter Abwesenden gilt nach § 147 Abs. 2 BGB: Das Angebot kann nur bis zu dem Zeitpunkt angenommen werden, in welchem der Antragende den **Eingang der Antwort unter regelmäßigen Umständen erwarten darf** (Verkehrssitte).\n\nK hat das Angebot per E-Mail gesandt. Bei einer Bestellung per E-Mail ist nach der Verkehrssitte mit einer Antwort **innerhalb weniger Tage** zu rechnen – keinesfalls erst nach über zwei Wochen. Da K nach **zwei Wochen** keine Antwort erhalten hatte und sich bereits anderweitig umgeschaut hat, ist die nach § 147 Abs. 2 BGB maßgebliche Frist verstrichen.\n\n**Zwischenergebnis:** O's Erklärung nach mehr als zwei Wochen erfolgte **verspätet**.\n\n---\n\n### 3. Rechtsfolge: Verspätete Annahme = neues Angebot (§ 150 Abs. 1 BGB)\n\nEine verspätete Annahme gilt nach § 150 Abs. 1 BGB nicht als Annahme, sondern als **neues Angebot** des O an K.\n\nDieses neue Angebot des O müsste K noch annehmen. K hat sich nach zwei Wochen anderweitig nach einem Rasenmäher umgeschaut – sein ursprüngliches Interesse ist damit nicht mehr eindeutig. Eine Annahme durch K liegt nicht vor.\n\n---\n\n**Endergebnis:** Zwischen K und O ist **kein wirksamer Kaufvertrag** zustande gekommen. O's verspätete Annahme gilt nach § 150 Abs. 1 BGB nur als neues Angebot an K, das K nicht angenommen hat."
+    },
+    {
+      "id": "bgb-at-rg-ex-7",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "label": "Praxisteil 2, Vertiefungsfall 2.3 – Das neue Tretauto für das Enkelkind",
+      "source": "PR-WIWI-Skript-PraxisteilS10-12.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "C sucht für sein Enkelkind ein Tretauto und schreibt an alle seine Freunde, ob sie ihm ein gebrauchtes Tretauto für max. 49 Euro verkaufen möchten. B teilt C am 01.04.2026 per E-Mail mit, dass er sein altes Tretauto für 45 Euro verkauft; C solle dies innerhalb eines Monats bestätigen. Diese E-Mail liest C noch am selben Tag.\n\nKann C am 04.05.2025 (gemeint: 04.05.2026) das Angebot des B noch annehmen?\n\nAbwandlung 1: Die E-Mail des B wäre am späten Abend des 09.04.2026 eingegangen, B hätte sie erst am nächsten Morgen (10.04.) gelesen; die Frist wäre 3 Wochen gewesen.\n\nAbwandlung 2: Die E-Mail wäre am Morgen des 28.04.2026 eingegangen; die Frist wäre 3 Tage gewesen.",
+      "hint": "C's Rundschreiben ist eine invitatio. B's E-Mail ist das erste Angebot. Für die Annahmefrist gilt § 148 BGB. Wichtig: Wann geht die E-Mail zu? (Anm.: Eine Mitteilung geht erst zu, wenn unter normalen Umständen mit der Kenntnisnahme zu rechnen ist.) Dann: Ereignis- oder Tagesbeginnfrist? § 187, 188 BGB.",
+      "solution": "## Grundfall: Kann C am 04.05.2026 das Angebot des B noch annehmen?\n\n---\n\n### 1. C's Rundschreiben: invitatio\n\nC schreibt an alle Freunde – unbestimmter Personenkreis. Dies ist eine **invitatio ad offerendum**, kein wirksames Angebot.\n\n### 2. B's E-Mail vom 01.04.2026: Angebot mit gesetzter Annahmefrist\n\nB macht C ein konkretes Angebot (Tretauto für 45 Euro) und setzt eine **Annahmefrist von einem Monat** (§ 148 BGB). Die E-Mail geht C **am 01.04.2026** zu (er liest sie noch am selben Tag).\n\n### 3. Berechnung der Annahmefrist\n\n- Ereignis: Zugang der E-Mail am **01.04.2026** (Zeitpunkt im Laufe des Tages)\n- **Ereignisfrist** i. S. d. § 187 Abs. 1 BGB: Der 01.04. wird nicht mitgezählt, Fristbeginn ist der **02.04.2026**\n- Monatsfrist, Ereignisfrist → Fristende nach § 188 Abs. 2 Alt. 1 BGB am **gleichen Datum** im nächsten Monat: **01.05.2026**, 24:00 Uhr\n\n**Prüfung § 193 BGB:** 01.05.2026 ist ein Freitag → kein Wochenende, keine Verschiebung.\n\n**Ergebnis:** Die Annahmefrist endet am **01. Mai 2026**, 24:00 Uhr. Am 04.05.2026 ist die Frist bereits abgelaufen.\n\nGemäß § 146 BGB erlischt das Angebot mit Ablauf der Annahmefrist. C kann am **04.05.2026 das Angebot nicht mehr wirksam annehmen**. Eine Annahmeerklärung am 04.05.2026 wäre eine verspätete Annahme = neues Angebot des C (§ 150 Abs. 1 BGB).\n\n---\n\n## Abwandlung 1: E-Mail am späten Abend des 09.04.2026 eingegangen, 3-Wochen-Frist\n\n**Zugang der E-Mail:** Eine E-Mail geht zu, wenn unter normalen Umständen mit der Kenntnisnahme zu rechnen ist. Eine am **späten Abend** eingegangene E-Mail ist erst am **nächsten Morgen** zugegangen (10.04.2026), weil erst dann unter normalen Umständen mit der Kenntnisnahme zu rechnen ist.\n\n- Ereignis: Zugang am **10.04.2026** (B liest am nächsten Morgen)\n- Ereignisfrist: 10.04. wird nicht mitgezählt, Fristbeginn: **11.04.2026**\n- 3-Wochen-Ereignisfrist → Fristende nach § 188 Abs. 2 Alt. 1 BGB: gleicher Wochentag (Samstag) in der letzten Woche = **01.05.2026** (3 Wochen nach dem Samstag 11.04. = Samstag, 02.05.2026)\n\nKorrektur: 11.04.2026 ist ein Samstag. 3 Wochen später = Samstag, **02.05.2026**, 24:00 Uhr.\n\n**§ 193 BGB:** 02.05.2026 ist ein Samstag + Willenserklärung abzugeben → Verschiebung auf **Montag, 04.05.2026**, 24:00 Uhr.\n\n**Ergebnis Abwandlung 1:** Die Annahmefrist endet am **04.05.2026**, 24:00 Uhr. C kann am 04.05.2026 das Angebot noch wirksam annehmen.\n\n---\n\n## Abwandlung 2: E-Mail am Morgen des 28.04.2026 eingegangen, 3-Tage-Frist\n\n- Zugang der E-Mail: **28.04.2026** (Morgen = normaler Zugang, unter normalen Umständen Kenntnisnahme möglich)\n- Ereignisfrist: 28.04. wird nicht mitgezählt, Fristbeginn: **29.04.2026**\n- 3-Tagesfrist nach § 188 Abs. 1 BGB: 3 Tage ab 29.04. = Fristende **01.05.2026**, 24:00 Uhr\n\n**§ 193 BGB:** 01.05.2026 ist ein Freitag → kein Wochenende, keine Verschiebung.\n\n**Ergebnis Abwandlung 2:** Die Annahmefrist endet am **01.05.2026**, 24:00 Uhr. Nach dem 01.05.2026 kann C das Angebot nicht mehr wirksam annehmen."
+    }
+  ]
+}

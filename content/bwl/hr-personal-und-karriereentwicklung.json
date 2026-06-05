@@ -1,0 +1,420 @@
+{
+  "id": "hr-personal-und-karriereentwicklung",
+  "subjectId": "bwl",
+  "group": "Personal",
+  "title": "Personal- und Karriereentwicklung",
+  "summary": "Was ist Personalentwicklung (PE), wozu dient sie, und wie läuft der PE-Prozess ab? Dieses Thema erklärt PE-Maßnahmen (on/off/near the job), das Kirkpatrick-Evaluationsmodell, das 70-20-10-Modell, Kompetenzmodelle sowie moderne Lernformate (Gamification, KI). Abschluss: Karrierewege und -bewegungen sowie die Vereinbarkeit von Karriere und Familie (Social-Freezing-Debatte).",
+  "order": 15,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "pe-grundlagen",
+      "heading": "Was ist Personalentwicklung — und warum ist sie so wichtig?",
+      "body": "**Personalentwicklung (PE)** — auf Englisch *Human Resource Development (HRD)* — ist der systematische Versuch eines Unternehmens, seinen Mitarbeitenden zu helfen, die Fähigkeiten zu entwickeln, die sie für heutige und künftige Aufgaben brauchen.\n\n**Definition nach Werner & DeSimone (2006):**\n> „HRD can be defined as a set of systematic activities designed by an organization to provide its members with the opportunities to learn necessary skills to meet current and future job demands.\"\n\nEinfach gesagt: Das Unternehmen investiert gezielt in das Lernen seiner Menschen.\n\n**Warum macht ein Unternehmen das?**\n\n1. **Leistung verbessern** — Mitarbeitende, die besser qualifiziert sind, arbeiten effektiver.\n2. **Anpassungsfähigkeit erhöhen** — Die Wirtschaft verändert sich rasant (Digitalisierung, KI, Globalisierung). Wer heute nicht lernt, ist morgen veraltet.\n3. **Effektivität steigern** — Training, Entwicklung und Karriereplanung helfen sowohl dem Einzelnen als auch dem Unternehmen, ihre Ziele zu erreichen.\n4. **Motivieren und binden** — Training wirkt als „Incentive\": Mitarbeitende, die gefördert werden, fühlen sich wertgeschätzt und bleiben länger.\n\n**Externe Faktoren, die PE antreiben:**\n\n- **Globalisierung** → neue Kompetenzen nötig (Sprachen, interkulturelle Fähigkeiten)\n- **Digitalisierung & IKT** → neue Lernmethoden (E-Learning, Webinars, VR)\n- **Generation Y/Z (Digital Natives)** → andere Erwartungen an Lernen und Technologie\n\n**Wettbewerbsvorteil durch PE:** Aus Sicht des Resource-Based View (RBV) sind gut ausgebildete Mitarbeitende schwer imitierbar — das macht PE zur strategischen Ressource.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Personalentwicklung (PE)",
+          "body": "Gesamtheit aller Maßnahmen, die ein Unternehmen ergreift, um die Kenntnisse, Fähigkeiten und Verhaltensweisen seiner Mitarbeitenden systematisch zu fördern und weiterzuentwickeln. Ziel: individuelle Leistung und organisationale Effektivität steigern."
+        },
+        {
+          "kind": "info",
+          "title": "Reaktive vs. antizipative PE",
+          "body": "**Reaktive PE** reagiert auf bereits entstandene Leistungslücken (z.B. jemand macht Fehler → Schulung). **Antizipative PE** handelt vorausschauend und bereitet Mitarbeitende auf zukünftige Anforderungen vor, bevor diese entstehen — das ist der modernere Ansatz."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "pe-massnahmen-tabelle",
+          "title": "PE-Maßnahmen nach Becker (2005)",
+          "headers": ["Kategorie", "Beispiele", "PE-Sinn"],
+          "rows": [
+            ["Bildung", "Berufsausbildung, Weiterbildung, Führungsbildung, Anlernung, Umschulung", "PE im engen Sinn"],
+            ["Förderung", "Training, Arbeitsplatzwechsel, Auslandseinsatz, Karriereplanung, Coaching, Mentoring", "PE im erweiterten Sinn (Bildung + Förderung)"],
+            ["Organisationsentwicklung (OE)", "Teamentwicklung, Projektarbeit, Gruppenarbeit, sozio-technische Systemgestaltung", "PE im weiteren Sinn (Bildung + Förderung + OE)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pe-on-off-near",
+      "heading": "PE-Maßnahmen: on the job, off the job, near the job — was ist der Unterschied?",
+      "body": "Eine der wichtigsten Einteilungen in der PE ist die Frage: **Wo findet das Lernen statt?** Man unterscheidet klassisch drei Orte:\n\n### On the job — direkt am Arbeitsplatz lernen\n\nDer Mitarbeitende lernt, während er seinen normalen Job ausführt. Das Lernen ist unmittelbar mit der Arbeit verknüpft.\n\n**Beispiele:**\n- **Job Rotation** (= Arbeitsplatzwechsel): Mitarbeitende wechseln regelmäßig zwischen verschiedenen Abteilungen. Sie lernen das Unternehmen aus verschiedenen Perspektiven kennen.\n- **Coaching**: Eine Führungskraft oder ein externer Coach begleitet den Mitarbeitenden direkt bei seiner Arbeit und gibt Feedback.\n- **Mentoring**: Eine erfahrene Person (Mentor) gibt ihr Wissen und ihre Erfahrung an eine jüngere Person (Mentee) weiter — oft langfristig und informell.\n- **Projektarbeit / Auslandseinsatz**: Man lernt durch das Bearbeiten realer, herausfordernder Aufgaben.\n\n**Vorteil:** Hoher Praxisbezug, Transfer ist direkt — das Gelernte wird sofort angewendet.\n\n**Nachteil:** Kann die laufende Arbeit stören, nicht immer systematisch.\n\n### Off the job — außerhalb des Arbeitsplatzes lernen\n\nDer Mitarbeitende verlässt seinen normalen Arbeitskontext und nimmt an einer Schulungsmaßnahme teil.\n\n**Beispiele:**\n- Seminare und Workshops (extern oder intern)\n- Vorlesungen und Weiterbildungsstudiengänge\n- E-Learning-Kurse (online, zeitlich flexibel)\n- VR-Trainings (z.B. Lufthansa: Flugbegleiter trainieren Konfliktsituationen im VR)\n\n**Vorteil:** Strukturiertes, konzentriertes Lernen; Abstand vom Tagesgeschäft.\n\n**Nachteil:** Transfer-Problem: Was im Seminar gelernt wurde, wird nicht immer am Arbeitsplatz angewendet.\n\n### Near the job — arbeitsplatznah lernen\n\nEine hybride Form: Das Lernen findet neben dem Arbeitsalltag statt, hat aber direkten Bezug zur Arbeit.\n\n**Beispiele:**\n- Qualitätszirkel (= Gruppen von Mitarbeitenden, die sich regelmäßig treffen, um Probleme zu analysieren)\n- Lernstatt (Lerngruppen im Unternehmen)\n- Planspiele und Fallstudien, die sich auf reale Unternehmensszenarien beziehen\n\n### Out of the job — Vorbereitung auf das Ausscheiden\n\nPE-Maßnahmen für Mitarbeitende, die kurz vor dem Renteneintritt stehen oder das Unternehmen verlassen:\n- Ruhestandsvorbereitung\n- Outplacement-Beratung (Hilfe bei der Jobsuche nach Kündigung)",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Lernorte auf einen Blick",
+          "body": "- **On the job** = am Arbeitsplatz (Job Rotation, Coaching, Mentoring)\n- **Off the job** = außerhalb (Seminar, E-Learning, VR)\n- **Near the job** = arbeitsplatznah (Qualitätszirkel, Lernstatt, Planspiele)\n- **Out of the job** = beim/nach dem Ausscheiden (Ruhestand, Outplacement)"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Praxisbeispiel: Lufthansa VR-Training (off the job)",
+          "body": "Lufthansa Aviation Training (LAT) nutzt KI-generierte VR-Trainings, in denen Flugbegleiter Konfliktsituationen mit schwierigen Passagieren üben. Der wütende Passagier am Notausgang ist keine echte Person, sondern eine KI-Illusion — das Kabinenpersonal kann die Situation beliebig oft und ohne Peinlichkeit vor Kollegen trainieren. Je kontrollierter der Flugbegleiter reagiert, desto schneller beruhigt sich der digitale Passagier."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "lernorte-mermaid",
+          "title": "PE-Maßnahmen nach Lernort",
+          "caption": "Einordnung der wichtigsten PE-Methoden nach dem Lernort (on/near/off/out the job).",
+          "code": "graph TD\n  A[PE-Maßnahmen] --> B[On the job]\n  A --> C[Near the job]\n  A --> D[Off the job]\n  A --> E[Out of the job]\n  B --> B1[Job Rotation]\n  B --> B2[Coaching]\n  B --> B3[Mentoring]\n  B --> B4[Projektarbeit]\n  C --> C1[Qualitaetszirkel]\n  C --> C2[Planspiele]\n  C --> C3[Lernstatt]\n  D --> D1[Seminare]\n  D --> D2[E-Learning]\n  D --> D3[VR-Training]\n  E --> E1[Outplacement]\n  E --> E2[Ruhestandsvorbereitung]"
+        }
+      ]
+    },
+    {
+      "id": "pe-prozess",
+      "heading": "Der PE-Prozess: Wie plant man Personalentwicklung systematisch?",
+      "body": "PE passiert nicht zufällig — gute Unternehmen folgen einem strukturierten Prozess. Nach Werner & DeSimone (2006) besteht er aus vier Phasen:\n\n### Phase 1: Bedarfsanalyse — Welcher Bedarf existiert?\n\nBevor eine Schulung stattfindet, muss man wissen: **Was soll verbessert werden?** Die Analyse erfolgt auf drei Ebenen:\n\n1. **Organisationsdiagnose**: Welche Ziele hat das Unternehmen? Welche Ressourcen stehen zur Verfügung? Was sind externe Einschränkungen?\n2. **Aufgaben- und Anforderungsanalyse**: Was muss jemand in dieser Rolle können? (Arbeitsplatzbeschreibung, Aufgabenanalyse)\n3. **Personenanalyse**: Kann der aktuelle Mitarbeitende diese Anforderungen erfüllen? Wo liegt die **Leistungslücke**?\n\n**Leistungslücke** = Differenz zwischen der geforderten Leistung und der tatsächlichen Leistung eines Mitarbeitenden.\n\n> **Achtung:** Viele Unternehmen leiten PE-Maßnahmen aus den falschen Gründen ein — z.B. weil „alle großen Firmen das Programm nutzen\" oder ein bekannter Trainer verfügbar ist. Das ist keine echte Bedarfsanalyse!\n\n### Phase 2: Design — Wie soll das Training aussehen?\n\n- Lernziele bestimmen (Was sollen Teilnehmende danach können?)\n- Entwicklungsplan festlegen\n- Methoden und Techniken auswählen (s. Tabelle unten)\n- Zeitplan festlegen\n- Trainernde/Leitende auswählen\n\n### Phase 3: Implementierung — Das Training durchführen\n\nDrei Methoden-Kategorien:\n- **Präsentationen** (passiv): Vorlesungen, Fernunterricht, Arbeitsmappen — ideal für neue Fakten\n- **Hands-on-Methoden** (aktiv): On-the-job-Learning, Simulationen, Rollenspiele, e-Learning — ideal um Fertigkeiten zu üben\n- **Gruppenbildungsmethoden**: Gruppendiskussionen, Abenteuer-Programme, Teamtrainings — ideal für Teamarbeit\n\n### Phase 4: Evaluation — War das Training wirksam?\n\nDie Schlüsselfrage: **Hat das Training etwas gebracht?** Hier kommt das Kirkpatrick-Modell ins Spiel (nächste Section).",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Transfersicherung",
+          "body": "Das größte Problem in der PE ist der **Transfermangel**: Mitarbeitende lernen etwas im Seminar, wenden es aber am Arbeitsplatz nicht an. Transfersicherung bedeutet: das Gelernte aktiv in den Arbeitsalltag integrieren (z.B. durch Follow-up-Gespräche, Lerngruppen, Umsetzungsaufgaben)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "pe-prozess-mermaid",
+          "title": "Der PE-Prozess nach Werner & DeSimone (2006)",
+          "caption": "Vierphasiger Kreislauf der systematischen Personalentwicklung.",
+          "code": "graph LR\n  A[1 Bedarfsanalyse] --> B[2 Design]\n  B --> C[3 Implementierung]\n  C --> D[4 Evaluation]\n  D --> A\n  A --> A1[Organisations- diagnose]\n  A --> A2[Aufgabenanalyse]\n  A --> A3[Personenanalyse]\n  D --> D1[Kirkpatrick-Modell]\n  D --> D2[ROI nach Phillips]"
+        }
+      ]
+    },
+    {
+      "id": "kirkpatrick",
+      "heading": "Wie misst man Trainingserfolg? Das Kirkpatrick-Modell + ROI nach Phillips",
+      "body": "Nach einem Training stellt sich die Frage: **War es gut?** Das **Kirkpatrick-Modell** (benannt nach Donald Kirkpatrick) gibt eine Antwort auf vier Ebenen — von einfach zu schwierig zu messen:\n\n### Die vier Ebenen:\n\n**Ebene 1 — Reaktion** (leichteste Ebene):\n*Wie hat den Teilnehmenden das Training gefallen?*\n- Erfassung: Feedbackbögen direkt nach dem Training\n- Beispiel: „Die Zufriedenheit mit unseren Kursen liegt bei 80%.\"\n- Problem: Beliebtheit ≠ Lernerfolg!\n\n**Ebene 2 — Lernen**:\n*Wurden die Lernziele erreicht? Haben die Teilnehmenden ihr Wissen oder ihre Fähigkeiten verbessert?*\n- Erfassung: Tests vor und nach dem Training\n- Beispiel: Wissenstest am Ende des Seminars\n\n**Ebene 3 — Verhalten** (Transfer):\n*Wenden die Mitarbeitenden das Gelernte am Arbeitsplatz an?*\n- Erfassung: Beobachtung, Befragung von Vorgesetzten\n- Beispiel: Führt die Führungskraft jetzt strukturiertere Feedbackgespräche?\n- Dies ist die **kritische Ebene**: Hier scheitert PE am häufigsten.\n\n**Ebene 4 — Ergebnisse** (schwierigste Ebene):\n*Hat das Training die Unternehmensleistung verbessert?*\n- Gestiegen: Qualität, Produktivität?\n- Gesunken: Kosten, Absentismus (= Fehlzeiten), Fluktuation?\n- Verbessert: Qualität der Zusammenarbeit?\n\n### Die 5. Ebene: ROI nach Phillips\n\nJack Phillips erweiterte das Modell um eine fünfte Ebene:\n\n$$ROI = \\frac{Programmnutzen - Programmkosten}{Programmkosten} \\times 100$$\n\n**Beispiel:** Ein Vertriebstraining kostet 10.000 € und generiert durch höhere Abschlussquoten einen Mehrerlös von 40.000 €.\n\n$$ROI = \\frac{40.000 - 10.000}{10.000} \\times 100 = 300\\%$$\n\nEin ROI von 300% bedeutet: Für jeden investierten Euro kommen 3 Euro zurück.\n\n**Problem:** Diese Zurechnung ist in der Praxis sehr schwierig — viele andere Faktoren beeinflussen die Unternehmensleistung.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kirkpatrick auf einen Blick",
+          "body": "1. **Reaktion** — Hat es gefallen? (Zufriedenheitsbefragung)\n2. **Lernen** — Wurde gelernt? (Wissenstest)\n3. **Verhalten** — Wird es angewendet? (Transfer am Arbeitsplatz)\n4. **Ergebnisse** — Hat das Unternehmen profitiert? (KPIs)\n5. **ROI** (Phillips) — Lohnt sich die Investition finanziell?"
+        },
+        {
+          "kind": "warning",
+          "title": "Häufige Fehler bei der Evaluation",
+          "body": "Viele Unternehmen messen nur Ebene 1 (Zufriedenheit) und schließen daraus, dass das Training gut war. Das ist ein Fehler: Ein beliebter Trainer garantiert noch kein Lernen und schon gar keinen Transfer."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "kirkpatrick-tabelle",
+          "title": "Kirkpatrick-Modell + ROI nach Phillips",
+          "headers": ["Ebene", "Was wird gemessen?", "Wie?", "Schwierigkeit"],
+          "rows": [
+            ["1 — Reaktion", "Zufriedenheit der Teilnehmenden", "Feedbackbogen", "Sehr einfach"],
+            ["2 — Lernen", "Wissenszuwachs, neue Fähigkeiten", "Test vor/nach Training", "Einfach"],
+            ["3 — Verhalten", "Transfer: Anwendung am Arbeitsplatz", "Beobachtung, Vorgesetztenbefragung", "Mittel"],
+            ["4 — Ergebnisse", "Produktivität, Qualität, Kosten, Fluktuation", "Unternehmens-KPIs", "Schwierig"],
+            ["5 — ROI (Phillips)", "Finanzieller Rückfluss der Investition", "ROI-Formel", "Sehr schwierig"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moderne-lernformate",
+      "heading": "Moderne Lernformate: Gamification und KI in der Weiterbildung",
+      "body": "Die Weiterbildungslandschaft verändert sich rasant. Zwei Trends sind besonders prägend:\n\n### Gamification — Spielend lernen\n\n**Was ist Gamification?** Das Prinzip, spielerische Elemente (Punkte, Level, Wettbewerb, Belohnungen) in einen Lernkontext zu integrieren.\n\n**Warum funktioniert es?** Intrinsische Motivation ist beim Spiel immer gegeben — Menschen haben Lust zu spielen und wachsen an interaktiven Aufgaben.\n\n**Praxisbeispiele aus dem Artikel (Welt/Bilanz, 2018):**\n- **Audi**: Schein-Autohaus als Ego-Shooter-Spiel + Quiz-Duell mit 690 Fragen. Verkäufer trainieren Kundengespräche im Spiel.\n- **Seat**: „Seat Ibiza Challenge\" — Verkäufer fahren als Beifahrer auf virtueller Testtour, sammeln Punkte, erhalten Zertifikate. 1,5 Millionen Quiz-Runden gespielt, 95% richtige Antworten in der letzten Spielwoche.\n- **Rewe**: Quiz-Apps auf Mobiltelefonen für Filialmitarbeitende.\n- **DM**: „Lieferhelden\"-Spiel für Logistikwissen.\n- **Mercedes-Benz**: Schein-Autohaus, Mitarbeitende schlüpfen in Kundenperspektive.\n\n### KI in der Personalentwicklung\n\n**Was verändert KI?** Künstliche Intelligenz macht Weiterbildung individueller, skalierbarer und interaktiver.\n\n**Konkrete KI-Anwendungsfelder (Handelsblatt, 2026):**\n\n1. **VR-Trainings mit KI-Avataren** (Lufthansa/3Spinlearning): Krisensituationen an Bord simulieren; die KI baut überraschende Wendungen ein, jedes Training ist anders.\n2. **Chatbots als Lernberater**: Mitarbeitende können jederzeit Fragen stellen.\n3. **Skill-Mapping** (Haufe Akademie): KI analysiert alle Jobprofile und identifiziert, welche Fähigkeiten einem Mitarbeitenden für eine bestimmte Position fehlen.\n4. **Learning on demand** (Otto Group „LIA\" — Learning Intelligence Assistant): Individuelle Lernpläne, basierend auf den Bedürfnissen des Einzelnen, jederzeit abrufbar.\n5. **Micro-Learning**: KI zerlegt komplexe Trainingsinhalte in kleine Lerneinheiten — für den Mitarbeitenden angepasst an sein Level.\n\n**Rolle des Menschen:** Aus Trainern werden „Bildungsbegleiter\", die den richtigen Bildungspfad empfehlen. Der Mensch bleibt unverzichtbar — KI ersetzt ihn nicht, verändert aber seine Rolle.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Jungheinrich Academy: Führungskräfte trainieren per Avatar",
+          "body": "Das Schulungszentrum des Gabelstaplerspezialisten Jungheinrich nutzt KI-Avatare von 3Spinlearning, damit Führungskräfte Jahresgespräche trainieren können. Ergebnis: Mitarbeitende reagieren freier und natürlicher allein am Computer als vor Kollegen. Jeder Mitarbeitende kann Inhalte so oft wiederholen, wie er möchte — auch peinliche Situationen."
+        },
+        {
+          "kind": "info",
+          "title": "Das 70-20-10-Modell",
+          "body": "Ein etabliertes Modell zur Einordnung von Lernquellen im Berufsleben:\n- **70%** des Lernens passiert durch Erfahrungen am Arbeitsplatz (on the job: Projekte, Herausforderungen, Fehler)\n- **20%** durch soziales Lernen (Feedback von Kollegen, Mentoring, Coaching)\n- **10%** durch formales Lernen (Kurse, Seminare, E-Learning)\n\nDas Modell zeigt: Formale Schulungen sind wichtig, aber die meiste Entwicklung passiert durch Arbeitserfahrung und soziale Interaktion."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "ki-pe-tabelle",
+          "title": "KI-Anwendungsfelder in der Personalentwicklung",
+          "headers": ["KI-Format", "Beschreibung", "Praxisbeispiel"],
+          "rows": [
+            ["VR-Training mit KI", "Simulation realer Situationen in Virtual Reality; KI generiert variable Szenarien", "Lufthansa: Konflikttraining Kabinenpersonal"],
+            ["KI-Avatar / digitaler Trainer", "Mitarbeitende üben mit realistischem Avatar; personalisiertes Feedback", "Jungheinrich: Jahresgespräch-Training"],
+            ["Learning Intelligence Assistant", "CustomGPT sucht passende Lernangebote, erstellt individuelle Lernpläne", "Otto Group: LIA für 36.000 Mitarbeitende"],
+            ["Skill-Mapping", "KI analysiert Kompetenzlücken und empfiehlt passende Weiterbildungen", "Haufe Akademie: Automatisiertes Skill-Mapping"],
+            ["Micro-Learning", "KI zerlegt Training in kleine, zeitlich flexible Lerneinheiten", "Jungheinrich: Training für neue Lagerfahrzeuge"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "karriereentwicklung",
+      "heading": "Karriereentwicklung: Karrierewege, -bewegungen und Vereinbarkeit",
+      "body": "**Was ist eine Karriere?** Nach Sullivan & Baruch (2009):\n\n> „A career is an individual's work-related and other relevant experiences, both inside and outside of organizations, that form a unique pattern over the individual's life span. This definition recognizes both physical movements, such as between levels, jobs, employers, occupations, and industries, as well as the interpretation of the individual.\"\n\nEinfach: Eine Karriere ist alles, was man im Berufsleben erlebt und wie man es selbst deutet — nicht nur der Aufstieg.\n\n### Karrierepfade: früher vs. heute\n\n**Früher** gab es vor allem die vertikale Karriere: von unten nach oben in der Hierarchiepyramide (Mitarbeitender → unteres Management → mittleres Management → oberes Management → Top-Management).\n\n**Heute** gibt es drei Laufbahnoptionen nebeneinander:\n- **Führungslaufbahn**: klassischer Aufstieg in die Managementhierarchie\n- **Fachlaufbahn**: horizontale Entwicklung als Spezialist/Expertin — mehr Tiefe, nicht Breite\n- **Projektlaufbahn**: Karriere durch Leitung von Projekten, wechselnde Aufgaben\n\n### Karrierebewegungen (nach Noe et al. 2010)\n\nKarriere muss nicht immer „nach oben\" gehen. Es gibt verschiedene Bewegungsrichtungen:\n\n- **Beförderung** (vertikal aufwärts): mehr Verantwortung, höhere Hierarchiestufe\n- **Job Rotation / Versetzung** (seitlich): gleiche Hierarchiestufe, anderer Bereich — erweitert das Erfahrungsspektrum\n- **Abwärtsbewegung**: seltener, aber möglich — z.B. wenn jemand in eine Rolle wechselt, die besser zu ihm passt\n- **Temporäre Stellen, Projekte, Ehrenamt, Sabbatical**: vorübergehende Erweiterung der Arbeitserfahrung\n\n### Boundaryless Career & Protean Career\n\n**Boundaryless Career** (= grenzenlose Karriere): Mitarbeitende wechseln häufig zwischen Unternehmen, Branchen und sogar Ländern — Loyalität gilt dem eigenen Kompetenzvorteil, nicht dem Arbeitgeber.\n\n**Protean Career** (nach Hall): Die Person steuert selbst ihre Karriere, orientiert sich an persönlichen Werten und Zielen statt an organisationalen Vorgaben. Proteus war der griechische Gott der Verwandlung — die Karriere ist flexibel und wandlungsfähig.\n\n### Social Freezing: Karriere und Familie vereinbaren?\n\n**Was ist Social Freezing?** Das Einfrieren von Eizellen, damit Frauen zunächst Karriere machen und später — wenn es „passt\" — Kinder bekommen können.\n\nApple und Facebook haben dieses Angebot für Mitarbeiterinnen bezahlt. Die klare Botschaft: „Erst Karriere, dann Kind — beides geht.\"\n\n**Diskussionspunkte (Spiegel-Artikel, 2014):**\n- **Pro**: Frauen erhalten mehr zeitliche Flexibilität; biologische Uhr wird entkoppelt von Karriereuhr.\n- **Contra**: Unternehmens zahlen für Social Freezing, weil sie das Problem der Vereinbarkeit nicht wirklich lösen — sie verschieben es nur. Strukturelle Probleme (fehlende Kinderbetreuung, fehlende Karrierepausen) bleiben ungelöst.\n- **Statistik**: Fast jede dritte Akademikerin ab 45 Jahren ist kinderlos — oft nicht gewollt, sondern Resultat struktureller Zwänge.\n- **Medizinische Realität**: Erfolgsrate bei aufgetauten Eizellen bei Frauen über 40 nur 5–10% (vs. 78% bei Frauen unter 30 mit frischen Eizellen).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Karrierebewegungen zusammengefasst",
+          "body": "**Vertikal aufwärts** = Beförderung | **Seitlich** = Job Rotation / Versetzung | **Vertikal abwärts** = Abwärtsbewegung | **Temporär** = Projekt, Sabbatical, Ehrenamt"
+        },
+        {
+          "kind": "info",
+          "title": "Schein-Karrierekegel",
+          "body": "Edgar Schein visualisierte Karrierebewegungen als **Kegel**: Nach oben = vertikaler Aufstieg (Beförderung), horizontal um den Kegel herum = Job Rotation (gleiche Ebene, andere Abteilung), zur Mitte des Kegels hin = zentripetale/radiale Bewegung (= mehr Einfluss, mehr Zugang zu Entscheidungskernen — ohne formale Beförderung)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "karrierebewegungen-mermaid",
+          "title": "Karrierebewegungen nach Noe et al. (2010)",
+          "caption": "Verschiedene Richtungen, in die sich eine Karriere bewegen kann.",
+          "code": "graph TD\n  M[Aktuelle Position] --> O[Befoerderung: vertikal aufwaerts]\n  M --> L[Job Rotation: seitlich links]\n  M --> R[Versetzung: seitlich rechts]\n  M --> D[Abwaertsbewegung]\n  M --> T[Temporaer: Projekt Sabbatical Ehrenamt]\n  style O fill:#2ecc71,color:#fff\n  style L fill:#3498db,color:#fff\n  style R fill:#3498db,color:#fff\n  style D fill:#e67e22,color:#fff\n  style T fill:#9b59b6,color:#fff"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "pe-fc-1",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Was versteht man unter Personalentwicklung (PE) im weiteren Sinn nach Becker (2005)?",
+      "back": "PE im weiteren Sinn umfasst drei Kategorien: **Bildung** (z.B. Ausbildung, Weiterbildung) + **Förderung** (z.B. Training, Coaching, Karriereplanung) + **Organisationsentwicklung** (z.B. Teamentwicklung, Projektarbeit)."
+    },
+    {
+      "id": "pe-fc-2",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Was sind die vier Ebenen des Kirkpatrick-Modells?",
+      "back": "1. **Reaktion** — Wie fanden es die Teilnehmenden? 2. **Lernen** — Was wurde gelernt? 3. **Verhalten** — Wird es am Arbeitsplatz angewendet? 4. **Ergebnisse** — Hat das Unternehmen profitiert? (+ 5. ROI nach Phillips)"
+    },
+    {
+      "id": "pe-fc-3",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Was besagt das 70-20-10-Modell?",
+      "back": "70% des beruflichen Lernens entsteht durch Erfahrungen am Arbeitsplatz (on the job), 20% durch soziales Lernen (Mentoring, Feedback) und nur 10% durch formale Bildung (Kurse, Seminare)."
+    },
+    {
+      "id": "pe-fc-4",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Wie lautet die ROI-Formel nach Phillips?",
+      "back": "$$ROI = \\frac{Programmnutzen - Programmkosten}{Programmkosten} \\times 100$$\nEin ROI von 200% bedeutet: Pro investiertem Euro kommen 2 Euro Gewinn zurück."
+    },
+    {
+      "id": "pe-fc-5",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Was ist der Unterschied zwischen 'on the job' und 'off the job' PE-Maßnahmen?",
+      "back": "**On the job**: Lernen findet direkt am Arbeitsplatz statt (Job Rotation, Coaching, Mentoring). **Off the job**: Lernen findet außerhalb des Arbeitsplatzes statt (Seminar, E-Learning, VR-Training). Bei off the job ist der Transfer auf den Arbeitsplatz schwieriger."
+    },
+    {
+      "id": "pe-fc-6",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Was ist Social Freezing und warum ist es im PE-/HR-Kontext diskutiert?",
+      "back": "Social Freezing = Einfrieren von Eizellen, damit Frauen zunächst Karriere machen können. Apple/Facebook bezahlten dies für Mitarbeiterinnen. Kritik: Das Angebot verschiebt das Problem der Vereinbarkeit von Karriere und Familie nur, löst es aber nicht strukturell."
+    },
+    {
+      "id": "pe-fc-7",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Welche drei Laufbahntypen gibt es in modernen Unternehmen?",
+      "back": "1. **Führungslaufbahn**: klassischer Aufstieg in der Hierarchie. 2. **Fachlaufbahn**: horizontale Entwicklung als Spezialist/in. 3. **Projektlaufbahn**: Karriere durch wechselnde Projektverantwortung."
+    },
+    {
+      "id": "pe-fc-8",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Was ist der PE-Prozess und seine vier Phasen?",
+      "back": "1. **Bedarfsanalyse** (Organisations-, Aufgaben-, Personenanalyse → Leistungslücke identifizieren) 2. **Design** (Ziele, Methoden, Zeitplan) 3. **Implementierung** (Durchführung) 4. **Evaluation** (Kirkpatrick-Modell). Der Prozess ist ein Kreislauf."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "pe-q1",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "leicht",
+      "prompt": "Welche der folgenden Maßnahmen ist eine typische **on-the-job** PE-Maßnahme?",
+      "options": [
+        "Externes Seminar in einem Tagungshotel",
+        "Job Rotation zwischen verschiedenen Abteilungen",
+        "E-Learning-Kurs auf einer Online-Plattform",
+        "Universitätsstudium neben dem Beruf"
+      ],
+      "correct": [1],
+      "explanation": "Job Rotation findet direkt am Arbeitsplatz statt — die Mitarbeitenden wechseln zwischen Abteilungen und lernen dabei 'on the job'. Seminare, E-Learning und Studium sind 'off the job'."
+    },
+    {
+      "kind": "mc",
+      "id": "pe-q2",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "mittel",
+      "prompt": "Das Kirkpatrick-Modell unterscheidet vier Evaluationsebenen. Auf welcher Ebene misst man, ob Mitarbeitende das Gelernte tatsächlich am Arbeitsplatz anwenden?",
+      "options": [
+        "Ebene 1 — Reaktion",
+        "Ebene 2 — Lernen",
+        "Ebene 3 — Verhalten",
+        "Ebene 4 — Ergebnisse"
+      ],
+      "correct": [2],
+      "explanation": "Ebene 3 'Verhalten' misst den Transfer: Wird das im Training Gelernte am Arbeitsplatz angewendet? Das ist die kritischste Ebene, da hier PE am häufigsten scheitert."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-q3",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "leicht",
+      "prompt": "Laut dem 70-20-10-Modell ist formales Lernen (Kurse, Seminare) mit 70% die wichtigste Lernquelle im Berufsalltag.",
+      "answer": false,
+      "explanation": "Falsch! Laut 70-20-10-Modell entstehen 70% des Lernens durch Erfahrungen am Arbeitsplatz, 20% durch soziales Lernen (Mentoring, Coaching, Feedback) und nur 10% durch formale Bildung."
+    },
+    {
+      "kind": "mc",
+      "id": "pe-q4",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "mittel",
+      "prompt": "Was versteht man unter dem 'Transferproblem' in der Personalentwicklung?",
+      "options": [
+        "Die Kosten des Trainings übersteigen den Nutzen.",
+        "Mitarbeitende wenden das in Trainings Gelernte im Arbeitsalltag nicht an.",
+        "Das Training wird in eine andere Abteilung verlegt.",
+        "Mitarbeitende wechseln nach dem Training das Unternehmen."
+      ],
+      "correct": [1],
+      "explanation": "Das Transferproblem beschreibt, dass viele Mitarbeitende zwar im Seminar lernen, das Wissen aber nicht in ihren Arbeitsalltag übertragen. Dies ist das zentrale Scheitern vieler PE-Maßnahmen (Kirkpatrick-Ebene 3)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-q5",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "mittel",
+      "prompt": "Qualitätszirkel und Planspiele werden als 'near the job'-Maßnahmen klassifiziert.",
+      "answer": true,
+      "explanation": "Richtig! 'Near the job' bezeichnet Lernformen, die neben dem eigentlichen Arbeitsplatz stattfinden, aber engen Bezug zur Arbeit haben — wie Qualitätszirkel oder Planspiele."
+    },
+    {
+      "kind": "mc",
+      "id": "pe-q6",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "schwer",
+      "prompt": "Ein Unternehmen investiert 20.000 € in ein Verkaufstraining. Durch höhere Abschlussquoten steigt der Deckungsbeitrag um 80.000 €. Wie hoch ist der ROI nach Phillips?",
+      "options": [
+        "300%",
+        "400%",
+        "4",
+        "200%"
+      ],
+      "correct": [0],
+      "explanation": "ROI = (Programmnutzen − Programmkosten) / Programmkosten × 100 = (80.000 − 20.000) / 20.000 × 100 = 60.000 / 20.000 × 100 = 300%."
+    },
+    {
+      "kind": "mc",
+      "id": "pe-q7",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "mittel",
+      "prompt": "Was ist eine 'Fachlaufbahn' in modernen Unternehmen?",
+      "options": [
+        "Aufstieg in die Managementhierarchie",
+        "Horizontale Entwicklung als Spezialistin oder Spezialist ohne Führungsverantwortung",
+        "Wechsel zwischen verschiedenen Unternehmen der Branche",
+        "Karriereunterbrechung durch ein Sabbatical"
+      ],
+      "correct": [1],
+      "explanation": "Die Fachlaufbahn ist eine Alternative zur Führungslaufbahn: Mitarbeitende steigen nicht in die Hierarchie auf, werden aber als Spezialisten tiefer und breiter qualifiziert — ohne Führungsverantwortung zu übernehmen."
+    },
+    {
+      "kind": "freetext",
+      "id": "pe-q8",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie, welche Argumente für und gegen das Angebot von 'Social Freezing' durch Arbeitgeber (wie Apple und Facebook) sprechen. Beziehen Sie sich dabei auf den HR-Kontext.",
+      "sampleAnswer": "Pro: Frauen erhalten mehr zeitliche Flexibilität; die biologische Uhr wird von der Karriereuhr entkoppelt. Unternehmen positionieren sich als familienfreundlicher Arbeitgeber. Contra: Das Angebot verschiebt das strukturelle Problem der Vereinbarkeit nur zeitlich, löst es nicht. Ursachen wie fehlende Kinderbetreuung und Karrierepausen-Stigma bleiben bestehen. Medizinisch: Erfolgsrate bei aufgetauten Eizellen über 40 nur 5–10%. Zudem sendet die Botschaft 'Erst Karriere, dann Kind' ein fragwürdiges Signal darüber, was von Frauen erwartet wird.",
+      "keywords": ["vereinbarkeit", "biologisch", "struktur", "karriere", "kind", "arbeitgeber", "apple", "facebook"],
+      "explanation": "Der HR-Kontext ist zentral: Arbeitgeber, die Social Freezing bezahlen, investieren in eine Scheinlösung statt in echte Vereinbarkeit (z.B. Betriebskitas, Elternzeit für Väter, flexible Karrierewege nach der Elternzeit)."
+    },
+    {
+      "kind": "mc",
+      "id": "pe-q9",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "leicht",
+      "prompt": "Was ist der zentrale Vorteil von Gamification-Ansätzen in der Personalentwicklung?",
+      "options": [
+        "Sie reduzieren die Kosten der Personalentwicklung auf null.",
+        "Sie steigern die intrinsische Lernmotivation durch spielerische Wissensvermittlung.",
+        "Sie ersetzen alle anderen PE-Maßnahmen vollständig.",
+        "Sie sind ausschließlich für technische Berufe geeignet."
+      ],
+      "correct": [1],
+      "explanation": "Der zentrale Vorteil: Gamification erhöht die intrinsische Motivation — Menschen lernen, weil sie Spaß haben und sich herausgefordert fühlen, nicht weil sie müssen. Beispiel: Seat-Verkäufer spielten freiwillig 1,5 Millionen Quiz-Runden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "pe-q10",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "mittel",
+      "prompt": "Die 'Boundaryless Career' (grenzenlose Karriere) beschreibt eine Laufbahn, die auf Loyalität gegenüber einem einzigen Arbeitgeber aufgebaut ist.",
+      "answer": false,
+      "explanation": "Falsch! Bei der Boundaryless Career wechseln Mitarbeitende häufig zwischen Unternehmen, Branchen und Ländern — Loyalität gilt dem eigenen Kompetenzaufbau, nicht einem einzelnen Arbeitgeber. Das Gegenteil ist also richtig."
+    },
+    {
+      "kind": "mc",
+      "id": "pe-q11",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "mittel",
+      "prompt": "Welche drei Analyseschritte umfasst die Bedarfsermittlung im PE-Prozess?",
+      "options": [
+        "Marktanalyse, Konkurrenzanalyse, Budgetanalyse",
+        "Organisationsdiagnose, Aufgaben- und Anforderungsanalyse, Personenanalyse",
+        "Stärken, Schwächen, Chancen (SWOT)",
+        "Trainingsdesign, Implementierung, Evaluation"
+      ],
+      "correct": [1],
+      "explanation": "Die Bedarfsermittlung besteht aus: (1) Organisationsdiagnose (Ziele, Ressourcen, Klima), (2) Aufgaben- und Anforderungsanalyse (was braucht die Stelle?) und (3) Personenanalyse (kann der/die aktuelle Mitarbeitende das?). Aus der Differenz entsteht die Leistungslücke."
+    },
+    {
+      "kind": "freetext",
+      "id": "pe-q12",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "difficulty": "schwer",
+      "prompt": "Nennen und erläutern Sie drei konkrete KI-Anwendungsfelder in der Personalentwicklung und erklären Sie, wie sie traditionelle Lernformate ergänzen oder verändern.",
+      "sampleAnswer": "1. VR-Training mit KI-Avataren (z.B. Lufthansa): KI simuliert realistische Krisensituationen, die beliebig oft wiederholt werden können. Vorteil gegenüber Rollenspiel vor Kollegen: kein soziales Risiko, individuelle Anpassung. 2. Learning Intelligence Assistant (z.B. Otto Group LIA): Ein KI-Assistent sucht aus dem Weiterbildungsangebot die passenden Kurse, erstellt individuelle Lernpläne — skalierbar für tausende Mitarbeitende. 3. Skill-Mapping (z.B. Haufe Akademie): KI analysiert Kompetenzlücken aller Jobprofile und empfiehlt gezielte Weiterbildungen. Traditionelle PE-Abteilungen könnten das nie manuell für alle Positionen leisten.",
+      "keywords": ["vr", "avatar", "skill-mapping", "lernplan", "individuell", "skalierbar", "lufthansa", "otto"],
+      "explanation": "KI verändert PE von standardisierten Gruppenangeboten hin zu individualisierten, skalierbaren Lösungen. Die Rolle von Trainern wandelt sich zum 'Bildungsbegleiter'."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pe-ex-1",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "label": "V9 — Personalentwicklung: Spielend Lernen (Gamification)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 9",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den Artikel 'Spielend Lernen — Immer mehr Unternehmen bilden ihre Mitarbeiter mit Spaßfaktor weiter' (Welt/Bilanz, 2018).\n\nDiskutieren Sie: Warum setzen Unternehmen wie Audi, Seat, Rewe und Mercedes-Benz zunehmend auf Gamification in der Personalentwicklung? Welche PE-Methode (nach der on/off/near-the-job-Systematik) repräsentiert Gamification typischerweise? Welche Grenzen und Risiken sehen Sie?",
+      "hint": "Denken Sie an die Vorteile von intrinsischer Motivation. Überlegen Sie, ob Gamification eher on, off oder near the job einzuordnen ist — und ob das immer eindeutig ist. Welche Inhalte lassen sich gut gamifizieren, welche nicht?",
+      "solution": "**Warum Gamification?**\n\nUnternehmen setzen auf Gamification, weil die klassische Fortbildung (Seminar, Frontalunterricht) oft an mangelnder Motivation scheitert. Laut der Medienwissenschaftlerin Linda Breitlauch ist 'intrinsische Motivation beim Spiel immer gegeben' — Menschen lernen effektiver, wenn sie Spaß haben und Herausforderungen bewältigen wollen.\n\nBeispiele:\n- **Audi**: Quiz-Duell mit 690 Fragen zu Fahrzeugmodellen; Schein-Autohaus als Ego-Shooter\n- **Seat**: 'Seat Ibiza Challenge' — Testtour als Spiel, Punkte und Zertifikate; 1,5 Mio. Quiz-Runden gespielt, 95% richtige Antworten\n- **Rewe**: Quiz-Apps auf Mitarbeiter-Smartphones\n- **DM**: 'Lieferhelden'-Spiel für Logistikwissen\n\n**Einordnung nach Lernort:**\nGamification ist meist **off the job** (Mitarbeitende verlassen kurz den Arbeitskontext für das Spiel) oder **near the job** (spielbasiertes Lernen mit direktem Arbeitsbezug, z.B. Audi-Schein-Autohaus). Es kann aber auch **on the job** integriert werden (z.B. wenn ein Spiel direkt in die Arbeitsabläufe eingebettet ist).\n\n**Vorteile:**\n- Hohe intrinsische Motivation → höhere Beteiligung\n- Wissensvertiefung durch Wiederholung (spielerisch)\n- Flexibles, zeitunabhängiges Lernen\n- Messbarkeit (Punkte, Erfolgsquoten)\n\n**Grenzen und Risiken:**\n- Nicht alle Inhalte lassen sich gut gamifizieren (z.B. ethische Entscheidungen, Führungskräfteentwicklung)\n- Hohe Entwicklungskosten\n- Motivation kann nachlassen, sobald der Neuheitswert sinkt\n- Transfer-Problem bleibt bestehen: Spiel ≠ automatisch Verhaltensänderung am Arbeitsplatz\n- Datenschutzfragen bei spielbasierten Leistungsauswertungen"
+    },
+    {
+      "id": "pe-ex-2",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "label": "V9 — Personalentwicklung: Potenziale durch KI",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 9",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den Artikel 'Wie KI das Weiterbildungsangebot in Unternehmen erweitert' (Handelsblatt, 07.03.2026).\n\n**Frage:** Welche konkreten Anwendungsfelder und Potenziale von KI für die Schulung von Mitarbeitenden werden in dem Artikel diskutiert? Erläutern Sie außerdem, welche Herausforderungen und Risiken der verstärkte Einsatz von KI in der Personalentwicklung mit sich bringt.",
+      "hint": "Gehen Sie systematisch vor: Nennen Sie zuerst mindestens drei konkrete KI-Formate aus dem Artikel (mit Unternehmensbeispielen). Dann diskutieren Sie Herausforderungen — sowohl für Unternehmen als auch für traditionelle Weiterbildungsanbieter.",
+      "solution": "**Anwendungsfelder von KI in der PE (aus dem Artikel):**\n\n1. **VR-Training mit KI-Avataren (Lufthansa / 3Spinlearning):**\nKabinenpersonal trainiert Krisensituationen (schwieriger Passagier, Brand im Flugzeug, ohnmächtiger Passagier) mit einer KI-erzeugten Illusion. Vorteil: immer wieder wiederholbar, keine Peinlichkeit vor Kollegen, KI passt Verhalten des Avatars an die Reaktion des Trainierenden an.\n\n2. **Chatbots als Lernberater:**\nMitarbeitende können jederzeit Fragen stellen und erhalten sofort individuelle Antworten — verfügbar 24/7.\n\n3. **Skill-Mapping mit KI (Haufe Akademie):**\nKI analysiert alle Jobprofile und identifiziert, welche Fähigkeiten für eine bestimmte Position fehlen. Weiterbildungsangebote werden automatisch empfohlen.\n\n4. **Learning Intelligence Assistant / Learning on demand (Otto Group — 'LIA'):**\nCustomGPT sucht aus dem konzernweiten Weiterbildungsangebot passende Inhalte, erstellt individuelle Lernpläne, erhöht Transparenz für 36.000 Mitarbeitende weltweit.\n\n5. **Micro-Learning:**\nKI zerlegt komplexe Trainingsinhalte in kleine Einheiten — zeitlich und örtlich flexibel.\n\n**Herausforderungen und Risiken:**\n\n- **Hohe Investitionskosten:** Kleinere Anbieter und selbstständige Coaches können nicht mithalten — Marktkonzentration droht.\n- **Qualitätssicherung:** Nicht jedes KI-Tool ist gleich gut; der Markt ist stark fragmentiert.\n- **Kausalitätsproblem:** Verbesserung der Leistung nach KI-Training ist schwer eindeutig der KI zuzuschreiben.\n- **Wandel der Berufsrollen:** Trainer werden zu 'Bildungsbegleitern' — Umschulung nötig.\n- **Datenschutz:** Individuelle Lernprofile enthalten sensible Mitarbeiterdaten.\n- **Der Mensch bleibt unverzichtbar:** KI kann Inhalte aufbereiten, aber nicht vollständig ersetzen."
+    },
+    {
+      "id": "pe-ex-3",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "label": "V9 — 'Karriereentwicklung' für Frauen? (Social Freezing)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 9",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den Artikel 'Social Freezing: Karriere und Kind — auf Eis gelegt' (Spiegel, 2014).\n\nApple und Facebook wollen das Social Freezing (Einfrieren von Eizellen) für ihre Mitarbeiterinnen bezahlen. Damit senden sie eine klare Botschaft: Erst Karriere, dann Kind — beides geht.\n\n**Frage:** Wie stehen Sie zu diesem Angebot der Firmen? Diskutieren Sie aus einer HR-Perspektive die Vor- und Nachteile dieses Angebots. Welche Schlüsse lassen sich daraus für die Karriereentwicklung von Frauen und für Unternehmen ziehen?",
+      "hint": "Denken Sie an: Vereinbarkeit von Familie und Beruf, strukturelle vs. individuelle Lösung, biologische Realität (Erfolgsraten), Signal an Mitarbeiterinnen, Unternehmensinteressen. Nutzen Sie auch den Karrierebegriff von Sullivan & Baruch.",
+      "solution": "**HR-Analyse des Social-Freezing-Angebots:**\n\n**Was ist Social Freezing?**\nEinfrieren von Eizellen (Kryokonservierung), damit Frauen die Mutterschaft zeitlich verschieben können. Kosten: ca. 10.000 € für die Behandlung. Apple und Facebook übernahmen diese Kosten für Mitarbeiterinnen.\n\n**Pro-Argumente aus Unternehmenssicht:**\n- Positionierung als attraktiver, familienfreundlicher Arbeitgeber (Employer Branding)\n- Mitarbeiterinnen können karrierekritische Phase (20er/30er) ohne biologischen Druck durchlaufen\n- Seltene, innovative Sozialleistung — Differenzierungsmerkmal im 'War for Talents'\n\n**Contra-Argumente aus HR-Perspektive:**\n- **Scheinsolution:** Das Angebot verschiebt das Problem (Vereinbarkeit von Karriere und Familie) zeitlich, löst es aber nicht strukturell. Fehlende Kinderbetreuung, Karrierepausen-Stigma und kulturelle Erwartungen bleiben bestehen.\n- **Implizite Botschaft:** 'Erst Karriere, dann Kind' signalisiert, dass beides gleichzeitig im Unternehmen nicht möglich ist — das ist ein problematisches Signal.\n- **Biologische Realität:** Erfolgsrate bei aufgetauten Eizellen bei Frauen über 40: nur 5–10% (Fischerstudie Hamburg). Bei frischen Eizellen unter 30 Jahren: über 78%. Das Angebot weckt falsche Hoffnungen.\n- **Statistische Realität:** Nahezu jede dritte Akademikerin ab 45 Jahren ist kinderlos — oft nicht gewollt. Das zeigt, dass strukturelle Probleme durch Social Freezing nicht gelöst werden.\n- **Keine Lösung für Männer:** Die Debatte wird einseitig auf Frauen verlagert; Väterkarenz und Familienarbeit von Männern werden nicht thematisiert.\n\n**Karrierebezug nach Sullivan & Baruch:**\nEine Karriere umfasst laut Sullivan & Baruch (2009) alle lebensrelevanten Erfahrungen — also auch Familie und persönliche Entscheidungen. Unternehmen, die Social Freezing anbieten, greifen damit in die tiefste private Lebensplanung ihrer Mitarbeiterinnen ein. Das ist ethisch diskutabel.\n\n**Schlussfolgerung für Unternehmen:**\nEchte Karriereentwicklung für Frauen braucht: flexible Arbeitszeit, Betriebskitas, Führung in Teilzeit, aktive Väterförderung und eine Unternehmenskultur, die Elternzeit nicht als Karriereknick bewertet. Social Freezing ist kein Ersatz dafür."
+    }
+  ]
+}

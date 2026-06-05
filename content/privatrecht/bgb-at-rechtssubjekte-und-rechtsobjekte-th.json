@@ -1,0 +1,497 @@
+{
+  "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+  "subjectId": "privatrecht",
+  "title": "BGB AT: Rechtssubjekte und Rechtsobjekte (Theorieteil 1)",
+  "summary": "Wer darf am Rechtsverkehr teilnehmen? Was kann Gegenstand von Rechten sein? Dieses Thema erklärt natürliche und juristische Personen, ihre Rechtsfähigkeit, Geschäftsfähigkeit und Deliktsfähigkeit (§§ 1, 104 ff. BGB) sowie die Einteilung von Sachen in Bestandteile, Zubehör und Früchte (§§ 90 ff. BGB) — alles mit konkreten Alltagsbeispielen.",
+  "order": 2,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "rechtsbeziehungen",
+      "heading": "Arten von Rechtsbeziehungen — der Rahmen des Privatrechts",
+      "body": "Das Privatrecht regelt, wie Menschen und Organisationen untereinander Rechte und Pflichten haben. Jede solche Verbindung nennt man **Rechtsbeziehung**.\n\nGrundlage des gesamten Privatrechts ist die **Privatautonomie** (Art. 2 Abs. 1 GG): Jeder darf seine Rechtsbeziehungen im Rahmen des Gesetzes selbst gestalten.\n\nRechtsbeziehungen entstehen auf vier verschiedene Weisen:\n\n| Art | Kurzerklärun | Beispiel |\n|---|---|---|\n| Rechtsgeschäft | Beide wollen eine Rechtsfolge — der Wille zählt | Kaufvertrag, Schenkung |\n| Rechtsgeschäftsähnl. Handlung | Wille löst Handlung aus, Rechtsfolge aber zwingend gesetzlich | Kündigung, Anfechtung |\n| Realakt | Tatsächliche Handlung, Rechtsfolge gesetzlich, Wille egal | Verarbeitung von Mehl zu Brot (§ 950 BGB) |\n| Deliktisches Handeln | Schaden durch verbotenes Tun | Auto beschädigen → Schadensersatz § 823 BGB |\n\nDaneben gibt es **Gefälligkeitsverhältnisse**: Wenn jemand einen Freund zum Flughafen fährt, handelt er aus sozialer Gefälligkeit, nicht aus rechtlicher Verpflichtung — kein Rechtsgeschäft, keine einklagbaren Ansprüche.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Privatautonomie",
+          "body": "Jeder Mensch (und jede Organisation) darf seine privaten Rechtsbeziehungen grundsätzlich frei gestalten — Art. 2 Abs. 1 GG. Das Recht setzt nur den Rahmen."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Realakt vs. Rechtsgeschäft",
+          "body": "Bäcker B verarbeitet Mehl (fremdes Eigentum) zu Brot. Die Rechtsfolge — B wird Eigentümer des Brotes — tritt kraft Gesetzes ein (§ 950 BGB), ganz unabhängig davon, ob B das wollte. Das ist ein Realakt."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-rechtsbeziehungen",
+          "title": "Arten von Rechtsbeziehungen",
+          "caption": "Überblick: Wie entstehen rechtliche Bindungen zwischen Personen?",
+          "code": "graph TD\n  A[Rechtsbeziehung] --> B[Rechtsgeschäft]\n  A --> C[Rechtsgeschäftsähnliche Handlung]\n  A --> D[Realakt]\n  A --> E[Deliktisches Handeln]\n  B --> B1[Wille gestaltet Rechtsfolge]\n  C --> C1[Wille auslösend, Rechtsfolge gesetzlich]\n  D --> D1[Tatsächliche Handlung, Wille egal]\n  E --> E1[Schaden durch verbotenes Tun]"
+        }
+      ]
+    },
+    {
+      "id": "anspruch",
+      "heading": "Der Anspruch — das Herzstück des Privatrechts",
+      "body": "Wenn zwei Personen eine Rechtsbeziehung haben, entsteht häufig ein **Anspruch**. Das Gesetz definiert in § 194 Abs. 1 BGB:\n\n> *'Das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen.'*\n\nDie Merkhilfe lautet: **Wer will was von wem woraus?**\n\n- **Wer** = das Rechtssubjekt, das den Anspruch hat (Gläubiger)\n- **Was** = das Rechtsobjekt, also was verlangt wird (Zahlung, Übergabe einer Sache …)\n- **Von wem** = das andere Rechtssubjekt, das verpflichtet ist (Schuldner)\n- **Woraus** = die Anspruchsgrundlage (z. B. § 433 Abs. 2 BGB beim Kaufvertrag)\n\nOhne Anspruchsgrundlage gibt es keinen durchsetzbaren Anspruch — man kann nicht einfach verlangen, was man möchte.\n\n**Subjektive Rechte** gliedern sich in:\n- **Absolute Rechte**: gelten gegenüber jedermann (z. B. Eigentum § 903 BGB, allgemeines Persönlichkeitsrecht)\n- **Relative Rechte**: gelten nur zwischen bestimmten Personen (z. B. Kaufpreisanspruch aus § 433 Abs. 2 BGB)",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Anspruch (§ 194 Abs. 1 BGB)",
+          "body": "Das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen. Merkhilfe: **Wer will was von wem woraus?**"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Anspruch beim Kaufvertrag",
+          "body": "Anna kauft bei Berta ein Fahrrad für 200 €. **Wer** will was? Anna (Käuferin) will das Fahrrad. **Von wem?** Von Berta (Verkäuferin). **Was?** Übergabe und Übereignung des Fahrrads. **Woraus?** § 433 Abs. 1 BGB. Umgekehrt will Berta die 200 € von Anna aus § 433 Abs. 2 BGB."
+        }
+      ]
+    },
+    {
+      "id": "rechtssubjekte",
+      "heading": "Rechtssubjekte — wer darf am Rechtsverkehr teilnehmen?",
+      "body": "**Rechtssubjekte** (auch: Personen) sind diejenigen, die Träger von Rechten und Pflichten sein können. Nur sie können Ansprüche haben oder verpflichtet werden.\n\nEs gibt zwei Arten:\n\n### Natürliche Personen (§ 1 BGB)\nJeder lebende Mensch ist eine natürliche Person. Die **Rechtsfähigkeit** beginnt mit der Vollendung der Geburt (§ 1 BGB) und endet mit dem Tod (§ 1922 BGB). Bereits ein Neugeborenes kann erben oder beschenkt werden.\n\n### Juristische Personen\nAuch Organisationen können als 'Personen' am Rechtsverkehr teilnehmen. Man unterscheidet:\n\n**Des Privatrechts:**\n- Eingetragener Verein (e.V.) — z. B. ein Sportverein\n- Stiftung des bürgerlichen Rechts\n- GmbH, AG, eingetragene Genossenschaft (eG)\n\n**Des öffentlichen Rechts:**\n- Körperschaften (z. B. Bundesrepublik Deutschland, Land Niedersachsen, Stadt Hannover)\n- Anstalten (z. B. öffentlich-rechtliche Rundfunkanstalten)\n- Stiftungen des öffentlichen Rechts\n\nEine GmbH wird rechtsfähig mit Eintragung in das Handelsregister (§ 13 GmbHG). Bis dahin existiert sie als 'Vor-GmbH'.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Warum juristische Personen?",
+          "body": "Unternehmen bestehen aus vielen wechselnden Mitarbeitern. Damit das Unternehmen als Einheit klagen, verklagt werden und Eigentum haben kann, erkennt das Recht es als eigenständige 'Person' an — mit eigenen Rechten und Pflichten, getrennt von denen der Gesellschafter."
+        },
+        {
+          "kind": "merksatz",
+          "title": "§ 1 BGB — Beginn der Rechtsfähigkeit",
+          "body": "Die Rechtsfähigkeit des Menschen beginnt mit der **Vollendung der Geburt**. Kein Mensch ist ohne Rechtsfähigkeit — auch ein Säugling kann Erbe sein."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-rechtssubjekte",
+          "title": "Überblick Rechtssubjekte",
+          "caption": "Wer kann Träger von Rechten und Pflichten sein?",
+          "code": "graph TD\n  A[Rechtssubjekte / Personen] --> B[Natürliche Person]\n  A --> C[Juristische Person]\n  B --> B1[Jeder Mensch § 1 BGB]\n  C --> C1[des Privatrechts]\n  C --> C2[des öffentlichen Rechts]\n  C1 --> C1a[e.V., Stiftung]\n  C1 --> C1b[GmbH, AG, eG]\n  C2 --> C2a[Körperschaft]\n  C2 --> C2b[Anstalt, Stiftung]"
+        }
+      ]
+    },
+    {
+      "id": "faehigkeiten",
+      "heading": "Fähigkeiten der Rechtssubjekte — was darf wer selbst tun?",
+      "body": "Rechtsfähig zu sein bedeutet noch nicht, selbst handeln zu können. Das Gesetz unterscheidet mehrere Fähigkeiten:\n\n### Rechtsfähigkeit\nFähigkeit, Träger von Rechten und Pflichten zu sein. Jede Person hat sie (§ 1 BGB). Im Prozess entspricht dies der **Parteifähigkeit** (§ 50 Abs. 1 ZPO).\n\n### Handlungsfähigkeit\nFähigkeit, rechtlich erhebliche Handlungen vorzunehmen. Sie teilt sich auf in:\n\n**1. Geschäftsfähigkeit** — die Fähigkeit, wirksam Willenserklärungen abzugeben:\n\n| Altersstufe | Geschäftsfähigkeit | Norm |\n|---|---|---|\n| Unter 7 Jahre | Geschäftsunfähig | § 104 Nr. 1 BGB |\n| 7 bis unter 18 Jahre | Beschränkt geschäftsfähig | § 106 BGB |\n| Ab 18 Jahre | Voll geschäftsfähig | § 2 BGB |\n| Dauernde geistige Störung | Geschäftsunfähig | § 104 Nr. 2 BGB |\n\n**2. Deliktsfähigkeit** — die Fähigkeit, für verursachte Schäden haftbar zu sein:\n\n| Alter | Deliktsfähigkeit | Norm |\n|---|---|---|\n| Unter 7 Jahre | Deliktsunfähig | § 828 Abs. 1 BGB |\n| 7 bis unter 10 Jahre | Deliktsunfähig im Straßenverkehr | § 828 Abs. 2 BGB |\n| 7 bis unter 18 Jahre (mit Einsichtsfähigkeit) | Beschränkt deliktsfähig | § 828 Abs. 3 BGB |\n| Ab 18 Jahre | Voll deliktsfähig | — |\n\n**3. Prozessfähigkeit** — Fähigkeit, im Prozess selbst zu handeln (§ 51 Abs. 1 ZPO). Richtet sich grundsätzlich nach der Geschäftsfähigkeit.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Geschäftsunfähigkeit § 104 BGB",
+          "body": "Geschäftsunfähig ist, wer (1) das 7. Lebensjahr noch nicht vollendet hat oder (2) sich in einem die freie Willensbildung ausschließenden dauernden Zustand krankhafter Störung der Geistestätigkeit befindet. Willenserklärungen Geschäftsunfähiger sind **nichtig** (§ 105 Abs. 1 BGB)."
+        },
+        {
+          "kind": "info",
+          "title": "§ 105a BGB — Geschäfte des täglichen Lebens",
+          "body": "Volljährige Geschäftsunfähige (z. B. Demenzkranke) können Geschäfte des täglichen Lebens wirksam abschließen, wenn diese mit geringwertigen Mitteln bewirkt werden können (z. B. Kauf einer Zeitung). Voraussetzung: Das Geschäft ist vollständig bewirkt (bezahlt und geliefert)."
+        },
+        {
+          "kind": "tip",
+          "title": "Einsichtsfähigkeit bei Minderjährigen (§ 828 Abs. 3 BGB)",
+          "body": "Ein 14-jähriger haftet nur dann für einen Schaden, wenn er nach seiner individuellen geistigen Entwicklung die Tragweite seines Handelns erkennen konnte. Fehlt diese **Einsichtsfähigkeit**, ist er nicht deliktsfähig — auch wenn er schon 14 ist."
+        }
+      ]
+    },
+    {
+      "id": "beschraenkte-gf",
+      "heading": "Beschränkte Geschäftsfähigkeit — Minderjährige im Rechtsverkehr (§§ 106 ff. BGB)",
+      "body": "Minderjährige zwischen 7 und 17 Jahren sind beschränkt geschäftsfähig. Sie können Rechtsgeschäfte nicht ohne Weiteres selbst wirksam schließen — aber es gibt wichtige Ausnahmen:\n\n### 1. Nur rechtlich vorteilhaft — kein Nachteil (§ 107 BGB)\nEin Minderjähriger kann Rechtsgeschäfte **ohne** Zustimmung seiner gesetzlichen Vertreter wirksam vornehmen, wenn er dadurch lediglich einen **rechtlichen** (nicht nur wirtschaftlichen) Vorteil erlangt. Beispiel: Schenkung an den Minderjährigen — er erlangt Eigentum, ohne eine Pflicht zu übernehmen.\n\nEin Kaufvertrag ist **nie** nur rechtlich vorteilhaft, weil der Käufer gem. § 433 Abs. 2 BGB den Kaufpreis zahlen muss — eine Pflicht (rechtlicher Nachteil).\n\n### 2. Mit Einwilligung (§ 107 i.V.m. § 183 BGB)\nDie **Einwilligung** ist die **vorherige** Zustimmung der gesetzlichen Vertreter (Eltern, § 1629 Abs. 1 S. 1 BGB). Sie muss zu einem konkreten Rechtsgeschäft erteilt werden.\n\n### 3. Taschengeldparagraf (§ 110 BGB)\nEin Vertrag gilt als von Anfang an wirksam, wenn der Minderjährige die Leistung **vollständig bewirkt** mit Mitteln, die ihm:\n- zu diesem Zweck (z. B. 'kaufe dir die Zeitschrift') oder\n- zur **freien Verfügung** überlassen wurden (z. B. Taschengeld).\n\nBei Ratenkäufen reicht die erste Rate nicht — alle Raten müssen aus diesen Mitteln bezahlt werden.\n\n### 4. Ohne Einwilligung — schwebend unwirksam (§ 108 BGB)\nFehlt die Einwilligung, ist der Vertrag **schwebend unwirksam** — er wird erst wirksam, wenn die gesetzlichen Vertreter **genehmigen** (§ 108 Abs. 1, § 184 BGB).\n\nDer Vertragspartner kann die gesetzlichen Vertreter zur Genehmigung auffordern (§ 108 Abs. 2 BGB). Reagieren sie nicht innerhalb von zwei Wochen, gilt die Genehmigung als verweigert.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Prüfungsschema: Ist das Geschäft eines Minderjährigen wirksam?",
+          "body": "1. Ist der Minderjährige beschränkt geschäftsfähig? (§ 106 BGB: 7–17 Jahre)\n2. Ist das Geschäft lediglich rechtlich vorteilhaft? → Wenn ja: wirksam (§ 107 BGB)\n3. Lag eine Einwilligung der Eltern vor? → Wenn ja: wirksam (§ 107 BGB)\n4. Hat der Minderjährige mit eigenen zweckgebundenen oder frei verfügbaren Mitteln vollständig geleistet? → Wenn ja: wirksam (§ 110 BGB)\n5. Sonst: schwebend unwirksam bis Genehmigung (§ 108 BGB)"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Taschengeldparagraf in der Praxis",
+          "body": "Der 15-jährige Tim bekommt monatlich 50 € Taschengeld, über die er frei verfügen darf. Er kauft für 12 € ein Computerspiel und bezahlt sofort. Wirksam? Ja — er hat mit zur freien Verfügung überlassenen Mitteln vollständig bewirkt (§ 110 BGB).\n\nAnderer Fall: Tim kauft eine Spielkonsole für 300 € in 6 Monatsraten à 50 €. Nicht wirksam nach § 110 BGB — er hat noch nicht vollständig geleistet, und Ratenkäufe erfüllen § 110 BGB nur bei vollständiger Bewirkung aus diesen Mitteln."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-minderjaehrige",
+          "title": "Wirksamkeit von Rechtsgeschäften Minderjähriger",
+          "caption": "Prüfungsschema §§ 106 ff. BGB",
+          "code": "graph TD\n  A[Rechtsgeschäft eines 7-17-Jährigen] --> B{Nur rechtlich vorteilhaft?}\n  B -- Ja --> C[Wirksam § 107 BGB]\n  B -- Nein --> D{Einwilligung der Eltern?}\n  D -- Ja vorher --> E[Wirksam § 107 BGB]\n  D -- Nein --> F{§ 110 BGB: Taschengeld vollständig bewirkt?}\n  F -- Ja --> G[Wirksam § 110 BGB]\n  F -- Nein --> H[Schwebend unwirksam § 108 BGB]\n  H --> I{Genehmigung der Eltern?}\n  I -- Ja --> J[Wirksam rückwirkend § 184 BGB]\n  I -- Nein/Verweigerung --> K[Endgültig unwirksam]"
+        }
+      ]
+    },
+    {
+      "id": "juristische-personen-organe",
+      "heading": "Juristische Personen — wie handeln sie?",
+      "body": "Eine juristische Person ist ein rein rechtliches Konstrukt — sie kann nicht selbst sprechen, schreiben oder handeln. Daher handelt sie durch **Organe**.\n\n### Organ und Organwalter\nEin **Organ** ist eine rechtliche Einrichtung der juristischen Person (z. B. der Vorstand, die Geschäftsführung). Der **Organwalter** ist die natürliche Person, die das Organ besetzt (z. B. der Geschäftsführer Max Müller).\n\n### Einzel- vs. Kollegialorgan\n- **Einzelorgan**: nur ein Organwalter (z. B. Alleingeschäftsführer einer GmbH)\n- **Kollegialorgan**: mehrere Organwalter gemeinsam (z. B. Vorstand einer AG, Entscheidungen durch Mehrheitsbeschluss)\n\n### Innen- vs. Außenorgan\n- **Innenorgan**: handelt nur innerhalb der juristischen Person (z. B. Aufsichtsrat gegenüber Vorstand)\n- **Außenorgan**: tritt nach außen, gegenüber Dritten, auf\n\n### Zurechnung\nWas ein Organwalter in Ausübung seiner Aufgaben tut, wird der juristischen Person **zugerechnet** — als ob die juristische Person selbst gehandelt hätte:\n- Rechtsgeschäftlich: § 26 BGB (Verein), § 35 GmbHG (GmbH)\n- Deliktisch: § 31 BGB (Haftung der juristischen Person für Organhandlungen)\n- Prozessual: § 51 ZPO",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "GmbH und ihr Geschäftsführer",
+          "body": "Die Müller-GmbH schließt durch Geschäftsführer Klaus einen Kaufvertrag. Klaus ist der Organwalter, die Geschäftsführung ist das Organ. Der Vertrag bindet die GmbH (§ 35 GmbHG) — nicht Klaus persönlich. Die GmbH ist Vertragspartei."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-jur-person",
+          "title": "Juristische Person und ihre Organe",
+          "caption": "Wie handelt eine juristische Person nach außen?",
+          "code": "graph LR\n  A[Juristische Person z.B. GmbH] --> B[Organ z.B. Geschäftsführung]\n  B --> C[Organwalter = natürliche Person]\n  C --> D[Handlung nach außen]\n  D --> E[Zurechnung zur juristischen Person]\n  E --> F[Rechtsgeschäftlich § 35 GmbHG]\n  E --> G[Deliktisch § 31 BGB]\n  E --> H[Prozessual § 51 ZPO]"
+        }
+      ]
+    },
+    {
+      "id": "rechtsobjekte",
+      "heading": "Rechtsobjekte — was kann Gegenstand von Rechten sein?",
+      "body": "**Rechtsobjekte** (auch: Gegenstände, vgl. § 90 BGB) sind alles, worauf sich Rechte beziehen können. Sie sind das 'Was' in der Formel 'Wer will was von wem woraus'.\n\n### Körperliche Gegenstände = Sachen (§ 90 BGB)\nSachen sind **körperliche** Gegenstände — also alles, was man anfassen kann. Beispiele: ein Auto, ein Buch, ein Grundstück.\n\n**Tiere**: Tiere sind keine Sachen, aber die Vorschriften über Sachen gelten entsprechend (§ 90a BGB).\n\n### Nicht-körperliche Gegenstände\n- **Immaterialgüter**: technische Erfindungen (Patent), geistige Werke (Urheberrecht), Marken (§ 14 MarkenG), Know-How\n- **Rechte**: z. B. Forderungen (der Anspruch des Verkäufers auf den Kaufpreis ist selbst ein Gegenstand, der abgetreten werden kann)\n\n### Wichtig: Spezialitätsgrundsatz\nIm Sachenrecht gilt: Jede Sache wird **einzeln** betrachtet. Das Eigentum an jedem Gegenstand besteht separat. Ein Vertrag über 'das gesamte Unternehmen' meint schuldrechtlich zwar die Gesamtheit — sachenrechtlich muss jede einzelne Sache gesondert übereignet werden.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "§ 90 BGB — Sachen",
+          "body": "Sachen im Sinne des Gesetzes sind nur **körperliche Gegenstände**. Strom, Software, Daten oder Rechte sind daher keine Sachen im technischen Sinne — aber andere Vorschriften können sie ähnlich behandeln."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-rechtsobjekte",
+          "title": "Arten von Rechtsobjekten",
+          "caption": "Überblick nach § 90 BGB",
+          "code": "graph TD\n  A[Rechtsobjekte / Gegenstände § 90 BGB] --> B[Körperlich = Sachen]\n  A --> C[Nicht-körperlich]\n  B --> B1[Bewegliche Sachen]\n  B --> B2[Grundstücke / unbewegliche Sachen]\n  B --> B3[Tiere § 90a BGB analog]\n  C --> C1[Immaterialgüter Patente Marken Urheberrecht]\n  C --> C2[Rechte z.B. Forderungen]"
+        }
+      ]
+    },
+    {
+      "id": "bestandteile-zubehoer",
+      "heading": "Bestandteile, Zubehör und Früchte — wenn Sachen zusammengehören",
+      "body": "Manchmal bilden mehrere Sachen wirtschaftlich eine Einheit. Das Recht kennt drei Kategorien, wie Sachen einander zugeordnet werden:\n\n### Wesentliche Bestandteile (§§ 93–95 BGB)\nBestandteile, die **nicht getrennt** werden können, ohne dass eine der Sachen **zerstört oder wesentlich verändert** wird.\n\n**Folge**: Wesentliche Bestandteile können nicht Gegenstand gesonderter Rechte sein (§ 93 BGB) — kein eigenes Eigentum an einem wesentlichen Bestandteil möglich.\n\nBeispiele:\n- Motor im Auto: wesentlicher Bestandteil des Autos\n- Fenster im Haus: wesentlicher Bestandteil des Gebäudes\n\n**§ 94 BGB** — Besonderheit Grundstücke: Alles, was fest mit dem Grund und Boden verbunden ist (insbesondere Gebäude), ist wesentlicher Bestandteil des Grundstücks. Auch alle zur Herstellung eines Gebäudes eingefügten Sachen (§ 94 Abs. 2 BGB).\n\n**§ 95 BGB — Scheinbestandteile**: Sachen, die nur **vorübergehend** oder in Ausübung eines Rechts (z. B. Mietereinbauten) mit einem Grundstück verbunden sind, werden **nicht** wesentlicher Bestandteil — sie bleiben eigenständige Sachen.\n\n### Zubehör (§ 97 BGB)\nZubehör sind **bewegliche Sachen**, die:\n1. keine Bestandteile der Hauptsache sind,\n2. dem wirtschaftlichen Zweck der Hauptsache zu dienen bestimmt sind und\n3. in einem dieser Bestimmung entsprechenden **räumlichen Verhältnis** zur Hauptsache stehen.\n\n**Folge**: Zubehör ist sachenrechtlich eine **selbständige Sache** (eigenes Eigentum möglich), wird aber bei schuldrechtlichen Verpflichtungen zur Veräußerung im Zweifel mitumfasst (§ 311c BGB).\n\nBeispiel: Der Autoschlüssel ist Zubehör des Autos. Ein Traktor ist Zubehör eines landwirtschaftlichen Betriebs.\n\n### Früchte und Nutzungen (§§ 99, 100 BGB)\n**Früchte** (§ 99 BGB): Erzeugnisse und sonstige Ausbeute einer Sache (z. B. Äpfel vom Apfelbaum, Kälber einer Kuh) sowie Erträge kraft Rechtsverhältnisses (z. B. Mieteinnahmen).\n\n**Nutzungen** (§ 100 BGB): Früchte + Gebrauchsvorteile (z. B. das Wohnen im eigenen Haus).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wesentlicher Bestandteil vs. Zubehör",
+          "body": "**Wesentlicher Bestandteil** (§ 93 BGB): Trennung würde eine Sache zerstören/wesentlich verändern → kein eigenes Eigentum möglich.\n\n**Zubehör** (§ 97 BGB): dient der Hauptsache, ist aber selbständige Sache → eigenes Eigentum möglich, aber bei Verkauf im Zweifel mitverkauft (§ 311c BGB)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Motor und Autoschlüssel",
+          "body": "D kauft ein Auto. Der **Motor** ist wesentlicher Bestandteil (§ 93 BGB): herausgebaut würde er entweder zerstört oder das Auto wäre wesentlich verändert. D kann den Motor nicht separat verkaufen, solange er eingebaut ist.\n\nDer **Autoschlüssel** ist Zubehör (§ 97 BGB): selbständige bewegliche Sache, dient dem wirtschaftlichen Zweck des Autos, steht räumlich im Zusammenhang. D kann ihn separat verkaufen — aber beim Autoverkauf wird er im Zweifel mitverkauft (§ 311c BGB)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-bestandteile",
+          "title": "Bestandteile, Zubehör und Früchte",
+          "caption": "Zusammenfassung von Sachen nach §§ 93–100 BGB",
+          "code": "graph TD\n  A[Zusammenfassung von Sachen] --> B[Wesentliche Bestandteile §§ 93 94 BGB]\n  A --> C[Scheinbestandteile § 95 BGB]\n  A --> D[Zubehör § 97 BGB]\n  A --> E[Früchte Nutzungen §§ 99 100 BGB]\n  B --> B1[Kein eigenes Eigentum möglich]\n  C --> C1[Bleiben selbständige Sachen]\n  D --> D1[Selbständig aber im Zweifel mitverkauft § 311c BGB]\n  E --> E1[Erzeugnisse und Erträge der Sache]"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "bgb-at-rso-fc-1",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Ab wann ist ein Mensch rechtsfähig? (§ 1 BGB)",
+      "back": "Mit Vollendung der Geburt. Die Rechtsfähigkeit endet mit dem Tod (§ 1922 BGB)."
+    },
+    {
+      "id": "bgb-at-rso-fc-2",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Was bedeutet Geschäftsunfähigkeit und welche Rechtsfolge hat sie?",
+      "back": "Geschäftsunfähig sind Kinder unter 7 Jahren (§ 104 Nr. 1 BGB) und Personen mit dauernder geistiger Störung (§ 104 Nr. 2 BGB). Ihre Willenserklärungen sind **nichtig** (§ 105 Abs. 1 BGB)."
+    },
+    {
+      "id": "bgb-at-rso-fc-3",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Was ist der Taschengeldparagraf (§ 110 BGB)?",
+      "back": "Ein Vertrag eines Minderjährigen gilt als von Anfang an wirksam, wenn er die Leistung mit Mitteln **vollständig bewirkt**, die ihm zu diesem Zweck oder zur freien Verfügung überlassen wurden. Ratenkäufe fallen nur darunter, wenn alle Raten aus diesen Mitteln bezahlt werden."
+    },
+    {
+      "id": "bgb-at-rso-fc-4",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Was ist der Unterschied zwischen Einwilligung und Genehmigung?",
+      "back": "**Einwilligung** (§ 183 BGB): vorherige Zustimmung → Rechtsgeschäft ist von Anfang an wirksam.\n**Genehmigung** (§ 184 BGB): nachträgliche Zustimmung → wirkt rückwirkend (ex tunc), macht schwebend unwirksames Geschäft wirksam."
+    },
+    {
+      "id": "bgb-at-rso-fc-5",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Was sind wesentliche Bestandteile (§ 93 BGB) und was folgt daraus?",
+      "back": "Bestandteile, die voneinander nicht getrennt werden können, ohne dass eine Sache zerstört oder wesentlich verändert wird. **Folge**: Sie können nicht Gegenstand besonderer (eigener) Rechte sein — kein separates Eigentum möglich."
+    },
+    {
+      "id": "bgb-at-rso-fc-6",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Was ist Zubehör (§ 97 BGB) und welche Rechtsfolge hat § 311c BGB?",
+      "back": "Zubehör sind bewegliche Sachen, die ohne Bestandteil zu sein dem wirtschaftlichen Zweck der Hauptsache dienen und räumlich zu ihr gehören. Nach § 311c BGB erstreckt sich eine Verpflichtung zur Veräußerung der Hauptsache im Zweifel auch auf das Zubehör."
+    },
+    {
+      "id": "bgb-at-rso-fc-7",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Was ist ein Scheinbestandteil (§ 95 BGB)?",
+      "back": "Eine Sache, die nur zu einem **vorübergehenden Zweck** oder in Ausübung eines Rechts an einem fremden Grundstück mit dem Grundstück verbunden wird. Sie wird **kein** wesentlicher Bestandteil und bleibt eine selbständige Sache (z. B. Mietereinbauten, Fertiggarage auf gemietem Grund)."
+    },
+    {
+      "id": "bgb-at-rso-fc-8",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Wie handelt eine GmbH nach außen und auf welcher Norm beruht dies?",
+      "back": "Die GmbH wird durch ihre Geschäftsführer vertreten (§ 35 GmbHG). Für deliktisches Handeln der Organwalter haftet die GmbH nach § 31 BGB (analog). Im Prozess wird sie durch ihre gesetzlichen Vertreter vertreten (§ 51 ZPO)."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q1",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "leicht",
+      "prompt": "Ab welchem Zeitpunkt beginnt die Rechtsfähigkeit eines Menschen gemäß § 1 BGB?",
+      "options": [
+        "Mit der Empfängnis",
+        "Mit Vollendung der Geburt",
+        "Mit Vollendung des 7. Lebensjahres",
+        "Mit Vollendung des 18. Lebensjahres"
+      ],
+      "correct": [1],
+      "explanation": "§ 1 BGB bestimmt ausdrücklich: Die Rechtsfähigkeit des Menschen beginnt mit der Vollendung der Geburt. Davor (pränatale Phase) gibt es nur einzelne Sonderregelungen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rso-q2",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "leicht",
+      "prompt": "Ein 5-jähriges Kind kann wirksam eine Willenserklärung abgeben und damit einen Kaufvertrag schließen.",
+      "answer": false,
+      "explanation": "Kinder unter 7 Jahren sind gem. § 104 Nr. 1 BGB geschäftsunfähig. Ihre Willenserklärungen sind nach § 105 Abs. 1 BGB nichtig. Ein Kaufvertrag kommt daher nicht wirksam zustande."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q3",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "mittel",
+      "prompt": "Der 11-jährige A kauft mit dem 2-Euro-Stück, das seine Eltern ihm zum Kauf seiner Lieblingszeitschrift gegeben haben, eben diese Zeitschrift. Ist der Kaufvertrag wirksam?",
+      "options": [
+        "Nein, weil A beschränkt geschäftsfähig ist und Kaufverträge stets einer Einwilligung bedürfen",
+        "Ja, weil A lediglich einen rechtlichen Vorteil erlangt (§ 107 BGB)",
+        "Ja, weil die Eltern durch Hingabe des Geldes eingewilligt haben (§ 107 BGB)",
+        "Ja, weil der Taschengeldparagraf (§ 110 BGB) greift"
+      ],
+      "correct": [2],
+      "explanation": "Die Eltern haben A das 2-Euro-Stück ausdrücklich zum Kauf der Zeitschrift gegeben — damit haben sie als gesetzliche Vertreter ihre Einwilligung (vorherige Zustimmung, § 183 BGB) zu genau diesem konkreten Rechtsgeschäft erteilt. Der Kaufvertrag ist wirksam gemäß § 107 BGB. Option 4 (§ 110 BGB) wäre nur einschlägig, wenn das Geld zur freien Verfügung überlassen wurde — hier war es zweckgebunden, was jedoch ebenfalls § 110 BGB erfüllt. Die herrschende Meinung stützt die Wirksamkeit hier primär auf die in der Geldübergabe liegende Einwilligung (§ 107 BGB)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rso-q4",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "mittel",
+      "prompt": "Ein Kaufvertrag ist für einen Minderjährigen lediglich rechtlich vorteilhaft i.S.d. § 107 BGB, wenn der Kaufgegenstand sehr wertvoll ist.",
+      "answer": false,
+      "explanation": "Lediglich rechtlich vorteilhaft ist ein Geschäft nur, wenn es keinerlei rechtliche Pflichten begründet. Ein Kaufvertrag verpflichtet den Käufer immer zur Zahlung des Kaufpreises (§ 433 Abs. 2 BGB) — das ist ein rechtlicher Nachteil. Die wirtschaftliche Vorteilhaftigkeit (wertvoller Gegenstand) spielt keine Rolle."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q5",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Aussagen über juristische Personen des Privatrechts ist RICHTIG?",
+      "options": [
+        "Eine GmbH erlangt Rechtsfähigkeit mit Abschluss des Gesellschaftsvertrags",
+        "Eine GmbH erlangt Rechtsfähigkeit mit Eintragung in das Handelsregister (§ 13 GmbHG)",
+        "Eine GmbH ist nie deliktsfähig, da sie keine natürliche Person ist",
+        "Die Stadt Hannover ist eine juristische Person des Privatrechts"
+      ],
+      "correct": [1],
+      "explanation": "§ 13 GmbHG bestimmt: Die GmbH als solche hat erst mit der Eintragung ins Handelsregister Rechtsfähigkeit. Vorher besteht eine 'Vor-GmbH'. Die Stadt Hannover ist eine Körperschaft des öffentlichen Rechts (§ 2 NKomVG), keine juristische Person des Privatrechts. Deliktshaftung ist über § 31 BGB möglich."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q6",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "mittel",
+      "prompt": "D baut in sein gekauftes Haus auf eigene Kosten einen Motor-Aufzug ein. Welche rechtliche Einordnung trifft auf den Aufzug zu?",
+      "options": [
+        "Zubehör (§ 97 BGB) — D kann ihn jederzeit ohne Einschränkungen verkaufen",
+        "Wesentlicher Bestandteil des Gebäudes (§ 94 Abs. 2 BGB) — kein eigenes Eigentum möglich",
+        "Scheinbestandteil (§ 95 BGB) — bleibt eigenständige Sache",
+        "Frucht des Grundstücks (§ 99 BGB)"
+      ],
+      "correct": [1],
+      "explanation": "Der Aufzug wird zur Herstellung des Gebäudes eingefügt (§ 94 Abs. 2 BGB) und ist dauerhaft eingebaut — er ist wesentlicher Bestandteil. § 95 BGB (Scheinbestandteil) greift nur bei vorübergehendem Zweck oder Ausübung eines Rechts an fremdem Grundstück. Da D Eigentümer des Hauses ist, liegt kein solcher Fall vor."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rso-q7",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "schwer",
+      "prompt": "Ein 9-jähriges Kind, das mit seinem Tretauto den Zaun eines Nachbarn beschädigt, ist deliktsfähig und haftet für den Schaden.",
+      "answer": false,
+      "explanation": "Kinder unter 10 Jahren sind im Straßenverkehr gem. § 828 Abs. 2 BGB grundsätzlich nicht deliktsfähig. Außerhalb des Straßenverkehrs gilt § 828 Abs. 3 BGB: Das Kind (7–17 J.) haftet nur, wenn es die erforderliche Einsichtsfähigkeit hatte, die Tragweite seiner Handlung zu erkennen. Bei einem 9-jährigen Kind wird dies regelmäßig verneint. Im konkreten Fall (Schramme am Zaun) wäre § 828 Abs. 3 BGB zu prüfen."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q8",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "schwer",
+      "prompt": "Der Mieter M baut auf dem gemieteten Grundstück des E eine Fertiggarage auf. M und sein Freund F vereinbaren, dass F den Schlüssel der Garage als Andenken behalten darf, da das Auto verschrottet werden soll. Welche Aussage ist richtig?",
+      "options": [
+        "Die Fertiggarage ist wesentlicher Bestandteil des Grundstücks und gehört E",
+        "Die Fertiggarage ist Scheinbestandteil (§ 95 BGB) und bleibt Eigentum des M; der Schlüssel ist Zubehör der Garage und gehört damit M, nicht F",
+        "Die Fertiggarage ist Zubehör des Grundstücks und der Schlüssel ein wesentlicher Bestandteil der Garage",
+        "Der Schlüssel gehört F, weil er ihn als Geschenk erhalten hat und Schenkungen formlos wirksam sind"
+      ],
+      "correct": [1],
+      "explanation": "Die Fertiggarage wird in Ausübung eines Rechts (Mietrecht) auf fremdem Grundstück aufgestellt — sie ist gem. § 95 BGB Scheinbestandteil und bleibt Eigentum des M. Der Autoschlüssel ist Zubehör der Garage (§ 97 BGB): bewegliche Sache, dient dem wirtschaftlichen Zweck der Garage, räumliches Verhältnis. Als Zubehör gehört er M. Eine wirksame Schenkung des Schlüssels an F würde eine Einigung und Übergabe voraussetzen — nach dem Sachverhalt ist dies noch nicht erfolgt."
+    },
+    {
+      "kind": "freetext",
+      "id": "bgb-at-rso-q9",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie in 3–5 Sätzen, was unter dem Taschengeldparagrafen (§ 110 BGB) zu verstehen ist und warum ein Ratenkauf eines Minderjährigen in der Regel nicht darunter fällt.",
+      "sampleAnswer": "§ 110 BGB ermöglicht es Minderjährigen, Verträge wirksam zu schließen, wenn sie die vertragsgemäße Leistung vollständig mit Mitteln bewirken, die ihnen zu diesem Zweck oder zur freien Verfügung überlassen wurden. 'Vollständig bewirkt' bedeutet, dass die gesamte geschuldete Leistung (Kaufpreis) aus diesen Mitteln erbracht sein muss. Bei einem Ratenkauf schuldet der Minderjährige den Gesamtpreis in Teilbeträgen. Solange er nicht alle Raten bezahlt hat, ist die Leistung nicht vollständig bewirkt. Da Taschengeld in aller Regel nicht für mehrere zukünftige Ratenzahlungen ausreicht und der Minderjährige verpflichtet ist, zukünftige Raten zu zahlen, greift § 110 BGB nicht — der Vertrag bleibt schwebend unwirksam (§ 108 BGB).",
+      "keywords": ["vollständig bewirkt", "freie Verfügung", "Ratenkauf", "schwebend unwirksam", "§ 110 BGB"],
+      "explanation": "Das Merkmal 'vollständig bewirkt' in § 110 BGB ist der entscheidende Punkt: Der gesamte Kaufpreis muss aus den erlaubten Mitteln geleistet sein, bevor der Vertrag als wirksam gilt. Bei Raten ist das erst mit der letzten Rate der Fall — und ob das Taschengeld dafür reicht, ist ungewiss."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q10",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "leicht",
+      "prompt": "Was ist ein Anspruch im Sinne von § 194 Abs. 1 BGB?",
+      "options": [
+        "Das Recht, vor Gericht zu klagen",
+        "Das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen",
+        "Die Pflicht, eine Leistung zu erbringen",
+        "Ein Gestaltungsrecht wie die Anfechtung"
+      ],
+      "correct": [1],
+      "explanation": "§ 194 Abs. 1 BGB definiert den Anspruch als 'das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen'. Die Klagemöglichkeit ist eine prozessuale Konsequenz, aber nicht die Definition des Anspruchs selbst."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-rso-q11",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "leicht",
+      "prompt": "Tiere sind Sachen im Sinne des § 90 BGB.",
+      "answer": false,
+      "explanation": "§ 90a BGB stellt klar: Tiere sind keine Sachen. Auf sie finden jedoch die für Sachen geltenden Vorschriften entsprechende Anwendung, soweit nicht etwas anderes bestimmt ist."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-rso-q12",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Gebilde sind juristische Personen des ÖFFENTLICHEN Rechts? (Mehrfachauswahl möglich)",
+      "options": [
+        "GmbH",
+        "Stadt Hannover",
+        "Eingetragener Verein (e.V.)",
+        "Land Niedersachsen"
+      ],
+      "correct": [1, 3],
+      "multiple": true,
+      "explanation": "Die Stadt Hannover und das Land Niedersachsen sind Körperschaften des öffentlichen Rechts — juristische Personen des öffentlichen Rechts. Eine GmbH und ein e.V. sind juristische Personen des Privatrechts."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "bgb-at-rso-ex-1",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Besprechungsfall 1.1 – Der Bäcker und sein Brot",
+      "source": "Praxisteil 1, Besprechungsfall 1.1",
+      "type": "fall",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "B betreibt eine Bäckerei. Hierfür bestellt er Mehl beim Großhandel G, da er zu Broten verarbeitet. Da er leider gelegentlich vergisst zu zahlen, mahnt ihn G. Auch mit seinem Kunden K hat B Ärger, da sich ein Freund des K an einem Metallstück im Brot von B bei einer Party einen Zahn abgebrochen hat.\n\nFrage: Welche Arten von Rechtsbeziehungen liegen zwischen B und G einerseits sowie zwischen B und dem Freund des K andererseits vor?",
+      "hint": "Unterscheide zwischen rechtsgeschäftlichen Beziehungen (Vertrag), rechtsgeschäftsähnlichen Handlungen, Realakten und deliktischen Handlungen. Denke auch an die einschlägigen Paragraphen: §§ 433, 286, 823, 950 BGB.",
+      "solution": "## Lösung im Gutachtenstil\n\n### A) Rechtsbeziehung zwischen B und G (Mehllieferung / Verzug)\n\n**I. Art der Rechtsbeziehung**\n\nZwischen B und G könnte eine rechtsgeschäftliche Rechtsbeziehung in Form eines Kaufvertrags vorliegen.\n\nEin Kaufvertrag entsteht durch zwei übereinstimmende Willenserklärungen (Angebot und Annahme) über Kaufgegenstand und Kaufpreis (§ 433 BGB). B hat Mehl bestellt (Angebot oder Annahme) und G hat geliefert. Es liegt ein **Kaufvertrag** vor (§ 433 BGB) — eine rechtsgeschäftliche Beziehung, da beide Willenserklärungen abgegeben wurden, um diese Rechtsfolge herbeizuführen.\n\n**II. Mahnung und Verzug**\n\nDa B den Kaufpreis nicht zahlt und G gemahnt hat, könnte B in **Schuldnerverzug** geraten sein (§ 286 BGB). Verzug ist eine rechtsgeschäftsähnliche Handlung: Die Mahnung des G löst zwar den Verzug aus, die Rechtsfolgen (z. B. Verzugszinsen) treten jedoch kraft Gesetzes ein.\n\n**Zwischenergebnis**: Zwischen B und G besteht eine **rechtsgeschäftliche** Beziehung (Kaufvertrag, § 433 BGB) sowie eine **rechtsgeschäftsähnliche** Handlung (Mahnung mit der Folge des Verzugs, § 286 BGB).\n\n---\n\n### B) Rechtsbeziehung zwischen B und dem Freund des K (Metallstück / Zahn)\n\n**I. Art der Rechtsbeziehung**\n\nDer Freund des K hat das Brot des B gegessen und sich dabei einen Zahn abgebrochen. Fraglich ist, welche Art von Rechtsbeziehung zwischen B und dem Freund des K besteht.\n\nEin Vertrag zwischen B und dem Freund des K ist nicht ersichtlich — B hat das Brot an K verkauft, nicht an dessen Freund.\n\nAllerdings könnte eine **deliktische** Rechtsbeziehung vorliegen. Ein deliktisches Handeln liegt vor, wenn durch eine Handlung (oder Unterlassen) ein Schaden verursacht wird. Gem. § 823 Abs. 1 BGB ist, wer vorsätzlich oder fahrlässig die Gesundheit eines anderen widerrechtlich verletzt, zum Schadensersatz verpflichtet. B hat fahrlässig ein Metallstück im Brot belassen, das zur Zahnverletzung geführt hat. Die **Gesundheit** des Freundes wurde verletzt.\n\n**Zwischenergebnis**: Zwischen B und dem Freund des K besteht eine **deliktische** Rechtsbeziehung (§ 823 Abs. 1 BGB), da durch die Fahrlässigkeit des B die Gesundheit des Freundes verletzt wurde.\n\n---\n\n### C) Nebenaspekt: Verarbeitung von Mehl zu Brot\n\nDie Herstellung des Brots durch B aus dem Mehl stellt einen **Realakt** dar (§ 950 BGB — Verarbeitung). B erwirbt durch die Verarbeitung des Mehls das Eigentum am Brot, unabhängig davon, ob er dies wollte oder nicht. Die Rechtsfolge tritt allein durch die tatsächliche Handlung ein.\n\n---\n\n### Gesamtergebnis\n- B–G: Rechtsgeschäft (Kaufvertrag § 433 BGB) + rechtsgeschäftsähnlich (Mahnung/Verzug § 286 BGB)\n- B–Freund des K: Deliktisches Handeln (§ 823 Abs. 1 BGB)\n- Brotherstellung: Realakt (§ 950 BGB)"
+    },
+    {
+      "id": "bgb-at-rso-ex-2",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Besprechungsfall 1.2 – Der neue Marktstand",
+      "source": "Praxisteil 1, Besprechungsfall 1.2",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "B betreibt eine Bäckerei in Form einer GmbH und möchte sein Brot auf dem Wochenmarkt der niedersächsischen Stadt H verkaufen. Die GmbH und die Stadt schließen einen Mietvertrag über einen Marktstand auf dem Wochenmarkt. Mit dem Vertrag gewährt die Stadt der B-GmbH ferner das Recht, die Marke 'hannöversches Schützenfest' der Stadt H für eine neue Brotkreation zu verwenden. Da B jedoch nicht rechtzeitig zahlt, tritt die Stadt ihre Mietforderung an das Inkassobüro I ab.\n\n1. Kann die B-GmbH mit der Stadt H einen Mietvertrag abschließen?\n2. Um welche Arten von Rechtsobjekten handelt es sich beim Marktstand (als Sache), bei der Marke und bei der abgetretenen Mietforderung?",
+      "hint": "Prüfe zunächst die Rechtsfähigkeit der beteiligten Personen (§ 13 GmbHG, § 2 NKomVG). Bei Frage 2: Unterscheide körperliche Gegenstände (Sachen § 90 BGB), Immaterialgüter (§ 14 MarkenG) und Rechte (Forderungen).",
+      "solution": "## Lösung im Gutachtenstil\n\n### Frage 1: Kann die B-GmbH mit der Stadt H einen Mietvertrag abschließen?\n\n**Obersatz**: Die B-GmbH könnte mit der Stadt H einen wirksamen Mietvertrag abschließen, wenn beide Parteien rechtsfähig und damit fähig sind, Vertragspartner zu sein.\n\n**I. Rechtsfähigkeit der B-GmbH**\n\nEine GmbH ist eine juristische Person des Privatrechts. Gem. § 13 Abs. 1 GmbHG hat die GmbH als solche selbständig ihre Rechte und Pflichten; sie kann Eigentum und andere dingliche Rechte an Grundstücken erwerben, vor Gericht klagen und verklagt werden. Die B-GmbH ist damit **rechtsfähig** und kann Partei eines Mietvertrags sein.\n\n**II. Rechtsfähigkeit der Stadt H**\n\nDie Stadt H ist eine niedersächsische Gemeinde. Gem. § 2 Abs. 2 NKomVG sind Gemeinden Gebietskörperschaften des öffentlichen Rechts. Als Körperschaft des öffentlichen Rechts ist die Stadt H eine **juristische Person des öffentlichen Rechts** und damit rechtsfähig.\n\n**III. Ergebnis zu Frage 1**\n\nSowohl die B-GmbH als auch die Stadt H sind rechtsfähig. Sie können einen wirksamen Mietvertrag abschließen.\n\n---\n\n### Frage 2: Welche Arten von Rechtsobjekten liegen vor?\n\n**I. Der Marktstand (als körperliche Sache)**\n\nDer Marktstand ist ein körperlicher Gegenstand, der durch seine Oberfläche von anderen Sachen abgegrenzt ist. Es handelt sich um eine **körperliche Sache** i.S.d. § 90 BGB — genauer: eine **bewegliche Sache** (kein Grundstück, nicht fest mit dem Boden verbunden; ein Marktstand ist typischerweise fahrbar, vgl. § 95 BGB für auf fremdem Grund aufgestellte Sachen).\n\n**II. Die Marke 'hannöversches Schützenfest'**\n\nDie Marke ist kein körperlicher Gegenstand. Sie ist ein **Immaterialgüterrecht** — ein nicht-körperlicher Gegenstand. Gem. § 14 MarkenG hat der Inhaber einer Marke ein ausschließliches Recht; er kann Dritten die Benutzung untersagen. Die Marke ist ein **nicht-körperliches Rechtsobjekt** in Form eines Immaterialgüterrechts.\n\n**III. Die abgetretene Mietforderung**\n\nDie Mietforderung der Stadt H gegen die B-GmbH ist ein **Recht** — nämlich ein relatives subjektives Recht (Anspruch auf Zahlung des Mietzinses, § 535 Abs. 2 BGB). Forderungen sind **nicht-körperliche Gegenstände** und können gem. §§ 398 ff. BGB abgetreten werden. Das Inkassobüro I tritt durch die Abtretung in die Gläubigerstellung ein.\n\n**Gesamtergebnis Frage 2**:\n- Marktstand: körperliche Sache (§ 90 BGB), beweglich\n- Marke: nicht-körperliches Rechtsobjekt, Immaterialgüterrecht (§ 14 MarkenG)\n- Mietforderung: nicht-körperliches Rechtsobjekt in Form eines Rechts (Forderung, §§ 535, 398 BGB)"
+    },
+    {
+      "id": "bgb-at-rso-ex-3",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Besprechungsfall 1.3 – Der Minderjährige und die neue Zeitschrift",
+      "source": "Praxisteil 1, Besprechungsfall 1.3 (Musterlösung im Methodikteil)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Der 11-jährige M geht in den Schreibwarenladen des S, um sich die neueste Ausgabe seiner Lieblingszeitschrift zu kaufen. Für den Fall, dass er diese Zeitschrift kaufen wolle, hatte er von seinen Eltern ein 2-Euro-Stück erhalten. Er sucht sich eine Zeitschrift aus und bezahlt bei S und erhält neben der Zeitschrift noch 10 Cent Wechselgeld.\n\nWie ist die Rechtslage hinsichtlich der Willenserklärungen?\n\n**Abwandlung 1**: Wie ist der Fall zu entscheiden, wenn M ein 50-Cent-Stück von seinen Eltern zur freien Verfügung erhalten hätte und M verspricht, den Rest am Folgetag zu bezahlen?\n\n**Abwandlung 2**: Wie ist Abwandlung 1 zu entscheiden, wenn M das 50-Cent-Stück aus seinem Sparschwein genommen hatte, jedoch die Eltern M mitteilen, dass sie mit der Wahl der Zeitschrift zufrieden sind, als sie die Zeitschrift sehen?",
+      "hint": "M ist 11 Jahre alt — also beschränkt geschäftsfähig (§ 106 BGB). Prüfe: lediglich rechtlich vorteilhaft (§ 107 BGB)? Einwilligung der Eltern? Taschengeldparagraf (§ 110 BGB)? Bei Abwandlung 2: Was ist eine Genehmigung (§ 108 Abs. 1 BGB)?",
+      "solution": "## Lösung im Gutachtenstil\n\n### Grundfall\n\n**Obersatz**: Fraglich ist, ob M die Willenserklärung, die Zeitschrift kaufen zu wollen, wirksam abgeben konnte.\n\n**I. Beschränkte Geschäftsfähigkeit des M**\n\nEine Person ist gem. § 106 BGB beschränkt geschäftsfähig, wenn sie minderjährig ist, d. h. das achtzehnte Lebensjahr noch nicht (§ 2 BGB), jedoch das siebte Lebensjahr vollendet hat. M ist elf Jahre alt und damit noch nicht volljährig; gleichzeitig hat er das siebte Lebensjahr vollendet. M ist somit **beschränkt geschäftsfähig**.\n\n**II. Nur rechtlich vorteilhaft?**\n\nEine Willenserklärung ist gem. § 107 BGB ohne Einwilligung wirksam, wenn sie nur einen rechtlichen Vorteil bringt. Eine Erklärung ist nur rechtlich vorteilhaft, wenn durch sie nicht gleichzeitig Pflichten eingegangen werden. Ein Kaufvertrag schafft die Pflicht, den Kaufpreis zahlen zu müssen (§ 433 Abs. 2 BGB). Die Erklärung des M verpflichtet ihn damit zur Zahlung des Kaufpreises. Die Willenserklärung ist damit **nicht** nur rechtlich vorteilhaft.\n\n**III. Einwilligung der Eltern**\n\nDie Willenserklärung könnte durch Einwilligung seiner gesetzlichen Vertreter wirksam sein. Gesetzliche Vertreter eines Minderjährigen sind gem. § 1629 Abs. 1 S. 1 BGB die Eltern. Eine Einwilligung ist gem. § 183 S. 1 BGB die vorherige Zustimmung, die zu einem konkreten Rechtsgeschäft erteilt werden muss. Die Eltern des M haben ihm als seine gesetzlichen Vertreter das 2-Euro-Stück gegeben, damit er sich die aktuelle Ausgabe seiner Lieblingszeitschrift kaufen geht. Diese vorher erteilte Zustimmung richtet sich damit auf ein konkretes Rechtsgeschäft — sie haben somit **eingewilligt**.\n\n**Ergebnis Grundfall**: M konnte die Willenserklärung wirksam abgeben. Der Kaufvertrag ist wirksam zustande gekommen.\n\n---\n\n### Abwandlung 1: Nur 50 Cent, Rest-Versprechen am Folgetag\n\n**Obersatz**: Fraglich ist, ob M den Kaufvertrag über die Zeitschrift wirksam abschließen konnte, wenn ihm nur 50 Cent zur freien Verfügung stehen und er den Rest verspricht.\n\nM ist wie gezeigt beschränkt geschäftsfähig. Der Kaufvertrag ist nicht lediglich rechtlich vorteilhaft. Eine Einwilligung der Eltern liegt nicht vor (das 50-Cent-Stück wurde zur **freien Verfügung** gegeben, nicht zweckgebunden).\n\n**Taschengeldparagraf (§ 110 BGB)?**\n\nGem. § 110 BGB gilt ein Vertrag als von Anfang an wirksam, wenn der Minderjährige die vertragsmäßige Leistung mit Mitteln bewirkt, die ihm zu diesem Zweck oder zur freien Verfügung überlassen wurden. Voraussetzung ist, dass die Leistung **vollständig bewirkt** wird. M verspricht, den Restbetrag am Folgetag zu zahlen — er hat die Leistung also **nicht vollständig bewirkt**. § 110 BGB greift nicht.\n\n**Ergebnis Abwandlung 1**: Der Kaufvertrag ist **schwebend unwirksam** (§ 108 Abs. 1 BGB). Er wird erst wirksam, wenn die Eltern des M genehmigen.\n\n---\n\n### Abwandlung 2: Eltern zeigen Zufriedenheit nachträglich\n\n**Obersatz**: Fraglich ist, ob der schwebend unwirksame Kaufvertrag durch das Verhalten der Eltern wirksam wird.\n\nDie Situation entspricht Abwandlung 1: Der Vertrag ist schwebend unwirksam (§ 108 Abs. 1 BGB), da M das 50-Cent-Stück aus eigenem Sparschwein genommen hat (kein zur freien Verfügung überlassenes Mittel) und nicht vollständig geleistet hat.\n\n**Genehmigung (§ 108 Abs. 1, § 184 BGB)?**\n\nGem. § 108 Abs. 1 BGB hängt die Wirksamkeit des Vertrags von der Genehmigung der gesetzlichen Vertreter ab. Eine Genehmigung ist gem. § 184 Abs. 1 BGB die nachträgliche Zustimmung. Die Eltern des M teilen M mit, dass sie mit der Wahl der Zeitschrift zufrieden sind — dies ist als konkludente **Genehmigung** des Kaufvertrags auszulegen, da sie damit ihr Einverständnis mit dem konkreten Rechtsgeschäft zum Ausdruck bringen.\n\n**Ergebnis Abwandlung 2**: Der Kaufvertrag wird durch die nachträgliche Genehmigung der Eltern gem. §§ 108 Abs. 1, 184 Abs. 1 BGB **wirksam** (ex tunc — rückwirkend auf den Zeitpunkt des Vertragsschlusses)."
+    },
+    {
+      "id": "bgb-at-rso-ex-4",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Besprechungsfall 1.4 – Das neue Auto und die Garage",
+      "source": "Praxisteil 1, Besprechungsfall 1.4",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "D hat sich ein neues Auto gekauft, bei dem er einen neuen Motor einsetzen lassen möchte. Den alten Motor möchte er bereits jetzt, bevor er ausgebaut ist, an E verkaufen. Zusätzlich hat er sein Auto neu lackiert. Außerdem hat er sich eine Garage neben sein Eigenheim bauen lassen.\n\n1. Handelt es sich bei dem Motor, der Farbe und der Garage um eine (bewegliche) Sache?\n2. Kann D von seinem Verkäufer auch den Zweitschlüssel für das Auto verlangen?\n\n**Abwandlung**: Wie ist der Fall hinsichtlich der Garage zu entscheiden, wenn D stattdessen nur Mieter des Hauses ist und die Fertiggarage auf das gemietete Grundstück stellt und D und E vereinbart hätten, dass E den Zweitschlüssel als Andenken behalten darf (da das Auto verschrottet werden soll)?",
+      "hint": "Motor: wesentlicher Bestandteil? (§ 93 BGB). Farblack: kann er nach dem Lackieren noch eine eigene Sache sein? Garage am Eigenheim: § 94 Abs. 1 BGB. Zweitschlüssel: Zubehör? (§ 97 BGB) + § 311c BGB. Abwandlung: Fertiggarage = Scheinbestandteil? (§ 95 BGB).",
+      "solution": "## Lösung im Gutachtenstil\n\n### Frage 1: Motor, Farbe und Garage\n\n**I. Der Motor**\n\nFraglich ist, ob der eingebaute Motor des Autos eine eigenständige Sache i.S.d. § 90 BGB ist, über die D separat verfügen kann.\n\nEin körperlicher Gegenstand ist eine Sache (§ 90 BGB). Sachen können jedoch wesentliche Bestandteile einer anderen Sache sein (§ 93 BGB). Wesentliche Bestandteile können nicht ohne Zerstörung oder wesentliche Veränderung der einen oder anderen Sache getrennt werden. Der Motor ist technisch untrennbar in das Auto integriert — ohne Motor ist das Auto nicht funktionstüchtig (wesentlich verändert). Der Motor ist damit **wesentlicher Bestandteil** des Autos.\n\n**Folge**: Gem. § 93 BGB kann der Motor nicht Gegenstand besonderer Rechte sein, solange er eingebaut ist. Ein Kaufvertrag über den noch eingebauten Motor ist schuldrechtlich zwar wirksam, die Übereignung (§ 929 BGB) ist aber erst möglich, wenn der Motor ausgebaut und wieder eine eigenständige Sache ist.\n\n**II. Die Farbe (Lack)**\n\nDer aufgetragene Lack verliert durch die Verbindung mit der Karosserie seine Eigenschaft als selbständige Sache vollständig — er geht in der Karosserie auf (Verbindung, § 947 BGB analog). Der Lack ist nach dem Auftragen **keine eigenständige Sache** mehr; er ist wesentlicher Bestandteil des Autos geworden.\n\n**III. Die Garage (am Eigenheim)**\n\nD hat die Garage neben sein Eigenheim bauen lassen — D ist Eigentümer des Grundstücks. Gem. § 94 Abs. 1 BGB gehören zu den wesentlichen Bestandteilen eines Grundstücks die mit dem Grund und Boden fest verbundenen Sachen, insbesondere Gebäude. Eine fest gebaute Garage ist ein Gebäude i.S.d. § 94 Abs. 1 BGB. Die Garage ist damit **wesentlicher Bestandteil des Grundstücks** und damit im Eigentum des D als Grundstückseigentümer.\n\n**Ergebnis Frage 1**: Motor (eingebaut): wesentlicher Bestandteil, keine eigene Sache (§ 93 BGB). Farblack: keine eigenständige Sache nach Auftragung. Garage am Eigenheim: wesentlicher Bestandteil des Grundstücks (§ 94 Abs. 1 BGB).\n\n---\n\n### Frage 2: Zweitschlüssel als Zubehör\n\n**Obersatz**: D könnte von seinem Verkäufer den Zweitschlüssel verlangen, wenn dieser Zubehör des Autos ist und der Kaufvertrag gem. § 311c BGB auch das Zubehör umfasst.\n\n**I. Zubehör (§ 97 BGB)**\n\nZubehör sind bewegliche Sachen, die ohne Bestandteil der Hauptsache zu sein, dem wirtschaftlichen Zweck der Hauptsache zu dienen bestimmt sind und zu ihr in einem dieser Bestimmung entsprechenden räumlichen Verhältnis stehen. Der Zweitschlüssel:\n- ist eine bewegliche Sache (körperlicher Gegenstand),\n- ist kein Bestandteil des Autos (er kann ohne Zerstörung getrennt werden),\n- dient dem wirtschaftlichen Zweck des Autos (zum Aufschließen und Starten),\n- steht räumlich im Zusammenhang.\nDer Zweitschlüssel ist **Zubehör** des Autos.\n\n**II. Erstreckung auf Zubehör (§ 311c BGB)**\n\nGem. § 311c BGB erstreckt sich eine Verpflichtung zur Veräußerung einer Sache im Zweifel auch auf das Zubehör. Da kein Ausschluss vereinbart wurde, umfasst der Kaufvertrag im Zweifel auch den Zweitschlüssel.\n\n**Ergebnis Frage 2**: Ja, D kann den Zweitschlüssel verlangen, da er Zubehör ist (§ 97 BGB) und die Verpflichtung aus dem Kaufvertrag sich gem. § 311c BGB im Zweifel auf das Zubehör erstreckt.\n\n---\n\n### Abwandlung: Fertiggarage des Mieters D; Schlüssel an E\n\n**I. Fertiggarage als Scheinbestandteil (§ 95 BGB)?**\n\nD ist hier nur Mieter, kein Eigentümer des Grundstücks. Er stellt eine Fertiggarage auf das gemietete Grundstück. § 95 Abs. 1 S. 2 BGB bestimmt: Zu den Bestandteilen eines Grundstücks gehören solche Sachen nicht, die in Ausübung eines Rechts an einem fremden Grundstück von dem Berechtigten mit dem Grundstück verbunden worden sind. D verbindet die Fertiggarage mit dem Grundstück in Ausübung seines Mietrechts. Die Garage ist damit ein **Scheinbestandteil** — sie wird nicht wesentlicher Bestandteil des Grundstücks, sondern bleibt im Eigentum des D.\n\n**II. Zweitschlüssel als Zubehör der Garage**\n\nDer Zweitschlüssel des Autos dient dem wirtschaftlichen Zweck des Autos, nicht der Garage. Er ist daher Zubehör des Autos (§ 97 BGB), nicht der Garage. Eigentümer ist D.\n\nD und E haben vereinbart, dass E den Schlüssel als Andenken behalten darf. Um Eigentum zu übertragen, bedarf es einer Einigung und Übergabe (§ 929 BGB). Wenn D dem E den Schlüssel tatsächlich übergeben und die Einigung getroffen hat, ist E Eigentümer. Ist die Übergabe noch nicht erfolgt, hat E nur einen schuldrechtlichen Anspruch auf Übereignung.\n\n**Ergebnis Abwandlung**: Die Fertiggarage ist Scheinbestandteil (§ 95 Abs. 1 S. 2 BGB) und bleibt im Eigentum des D. Der Schlüssel ist Zubehör des Autos (§ 97 BGB) und gehört D; E erhält Eigentum erst durch Einigung und Übergabe (§ 929 BGB)."
+    },
+    {
+      "id": "bgb-at-rso-ex-5",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Vertiefungsfall 1.2 – Das neue Tretauto und die Schramme am Zaun",
+      "source": "Praxisteil 1, Vertiefungsfall 1.2",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Der 5-jährige K hat mit seinem 8-jährigen Freund F sein Roller gegen ein Tretauto getauscht. Auf dem Nachhauseweg vom Spielplatz schrammt er leider mit dem Tretauto am Zaun des Nachbarn N entlang. Am Zaun entsteht eine lange Schramme.\n\nIst K geschäfts- und deliktsfähig?\n\n**Abwandlung 1**: Wie ist der Fall zu entscheiden, wenn K bereits 9 Jahre alt ist und mit dem Tretauto das vorbeifahrende Auto des N schrammt?\n\n**Abwandlung 2**: Wie ist der Fall zu entscheiden, wenn stattdessen die Katze 'K' des volljährigen V am Zaun des Nachbarn N kratzt und dadurch die Schramme entstanden ist?",
+      "hint": "Geschäftsfähigkeit: § 104 Nr. 1 BGB (unter 7 Jahren), § 106 BGB (7–17 Jahre). Deliktsfähigkeit: § 828 Abs. 1 BGB (unter 7 Jahren), § 828 Abs. 2 BGB (Straßenverkehr bis 10 Jahre), § 828 Abs. 3 BGB. Abwandlung 2: Kann eine Katze deliktsfähig sein? Wer haftet stattdessen?",
+      "solution": "## Lösung im Gutachtenstil\n\n### Grundfall: K ist 5 Jahre alt\n\n**I. Geschäftsfähigkeit des K**\n\n**Obersatz**: Fraglich ist, ob K geschäftsfähig ist und damit wirksam den Tauschvertrag (Roller gegen Tretauto) schließen konnte.\n\n**Definition**: Gem. § 104 Nr. 1 BGB ist geschäftsunfähig, wer das siebte Lebensjahr noch nicht vollendet hat.\n\n**Subsumtion**: K ist 5 Jahre alt und hat das siebte Lebensjahr noch nicht vollendet.\n\n**Ergebnis**: K ist **geschäftsunfähig** (§ 104 Nr. 1 BGB). Seine Willenserklärung zum Tausch ist nichtig (§ 105 Abs. 1 BGB). Ein wirksamer Tauschvertrag ist nicht zustande gekommen.\n\n---\n\n**II. Deliktsfähigkeit des K hinsichtlich der Schramme am Zaun**\n\n**Obersatz**: Fraglich ist, ob K für die Schramme am Zaun des N deliktisch haften kann, d. h. ob er deliktsfähig ist.\n\n**Definition**: Gem. § 828 Abs. 1 BGB ist für einen Schaden, den er einem anderen zufügt, nicht verantwortlich, wer das siebte Lebensjahr noch nicht vollendet hat.\n\n**Subsumtion**: K ist 5 Jahre alt — er hat das siebte Lebensjahr noch nicht vollendet.\n\n**Ergebnis**: K ist **deliktsunfähig** (§ 828 Abs. 1 BGB). Er haftet nicht gegenüber N.\n\nHinweis: N könnte jedoch die Eltern des K nach §§ 832, 828 BGB (Aufsichtspflicht) in Anspruch nehmen. Daneben kommt Billigkeitshaftung gem. § 829 BGB in Betracht.\n\n---\n\n### Abwandlung 1: K ist 9 Jahre, schrammt Auto im Straßenverkehr\n\n**I. Geschäftsfähigkeit**: K ist 9 Jahre alt — er hat das 7. Lebensjahr vollendet, nicht aber das 18. Lebensjahr. K ist **beschränkt geschäftsfähig** (§ 106 BGB).\n\n**II. Deliktsfähigkeit im Straßenverkehr**\n\n**Obersatz**: Fraglich ist, ob K für den Schaden am Auto des N im Straßenverkehr deliktsfähig ist.\n\n**Definition**: Gem. § 828 Abs. 2 S. 1 BGB ist, wer das siebente, aber nicht das zehnte Lebensjahr vollendet hat, für den Schaden, den er bei einem Unfall mit einem Kraftfahrzeug, einer Schienen- oder einer Schwebebahn einem anderen zufügt, nicht verantwortlich. Dies gilt nicht, wenn er die Verletzung vorsätzlich herbeigeführt hat (§ 828 Abs. 2 S. 2 BGB).\n\n**Subsumtion**: K ist 9 Jahre alt (7–10 Jahre). Er hat mit seinem Tretauto das Auto des N (Kraftfahrzeug) im Straßenverkehr beschädigt. Vorsatz ist nicht ersichtlich.\n\n**Ergebnis**: K ist **nicht deliktsfähig** gem. § 828 Abs. 2 BGB — er haftet nicht für den Schaden am Auto des N im Straßenverkehr.\n\n---\n\n### Abwandlung 2: Katze 'K' des V verursacht die Schramme\n\n**Obersatz**: Fraglich ist, ob die Katze 'K' deliktsfähig ist und wer für den Schaden haftet.\n\n**Definition/Subsumtion**: Deliktsfähigkeit setzt Handlungsfähigkeit voraus — die Fähigkeit, eine eigene Willensentscheidung zu treffen. Tiere, wie die Katze, haben keine Rechtssubjektivität und sind daher **nicht deliktsfähig**. Die Katze kann keine Willenserklärungen abgeben und keine eigene rechtliche Verantwortung tragen.\n\nAllerdings könnte V als Eigentümer der Katze haften. Gem. § 833 S. 1 BGB (Tierhalterhaftung) ist derjenige, der ein Tier hält, zum Ersatz des Schadens verpflichtet, den das Tier einem anderen zufügt. V ist Halter der Katze.\n\n**Ergebnis**: Die Katze selbst ist nicht deliktsfähig. V als Tierhalter haftet jedoch gem. § 833 S. 1 BGB gegenüber N für die Schramme am Zaun."
+    },
+    {
+      "id": "bgb-at-rso-ex-6",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Vertiefungsfall 1.3 – Der Minderjährige und das Eis vom Kiosk",
+      "source": "Praxisteil 1, Vertiefungsfall 1.3 (Beispielgutachten zu Abwandlung 3 im Methodikteil)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Der 7-jährige A hat auf dem Nachhauseweg von der Schule ein 2-Euro-Stück gefunden. Als er am Kiosk des B vorbeikommt, sieht er im Schaufenster ein großes Schild 'Eis für 1 €'. Da es ein heißer Sommertag ist, geht A in den Kiosk und kauft bei B für 1 Euro ein Eis. Neben dem Eis erhält A 1 Euro Wechselgeld.\n\n1. Konnte A das Eis wirksam kaufen?\n2. Konnte A das Eis und das 1-Euro-Wechselgeld von B wirksam entgegennehmen und das 2-Euro-Stück wirksam an B übereignen?\n\n(Anmerkung: Der Finder einer verlorenen Sache erwirbt erst bei einem Wert unter 10 Euro nach sechs Monaten nach dem Fund das Eigentum an der Sache, vgl. § 973 BGB.)\n\n**Abwandlung 1**: Wie ist der Fall zu entscheiden, wenn A das Eis ausnahmsweise für 10 Cent erhält?\n\n**Abwandlung 2**: Wie ist der Fall zu entscheiden, wenn A stattdessen bereits 88 Jahre alt und hochgradig dement ist?\n\n**Abwandlung 3**: Wie ist der Fall zu entscheiden, wenn A stattdessen nur 6 Jahre alt ist?",
+      "hint": "A ist 7 Jahre alt (genau das siebte Jahr vollendet!) — das macht § 106 BGB (beschränkt geschäftsfähig) anwendbar, nicht § 104. Prüfe: lediglich rechtlich vorteilhaft? Taschengeldparagraf § 110 BGB? Das 2-Euro-Stück: Ist A Eigentümer davon (§ 973 BGB)? Abwandlung 2: § 104 Nr. 2 BGB. Abwandlung 3: § 104 Nr. 1 BGB.",
+      "solution": "## Lösung im Gutachtenstil\n\n### Grundfall (A = 7 Jahre)\n\n**I. Frage 1: Wirksamer Kaufvertrag über das Eis?**\n\n**Obersatz**: Fraglich ist, ob A das Eis wirksam kaufen konnte.\n\n**A ist beschränkt geschäftsfähig (§ 106 BGB)**: A hat das siebte Lebensjahr vollendet (er ist genau 7) und ist noch nicht volljährig — er ist beschränkt geschäftsfähig. (Hätte er das 7. Lebensjahr noch nicht vollendet, wäre er nach § 104 Nr. 1 BGB geschäftsunfähig.)\n\n**Nur rechtlich vorteilhaft?**: Ein Kaufvertrag verpflichtet den Käufer zur Kaufpreiszahlung (§ 433 Abs. 2 BGB) — dies ist ein rechtlicher Nachteil. Das Geschäft ist nicht lediglich rechtlich vorteilhaft.\n\n**Einwilligung der Eltern?**: Keine Einwilligung der Eltern ist ersichtlich.\n\n**Taschengeldparagraf (§ 110 BGB)?**: A hat das 2-Euro-Stück gefunden. Gefundenes Geld wurde A nicht von seinen Eltern oder Dritten 'überlassen'. Das 2-Euro-Stück steht nicht zur freien Verfügung i.S.d. § 110 BGB — es wurde A nicht von einer berechtigten Person überlassen. § 110 BGB greift daher **nicht**.\n\n**Ergebnis Frage 1**: Der Kaufvertrag ist **schwebend unwirksam** (§ 108 Abs. 1 BGB).\n\n---\n\n**II. Frage 2: Entgegennahme des Eises/Wechselgeldes; Übereignung des 2-Euro-Stücks**\n\n**Entgegennahme des Eises (lediglich rechtlich vorteilhaft)**:\nDie Übergabe des Eises an A (Übereignung durch B) bringt A lediglich einen rechtlichen Vorteil — er erhält Eigentum, ohne eine Pflicht einzugehen. Dies kann A auch ohne Zustimmung der Eltern wirksam entgegennehmen (§ 107 BGB).\n\n**Entgegennahme des 1-Euro-Wechselgelds**:\nEntsprechendes gilt für das Wechselgeld — auch hier nur rechtlicher Vorteil.\n\n**Übereignung des 2-Euro-Stücks durch A an B (§ 929 BGB)**:\nDie Übereignung erfordert Einigung und Übergabe. Die Übereignung begründet für A den Verlust des Eigentums — ein rechtlicher Nachteil. Außerdem ist fraglich, ob A überhaupt Eigentümer des 2-Euro-Stücks ist. Gem. § 973 BGB erwirbt der Finder erst nach sechs Monaten Eigentum an einer Sache unter 10 Euro Wert. Da A das Geld gerade gefunden hat, ist er noch nicht Eigentümer. B erlangt damit kein Eigentum durch Übereignung vom Nichtberechtigten (§ 929 BGB setzt Eigentum voraus).\n\nDie Übereignung des 2-Euro-Stücks durch A an B ist **unwirksam** — mangels Geschäftsfähigkeit (kein lediglich rechtlicher Vorteil) und mangels Eigentum des A.\n\n---\n\n### Abwandlung 1: Eis für 10 Cent\n\n§ 105a BGB: Volljährige Geschäftsunfähige können Geschäfte des täglichen Lebens schließen. A ist jedoch minderjährig, nicht volljährig — § 105a BGB ist nicht anwendbar.\n\nAuch bei 10 Cent gilt: A ist beschränkt geschäftsfähig, keine Einwilligung, kein überlassenes Geld → schwebend unwirksam nach § 108 BGB.\n\n*Hinweis*: Bei 10 Cent wäre das Eis wohl unter die Grenze der Geringwertigkeit einzuordnen — aber § 105a BGB gilt nur für Volljährige, nicht für Minderjährige.\n\n**Ergebnis Abwandlung 1**: Auch bei 10 Cent ist der Kaufvertrag schwebend unwirksam (§ 108 BGB).\n\n---\n\n### Abwandlung 2: A ist 88 Jahre alt und hochgradig dement\n\n**Obersatz**: Fraglich ist, ob A wirksam einen Kaufvertrag schließen kann.\n\n**Definition § 104 Nr. 2 BGB**: Geschäftsunfähig ist, wer sich in einem die freie Willensbildung ausschließenden dauernden Zustand krankhafter Störung der Geistestätigkeit befindet. Dieser Zustand muss auf Dauer oder mindestens für längere Zeit bestehen.\n\n**Subsumtion**: A ist hochgradig dement. Hochgradige Demenz schließt die freie Willensbildung dauerhaft aus — es liegt ein dauernder Zustand krankhafter Störung vor.\n\n**Ergebnis Abwandlung 2**: A ist **geschäftsunfähig** (§ 104 Nr. 2 BGB). Seine Willenserklärung ist nichtig (§ 105 Abs. 1 BGB). \n\n*Hinweis*: § 105a BGB könnte eingreifen, da A volljährig ist und es sich um ein Geschäft des täglichen Lebens handelt. Wenn A vollständig zahlt (Leistung bewirkt), wäre das Geschäft nach § 105a BGB wirksam. Da das Schild 'Eis für 1 €' vorliegt und A zahlt, wäre § 105a BGB zu bejahen.\n\n---\n\n### Abwandlung 3: A ist 6 Jahre alt (Beispielgutachten aus dem Methodikteil)\n\n**Obersatz**: Fraglich ist, ob A das Eis wirksam kaufen konnte.\n\n**Definition**: Eine Erklärung eines Geschäftsunfähigen, d. h. gem. § 104 Nr. 1 BGB bis zu seinem vollendeten siebten Lebensjahr, ist gem. § 105 Abs. 1 BGB nichtig und unwirksam.\n\n**Subsumtion**: A ist 6 Jahre alt und damit geschäftsunfähig. Seine Erklärung, das Eis kaufen zu wollen, ist damit nichtig.\n\n**Ergebnis**: Folglich konnte A das Eis **nicht wirksam kaufen**."
+    },
+    {
+      "id": "bgb-at-rso-ex-7",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Vertiefungsfall 1.4 – Der neue Gärtnereibetrieb und die Folgen",
+      "source": "Praxisteil 1, Vertiefungsfall 1.4",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "K hat den Gärtnereibetrieb, die G-GmbH von O erworben, deren Geschäftsführer er jetzt ist. Bei einem Auftrag bei Rentner R läuft ihm leider der Benzinkanister aus, mit dem er den Rasenmäher befüllen wollte; das Benzin versickert im Erdreich. Den geschnittenen Rasen verkauft er in seiner Gärtnerei an Hobbytierhalter. Weiterhin vermietet G den Rasenmäher an E und erhält hierfür 60 Euro. Wie sich nachher herausstellt, hatte O den Rasenmäher selbst nur von M gemietet und der Mietvertrag war bereits abgelaufen, sodass M die 60 Euro von K heraus verlangt.\n\n1. Ist G rechts-, geschäfts- und deliktsfähig?\n2. Um welche Art von Rechtsobjekt handelt es sich bei dem Unternehmen der G-GmbH, dem Benzin, dem im Erdreich versickerten Benzin, dem Rasen, welcher beim Mähen abgeschnitten wird, sowie den 60 Euro, die G als Miete erhält?\n3. Ist K Eigentümer des Grases geworden, das er gemäht hat, und ist er zur Herausgabe der Miete in Höhe von 60 Euro an M verpflichtet?\n\n(Anmerkung: Es ist davon auszugehen, dass R das Grundstück von D gepachtet hat, was dem Pächter gestattet, die Erzeugnisse der Sache zu erhalten.)",
+      "hint": "Frage 1: § 13 GmbHG (Rechtsfähigkeit), § 35 GmbHG (Handlungsfähigkeit durch Geschäftsführer), § 31 BGB (Deliktsfähigkeit). Frage 2: Unternehmen = Zusammenfassung mehrerer Gegenstände (körperlich/unkörperlich); Benzin = körperliche Sache; versickertes Benzin = keine Sache mehr? Rasen = Früchte/Erzeugnisse; 60 Euro = Früchte i.S.d. § 99 Abs. 3 BGB? Frage 3: Eigentum am Gras → § 956 BGB (Erwerb durch Berechtigten); 60 Euro → § 812 BGB (ungerechtfertigte Bereicherung), § 818 BGB.",
+      "solution": "## Lösung im Gutachtenstil\n\n### Frage 1: Rechts-, Geschäfts- und Deliktsfähigkeit der G-GmbH\n\n**I. Rechtsfähigkeit der G-GmbH**\n\nGem. § 13 Abs. 1 GmbHG hat die GmbH als solche selbständig ihre Rechte und Pflichten; sie kann Eigentum und andere dingliche Rechte erwerben, vor Gericht klagen und verklagt werden. Die G-GmbH ist damit eine **rechtsfähige** juristische Person des Privatrechts.\n\n**II. Geschäftsfähigkeit der G-GmbH**\n\nEine juristische Person ist als reines Rechtskonstrukt selbst handlungsunfähig. Sie handelt durch ihre **Organe**. Gem. § 35 Abs. 1 S. 1 GmbHG wird die GmbH durch die Geschäftsführer gerichtlich und außergerichtlich vertreten. K ist Geschäftsführer — er ist das Organ (Einzelorgan). Die Handlungen des K als Organwalter werden der G-GmbH zugerechnet. Die G-GmbH ist damit über K **geschäftsfähig** im weiteren Sinne (handlungsfähig).\n\n**III. Deliktsfähigkeit der G-GmbH**\n\nGem. § 31 BGB (analog auf GmbH anwendbar) ist der Verein (und juristische Personen generell) für den Schaden verantwortlich, den der Vorstand, ein Mitglied des Vorstands oder ein anderer verfassungsmäßig berufener Vertreter durch eine zum Schadensersatz verpflichtende Handlung einem Dritten zufügt. K handelt als Geschäftsführer (verfassungsmäßig berufener Vertreter). Die G-GmbH ist damit **deliktsfähig** — sie haftet für Schäden, die K in Ausführung seiner Aufgaben verursacht.\n\n---\n\n### Frage 2: Rechtsobjekte\n\n**I. Das Unternehmen der G-GmbH**\n\nEin Unternehmen ist eine Zusammenfassung von körperlichen Sachen (Maschinen, Fahrzeuge, Lagerbestände), nicht-körperlichen Gegenständen (Forderungen, Lizenzen, Marken, Know-how, Kundenstamm, goodwill) und Rechten. Es ist kein einheitliches Rechtsobjekt i.S.d. Spezialitätsgrundsatzes, sondern eine schuldrechtliche Zusammenfassung verschiedener Einzelgegenstände.\n\n**II. Das Benzin (vor dem Versickern)**\n\nBenzin ist ein körperlicher, flüssiger Gegenstand — eine **bewegliche Sache** i.S.d. § 90 BGB.\n\n**III. Das im Erdreich versickerte Benzin**\n\nNach dem Versickern verliert das Benzin seine körperliche Abgegrenztheit — es verbindet sich mit dem Erdreich. Es ist keine eigenständige abgrenzbare Sache mehr. Das versickerte Benzin ist damit **kein eigenständiges Rechtsobjekt** mehr.\n\n**IV. Der abgeschnittene Rasen**\n\nGras, das beim Mähen abgeschnitten wird, ist ein Erzeugnis des Grundstücks — eine **Frucht** i.S.d. § 99 Abs. 1 BGB (natürliche Frucht). Vor dem Abschneiden ist der Rasen als noch mit dem Boden verbundener Teil wesentlicher Bestandteil des Grundstücks (§ 94 BGB). Nach dem Abschneiden wird er eine **eigenständige bewegliche Sache** (§ 90 BGB).\n\n**V. Die 60 Euro Miete**\n\nDie 60 Euro, die G als Miete für den Rasenmäher erhält, sind Erträge kraft Rechtsverhältnisses (Mietvertrag) — **Früchte** i.S.d. § 99 Abs. 3 BGB und Nutzungen i.S.d. § 100 BGB. Als Geldscheine/Münzen sind sie körperliche Sachen (§ 90 BGB); als Mieteinnahmen zugleich Früchte des Rasenmähers.\n\n---\n\n### Frage 3: Eigentum am Gras; Herausgabepflicht der 60 Euro\n\n**I. Eigentum am abgeschnittenen Gras**\n\n**Obersatz**: K könnte Eigentümer des abgeschnittenen Grases geworden sein.\n\nGem. § 956 Abs. 1 S. 1 BGB erwirbt derjenige, dem der Eigentümer gestattet, Erzeugnisse oder sonstige Bestandteile der Sache sich anzueignen, das Eigentum an den Erzeugnissen mit der Trennung. R ist Pächter des Grundstücks von D. Ein Pachtvertrag gestattet dem Pächter, die Erzeugnisse der Sache zu erhalten (§ 581 BGB). R hat damit das Recht, die Früchte (Gras) des Grundstücks zu ziehen — er ist insoweit der Berechtigte i.S.d. § 956 BGB. R hat K mit dem Mähen beauftragt. K erwirbt mit dem Abschneiden des Grases das Eigentum daran für R (im Auftrag des R). Das Eigentum am abgeschnittenen Gras erwirbt damit zunächst R. K verkauft es an die Hobbytierhalter — dazu muss K Eigentümer oder von R ermächtigt sein.\n\n**Ergebnis**: K wird durch das Mähen nicht unmittelbar Eigentümer des Grases — das Eigentum erwirbt R kraft § 956 BGB mit der Trennung. K kann das Gras nur mit Zustimmung/Ermächtigung des R verkaufen.\n\n**II. Herausgabe der 60 Euro Miete an M**\n\n**Obersatz**: M könnte von K (bzw. G-GmbH) Herausgabe der 60 Euro Miete aus § 812 Abs. 1 S. 1 Alt. 2 BGB (Nichtleistungskondiktion / Eingriffskondiktion) verlangen.\n\nGem. § 812 Abs. 1 S. 1 BGB ist, wer durch die Leistung eines anderen oder in sonstiger Weise auf dessen Kosten etwas ohne rechtlichen Grund erlangt, zur Herausgabe verpflichtet. G hat den Rasenmäher des M (den O von M gemietet hatte und der Mietvertrag abgelaufen war) vermietet und 60 Euro erhalten — dies auf Kosten des M (Eingriff in sein Eigentum/Nutzungsrecht am Rasenmäher). Ein Rechtsgrund fehlt, da der Mietvertrag abgelaufen war und G kein Recht zur Untervermietung hatte.\n\nGem. § 818 Abs. 1 BGB erstreckt sich die Herausgabepflicht auch auf die gezogenen Nutzungen — hier die 60 Euro Miete.\n\n**Ergebnis**: M hat gegen K (als Geschäftsführer handelnd für die G-GmbH) einen Anspruch auf Herausgabe der 60 Euro gem. §§ 812 Abs. 1 S. 1, 818 Abs. 1 BGB."
+    },
+    {
+      "id": "bgb-at-rso-ex-8",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "label": "Vertiefungsfall 2.2 – Der Minderjährige und die neue Konsole",
+      "source": "Praxisteil 2, Vertiefungsfall 2.2",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Der 17-jährige M möchte sich eine neue Spielekonsole kaufen und findet ein Angebot über eine gebrauchte Spielekonsole des T auf einer Internetplattform. Nach einigen Preisverhandlungen einigen sich M und T, dass M 50 Euro anzahlt und weitere 50 Euro in fünf Monatsraten zu 10 Euro bezahlt. Die Spielekonsole darf M bereits mitnehmen. Als sich M jedoch einen Monat später weigert, die erste Rate zu zahlen, ruft T bei den Eltern des M an und fordert sie auf, M zu veranlassen, die erste Rate zu zahlen; da er sie nicht persönlich erreicht, spricht er auf den Anrufbeantworter. Auch drei Wochen später hat T noch keine Antwort der Eltern des M erhalten.\n\nWie ist die Rechtslage hinsichtlich der Verträge?\n\n(Anmerkung: Auf die gezahlten 50 Euro ist nicht einzugehen.)\n\n**Abwandlung**: Wie ist der Fall zu entscheiden, wenn M inzwischen 18 geworden ist und T erst anschließend bei den Eltern des M angerufen hat?",
+      "hint": "M ist 17 Jahre alt → beschränkt geschäftsfähig (§ 106 BGB). Der Kaufvertrag ist nicht nur rechtlich vorteilhaft; keine Einwilligung der Eltern ersichtlich; § 110 BGB greift nicht (nicht vollständig bewirkt). Schwebend unwirksam (§ 108 BGB). T fordert Eltern zur Genehmigung auf → § 108 Abs. 2 BGB: Zwei-Wochen-Frist. Was passiert nach 3 Wochen ohne Antwort? Abwandlung: § 108 Abs. 3 BGB.",
+      "solution": "## Lösung im Gutachtenstil\n\n### Grundfall: Rechtslage der Verträge\n\n**Obersatz**: Fraglich ist, ob zwischen M und T wirksame Verträge (Kaufvertrag über die Konsole; Ratenzahlungsvereinbarung) zustande gekommen sind.\n\n**I. Beschränkte Geschäftsfähigkeit des M**\n\nM ist 17 Jahre alt. Er hat das siebente Lebensjahr vollendet, aber das achtzehnte noch nicht — M ist **beschränkt geschäftsfähig** (§ 106 BGB).\n\n**II. Wirksamkeit des Kaufvertrags**\n\nDer Kaufvertrag verpflichtet M zur Kaufpreiszahlung (§ 433 Abs. 2 BGB) — er ist nicht lediglich rechtlich vorteilhaft (§ 107 BGB). Eine Einwilligung der Eltern vor Vertragsschluss ist nicht ersichtlich. Der Taschengeldparagraf (§ 110 BGB) greift nicht, da M die Leistung nicht vollständig bewirkt hat (er schuldet noch weitere 50 Euro in Raten). Der Kaufvertrag ist damit **schwebend unwirksam** (§ 108 Abs. 1 BGB).\n\n**III. Aufforderung zur Genehmigung (§ 108 Abs. 2 BGB)**\n\nT hat auf den Anrufbeantworter der Eltern gesprochen und sie aufgefordert, M zur Ratenzahlung zu veranlassen — dies ist als Aufforderung zur Genehmigung gem. § 108 Abs. 2 BGB auszulegen.\n\nGem. § 108 Abs. 2 S. 1 BGB kann der andere Teil (T) den gesetzlichen Vertreter (Eltern) zur Genehmigung auffordern. Die Genehmigung kann nur ihm gegenüber erklärt werden. Gem. § 108 Abs. 2 S. 2 BGB gilt: Wird die Genehmigung nicht innerhalb von zwei Wochen nach dem Empfang der Aufforderung erklärt, so gilt sie als verweigert.\n\nFraglich ist, ob die Nachricht auf dem Anrufbeantworter als Zugang der Aufforderung gilt. Eine Nachricht auf dem Anrufbeantworter geht zu, sobald unter normalen Umständen mit der Kenntnisnahme zu rechnen ist (Machtbereichstheorie). Dies ist im Regelfall am selben oder nächsten Tag anzunehmen.\n\nDrei Wochen nach der Aufforderung haben die Eltern noch nicht reagiert — die Zwei-Wochen-Frist des § 108 Abs. 2 S. 2 BGB ist abgelaufen. Die Genehmigung gilt damit als **verweigert**.\n\n**Ergebnis Grundfall**: Der Kaufvertrag ist **endgültig unwirksam** — die Genehmigung gilt als verweigert (§ 108 Abs. 2 S. 2 BGB). M muss keine weiteren Raten zahlen. T hat keinen Anspruch auf die restlichen 50 Euro aus dem Kaufvertrag.\n\nHinweis: M hat die Konsole bereits — T könnte Herausgabe der Konsole verlangen (§ 812 BGB, da kein wirksamer Rechtsgrund besteht).\n\n---\n\n### Abwandlung: M ist inzwischen 18 Jahre alt\n\n**Obersatz**: Fraglich ist, ob der schwebend unwirksame Kaufvertrag durch das Volljährigwerden des M wirksam werden kann.\n\nGem. § 108 Abs. 3 BGB ist, wenn der Minderjährige unbeschränkt geschäftsfähig geworden ist, er allein zur Genehmigung befugt. T hat erst angerufen, nachdem M volljährig geworden ist.\n\nM ist nunmehr 18 Jahre alt — voll geschäftsfähig (§ 2 BGB). Allein M ist jetzt zur Genehmigung befugt (§ 108 Abs. 3 BGB), nicht mehr seine Eltern. Die Aufforderung des T an die Eltern entfaltet daher keine Wirkung mehr — die Zwei-Wochen-Frist des § 108 Abs. 2 BGB wird nicht gegenüber den Eltern ausgelöst, da diese nicht mehr zuständig sind.\n\nM selbst hat nicht reagiert — er hat weder genehmigt noch die Genehmigung verweigert. Der Vertrag bleibt schwebend unwirksam, bis M selbst genehmigt oder verweigert. T müsste M (nicht die Eltern) zur Genehmigung auffordern.\n\n**Ergebnis Abwandlung**: Da T die Aufforderung an die Eltern gerichtet hat, obwohl M bereits volljährig war, läuft die Zwei-Wochen-Frist des § 108 Abs. 2 BGB nicht. Der Vertrag ist weiterhin **schwebend unwirksam**. T muss M selbst zur Genehmigung auffordern."
+    }
+  ]
+}

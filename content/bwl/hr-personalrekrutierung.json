@@ -1,0 +1,433 @@
+{
+  "id": "hr-personalrekrutierung",
+  "subjectId": "bwl",
+  "title": "Personalrekrutierung",
+  "summary": "Wie Unternehmen neue Mitarbeitende finden: interne vs. externe Rekrutierung, Employer Branding, Recruiting-Kanäle, Active Sourcing, Robot Recruiting/KI und der HBR-Klassiker 'Hiring Stars'.",
+  "order": 12,
+  "estMinutes": 45,
+  "group": "Personal",
+  "sections": [
+    {
+      "id": "grundbegriff",
+      "heading": "Was ist Personalrekrutierung — und warum ist sie so wichtig?",
+      "body": "**Personalrekrutierung** (auch: Personalbeschaffung oder Recruiting) bezeichnet alle Aktivitäten eines Unternehmens, mit denen es geeignete Bewerberinnen und Bewerber für offene Stellen gewinnt.\n\nDas klingt einfach — ist es aber nicht. Stell dir vor, du führst ein Unternehmen und brauchst dringend eine erfahrene Softwareentwicklerin. Wo schreibst du aus? Wie erreichst du genau die richtigen Menschen? Und wie stellst du sicher, dass sie sich überhaupt bei dir bewerben wollen?\n\n**Warum ist Recruiting so entscheidend?**\n\nMenschen sind die wichtigste Ressource eines Unternehmens (das ist die Grundidee des HRM). Wer die falschen Mitarbeitenden einstellt, zahlt doppelt: einmal für den Misserfolg, einmal für die erneute Suche. Gleichzeitig wird Recruiting schwieriger:\n\n- **Fachkräftemangel:** In vielen Berufsfeldern fehlen qualifizierte Kandidaten. Zwischen 2011 und 2017 stieg die Zahl der fehlenden Fachkräfte im Maschinen-/Elektrobereich von 51.000 auf über 80.000 (IW Köln).\n- **Bewerber-Ghosting:** 3–4 von 10 Bewerbern verschwinden irgendwann im Prozess, ohne sich abzumelden (Indeed-Studie 2019, 69 % der US-Unternehmen betroffen).\n- **Langsame Prozesse:** In einem Drittel aller deutschen Firmen dauert ein Bewerbungsprozess vier Wochen oder länger — in dieser Zeit haben Top-Kandidaten längst woanders zugesagt.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Personalrekrutierung (Definition)",
+          "body": "Gesamtheit aller Maßnahmen, mit denen ein Unternehmen einen **Bewerberpool** aufbaut und qualifizierte Kandidaten dazu bringt, sich auf offene Stellen zu bewerben. Ziel: die richtige Person zur richtigen Zeit am richtigen Ort."
+        }
+      ]
+    },
+    {
+      "id": "intern-extern",
+      "heading": "Interne vs. externe Rekrutierung — Make or Buy von Talenten",
+      "body": "Die erste große Entscheidung beim Recruiting lautet: **Suchen wir intern (unter unseren eigenen Mitarbeitenden) oder extern (auf dem Arbeitsmarkt)?** Das nennt man auch die 'Make-or-Buy'-Entscheidung für Talente.\n\n**Interne Rekrutierung** bedeutet, dass eine vakante Stelle durch eine bereits im Unternehmen beschäftigte Person besetzt wird — z. B. durch Beförderung, Versetzung oder eine interne Stellenausschreibung im Intranet.\n\n**Externe Rekrutierung** bedeutet, dass Kandidaten von außen gewonnen werden — über Stellenanzeigen, Headhunter, Messen usw.\n\nBeide Wege haben klare Vor- und Nachteile:",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-intern-extern",
+          "title": "Interne vs. externe Rekrutierung im Vergleich",
+          "headers": ["Kriterium", "Intern", "Extern"],
+          "rows": [
+            ["Kosten", "Gering (kein Headhunter, keine Anzeige)", "Höher (Anzeigen, ggf. Headhunter)"],
+            ["Geschwindigkeit", "Schnell (Person bekannt)", "Langsamer (Suche, Auswahl)"],
+            ["Kenntnisse über Person", "Hoch (Leistung bekannt)", "Niedrig (Informationsasymmetrie)"],
+            ["Frisches Know-how", "Gering (Betriebsblindheit möglich)", "Hoch (neue Perspektiven)"],
+            ["Motivation bestehender MA", "Positiv (Karriereperspektive sichtbar)", "Neutral bis negativ (übergangen?)"],
+            ["Größe des Bewerberpools", "Begrenzt auf Belegschaft", "Prinzipiell unbegrenzt"],
+            ["Einarbeitungszeit", "Kurz (Unternehmenskultur bekannt)", "Länger (Onboarding nötig)"],
+            ["Risiko 'Positionsvakanz'", "Andere Stelle wird frei", "Kein interner Dominoeffekt"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Wann ist intern sinnvoll?",
+          "body": "Ein Teamlead scheidet aus. Sein bisheriger Stellvertreter kennt das Team, die Prozesse und die Kunden. Interne Beförderung spart Zeit und stärkt die Motivation aller, die sehen: 'Leistung wird hier belohnt.'"
+        },
+        {
+          "kind": "beispiel",
+          "title": "Wann ist extern sinnvoll?",
+          "body": "Ein Unternehmen will ein KI-Labor aufbauen, hat aber intern keine Data Scientists. Hier bleibt nur der externe Weg — oder langwierige interne Weiterbildung."
+        },
+        {
+          "kind": "warning",
+          "title": "Betriebsblindheit",
+          "body": "Wer ausschließlich intern rekrutiert, riskiert **Betriebsblindheit**: Bestehende Denkmuster und Fehler werden nicht hinterfragt, weil niemand von außen frischen Input einbringt. Deshalb kombinieren viele Unternehmen beide Wege."
+        }
+      ]
+    },
+    {
+      "id": "employer-branding",
+      "heading": "Personalmarketing und Employer Branding — Der Arbeitgeber als Marke",
+      "body": "Bevor die erste Stellenanzeige geschaltet wird, stellt sich eine grundlegendere Frage: **Warum sollte jemand überhaupt bei uns arbeiten wollen?**\n\nGenau darum geht es beim **Personalmarketing** und beim **Employer Branding** (deutsch: Arbeitgebermarkenbildung).\n\n**Personalmarketing** umfasst alle Maßnahmen, mit denen ein Unternehmen sich als attraktiver Arbeitgeber positioniert und kommuniziert — sowohl nach innen (gegenüber der bestehenden Belegschaft) als auch nach außen (gegenüber potenziellen Bewerbern).\n\n**Employer Branding** ist der strategische Aufbau und die Pflege der **Arbeitgebermarke**: das Bild, das Bewerber und Öffentlichkeit vom Unternehmen als Arbeitgeber haben.\n\nWichtig ist die Unterscheidung (nach Gatewood):\n- **Unternehmensimage:** Wie bekannt und angesehen ist das Unternehmen als Ganzes? (z. B. BMW als Premiummarke)\n- **Arbeitgeberimage:** Wie attraktiv gilt das Unternehmen als Arbeitgeber? (z. B. Arbeitsklima, Entwicklungsmöglichkeiten, Gehalt)\n\nBeides hängt zusammen, ist aber nicht dasselbe. Ein Unternehmen kann ein starkes Produktimage haben, aber als Arbeitgeber unbekannt oder unattraktiv sein — das klassische Problem vieler **Hidden Champions** (mittelständische Weltmarktführer, die kaum jemand kennt).",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-employer-branding",
+          "title": "Employer Branding — Wirkungsmodell",
+          "caption": "Ein starkes Arbeitgeberimage senkt Rekrutierungskosten und erhöht die Qualität des Bewerberpools.",
+          "code": "graph TD\n    A[Unternehmenskultur &\nArbeitsbedingungen] --> B[Employer Branding\nStrategie]\n    B --> C[Externes Arbeitgeberimage\nbei Bewerbern]\n    B --> D[Internes Arbeitgeberimage\nbei Belegschaft]\n    C --> E[Größerer & besserer\nBewerberpool]\n    D --> F[Höhere Mitarbeiterbindung\ngeringere Fluktuation]\n    E --> G[Erfolgreiche\nRekrutierung]\n    F --> G"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Fallbeispiel Bundeswehr",
+          "body": "Die Bundeswehr investiert massiv in Attraktivitätsoffensiven (mehr Sold, Sozialleistungen, Berufsförderung nach Dienstende). Kritiker bemängeln jedoch (WiWo-Kolumne): Die Werbung verschleiert den eigentlichen Zweck der Streitkräfte. Bewerber, die tatsächlich Soldat werden wollen, werden durch zu 'zivile' Kommunikation möglicherweise nicht erreicht. Kernlektion: **Employer Branding muss authentisch sein** — es muss zu dem passen, was das Unternehmen wirklich ist und leistet."
+        },
+        {
+          "kind": "tip",
+          "title": "Interne vs. externe Arbeitgeberattraktivität",
+          "body": "**Intern:** Maßnahmen zur Bindung bestehender Mitarbeitender (Vergütung, Entwicklung, Kultur). **Extern:** Maßnahmen zur Gewinnung neuer Bewerber (Stellenanzeigen, Hochschulmarketing, Social Media, Glassdoor-Bewertungen). Beide müssen konsistent sein — sonst wirbt man Leute an, die dann schnell wieder gehen."
+        }
+      ]
+    },
+    {
+      "id": "kanaele",
+      "heading": "Recruiting-Kanäle — Wo findet man die richtigen Kandidaten?",
+      "body": "Wenn klar ist, dass extern rekrutiert werden soll, stellt sich die Frage: **Über welchen Kanal?** Die Wahl des Kanals beeinflusst, welche Bewerber man erreicht, wie viele, wie schnell und zu welchen Kosten.\n\n### Die wichtigsten Kanäle im Überblick\n\n**1. Stellenanzeigen (online & offline)**\nDie klassische Stellenanzeige erscheint heute vor allem auf **Online-Jobportalen** wie Stepstone, Indeed, XING oder LinkedIn. Sie muss so formuliert sein, dass Algorithmen sie finden — und Bewerber sie lesen wollen.\n\nGute Stellenanzeigen nennen laut Experte Bastian Naurath (Curato Leads) sechs Kerninformationen:\n- **Tätigkeit** (was genau macht man?)\n- **Arbeitsort** (wo? Homeoffice möglich?)\n- **Arbeitszeitmodell** (Vollzeit/Teilzeit/flexibel?)\n- **Vergütung** (Gehaltsrahmen)\n- **Vertragsart** (befristet/unbefristet)\n- **Benefits** (konkret und authentisch, nicht 'flache Hierarchien')\n\nHäufige Fehler: langer Unternehmenstext an erster Stelle ('Harry Potter lesen bis zu den Benefits'), unklare Berufsbezeichnungen ('Fashion Host' statt 'Verkäufer'), nichtssagende Benefits.\n\n**2. Active Sourcing**\nHier dreht sich der Prozess um: Das Unternehmen **sucht aktiv** nach Kandidaten, anstatt auf Bewerbungen zu warten. HR-Mitarbeitende durchsuchen LinkedIn, XING oder GitHub nach passenden Profilen und nehmen Kontakt auf. Active Sourcing ist effektiv für gefragte Fachkräfte, die selbst nicht aktiv suchen.\n\n**3. Headhunter / Executive Search**\nSpezialisierte Personalberatungen werden beauftragt, Führungskräfte oder rare Spezialisten abzuwerben. Teuer, aber für Schlüsselpositionen oft der einzige Weg.\n\n**4. Hochschulmarketing & Messen**\nUnternehmen gehen direkt an Hochschulen (Vorträge, Abschlussarbeiten, Praktika) oder auf Karrieremessen, um früh Kontakt zu Nachwuchstalenten herzustellen.\n\n**5. Mitarbeiterempfehlungen**\nBestehende Mitarbeitende empfehlen Kandidaten aus ihrem Netzwerk, oft mit einer Prämie belohnt. Vorteil: Hohe Passgenauigkeit, da Mitarbeitende den kulturellen Fit gut einschätzen können.\n\n**6. Rückkehrerbörsen**\nUnternehmen (besonders in der Provinz) sprechen gezielt ehemalige Mitarbeitende oder regional verwurzelte Personen an, die in die Heimat zurückkehren möchten.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-kanaele",
+          "title": "Recruiting-Kanäle — Reichweite, Kosten, Eignung",
+          "headers": ["Kanal", "Reichweite", "Kosten", "Besonders geeignet für"],
+          "rows": [
+            ["Online-Stellenanzeige (Indeed, Stepstone)", "Sehr hoch", "Mittel", "Breit gefächerte Suche, Masse"],
+            ["LinkedIn / XING (Active Sourcing)", "Hoch (gezielt)", "Mittel–Hoch", "Fach- und Führungskräfte, die nicht aktiv suchen"],
+            ["Headhunter", "Mittel (sehr gezielt)", "Sehr hoch", "Top-Management, seltene Spezialisten"],
+            ["Hochschulmarketing / Messen", "Mittel", "Mittel", "Berufseinsteiger, Nachwuchstalente"],
+            ["Mitarbeiterempfehlung", "Gering (Netzwerk)", "Niedrig (Prämie)", "Kulturell passende Kandidaten"],
+            ["Social Media (TikTok, Instagram)", "Sehr hoch", "Niedrig–Mittel", "Junge Zielgruppen, Arbeitgeberimage"],
+            ["Rückkehrerbörse", "Niedrig (spezifisch)", "Niedrig", "Regionale Unternehmen, Provinz-Standorte"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Algorithmen auf Jobportalen",
+          "body": "Indeed, Stepstone & Co. nutzen Algorithmen, die Anzeigen nach Relevanz ranken. Die meistgeklickten Suchbegriffe 2025: 'hybrid', 'remote', 'Homeoffice', 'Teilzeit', 'Quereinsteiger'. Auch die **Reaktionszeit** des Unternehmens auf Bewerbungen wird von Algorithmen bewertet — wer schnell antwortet, wird besser gerankt."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Praxisfall Rehau: Fachkräfte in der Provinz gewinnen",
+          "body": "Der Kunststoffspezialist Rehau (Oberfranken, 20.000 MA weltweit) leidet wie viele Mittelständler unter dem Provinz-Nachteil. Thomas Bunke (Head of Talent Acquisition) verfolgt fünf Strategien: (1) Job kommt zum Bewerber — maximale Flexibilität (Homeoffice, Sabbaticals, Teilzeit). (2) Studierende ansprechen, die noch in der Orientierungsphase sind. (3) Mitarbeiter anlocken statt zwingen — Apartmenthaus für erste Monate. (4) Rahmenbedingungen verbessern (Kita-Zeiten wie in der Stadt). (5) Auf Messen gezielt Menschen ansprechen, denen Großstadt-Vorteile egal sind (Familie, Stau). Fazit: Recruiting-Strategie muss zur Unternehmenssituation passen."
+        }
+      ]
+    },
+    {
+      "id": "active-sourcing-robot",
+      "heading": "Active Sourcing, Signaling-Theorie und Robot Recruiting/KI",
+      "body": "### Active Sourcing — Proaktive Kandidatensuche\n\n**Active Sourcing** (deutsch: aktive Kandidatenansprache) kehrt die klassische Recruiting-Logik um: Statt zu warten, bis Bewerber kommen, sucht das Unternehmen **selbst aktiv** nach passenden Kandidaten.\n\nBeispiel: Eine HR-Managerin durchsucht LinkedIn nach Softwareentwicklerinnen mit Python-Kenntnissen im Raum Hamburg und schreibt vielversprechende Profile direkt an.\n\nDas ist besonders wichtig, weil viele der besten Kandidaten **nicht aktiv auf Jobsuche** sind — sie sind gut angestellt und schauen nicht auf Stellenanzeigen. Nur wer sie aktiv anspricht, hat eine Chance.\n\n### Signaling-Theorie — Informationen im Recruiting-Prozess\n\nIm Recruiting herrscht **Informationsasymmetrie**: Bewerber und Unternehmen wissen nicht genau, was der jeweils andere wirklich kann und will. Beide Seiten nutzen deshalb **Signale**.\n\n- **Bewerber signalisieren** ihre Qualifikation durch Abschlüsse, Zertifikate, Referenzen, Berufserfahrung, Lebenslauf-Gestaltung.\n- **Unternehmen signalisieren** ihre Attraktivität durch Employer Branding, Vergütungstransparenz, Arbeitgeberbewertungen (Glassdoor), schnelle Antwortzeiten.\n\nDer Begriff geht auf **Michael Spence** zurück (Nobelpreisträger 2001). **Connelly et al. (2011)** erweitern das auf ein vollständiges Framework: Sender → Signal → Empfänger → Feedback.\n\n### Robot Recruiting / KI im Recruiting\n\n**Robot Recruiting** bezeichnet den Einsatz von Algorithmen und KI bei der Kandidatensuche und Vorauswahl.\n\nBeispiele:\n- **CV-Parsing:** Software liest Lebensläufe automatisch ein, extrahiert Qualifikationen und matcht sie mit Stellenanforderungen (Bosch, Kenexa/IBM).\n- **Algorithmische Vorauswahl:** Bei Unternehmen wie Xerox werden Kandidaten automatisch nach messbaren Kriterien (Erfahrung, Schlüsselwörter, Pendelzeit) gefiltert.\n- **KI-Persönlichkeitsanalyse:** Firmen wie Precire analysieren Sprache (Tonalität, Wortwahl) per KI, um Persönlichkeitsprofile abzuleiten. Talanx setzt dies ein. Kritik: 'Black Box' — Kandidaten wissen nicht, warum sie abgelehnt werden.\n\n**Chancen von Robot Recruiting:**\n- Effizienz: Hunderte Lebensläufe in Sekunden\n- Konsistenz: keine Tagesstimmung beim Screener\n- Skalierbarkeit: bei Massenbewerbungen unverzichtbar\n\n**Risiken:**\n- Bias: KI lernt aus historischen Daten — wenn Unternehmen bisher vor allem Männer eingestellt haben, bevorzugt der Algorithmus Männer\n- Keine Nuancen: Ein Lücke im Lebenslauf wegen Elternzeit wird vielleicht aussortiert\n- Transparenz: Kandidaten verdienen eine nachvollziehbare Entscheidung",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-signaling",
+          "title": "Signaling-Theorie im Recruiting",
+          "caption": "Beide Seiten senden Signale, um Informationsasymmetrie zu überbrücken (nach Spence 1973; Connelly et al. 2011).",
+          "code": "graph LR\n    A[Bewerber\nSender] -- Abschlüsse, Zertifikate\nReferenzen, Lebenslauf --> B[Unternehmen\nEmpfänger]\n    C[Unternehmen\nSender] -- Employer Branding\nGehalt, Glassdoor\nSchnelle Antwort --> D[Bewerber\nEmpfänger]\n    B -- Einladung /\nAbsage --> A\n    D -- Bewerbung /\nKein Interesse --> C"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Kernaussage Signaling",
+          "body": "Weil Bewerber und Unternehmen einander vor dem Vorstellungsgespräch kaum kennen, **signalisieren** beide ihre Qualitäten. Ein teures Hochschulstudium ist ein Signal für Durchhaltevermögen (nicht nur für Wissen). Eine Glassdoor-Bewertung von 4,5 Sternen ist ein Signal für gutes Arbeitsklima."
+        }
+      ]
+    },
+    {
+      "id": "hiring-stars",
+      "heading": "HBR-Fall: 'The Risky Business of Hiring Stars' — Stars kaufen oder selbst entwickeln?",
+      "body": "Dieser Abschnitt behandelt einen prüfungsrelevanten Harvard-Business-Review-Artikel von **Groysberg, Nanda & Nohria (2004)**: 'The Risky Business of Hiring Stars.'\n\n### Die Kernthese\n\nViele Unternehmen glauben: Wenn wir die besten Talente (Stars) vom Wettbewerber abwerben, übertragen wir auch deren überragende Leistung. Diese Annahme ist **falsch**.\n\nGroysberg et al. untersuchten **1.052 Star-Aktienanalysten** aus 78 US-Investmentbanken (1988–1996). Ergebnis:\n\n- **46 % der Stars** erbrachten im Jahr nach dem Wechsel schlechte Leistungen.\n- Ihre Performance sank im Schnitt um **20 %** — und erholte sich auch nach 5 Jahren nicht vollständig.\n- Nur **~30 % der Starleistung** ist portabel (individuell), **~70 % ist firmen- und kontextspezifisch**.\n- Ein Firmenwechsel reduzierte auch die Performance der **Teams**, die der Star verließ und betrat.\n- Investoren reagierten negativ: Der Börsenkurs einstellender Banken fiel um durchschnittlich 0,74 %.\n\n### Warum funktioniert die Star-Performance nicht im neuen Kontext?\n\nDrei Mechanismen erklären das:\n\n1. **Firmenspezifische Ressourcen fehlen:** Ein Star-Analyst bei Merrill Lynch nutzt ein hochkarätigeres Research-Team, IT-Infrastruktur, Klientennetzwerke. Diese nimmt er beim Wechsel **nicht mit**. Bei der kleineren Firma fehlt die Infrastruktur.\n\n2. **Gruppen-Performance leidet:** Neue Kollegen werden neidisch auf das riesige Gehalt und verweigern Kooperation. Der Star muss erst Vertrauen aufbauen.\n\n3. **Stars passen sich schlecht an:** Sie sind sehr erfolgreich mit ihren alten Methoden und ändern sich ungern. Das schadet in neuen Kontexten.\n\n### Die Gegenstrategie: 'Grow Stars, Don't Buy Them'\n\nSanford Bernstein (Investmentfirma) zeigte, wie es besser geht:\n- **Sorgfältige Selektion:** 100 Lebensläufe pro Stelle, 40–50 Interviews, 4–6 Besuche.\n- **Intensives Training:** 13-Wochen-Programm bei Lehman Brothers.\n- **Interne Netzwerke fördern:** Stars arbeiten mit starken Sales-Teams.\n- **Bindung:** Nicht nur durch Gehalt, sondern durch Flexibilität, Anerkennung, Entwicklung.\n\nBei Sanford Bernstein wurde aus **1 von 5 Analysten** ein Star. Bei Merrill Lynch (Strategie: Stars kaufen) nur **1 von 30**.\n\n### Bezug zur Vorlesung\n\nDer Artikel illustriert das Spannungsfeld der **Make-or-Buy-Entscheidung** bei Talenten: Externe Rekrutierung von Top-Performern ist riskant, weil Leistung **nicht vollständig portabel** ist — sie entsteht im Zusammenspiel von Person und Organisation. Das passt zum Konzept des **Human Process Advantage** (Wright et al.): Nicht nur die Menschen zählen, sondern die Prozesse und Systeme, in denen sie arbeiten.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-hiring-stars",
+          "title": "Stars kaufen vs. Stars entwickeln — Vergleich",
+          "headers": ["Kriterium", "Stars einkaufen (Buy)", "Stars entwickeln (Make/Grow)"],
+          "rows": [
+            ["Geschwindigkeit", "Schnell besetzbar", "Dauert Jahre"],
+            ["Kosten", "Sehr hoch (Gehalt, Prämien)", "Mittel (Training, Entwicklung)"],
+            ["Leistung nach Transfer", "~20 % Einbruch (Groysberg)", "Konstant bis steigend"],
+            ["Bindung ans Unternehmen", "Gering (Star wechselt wieder)", "Hoch (firmenspez. Know-how)"],
+            ["Teameffekte", "Oft negativ (Neid, Unruhe)", "Positiv (Rollenmodell)"],
+            ["Portabilität der Leistung", "Nur ~30 %", "~70 % firmenspezifisch nutzbar"],
+            ["Beispiel", "Merrill Lynch (1 von 30)", "Sanford Bernstein (1 von 5)"]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Klausur-Kernaussage 'Hiring Stars'",
+          "body": "Leistung = individuelle Fähigkeiten + firmenspezifische Ressourcen/Kontext. Wer nur die Person kauft, kauft nur ~30 % der Leistung. Deshalb: **Grow stars, don't buy them** — und wenn doch externe Stars eingestellt werden, dann gezielt als Ersatz (nicht zur Ergänzung) und mit starkem Integrationsprogramm."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "rek-fc-1",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Was versteht man unter interner Rekrutierung und welche zwei Vorteile hat sie?",
+      "back": "Interne Rekrutierung = Besetzung einer Stelle aus der eigenen Belegschaft (Beförderung, Versetzung). Vorteile: (1) Geringere Kosten, (2) Person und ihre Leistung sind bekannt — kein Informationsasymmetrie-Problem."
+    },
+    {
+      "id": "rek-fc-2",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Was ist Employer Branding und warum ist es für die Rekrutierung relevant?",
+      "back": "Employer Branding = strategischer Aufbau der Arbeitgebermarke. Es macht das Unternehmen als Arbeitgeber bekannt und attraktiv, erhöht damit die Qualität und Quantität des Bewerberpools und senkt Rekrutierungskosten."
+    },
+    {
+      "id": "rek-fc-3",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Welche sechs Kerninformationen sollte eine gute Stellenanzeige laut Experte Naurath enthalten?",
+      "back": "Tätigkeit, Arbeitsort, Arbeitszeitmodell, Vergütung, Vertragsart, Benefits (konkret und authentisch)."
+    },
+    {
+      "id": "rek-fc-4",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Was ist Active Sourcing und warum ist es wichtig?",
+      "back": "Active Sourcing = Unternehmen sucht proaktiv nach Kandidaten (z. B. auf LinkedIn), statt auf Bewerbungen zu warten. Wichtig, weil viele Top-Kandidaten nicht aktiv suchen und so nur durch direkte Ansprache erreichbar sind."
+    },
+    {
+      "id": "rek-fc-5",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Was ist die Kernaussage des HBR-Artikels 'The Risky Business of Hiring Stars' (Groysberg et al. 2004)?",
+      "back": "Nur ~30 % der Starleistung ist portabel (individuell), ~70 % ist firmen- und kontextspezifisch. Stars-Einkaufen führt im Schnitt zu 20 % Leistungseinbruch. Fazit: 'Grow stars, don't buy them.'"
+    },
+    {
+      "id": "rek-fc-6",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Was versteht man unter Informationsasymmetrie im Recruiting und wie hilft die Signaling-Theorie?",
+      "back": "Informationsasymmetrie: Bewerber und Unternehmen wissen wenig übereinander. Signaling (Spence): Beide Seiten senden kostspielige Signale (Abschlüsse, Employer Branding), um ihre Qualität zu kommunizieren."
+    },
+    {
+      "id": "rek-fc-7",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Was ist Robot Recruiting und welches zentrale Risiko birgt es?",
+      "back": "Robot Recruiting = algorithmische/KI-gestützte Kandidatenvorauswahl (CV-Parsing, automatisches Matching). Zentrales Risiko: algorithmischer Bias — KI repliziert historische Muster (z. B. Bevorzugung von Männern, wenn Trainingsdaten so verzerrt sind)."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "rek-q1",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "leicht",
+      "prompt": "Was ist ein typischer VORTEIL der internen Rekrutierung gegenüber der externen?",
+      "options": [
+        "Man gewinnt automatisch frisches Know-how von außen.",
+        "Die Leistung der Person ist dem Unternehmen bereits bekannt.",
+        "Der Bewerberpool ist größer.",
+        "Die Einarbeitungszeit ist länger."
+      ],
+      "correct": [1],
+      "explanation": "Bei interner Rekrutierung kennt das Unternehmen die Person bereits — ihre Leistung, ihr Verhalten, ihre Stärken. Das reduziert das Einstellungsrisiko erheblich. Frisches Know-how kommt hingegen typischerweise von außen (externer Vorteil)."
+    },
+    {
+      "kind": "mc",
+      "id": "rek-q2",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "leicht",
+      "prompt": "Welche sechs Kerninformationen sollte eine Stellenanzeige laut Experte Bastian Naurath (Curato Leads) enthalten?",
+      "options": [
+        "Tätigkeit, Arbeitsort, Arbeitszeitmodell, Vergütung, Vertragsart, Benefits",
+        "Unternehmensprofil, Team, Kulturwerte, Gehalt, Karrierechancen, Anforderungen",
+        "Jobtitel, Bewerbungsfrist, Ansprechpartner, Gehalt, Aufgaben, Teamgröße",
+        "Arbeitsort, Branche, Unternehmensgröße, Hierarchie, Dresscode, Benefits"
+      ],
+      "correct": [0],
+      "explanation": "Naurath (Curato Leads): Die wichtigsten sechs Informationen sind Tätigkeit, Arbeitsort, Arbeitszeitmodell, Vergütung, Vertragsart und Benefits. Viele Anzeigen stellen stattdessen lange Unternehmenstexte an erste Stelle — was Bewerber abschreckt."
+    },
+    {
+      "kind": "truefalse",
+      "id": "rek-q3",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "leicht",
+      "prompt": "Active Sourcing bedeutet, dass das Unternehmen aktiv auf potenzielle Kandidaten zugeht, anstatt auf eingehende Bewerbungen zu warten.",
+      "answer": true,
+      "explanation": "Richtig. Beim Active Sourcing dreht sich die Logik um: HR sucht selbst — z. B. via LinkedIn oder GitHub — nach passenden Profilen und nimmt direkt Kontakt auf. Besonders wichtig für Kandidaten, die nicht aktiv auf Jobsuche sind."
+    },
+    {
+      "kind": "mc",
+      "id": "rek-q4",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "mittel",
+      "prompt": "Laut Groysberg, Nanda & Nohria (2004) sank die Performance von Stars nach einem Firmenwechsel im Schnitt um wie viel Prozent?",
+      "options": [
+        "5 %",
+        "10 %",
+        "20 %",
+        "50 %"
+      ],
+      "correct": [2],
+      "explanation": "Groysberg et al. fanden einen durchschnittlichen Leistungsabfall von ~20 % nach dem Wechsel — und dieser Einbruch erholte sich auch nach 5 Jahren nicht vollständig. 46 % der Stars erbrachten im Folgejahr schlechte Leistungen."
+    },
+    {
+      "kind": "truefalse",
+      "id": "rek-q5",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "mittel",
+      "prompt": "Laut der Signaling-Theorie (Spence) signalisieren nur Bewerber ihre Qualitäten — Unternehmen hingegen senden keine Signale.",
+      "answer": false,
+      "explanation": "Falsch. Signaling ist bidirektional. Bewerber signalisieren (Abschlüsse, Referenzen), aber auch Unternehmen signalisieren ihre Attraktivität (Employer Branding, schnelle Rückmeldung, Glassdoor-Bewertungen). Connelly et al. (2011) beschreiben dieses vollständige Framework."
+    },
+    {
+      "kind": "mc",
+      "id": "rek-q6",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Aussagen zur Studie 'Risky Business of Hiring Stars' ist KORREKT? (Mehrfachauswahl möglich)",
+      "options": [
+        "Nur etwa 30 % der Starleistung ist portabel — der Rest ist firmen- und kontextspezifisch.",
+        "Stars blieben im Schnitt sehr lange bei den einkaufenden Investmentbanken.",
+        "Der Börsenkurs der einstellenden Bank sank im Schnitt um 0,74 % bei der Ankündigung.",
+        "Sanford Bernstein machte aus 1 von 5 Analysten einen Star — Merrill Lynch nur aus 1 von 30."
+      ],
+      "correct": [0, 2, 3],
+      "multiple": true,
+      "explanation": "Korrekt sind: (1) ~30 % portabel, (3) Kurseinbruch von 0,74 %, (4) Sanford Bernstein 1/5 vs. Merrill Lynch 1/30. Falsch ist Option 2: Stars blieben gerade NICHT lange — 36 % der studierten Analysten verließen die Bank innerhalb von 36 Monaten, weitere 29 % innerhalb von 24 weiteren Monaten."
+    },
+    {
+      "kind": "mc",
+      "id": "rek-q7",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "mittel",
+      "prompt": "Was unterscheidet das Unternehmensimage vom Arbeitgeberimage (nach Gatewood)?",
+      "options": [
+        "Unternehmensimage bezieht sich auf die Produkte/Dienstleistungen, Arbeitgeberimage auf die Attraktivität als Arbeitgeber.",
+        "Unternehmensimage ist intern, Arbeitgeberimage extern.",
+        "Beide Begriffe sind synonym und werden austauschbar verwendet.",
+        "Arbeitgeberimage betrifft nur die Vergütung, Unternehmensimage alle anderen Faktoren."
+      ],
+      "correct": [0],
+      "explanation": "Nach Gatewood: Unternehmensimage = Gesamtbild (Produkte, Marke, gesellschaftliche Rolle). Arbeitgeberimage = spezifisches Bild als Arbeitgeber (Arbeitsbedingungen, Kultur, Entwicklung). Ein Unternehmen kann bekannt sein und trotzdem als schlechter Arbeitgeber gelten."
+    },
+    {
+      "kind": "truefalse",
+      "id": "rek-q8",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "schwer",
+      "prompt": "Robot Recruiting / algorithmenbasierte Vorauswahl eliminiert Bias in der Personalauswahl, weil Maschinen keine subjektiven Vorurteile haben.",
+      "answer": false,
+      "explanation": "Falsch. Algorithmen lernen aus historischen Daten. Wenn ein Unternehmen in der Vergangenheit vor allem Männer eingestellt hat, repliziert der Algorithmus diesen Bias. KI macht Vorurteile nicht verschwinden — sie macht sie schwerer sichtbar ('Black Box')."
+    },
+    {
+      "kind": "freetext",
+      "id": "rek-q9",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "schwer",
+      "prompt": "Erläutere in 3–5 Sätzen, warum externe Stars (Top-Performer) nach einem Firmenwechsel oft schlechtere Leistungen erbringen — und was Unternehmen stattdessen tun sollten.",
+      "sampleAnswer": "Stars erbringen schlechtere Leistungen nach einem Wechsel, weil ca. 70 % ihrer Performance firmen- und kontextspezifisch ist: Sie verlieren Ressourcen (IT, Netzwerke, Teamstrukturen), Vertrauen der Kollegen und müssen sich in neue Systeme einarbeiten. Hinzu kommt, dass Stars ihre alten Methoden beibehalten wollen und sich schlecht anpassen. Unternehmen sollten stattdessen eigene Talente identifizieren, gezielt fördern (Training, Netzwerke, Entwicklung) und binden — 'Grow stars, don't buy them'. Wenn doch externe Stars nötig sind, sollten sie gezielt als Ersatz für abgegangene Stars eingesetzt und mit einem starken Integrationsprogramm begleitet werden.",
+      "keywords": ["kontextspezifisch", "firmenspezifisch", "ressourcen", "netzwerk", "grow", "entwickeln", "integration", "portabel"],
+      "explanation": "Kernidee: Leistung = Person + Kontext. Wer nur die Person kauft, bekommt nicht den vollen Kontext mit."
+    },
+    {
+      "kind": "mc",
+      "id": "rek-q10",
+      "topicId": "hr-personalrekrutierung",
+      "difficulty": "schwer",
+      "prompt": "Das Unternehmen Rehau nutzte im Artikel 'Fachkräftemangel: Große kleine Welt' (DIE ZEIT) mehrere Recruiting-Strategien. Welche der folgenden ist KEINE davon?",
+      "options": [
+        "Maximale Flexibilität (Homeoffice, Sabbaticals, Teilzeit)",
+        "Firmeneigenes Apartmenthaus für neue Mitarbeitende",
+        "Zahlung von Relocation-Boni in Höhe von 10.000 EUR",
+        "Ansprechen von Menschen, für die Großstadtvorteile unwichtig sind"
+      ],
+      "correct": [2],
+      "explanation": "Rehau nutzte Flexibilität, Apartmenthaus, Messeauftritte (u. a. Gamescom) und zielgerichtete Ansprache. Ein pauschaler Relocation-Bonus von 10.000 EUR wird im Artikel nicht erwähnt. Rehau vermittelt stattdessen Sonderkonditionen bei Baudarlehen und bietet niedrigere Lebenshaltungskosten als Argument."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "rek-ex-1",
+      "topicId": "hr-personalrekrutierung",
+      "label": "V5 — Rekrutierungsproblem 1: 'Zu dick zum Kämpfen' (US-Militär)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 5",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den Spiegel-Artikel 'Rekruten für US-Militär: Zu dick zum Kämpfen' (2018). Berater des Pentagon warnen: Fast ein Drittel aller jungen US-Bürger ist zu übergewichtig für den Militärdienst. 71 % der 17- bis 24-Jährigen erfüllen die Anforderungen nicht (Übergewicht, mangelnde Bildung, Drogen, Kriminalität). Das Militär verfehlte sein Ziel von 76.500 neuen Rekruten. Gesundheitsprobleme kosten das Militär jährlich 1,5 Milliarden Dollar.\n\n**Aufgabe:** Analysieren Sie dieses Beispiel aus Perspektive der Personalrekrutierung. (a) Welches grundlegende Rekrutierungsproblem illustriert der Fall? (b) Welche Maßnahmen könnte das US-Militär ergreifen, um seinen Bewerberpool zu vergrößern? Ordnen Sie die Maßnahmen in interne und externe Lösungsansätze ein.",
+      "hint": "Denken Sie an die Grundvoraussetzungen für Rekrutierung: Ein Unternehmen kann nur aus dem verfügbaren Pool schöpfen. Wenn der Pool schrumpft, muss man entweder die Anforderungen anpassen oder den Pool aktiver gestalten.",
+      "solution": "**Schritt 1: Das Rekrutierungsproblem identifizieren**\n\nDas zentrale Problem ist eine **strukturelle Bewerberpool-Verkleinerung**: Der Pool geeigneter Kandidaten schrumpft — nicht weil das Militär falsch kommuniziert, sondern weil gesellschaftliche Trends (Fettleibigkeit, Bildungsrückgang, Drogenmissbrauch) die Grundvoraussetzungen der Bewerber verändern. Das ist ein **externes, gesellschaftliches Rekrutierungsproblem**, das das Militär nur bedingt selbst steuern kann.\n\nZusätzlich liegt ein **Arbeitgeberimage-Problem** vor: Viele potenzielle Bewerber werden nicht ausreichend oder falsch angesprochen (vgl. Bundeswehr-Diskussion: zu wenig authentische Kommunikation des eigentlichen Zwecks).\n\n**Schritt 2: Lösungsansätze — Bewerberpool vergrößern**\n\n*Kurzfristige Maßnahmen (Anforderungen anpassen):*\n- Fitness-Vorstufenprogramme: Das Pentagon startete Fitnessprogramme in Militäranlagen, um 'pummelige Soldaten' auf Standard zu bringen — also die Anforderungen nicht zu senken, sondern die Vorbereitung zu verbessern.\n- Absenkung nicht sicherheitsrelevanter Anforderungen (umstritten).\n\n*Mittelfristige Maßnahmen (externen Pool vergrößern):*\n- **Gesellschaftliches Engagement / CSR:** Frühzeitige Gesundheitsprogramme in Schulen (wie im Artikel empfohlen: Eltern und Kinder aufklären über Ernährung und Bewegung). Dies ist Employer Branding auf gesellschaftlicher Ebene.\n- **Targeting anderer Bevölkerungsgruppen:** Gezieltes Ansprechen von Regionen/Gruppen mit höherem Fitnessniveau.\n- **Employer Branding stärken:** Militär als attraktive Karriereoption kommunizieren — mit echten Vorteilen (Ausbildung, Berufsförderung nach Dienstende, interkulturelle Kompetenz).\n\n*Strukturelle Maßnahme:*\n- **Technologisierung** als Reaktion auf den Mangel an physisch geeigneten Kandidaten: Drohnen, KI und Robotik reduzieren den Bedarf an klassischen Infanteristen. Dies wäre eine strategische Personalplanung als Antwort auf strukturelle Rekrutierungsengpässe.\n\n**Fazit:** Der Fall zeigt, dass Rekrutierungsprobleme nicht immer durch bessere Stellenanzeigen lösbar sind. Manchmal muss das Unternehmen tiefer ansetzen — bei gesellschaftlichen Voraussetzungen, beim Arbeitgeberimage oder bei der strategischen Frage, welche Kompetenzen überhaupt noch gefragt sind."
+    },
+    {
+      "id": "rek-ex-2",
+      "topicId": "hr-personalrekrutierung",
+      "label": "V5 — Rekrutierungsproblem 2: 'Fachkräftemangel in der Provinz' (Rehau)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 5",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den ZEIT-Artikel 'Fachkräftemangel: Große kleine Welt' (2019) über das Kunststoffunternehmen Rehau in Oberfranken. Rehau hat 20.000 Mitarbeitende weltweit, davon 2.000 in einem Ort mit 9.000 Einwohnern. Thomas Bunke (Head of Talent Acquisition) beschreibt fünf Recruiting-Strategien: (1) Flexibilität (Homeoffice, Sabbaticals), (2) Studierende ansprechen, (3) Apartmenthaus für Neuzugänge, (4) Infrastruktur verbessern (Kita-Zeiten), (5) Menschen ansprechen, die Provinzvorteile schätzen.\n\n**Aufgabe:** (a) Ordnen Sie die fünf Strategien von Rehau den Oberkategorien 'Employer Branding', 'Recruiting-Kanäle' und 'Arbeitsbedingungen verbessern' zu. (b) Warum ist es für Rehau besonders schwierig, extern zu rekrutieren? Nennen Sie zwei spezifische Herausforderungen. (c) Was kann ein Großunternehmen (z. B. BMW in München) von Rehau lernen?",
+      "hint": "Unterscheiden Sie zwischen Maßnahmen, die den Pool vergrößern (Kanäle), und Maßnahmen, die das Unternehmen attraktiver machen (Employer Branding / Arbeitsbedingungen). Für Teil (c): Was sind die strukturellen Vorteile von Rehau, die BMW nicht hat?",
+      "solution": "**Teil (a): Einordnung der fünf Strategien**\n\n| Strategie | Kategorie |\n|-----------|----------|\n| (1) Homeoffice, Sabbaticals, Teilzeit | Arbeitsbedingungen verbessern + Employer Branding |\n| (2) Studierende ansprechen (Hochschulmarketing) | Recruiting-Kanäle |\n| (3) Apartmenthaus für Neuzugänge | Arbeitsbedingungen / Onboarding-Unterstützung |\n| (4) Infrastruktur verbessern (Kita-Zeiten) | Arbeitsbedingungen verbessern |\n| (5) Gezieltes Targeting auf Messen (Familie/Pendler) | Recruiting-Kanäle + Employer Branding |\n\n**Teil (b): Spezifische Herausforderungen für Rehau**\n\n1. **Standortnachteil:** Rehau liegt in einer strukturschwachen Region (Oberfranken). Qualifizierte Fachkräfte bevorzugen Großstädte (München, Hamburg) wegen Freizeitangeboten, Partnerwahl, sozialer Infrastruktur. Der Artikel belegt: Über 80 % der Stellen im Arbeitsagenturbezirk Bayreuth waren 2017 in Engpassberufen ausgeschrieben — ca. 30 Prozentpunkte mehr als in München.\n\n2. **Geringes Arbeitgeberimage / 'Hidden Champion'-Problem:** Rehau ist in seinem Segment Weltmarktführer, aber außerhalb der Branche kaum bekannt. Studienabsolventen denken an BMW, Siemens oder Google — nicht an Rehau. Das erschwert die externe Rekrutierung massiv, obwohl die Arbeitsbedingungen gut sind.\n\n**Teil (c): Was kann BMW von Rehau lernen?**\n\nAuf den ersten Blick scheint BMW als Großkonzern alles besser zu haben. Doch Rehau zeigt:\n\n- **Mut zur Authentizität:** Rehau verspricht keine Großstadtflair — es kommuniziert ehrlich, was es bietet (Natur, kurze Wege, günstiges Wohnen). BMW müsste entsprechend ehrlich kommunizieren, was den Münchner Standort unterscheidet.\n- **Individuelle Flexibilität:** Rehau ermöglicht Mitarbeitenden in Hamburg zu arbeiten und für Rehau tätig zu sein. Das ist ein Signal an Kandidaten: 'Wenn der Job nicht zu dir kommt, kommen wir zu dir.' BMW kann daraus lernen, Flexibilität stärker als Recruiting-Instrument einzusetzen.\n- **Langfristiges Hochschulmarketing:** Rehau investiert früh in die Beziehung zu Studierenden (Abschlussarbeiten, Praktika). BMW macht das auch, aber Rehau tut es aus strategischer Not besonders intensiv — und bindet damit früh Kandidaten, die noch nicht vergeben sind.\n\n**Fazit:** Recruiting-Strategie muss zur konkreten Situation des Unternehmens passen. Es gibt keine universelle Lösung — nur kontextspezifische Antworten."
+    },
+    {
+      "id": "rek-ex-3",
+      "topicId": "hr-personalrekrutierung",
+      "label": "V5 — Rekrutierungsproblem 3: 'Lahmes Recruiting' (Lufthansa Technik)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 5",
+      "type": "fall",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "Der Handelsblatt-Artikel beschreibt, wie Maren Möller (Name geändert) sich bei Lufthansa Technik bewirbt: Das Karriereportal verlangt sechs Registerkarten mit Eingaben zu Person, Sprachkenntnissen und Motivation, dazu drei Onlinetests und eine Anhangsbeschränkung von 10 MB. Zwei Tage nach Abschluss erhält sie eine Mail, in der — obwohl kein Pflichtfeld — Zeugnisse nachgefordert werden. In einem Drittel aller deutschen Firmen dauert ein Bewerbungsprozess vier Wochen oder länger.\n\n**Aufgabe:** (a) Welche konkreten Rekrutierungsfehler begeht Lufthansa Technik in diesem Beispiel? (b) Warum ist ein langsamer Bewerbungsprozess ein strategischer Wettbewerbsnachteil? (c) Was sollte Lufthansa Technik konkret verbessern?",
+      "hint": "Denken Sie aus der Bewerber-Perspektive: Was demotiviert? Und aus Unternehmensperspektive: Was kostet ein langsamer Prozess?",
+      "solution": "**Teil (a): Konkrete Rekrutierungsfehler**\n\n1. **Übermäßige Hürden im Bewerbungsprozess:** Sechs Registerkarten, drei Onlinetests und eine Dateigrößenbeschränkung erzeugen einen 'digitalen Hindernislauf'. Qualifizierte Kandidaten, die viele Optionen haben, brechen hier ab.\n\n2. **Inkonsistente Kommunikation:** Zeugnisse werden als kein Pflichtfeld markiert, aber trotzdem nachgefordert. Das signalisiert schlechte Prozessorganisation und wirft ein schlechtes Licht auf das Unternehmen.\n\n3. **Langsame Rückmeldung:** Eine Antwort erst zwei Tage später — und dann keine Einladung, sondern eine Nachforderung — frustriert Bewerber und kostet wertvolle Zeit.\n\n**Teil (b): Strategischer Wettbewerbsnachteil**\n\nLuftfttHansa Technik konkurriert um dieselben Kandidaten wie andere Unternehmen. Wenn ein Drittunternehmen innerhalb von 48 Stunden eine Intervieweinladung schickt, während Lufthansa noch Formulare nachfordert, hat der Wettbewerber die Kandidatin bereits überzeugt. Der Berner-Artikel (IW Köln) zeigt: Eine Firma brauchte 38 Monate, um eine Stelle zu besetzen — wegen langsamer Prozesse.\n\n**Wer leidet am meisten?** Unternehmen, die um gefragte Fachkräfte konkurrieren. In einem Bewerbermarkt (Angebot < Nachfrage) können Kandidaten wählen — und wählen schnelle, wertschätzende Prozesse.\n\n**Teil (c): Konkrete Verbesserungen**\n\n1. **Prozess radikal vereinfachen:** One-Click-Bewerbung oder maximal zwei Schritte. Zeugnisse erst im Interview oder nach Zusage anfordern.\n2. **Reaktionszeit verkürzen:** Ziel: Rückmeldung innerhalb von 24–48 Stunden (auch automatisierte Bestätigung mit klarem nächsten Schritt).\n3. **Dateigrößenbeschränkungen prüfen:** Technische Hürden, die kein sachliches Fundament haben, entfernen.\n4. **Algorithmen sinnvoll einsetzen:** CV-Parsing kann Erstsichtung automatisieren, aber der Prozess für den Bewerber muss einfach bleiben.\n\n**Fazit:** Der Bewerbungsprozess ist das erste Erlebnis des Kandidaten mit dem Unternehmen — und damit Teil des Employer Branding. Ein schlechter Prozess signalisiert: 'Wir schätzen deine Zeit nicht.'"
+    },
+    {
+      "id": "rek-ex-4",
+      "topicId": "hr-personalrekrutierung",
+      "label": "V5 — Rekrutierungsproblem 4: 'Ghosting im Bewerbungsprozess'",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 5",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Spiegel-Artikel (2020): Jonas P. hat einen Arbeitsvertrag unterschrieben, erscheint aber am ersten Arbeitstag nicht — er hatte ein besseres Angebot bekommen. Laut Indeed-Studie (2019) gaben 69 % der befragten US-Unternehmen an, von Ghosting betroffen zu sein. 83 % wurden schon einmal geghostet. 3–4 von 10 Bewerbern verschwinden irgendwo im Prozess. Ursachen: Bewerber wollen nicht absagen, unterschreiben aus Sicherheit zwei Verträge, sehen im Prozess bessere Alternativen.\n\n**Aufgabe:** (a) Was versteht man unter 'Ghosting' im Recruiting-Kontext? (b) Analysieren Sie die Ursachen aus Bewerber- und Unternehmensperspektive. (c) Welche rechtlichen und reputationsbezogenen Konsequenzen drohen ghostenden Bewerbern? (d) Was können Unternehmen tun, um Ghosting zu reduzieren?",
+      "hint": "Ghosting ist ein Symptom — fragen Sie nach den Ursachen. Aus welcher Perspektive entsteht es? Und was sagt es über den Zustand des Rekrutierungsmarkts aus?",
+      "solution": "**Teil (a): Definition Ghosting im Recruiting**\n\nGhosting bezeichnet das Verhalten von Bewerbern, die sich trotz laufenden Bewerbungsprozesses plötzlich nicht mehr melden — ohne Absage, ohne Erklärung. Das Phänomen tritt auf verschiedenen Stufen auf: kein Erscheinen zum Vorstellungsgespräch (50 % der Ghoster in der Studie), kein Reaktion auf Nachrichten (46 %), Nichtantritt am ersten Arbeitstag (22 %).\n\n**Teil (b): Ursachenanalyse**\n\n*Aus Bewerberperspektive:*\n- **Sicherheitsdenken:** Bewerber unterschreiben aus Absicherung zwei Verträge und wählen dann den besseren — das ist menschlich verständlich, aber unfair.\n- **Vermeidungsverhalten:** Viele Bewerber möchten Konflikte vermeiden und sagen lieber gar nichts, als eine unangenehme Absage zu formulieren.\n- **Macht-/Marktgefühl:** In einem Bewerbermarkt (Fachkräftemangel) fühlen Kandidaten sich in der stärkeren Position.\n\n*Aus Unternehmensperspektive — mitverursachend:*\n- **Schlechte Candidate Experience:** Wenn Unternehmen selbst wochenlang nicht antworten oder Bewerber 'hinhängen', verliert sich das Vertrauen — und mit ihm die Bindung.\n- **Mangelnde Wertschätzung:** Bewerber, die sich nicht wertgeschätzt fühlen, entwickeln keine Loyalität.\n\n**Teil (c): Rechtliche und reputationsbezogene Konsequenzen**\n\n*Rechtlich (laut Fachanwalt Christian Michels):*\n- Ein Vorstellungsgesprächstermin ist **nicht rechtlich bindend** — kein Erscheinen hat keine direkten rechtlichen Folgen.\n- Ein **unterschriebener Arbeitsvertrag dagegen ist bindend**. Wer am ersten Arbeitstag nicht erscheint, riskiert Schadensersatzansprüche des Arbeitgebers und vertraglich vereinbarte Strafen.\n\n*Reputationsbezogen:*\n- 'Man sieht sich zweimal im Leben' — Unternehmen merken sich Ghoster und schließen sie für künftige Bewerbungen aus.\n- In kleinen Branchen/Regionen verbreiten sich solche Vorfälle.\n\n**Teil (d): Maßnahmen gegen Ghosting**\n\n1. **Schnellere und transparentere Kommunikation:** Wer schnell und wertschätzend kommuniziert, hält Bewerber bei der Stange.\n2. **Regelmäßige Touchpoints im Prozess:** Check-ins per Mail oder Telefon halten den Kontakt warm.\n3. **Vertragsklauseln bei nachweislichem Schaden:** Immer mehr Arbeitgeber bauen Vertragsstrafen bei ungentschuldigtem Fernbleiben ein — das erhöht die Verbindlichkeit.\n4. **Faire Candidate Experience schaffen:** Wer selbst respektvoll mit Bewerbern umgeht (schnell absagen statt hinhängen), erhält eher Respekt zurück.\n\n**Fazit:** Ghosting ist ein Symptom einer unausgeglichenen Machtbeziehung: In einem Bewerbermarkt mit Fachkräftemangel fühlen sich Kandidaten weniger verpflichtet. Unternehmen müssen die gesamte Candidate Experience verbessern, um Bindung zu erzeugen."
+    },
+    {
+      "id": "rek-ex-5",
+      "topicId": "hr-personalrekrutierung",
+      "label": "V5 — Stellenanzeigen: 'Die dümmsten Fehler in Stellenanzeigen' (WiWo-Interview)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 5",
+      "type": "fall",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "WiWo-Interview mit Bastian Naurath (Curato Leads, 24.03.2025): Naurath optimiert Stellenanzeigen für 350 Unternehmen in Deutschland (u. a. RWE, VW, Dallmayr). Kernaussagen: (1) Viele Anzeigen haben falsche Jobtitel ('Fashion Host' statt 'Verkäufer'). (2) Langer Unternehmenstext am Anfang ('Harry Potter lesen bis zu den Benefits'). (3) Die sechs wichtigsten Informationen fehlen oft. (4) Algorithmen belohnen Schlüsselbegriffe (hybrid, remote, Homeoffice, Quereinsteiger). (5) Reaktionszeit auf Fragen wird von Algorithmen berücksichtigt.\n\n**Aufgabe:** (a) Ein Unternehmen schreibt folgende Stelle aus: 'Wir suchen eine/n Dynamic Content Creator für unser junges, dynamisches Team in der Kreativ-Industrie (m/w/d).' Identifizieren Sie mindestens drei Fehler. (b) Formulieren Sie den Stellentitel und die ersten drei Sätze der Anzeige besser. (c) Welche Rolle spielen Algorithmen auf Jobportalen — und was bedeutet das für die Textgestaltung?",
+      "hint": "Stellen Sie sich vor, Sie sind Bewerber auf dem Handy und scrollen durch 50 Anzeigen. Was überzeugt Sie sofort? Was macht Sie müde?",
+      "solution": "**Teil (a): Fehler in der Beispielanzeige**\n\n1. **Unklarer Jobtitel 'Dynamic Content Creator':** Wer sucht 'Social Media Manager' auf Indeed, wird diese Stelle nicht finden. Algorithmen und Kandidaten suchen mit gängigen Begriffen. Besser: 'Social-Media-Manager (m/w/d)' oder 'Content Manager (m/w/d)'.\n\n2. **Nichtssagendes Adjektiv 'jung, dynamisch':** 'Junges, dynamisches Team' ist eine der meistgenutzten und inhaltslosesten Formulierungen. Sie sagt nichts Konkretes — und schließt ältere Bewerber aus, die sich 'ausgegrenzt' fühlen.\n\n3. **Keine der sechs Kerninformationen:** Arbeitsort? Vergütung? Vollzeit/Teilzeit? Befristet/unbefristet? Benefits? Alle fehlen.\n\n4. **'Kreativ-Industrie' ist zu vage:** Welche Branche genau? Agentur, Verlag, Gaming, Film?\n\n**Teil (b): Verbesserte Version**\n\n*Jobtitel:* **Social-Media-Manager (m/w/d) — Vollzeit, remote möglich**\n\n*Erste drei Sätze:*\n'Wir bieten dir eine unbefristete Vollzeitstelle als Social-Media-Manager in München — mit der Option auf bis zu 3 Tage Homeoffice pro Woche. Du gestaltest unsere Kanäle (Instagram, LinkedIn, TikTok) mit kreativem Content und verantwortest die Community-Pflege. Gehalt: 40.000–50.000 EUR brutto/Jahr, je nach Erfahrung.'\n\n*Warum besser?* Klarer Jobtitel → Algorithmus findet ihn. Sofortige Benefits sichtbar → Kandidaten bleiben dran. Vergütung transparent → Qualitäts-Selbstselektion der Bewerber.\n\n**Teil (c): Die Rolle von Algorithmen**\n\nJobportale wie Indeed oder Stepstone ranken Anzeigen nach Algorithmen, die folgendes belohnen:\n- **Relevante Schlüsselbegriffe** in Jobtitel und Text: 'hybrid', 'remote', 'Homeoffice', 'Teilzeit', 'Quereinsteiger' werden häufig gesucht.\n- **Vollständige, präzise Angaben:** Plattformen bevorzugen Anzeigen, die alle wichtigen Felder ausfüllen.\n- **Schnelle Reaktionszeit:** Unternehmen, die schnell auf Kandidatenfragen antworten, werden besser gerankt.\n- **Viele aktive Anzeigen** eines Arbeitgebers erhöhen die Sichtbarkeit.\n\nKonsequenz für Textgestaltung:\n- Jobtitel mit echten Suchbegriffen verwenden, nicht kreativen Fantasiebezeichnungen.\n- Benefits früh sichtbar machen (Algorithmus-Nutzer und Kandidaten wollen das schnell sehen).\n- Anzeige auf mobilen Endgeräten testen — die meisten Bewerber suchen per Smartphone."
+    },
+    {
+      "id": "rek-ex-6",
+      "topicId": "hr-personalrekrutierung",
+      "label": "V5 — Employer Branding: 'Wofür steht die Bundeswehr?' (WiWo-Kolumne)",
+      "source": "Personal_Artikel_SoSe_2026.pdf, Veranstaltung 5",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "WiWo-Kolumne von Ferdinand Knauß (2019): Die Bundeswehr investiert massiv in Attraktivitätsoffensiven — mehr Sold, Sozialleistungen, Berufsförderung. Die Werbung zeigt lächelnde, unmilitärische Menschen; keine Waffen. Das Online-Fragebogen fragt, ob man eine Schusswaffe verwenden möchte — wer 'Nein' anklickt, wird trotzdem willkommen geheißen. Der Autor kritisiert: Die Bundeswehr verschleiert ihren eigentlichen Zweck (Kampfbereitschaft) in der Kommunikation.\n\n**Aufgabe:** (a) Worin liegt das zentrale Employer-Branding-Problem der Bundeswehr laut Kolumne? (b) Welche Zielgruppenproblematik entsteht dadurch? (c) Was können Unternehmen allgemein aus diesem Fall für ihr eigenes Employer Branding lernen?",
+      "hint": "Denken Sie an das Konzept der Authentizität im Employer Branding: Was passiert, wenn Außendarstellung und Realität auseinanderklaffen?",
+      "solution": "**Teil (a): Das zentrale Employer-Branding-Problem**\n\nDie Bundeswehr betreibt **inkongruentes Employer Branding**: Die Außenkommunikation (Werbung, Website) betont ausschließlich zivile Werte — Teamgeist, Diversität, Karrierechancen, Work-Life-Balance. Der eigentliche Daseinszweck — die Fähigkeit und Bereitschaft zum Kampf — wird aktiv verschleiert.\n\nDas ist ein klassischer Fall von **Mittel-Zweck-Verwechslung**: Die Bundeswehr sieht ihre Attraktivität als Selbstzweck, statt als Mittel, um den eigentlichen Zweck (Verteidigungsfähigkeit) zu erfüllen. Werbung und Realität klaffen auseinander.\n\n**Teil (b): Zielgruppenproblematik**\n\nDurch die 'Entstigmatisierung' des Militärs in der Werbung spricht die Bundeswehr primär Menschen an, die das Soldatenleben für einen normalen Job halten. Wer aber wirklich Soldat werden will und bereit ist, im Ernstfall zu kämpfen, findet sich in der Werbung nicht wieder.\n\nErgebnis: **Negativ-Selektion** — die Bundeswehr zieht Bewerber an, die für den eigentlichen Zweck möglicherweise ungeeignet sind, und verliert die, die geeignet wären. Vergleich im Artikel: Die britische Armee zeigt Kampfszenen auf ihrer Website und kommuniziert klar — 'To protect the nation.' Das ist authentisches, zielgruppengerechtes Employer Branding.\n\n**Teil (c): Lernpunkte für Unternehmen**\n\n1. **Authentizität ist Pflicht:** Employer Branding muss die echte Unternehmenskultur und den echten Job widerspiegeln. Wer mit 'flachen Hierarchien' wirbt, obwohl es ein Konzern mit Dienstwegdenken ist, zieht Kandidaten an, die schnell enttäuscht werden und gehen.\n\n2. **Zielgruppe kennen:** Gute Werbung spricht die Richtigen an — auch wenn das bedeutet, Andere auszuschließen. Eine Unternehmensberatung, die 80-Stunden-Wochen hat, sollte damit ehrlich sein — sie will Leute, die das wollen.\n\n3. **Employer Brand muss zur Unternehmensstrategie passen:** Wie bei der Personalstrategie (vertikaler Fit) muss das Arbeitgeberimage zum Zweck des Unternehmens passen. Ein Rüstungsunternehmen, das wie ein Technologie-Startup wirbt, produziert Dissonanz.\n\n4. **Interne Konsistenz:** Was in der Werbung versprochen wird, muss im Unternehmen gelebt werden (internes Employer Branding). Sonst entsteht Fluktuation und negative Glassdoor-Bewertungen."
+    },
+    {
+      "id": "rek-ex-7",
+      "topicId": "hr-personalrekrutierung",
+      "label": "HBR-Case — 'The Risky Business of Hiring Stars' (Groysberg, Nanda & Nohria 2004)",
+      "source": "HBR_The_Risky_Business_of_Hiring_Stars__2004.pdf",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Lesen Sie den HBR-Artikel 'The Risky Business of Hiring Stars' (Groysberg et al. 2004). Die Autoren untersuchten 1.052 Star-Aktienanalysten aus 78 US-Investmentbanken (1988–1996).\n\n**Aufgabe (Klausurformat — 30 Punkte):**\n(a) Welche **drei negativen Effekte** treten laut Studie auf, wenn ein Unternehmen einen Star von außen einkauft? (5 Punkte)\n(b) Welche **Faktoren der firmenspezifischen Leistung** nennen die Autoren? Erläutern Sie zwei davon. (10 Punkte)\n(c) Vergleichen Sie die Recruiting-Philosophien von **Sanford Bernstein** (interne Entwicklung) und **Merrill Lynch** (Stars einkaufen). Welche war erfolgreicher — und warum? (10 Punkte)\n(d) Übertragen Sie die Kernbotschaft auf ein **konkretes deutsches Unternehmen Ihrer Wahl**: Sollte ein Mittelständler im Fachkräftemangel lieber Stars einkaufen oder interne Talente entwickeln? Begründen Sie. (5 Punkte)",
+      "hint": "Für (b): Die Autoren nennen Resources & Capabilities, Systems & Processes, Leadership, Internal Networks, Training, Teams. Wählen Sie zwei und erläutern Sie diese anhand von Beispielen aus dem Artikel. Für (d): Denken Sie an Rehau oder ähnliche Mittelständler.",
+      "solution": "**Teil (a): Drei negative Effekte beim Einkauf von Stars (5 Punkte)**\n\n1. **Leistungseinbruch des Stars:** Die Performance des eingekauften Stars sinkt im Schnitt um ca. 20 % im ersten Jahr nach dem Wechsel — und erholt sich oft nicht vollständig. 46 % der Stars erbrachten im Folgejahr schlechte Leistungen.\n\n2. **Verschlechterung der Gruppenleistung:** Die Teams, die der Star verlässt UND die Teams, die ihn aufnehmen, leiden. Kollegen werden neidisch auf das hohe Gehalt, verweigern Kooperation und werden demotiviert. Informationen werden zurückgehalten.\n\n3. **Marktwerteinbruch des Unternehmens:** Der Börsenkurs der einstellenden Bank sank bei Bekanntgabe einer Star-Einstellung im Schnitt um 0,74 % — Investoren interpretierten externe Star-Einstellungen als Zeichen mangelnder interner Stärke.\n\n**Teil (b): Firmenspezifische Leistungsfaktoren (10 Punkte)**\n\nDie Autoren unterscheiden individuelle Faktoren (Begabung, Ausbildung, externes Netzwerk) von **firmenspezifischen Faktoren**, die bei einem Wechsel verloren gehen:\n\n**Resources & Capabilities:** Stars nutzen bei ihrem bisherigen Arbeitgeber eine hochentwickelte Infrastruktur — überlegene IT-Systeme, Researchdatenbanken, Klientenzugänge, Finanzmittel für Analysen. Ein Analyst, der bei Merrill Lynch drei Tage gebraucht hätte, um an Branchendaten zu kommen, brauchte bei seiner kleineren neuen Firma drei Tage tatsächlich — während er die Daten bei Merrill Lynch in einer Stunde hätte besorgen können. Diese Ressourcen nimmt er beim Wechsel nicht mit.\n\n**Internal Networks & Leadership:** Bei Lehman Brothers (Nr. 1 in Equity Research 1990) schrieben Stars ihren Erfolg explizit der Teamstruktur und den Führungspersönlichkeiten zu (Jack Rivkin, Fred Fraenkel). Analysten konnten nur effektiv arbeiten, weil ein starkes Sales-Team ihre Empfehlungen zu Kunden trug. Als Rivkin 1992 das Unternehmen verließ, verließen 30 von 72 Analysten (inkl. 15 Stars) das Unternehmen innerhalb von 15 Monaten.\n\n**Fazit für (b):** Starleistung ist nie rein individuell — sie ist ein Produkt aus Person und Kontext. Nur ~30 % sind portabel.\n\n**Teil (c): Sanford Bernstein vs. Merrill Lynch (10 Punkte)**\n\n*Sanford Bernstein (interne Entwicklung):*\n- **Selektion:** 100 Lebensläufe pro Stelle, 40–50 Interviews, Konsensprinzip (jeder Interviewer hat Veto), psychologische Eignungsbeurteilung.\n- **Training:** 13-Wochen-Intensivprogramm in Analyse, Kommunikation, Kundenpräsentation.\n- **Bindung:** Nicht nur Gehalt — Anerkennung, Entwicklungsmöglichkeiten, Flexibilität (Home-Offices).\n- **Ergebnis:** 1 von 5 Analysten wurde zum Star. Kandidaten brauchten 4 Jahre bis zur Spitze.\n\n*Merrill Lynch (Stars einkaufen):*\n- Strategie: Wettbewerber-Stars abwerben, hohe Gehälter und Signing Boni bieten.\n- Ergebnis: 1 von 30 wurde zum Star. Kandidaten brauchten 12 Jahre bis zur Spitze.\n- Konsequenz: Trotz enormer Kosten keine nachhaltige Stärke aufgebaut.\n\n**Warum war Bernstein erfolgreicher?** Weil sie erkannten, dass Stars im Kontext der Organisation entstehen — und diesen Kontext aktiv formten. Merrill Lynch glaubte, man könne Kontext kaufen. Das funktioniert nicht.\n\n**Teil (d): Übertragung auf deutschen Mittelstand (5 Punkte)**\n\nBeispiel: Ein Mittelständler wie Rehau (Kunststoff, Oberfranken) im Fachkräftemangel. Rehau kann keine externen Stars mit Millionengehältern bezahlen — das Budget fehlt, und die Region macht es zusätzlich schwer.\n\n**Empfehlung: Interne Entwicklung bevorzugen**, aus drei Gründen:\n1. **Kosten:** Externe Stars kosten enorm — in Budget, das Mittelständler nicht haben.\n2. **Bindung:** Intern entwickelte Talente kennen die firmenspezifischen Ressourcen und haben eine loyalere Bindung.\n3. **Fachkräftemangel:** Bei knappem Markt ist der externe Pool begrenzt — die Wahrscheinlichkeit, wirklich einen Star zu finden und zu halten, ist gering.\n\nWenn dennoch extern rekrutiert werden muss: gezielt als Ersatz (nicht als Ergänzung), mit starkem Integrationsprogramm und realistischen Erwartungen an die Anlaufzeit."
+    }
+  ]
+}

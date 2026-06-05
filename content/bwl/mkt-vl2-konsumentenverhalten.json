@@ -1,0 +1,357 @@
+{
+  "id": "mkt-vl2-konsumentenverhalten",
+  "subjectId": "bwl",
+  "title": "VL2 — Konsumentenverhalten",
+  "summary": "Warum kaufen Menschen, was sie kaufen? Diese Vorlesung erklärt die wichtigsten Modelle des Konsumentenverhaltens: das S-O-R-Modell nach Howard/Sheth, den fünfstufigen Kaufentscheidungsprozess (EKB), die Fluktuationsmatrix mit Übergangswahrscheinlichkeiten sowie das Fishbein-Einstellungsmodell – jeweils mit vollständig durchgerechneten Beispielen.",
+  "order": 2,
+  "estMinutes": 55,
+  "group": "Marketing",
+  "sections": [
+    {
+      "id": "s1-begriff",
+      "heading": "1. Was ist Konsumentenverhalten? Begriff und Relevanz",
+      "body": "**Konsumentenverhalten** (KV) bezeichnet das Verhalten von Individuen oder Gruppen im Zusammenhang mit dem **Erwerb, dem Gebrauch und der Entsorgung** von Gütern und Dienstleistungen (Walsh/Deseniss/Kilian 2020, S. 42).\n\nEinfach gesagt: KV ist alles, was ein Mensch tut, bevor, während und nachdem er etwas kauft.\n\nDrei Phasen strukturieren dieses Verhalten:\n\n| Phase | Englisch | Frage |  \n|---|---|---|\n| **Vorkaufphase** | Pre | Welche Marke suche ich? |\n| **Kaufphase** | Buy | Wo und wie kaufe ich? |\n| **Nachkaufphase** | Post | Bin ich zufrieden? |\n\n**Warum ist das für Unternehmen wichtig?**\n- **Erklärung von Nachfrageveränderungen:** Wer versteht, warum Kunden wechseln, kann gezielt gegensteuern.\n- **Befriedigung von Kundenbedürfnissen:** Bessere Produkte entstehen nur, wenn man die Bedürfnisse wirklich kennt.\n- **Wettbewerbsvorteile:** Wer seine Kunden besser kennt als die Konkurrenz, kann überlegene Angebote entwickeln.\n\n**Einflussfaktoren auf das Kaufverhalten** lassen sich in Schichten denken:\n- **Weiteres soziales Umfeld:** Landeskultur (z. B. „westlich“ vs. „asiatisch“), soziale Schicht, Subkulturen.\n- **Direktes soziales Umfeld:** Primärgruppen (Familie, Freunde), Sekundärgruppen (Gewerkschaft), soziale Rollen.\n- **Persönliche Faktoren:** Alter, Lebensphase, Beruf, Lebensstil, Persönlichkeit.\n- **Psychische Faktoren:** Aktivierung, Motivation, Einstellungen, Überzeugungen, Involvement, Lernen.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Konsumentenverhalten",
+          "body": "„Konsumentenverhalten lässt sich definieren als das Verhalten von Individuen oder Gruppen im Zusammenhang mit dem Erwerb, dem Gebrauch und der Entsorgung von Gütern und Dienstleistungen.“ (Walsh/Deseniss/Kilian 2020, S. 42)"
+        }
+      ]
+    },
+    {
+      "id": "s2-sor",
+      "heading": "2. Modelle des Konsumentenverhaltens: S-R und S-O-R",
+      "body": "Um zu verstehen, **warum** Konsumenten so reagieren, wie sie reagieren, haben Forscher verschiedene Modelle entwickelt.\n\n### Das S-R-Modell (Stimulus → Response)\n\n**Was ist es?** Das älteste und einfachste Modell. Es kommt aus dem **Behaviorismus** (Verhaltenswissenschaft): Ein Reiz (Stimulus) löst direkt eine Reaktion (Response) aus.\n\n**Beispiel:** Werbung (Stimulus) → Kauf (Response).\n\n**Problem:** Was im Inneren des Menschen abläuft – Gedanken, Gefühle, Erinnerungen – wird komplett ignoriert. Der Mensch ist eine „Black Box“.\n\n### Das S-O-R-Modell (Stimulus → Organism → Response)\n\n**Was ist es?** Das S-O-R-Modell (Neobehaviorismus) öffnet die Black Box. Zwischen Reiz und Reaktion steht der **Organismus** (O) = der Mensch mit all seinen inneren Prozessen.\n\nDiese inneren Prozesse heißen **intervenierende Variablen** – sie verändern, welche Reaktion auf einen bestimmten Reiz folgt.\n\n**Beispiel:** Die gleiche Werbung (Stimulus) führt bei einer Person mit positiver Markenerfahrung (Organism) zu einem Kauf, bei einer anderen Person nicht.\n\n### Das S-O-R-Modell von Howard und Sheth (1969)\n\nHoward und Sheth haben das S-O-R-Modell konkret ausgearbeitet und in drei Bereiche unterteilt:\n\n**1. Stimulus (Inputvariablen):**\n- *Signifikative Informationen* (direkte Produkteigenschaften): Qualität, Preis, Eigenart, Service, Erhältlichkeit.\n- *Kommerzielle Quellen* (Werbung): dieselben Dimensionen, aber durch Marketingkommunikation vermittelt.\n- *Soziale Quellen* (Umfeld): Familie, Referenzgruppen, soziale Klassen.\n\n**2. Organism (intervenierende Variablen):**\n- *Wahrnehmungskonstrukte:* Suchverhalten, Aufmerksamkeit, Wahrnehmungsverzerrung, Stimulus-Mehrdeutigkeit.\n- *Lernkonstrukte:* Markenkenntnis, Wahlkriterien, Einstellung, Sicherheit, Kaufabsicht, Befriedigung.\n\n**3. Response (Outputvariablen):**\n- Aufmerksamkeit, Markenkenntnis, Einstellung, Kaufabsicht, Kauf.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "S-R vs. S-O-R auf einen Blick",
+          "body": "**S-R:** Reiz → direkte Reaktion (Black Box, kein Innenleben berücksichtigt).\n\n**S-O-R:** Reiz → Verarbeitung im Organismus (Gedanken, Gefühle, Erfahrungen) → Reaktion.\n\nHoward/Sheth (1969) konkretisieren: Input (Signale) → Wahrnehmungs- und Lernkonstrukte → Output (Kauf)."
+        }
+      ]
+    },
+    {
+      "id": "s3-ekb",
+      "heading": "3. Kaufentscheidungsprozess: Das EKB-Modell (5 Stufen)",
+      "body": "Das **Engel-Kollat-Blackwell-Modell** (EKB, 1968) beschreibt den Kauf als **fünfstufigen Prozess**. Es geht davon aus, dass Konsumenten – besonders bei wichtigen Käufen – diese Schritte systematisch durchlaufen.\n\n### Stufe 1: Problemerkennung\n\nAlles beginnt damit, dass die Konsumentin ein **Problem oder Bedürfnis erkennt** – eine Lücke zwischen dem Ist-Zustand (kein Kaffee mehr) und dem Soll-Zustand (Kaffee haben).\n\n**Auslöser können sein:**\n- **Interne Stimuli:** Hunger, Durst, normale Bedürfnisse der Person.\n- **Externe Stimuli:** TV-Werbung, Werbung in Magazinen, Soziale Medien, Reize in der Umgebung.\n\n### Stufe 2: Informationssuche\n\nNachdem das Problem erkannt wurde, sucht die Konsumentin nach Informationen.\n\n**Intern:** Erinnerungen aus dem Gedächtnis abrufen (frühere Kauferfahrungen).\n\n**Extern:**\n- *Nicht-Marketing-kontrolliert:* Freunde fragen, Bewertungsportale lesen.\n- *Marketing-kontrolliert:* Werbung, Prospekte, Verkäuferberatung.\n- *Teilweise Marketing-kontrolliert:* Social Media (Influencer).\n\n**Wie viel Aufwand?** Das hängt ab von Risiko, Wissen, Interesse und Produkterfahrung:\n- Wenig Risiko + viel Wissen → eher interne Suche.\n- Viel Risiko + wenig Wissen → intensive externe Suche.\n\n### Stufe 3: Bewertung von Alternativen\n\nJetzt vergleicht die Konsumentin die in Frage kommenden Produkte. Dabei bildet sie Überzeugungen und Einstellungen zu den Alternativen.\n\n**Entscheidungsmengen (Sets):**\n- **Awareness Set:** Alle Marken/Produkte, die der Konsumentin bekannt sind.\n- **Unawareness Set:** Marken, die sie gar nicht kennt (für die ist Marketing zwingend!).\n- Aus dem Awareness Set trennt sie weiter:\n  - **Evoked Set:** Marken, die sie ernsthaft in Betracht zieht → aus diesem Set kauft sie!\n  - **Inert Set:** Bekannte, aber aktuell nicht kaufwürdige Marken.\n  - **Inept Set:** Bekannte Marken, die sie aktiv ablehnt.\n\n### Stufe 4: Kaufentscheidung\n\nDie Konsumentin wählt aus dem **Evoked Set**. Die Entscheidung kann auf zwei Arten erfolgen:\n- **Heuristisch:** Faustregeln, z. B. „Ich kaufe immer die günstigste Option“ oder „Was meine Freundin empfiehlt“.\n- **Komplex:** Sorgfältige Abwägung aller Vor- und Nachteile (z. B. Autokauf).\n\n### Stufe 5: Nachkauf-Bewertung\n\nNach dem Kauf bewertet die Konsumentin, ob ihre Erwartungen erfüllt wurden.\n\n- **Zufriedenheit** → Wiederkauf, Weiterempfehlung, Markenloyalität.\n- **Unzufriedenheit** → Kein Wiederkauf, negative Mundpropaganda.\n- **Kognitive Dissonanz** (= „buyers remorse“): Ein unangenehmes Gefühl nach dem Kauf, weil man unsicher ist, ob man die richtige Wahl getroffen hat (z. B. nach einem teuren Laptop-Kauf).",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Kognitive Dissonanz",
+          "body": "Menschen streben nach Harmonie und Konsistenz zwischen ihren Überzeugungen. Wenn nach dem Kauf Widersprüche auftauchen (z. B. „Ich habe zu viel bezahlt“ vs. „Ich bin sparsam“), entsteht Dissonanz. Strategien dagegen: dissonante Überzeugungen entfernen, neue konsonante hinzufügen, Bedeutung dissonanter Infos reduzieren. **Marketing-Instrument:** Nachkauf-Kommunikation, Garantien, Geld-zurück-Garantien."
+        },
+        {
+          "kind": "tip",
+          "title": "Marketingimplikation: Ins Evoked Set kommen!",
+          "body": "Ein Unternehmen muss dafür sorgen, dass seine Marke im **Evoked Set** der Zielgruppe landet. Dafür braucht es zunächst Bekanntheit (Awareness), dann Vertrauen und positive Einstellungen. Wer nur im Inert oder Inept Set ist, wird nie gekauft."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-ekb",
+          "title": "EKB-Kaufentscheidungsprozess (5 Stufen)",
+          "caption": "Der fünfstufige Kaufentscheidungsprozess nach Engel, Kollat und Blackwell (1968). Konsumenten durchlaufen diese Schritte – besonders bei komplexen Käufen.",
+          "code": "graph TD\n  A[\"1. Problemerkennung\\nBedürfnis oder Problem wird erkannt\\n(intern: Hunger / extern: Werbung)\"] --> B\n  B[\"2. Informationssuche\\nIntern (Gedächtnis) und extern\\n(Freunde, Werbung, Social Media)\"] --> C\n  C[\"3. Bewertung von Alternativen\\nEvoked Set bilden, Einstellungen formen\\nProdukte vergleichen\"] --> D\n  D[\"4. Kaufentscheidung\\nHeuristisch oder komplex\\nAuswahl aus dem Evoked Set\"] --> E\n  E[\"5. Nachkauf-Bewertung\\nZufriedenheit prüfen\\nKognitive Dissonanz abbauen\"]\n  style A fill:#dbeafe,stroke:#3b82f6\n  style B fill:#dbeafe,stroke:#3b82f6\n  style C fill:#dbeafe,stroke:#3b82f6\n  style D fill:#dbeafe,stroke:#3b82f6\n  style E fill:#dbeafe,stroke:#3b82f6"
+        }
+      ]
+    },
+    {
+      "id": "s4-fluktuation",
+      "heading": "4. Fluktuationsmatrix und Übergangswahrscheinlichkeiten",
+      "body": "### Was ist eine Fluktuationsmatrix?\n\nEine **Fluktuationsmatrix** (auch: Markenwechselmatrix) zeigt, wie viele Käuferinnen zwischen zwei Perioden **bei ihrer Marke geblieben** sind und wie viele zu einer anderen **gewechselt** haben.\n\n**Datenquelle:** Haushaltspanel – dieselben Haushalte werden über mehrere Perioden hinweg regelmäßig befragt, welche Marke sie jeweils gekauft haben.\n\n### Aufbau der Matrix\n\nDie Matrix hat Zeilen für „Marke in Periode t-1“ (= was wurde zuletzt gekauft) und Spalten für „Marke in Periode t“ (= was wird jetzt gekauft). In jeder Zelle steht die **Anzahl der Käufer**, die diesen Übergang vollzogen haben.\n\n### Vollständiges Rechenbeispiel (aus der Vorlesung)\n\nDrei Marken A, B und C auf einem Markt mit insgesamt 1.500 Käufern:\n\n| | **→ A (t)** | **→ B (t)** | **→ C (t)** | **Summe (t-1)** | **Marktanteil t-1** |\n|---|---|---|---|---|---|\n| **A (t-1)** | 270 | 190 | 65 | 525 | 35 % |\n| **B (t-1)** | 170 | 445 | 60 | 675 | 45 % |\n| **C (t-1)** | 85 | 115 | 100 | 300 | 20 % |\n| **Summe (t)** | 525 | 750 | 225 | 1.500 | |\n| **Marktanteil t** | 35 % | 50 % | 15 % | | 100 % |\n\n**Schritt 1: Marktanteil berechnen**\n\nMarktanteil Marke A in Periode t-1:\n$$\\text{MA}_A = \\frac{525}{1500} = 0{,}35 = 35\\,\\%$$\n\nMarkt ist **nicht wachsend**: Die Gesamtzahl der Käufer bleibt konstant (1.500).\n\n**Schritt 2: Übergangswahrscheinlichkeiten berechnen**\n\nJede Zelle wird durch die **Zeilensumme** (= alle Käufer dieser Marke in t-1) geteilt:\n\n$$p_{ij} = \\frac{\\text{Kaufhäufigkeit in Zelle}}{\\text{Zeilensumme}}$$\n\nBeispiele:\n- Bleibe-Wahrscheinlichkeit Marke A (A→A): $\\frac{270}{525} = 0{,}52$\n- Wechsel A→B: $\\frac{190}{525} = 0{,}36$\n- Wechsel A→C: $\\frac{65}{525} = 0{,}12$\n- Probe: $0{,}52 + 0{,}36 + 0{,}12 = 1{,}00$ ✓ (jede Zeile summiert sich zu 1)\n\n**Schritt 3: Übergangswahrscheinlichkeitsmatrix**\n\n| | **→ A** | **→ B** | **→ C** |\n|---|---|---|---|\n| **A** | 0,52 | 0,36 | 0,12 |\n| **B** | 0,25 | 0,66 | 0,09 |\n| **C** | 0,28 | 0,38 | 0,34 |\n\n**Interpretation:** Marke B hat die höchste Bleibe-Wahrscheinlichkeit (66 %). Marke C verliert besonders viele Kunden an B (38 %). Obwohl Marke A ihren Marktanteil von 35 % hält, kaufen nur 270 von 525 ehemaligen A-Käufern wieder A – es gibt viel Fluktuation!\n\n**Vorteile der Fluktuationsmatrix:**\n- Macht Markenloyalität und -wechsel transparent.\n- Einfache Datenerhebung über Haushaltspanel.\n- Leicht zu interpretieren.\n\n**Nachteile:**\n- Theorielosigkeit (keine Erklärung, *warum* gewechselt wird).\n- Keine verhaltenswissenschaftliche Fundierung.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Übergangswahrscheinlichkeit",
+          "body": "$$p_{ij} = \\frac{\\text{Anzahl Käufer: Marke } i \\text{ in t-1, Marke } j \\text{ in t}}{\\text{Gesamtzahl Käufer von Marke } i \\text{ in t-1}}$$\n\nAlle Übergangswahrscheinlichkeiten einer **Zeile** summieren sich zu **1**."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Twix und Mars: einfaches 2×2-Beispiel",
+          "body": "275 Käufer kauften in t-1 **Twix** und wieder Twix (Bleibe). 95 wechselten von Twix zu Mars. 145 wechselten von Mars zu Twix. 225 blieben bei Mars.\n\n- Bleibe-W'keit Twix: $275/370 \\approx 0{,}74$\n- Wechsel Twix→Mars: $95/370 \\approx 0{,}26$\n- Bleibe-W'keit Mars: $225/370 \\approx 0{,}61$\n- Wechsel Mars→Twix: $145/370 \\approx 0{,}39$"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-flukt-roh",
+          "title": "Fluktuationsmatrix: Rohdaten (Kaufhäufigkeiten)",
+          "headers": ["", "Marke A (t)", "Marke B (t)", "Marke C (t)", "Summe t-1", "MA t-1"],
+          "rows": [
+            ["Marke A (t-1)", "270", "190", "65", "525", "35 %"],
+            ["Marke B (t-1)", "170", "445", "60", "675", "45 %"],
+            ["Marke C (t-1)", "85", "115", "100", "300", "20 %"],
+            ["Summe (t)", "525", "750", "225", "1.500", ""],
+            ["MA (t)", "35 %", "50 %", "15 %", "", "100 %"]
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "fig-flukt-prob",
+          "title": "Übergangswahrscheinlichkeitsmatrix (abgeleitet aus den Rohdaten)",
+          "headers": ["", "→ Marke A", "→ Marke B", "→ Marke C", "Summe"],
+          "rows": [
+            ["Marke A (t-1)", "0,52", "0,36", "0,12", "1,00"],
+            ["Marke B (t-1)", "0,25", "0,66", "0,09", "1,00"],
+            ["Marke C (t-1)", "0,28", "0,38", "0,34", "1,00"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5-motivation",
+      "heading": "5. Motivation, Motive und Maslows Bedürfnispyramide",
+      "body": "### Motive und Motivation\n\n- **Motiv** (lat. *movere* = bewegen): Trieb, Neigung, Streben oder Bedürfnis. Motive sind relativ stabile innere Bereitschaften, bestimmte Ziele anzustreben.\n- **Motivation** ist die **konkrete Antriebsenergie** für Verhalten, die entsteht, wenn ein Motiv aktiviert wird.\n\n**Beispiel:** Das Motiv „soziales Prestige“ ist latent vorhanden. Eine Luxusuhr-Werbung aktiviert es → Motivation zum Kauf entsteht.\n\nEin Motiv wird zur **Motivation**, wenn es einen so starken Druck auf einen Menschen ausübt, dass er unmittelbar handeln möchte.\n\n### Maslows Bedürfnispyramide\n\nAbraham Maslow (1943) ordnete menschliche Bedürfnisse in fünf Stufen, von der Basis (dringendste) zur Spitze (höchste):\n\n1. **Physiologische Bedürfnisse** (Basis): Hunger, Durst, Schlaf – elementare Überlebensbedürfnisse.\n2. **Sicherheitsbedürfnisse:** Sicherheit, Schutz, Stabilität (z. B. Versicherungen, sichere Arbeit).\n3. **Soziale Bedürfnisse (Belongingness):** Zugehörigkeit, Liebe, Freundschaft.\n4. **Ego-Bedürfnisse (Esteem):** Anerkennung, Status, Selbstwertgefühl.\n5. **Selbstverwirklichung (Self-Actualization):** Das eigene Potenzial entfalten.\n\n**Marketingrelevanz:** Produkte sprechen oft höhere Bedürfnisstufen an, obwohl die Grundbedürfnisse längst gedeckt sind (z. B. Luxusauto → Status, Ego-Ebene).\n\n### Motivationale Konflikte\n\nManchmal streiten mehrere Motive miteinander:\n\n- **Annäherungs-Annäherungs-Konflikt:** Zwischen zwei attraktiven Alternativen wählen (z. B. Pilsener Urquell oder Beck's).\n- **Annäherungs-Vermeidungs-Konflikt:** Man will etwas, lehnt es aber gleichzeitig ab (z. B. Schokoladentorte essen, aber Diät halten).\n- **Vermeidungs-Vermeidungs-Konflikt:** Zwischen zwei unattraktiven Alternativen wählen (z. B. RTL2 oder SuperRTL).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Motiv vs. Motivation",
+          "body": "**Motiv** = latente Bereitschaft (immer vorhanden, aber schlafend).\n\n**Motivation** = aktiviertes Motiv = konkreter Handlungsantrieb.\n\nMarketing versucht, Motive zu **aktivieren** (durch Werbung, Duft, Farbe, Musik im Geschäft)."
+        }
+      ]
+    },
+    {
+      "id": "s6-fishbein",
+      "heading": "6. Einstellungen und das Fishbein-Modell",
+      "body": "### Was sind Einstellungen?\n\n**Einstellungen** sind „systembedingte und erlernte Reaktionsweisen eines Individuums, die dessen Denken, Behalten, Empfindungen und Handeln bestimmen“ (Bledjian/Stosberg 1972). Vereinfacht: Eine Einstellung ist eine **positive oder negative Bewertung** gegenüber einem Produkt, einer Marke oder einer Idee.\n\n**Drei-Komponenten-Ansatz:**\n- **Affektiv (Fühlen):** Emotionale Reaktion – „Ich mag diesen Kaffee.“\n- **Kognitiv (Wissen):** Überzeugungen – „Dieser Kaffee ist aus Äthiopien.“\n- **Konativ (Handeln):** Verhaltensabsicht – „Ich werde diesen Kaffee kaufen.“\n\n### Das Fishbein-Einstellungsmodell\n\n**Was ist es?** Ein mathematisches Modell zur Messung von Einstellungen. Es berechnet einen **Gesamteinstellungswert** aus der Bewertung und der wahrgenommenen Ausprägung einzelner Produktmerkmale.\n\n**Warum?** Weil eine einzige Zahl (Gesamteinstellung) Marken vergleichbar macht und zeigt, welches Merkmal die Einstellung am stärksten prägt.\n\n**Die Formel:**\n$$A_{ij} = \\sum_{k=1}^{n} B_{ijk} \\cdot a_{ijk}$$\n\nMit:\n- $A_{ij}$ = **Gesamteinstellung** der Person $i$ gegenüber Objekt (Marke) $j$\n- $B_{ijk}$ = **Wahrscheinlichkeit**, dass Objekt $j$ nach Meinung von Person $i$ das Merkmal $k$ besitzt (Skala 0–7: 0 = gar nicht wahrscheinlich, 7 = sehr wahrscheinlich)\n- $a_{ijk}$ = **Bewertung** (Wichtigkeit) des Merkmals $k$ durch Person $i$ für Objekt $j$ (Skala 1–7: 1 = nicht wichtig, 7 = sehr wichtig)\n- $n$ = Anzahl der Merkmale\n\n**Schritt für Schritt:**\n1. Merkmale auswählen (z. B. Geschmack, Herkunft, Preis).\n2. Für jedes Merkmal $B_{ijk}$ erheben: „Wie wahrscheinlich hat die Marke dieses Merkmal?“\n3. Für jedes Merkmal $a_{ijk}$ erheben: „Wie wichtig ist Ihnen dieses Merkmal?“\n4. Pro Merkmal: $B_{ijk} \\times a_{ijk}$ berechnen.\n5. Alle Produkte addieren → Gesamteinstellung $A_{ij}$.\n\n### Vollständiges Rechenbeispiel: Kaffee „Super Blend“\n\n**Aufgabe:** 300 Kaffeekäufer sollen die Marke „Super Blend“ anhand von 5 Merkmalen beurteilen.\n\n**Erhobene Werte (aggregierter Durchschnitt):**\n\n| Merkmal | $B_{ijk}$ (Wahrscheinlichkeit) | $a_{ijk}$ (Bewertung/Wichtigkeit) | $B_{ijk} \\times a_{ijk}$ |\n|---|---|---|---|\n| Geschmack | 7 | 6 | **42** |\n| Herkunft | 7 | 6 | **42** |\n| Farbe | 6 | 6 | **36** |\n| Duft | 6 | 1 | **6** |\n| Verträglichkeit | 6 | 2 | **12** |\n| **Gesamteinstellung** $A_{ij}$ | | | **$\\sum = 138$** |\n\n**Rechnung Schritt für Schritt:**\n$$A = (7 \\times 6) + (7 \\times 6) + (6 \\times 6) + (6 \\times 1) + (6 \\times 2)$$\n$$= 42 + 42 + 36 + 6 + 12 = 138$$\n\n**Interpretation:** Der Gesamteinstellungswert beträgt **138**. Die Merkmale **Geschmack und Herkunft** prägen die Einstellung gegenüber „Super Blend“ am stärksten (je 42 Punkte). **Duft** ist den Konsumenten wenig wichtig ($a = 1$), obwohl sie ihn für wahrscheinlich halten ($B = 6$).\n\n**Marketingkonsequenz:** Bei der Vermarktung von „Super Blend“ sollten **Geschmack und Herkunft** in den Vordergrund gestellt werden. Investitionen in Duft-Kommunikation würden wenig bringen.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Fishbein-Formel",
+          "body": "$$A_{ij} = \\sum_{k=1}^{n} B_{ijk} \\cdot a_{ijk}$$\n\n$B_{ijk}$: Wahrscheinlichkeit, dass Marke $j$ Eigenschaft $k$ hat (0–7)\n\n$a_{ijk}$: Wichtigkeit/Bewertung der Eigenschaft $k$ (1–7)\n\nHoher Wert = positive Einstellung; niedriger Wert = negative Einstellung."
+        },
+        {
+          "kind": "tip",
+          "title": "Markenvergleich mit Fishbein",
+          "body": "Berechnet man den Fishbein-Score für mehrere Marken, lassen sich diese direkt vergleichen. Eine Marke mit Wert 138 liegt über einer Marke mit Wert 95. Außerdem sieht man, welches Merkmal gezielt verbessert werden muss, um die Gesamteinstellung zu steigern."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl2-fc1",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was ist der Unterschied zwischen dem S-R- und dem S-O-R-Modell?",
+      "back": "**S-R:** Reiz → direkte Reaktion (Black Box, innere Prozesse ignoriert, Behaviorismus).\n**S-O-R:** Reiz → Verarbeitung im **Organismus** (Gefühle, Gedanken, Erfahrungen) → Reaktion. Der Organismus enthält *intervenierende Variablen* (Neobehaviorismus)."
+    },
+    {
+      "id": "mkt-vl2-fc2",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Nenne die 5 Stufen des EKB-Kaufentscheidungsprozesses.",
+      "back": "1. Problemerkennung\n2. Informationssuche\n3. Bewertung von Alternativen\n4. Kaufentscheidung\n5. Nachkauf-Bewertung"
+    },
+    {
+      "id": "mkt-vl2-fc3",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was ist das Evoked Set?",
+      "back": "Das **Evoked Set** ist die Menge der dem Konsumenten bekannten Marken/Produkte, aus der er seine **endgültige Kaufentscheidung** trifft. Es ist eine Untermenge des Awareness Set (bekannte Alternativen) und schließt das Inert Set (kaufwürdig aber zurückgestellt) und Inept Set (abgelehnte Marken) aus."
+    },
+    {
+      "id": "mkt-vl2-fc4",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Wie berechnet man eine Übergangswahrscheinlichkeit aus einer Fluktuationsmatrix?",
+      "back": "$$p_{ij} = \\frac{\\text{Anzahl Käufer in Zelle}(i \\to j)}{\\text{Zeilensumme der Marke } i}$$\nBeispiel: 270 von 525 Käufern von Marke A kaufen wieder A: $p_{AA} = 270/525 = 0{,}52$. Alle Wahrscheinlichkeiten einer Zeile summieren sich zu 1."
+    },
+    {
+      "id": "mkt-vl2-fc5",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was misst der Fishbein-Score $A_{ij}$?",
+      "back": "Die **Gesamteinstellung** einer Person $i$ gegenüber Objekt (Marke) $j$. Berechnung: $A_{ij} = \\sum_{k=1}^{n} B_{ijk} \\cdot a_{ijk}$, wobei $B$ die wahrgenommene Eigenschaftsausprägung und $a$ die Wichtigkeit des Merkmals ist."
+    },
+    {
+      "id": "mkt-vl2-fc6",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Welche drei Komponenten hat eine Einstellung (Drei-Komponenten-Ansatz)?",
+      "back": "1. **Affektiv** (Fühlen): emotionale Bewertung.\n2. **Kognitiv** (Wissen): Überzeugungen und Wissen über das Objekt.\n3. **Konativ** (Handeln): Verhaltensabsicht (Kaufabsicht)."
+    },
+    {
+      "id": "mkt-vl2-fc7",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was ist kognitive Dissonanz und was können Marketer dagegen tun?",
+      "back": "**Kognitive Dissonanz** = unangenehmes Gefühl nach dem Kauf durch widersprüchliche Überzeugungen (\"buyers remorse\"). Marketer können gegensteuern durch: Nachkauf-Kommunikation, Geld-zurück-Garantien, Produktproben, Garantien/Gewährleistungen, Service-Verträge."
+    },
+    {
+      "id": "mkt-vl2-fc8",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Nenne zwei Vor- und zwei Nachteile von Fluktuationsmatrizen.",
+      "back": "**Vorteile:** (1) Markenloyalität und -wechsel transparent. (2) Daten einfach über Haushaltspanel erhebbar. (3) Leicht interpretierbar.\n\n**Nachteile:** (1) Theorielosigkeit – kein Erklärungsansatz für Wechselursachen. (2) Keine verhaltenswissenschaftliche Fundierung."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl2-q1",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "leicht",
+      "prompt": "Was unterscheidet das S-O-R-Modell vom S-R-Modell grundlegend?",
+      "options": [
+        "Das S-O-R-Modell ignoriert den Stimulus.",
+        "Das S-O-R-Modell berücksichtigt innere (intrapsychische) Prozesse des Konsumenten als intervenierende Variablen.",
+        "Das S-O-R-Modell misst nur den Kauf, nicht die Reaktion.",
+        "Das S-R-Modell wurde von Howard und Sheth entwickelt."
+      ],
+      "correct": [1],
+      "explanation": "Das S-O-R-Modell öffnet die 'Black Box' des S-R-Modells: Zwischen Stimulus (S) und Response (R) steht der Organismus (O) mit intervenierenden Variablen wie Einstellungen, Wahrnehmungen und Erfahrungen."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl2-q2",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "leicht",
+      "prompt": "In welcher Reihenfolge laufen die 5 Stufen des EKB-Kaufentscheidungsprozesses ab?",
+      "options": [
+        "Informationssuche → Problemerkennung → Bewertung → Kauf → Nachkauf",
+        "Problemerkennung → Informationssuche → Bewertung von Alternativen → Kaufentscheidung → Nachkauf-Bewertung",
+        "Problemerkennung → Kauf → Informationssuche → Bewertung → Nachkauf",
+        "Bewertung → Informationssuche → Problemerkennung → Kauf → Nachkauf"
+      ],
+      "correct": [1],
+      "explanation": "Der EKB-Prozess verläuft immer: (1) Problemerkennung, (2) Informationssuche, (3) Bewertung von Alternativen, (4) Kaufentscheidung, (5) Nachkauf-Bewertung."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl2-q3",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "leicht",
+      "prompt": "Das Evoked Set umfasst alle Produkte, die einem Konsumenten bekannt sind (= Awareness Set).",
+      "answer": false,
+      "explanation": "Falsch. Das Awareness Set = alle bekannten Marken. Das Evoked Set ist eine Untermenge davon: nur die Marken, die der Konsument ernsthaft für einen Kauf in Betracht zieht. Inert Set (kaufwürdig aber zurückgestellt) und Inept Set (abgelehnte Marken) gehören nicht zum Evoked Set."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl2-q4",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "mittel",
+      "prompt": "In einer Fluktuationsmatrix haben 840 Käufer in Periode t-1 Marke X gekauft. In Periode t kaufen davon 504 wieder Marke X. Wie groß ist die Bleibe-Wahrscheinlichkeit von Marke X (als Dezimalzahl, gerundet auf 2 Stellen)?",
+      "answer": 0.6,
+      "tolerance": 0.005,
+      "unit": "",
+      "explanation": "Bleibe-Wahrscheinlichkeit = 504 / 840 = 0,60. Jede Zelle der Fluktuationsmatrix wird durch die Zeilensumme geteilt, um die Übergangswahrscheinlichkeit zu erhalten."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl2-q5",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "mittel",
+      "prompt": "Im Fishbein-Beispiel (Kaffee 'Super Blend') beträgt der Teilbeitrag des Merkmals 'Geschmack' zum Gesamteinstellungswert: B = 7, a = 6. Wie groß ist dieser Teilbeitrag?",
+      "answer": 42,
+      "tolerance": 0.1,
+      "unit": "Punkte",
+      "explanation": "Teilbeitrag = B × a = 7 × 6 = 42. Das ist der größte Einzelbeitrag im Super-Blend-Beispiel (gleichauf mit Herkunft)."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl2-q6",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "schwer",
+      "prompt": "Gegeben ist folgende Fluktuationsmatrix (Periode t-1 → Periode t). Gesamtmarkt: 2.000 Käufer. Marke P hatte in t-1 = 800 Käufer, davon kaufen in t: 480 wieder P, 240 wechseln zu Q, 80 zu R. Wie groß ist die Übergangswahrscheinlichkeit von P zu Q (als Dezimalzahl, 2 Stellen)?",
+      "answer": 0.3,
+      "tolerance": 0.005,
+      "unit": "",
+      "explanation": "p(P→Q) = 240 / 800 = 0,30. Probe: p(P→P) = 480/800 = 0,60; p(P→Q) = 240/800 = 0,30; p(P→R) = 80/800 = 0,10. Summe = 1,00. ✓"
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl2-q7",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "mittel",
+      "prompt": "Was sagen die Inputvariablen im Howard/Sheth-Modell aus? (Mehrfachauswahl möglich)",
+      "options": [
+        "Signifikative Informationen (Qualität, Preis, Service, Eigenart, Erhältlichkeit des Produkts)",
+        "Informationen aus kommerziellen Quellen (Werbung für dieselben Eigenschaften)",
+        "Informationen aus sozialen Quellen (Familie, Referenzgruppen)",
+        "Die Kaufentscheidung selbst"
+      ],
+      "correct": [0, 1, 2],
+      "multiple": true,
+      "explanation": "Im Howard/Sheth-Modell gibt es drei Arten von Inputvariablen (Stimuli): (1) Signifikative Infos (direkte Produkteigenschaften), (2) kommerzielle Quellen (Werbung), (3) soziale Quellen (Familie, Referenzgruppen). Die Kaufentscheidung ist eine Outputvariable."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl2-q8",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "mittel",
+      "prompt": "Die Übergangswahrscheinlichkeiten in einer Zeile der Fluktuationsmatrix müssen sich zu 1 addieren.",
+      "answer": true,
+      "explanation": "Richtig. Jeder Käufer von Marke i in t-1 kauft in t genau eine Marke (i selbst oder eine andere). Daher müssen alle Übergangswahrscheinlichkeiten einer Zeile zusammen 100% = 1 ergeben."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl2-q9",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "mittel",
+      "prompt": "Ein Konsument sieht ein Werbeplakat für Schokolade und kauft sie impulsiv. Welches Modell beschreibt dieses Verhalten am besten?",
+      "options": [
+        "Das EKB-Fünf-Stufen-Modell mit ausführlicher Informationssuche",
+        "Das S-R-Modell (Stimulus löst direkt die Reaktion aus, Black Box)",
+        "Das Fishbein-Modell (gewichtete Einstellungsmessung)",
+        "Das Fluktuationsmodell"
+      ],
+      "correct": [1],
+      "explanation": "Bei einem Impulskauf reagiert der Konsument direkt auf einen Reiz (Werbung = Stimulus) mit dem Kauf (Response), ohne ausführliche innere Verarbeitung. Das entspricht dem einfachen S-R-Gedanken."
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl2-q10",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "schwer",
+      "prompt": "Erklären Sie, wie ein Unternehmen das Fishbein-Modell nutzen kann, um seine Marketingstrategie zu verbessern. Gehen Sie auf mindestens zwei Ansatzpunkte ein.",
+      "sampleAnswer": "Das Fishbein-Modell liefert zwei strategische Ansatzpunkte: (1) **Markenvergleich:** Berechnet man den Fishbein-Score für die eigene Marke und Wettbewerber, sieht man, wo man besser oder schlechter bewertet wird. (2) **Merkmal-Analyse:** Merkmale mit hohem $a_{ijk}$ (sehr wichtig für Kunden) aber niedrigem $B_{ijk}$ (Marke wird dort schwach wahrgenommen) sind Schwachstellen – hier sollte Produkt oder Kommunikation verbessert werden. (3) Merkmale mit hohem $B_{ijk}$ aber niedrigem $a_{ijk}$ (wie Duft bei Super Blend) sind weniger relevant für die Marketingbotschaft.",
+      "keywords": ["merkmal", "bewertung", "wahrscheinlichkeit", "vergleich", "schwachstelle", "strategie"],
+      "explanation": "Das Fishbein-Modell ermöglicht präzise Diagnosen: Wo liegt das Problem – an der wahrgenommenen Eigenschaftsausprägung (B) oder an der Wichtigkeit (a)? Beides hat unterschiedliche Marketingimplikationen (Produktverbesserung vs. Kommunikation)."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl2-q11",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "leicht",
+      "prompt": "Welcher Ansatz liefert Daten für eine Fluktuationsmatrix?",
+      "options": [
+        "Einmalige Querschnittsbefragung",
+        "Haushaltspanel (dieselben Haushalte werden regelmäßig befragt)",
+        "Fishbein-Einstellungsmessung",
+        "PESTLE-Analyse"
+      ],
+      "correct": [1],
+      "explanation": "Für eine Fluktuationsmatrix braucht man Daten über dasselbe Kaufverhalten über mehrere Perioden – genau das liefert ein Haushaltspanel, bei dem dieselben Haushalte regelmäßig zu ihren Käufen befragt werden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl2-q12",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "difficulty": "schwer",
+      "prompt": "Wenn Marke A in Periode t-1 und t denselben Marktanteil hält, bedeutet das, dass alle Käufer von A loyal geblieben sind.",
+      "answer": false,
+      "explanation": "Falsch! Der Marktanteil kann gleich bleiben, obwohl viele Kunden gewechselt haben – wenn genauso viele Kunden von anderen Marken zu A gewechselt sind wie A-Kunden abgewandert sind. Im Vorlesungsbeispiel hat A 35% in t-1 und t, aber nur 270 von 525 ehemaligen A-Käufern kauften wieder A (Bleibe-W'keit 52%). Es gab erhebliche Fluktuation!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl2-ex1",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "label": "VL2, Folie 14–18: Fluktuationsmatrix und Übergangswahrscheinlichkeiten (Twix/Mars & Marken A/B/C)",
+      "source": "PoM__VL_2_Konsumentenverhalten_WebCT.pdf, Folien 14–18",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "**Aufgabe Teil 1 – Twix/Mars:**\nIn einem Haushaltspanel wurden zwei Perioden beobachtet. Folgende Kaufhäufigkeiten wurden festgestellt:\n- Twix → Twix: 275 Käufer\n- Twix → Mars: 95 Käufer\n- Mars → Twix: 145 Käufer\n- Mars → Mars: 225 Käufer\n\n(a) Stellen Sie die Fluktuationsmatrix auf.\n(b) Berechnen Sie alle Übergangswahrscheinlichkeiten.\n(c) Wie hoch sind die Marktanteile in Periode t-1 und t?\n\n**Aufgabe Teil 2 – Marken A, B, C:**\nGesamtmarkt: 1.500 Käufer. Fluktuationsmatrix (Rohdaten):\n- A→A: 270, A→B: 190, A→C: 65\n- B→A: 170, B→B: 445, B→C: 60\n- C→A: 85, C→B: 115, C→C: 100\n\n(a) Berechnen Sie die Marktanteile aller drei Marken in Periode t-1 und t.\n(b) Berechnen Sie die vollständige Übergangswahrscheinlichkeitsmatrix.\n(c) Welche Marke hat die höchste Markenloyalität? Welche Marke gewinnt am meisten hinzu?",
+      "hint": "Übergangswahrscheinlichkeit = Zellenwert / Zeilensumme. Marktanteil t-1 = Zeilensumme / Gesamtmarkt. Marktanteil t = Spaltensumme / Gesamtmarkt.",
+      "solution": "**Teil 1 – Twix/Mars:**\n\n**Fluktuationsmatrix (Rohdaten):**\n\n| | Twix (t) | Mars (t) | Summe (t-1) |\n|---|---|---|---|\n| Twix (t-1) | 275 | 95 | 370 |\n| Mars (t-1) | 145 | 225 | 370 |\n| Summe (t) | 420 | 320 | 740 |\n\n**(b) Übergangswahrscheinlichkeiten:**\n- p(Twix→Twix) = 275/370 ≈ **0,74** (74% der Twix-Käufer bleiben bei Twix)\n- p(Twix→Mars) = 95/370 ≈ **0,26**\n- p(Mars→Twix) = 145/370 ≈ **0,39**\n- p(Mars→Mars) = 225/370 ≈ **0,61**\n\nProbe Zeile Twix: 0,74 + 0,26 = 1,00 ✓ | Zeile Mars: 0,39 + 0,61 = 1,00 ✓\n\n**(c) Marktanteile:**\n- t-1: Twix = 370/740 = **50%**, Mars = 370/740 = **50%**\n- t: Twix = 420/740 ≈ **56,8%**, Mars = 320/740 ≈ **43,2%**\n\nTwix gewinnt Marktanteile, weil mehr Mars-Käufer zu Twix wechseln als umgekehrt.\n\n---\n\n**Teil 2 – Marken A, B, C:**\n\n**Schritt 1: Zeilensummen (= Käufer in t-1) und Marktanteile t-1:**\n- Marke A: 270 + 190 + 65 = **525** → MA(t-1) = 525/1500 = **35%**\n- Marke B: 170 + 445 + 60 = **675** → MA(t-1) = 675/1500 = **45%**\n- Marke C: 85 + 115 + 100 = **300** → MA(t-1) = 300/1500 = **20%**\n\n**Schritt 2: Spaltensummen (= Käufer in t) und Marktanteile t:**\n- Marke A: 270 + 170 + 85 = **525** → MA(t) = 525/1500 = **35%**\n- Marke B: 190 + 445 + 115 = **750** → MA(t) = 750/1500 = **50%**\n- Marke C: 65 + 60 + 100 = **225** → MA(t) = 225/1500 = **15%**\n\n**Schritt 3: Übergangswahrscheinlichkeiten (Zellenwert ÷ Zeilensumme):**\n\n| | → A | → B | → C |\n|---|---|---|---|\n| **A** | 270/525 = **0,52** | 190/525 = **0,36** | 65/525 = **0,12** |\n| **B** | 170/675 = **0,25** | 445/675 = **0,66** | 60/675 = **0,09** |\n| **C** | 85/300 = **0,28** | 115/300 = **0,38** | 100/300 = **0,34** |\n\nProbe Zeilen: A: 0,52+0,36+0,12 = 1,00 ✓ | B: 0,25+0,66+0,09 = 1,00 ✓ | C: 0,28+0,38+0,34 = 1,00 ✓\n\n**(c) Auswertung:**\n- **Höchste Loyalität:** Marke B mit Bleibe-Wahrscheinlichkeit **0,66** (66%).\n- **Marktanteilsgewinner:** Marke B gewinnt von 45% auf 50% – sie zieht besonders viele C-Käufer an (38% wechseln von C zu B).\n- **Verlierer:** Marke C verliert von 20% auf 15%. Und obwohl Marke A ihren Marktanteil von 35% hält, gibt es erhebliche Fluktuation: nur 52% der A-Käufer bleiben bei A."
+    },
+    {
+      "id": "mkt-vl2-ex2",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "label": "VL2, Folie 28–30: Fishbein-Einstellungsmessung 'Super Blend'",
+      "source": "PoM__VL_2_Konsumentenverhalten_WebCT.pdf, Folien 28–30",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "300 Kaffeekäufer wurden zu der Marke \"Super Blend\" befragt. Auf einer **7-Punkt-Likert-Skala** wurden erhoben:\n- $B_{ijk}$: Wie wahrscheinlich ist es, dass \"Super Blend\" das Merkmal besitzt? (0 = gar nicht, 7 = sehr wahrscheinlich)\n- $a_{ijk}$: Wie wichtig ist Ihnen dieses Merkmal bei Kaffee? (1 = nicht wichtig, 7 = sehr wichtig)\n\nErgebnisse:\n| Merkmal | $B_{ijk}$ | $a_{ijk}$ |\n|---|---|---|\n| Geschmack | 7 | 6 |\n| Herkunft | 7 | 6 |\n| Farbe | 6 | 6 |\n| Duft | 6 | 1 |\n| Verträglichkeit | 6 | 2 |\n\n**(a)** Berechnen Sie den Gesamteinstellungswert $A_{ij}$ nach dem Fishbein-Modell.\n\n**(b)** Welche Merkmale prägen die Einstellung am stärksten? Welche am wenigsten?\n\n**(c)** Welche Konsequenzen sollte das Marketing daraus ziehen?",
+      "hint": "Fishbein-Formel: $A_{ij} = \\sum_{k=1}^{n} B_{ijk} \\cdot a_{ijk}$. Berechne zuerst das Produkt $B \\times a$ für jedes Merkmal, dann addiere alle Produkte.",
+      "solution": "**Schritt 1: Teilbeiträge berechnen ($B_{ijk} \\times a_{ijk}$):**\n\n| Merkmal | $B_{ijk}$ | $a_{ijk}$ | $B \\times a$ |\n|---|---|---|---|\n| Geschmack | 7 | 6 | **42** |\n| Herkunft | 7 | 6 | **42** |\n| Farbe | 6 | 6 | **36** |\n| Duft | 6 | 1 | **6** |\n| Verträglichkeit | 6 | 2 | **12** |\n\n**Schritt 2: Gesamteinstellungswert:**\n$$A_{ij} = 42 + 42 + 36 + 6 + 12 = \\mathbf{138}$$\n\n**(b) Merkmalsanalyse:**\n- **Stärkste Einstellungstreiber:** Geschmack (42) und Herkunft (42) – beide werden von Konsumenten als sehr wahrscheinlich vorhanden ($B = 7$) und sehr wichtig ($a = 6$) eingestuft.\n- **Mittlerer Treiber:** Farbe (36) – wichtig für Kunden und als vorhanden wahrgenommen.\n- **Schwächste Treiber:** Duft (6) und Verträglichkeit (12) – obwohl „Super Blend“ diese Eigenschaften hat ($B = 6$), sind sie den Kunden wenig wichtig ($a = 1$ bzw. $a = 2$).\n\n**(c) Marketingkonsequenzen:**\n- In Werbung und Kommunikation sollten **Geschmack und Herkunft** des Kaffees in den Vordergrund gestellt werden – sie treiben die Einstellung am stärksten.\n- Investitionen in Duft-Kommunikation hätten wenig Wirkung, da Duft den Kunden kaum wichtig ist.\n- Falls ein Wettbewerber einen deutlich höheren Score bei Farbe ($a = 6$, aber z. B. $B = 7$ statt 6) hätte, sollte hier die wahrgenommene Eigenschaft verbessert werden.\n- Markenvergleiche mit Fishbein-Scores ermöglichen es, Positionierungslücken gezielt zu schließen."
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+{
+  "id": "mkt-vl5-customer-relationship-management-crm",
+  "subjectId": "bwl",
+  "title": "VL5 — Customer Relationship Management (CRM)",
+  "summary": "CRM als systematisches Management von Kundenbeziehungen entlang des Kundenlebenszyklus: Kundenanalyse (ABC, RFMR-Scoring, CLV-Kapitalwert), Kundengewinnung (CAC), Kundenbindung, Kundenentwicklung (Up-/Cross-Selling) und Kundentrennung. Rechenlastige Themen: CLV-Kapitalwertformel mit durchgerechneten Beispielen, RFMR-Scoring.",
+  "order": 5,
+  "group": "Marketing",
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "crm-grundlagen",
+      "heading": "Was ist CRM? — Relationship Marketing als Leitidee",
+      "body": "**CRM steht fuer Customer Relationship Management** — zu Deutsch: Kundenbeziehungsmanagement. Synonyme: Beziehungsmarketing, Kundenbindungsmanagement, Customer Relationship Marketing.\n\n**Wozu braucht man CRM?**\nLoyale Kundschaft macht laut AMA 65 % des typischen Umsatzes aus. Stammkunden kaufen mehr, werben andere weiter und sind weniger preissensibel.\n\nSam Walton (Gruender Wal-Mart): There is only one boss. The customer. And he can fire everybody in the company from the chairman on down, simply by spending his money somewhere else.\n\n**Der Kern:** Kundenbeziehungen unterliegen einem **Lebenszyklus** — einem Kreislauf aus Werden und Vergehen. CRM ist die **systematische Analyse und aktive Gestaltung** dieser Entwicklungsphasen. Es umfasst vier Kernphasen: Kundengewinnung, Kundenbindung, Kundenentwicklung, Kundentrennung.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "CRM-Definition (Walsh/Deseniss/Kilian 2020)",
+          "body": "CRM ist die systematische Analyse und Gestaltung der Entwicklungsphasen einer Geschaeftsbeziehung entsprechend der jeweiligen Unternehmensziele. Laengerfristige Beziehungsorientierung gilt heute als konzeptionelle Leitidee des gesamten Marketingkonzepts."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "crm-lebenszyklus",
+          "title": "Der CRM-Kundenlebenszyklus",
+          "caption": "Vier Kernphasen des Kundenbeziehungsmanagements — gestuetzt durch durchgaengige Kundenanalyse.",
+          "code": "graph LR\n  A[Kundengewinnung] --> B[Kundenbindung]\n  B --> C[Kundenentwicklung]\n  C --> D[Kundentrennung]\n  D -->|Rueckgewinnung| A\n  E[Kundenanalyse] -.->|informiert alle Phasen| A\n  E -.-> B\n  E -.-> C\n  E -.-> D"
+        }
+      ]
+    },
+    {
+      "id": "crm-bausteine",
+      "heading": "Die Bausteine eines CRM-Systems",
+      "body": "Ein vollstaendiges CRM-System besteht aus drei Schichten:\n\n**Schicht 1 — Strategie & Strukturen:** Organisationskultur, Beziehungsorientierung, Aufbauorganisation.\n\n**Schicht 2 — Technologie:** Aufbau eines **Customer Intelligence Systems (CIS)** — Kundendatenbank mit Einkaufshistorien und Reaktionsmustern. Darauf aufbauend werden **Data-Mining-Verfahren** eingesetzt, um z.B. abwanderungsgefaehrdete Kunden zu erkennen.\n\n**Schicht 3 — Personal & Prozesse:** Mitarbeiterkompetenzen, Ablaeufe, **Blueprinting** (schriftliches Festhalten von Serviceablaeufen).\n\n**Innerster Kern:** Analyse und Gestaltung des Kundenlebenszyklus.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Analyseverfahren im CRM (Ueberblick)",
+          "body": "- **Kundenkennzahlen** (CAC, Deckungsbeitrag, Amortisation)\n- **Kundenportfolio-Analysen** (4-Felder-Matrix)\n- **ABC-Kundenstruktur-Analysen**\n- **Customer Lifetime Value (CLV)** — der Kapitalwert des Kunden\n- **Cross-Selling-Analysen**\n- **Kundenerfolgsrechnungen**"
+        }
+      ]
+    },
+    {
+      "id": "crm-kundenanalyse",
+      "heading": "Kundenanalyse: Portfolio, ABC und RFMR-Scoring",
+      "body": "### Das Kunden-Portfolio\n\nNicht alle Kunden sind gleich wichtig. Das **Kunden-Portfolio** ordnet Kunden anhand von zwei Achsen ein:\n- **Y-Achse:** Kundenattraktivitaet\n- **X-Achse:** Relative Lieferantenposition\n\n| Typ | Attraktivitaet | Lieferantenposition | Strategie |\n|---|---|---|---|\n| **Star-Kunden** | hoch | stark | Position halten/ausbauen |\n| **Fragezeichen-Kunden** | hoch | schwach | Big Step or Out? |\n| **Ertrags-Kunden** | gering | stark | Position sichern |\n| **Mitnahme-Kunden** | gering | schwach | Selektiver Rueckzug |\n\n### Die ABC-Analyse\n\nDie ABC-Analyse teilt Kunden nach **Umsatz** oder **Deckungsbeitrag** in drei Klassen ein:\n- **A-Kunden:** Wenige Kunden, grosser Umsatzanteil (Pareto-Prinzip: ca. 20 % der Kunden = 80 % des Umsatzes)\n- **B-Kunden:** Mittelwichtig\n- **C-Kunden:** Viele Kunden, kleiner Umsatzanteil\n\n**Achtung:** Grosse A-Kunden verursachen oft hohe Kosten (Rabatte, Sonderleistungen). Auf Basis der **Vollkostenrechnung** sind sie oft weniger rentabel als B-Kunden!\n\n### Die RFMR-Methode\n\nDie RFMR-Methode gewichtet die **Kundenhistorie** nach:\n- **R — Recency:** Datum des letzten Kaufs\n- **F — Frequency:** Kaufhaeufigkeit\n- **M — Monetary Ratio:** Umsatzhoehe\n\nFuer jede Dimension werden Punkte vergeben. Der Gesamtscore zeigt das kuenftige Potenzial des Kunden.",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "rfmr-beispiel",
+          "title": "RFMR-Scoring: Beispiel Schwab Versand GmbH (heute sheego GmbH)",
+          "headers": [
+            "",
+            "Saison -1",
+            "Saison -2",
+            "Saison -3",
+            "Saison -4"
+          ],
+          "rows": [
+            [
+              "Aktivitaet",
+              "X (aktiv)",
+              "X (aktiv)",
+              "- (inaktiv)",
+              "X (aktiv)"
+            ],
+            [
+              "Anzahl Bestellungen",
+              "3",
+              "4",
+              "0",
+              "2"
+            ],
+            [
+              "Gewichtung",
+              "60 %",
+              "20 %",
+              "10 %",
+              "10 %"
+            ],
+            [
+              "Berechnungswert",
+              "6",
+              "2",
+              "1",
+              "1"
+            ],
+            [
+              "Bestellungen x Wert",
+              "3 x 6 = 18",
+              "4 x 2 = 8",
+              "0 x 1 = 0",
+              "2 x 1 = 2"
+            ],
+            [
+              "Saisonpunktwert",
+              "18",
+              "8",
+              "0",
+              "2"
+            ],
+            [
+              "Gesamtscore",
+              "28",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "RFMR-Scoring Schritt fuer Schritt",
+          "body": "Die aktuellste Saison (-1) wird mit 60 % am staerksten gewichtet, weil sie am aussagekraeftigsten ist.\n\n**Berechnungswerte** (Basis 10 Punkte):\n- Saison -1: 60 % → Wert 6 | Saison -2: 20 % → Wert 2 | Saison -3: 10 % → Wert 1 | Saison -4: 10 % → Wert 1\n\n**Saisonpunktwerte** (Bestellungen x Berechnungswert):\n- Saison -1: 3 x 6 = **18** | Saison -2: 4 x 2 = **8** | Saison -3: 0 x 1 = **0** | Saison -4: 2 x 1 = **2**\n\n**Gesamtscore = 18 + 8 + 0 + 2 = 28**"
+        }
+      ]
+    },
+    {
+      "id": "crm-clv",
+      "heading": "Customer Lifetime Value (CLV) — Der Kundenwert als Kapitalwert",
+      "body": "### Was ist der CLV?\n\nDer **Customer Lifetime Value (CLV)** beantwortet: Wie viel ist mir ein Kunde ueber die gesamte Beziehungsdauer wert?\n\nDie Grundidee: Ein Kunde ist wie eine **Investition**. Man investiert in seine Gewinnung und hofft auf zukuenftige Einzahlungsueberschuesse. Da ein Euro heute mehr wert ist als ein Euro in der Zukunft (Zeitwert des Geldes), werden zukuenftige Zahlungen **diskontiert** (abgezinst).\n\n### Die CLV-Formel\n\n$$\\text{CLV} = -I_0 + \\sum_{t=1}^{T} \\frac{x_t \\cdot (p - k) - A_t}{(1 + r)^t}$$\n\n**Variablen:** $-I_0$ = Akquisitionskosten (negativ!), $x_t$ = Absatzmenge in Periode $t$, $p$ = Stueckpreis, $k$ = Stueckkosten, $A_t$ = kundenbedingte Auszahlungen in Periode $t$, $r$ = Zinssatz, $(1+r)^t$ = Abzinsungsfaktor.\n\n**Als Kapitalwertformel:**\n$$K = (E_0 - A_0) + \\sum_{t=1}^{n} \\frac{E_t - A_t}{(1+i)^t}$$\n\n### Beispiel: Kunde 1 vs. Kunde 2 (Zinssatz 8 %)\n\nBeide Kunden haben Akquisitionskosten -100 € (T=0). Zahlungsstroeme ueber 6 Jahre — welcher ist attraktiver?",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "clv-zahlungsstroeme",
+          "title": "Zahlungsstroeme Kunde 1 und Kunde 2 (in EUR)",
+          "headers": [
+            "",
+            "T=0",
+            "T=1",
+            "T=2",
+            "T=3",
+            "T=4",
+            "T=5",
+            "T=6"
+          ],
+          "rows": [
+            [
+              "Kunde 1",
+              "-100",
+              "+5.000",
+              "+9.000",
+              "+2.100",
+              "+6.300",
+              "0",
+              "+350"
+            ],
+            [
+              "Kunde 2",
+              "-100",
+              "+7.000",
+              "+5.300",
+              "+4.100",
+              "+5.000",
+              "+1.200",
+              "+300"
+            ]
+          ]
+        },
+        {
+          "kind": "table",
+          "id": "clv-barwerte",
+          "title": "CLV-Berechnung: Barwerte (Zinssatz 8 %)",
+          "headers": [
+            "Periode t",
+            "Faktor (1,08)^t",
+            "Cashflow K1",
+            "Barwert K1",
+            "Cashflow K2",
+            "Barwert K2"
+          ],
+          "rows": [
+            [
+              "0",
+              "1,0000",
+              "-100",
+              "-100,00",
+              "-100",
+              "-100,00"
+            ],
+            [
+              "1",
+              "1,0800",
+              "+5.000",
+              "+4.629,63",
+              "+7.000",
+              "+6.481,48"
+            ],
+            [
+              "2",
+              "1,1664",
+              "+9.000",
+              "+7.716,05",
+              "+5.300",
+              "+4.545,78"
+            ],
+            [
+              "3",
+              "1,2597",
+              "+2.100",
+              "+1.667,06",
+              "+4.100",
+              "+3.254,74"
+            ],
+            [
+              "4",
+              "1,3605",
+              "+6.300",
+              "+4.630,65",
+              "+5.000",
+              "+3.674,72"
+            ],
+            [
+              "5",
+              "1,4693",
+              "0",
+              "0,00",
+              "+1.200",
+              "+816,71"
+            ],
+            [
+              "6",
+              "1,5869",
+              "+350",
+              "+220,56",
+              "+300",
+              "+189,05"
+            ],
+            [
+              "CLV",
+              "",
+              "",
+              "ca. 18.764 EUR",
+              "",
+              "ca. 18.862 EUR"
+            ]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Rechenweg CLV Kunde 1 (i = 8 %)",
+          "body": "$$\\text{CLV}_1 = -100 + \\frac{5.000}{1{,}08} + \\frac{9.000}{1{,}1664} + \\frac{2.100}{1{,}2597} + \\frac{6.300}{1{,}3605} + \\frac{0}{1{,}4693} + \\frac{350}{1{,}5869}$$\n$$= -100 + 4.629{,}63 + 7.716{,}05 + 1.667{,}06 + 4.630{,}65 + 0 + 220{,}56 = \\mathbf{18.764\\text{ EUR}}$$\n\n**Ergebnis:** CLV Kunde 2 (18.862 EUR) > CLV Kunde 1 (18.764 EUR). Kunde 2 ist knapp attraktiver, weil er in T=1 bereits 7.000 EUR zahlt (vs. 5.000 EUR). Fruehere Zahlungen sind wertvoller!"
+        },
+        {
+          "kind": "warning",
+          "title": "Bewertung der CLV-Methode",
+          "body": "**Vorteile:** Mathematisch korrekte Wertermittlung; einfach anzuwenden; beruecksichtigt Zeitwert des Geldes.\n\n**Nachteile:** Zahlungsdaten sind zukunftsbezogen (subjektive Schaetzungen!); Zinssatz ist subjektiv; qualitative Effekte (Empfehlungspotenzial) werden nicht erfasst.\n\n**Empfehlung:** Keine voreilige Trennung von Kunden mit negativem CLV!"
+        }
+      ]
+    },
+    {
+      "id": "crm-clv-alternativ",
+      "heading": "Alternativer CLV-Ansatz: Abgezinster Gewinn mit Kundenbindungsrate",
+      "body": "Dieser Ansatz berechnet den CLV **je Kunden** (pro Kopf) ueber mehrere Jahre, unter Beruecksichtigung von Kundenbindungsraten und einer **Abzinsungsrate mit Risikofaktor**.\n\n**Abzinsungsrate:**\n$$\\text{AR} = (1 + i \\cdot r_f)^n$$\n\n- $i$ = Zinssatz (z.B. 0,08)\n- $r_f$ = Risikofaktor (drueckt Zahlungsausfallrisiko aus; z.B. 2)\n- $n$ = Jahre seit Betrachtungsbeginn\n\n**Beispiel:** $i = 8\\,\\%$, $r_f = 2$, Jahr 3 ($n = 2$):\n$$\\text{AR} = (1 + 0{,}08 \\times 2)^2 = (1{,}16)^2 = 1{,}3456 \\approx 1{,}35$$",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "clv-alternativ-tabelle",
+          "title": "CLV ueber abgezinsten Gewinn (Zinssatz 8 %, Risikofaktor 2)",
+          "headers": [
+            "Kennzahl",
+            "Gewinnungsjahr",
+            "2. Jahr",
+            "3. Jahr"
+          ],
+          "rows": [
+            [
+              "Kunden",
+              "100.000",
+              "60.000",
+              "42.000"
+            ],
+            [
+              "Kundenbindungsrate",
+              "—",
+              "60 %",
+              "70 %"
+            ],
+            [
+              "Auftraege pro Jahr",
+              "1,8",
+              "2,5",
+              "3,0"
+            ],
+            [
+              "Auftragsgroesse",
+              "90 EUR",
+              "95 EUR",
+              "100 EUR"
+            ],
+            [
+              "Gesamtumsatz",
+              "16.200.000 EUR",
+              "14.250.000 EUR",
+              "12.600.000 EUR"
+            ],
+            [
+              "Kosten (% Umsatz)",
+              "70 %",
+              "65 %",
+              "65 %"
+            ],
+            [
+              "Marketingkosten je KD",
+              "55 EUR",
+              "20 EUR",
+              "20 EUR"
+            ],
+            [
+              "Gesamtkosten",
+              "16.840.000 EUR",
+              "10.462.500 EUR",
+              "9.030.000 EUR"
+            ],
+            [
+              "Gesamtgewinn",
+              "(640.000) EUR",
+              "3.787.500 EUR",
+              "3.570.000 EUR"
+            ],
+            [
+              "Abzinsungsrate AR",
+              "1",
+              "1,16",
+              "1,35"
+            ],
+            [
+              "Netto-Kundenwert (Barwert)",
+              "(640.000) EUR",
+              "3.265.086 EUR",
+              "2.644.444 EUR"
+            ],
+            [
+              "Kumulativer NPV",
+              "(640.000) EUR",
+              "2.625.086 EUR",
+              "5.269.530 EUR"
+            ],
+            [
+              "CLV je Kunde",
+              "(6 EUR)",
+              "26 EUR",
+              "53 EUR"
+            ]
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Interpretation der CLV-Tabelle",
+          "body": "Im **Gewinnungsjahr** CLV = -6 EUR: Die hohen Akquisitionskosten (55 EUR je Kunde) uebersteigen den Gewinn.\n\nIm **2. Jahr** CLV = 26 EUR: Kundenbindungsrate 60 %, mehr Auftraege, groessere Auftraege.\n\nIm **3. Jahr** CLV = 53 EUR: Bindungsrate 70 %, noch hoehere Kauffrequenz.\n\n**Fazit:** Die Akquisitionsinvestition amortisiert sich. Treue Kunden werden immer wertvoller."
+        }
+      ]
+    },
+    {
+      "id": "crm-bindung-entwicklung",
+      "heading": "Kundenbindung, Kundenentwicklung und Kundentrennung",
+      "body": "### Kundenbindung — Warum Stammkunden wertvoll sind\n\nNach Reichheld/Sasser (1990) wachsen folgende **Gewinnquellen** mit der Beziehungsdauer:\n1. **Basisgewinn** — regulaerer Deckungsbeitrag\n2. **Cross-Selling** — Stammkunden kaufen mehr Produkte\n3. **Empfehlungen** — kostenlose Neukundengewinnung durch zufriedene Kunden\n4. **Kostenersparnis** — routinierte Kunden brauchen weniger Betreuung\n5. **Preispraemie** — loyale Kunden sind weniger preissensibel\n\n**Kundenbindungsinstrumente:** Loyalitaetsprogramme (Payback), Apps (Rossmann), Kundenclubs (Maggi, Dr. Oetker), Beschwerdemanagement, Newsletter, Events.\n\n### Kundenentwicklung — Up-Selling und Cross-Selling\n\n**Up-Selling:** Kunden zu hoeherwertigem Produkt bewegen (z.B. Standard- → Gold-Kreditkarte).\n\n**Cross-Selling:** Zusaetzliche Produkte verkaufen, die der Kunde bisher nicht beim Unternehmen hatte (z.B. Versicherung an Kreditkarteninhaber).\n\n**Zukaufmatrix (Banken-Beispiel):**\n- Girokonto → Kreditkarte: 23,9 %\n- Girokonto → Fonds: 18,1 %\n- Bausparvertrag → Hypothek: 27,6 %\n- Typischer Kaufpfad: Kreditkarte → Girokonto → Fonds → Bausparvertrag\n\n### Kundentrennung — Customer Divestment\n\nVor der Trennung: Neubewertung → Schulung/Information → Neuverhandlung → Migration auf niedrigeres Serviceniveau.\n\n**Kuendenrueckgewinnung:** Abschlussquote bei ehemaligen Kunden oft hoeher als im Neugeschaeft; geringere Kosten; zurueckgewonnene Kunden oft loyaler.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Share of Wallet (SoW)",
+          "body": "**Share of Wallet** = Anteil am Einkaufsbudget des Kunden, den das eigene Unternehmen erhaelt. Ziel von Kundenentwicklung: diesen Anteil durch Cross-Selling vergroessern."
+        }
+      ]
+    },
+    {
+      "id": "crm-gewinnung",
+      "heading": "Kundengewinnung: CAC und Kundenkennzahlen",
+      "body": "### Customer Acquisition Cost (CAC)\n\nDie **CAC** umfassen alle Marketing- und Vertriebsausgaben zur Gewinnung eines Neukunden:\n\n$$\\text{CAC} = \\frac{\\text{Gesamtkosten Marketing} + \\text{Vertriebskosten}}{\\text{Anzahl Neukunden}}$$\n\n**Beispiel:** 300.000 EUR Marketing + 150.000 EUR Vertrieb, 900 Neukunden:\n$$\\text{CAC} = \\frac{450.000}{900} = 500 \\text{ EUR pro Neukunde}$$\n\nNur wenn CLV > CAC, lohnt sich die Akquisition.\n\n### Weitere Kennzahlen",
+      "figures": [
+        {
+          "kind": "table",
+          "id": "kundenkennzahlen",
+          "title": "Kundenkennzahlen in der Gewinnungsphase",
+          "headers": [
+            "Ebene",
+            "Kennzahl",
+            "Bedeutung"
+          ],
+          "rows": [
+            [
+              "Einzelkunde",
+              "CAC",
+              "Kosten pro gewonnenem Neukunden"
+            ],
+            [
+              "Einzelkunde",
+              "Akquisedauer",
+              "Zeit vom Erstkontakt bis Abschluss"
+            ],
+            [
+              "Einzelkunde",
+              "Amortisationsdauer",
+              "Break-Even: Wann sind CAC gedeckt?"
+            ],
+            [
+              "Gesamtbestand",
+              "Neukundenanteil",
+              "Anteil neuer Kunden am Gesamtbestand"
+            ],
+            [
+              "Gesamtbestand",
+              "Angebotserfolgsquote",
+              "Anteil erfolgreicher Angebote"
+            ],
+            [
+              "Gesamtbestand",
+              "Besuchseffizienz",
+              "Anteil der Besuche mit Abschluss"
+            ],
+            [
+              "Gesamtbestand",
+              "Kanalquote",
+              "Neukundenanteil online vs. offline"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl5-fc-1",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was bedeutet das Akronym RFMR?",
+      "back": "**R**ecency (letztes Kaufdatum), **F**requency (Kaufhaeufigkeit), **M**onetary **R**atio (Umsatzhoehe/-kennziffer). Die RFMR-Methode bewertet Kunden durch gewichtete Punkte auf Basis dieser drei Dimensionen."
+    },
+    {
+      "id": "mkt-vl5-fc-2",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Wie lautet die CLV-Formel (Kapitalwertansatz)?",
+      "back": "$$\\text{CLV} = -I_0 + \\sum_{t=1}^{T} \\frac{x_t \\cdot (p-k) - A_t}{(1+r)^t}$$\n$I_0$ = Akquisitionskosten, $x_t$ = Absatzmenge, $p$ = Stueckpreis, $k$ = Stueckkosten, $A_t$ = Auszahlungen Periode t, $r$ = Zinssatz."
+    },
+    {
+      "id": "mkt-vl5-fc-3",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Wozu dient die Abzinsungsrate AR = (1 + i x rf)^n?",
+      "back": "Sie diskontiert kuenftige Gewinne unter Beruecksichtigung eines **Risikofaktors** $r_f$ (Zahlungsausfallrisiko). AR = $(1 + i \\cdot r_f)^n$; bei $i=8\\,\\%$, $r_f=2$, $n=2$: AR = $(1{,}16)^2 = 1{,}35$."
+    },
+    {
+      "id": "mkt-vl5-fc-4",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was ist der Unterschied zwischen Up-Selling und Cross-Selling?",
+      "back": "**Up-Selling:** Kunde wird zu hoeherwertigem Produkt gebracht (z.B. Standard- → Gold-Kreditkarte). **Cross-Selling:** Kunde erhaelt zusaetzliche neue Produkte (z.B. Versicherung an Kreditkarteninhaber)."
+    },
+    {
+      "id": "mkt-vl5-fc-5",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was sind die vier Kundentypen im Kunden-Portfolio?",
+      "back": "**Star-Kunden** (hoch/stark → halten/ausbauen), **Fragezeichen-Kunden** (hoch/schwach → Big Step or Out?), **Ertrags-Kunden** (gering/stark → sichern), **Mitnahme-Kunden** (gering/schwach → selektiver Rueckzug)."
+    },
+    {
+      "id": "mkt-vl5-fc-6",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was ist CAC und wie wird er berechnet?",
+      "back": "**Customer Acquisition Cost** = Kosten der Kundengewinnung.\n$$\\text{CAC} = \\frac{\\text{Gesamtkosten Marketing} + \\text{Vertriebskosten}}{\\text{Anzahl Neukunden}}$$"
+    },
+    {
+      "id": "mkt-vl5-fc-7",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Welche fuenf Gewinnquellen wachsen mit zunehmender Kundenbindungsdauer (Reichheld/Sasser)?",
+      "back": "1. Basisgewinn, 2. Cross-Selling, 3. Empfehlungen, 4. Kostenersparnis, 5. Preispraemie. Dazu anfaengliche Akquisitionskosten (negativ)."
+    },
+    {
+      "id": "mkt-vl5-fc-8",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Warum ist der CLV im Gewinnungsjahr oft negativ?",
+      "back": "Weil die hohen **Akquisitionskosten** (CAC) im ersten Jahr anfallen und der Deckungsbeitrag aus dem noch geringen Geschaeftsvolumen nicht ausreicht. Der CLV amortisiert sich erst in den Folgejahren."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl5-q1",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "leicht",
+      "prompt": "Was bedeutet das R in RFMR?",
+      "options": [
+        "Rentabilitaet des Kunden",
+        "Recency — Datum des letzten Kaufs",
+        "Rate der Kundenbindung",
+        "Reichweite der Marketingmassnahme"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "R steht fuer Recency = letztes Kaufdatum. Je aktueller der letzte Kauf, desto mehr Punkte erhaelt der Kunde."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl5-q2",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "leicht",
+      "prompt": "Beim CLV werden zukuenftige Zahlungen abgezinst, weil ein Euro heute mehr wert ist als ein Euro in der Zukunft.",
+      "answer": true,
+      "explanation": "Richtig. Das ist der Zeitwert des Geldes. Zukuenftige Zahlungen werden mit $(1+r)^t$ diskontiert."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl5-q3",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "mittel",
+      "prompt": "RFMR-Scoring: Ein Kunde hat in den letzten 4 Saisons folgende Bestellungen: Saison -1: 2, Saison -2: 5, Saison -3: 0, Saison -4: 1. Die Berechnungswerte sind: 6, 2, 1, 1. Wie lautet der RFMR-Gesamtscore?",
+      "answer": 23,
+      "tolerance": 0,
+      "unit": "Punkte",
+      "explanation": "Saisonpunktwerte: 2x6=12; 5x2=10; 0x1=0; 1x1=1. Gesamtscore = 12+10+0+1 = 23."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl5-q4",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "mittel",
+      "prompt": "CLV-Berechnung (2 Perioden): Akquisitionskosten 100 EUR (T=0), Zahlungsueberschuss T=1: 5.000 EUR, T=2: 9.000 EUR. Zinssatz 8 %. Wie gross ist der CLV (gerundet auf ganze EUR)?",
+      "answer": 12246,
+      "tolerance": 2,
+      "unit": "EUR",
+      "explanation": "CLV = -100 + 5000/1,08 + 9000/1,1664 = -100 + 4629,63 + 7716,05 = 12.245,68 ≈ 12.246 EUR."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl5-q5",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "schwer",
+      "prompt": "CLV Kunde 2 (vollstaendig): Zahlungen -100, +7.000, +5.300, +4.100, +5.000, +1.200, +300 (T=0 bis T=6), Zinssatz 8 %. Wie gross ist der CLV (gerundet auf ganze EUR)?",
+      "answer": 18862,
+      "tolerance": 5,
+      "unit": "EUR",
+      "explanation": "CLV = -100 + 7000/1,08 + 5300/1,1664 + 4100/1,2597 + 5000/1,3605 + 1200/1,4693 + 300/1,5869 = -100 + 6481,48 + 4545,78 + 3254,74 + 3674,72 + 816,71 + 189,05 = 18.862 EUR."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl5-q6",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "mittel",
+      "prompt": "CAC-Berechnung: Ein Unternehmen gibt 300.000 EUR fuer Marketing und 150.000 EUR fuer Vertrieb aus und gewinnt 900 Neukunden. Wie hoch ist der CAC je Neukunde?",
+      "answer": 500,
+      "tolerance": 0,
+      "unit": "EUR",
+      "explanation": "CAC = (300.000 + 150.000) / 900 = 450.000 / 900 = 500 EUR pro Neukunde."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl5-q7",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "leicht",
+      "prompt": "Welche Strategie wird fuer Star-Kunden im Kunden-Portfolio empfohlen?",
+      "options": [
+        "Selektiver Rueckzug",
+        "Position halten/ausbauen",
+        "Big Step or Out",
+        "Position sichern"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Star-Kunden: hohe Attraktivitaet UND starke Lieferantenposition → Position halten und ausbauen."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl5-q8",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "mittel",
+      "prompt": "Welche Aussagen zur ABC-Analyse treffen zu? (Mehrfachauswahl)",
+      "options": [
+        "A-Kunden machen oft kleinen Anteil der Kundenzahl, aber grossen Umsatzanteil aus",
+        "Klassifizierung nach Umsatz ODER Deckungsbeitrag moeglich",
+        "A-Kunden sind auf Basis Vollkosten immer die rentabelsten Kunden",
+        "Die ABC-Analyse beruht auf dem Pareto-Prinzip (80/20-Regel)"
+      ],
+      "correct": [
+        0,
+        1,
+        3
+      ],
+      "multiple": true,
+      "explanation": "Option 3 ist falsch: Grosse A-Kunden verursachen oft hohe Kosten, daher auf Vollkostenbasis oft weniger rentabel als B-Kunden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl5-q9",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "mittel",
+      "prompt": "Im alternativen CLV-Ansatz: AR = (1 + i x rf)^n. Bei Zinssatz 8 % und Risikofaktor 2 betraegt AR fuer das 3. Betrachtungsjahr (n=2) genau 1,35.",
+      "answer": true,
+      "explanation": "AR = (1 + 0,08 x 2)^2 = (1,16)^2 = 1,3456 ≈ 1,35. Richtig!"
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl5-q10",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "mittel",
+      "prompt": "Erklaere in eigenen Worten, warum Kundenbindung wirtschaftlich sinnvoll ist. Nenne mindestens drei Gruende.",
+      "sampleAnswer": "Kundenbindung ist wirtschaftlich sinnvoll, weil (1) der Basisgewinn mit der Beziehungsdauer steigt, (2) Cross-Selling-Potenziale zunehmen, (3) zufriedene Stammkunden neue Kunden kostenlos empfehlen, (4) Stammkunden weniger Betreuungsaufwand erfordern (Kostenersparnis) und (5) loyale Kunden weniger preissensibel sind (Preispraemie).",
+      "keywords": [
+        "basisgewinn",
+        "cross-selling",
+        "empfehlungen",
+        "kostenersparnis",
+        "preispraemie",
+        "loyalitaet"
+      ],
+      "explanation": "Alle fuenf Gewinnquellen nach Reichheld/Sasser (1990): Basisgewinn, Cross-Selling, Empfehlungen, Kostenersparnis, Preispraemie."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl5-q11",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "leicht",
+      "prompt": "Was bezeichnet Cross-Selling?",
+      "options": [
+        "Kunden von einem guenstigeren auf ein teureres Produkt upgraden",
+        "Kunden zusaetzliche Produkte verkaufen, die sie bisher nicht beim Unternehmen gekauft haben",
+        "Kunden aus einem anderen Marktsegment gewinnen",
+        "Analyse von Kundenwechseln zwischen Wettbewerbern"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Cross-Selling = Hinzuverkauf weiterer Produkte. Beispiel: An Kreditkarteninhaber werden zusaetzlich Versicherungen verkauft. Up-Selling waere der Wechsel auf eine hoeherwertige Kreditkarte."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl5-q12",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "difficulty": "schwer",
+      "prompt": "Im RFMR-Beispiel Schwab Versand (Saison -1: 3 Bestellungen/Wert 6; Saison -2: 4/Wert 2; Saison -3: 0/Wert 1; Saison -4: 2/Wert 1) betraegt der Gesamtscore 28.",
+      "answer": true,
+      "explanation": "Saisonpunktwerte: 3x6=18, 4x2=8, 0x1=0, 2x1=2. Summe = 18+8+0+2 = 28. Richtig!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl5-ex-1",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "label": "VL5, Folie 18-19: RFMR-Methode (Schwab Versand)",
+      "source": "PoM__VL_5_CRM_WebCT.pdf, Folie 18-19",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Die Schwab Versand GmbH (heute sheego GmbH) nutzt die RFMR-Methode zur Kundenbewertung. Berechnen Sie den RFMR-Gesamtscore fuer einen Kunden:\n\n| Saison | Aktivitaet | Anzahl Bestellungen | Gewichtung |\n|--------|-----------|--------------------|-----------|\n| -1 (aktuellste) | X (aktiv) | 3 | 60 % |\n| -2 | X (aktiv) | 4 | 20 % |\n| -3 | - (inaktiv) | 0 | 10 % |\n| -4 (aelteste) | X (aktiv) | 2 | 10 % |\n\nZeigen Sie alle Zwischenschritte.",
+      "hint": "Schritt 1: Berechnungswerte aus Gewichtungen (Basis 10 Punkte). Schritt 2: Saisonpunktwert = Bestellungen x Berechnungswert. Schritt 3: Summe aller Saisonpunktwerte.",
+      "solution": "**Schritt 1: Berechnungswerte**\n- Saison -1: 60 % → Wert 6\n- Saison -2: 20 % → Wert 2\n- Saison -3: 10 % → Wert 1\n- Saison -4: 10 % → Wert 1\n\n**Schritt 2: Saisonpunktwerte** (Bestellungen x Berechnungswert)\n\n| Saison | Bestellungen | x Wert | = Saisonpunktwert |\n|--------|-------------|--------|-------------------|\n| -1 | 3 | x 6 | = 18 |\n| -2 | 4 | x 2 | = 8 |\n| -3 | 0 | x 1 | = 0 |\n| -4 | 2 | x 1 | = 2 |\n\n**Schritt 3: Gesamtscore**\n$$\\text{Gesamtscore} = 18 + 8 + 0 + 2 = \\mathbf{28}$$\n\n**Interpretation:** Score 28 zeigt aktiven Kunden mit gutem Potenzial. Die Inaktivitaet in Saison -3 faellt kaum ins Gewicht (10 % Gewichtung). Die juengste Saison (-1) dominiert mit 60 %."
+    },
+    {
+      "id": "mkt-vl5-ex-2",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "label": "VL5, Folie 20-23: Customer Lifetime Value-Analyse (Kapitalwert)",
+      "source": "PoM__VL_5_CRM_WebCT.pdf, Folie 20-23",
+      "type": "beispiel",
+      "difficulty": "schwer",
+      "hasOfficialSolution": true,
+      "prompt": "Berechnen Sie den CLV fuer Kunde 1 und Kunde 2 bei Zinssatz 8 % und Akquisitionskosten 100 EUR (T=0). Welcher Kunde ist attraktiver?\n\n| | T=0 | T=1 | T=2 | T=3 | T=4 | T=5 | T=6 |\n|---|---|---|---|---|---|---|---|\n| Kunde 1 | -100 | +5.000 | +9.000 | +2.100 | +6.300 | 0 | +350 |\n| Kunde 2 | -100 | +7.000 | +5.300 | +4.100 | +5.000 | +1.200 | +300 |",
+      "hint": "Abzinsungsfaktoren: $(1{,}08)^1=1{,}08$; $(1{,}08)^2=1{,}1664$; $(1{,}08)^3=1{,}2597$; $(1{,}08)^4=1{,}3605$; $(1{,}08)^5=1{,}4693$; $(1{,}08)^6=1{,}5869$.",
+      "solution": "**Formel:** $\\text{CLV} = -I_0 + \\sum_{t=1}^{6} \\frac{\\text{Cashflow}_t}{(1{,}08)^t}$\n\n**CLV Kunde 1:**\n$$\\text{CLV}_1 = -100 + \\frac{5.000}{1{,}08} + \\frac{9.000}{1{,}1664} + \\frac{2.100}{1{,}2597} + \\frac{6.300}{1{,}3605} + \\frac{0}{1{,}4693} + \\frac{350}{1{,}5869}$$\n$$= -100 + 4.629{,}63 + 7.716{,}05 + 1.667{,}06 + 4.630{,}65 + 0 + 220{,}56 = \\mathbf{18.764\\text{ EUR}}$$\n\n**CLV Kunde 2:**\n$$\\text{CLV}_2 = -100 + \\frac{7.000}{1{,}08} + \\frac{5.300}{1{,}1664} + \\frac{4.100}{1{,}2597} + \\frac{5.000}{1{,}3605} + \\frac{1.200}{1{,}4693} + \\frac{300}{1{,}5869}$$\n$$= -100 + 6.481{,}48 + 4.545{,}78 + 3.254{,}74 + 3.674{,}72 + 816{,}71 + 189{,}05 = \\mathbf{18.862\\text{ EUR}}$$\n\n**Ergebnis:** Kunde 2 ist attraktiver (18.862 EUR > 18.764 EUR), weil er in T=1 bereits 7.000 EUR zahlt statt 5.000 EUR. Fruehere Zahlungen werden weniger stark abgezinst und sind daher wertvoller."
+    },
+    {
+      "id": "mkt-vl5-ex-3",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "label": "VL5, Folie 25-26: CLV ueber abgezinsten Gewinn (alternativer Ansatz)",
+      "source": "PoM__VL_5_CRM_WebCT.pdf, Folie 25-26",
+      "type": "beispiel",
+      "difficulty": "schwer",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Unternehmen startet mit 100.000 Neukunden. Gegeben:\n\n| | Gewinnungsjahr | 2. Jahr | 3. Jahr |\n|---|---|---|---|\n| Kunden | 100.000 | 60.000 | 42.000 |\n| Auftraege/Jahr | 1,8 | 2,5 | 3,0 |\n| Auftragsgroesse | 90 EUR | 95 EUR | 100 EUR |\n| Kosten (% Umsatz) | 70 % | 65 % | 65 % |\n| Marketingkosten/KD | 55 EUR | 20 EUR | 20 EUR |\n\nBerechnen Sie Gesamtumsatz, Gesamtkosten, Gesamtgewinn und CLV je Kunde. Abzinsungsrate: AR = (1 + 0,08 x 2)^n.",
+      "hint": "Gesamtumsatz = Kunden x Auftraege/Jahr x Auftragsgroesse. Gesamtkosten = Umsatz x Kostenprozent + Kunden x Marketingkosten. CLV = kumulativer Barwert-Gewinn / 100.000.",
+      "solution": "**Schritt 1: Gesamtumsatz**\n- Gewinnungsjahr: 100.000 x 1,8 x 90 = **16.200.000 EUR**\n- 2. Jahr: 60.000 x 2,5 x 95 = **14.250.000 EUR**\n- 3. Jahr: 42.000 x 3,0 x 100 = **12.600.000 EUR**\n\n**Schritt 2: Verkaufsbezogene Kosten**\n- Gewinnungsjahr: 16.200.000 x 70 % = **11.340.000 EUR**\n- 2. Jahr: 14.250.000 x 65 % = **9.262.500 EUR**\n- 3. Jahr: 12.600.000 x 65 % = **8.190.000 EUR**\n\n**Schritt 3: Marketingkosten gesamt**\n- Gewinnungsjahr: 100.000 x 55 = **5.500.000 EUR**\n- 2. Jahr: 60.000 x 20 = **1.200.000 EUR**\n- 3. Jahr: 42.000 x 20 = **840.000 EUR**\n\n**Schritt 4: Gesamtkosten** (Verkauf + Marketing)\n- Gewinnungsjahr: 11.340.000 + 5.500.000 = **16.840.000 EUR**\n- 2. Jahr: 9.262.500 + 1.200.000 = **10.462.500 EUR**\n- 3. Jahr: 8.190.000 + 840.000 = **9.030.000 EUR**\n\n**Schritt 5: Gesamtgewinn**\n- Gewinnungsjahr: 16.200.000 - 16.840.000 = **-640.000 EUR**\n- 2. Jahr: 14.250.000 - 10.462.500 = **3.787.500 EUR**\n- 3. Jahr: 12.600.000 - 9.030.000 = **3.570.000 EUR**\n\n**Schritt 6: Abzinsungsrate AR = (1,16)^n**\n- n=0: AR = 1 | n=1: AR = 1,16 | n=2: AR = $(1{,}16)^2 = 1{,}35$\n\n**Schritt 7: Netto-Kundenwert (Barwert)**\n- Gewinnungsjahr: -640.000 / 1 = **-640.000 EUR**\n- 2. Jahr: 3.787.500 / 1,16 = **3.265.086 EUR**\n- 3. Jahr: 3.570.000 / 1,35 = **2.644.444 EUR**\n\n**Schritt 8: CLV je Kunde** (kumulativer NPV / 100.000)\n- Nach Gewinnungsjahr: -640.000 / 100.000 = **-6 EUR**\n- Nach 2. Jahr: (-640.000 + 3.265.086) / 100.000 = **26 EUR**\n- Nach 3. Jahr: (-640.000 + 3.265.086 + 2.644.444) / 100.000 = **53 EUR**\n\n**Interpretation:** Im Gewinnungsjahr CLV negativ (-6 EUR) wegen hoher Akquisitionskosten. Nach 2 Jahren amortisiert (CLV = 26 EUR), nach 3 Jahren 53 EUR je Ausgangskunde."
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "id": "exp-log-zins",
+  "subjectId": "mathe-2",
+  "title": "Exponentialfunktion, Logarithmus und Zinsrechnung",
+  "summary": "Euler-Zahl e als Grenzwert, Exponentialfunktion und Logarithmus mit allen Rechenregeln, grafische Darstellung. Zinsrechnung: einfache, jährliche, unterjährige und stetige Verzinsung mit vollständiger Herleitung. Verdopplungs- und Verdreifachungszeit, Sparvertrag als geometrische Reihe, Barwert und optimaler Verkaufszeitpunkt – alles mit durchgerechneten ökonomischen Beispielen.",
+  "order": 9,
+  "estMinutes": 50,
+  "sections": [
+    {
+      "id": "euler-exp",
+      "heading": "Die Euler-Zahl e und die Exponentialfunktion",
+      "body": "## Was ist e?\n\nStell dir vor, du legst **1 Euro** zu **100 % Jahreszins** an. Mit jährlicher Gutschrift hast du nach einem Jahr $1 \\cdot (1+1)^1 = 2$ Euro. Was passiert, wenn die Bank den Zins häufiger gutschreibt?\n\n| Gutschriften pro Jahr $n$ | Endkapital $(1 + 1/n)^n$ |\n|---|---|\n| 1 | 2{,}000 |\n| 12 | 2{,}613 |\n| 365 | 2{,}7146 |\n| 1 000 000 | 2{,}71828… |\n\nDer Grenzwert dieses Prozesses heißt **Euler-Zahl**:\n$$e := \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 2{,}718281828\\ldots$$\n\nAllgemeiner gilt für beliebigen Zinssatz $r$:\n$$\\lim_{n \\to \\infty} \\left(1 + \\frac{r}{n}\\right)^n = e^r$$\n\n## Die Exponentialfunktion\n\nDie **Exponentialfunktion** $f(x) = e^x$ (auch $\\exp(x)$ geschrieben) ordnet jeder Zahl $x$ den Wert $e^x$ zu.\n\n**Wichtige Eigenschaften:**\n- Immer positiv: $e^x > 0$ für alle $x \\in \\mathbb{R}$\n- $e^0 = 1$ (der Graph geht durch $(0,1)$)\n- Für $x > 0$: Funktion wächst, für $x < 0$: Funktion fällt\n- Wächst schneller als jedes Polynom\n\n**Rechenregeln:**\n$$e^a \\cdot e^b = e^{a+b}, \\qquad \\frac{e^a}{e^b} = e^{a-b}, \\qquad (e^a)^b = e^{a \\cdot b}$$\n$$e^{-x} = \\frac{1}{e^x}, \\qquad e^0 = 1$$\n\n**Ableitung:** Die Exponentialfunktion ist ihre eigene Ableitung:\n$$\\frac{d}{dx} e^x = e^x, \\qquad \\frac{d}{dx} e^{kx} = k \\cdot e^{kx}$$",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "fig-exp",
+          "title": "Exponentialfunktion und ihre Varianten",
+          "caption": "e^x wächst exponentiell; e^{-x} fällt; beide schneiden die y-Achse bei 1.",
+          "functions": [
+            { "fn": "exp(x)", "label": "e^x", "color": "#2563eb" },
+            { "fn": "exp(-x)", "label": "e^{-x}", "color": "#dc2626", "dashed": true },
+            { "fn": "1", "label": "y = 1 (Referenz)", "color": "#6b7280", "dashed": true }
+          ],
+          "domain": [-3, 3],
+          "range": [0, 8],
+          "points": [{ "x": 0, "y": 1, "label": "e^0 = 1" }]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Euler-Zahl im Kopf behalten",
+          "body": "$e \\approx 2{,}718$. Wichtige Werte: $e^1 \\approx 2{,}718$, $e^2 \\approx 7{,}389$, $e^{0{,}5} \\approx 1{,}649$, $e^{-1} \\approx 0{,}368$."
+        }
+      ]
+    },
+    {
+      "id": "logarithmus",
+      "heading": "Der natürliche Logarithmus",
+      "body": "## Was ist der Logarithmus?\n\nDer **natürliche Logarithmus** $\\ln(x)$ ist die Umkehrfunktion der Exponentialfunktion. Die Frage lautet: \"Zu welcher Zahl $y$ muss ich $e$ potenzieren, um $x$ zu erhalten?\"\n\n$$\\ln(x) = y \\iff e^y = x$$\n\n**Beispiele:**\n- $\\ln(1) = 0$, denn $e^0 = 1$\n- $\\ln(e) = 1$, denn $e^1 = e$\n- $\\ln(e^2) = 2$\n- $\\ln(0{,}5) \\approx -0{,}693$ (negativ, weil $0{,}5 < 1$)\n\n**Definitionsbereich:** $\\ln(x)$ ist nur für $x > 0$ definiert!\n\n## Rechenregeln des Logarithmus\n\nDiese Regeln sind in Klausuren unverzichtbar:\n\n$$\\ln(a \\cdot b) = \\ln(a) + \\ln(b)$$\n$$\\ln\\!\\left(\\frac{a}{b}\\right) = \\ln(a) - \\ln(b)$$\n$$\\ln(a^r) = r \\cdot \\ln(a)$$\n$$\\ln(e^x) = x, \\qquad e^{\\ln(x)} = x$$\n\n**Ableitung:**\n$$\\frac{d}{dx} \\ln(x) = \\frac{1}{x}, \\qquad \\frac{d}{dx} \\ln(f(x)) = \\frac{f'(x)}{f(x)}$$\n\n**Warum ist das nützlich?** Mit dem Logarithmus lösen wir Gleichungen, in denen die Unbekannte im Exponenten steckt:\n\n$$e^{0{,}03 \\cdot t} = 2 \\quad \\Longrightarrow \\quad 0{,}03 \\cdot t = \\ln(2) \\quad \\Longrightarrow \\quad t = \\frac{\\ln(2)}{0{,}03} \\approx 23{,}1$$",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "fig-ln",
+          "title": "Natürlicher Logarithmus ln(x)",
+          "caption": "ln(x) ist die Umkehrfunktion von e^x; er wächst langsam und ist nur für x > 0 definiert.",
+          "functions": [
+            { "fn": "log(x)", "label": "ln(x)", "color": "#16a34a" }
+          ],
+          "domain": [0.1, 8],
+          "range": [-3, 3],
+          "points": [
+            { "x": 1, "y": 0, "label": "ln(1) = 0" },
+            { "x": 2.718, "y": 1, "label": "ln(e) = 1" }
+          ]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Logarithmus-Trick für Exponentialgleichungen",
+          "body": "Steht die Unbekannte im Exponenten, immer $\\ln(\\cdot)$ auf beiden Seiten anwenden und dann $\\ln(e^x) = x$ nutzen."
+        }
+      ]
+    },
+    {
+      "id": "zinsrechnung-grundlagen",
+      "heading": "Zinsrechnung: Von einfach bis stetig",
+      "body": "## 1. Einfache (lineare) Verzinsung\n\nBei der **einfachen Verzinsung** wird der Zins nur auf das ursprüngliche Kapital $K_0$ berechnet – Zinsen werden nicht mitverzinst:\n$$K(t) = K_0 \\cdot (1 + r \\cdot t)$$\n\n**Beispiel:** 1000 € bei 5 % einfacher Verzinsung nach 3 Jahren:\n$$K(3) = 1000 \\cdot (1 + 0{,}05 \\cdot 3) = 1000 \\cdot 1{,}15 = 1150 \\text{ €}$$\n\n## 2. Jährliche (geometrische) Verzinsung – Zinseszins\n\nHier werden die Zinsen am Jahresende dem Kapital zugeschlagen und im nächsten Jahr selbst mitverzinst:\n$$K(n) = K_0 \\cdot (1 + r)^n$$\n\n**Herleitung:** Nach Jahr 1: $K_0(1+r)$. Nach Jahr 2: $K_0(1+r)^2$. Nach $n$ Jahren: $K_0(1+r)^n$.\n\n**Beispiel:** 1000 € bei 5 % nach 3 Jahren:\n$$K(3) = 1000 \\cdot (1{,}05)^3 = 1000 \\cdot 1{,}157625 = 1157{,}63 \\text{ €}$$\n\nDer Unterschied zur einfachen Verzinsung: **7,63 € mehr** durch Zinseszins!\n\n## 3. Unterjährige Verzinsung (m-mal pro Jahr)\n\nWird der Zins $m$-mal pro Jahr gutgeschrieben, teilt man den Jahreszins durch $m$ und potenziert entsprechend häufiger:\n$$K(t) = K_0 \\cdot \\left(1 + \\frac{r}{m}\\right)^{m \\cdot t}$$\n\n**Monatliche Gutschrift** ($m = 12$):\n$$K(t) = K_0 \\cdot \\left(1 + \\frac{r}{12}\\right)^{12t}$$\n\n**Beispiel (Klausurtyp SoSe24):** 3000 € bei 3 % p.a., monatliche Gutschrift, nach 10 Jahren:\n\nSchritt 1: Monatszinssatz $= 0{,}03/12 = 0{,}0025$\n\nSchritt 2: Anzahl Perioden $= 12 \\cdot 10 = 120$\n\nSchritt 3: $K = 3000 \\cdot (1{,}0025)^{120}$\n\nSchritt 4: $(1{,}0025)^{120} = e^{120 \\cdot \\ln(1{,}0025)} = e^{120 \\cdot 0{,}002497} = e^{0{,}29963} \\approx 1{,}34935$\n\nSchritt 5: $K \\approx 3000 \\cdot 1{,}34935 \\approx \\mathbf{4048{,}05 \\text{ €}}$\n\n## 4. Stetige (kontinuierliche) Verzinsung\n\nLässt man die Gutschriften immer häufiger werden ($m \\to \\infty$), erhält man mit dem Grenzwert $\\lim_{m\\to\\infty}(1+r/m)^{mt} = e^{rt}$:\n$$K(t) = K_0 \\cdot e^{r \\cdot t}$$\n\nDies ist die **stärkste Form der Verzinsung** (für gegebenes $r$). Die Wachstumskurve ist exponentiell.",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "fig-zins-vergleich",
+          "title": "Kapitalwachstum: jährlich vs. monatlich vs. stetig (K₀ = 1000 €, r = 5 %)",
+          "caption": "Stetige Verzinsung wächst am schnellsten, der Unterschied zur monatlichen ist aber gering.",
+          "functions": [
+            { "fn": "1000 * (1.05)^x", "label": "jährlich: K₀·(1,05)^t", "color": "#2563eb" },
+            { "fn": "1000 * (1 + 0.05/12)^(12*x)", "label": "monatlich", "color": "#16a34a", "dashed": true },
+            { "fn": "1000 * exp(0.05*x)", "label": "stetig: K₀·e^{0,05t}", "color": "#dc2626" }
+          ],
+          "domain": [0, 20],
+          "range": [1000, 2800]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Übersicht: Vier Verzinsungsarten",
+          "body": "| Art | Formel |\n|---|---|\n| Einfach | $K_0(1 + r \\cdot t)$ |\n| Jährlich | $K_0(1+r)^n$ |\n| $m$-mal jährlich | $K_0\\left(1+\\frac{r}{m}\\right)^{mt}$ |\n| Stetig | $K_0 \\cdot e^{rt}$ |"
+        }
+      ]
+    },
+    {
+      "id": "verdopplungszeit",
+      "heading": "Verdopplungs- und Verdreifachungszeit",
+      "body": "## Wann hat sich das Kapital verdoppelt?\n\nBei **stetiger Verzinsung** suchen wir $t$, so dass $K(t) = 2 K_0$:\n\n$$K_0 \\cdot e^{rt} = 2 K_0$$\n$$e^{rt} = 2$$\n$$rt = \\ln(2)$$\n$$t_{\\text{Verd.}} = \\frac{\\ln(2)}{r} \\approx \\frac{0{,}6931}{r}$$\n\n**Beispiel (Klausurtyp SoSe23):** 5000 €, $r = 3\\% = 0{,}03$ p.a. stetig:\n\nSchritt 1: Gleichung aufstellen: $5000 \\cdot e^{0{,}03 t} = 10000$\n\nSchritt 2: Vereinfachen: $e^{0{,}03 t} = 2$\n\nSchritt 3: Logarithmus anwenden: $0{,}03 t = \\ln(2)$\n\nSchritt 4: Auflösen: $t = \\dfrac{\\ln(2)}{0{,}03} = \\dfrac{0{,}69315}{0{,}03} \\approx \\mathbf{23{,}1 \\text{ Jahre}}$\n\n**Probe:** $5000 \\cdot e^{0{,}03 \\cdot 23{,}1} = 5000 \\cdot e^{0{,}693} = 5000 \\cdot 1{,}9997 \\approx 9999 \\approx 10000$ ✓\n\n## Verdreifachungszeit\n\nAnalog: $K_0 \\cdot e^{rt} = 3 K_0 \\Rightarrow t = \\dfrac{\\ln(3)}{r} \\approx \\dfrac{1{,}0986}{r}$\n\n**Beispiel (Klausurtyp SoSe25):** 2000 €, $r = 4\\% = 0{,}04$ p.a. stetig, gesucht: Verdreifachungszeit (auf ganze Jahre aufrunden):\n\nSchritt 1: $2000 \\cdot e^{0{,}04 t} = 6000$\n\nSchritt 2: $e^{0{,}04 t} = 3$\n\nSchritt 3: $0{,}04 t = \\ln(3) \\approx 1{,}09861$\n\nSchritt 4: $t = \\dfrac{1{,}09861}{0{,}04} \\approx 27{,}47$ Jahre\n\nSchritt 5: Auf ganze Jahre aufrunden: $t = \\mathbf{28 \\text{ Jahre}}$\n\n**Probe:** $2000 \\cdot e^{0{,}04 \\cdot 28} = 2000 \\cdot e^{1{,}12} = 2000 \\cdot 3{,}0649 \\approx 6130 > 6000$ ✓ (bei $t=27$: $2000 \\cdot e^{1{,}08} \\approx 5891 < 6000$)\n\n## Faustregel: Regel 70\n\nFür praktische Überschlagsrechnungen gilt näherungsweise:\n$$t_{\\text{Verd.}} \\approx \\frac{70}{r\\%}$$\nBei 3 %: $t \\approx 70/3 \\approx 23$ Jahre – stimmt gut überein!",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Verdopplungszeit bei stetiger Verzinsung",
+          "body": "$$t_{\\text{Verd.}} = \\frac{\\ln(2)}{r} \\approx \\frac{0{,}6931}{r}$$\nBei jährlicher Verzinsung: $(1+r)^t = 2 \\Rightarrow t = \\dfrac{\\ln 2}{\\ln(1+r)}$"
+        }
+      ]
+    },
+    {
+      "id": "sparvertrag",
+      "heading": "Sparvertrag: Regelmäßige Einzahlungen als geometrische Reihe",
+      "body": "## Das Problem\n\nDu zahlst jedes Jahr **a Euro** ein, der Zinssatz beträgt $r$. Nach $n$ Jahren möchtest du wissen, wie viel Kapital angesammelt ist.\n\nJede Einzahlung wird **unterschiedlich lang** verzinst:\n- Die Einzahlung am Ende von Jahr 1 wird noch $(n-1)$ Jahre verzinst: $a(1+r)^{n-1}$\n- Die Einzahlung am Ende von Jahr 2: $a(1+r)^{n-2}$\n- …\n- Die letzte Einzahlung am Ende von Jahr $n$: $a(1+r)^0 = a$\n\nDas Endkapital ist die Summe:\n$$K_n = a \\sum_{k=0}^{n-1} (1+r)^k = a \\cdot \\frac{(1+r)^n - 1}{r}$$\n\nDies ist die **geometrische Reihe** mit Quotient $q = 1+r$:\n$$\\sum_{k=0}^{n-1} q^k = \\frac{q^n - 1}{q - 1}$$\n\n**Beispiel:** Du zahlst 12 Jahre lang jährlich 1000 € bei 4 % Zinsen ein.\n\nSchritt 1: $q = 1{,}04$, $n = 12$, $a = 1000$\n\nSchritt 2: $(1{,}04)^{12} = e^{12 \\cdot \\ln(1{,}04)} = e^{12 \\cdot 0{,}03922} = e^{0{,}47063} \\approx 1{,}6010$\n\nSchritt 3: $K_{12} = 1000 \\cdot \\dfrac{1{,}6010 - 1}{0{,}04} = 1000 \\cdot \\dfrac{0{,}6010}{0{,}04} = 1000 \\cdot 15{,}025 \\approx \\mathbf{15\\ 025 \\text{ €}}$\n\nOhne Zinsen hättest du nur $12 \\times 1000 = 12\\ 000$ € – der Zinseszins bringt **über 3000 € extra**.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Sparvertragsformel",
+          "body": "$$K_n = a \\cdot \\frac{(1+r)^n - 1}{r}$$\n$a$ = jährliche Einzahlung, $r$ = Jahreszinssatz, $n$ = Laufzeit in Jahren."
+        }
+      ]
+    },
+    {
+      "id": "barwert",
+      "heading": "Barwert, Diskontierung und optimaler Verkaufszeitpunkt",
+      "body": "## Was ist ein Barwert?\n\nEin Betrag von 1000 € **heute** ist mehr wert als 1000 € **in einem Jahr**, weil man das heutige Geld anlegen kann. Der **Barwert** (Present Value) gibt an, wie viel ein zukünftiger Betrag in heutigen Euro wert ist.\n\nBei stetiger Verzinsung mit Rate $r$ ist der **Barwert** eines Betrags $V$, der erst in $t$ Jahren anfällt:\n$$B = V \\cdot e^{-rt}$$\n\nDer Faktor $e^{-rt}$ heißt **Diskontierungsfaktor** (er ist kleiner als 1 für $r,t > 0$).\n\n## Optimaler Verkaufszeitpunkt\n\n**Problem:** Eine Immobilie hat zum Zeitpunkt $t$ den Marktwert $V(t)$ (wächst mit der Zeit). Wann soll man verkaufen, um den **heutigen Wert** (Barwert) zu maximieren?\n\n$$F(t) = V(t) \\cdot e^{-rt} \\longrightarrow \\max!$$\n\n**Notwendige Bedingung** ($F'(t) = 0$):\n$$F'(t) = V'(t)\\,e^{-rt} + V(t)\\cdot(-r)\\,e^{-rt} = 0$$\n$$e^{-rt}\\left[V'(t) - r\\,V(t)\\right] = 0$$\n\nDa $e^{-rt} > 0$ stets, folgt:\n$$V'(t) = r \\cdot V(t) \\quad \\Longleftrightarrow \\quad \\frac{V'(t)}{V(t)} = r \\quad \\Longleftrightarrow \\quad (\\ln V(t))' = r$$\n\n**Intuition:** Verkaufe, wenn die **Wachstumsrate des Immobilienwerts** gleich dem **Zinssatz** ist. Wächst die Immobilie schneller als der Zinssatz, warte noch. Wächst sie langsamer, verkaufe sofort.\n\n**Beispiel:** $V(t) = 100\\,000 \\cdot e^{0{,}1\\sqrt{t}}$, Zinssatz $r = 0{,}05$.\n\nSchritt 1: Wachstumsrate berechnen: $(\\ln V(t))' = \\left(\\ln(100\\,000) + 0{,}1\\sqrt{t}\\right)' = 0{,}1 \\cdot \\dfrac{1}{2\\sqrt{t}} = \\dfrac{0{,}05}{\\sqrt{t}}$\n\nSchritt 2: Optimalbedingung: $\\dfrac{0{,}05}{\\sqrt{t}} = 0{,}05$\n\nSchritt 3: $\\sqrt{t} = 1$, also $t^* = 1$ Jahr.\n\nNach einem Jahr den Barwert berechnen: $F(1) = 100\\,000 \\cdot e^{0{,}1} \\cdot e^{-0{,}05} = 100\\,000 \\cdot e^{0{,}05} \\approx 105\\,127$ €.",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "fig-barwert",
+          "title": "Marktwert V(t) und Barwert F(t) = V(t)·e^{−0,05t}",
+          "caption": "Das Barwertmaximum liegt vor dem Marktwertmaximum – je früher diskontiert wird, desto wichtiger ist das Timing.",
+          "functions": [
+            { "fn": "100000 * exp(0.1 * sqrt(x))", "label": "V(t) Marktwert", "color": "#2563eb" },
+            { "fn": "100000 * exp(0.1 * sqrt(x)) * exp(-0.05 * x)", "label": "F(t) Barwert", "color": "#dc2626" }
+          ],
+          "domain": [0, 10],
+          "points": [{ "x": 1, "y": 100000, "label": "Optimum t* = 1" }]
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Optimalbedingung für Verkaufszeitpunkt",
+          "body": "Verkaufe, wenn $(\\ln V(t))' = r$, d.h. wenn die prozentuale Wachstumsrate des Vermögensguts gleich dem Marktzinssatz ist."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "elz-fc-1",
+      "topicId": "exp-log-zins",
+      "front": "Was ist die Euler-Zahl $e$?",
+      "back": "$e = \\lim_{n \\to \\infty}\\left(1+\\frac{1}{n}\\right)^n \\approx 2{,}71828$. Sie entsteht als Grenzwert von unendlich häufiger Verzinsung mit 100 % Jahreszins."
+    },
+    {
+      "id": "elz-fc-2",
+      "topicId": "exp-log-zins",
+      "front": "Was bedeutet $\\ln(x)$?",
+      "back": "$\\ln(x)$ ist die Umkehrfunktion von $e^x$: $\\ln(x) = y \\iff e^y = x$. Wichtig: nur für $x > 0$ definiert. Rechenregel: $\\ln(a \\cdot b) = \\ln a + \\ln b$."
+    },
+    {
+      "id": "elz-fc-3",
+      "topicId": "exp-log-zins",
+      "front": "Formel: stetige Verzinsung",
+      "back": "$K(t) = K_0 \\cdot e^{rt}$, wobei $r$ der Jahreszinssatz und $t$ die Zeit in Jahren ist. Entsteht als Grenzwert von $K_0\\left(1+\\frac{r}{m}\\right)^{mt}$ für $m \\to \\infty$."
+    },
+    {
+      "id": "elz-fc-4",
+      "topicId": "exp-log-zins",
+      "front": "Wie berechnet man die Verdopplungszeit bei stetiger Verzinsung?",
+      "back": "$K_0 e^{rt} = 2K_0 \\Rightarrow e^{rt} = 2 \\Rightarrow rt = \\ln 2 \\Rightarrow t = \\frac{\\ln 2}{r} \\approx \\frac{0{,}693}{r}$"
+    },
+    {
+      "id": "elz-fc-5",
+      "topicId": "exp-log-zins",
+      "front": "Was ist der Barwert (Present Value)?",
+      "back": "Der Barwert eines zukünftigen Betrags $V$ in $t$ Jahren bei Zinssatz $r$ ist $B = V \\cdot e^{-rt}$. Er gibt den heutigen Gegenwert an."
+    },
+    {
+      "id": "elz-fc-6",
+      "topicId": "exp-log-zins",
+      "front": "Wann ist der optimale Verkaufszeitpunkt einer Anlage?",
+      "back": "Wenn $(\\ln V(t))' = r$, d.h. die prozentuale Wachstumsrate des Marktwerts gleich dem Zinssatz ist. Dann ist $F(t) = V(t)e^{-rt}$ maximal."
+    },
+    {
+      "id": "elz-fc-7",
+      "topicId": "exp-log-zins",
+      "front": "Sparvertragsformel (jährliche Einzahlung $a$, Zinssatz $r$, $n$ Jahre)",
+      "back": "$K_n = a \\cdot \\dfrac{(1+r)^n - 1}{r}$. Herleitung: geometrische Reihe mit Quotient $q = 1+r$."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "elz-q1",
+      "topicId": "exp-log-zins",
+      "difficulty": "leicht",
+      "prompt": "Welcher der folgenden Ausdrücke definiert die Euler-Zahl $e$?",
+      "options": [
+        "$\\lim_{n \\to \\infty}\\left(1+\\frac{1}{n}\\right)^n$",
+        "$\\lim_{n \\to \\infty}\\left(1+\\frac{1}{n}\\right)^{n^2}$",
+        "$\\lim_{n \\to \\infty}\\left(1+n\\right)^{1/n}$",
+        "$\\lim_{n \\to \\infty} n^{1/n}$"
+      ],
+      "correct": [0],
+      "explanation": "Die Euler-Zahl ist definiert als $e = \\lim_{n \\to \\infty}(1+1/n)^n \\approx 2{,}718$. Alle anderen Ausdrücke ergeben andere Grenzwerte (z.B. $n^{1/n} \\to 1$)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "elz-q2",
+      "topicId": "exp-log-zins",
+      "difficulty": "leicht",
+      "prompt": "Bei stetiger Verzinsung wächst das Kapital schneller als bei jährlicher Verzinsung (gleicher Zinssatz $r > 0$).",
+      "answer": true,
+      "explanation": "Stetige Verzinsung entspricht dem Grenzwert für $m \\to \\infty$ Gutschriften und ist damit immer mindestens so gut wie jede endliche Gutschriftshäufigkeit. Für $r > 0$ gilt $e^r > (1+r)$."
+    },
+    {
+      "kind": "numeric",
+      "id": "elz-q3",
+      "topicId": "exp-log-zins",
+      "difficulty": "mittel",
+      "prompt": "5000 € werden mit 3 % p.a. **stetig** verzinst. Nach wie vielen Jahren (auf zwei Nachkommastellen) hat sich das Kapital verdoppelt? Hinweis: $\\ln(2) \\approx 0{,}6931$.",
+      "answer": 23.1,
+      "tolerance": 0.1,
+      "unit": "Jahre",
+      "explanation": "$5000 \\cdot e^{0{,}03t} = 10000 \\Rightarrow e^{0{,}03t} = 2 \\Rightarrow t = \\ln(2)/0{,}03 = 0{,}6931/0{,}03 \\approx 23{,}1$ Jahre."
+    },
+    {
+      "kind": "numeric",
+      "id": "elz-q4",
+      "topicId": "exp-log-zins",
+      "difficulty": "mittel",
+      "prompt": "2000 € werden mit 4 % p.a. **stetig** verzinst. Nach wie vielen **ganzen** Jahren hat sich der Betrag mindestens verdreifacht? Hinweis: $\\ln(3) \\approx 1{,}0986$.",
+      "answer": 28,
+      "tolerance": 0,
+      "unit": "Jahre",
+      "explanation": "$t = \\ln(3)/0{,}04 = 1{,}0986/0{,}04 \\approx 27{,}47$ Jahre. Da auf ganze Jahre aufgerundet wird: $t = 28$ Jahre. Probe: $2000 \\cdot e^{0{,}04 \\cdot 28} = 2000 \\cdot e^{1{,}12} \\approx 6130 > 6000$ ✓."
+    },
+    {
+      "kind": "numeric",
+      "id": "elz-q5",
+      "topicId": "exp-log-zins",
+      "difficulty": "mittel",
+      "prompt": "3000 € werden bei 3 % p.a. **monatlich** verzinst. Wie viel € stehen nach 10 Jahren zur Verfügung (auf Cent gerundet)? Hinweis: $(1{,}0025)^{120} \\approx 1{,}34935$.",
+      "answer": 4048.05,
+      "tolerance": 1.0,
+      "unit": "€",
+      "explanation": "$K = 3000 \\cdot (1 + 0{,}03/12)^{12 \\cdot 10} = 3000 \\cdot (1{,}0025)^{120} \\approx 3000 \\cdot 1{,}34935 \\approx 4048{,}05$ €."
+    },
+    {
+      "kind": "mc",
+      "id": "elz-q6",
+      "topicId": "exp-log-zins",
+      "difficulty": "mittel",
+      "prompt": "Welche Rechenregel gilt für den natürlichen Logarithmus?",
+      "options": [
+        "$\\ln(a \\cdot b) = \\ln(a) + \\ln(b)$",
+        "$\\ln(a + b) = \\ln(a) \\cdot \\ln(b)$",
+        "$\\ln(a^r) = a \\cdot \\ln(r)$",
+        "$\\ln(a/b) = \\ln(a) \\cdot \\ln(b)$"
+      ],
+      "correct": [0],
+      "explanation": "Nur Option (a) ist korrekt: $\\ln(a \\cdot b) = \\ln(a) + \\ln(b)$. Entsprechend gilt $\\ln(a/b) = \\ln(a) - \\ln(b)$ und $\\ln(a^r) = r \\cdot \\ln(a)$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "elz-q7",
+      "topicId": "exp-log-zins",
+      "difficulty": "leicht",
+      "prompt": "Die Funktion $\\ln(x)$ ist für alle reellen Zahlen definiert.",
+      "answer": false,
+      "explanation": "$\\ln(x)$ ist nur für $x > 0$ definiert. Für $x \\le 0$ existiert kein reeller Logarithmus. Insbesondere ist $\\ln(0)$ nicht definiert (der Grenzwert geht gegen $-\\infty$)."
+    },
+    {
+      "kind": "mc",
+      "id": "elz-q8",
+      "topicId": "exp-log-zins",
+      "difficulty": "schwer",
+      "prompt": "Ein Waldstück hat zum Zeitpunkt $t$ den Marktwert $V(t) = 200\\,000 \\cdot t^2$ (für $t > 0$). Der Zinssatz ist $r = 0{,}10$. Wann sollte man den Wald verkaufen?",
+      "options": [
+        "$t^* = 20$",
+        "$t^* = 10$",
+        "$t^* = 5$",
+        "$t^* = 2$"
+      ],
+      "correct": [0],
+      "explanation": "$(\\ln V(t))' = (\\ln(200000 t^2))' = (\\ln 200000 + 2\\ln t)' = 2/t$. Optimalbedingung: $2/t = 0{,}10 \\Rightarrow t^* = 20$. Also in 20 Jahren verkaufen."
+    },
+    {
+      "kind": "freetext",
+      "id": "elz-q9",
+      "topicId": "exp-log-zins",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum stetige Verzinsung stärker ist als jährliche Verzinsung, und was die Euler-Zahl damit zu tun hat.",
+      "sampleAnswer": "Bei jährlicher Verzinsung mit Rate $r$ werden Zinsen einmal pro Jahr dem Kapital zugeschlagen. Bei $m$-maliger Gutschrift teilt man den Jahreszins durch $m$, potenziert aber $m$-mal öfter. Je häufiger man gutschreibt, desto mehr profitiert man vom Zinseszins-Effekt innerhalb des Jahres. Wenn $m$ gegen unendlich geht, nähert sich der Wachstumsfaktor dem Grenzwert $e^r$ – das ist stetige Verzinsung. Die Euler-Zahl $e$ ist genau der Grenzwert dieses Prozesses für $r=1$.",
+      "keywords": ["zinseszins", "grenzwert", "euler", "gutschrift", "häufiger"],
+      "explanation": "Kernidee: Häufigere Gutschrift bedeutet mehr Zinseszins innerhalb des Jahres. Der Grenzwert ist $e^r$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "elz-q10",
+      "topicId": "exp-log-zins",
+      "difficulty": "mittel",
+      "prompt": "Die Verdopplungszeit bei stetiger Verzinsung hängt vom Anfangskapital $K_0$ ab.",
+      "answer": false,
+      "explanation": "$K_0 e^{rt} = 2K_0 \\Rightarrow e^{rt} = 2 \\Rightarrow t = \\ln(2)/r$. Das Anfangskapital $K_0$ kürzt sich heraus – die Verdopplungszeit hängt nur vom Zinssatz $r$ ab."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "elz-ex-1",
+      "topicId": "exp-log-zins",
+      "label": "Klausur SoSe23, Aufgabe 3 (10 P.)",
+      "source": "Klausur Mathematik 2, 25. Juli 2023",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**(a)** Berechnen Sie – unter Angabe aller Rechenschritte – die Grenzwerte der nachstehenden Folgen:\n\n(i) $a_n = \\left(1 - \\dfrac{1}{2n}\\right)^n$\n\n(ii) $b_n = \\sqrt{n} - \\sqrt{n+5}$\n\n(iii) $c_n = \\dfrac{2n^3 - 7n}{-n^3 + 4}$\n\n**(b)** Berechnen Sie ausführlich:\n$$\\sum_{k=2}^{\\infty} 6 \\cdot \\left(\\frac{1}{4}\\right)^k$$\n\n**(c)** 5000 € werden mit einem jährlichen Zinssatz von 3 % **stetig** verzinst. Wie lange dauert es, bis sich das Kapital verdoppelt hat?",
+      "hint": "Zu (a)(i): Formen Sie so um, dass die Standardformel $\\lim_{n\\to\\infty}(1+x/n)^n = e^x$ erkennbar wird. Zu (b): Faktorisieren Sie $(1/4)^k = (1/4)^2 \\cdot (1/4)^{k-2}$ oder verschieben Sie den Index. Zu (c): Stellen Sie $K_0 e^{rt} = 2K_0$ auf und lösen Sie nach $t$ auf.",
+      "solution": "### Teil (a)\n\n**(i)** $a_n = \\left(1 - \\dfrac{1}{2n}\\right)^n$\n\nUmformung: Schreibe $-\\tfrac{1}{2n} = \\tfrac{-1/2}{n}$, also\n$$a_n = \\left(1 + \\frac{-1/2}{n}\\right)^n$$\n\nDas hat die Form $\\left(1 + \\frac{x}{n}\\right)^n$ mit $x = -\\tfrac{1}{2}$.\n\nMit dem Standardgrenzwert $\\lim_{n\\to\\infty}\\left(1+\\frac{x}{n}\\right)^n = e^x$ folgt:\n$$\\lim_{n\\to\\infty} a_n = e^{-1/2} = \\frac{1}{\\sqrt{e}} \\approx 0{,}6065$$\n\n**(ii)** $b_n = \\sqrt{n} - \\sqrt{n+5}$\n\nErweitern mit dem konjugierten Ausdruck $\\sqrt{n} + \\sqrt{n+5}$:\n$$b_n = \\frac{(\\sqrt{n} - \\sqrt{n+5})(\\sqrt{n} + \\sqrt{n+5})}{\\sqrt{n} + \\sqrt{n+5}} = \\frac{n - (n+5)}{\\sqrt{n} + \\sqrt{n+5}} = \\frac{-5}{\\sqrt{n} + \\sqrt{n+5}}$$\n\nFür $n \\to \\infty$ geht der Nenner $\\to \\infty$, also:\n$$\\lim_{n\\to\\infty} b_n = \\frac{-5}{\\infty} = 0$$\n\n**(iii)** $c_n = \\dfrac{2n^3 - 7n}{-n^3 + 4}$\n\nHöchste Potenz $n^3$ ausklammern:\n$$c_n = \\frac{n^3(2 - 7/n^2)}{n^3(-1 + 4/n^3)} = \\frac{2 - 7/n^2}{-1 + 4/n^3}$$\n\nFür $n \\to \\infty$: $7/n^2 \\to 0$ und $4/n^3 \\to 0$:\n$$\\lim_{n\\to\\infty} c_n = \\frac{2 - 0}{-1 + 0} = -2$$\n\n### Teil (b)\n\nGesucht: $\\displaystyle\\sum_{k=2}^{\\infty} 6 \\cdot \\left(\\frac{1}{4}\\right)^k$\n\nFaktorisieren: $6 \\cdot \\left(\\frac{1}{4}\\right)^k = 6 \\cdot \\left(\\frac{1}{4}\\right)^2 \\cdot \\left(\\frac{1}{4}\\right)^{k-2}$\n\nAlternativ direkt mit der Formel $\\sum_{k=0}^{\\infty} a \\cdot q^k = \\dfrac{a}{1-q}$ für $|q| < 1$:\n\n$$\\sum_{k=2}^{\\infty} 6 \\cdot \\left(\\frac{1}{4}\\right)^k = 6 \\sum_{k=2}^{\\infty} \\left(\\frac{1}{4}\\right)^k = 6 \\cdot \\frac{(1/4)^2}{1 - 1/4}$$\n\nDenn für eine geometrische Reihe ab Index $k=2$: $\\sum_{k=2}^{\\infty} q^k = \\dfrac{q^2}{1-q}$\n\n$$= 6 \\cdot \\frac{1/16}{3/4} = 6 \\cdot \\frac{1}{16} \\cdot \\frac{4}{3} = 6 \\cdot \\frac{4}{48} = 6 \\cdot \\frac{1}{12} = \\boxed{\\frac{1}{2}}$$\n\n**Probe:** $\\sum_{k=0}^{\\infty} 6 \\cdot (1/4)^k = 6/(1-1/4) = 8$. Davon abziehen: $k=0$: $6$, $k=1$: $6/4 = 3/2$. Also $8 - 6 - 3/2 = 1/2$ ✓\n\n### Teil (c)\n\nGesucht: Verdopplungszeit bei $K_0 = 5000$ €, $r = 0{,}03$, stetig.\n\n**Schritt 1:** Gleichung aufstellen:\n$$5000 \\cdot e^{0{,}03 \\, t} = 10000$$\n\n**Schritt 2:** Durch $5000$ dividieren:\n$$e^{0{,}03 \\, t} = 2$$\n\n**Schritt 3:** Natürlichen Logarithmus anwenden:\n$$0{,}03 \\, t = \\ln(2)$$\n\n**Schritt 4:** Auflösen:\n$$t = \\frac{\\ln(2)}{0{,}03} = \\frac{0{,}69315}{0{,}03} \\approx 23{,}1 \\text{ Jahre}$$\n\n**Probe:** $5000 \\cdot e^{0{,}03 \\cdot 23{,}1} = 5000 \\cdot e^{0{,}693} \\approx 5000 \\cdot 1{,}9997 \\approx 9999 \\approx 10000$ ✓"
+    },
+    {
+      "id": "elz-ex-2",
+      "topicId": "exp-log-zins",
+      "label": "Klausur SoSe24, Aufgabe 3 (10 P.)",
+      "source": "Klausur Mathematik 2, 13. Juli 2024",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**(a)** Berechnen Sie – unter Angabe aller Rechenschritte – die Grenzwerte der nachstehenden Folgen:\n\n(i) $a_n = \\left(1 + \\dfrac{2}{3n}\\right)^{-3n}$\n\n(ii) $b_n = \\sqrt{n^2+2} - \\sqrt{n^2-1}$, $n \\ge 2$\n\n(iii) $c_n = \\dfrac{2n^3 - 5n}{3n^4 + 4}$\n\n**(b)** Berechnen Sie ausführlich:\n$$\\sum_{k=0}^{\\infty} 3 \\cdot \\left(\\frac{2}{3}\\right)^{k+2}$$\n\n**(c)** Bestimmen Sie den Betrag $K$, auf den 3000 Euro nach 10 Jahren wachsen, wenn der Zinssatz 3 % pro Jahr beträgt und die Zinsen **monatlich** gutgeschrieben werden.",
+      "hint": "Zu (a)(i): Schreibe $(2/3)/n$ und erkenne die Standardformel. Zu (b): Faktorisiere $(2/3)^{k+2} = (2/3)^2 \\cdot (2/3)^k$ und verwende die geometrische Reihenformel. Zu (c): $m=12$, $t=10$.",
+      "solution": "### Teil (a)\n\n**(i)** $a_n = \\left(1 + \\dfrac{2}{3n}\\right)^{-3n}$\n\nUmformung: Setze $m = 3n$, dann ist $-3n = -m$ und $\\frac{2}{3n} = \\frac{2}{m}$:\n$$a_n = \\left(1 + \\frac{2}{m}\\right)^{-m}$$\n\nDas ist $\\left[\\left(1+\\frac{2}{m}\\right)^m\\right]^{-1}$. Mit $\\lim_{m\\to\\infty}(1+2/m)^m = e^2$:\n$$\\lim_{n\\to\\infty} a_n = (e^2)^{-1} = e^{-2} = \\frac{1}{e^2} \\approx 0{,}1353$$\n\n**(ii)** $b_n = \\sqrt{n^2+2} - \\sqrt{n^2-1}$\n\nErweitern mit konjugiertem Ausdruck:\n$$b_n = \\frac{(n^2+2) - (n^2-1)}{\\sqrt{n^2+2} + \\sqrt{n^2-1}} = \\frac{3}{\\sqrt{n^2+2} + \\sqrt{n^2-1}}$$\n\nFür $n \\to \\infty$: $\\sqrt{n^2+2} \\approx n$ und $\\sqrt{n^2-1} \\approx n$, Nenner $\\to 2n \\to \\infty$:\n$$\\lim_{n\\to\\infty} b_n = \\frac{3}{\\infty} = 0$$\n\n**(iii)** $c_n = \\dfrac{2n^3 - 5n}{3n^4 + 4}$\n\nHöchste Potenz $n^4$ ausklammern:\n$$c_n = \\frac{n^4(2/n - 5/n^3)}{n^4(3 + 4/n^4)} = \\frac{2/n - 5/n^3}{3 + 4/n^4}$$\n\nFür $n \\to \\infty$: Zähler $\\to 0$, Nenner $\\to 3$:\n$$\\lim_{n\\to\\infty} c_n = \\frac{0}{3} = 0$$\n\n### Teil (b)\n\nGesucht: $\\displaystyle\\sum_{k=0}^{\\infty} 3 \\cdot \\left(\\frac{2}{3}\\right)^{k+2}$\n\nAusklammern von $(2/3)^2$:\n$$= 3 \\cdot \\left(\\frac{2}{3}\\right)^2 \\cdot \\sum_{k=0}^{\\infty} \\left(\\frac{2}{3}\\right)^k = 3 \\cdot \\frac{4}{9} \\cdot \\frac{1}{1 - 2/3}$$\n\nDenn $|2/3| < 1$: $\\sum_{k=0}^{\\infty}(2/3)^k = \\dfrac{1}{1-2/3} = 3$\n\n$$= 3 \\cdot \\frac{4}{9} \\cdot 3 = 3 \\cdot \\frac{4}{3} = \\boxed{4}$$\n\n**Probe:** $3 \\cdot (4/9) \\cdot 3 = 3 \\cdot 12/9 = 36/9 = 4$ ✓\n\n### Teil (c)\n\nGegeben: $K_0 = 3000$ €, $r = 0{,}03$, $m = 12$ (monatlich), $t = 10$ Jahre.\n\n**Schritt 1:** Formel für unterjährige Verzinsung:\n$$K = K_0 \\cdot \\left(1 + \\frac{r}{m}\\right)^{m \\cdot t}$$\n\n**Schritt 2:** Einsetzen:\n$$K = 3000 \\cdot \\left(1 + \\frac{0{,}03}{12}\\right)^{12 \\cdot 10} = 3000 \\cdot (1{,}0025)^{120}$$\n\n**Schritt 3:** $(1{,}0025)^{120}$ berechnen mit Logarithmus:\n$$\\ln(1{,}0025) \\approx 0{,}002497$$\n$$120 \\cdot 0{,}002497 = 0{,}29963$$\n$$(1{,}0025)^{120} = e^{0{,}29963} \\approx 1{,}34935$$\n\n**Schritt 4:** Endkapital:\n$$K \\approx 3000 \\cdot 1{,}34935 \\approx \\mathbf{4048{,}05 \\text{ €}}$$\n\n**Probe:** Ohne monatliche Verzinsung (nur jährlich): $3000 \\cdot (1{,}03)^{10} = 3000 \\cdot 1{,}3439 \\approx 4031{,}7$ €. Monatliche Verzinsung ergibt erwartungsgemäß etwas mehr ✓"
+    },
+    {
+      "id": "elz-ex-3",
+      "topicId": "exp-log-zins",
+      "label": "Klausur SoSe25, Aufgabe 3 (10 P.)",
+      "source": "Klausur Mathematik 2, 19. Juli 2025",
+      "type": "klausur",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**(a)** Berechnen Sie – unter Angabe aller Rechenschritte – die Grenzwerte der nachstehenden Folgen:\n\n(i) $a_n = \\left(1 - \\dfrac{1}{5n}\\right)^{15n}$\n\n(ii) $b_n = \\sqrt{2n^2+n} - \\sqrt{2n^2+n-4}$, $n \\ge 2$\n\n**(b)** Berechnen Sie ausführlich die endliche Summe:\n$$\\sum_{k=1}^{15} 3 \\cdot 2^k$$\n\n**(c)** Ein Geldbetrag in Höhe von 2000 Euro wird **stetig** verzinst mit einem jährlichen Zinssatz von 4 %. Nach wie vielen Jahren hat sich der Betrag **verdreifacht**? Runden Sie auf ganze Jahre auf.",
+      "hint": "Zu (a)(i): $-1/(5n) = (-1/5)/n$, Standardformel anwenden. Zu (b): Geometrische Summenformel $\\sum_{k=1}^{n} q^k = q(q^n-1)/(q-1)$ oder $\\sum_{k=0}^{n} q^k - 1$ nutzen. Zu (c): $e^{0{,}04t} = 3$, dann Logarithmus und aufrunden.",
+      "solution": "### Teil (a)\n\n**(i)** $a_n = \\left(1 - \\dfrac{1}{5n}\\right)^{15n}$\n\nUmschreiben: $-\\frac{1}{5n} = \\frac{-1/5}{n}$, also\n$$a_n = \\left(1 + \\frac{-1/5}{n}\\right)^{15n} = \\left[\\left(1 + \\frac{-1/5}{n}\\right)^n\\right]^{15}$$\n\nMit $\\lim_{n\\to\\infty}(1+x/n)^n = e^x$ für $x = -1/5$:\n$$\\lim_{n\\to\\infty} a_n = (e^{-1/5})^{15} = e^{-15/5} = e^{-3} \\approx 0{,}0498$$\n\n**(ii)** $b_n = \\sqrt{2n^2+n} - \\sqrt{2n^2+n-4}$\n\nErweitern mit konjugiertem Ausdruck:\n$$b_n = \\frac{(2n^2+n) - (2n^2+n-4)}{\\sqrt{2n^2+n} + \\sqrt{2n^2+n-4}} = \\frac{4}{\\sqrt{2n^2+n} + \\sqrt{2n^2+n-4}}$$\n\nFür $n \\to \\infty$: $\\sqrt{2n^2+n} \\approx \\sqrt{2}\\,n$, beide Wurzeln $\\to \\sqrt{2}\\,n$, Nenner $\\to 2\\sqrt{2}\\,n \\to \\infty$:\n$$\\lim_{n\\to\\infty} b_n = \\frac{4}{\\infty} = 0$$\n\n### Teil (b)\n\nGesucht: $\\displaystyle\\sum_{k=1}^{15} 3 \\cdot 2^k$\n\nAusklammern von $3$:\n$$= 3 \\sum_{k=1}^{15} 2^k$$\n\nGeometrische Summe mit $q = 2$, $n = 15$, Index von $1$ bis $15$:\n$$\\sum_{k=1}^{15} 2^k = 2^1 + 2^2 + \\dots + 2^{15} = 2 \\cdot \\frac{2^{15}-1}{2-1} = 2(2^{15}-1) = 2 \\cdot 32767 = 65534$$\n\n(Alternativ: $\\sum_{k=0}^{15} 2^k = \\frac{2^{16}-1}{1} = 65535$, dann $k=0$-Term abziehen: $65535 - 1 = 65534$)\n\n$$\\sum_{k=1}^{15} 3 \\cdot 2^k = 3 \\cdot 65534 = \\boxed{196602}$$\n\n**Probe:** $3 \\cdot (2+4+8+\\ldots+2^{15})$. Letzte Terme: $2^{14} = 16384$, $2^{15} = 32768$. Gesamtsumme $2^{16}-2 = 65534$. $3 \\cdot 65534 = 196602$ ✓\n\n### Teil (c)\n\nGegeben: $K_0 = 2000$ €, $r = 0{,}04$, stetig, gesucht: Verdreifachungszeit (auf ganze Jahre aufrunden).\n\n**Schritt 1:** Gleichung aufstellen:\n$$2000 \\cdot e^{0{,}04 \\, t} = 6000$$\n\n**Schritt 2:** Vereinfachen:\n$$e^{0{,}04 \\, t} = 3$$\n\n**Schritt 3:** Logarithmus anwenden:\n$$0{,}04 \\, t = \\ln(3) \\approx 1{,}09861$$\n\n**Schritt 4:** Auflösen:\n$$t = \\frac{\\ln(3)}{0{,}04} = \\frac{1{,}09861}{0{,}04} \\approx 27{,}47 \\text{ Jahre}$$\n\n**Schritt 5:** Aufrunden auf ganze Jahre: $t = \\mathbf{28 \\text{ Jahre}}$\n\n**Probe bei $t = 27$:** $2000 \\cdot e^{0{,}04 \\cdot 27} = 2000 \\cdot e^{1{,}08} \\approx 2000 \\cdot 2{,}9447 \\approx 5889$ € < 6000 € → noch nicht verdreifacht.\n\n**Probe bei $t = 28$:** $2000 \\cdot e^{0{,}04 \\cdot 28} = 2000 \\cdot e^{1{,}12} \\approx 2000 \\cdot 3{,}0649 \\approx 6130$ € > 6000 € ✓ → verdreifacht."
+    }
+  ]
+}

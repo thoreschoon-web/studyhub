@@ -1,0 +1,425 @@
+{
+  "id": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+  "subjectId": "privatrecht",
+  "title": "BGB AT: Willenserklärung, Nichtigkeit und Anfechtung (Theorieteil 3)",
+  "summary": "Aufbau der Willenserklärung (objektiver/subjektiver Tatbestand), Nichtigkeitsgründe (§§ 116–118, 125, 134, 138 BGB) und Anfechtung (§§ 119, 120, 123 BGB) mit dem 6-Schritt-Schema, Fristen (§§ 121, 124 BGB) und Rechtsfolge (§ 142 BGB). Aufrechterhaltung fehlerhafter Rechtsgeschäfte (§§ 139–141 BGB).",
+  "order": 4,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "we-tatbestand",
+      "heading": "Die Willenserklärung: objektiver und subjektiver Tatbestand",
+      "body": "Eine **Willenserklärung (WE)** ist die auf die Herbeiführung einer Rechtsfolge gerichtete Äußerung des Willens einer Person. Jedes Rechtsgeschäft (Vertrag, einseitiges Gestaltungsrecht) setzt mindestens eine WE voraus.\n\n### Objektiver Tatbestand (konstitutiv)\nDer objektive Tatbestand ist das nach außen wahrnehmbare Verhalten. Er ist **konstitutiv** – ohne ihn existiert die WE rechtlich gar nicht. Eine WE kann **ausdrücklich** (Worte, Schrift, Zeichen) oder **konkludent** (schlüssiges Verhalten, z. B. Hinlegen des Geldes) erfolgen. Maßgeblicher Bewertungsmaßstab ist der **objektive Empfängerhorizont** (§§ 133, 157 BGB): Wie durfte ein verständiger Empfänger das Verhalten verstehen?\n\n**Schweigen** ist grundsätzlich keine WE – Ausnahmen: kaufmännisches Bestätigungsschreiben, gesetzliche Sonderregeln (§ 151 BGB).\n\n### Subjektiver Tatbestand (Wille)\nDer Wille teilt sich in drei Elemente:\n\n| Element | Inhalt | Fehlerfolge bei Fehlen |\n|---|---|---|\n| **Handlungswille** | Wille, überhaupt körperlich zu handeln | keine WE (z. B. Schlaf, Hypnose) |\n| **Erklärungsbewusstsein** | Einsicht, rechtlich erheblich zu handeln | potentielles Eb. → WE wirksam, Anfechtung möglich |\n| **Geschäftswille** | Wille, gerade dieses Rechtsgeschäft zu wollen | WE wirksam; Anfechtung möglich |",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Merksatz: Subjektiver Tatbestand",
+          "body": "Fehlt der **Handlungswille** → keine WE (z. B. Schlaf, Zwang, Hypnose).\nFehlt das **Erklärungsbewusstsein** → WE trotzdem wirksam (potentielles Eb. genügt), aber Anfechtung nach § 119 I BGB analog möglich.\nFehlt nur der **Geschäftswille** → WE wirksam, Anfechtung möglich (Irrtum)."
+        },
+        {
+          "kind": "beispiel",
+          "title": "Beispiel: Brot vom Wochenmarkt",
+          "body": "D zeigt auf ein Brot und legt passend Geld hin. Handlungswille (+), potentielles Erklärungsbewusstsein (+, D weiß, dass Zeigen im Markt als Angebot gilt), Geschäftswille (+). WE des D liegt vor – konkludent."
+        }
+      ]
+    },
+    {
+      "id": "nichtigkeitsgruende",
+      "heading": "Nichtigkeitsgründe im Überblick",
+      "body": "Eine WE/ein Rechtsgeschäft kann aus verschiedenen Gründen von Anfang an nichtig (unwirksam) sein. Man unterscheidet:\n\n### Willensmängel (§§ 116–118 BGB) – führen unmittelbar zur Nichtigkeit\n\n**Geheimer Vorbehalt (§ 116 BGB):** Der Erklärende meint innerlich das Gegenteil, denkt aber, der Empfänger merkt es. → WE ist wirksam (Vertrauensschutz); Ausnahme: Empfänger kennt den Vorbehalt → dann nichtig.\n\n**Scheingeschäft (§ 117 BGB):** Beide Parteien sind sich einig, dass die Erklärung nicht ernstlich gemeint ist (einvernehmliche Simulation). → WE nichtig. Ein verdecktes, 'dahinterstehendes' Geschäft kann aber wirksam sein (§ 117 II BGB), wenn es alle Wirksamkeitsvoraussetzungen erfüllt.\n\n**Scherzerklärung (§ 118 BGB):** Der Erklärende geht davon aus, der Empfänger werde den Scherz erkennen. → WE nichtig; aber Schadensersatz nach § 122 BGB möglich, wenn Empfänger auf die Erklärung vertraut hat.\n\n### Weitere Nichtigkeitsgründe\n\n| Grund | Norm | Inhalt |\n|---|---|---|\n| Geschäftsunfähigkeit | §§ 104, 105 BGB | Unter 7 J. oder dauernde geistige Störung → WE nichtig |\n| Formverstoß | § 125 BGB | Gesetzlich oder vertraglich vorgeschriebene Form fehlt → nichtig |\n| Gesetzesverstoß | § 134 BGB | Inhalt verstößt gegen zwingendes gesetzliches Verbot |\n| Sittenwidrigkeit | § 138 I BGB | Verstößt gegen das 'Anstandsgefühl aller billig und gerecht Denkenden' |\n| Wucher | § 138 II BGB | Auffälliges Missverhältnis Leistung/Gegenleistung + bewusste Ausbeutung einer Schwächesituation |",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "§ 134 BGB – Gesetzliches Verbot",
+          "body": "Ein Rechtsgeschäft, das gegen ein gesetzliches Verbot verstößt, ist nichtig. Maßgeblich ist, ob das Verbot gerade den Inhalt des Rechtsgeschäfts (Inhaltsmissbilligung) treffen soll. Verbote des öffentlichen Rechts oder des Privatrechts können genügen (z. B. § 211 StGB bei Auftragskiller-Vertrag)."
+        },
+        {
+          "kind": "definition",
+          "title": "§ 138 BGB – Sittenwidrigkeit und Wucher",
+          "body": "**§ 138 I BGB:** Nichtig ist ein Rechtsgeschäft, das gegen die guten Sitten verstößt. Fallgruppen: rücksichtslose Ausnutzung wirtschaftlicher Macht, Schädigung Dritter, Ausschluss der Privatautonomie.\n\n**§ 138 II BGB (Wucher):** Objektiv: grobes Missverhältnis zwischen Leistung und Gegenleistung. Subjektiv: bewusstes Ausnutzen einer Zwangslage, Unerfahrenheit, Urteilsschwäche oder erheblichen Willensschwäche."
+        }
+      ]
+    },
+    {
+      "id": "anfechtungsgruende",
+      "heading": "Anfechtungsgründe: Irrtümer, Täuschung und Drohung",
+      "body": "Ein anfechtbares Rechtsgeschäft ist zunächst **wirksam** – es wird erst durch die Ausübung des Gestaltungsrechts (Anfechtung) rückwirkend nichtig (§ 142 I BGB).\n\n### Irrtümer nach §§ 119, 120 BGB (innenbegründet)\n\n**Inhaltsirrtum (§ 119 I Alt. 1 BGB):** Der Erklärende misst seiner Erklärung eine andere Bedeutung bei, als ihr nach dem objektiven Empfängerhorizont zukommt. Bsp.: Erklärende denkt, er sage '100 Stück', meint aber '100 kg'.\n\n**Erklärungsirrtum (§ 119 I Alt. 2 BGB):** Die Erklärung weicht ungewollt vom gebildeten Willen ab: Versprechen, Verschreiben, Vergreifen. Bsp.: Bürgermeister schreibt aus Versehen '5,2 m' statt '2,5 m' Frontmeter.\n\n**Eigenschaftsirrtum (§ 119 II BGB):** Irrtum über eine verkehrswesentliche Eigenschaft der Person oder Sache. Wert an sich ist keine Eigenschaft (Motivirrtum). Bsp.: Irrtum über Kilometerstand eines Fahrzeugs (wenn im Kaufvertrag zugesichert).\n\n**Übermittlungsirrtum (§ 120 BGB):** Eine Mittelsperson (Bote) oder Übermittlungseinrichtung verfälscht die WE.\n\n**Kein Anfechtungsgrund:** bloßer **Motivirrtum** – wer irrig annimmt, dass er die Ware braucht oder dass sie einen bestimmten Wert hat. Der Eigenschaftsirrtum (§ 119 II) ist die eng begrenzte Ausnahme.\n\n### Außenbegründete Anfechtungsgründe (§ 123 BGB)\n\n**Arglistige Täuschung (§ 123 I Alt. 1 BGB):** Täuschungshandlung (Tun oder pflichtwidriges Unterlassen) → Irrtum des Erklärenden → Kausalität für WE. Subjektiv: Vorsatz bzgl. der Täuschung und des herbeizuführenden Irrtums (Arglist).\n\n**Widerrechtliche Drohung (§ 123 I Alt. 2 BGB):** Inaussichtstellen eines empfindlichen Übels, um die WE herbeizuführen. Rechtswidrigkeit ergibt sich aus Mittel oder Zweck-Mittel-Relation.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Abgrenzung Irrtümer",
+          "body": "**Inhaltsirrtum:** Erklärendem kommt Erklärung objektiv falsch vor (andere Bedeutung als gemeint).\n**Erklärungsirrtum:** Erklärung entsteht mechanisch falsch (verschrieben, versprochen).\n**Eigenschaftsirrtum:** Irrtum über wertbildende Faktoren, die der Sache unmittelbar anhaften (nicht den Wert selbst).\n**Motivirrtum:** Irrtum über Beweggründe → grundsätzlich unbeachtlich."
+        },
+        {
+          "kind": "info",
+          "title": "Offener Kalkulationsirrtum",
+          "body": "Ist die Berechnungsgrundlage für den Empfänger erkennbar, liegt ein Inhaltsirrtum vor (anfechtbar). Ist der Kalkulationsirrtum intern und für den Empfänger nicht erkennbar, ist er unbeachtlicher Motivirrtum."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "tab-anfecht-gruende",
+          "title": "Übersicht Anfechtungsgründe",
+          "headers": ["Grund", "Norm", "Frist", "Besonderheit"],
+          "rows": [
+            ["Inhaltsirrtum", "§ 119 I Alt. 1 BGB", "unverzüglich (§ 121 BGB)", "objektiver Empfängerhorizont maßgeblich"],
+            ["Erklärungsirrtum", "§ 119 I Alt. 2 BGB", "unverzüglich (§ 121 BGB)", "mechanischer Fehler"],
+            ["Eigenschaftsirrtum", "§ 119 II BGB", "unverzüglich (§ 121 BGB)", "nur verkehrswesentliche Eigenschaften"],
+            ["Übermittlungsirrtum", "§ 120 BGB", "unverzüglich (§ 121 BGB)", "fehlerhafte Übermittlung durch Bote/Einrichtung"],
+            ["Arglistige Täuschung", "§ 123 I BGB", "1 Jahr ab Kenntnis (§ 124 BGB)", "auch Täuschung durch Dritte beachtlich"],
+            ["Widerrechtliche Drohung", "§ 123 I BGB", "1 Jahr ab Ende Bedrohung (§ 124 BGB)", "max. 10 Jahre ab Abgabe"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anfechtungsschema",
+      "heading": "Prüfungsschema der Anfechtung (6 Schritte)",
+      "body": "Die Anfechtung ist ein **Gestaltungsrecht**: Wird sie wirksam ausgeübt, wird das Rechtsgeschäft rückwirkend (ex tunc) nichtig, § 142 I BGB. Das Prüfungsschema folgt dem Schema der Anspruchsprüfung.",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-anfechtungsschema",
+          "title": "6-Schritte-Schema der Anfechtung",
+          "caption": "Prüfungsreihenfolge für eine wirksame Anfechtung nach §§ 119 ff., 142 BGB",
+          "code": "graph TD\n    A[1. Anfechtbares Rechtsgeschäft\\nWirksame WE liegt vor] --> B[2. Anfechtungsgrund\\n§ 119 I/II, 120 oder 123 I BGB]\n    B --> C[3. Kausalität\\nIrrtum/Täuschung war ursächlich\\nfür Abgabe der WE]\n    C --> D[4. Anfechtungserklärung\\nempfangsbedürftige WE\\ngem. § 143 BGB]\n    D --> E[5. Anfechtungsgegner\\n§ 143 II BGB: Vertragspartner\\nbzw. Empfänger der WE]\n    E --> F[6. Anfechtungsfrist eingehalten\\n§ 119/120: unverzüglich § 121 BGB\\n§ 123: 1 Jahr § 124 BGB]\n    F --> G[Rechtsfolge: Nichtigkeit ex tunc\\n§ 142 I BGB\\nggf. Schadensersatz § 122 BGB]"
+        }
+      ],
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "§ 121 BGB – Anfechtungsfrist bei Irrtum",
+          "body": "Bei innenbegründeten Anfechtungsgründen (§§ 119, 120 BGB) muss die Anfechtung **ohne schuldhaftes Zögern (unverzüglich)** nach Kenntnis des Anfechtungsgrundes erfolgen. Absolute Ausschlussfrist: 10 Jahre ab Abgabe der WE."
+        },
+        {
+          "kind": "definition",
+          "title": "§ 124 BGB – Anfechtungsfrist bei § 123 BGB",
+          "body": "Bei arglistiger Täuschung und widerrechtlicher Drohung: **1 Jahr** ab Kenntnis der Täuschung bzw. Ende der Bedrohungslage. Absolute Ausschlussfrist: 10 Jahre ab Abgabe der WE."
+        },
+        {
+          "kind": "warning",
+          "title": "§ 122 BGB – Schadensersatz bei Anfechtung",
+          "body": "Wer wegen eines innenbegründeten Irrtums (§§ 119, 120 BGB) oder einer Scherzerklärung (§ 118 BGB) anficht, muss dem Anfechtungsgegner das **negative Interesse** (Vertrauensschaden) ersetzen – begrenzt auf das positive Interesse. Ausschluss, wenn der Geschädigte den Anfechtungsgrund kannte oder kennen musste (§ 122 II BGB)."
+        }
+      ]
+    },
+    {
+      "id": "rechtsfolgen-fehlerhaft",
+      "heading": "Rechtsfolgen fehlerhafter Rechtsgeschäfte und Aufrechterhaltung",
+      "body": "### Drei Kategorien fehlerhafter Rechtsgeschäfte\n\n**Nichtig:** Entfalten von Anfang an keine Rechtswirkung. Betroffen: §§ 104, 105, 116 S. 2, 117, 118, 125, 134, 138 BGB sowie nach wirksamer Anfechtung § 142 I BGB.\n\n**Schwebend unwirksam:** Wirksamkeit hängt von einer nachträglichen Genehmigung ab, z. B. Rechtsgeschäft eines beschränkt Geschäftsfähigen (§ 108 BGB) oder eines Vertreters ohne Vertretungsmacht (§ 177 BGB).\n\n**Anfechtbar:** Zunächst wirksam; erst nach Ausübung des Gestaltungsrechts (Anfechtungserklärung) rückwirkend nichtig.\n\n### Möglichkeiten der Aufrechterhaltung\n\n**Heilung von Formmängeln:** In Ausnahmefällen kann ein Formmangel geheilt werden, z. B. Schenkungsversprechen durch Vollzug (§ 518 II BGB), Grundstückskauf durch Auflassung und Eintragung (§ 311b I 2 BGB).\n\n**Umdeutung (§ 140 BGB):** Erfüllt ein nichtiges Rechtsgeschäft die Voraussetzungen eines anderen Rechtsgeschäfts, gilt dieses – wenn anzunehmen ist, dass es bei Kenntnis der Nichtigkeit gewollt wäre.\n\n**Bestätigung (§ 141 BGB):** Das nichtige Rechtsgeschäft wird erneut vorgenommen; dabei müssen alle Wirksamkeitsvoraussetzungen erfüllt sein.\n\n**Teilnichtigkeit (§ 139 BGB):** Ist nur ein Teil nichtig, ist grundsätzlich das gesamte Rechtsgeschäft nichtig – außer es ist anzunehmen, dass es auch ohne den nichtigen Teil vorgenommen worden wäre.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Rückwirkung der Anfechtung (ex tunc)",
+          "body": "§ 142 I BGB: Die Anfechtung wirkt **rückwirkend** auf den Zeitpunkt der Vornahme des Rechtsgeschäfts. Das Rechtsgeschäft gilt als von Anfang an nichtig. Bereits erbrachte Leistungen sind nach §§ 812 ff. BGB (ungerechtfertigte Bereicherung) zurückzuerstatten."
+        }
+      ]
+    },
+    {
+      "id": "zugangwirksamwerden",
+      "heading": "Wirksamwerden der Willenserklärung: Abgabe und Zugang",
+      "body": "### Empfangsbedürftige WE\nDie meisten WE im Rechtsverkehr sind **empfangsbedürftig**: Sie werden erst wirksam, wenn sie dem Empfänger zugehen (§ 130 I BGB).\n\n**Abgabe:** Der Erklärende muss alles getan haben, damit die WE den Empfänger erreichen kann (aus dem eigenen Machtbereich entlassen). Fehlt der Wille zur Abgabe (z. B. Brief noch auf Schreibtisch), liegt eine **abhanden gekommene WE** vor – grundsätzlich keine WE, aber Anfechtungsrecht besteht bei tatsächlichem Zugang.\n\n**Zugang unter Anwesenden:** WE geht zu, sobald sie vom Empfänger wahrgenommen werden kann (Vernehmungstheorie).\n\n**Zugang unter Abwesenden (§ 130 I BGB):** WE geht zu, wenn sie in den **Machtbereich** des Empfängers gelangt und nach den gewöhnlichen Umständen damit gerechnet werden kann, dass er von ihr **Kenntnis erlangt**. E-Mail im Spamordner: kein Zugang im Machtbereich, wenn der Empfänger damit nicht rechnen muss.\n\n**Widerruf (§ 130 I 2 BGB):** Eine WE kann widerrufen werden, wenn der Widerruf dem Empfänger vor oder gleichzeitig mit der WE zugeht.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Abhandenkommen vs. wirksame Abgabe",
+          "body": "A legt Brief auf dem Schreibtisch zur Überlegung beiseite → noch keine Abgabe. Reinigungskraft legt Brief versehentlich in Postausgang, Brief wird versandt → abhanden gekommene WE. Bei Zugang beim Empfänger: WE ist trotzdem zugegangen; A kann anfechten (fehlendes Erklärungsbewusstsein), muss aber Vertrauensschaden nach § 122 BGB ersetzen."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "bgb-we-fc1",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Was ist der objektive Tatbestand einer Willenserklärung und warum ist er konstitutiv?",
+      "back": "Das nach außen wahrnehmbare Verhalten (ausdrücklich oder konkludent), das nach dem objektiven Empfängerhorizont (§§ 133, 157 BGB) auf einen Rechtsbindungswillen schließen lässt. Konstitutiv bedeutet: ohne ihn existiert die WE rechtlich nicht."
+    },
+    {
+      "id": "bgb-we-fc2",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Was sind die drei Elemente des subjektiven Tatbestands der WE und was passiert, wenn jeweils eines fehlt?",
+      "back": "1. Handlungswille: fehlt → keine WE (z. B. Schlaf). 2. Erklärungsbewusstsein: fehlt → WE dennoch wirksam (potentielles Eb.), aber Anfechtung möglich. 3. Geschäftswille: fehlt → WE wirksam, aber Anfechtung möglich."
+    },
+    {
+      "id": "bgb-we-fc3",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Was ist der Unterschied zwischen Inhaltsirrtum (§ 119 I Alt. 1) und Erklärungsirrtum (§ 119 I Alt. 2)?",
+      "back": "Inhaltsirrtum: Erklärende legt seiner Erklärung subjektiv eine andere Bedeutung bei als ihr objektiv zukommt. Erklärungsirrtum: die Erklärung entsteht mechanisch falsch (Versprechen, Verschreiben, Vergreifen) – der Wille war richtig, die Äußerung nicht."
+    },
+    {
+      "id": "bgb-we-fc4",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Welche Anfechtungsfristen gelten für §§ 119/120 BGB bzw. § 123 BGB?",
+      "back": "§§ 119, 120 BGB: unverzüglich (ohne schuldhaftes Zögern) nach Kenntnis des Anfechtungsgrunds (§ 121 I BGB); absolute Ausschlussfrist 10 Jahre. § 123 BGB: 1 Jahr ab Kenntnis der Täuschung bzw. Ende der Bedrohung (§ 124 BGB); absolute Ausschlussfrist 10 Jahre."
+    },
+    {
+      "id": "bgb-we-fc5",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Was ist die Rechtsfolge einer wirksamen Anfechtung und was ist § 122 BGB?",
+      "back": "§ 142 I BGB: das angefochtene Rechtsgeschäft gilt als von Anfang an nichtig (ex tunc). § 122 BGB: Wer wegen innenbegründeten Irrtums anficht, muss dem anderen den Vertrauensschaden (negatives Interesse) ersetzen, begrenzt auf das positive Interesse."
+    },
+    {
+      "id": "bgb-we-fc6",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Was ist ein Scheingeschäft (§ 117 BGB) und was ist seine Rechtsfolge?",
+      "back": "Beide Parteien sind sich einig, dass die WE nicht ernstlich gemeint ist (einvernehmliche Simulation). Rechtsfolge: WE nichtig. Ein verdecktes Geschäft kann dennoch wirksam sein (§ 117 II BGB), sofern es alle Wirksamkeitsvoraussetzungen erfüllt."
+    },
+    {
+      "id": "bgb-we-fc7",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Wann ist ein Rechtsgeschäft nach § 134 BGB nichtig?",
+      "back": "Wenn es gegen ein gesetzliches Verbot verstößt – und zwar gegen ein zwingendes Verbot, das gerade den Inhalt (nicht nur die äußeren Umstände) des Rechtsgeschäfts missbilligt. Dispositives Recht begründet keinen Verstoß."
+    },
+    {
+      "id": "bgb-we-fc8",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Wann geht eine WE unter Abwesenden zu (§ 130 I BGB)?",
+      "back": "Wenn sie in den Machtbereich des Empfängers gelangt und nach gewöhnlichen Umständen damit zu rechnen ist, dass er von ihr Kenntnis erlangt. Bsp.: Brief im Briefkasten während üblicher Leerungszeit → zugegangen. E-Mail im Spam → fraglich."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "bgb-we-q1",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "leicht",
+      "prompt": "Welches Element der Willenserklärung ist 'konstitutiv' – d. h. ohne es existiert die WE rechtlich gar nicht?",
+      "options": ["Der Geschäftswille", "Der objektive Tatbestand", "Das Erklärungsbewusstsein", "Die Anfechtungsmöglichkeit"],
+      "correct": [1],
+      "explanation": "Der objektive Tatbestand (nach außen wahrnehmbares Verhalten) ist konstitutiv. Fehlt er, existiert die WE rechtlich nicht. Der subjektive Tatbestand (Wille) ist bei fehlendem Erklärungsbewusstsein oder Geschäftswillen zwar problematisch, führt aber in der Regel nur zur Anfechtbarkeit, nicht zum Fehlen der WE."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-we-q2",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "leicht",
+      "prompt": "Schweigen ist im deutschen Recht grundsätzlich eine Willenserklärung.",
+      "answer": false,
+      "explanation": "Schweigen ist grundsätzlich keine WE. Ausnahmen bestehen durch Gesetz (z. B. kaufmännisches Bestätigungsschreiben) oder durch vertragliche Vereinbarung."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-we-q3",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "mittel",
+      "prompt": "Welcher Irrtum berechtigt NICHT zur Anfechtung nach § 119 BGB?",
+      "options": [
+        "Inhaltsirrtum: Erklärende sagt versehentlich '1.000 Stück' statt '100 Stück'",
+        "Motivirrtum: Käufer kauft Jacke, weil er dachte es gebe einen kalten Winter",
+        "Eigenschaftsirrtum: Käufer irrt über den Kilometerstand eines Fahrzeugs",
+        "Erklärungsirrtum: Verkäufer schreibt versehentlich '500 Euro' statt '5.000 Euro'"
+      ],
+      "correct": [1],
+      "explanation": "Der Motivirrtum betrifft nur die inneren Beweggründe für die WE und ist grundsätzlich unbeachtlich. Er berechtigt nicht zur Anfechtung nach § 119 BGB. Der Eigenschaftsirrtum (§ 119 II) ist die eng begrenzte Ausnahme für Motivirrtümer, die sich auf verkehrswesentliche Eigenschaften beziehen."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-we-q4",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "mittel",
+      "prompt": "G erklärt schriftlich, er biete für 1.500 € an, obwohl er intern 2.500 € verlangt und dies dem Empfänger auch mitteilt. Beide wissen, dass die schriftliche Erklärung nicht ernst gemeint ist. Welche Norm ist einschlägig?",
+      "options": ["§ 116 BGB – geheimer Vorbehalt", "§ 117 BGB – Scheingeschäft", "§ 118 BGB – Scherzerklärung", "§ 119 I BGB – Inhaltsirrtum"],
+      "correct": [1],
+      "explanation": "§ 117 BGB: Beide Parteien sind sich einig, dass die Erklärung über 1.500 € nicht ernstlich gilt (einvernehmliche Simulation). Das ist das Scheingeschäft. Das dahinterstehende Geschäft über 2.500 € kann nach § 117 II BGB wirksam sein."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-we-q5",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "mittel",
+      "prompt": "Die Anfechtung eines Vertrags wegen arglistiger Täuschung (§ 123 BGB) muss unverzüglich nach Kenntnis des Anfechtungsgrunds erfolgen.",
+      "answer": false,
+      "explanation": "Falsch. Bei § 123 BGB gilt die Frist des § 124 BGB: 1 Jahr ab Kenntnis der Täuschung. Unverzüglich (§ 121 BGB) gilt nur für die innenbegründeten Irrtümer (§§ 119, 120 BGB)."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-we-q6",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "mittel",
+      "prompt": "Was ist die Rechtsfolge einer wirksamen Anfechtung nach § 142 I BGB?",
+      "options": [
+        "Das Rechtsgeschäft wird ex nunc (ab jetzt) unwirksam",
+        "Das Rechtsgeschäft gilt als von Anfang an (ex tunc) nichtig",
+        "Das Rechtsgeschäft wird schwebend unwirksam",
+        "Das Rechtsgeschäft bleibt wirksam, aber es entsteht ein Schadensersatzanspruch"
+      ],
+      "correct": [1],
+      "explanation": "§ 142 I BGB: Wird ein anfechtbares Rechtsgeschäft angefochten, so ist es als von Anfang an nichtig anzusehen (ex tunc). Bereits erbrachte Leistungen sind nach Bereicherungsrecht (§§ 812 ff. BGB) zurückzuerstatten."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-we-q7",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "schwer",
+      "prompt": "R kauft einen Oldtimer für 330.000 €. K beschreibt ihn als 'super Zustand' mit 800 km Laufleistung. Tatsächlich hat er 80.000 km und einen versteckten Unfallschaden. K wusste dies. Welcher Anfechtungsgrund kommt vorrangig in Betracht?",
+      "options": [
+        "§ 119 I Alt. 1 BGB – Inhaltsirrtum",
+        "§ 119 II BGB – Eigenschaftsirrtum",
+        "§ 123 I BGB – arglistige Täuschung",
+        "§ 118 BGB – Scherzerklärung"
+      ],
+      "correct": [2],
+      "explanation": "K hat aktiv falsche Angaben zum Zustand und Kilometerstand gemacht und damit arglistig getäuscht (§ 123 I BGB). Die Anfechtungsfrist beträgt 1 Jahr ab Kenntnis der Täuschung (§ 124 BGB). Zusätzlich kommt § 119 II BGB (Eigenschaftsirrtum über Kilometerstand/Unfallschaden) in Betracht, aber § 123 BGB geht weiter, weil keine Schadensersatzpflicht nach § 122 BGB entsteht."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-we-q8",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "leicht",
+      "prompt": "Ein Vertrag, der gegen § 211 StGB (Mord) verstößt, ist nach § 134 BGB nichtig.",
+      "answer": true,
+      "explanation": "§ 134 BGB: Rechtsgeschäfte, die gegen ein gesetzliches Verbot verstoßen, sind nichtig. § 211 StGB ist ein gesetzliches Verbot, das gerade einen Tötungsauftrag inhaltlich missbilligt. Der Werkvertrag über einen Auftragsmord ist damit nichtig."
+    },
+    {
+      "kind": "freetext",
+      "id": "bgb-we-q9",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "schwer",
+      "prompt": "Bürgermeister B verschreibt sich im Vertragsangebot und schreibt '5,2 m' statt '2,5 m' Frontmeter. Zwei Wochen später erklärt er die Anfechtung. Prüfen Sie kurz, ob die Anfechtung wirksam ist.",
+      "sampleAnswer": "1. Anfechtbares RG: Mietvertrag mit WE des B. 2. Anfechtungsgrund: Erklärungsirrtum § 119 I Alt. 2 BGB (Verschreiben). 3. Kausalität: Bei Kenntnis hätte B nicht mit '5,2 m' angeboten. 4. Anfechtungserklärung: gegenüber Vertragspartnerin B (§ 143 II BGB). 5. Anfechtungsgegner: korrekt. 6. Frist: Anfechtung muss unverzüglich erfolgen (§ 121 BGB). Zwei Wochen Zögerung sind i.d.R. nicht 'unverzüglich' → Frist versäumt → Anfechtung unwirksam.",
+      "keywords": ["Erklärungsirrtum", "119", "unverzüglich", "121", "Frist", "verschreiben"],
+      "explanation": "Der Erklärungsirrtum (§ 119 I Alt. 2 BGB) ist einschlägig. Die Anfechtungsfrist des § 121 BGB verlangt unverzügliches Handeln. Zwei Wochen ohne sachlichen Grund gelten regelmäßig als schuldhaftes Zögern."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-we-q10",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "difficulty": "mittel",
+      "prompt": "Was bedeutet 'Teilnichtigkeit' nach § 139 BGB?",
+      "options": [
+        "Das gesamte Rechtsgeschäft ist immer nichtig, wenn ein Teil nichtig ist",
+        "Nur der nichtige Teil ist unwirksam, der Rest bleibt wirksam",
+        "Das gesamte Rechtsgeschäft ist grundsätzlich nichtig, außer es ist anzunehmen, es wäre auch ohne den nichtigen Teil vorgenommen worden",
+        "Der nichtige Teil wird automatisch nach § 140 BGB umgedeutet"
+      ],
+      "correct": [2],
+      "explanation": "§ 139 BGB: Grundsatz ist die Gesamtnichtigkeit. Ausnahme: Es ist anzunehmen, dass das Rechtsgeschäft auch ohne den nichtigen Teil vorgenommen worden wäre (hypothetischer Parteiwille). Dann bleibt der Rest wirksam."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "bgb-we-ex1",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Besprechungsfall 3.1 – Das Brot vom Wochenmarkt",
+      "source": "Praxisteil 3, Besprechungsfall 3.1",
+      "type": "fall",
+      "difficulty": "leicht",
+      "hasOfficialSolution": false,
+      "prompt": "B betreibt eine Bäckerei auf dem Wochenmarkt. D zeigt auf ein Brot, B packt es ein und legt es auf den Tresen. D legt passend Geld hin, B legt es in die Kasse, D nimmt das Brot. Liegen wirksame WE des D und B vor?\n\n**Abwandlung 1:** D kauft zum ersten Mal bei B und geht davon aus, es sei ein Roggenbrot; tatsächlich ist es ein Weizenbrot.\n\n**Abwandlung 2:** D sagt lachend 'ich kaufe alles', woraufhin B beginnt, alle Brote einzupacken.",
+      "hint": "Prüfen Sie objektiven und subjektiven Tatbestand für D und B. Beachten Sie bei der Abwandlung den Geschäftswillen und das Erklärungsbewusstsein.",
+      "solution": "## Grundfall\n\n**WE des D:** Obersatz: D könnte durch Zeigen auf das Brot eine wirksame WE abgegeben haben.\n\n*Objektiver Tatbestand:* Das Zeigen auf das Brot ist ein konkludentes Verhalten, das nach dem objektiven Empfängerhorizont (§§ 133, 157 BGB) als Angebot zum Kauf zu verstehen ist (+).\n\n*Subjektiver Tatbestand:* Handlungswille: D handelt bewusst und gewollt (+). Erklärungsbewusstsein: D weiß, dass sein Verhalten auf dem Wochenmarkt als rechtlich erheblich gilt (+). Geschäftswille: D will genau diesen Kauf (+).\n\n*Ergebnis:* WE des D liegt wirksam vor.\n\n**WE des B:** B packt das Brot ein und nimmt das Geld. Dies ist konkludent als Annahme des Angebots zu verstehen. Alle Tatbestandselemente liegen vor (+). Ergebnis: WE des B liegt vor.\n\n*Gesamtergebnis:* Wirksamer Kaufvertrag gem. §§ 433, 145, 147 BGB.\n\n---\n\n## Abwandlung 1\n\nD irrt über die Sorte des Brotes (Roggen statt Weizen). Die WE des D liegt objektiv und subjektiv vor (Handlungs-, Erklärungsbewusstsein, Geschäftswille alle +). Der Irrtum betrifft den **Geschäftswillen** (D wollte Roggenbrot, hat aber Weizenbrot gekauft). Dies ist ein **Eigenschaftsirrtum gem. § 119 II BGB**, da die Brotsorte eine verkehrswesentliche Eigenschaft der Sache ist. D kann anfechten (§ 119 II BGB), muss aber ggf. Vertrauensschaden nach § 122 BGB ersetzen. Die WE ist zunächst wirksam.\n\n---\n\n## Abwandlung 2\n\nD sagt lachend 'ich kaufe alles'. Es fehlt der **Geschäftswille** – D meinte das offensichtlich nicht ernst. Fraglich ist, ob überhaupt eine WE vorliegt. Nach dem objektiven Empfängerhorizont durfte B angesichts des Lachens und des Kontexts (Lotto-Gewinn) erkennen, dass D scherzt. Es liegt eine **Scherzerklärung i.S.d. § 118 BGB** vor → WE nichtig. Kein wirksames Angebot des D. Sollte B dennoch Schaden erleiden (Aufwand für Einpacken), kann § 122 BGB analog oder § 311 II BGB in Betracht kommen."
+    },
+    {
+      "id": "bgb-we-ex2",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Besprechungsfall 3.2 – Die verspätete Zahlung des Malers",
+      "source": "Praxisteil 3, Besprechungsfall 3.2",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "G will seine Fassade von Maler M streichen lassen. Im schriftlichen Angebot steht 1.500 €, aber M teilt G mit, dass 2.500 € zu zahlen sind. G ist einverstanden. Liegen wirksame WE vor?\n\n**Abwandlung:** M weiß, dass G ihn nur beauftragt hat, um der Denkmalschutzbehörde Aktivität zu zeigen, ohne wirklich eine Streichen zu beabsichtigen.",
+      "solution": "## Grundfall\n\nObersatz: Es könnte ein wirksames Scheingeschäft gem. § 117 BGB vorliegen.\n\n**§ 117 I BGB – Scheingeschäft:** M und G sind sich einig, dass das schriftliche Angebot über 1.500 € nicht ernstlich gemeint ist (beide wissen, dass 2.500 € gelten sollen). Das schriftliche Angebot ist einvernehmlich simuliert → **Scheingeschäft: WE (1.500 €) nichtig, § 117 I BGB**.\n\n**§ 117 II BGB – verdecktes Geschäft:** Das 'dahinterstehende' mündliche Geschäft über 2.500 € soll das eigentlich gewollte sein. Nach § 117 II BGB ist es wirksam, wenn es alle Wirksamkeitsvoraussetzungen erfüllt. Hinweis: Formvorschriften (Schriftform) sind hier nicht einschlägig, da Werkverträge formfrei sind (§ 631 BGB). *Ergebnis:* Das verdeckte Geschäft über 2.500 € ist wirksam.\n\n---\n\n## Abwandlung\n\nG hat M nur beauftragt, um der Behörde Aktivität zu zeigen – ohne wirklich Streichen zu wollen. Beide wissen dies nicht voneinander; es ist also kein Scheingeschäft (§ 117 BGB) mangels Einvernehmlichkeit. Es liegt ein **geheimer Vorbehalt des G** gem. § 116 BGB vor: G erklärt äußerlich seine Zustimmung, meint sie innerlich aber nicht. **§ 116 S. 1 BGB:** Die WE ist dennoch wirksam – der geheime Vorbehalt schadet grundsätzlich nicht (Vertrauensschutz des M). *Ergebnis:* Wirksamer Werkvertrag."
+    },
+    {
+      "id": "bgb-we-ex3",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Besprechungsfall 3.3 – Der neue Oldtimer",
+      "source": "Praxisteil 3, Besprechungsfall 3.3",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "R kauft Oldtimer von K für 330.000 €. Anzeige: 'super Zustand', 'vergleichbar mit Neufahrzeug', 800 km Tachostand. Nach sechs Monaten: versteckter Unfallschaden (für Laien nicht erkennbar), tatsächliche Laufleistung mind. 80.000 km. R möchte Kauf rückgängig machen. Konnte R seine WE wirksam anfechten?\n\n**Abwandlung:** Oldtimer ohne Zustandsbeschreibung inseriert, aber K verschweigt R arglistig den Unfallschaden.",
+      "solution": "## Grundfall\n\nObersatz: R könnte den Kaufvertrag gem. §§ 119 II, 143 BGB wirksam angefochten haben.\n\n**1. Anfechtbares RG:** Kaufvertrag gem. § 433 BGB wurde geschlossen (+).\n\n**2. Anfechtungsgrund – § 119 II BGB (Eigenschaftsirrtum):** R hat sich über den Kilometerstand (800 km statt 80.000 km) und den Fahrzeugzustand geirrt. Kilometerstand und Unfallfreiheit sind **verkehrswesentliche Eigenschaften** eines Fahrzeugs (unmittelbar wertbildende Faktoren). R irrte bei Abgabe seiner WE über diese Eigenschaften → § 119 II BGB (+).\n\nAlternativ: **§ 123 I BGB (arglistige Täuschung):** K hat aktiv falsche Angaben in der Anzeige gemacht ('800 km', 'super Zustand'). Dies ist eine Täuschungshandlung, die kausal für den Irrtum und die WE des R war. K handelte mit Vorsatz bezgl. der Täuschung (Arglist) (+). Anfechtungsgrund § 123 I BGB (+).\n\n**3. Kausalität:** R hätte den Oldtimer bei Kenntnis des wahren Zustands nicht oder nicht zu diesem Preis gekauft (+).\n\n**4. Anfechtungserklärung:** R teilt K mit, den Kauf rückgängig machen zu wollen → Anfechtungserklärung i.S.d. § 143 I BGB (+).\n\n**5. Anfechtungsgegner:** K als Vertragspartner, § 143 II BGB (+).\n\n**6. Frist:** Bei § 119 II: unverzüglich nach Kenntnis (§ 121 BGB). R handelte 'umgehend' nach Feststellung durch Werkstatt (+). Bei § 123: 1 Jahr ab Kenntnis (§ 124 BGB) (+).\n\n**Rechtsfolge:** WE des R gilt als von Anfang an nichtig, § 142 I BGB. Rückabwicklung nach §§ 812 ff. BGB. Bei § 123 BGB: kein Schadensersatz nach § 122 BGB (Vorteil gegenüber § 119).\n\n*Ergebnis:* Anfechtung wirksam. Kaufvertrag ex tunc nichtig.\n\n---\n\n## Abwandlung\n\nOhne aktive Falschangaben, aber K verschweigt den Unfallschaden. Fraglich: Begründet Schweigen eine Täuschungshandlung? Ja, wenn eine **Offenbarungspflicht** besteht. K als Verkäufer ist verpflichtet, ihm bekannte, für den Käufer wesentliche Mängel (hier: Unfallschaden) ungefragt mitzuteilen. Das arglistige Verschweigen steht einer aktiven Täuschung gleich (pflichtwidriges Unterlassen). § 123 I BGB (+). Ergebnis: Anfechtung wirksam."
+    },
+    {
+      "id": "bgb-we-ex4",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Besprechungsfall 3.4 – Der Stand auf dem Wochenmarkt",
+      "source": "Praxisteil 3, Besprechungsfall 3.4",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Bürgermeister der Stadt S verschreibt sich im Mietangebot: 5,2 statt 2,5 Frontmeter. Er bemerkt dies, hat aber zunächst keine Zeit und erklärt erst zwei Wochen später der B, er habe sich verschrieben und wolle den Vertrag rückgängig machen. B besteht auf Erfüllung. Konnte S wirksam anfechten?",
+      "solution": "Obersatz: S könnte den Mietvertrag gem. §§ 119 I Alt. 2, 143 BGB wirksam angefochten haben.\n\n**1. Anfechtbares RG:** Mietvertrag gem. § 535 BGB (+).\n\n**2. Anfechtungsgrund – § 119 I Alt. 2 BGB (Erklärungsirrtum):** Der Bürgermeister hat sich verschrieben ('5,2 m' statt '2,5 m'). Die Erklärung weicht ungewollt vom gebildeten Willen ab → Erklärungsirrtum (+).\n\n**3. Kausalität:** S hätte bei Kenntnis des Fehlers das Angebot nicht mit '5,2 m' abgegeben (+).\n\n**4./5. Anfechtungserklärung ggü. B als Vertragspartnerin:** Erklärung gegenüber B (+).\n\n**6. Anfechtungsfrist – § 121 BGB:** Die Anfechtung muss **unverzüglich** (ohne schuldhaftes Zögern) nach Kenntnis des Anfechtungsgrunds erfolgen. S bemerkte den Fehler, wartete jedoch **zwei Wochen** ohne sachlichen Grund. Zwei Wochen Zögerung ohne Rechtfertigungsgrund sind in der Regel **nicht mehr unverzüglich** → Frist abgelaufen.\n\n*Ergebnis:* Die Anfechtung ist wegen Fristversäumnis **unwirksam**. S ist an den Mietvertrag über 5,2 Frontmeter gebunden. B kann auf Erfüllung bestehen."
+    },
+    {
+      "id": "bgb-we-ex5",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Besprechungsfall 3.5 – Die neuen Fässer für die Winzerei",
+      "source": "Praxisteil 3, Besprechungsfall 3.5",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "A verfasst Brief an K (Bestellung von Fässern), steckt ihn ins Kuvert, lässt ihn aber auf dem Schreibtisch liegen. Reinigungskraft legt Brief abends in den Postausgang; Bürokraft sendet ihn am nächsten Tag ab. K beginnt sofort mit Herstellung. Als A den Brief sucht, teilt er K mit, dass er Fässer im Großhandel bestellen wolle. Liegen wirksame WE vor?\n\n**Abwandlung:** A bestellt per Brief, zieht die Bestellung aber telefonisch zurück, bevor der Brief bei K ankommt.",
+      "solution": "## Grundfall\n\n**Frage 1: Liegt eine wirksame WE des A vor?**\n\n*Abgabe:* A hat das Schreiben verfasst und eingetütet, aber noch nicht abgegeben – er wollte eine Nacht darüber schlafen. Die Reinigungskraft hat den Brief ohne Wissen und Willen des A abgesandt. A hat nicht alles getan, damit die WE den Empfänger erreicht; es fehlt der **Abgabewille**. Damit ist eine **abhanden gekommene WE** gem. § 130 BGB anzunehmen → die WE ist grundsätzlich nicht wirksam abgegeben worden.\n\n*Konsequenz:* Allerdings ist die WE zugegangen (Brief bei K). Trotzdem begründet das Abhandenkommen keine wirksame Abgabe. Kein wirksamer Vertragsschluss.\n\n*Anfechtung möglich:* Sollte man einen Zugang bejahen (manche Ansicht: Zugang genügt), könnte A seine WE gem. § 119 I BGB (fehlendes Erklärungsbewusstsein) anfechten und muss Vertrauensschaden nach § 122 BGB ersetzen.\n\n*Ergebnis:* Keine wirksame WE des A → kein Vertrag.\n\n---\n\n## Abwandlung\n\nA schickt den Brief bewusst ab (wirksame Abgabe). Dann ruft er K an, bevor der Brief eingeworfen wird. Fraglich: wirksamer Widerruf gem. § 130 I 2 BGB? Der Widerruf muss dem Empfänger **vor oder gleichzeitig** mit der WE zugehen. Hier geht der Anruf (Widerruf) dem K zu, bevor der Brief eingeworfen wird → Widerruf ist rechtzeitig. **Ergebnis:** WE des A ist widerrufen; kein Vertragsschluss."
+    },
+    {
+      "id": "bgb-we-ex6",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Besprechungsfall 3.7 – Das neue alte Besteckservice",
+      "source": "Praxisteil 3, Besprechungsfall 3.7",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "P kauft bei Antiquar A ein altes Besteckservice für 2.000 €. P hat keine Ahnung von alten Bestecken. Wochen später stellt er fest, dass das Service max. 50 € wert ist. Ist ein wirksames Rechtsgeschäft zustande gekommen?\n\n**Abwandlung:** P ersteigert auf einer Auktionsplattform ein Besteckservice (Wert 2.000 €) für 50 €.",
+      "solution": "## Grundfall\n\nObersatz: P könnte den Kaufvertrag wirksam angefochten haben, sodass kein Rechtsgeschäft (mehr) besteht.\n\n**Anfechtungsgrund:** P irrt über den Wert des Besteckservices. Der **Wert einer Sache ist keine verkehrswesentliche Eigenschaft** i.S.d. § 119 II BGB – er ergibt sich aus allen Umständen, haftet der Sache aber nicht unmittelbar an. Es liegt ein bloßer **Motivirrtum** vor, der grundsätzlich unbeachtlich ist. Kein Anfechtungsgrund nach §§ 119, 120, 123 BGB ersichtlich.\n\n*Ergebnis:* Der Kaufvertrag über 2.000 € ist wirksam zustande gekommen. P hat keinen Anfechtungsgrund.\n\n---\n\n## Abwandlung\n\nP ersteigert einen Gegenstand (Wert 2.000 €) für 50 €. Hier ist P derjenige, der den Vorteil hat. A (Verkäufer) könnte anfechten wegen Eigenschaftsirrtum über den Wert – aber wie im Grundfall: Wert ist kein Anfechtungsgrund nach § 119 II BGB. Kein Anfechtungsrecht. **Der Vertrag über 50 € ist wirksam.**"
+    },
+    {
+      "id": "bgb-we-ex7",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Vertiefungsfall 3.1 – Der Kaffee wider Willen",
+      "source": "Praxisteil 3, Vertiefungsfall 3.1",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "U schläft im Café ein und antwortet im Schlaf auf die Frage des Kellners K 'noch einen Kaffee?' mit 'ja'. Liegt eine wirksame WE des U vor?\n\n**Abwandlung 1:** U ist in sein Lehrbuch vertieft und denkt, K frage nur, ob der Kaffee geschmeckt habe.\n\n**Abwandlung 2:** K stellt unaufgefordert einen Kaffee hin; U weist ihn nicht zurück, lässt ihn aber unangerührt stehen.",
+      "solution": "## Grundfall\n\nObersatz: U könnte durch sein 'ja' eine wirksame WE abgegeben haben.\n\n*Objektiver Tatbestand:* Das Ja-Sagen auf die Frage, ob man noch einen Kaffee möchte, ist ein Verhalten, das nach dem objektiven Empfängerhorizont als Annahme zu verstehen ist (+).\n\n*Subjektiver Tatbestand – Handlungswille:* U schläft. Im Schlaf kann keine durch den Willen gesteuerte Handlung vorgenommen werden → **Handlungswille fehlt** → keine WE des U.\n\n*Ergebnis:* Keine wirksame WE. Kein Vertrag.\n\n---\n\n## Abwandlung 1\n\nU sagt 'ja', meint aber, er antworte auf die Frage nach dem Geschmack. Objektiver Tatbestand: 'ja' auf Frage nach weiterem Kaffee wirkt wie Bestellung. Handlungswille: U handelt wach und bewusst (+). Erklärungsbewusstsein: U glaubt, eine nicht rechtserhebliche Aussage zu machen (über Geschmack). Entscheidend ist das **potentielle Erklärungsbewusstsein**: Hätte U bei gehöriger Sorgfalt erkennen können, dass seine Antwort als rechtlich erheblich aufgefasst wird? Bei einem Café-Gespräch mit Kellner zum Kaffeekonsum: Ja – potentielles Erklärungsbewusstsein (+). WE wirksam. U kann aber wegen fehlendem Geschäftswillen (Eigenschaftsirrtum / Inhaltsirrtum § 119 I Alt. 1 BGB) anfechten.\n\n---\n\n## Abwandlung 2\n\nK stellt unaufgefordert Kaffee hin; U schweigt und lässt ihn stehen. **Schweigen ist grundsätzlich keine WE.** Eine Annahme durch Schweigen/Unterlassen kommt nur in Ausnahmefällen in Betracht (kaufmännisches Bestätigungsschreiben, gesetzl. Sonderregeln). Hier kein solcher Ausnahmefall. **Ergebnis:** Keine WE des U, kein Vertrag. K kann für den Kaffee keine Vergütung verlangen."
+    },
+    {
+      "id": "bgb-we-ex8",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Vertiefungsfall 3.2 – Das falsche Eis",
+      "source": "Praxisteil 3, Vertiefungsfall 3.2",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "A zeigt im Kiosk auf ein grünes Eis. Er erhält und bezahlt es, stellt aber fest, dass es Pistazie statt Waldmeister ist. A möchte anfechten (Hinweis: A beachtete das Schild mit dem Geschmack nicht bzw. konnte es wegen Sehschwäche nicht lesen). Liegt eine wirksame WE des A vor?",
+      "solution": "Obersatz: A könnte die WE (Angebot zum Kauf des Eises) wirksam angefochten haben.\n\n**WE des A:** Das Zeigen auf das Eis ist eine konkludente WE. Objektiver Tatbestand (+), Handlungswille (+), Erklärungsbewusstsein (+), Geschäftswille: A wollte Waldmeister kaufen, nicht Pistazie. Ein **Irrtum** liegt vor.\n\n**Anfechtungsgrund:** Der Irrtum über den Eisgeschmack ist ein **Eigenschaftsirrtum (§ 119 II BGB)** – der Geschmack (Pistazie/Waldmeister) ist eine verkehrswesentliche Eigenschaft des Eises. A irrte bei Abgabe seiner WE über diese Eigenschaft (+).\n\n**Kausalität:** Hätte A gewusst, dass es Pistazie ist, hätte er das Eis nicht gekauft (+).\n\n**Anfechtungserklärung:** A gegenüber S (+); Anfechtungsgegner: S als Vertragspartner (+). Frist: A handelt unverzüglich (§ 121 BGB) nach Erkennen (+).\n\n**Rechtsfolge:** Kaufvertrag ex tunc nichtig (§ 142 I BGB). A muss Eis zurückgeben, S Kaufpreis zurückerstatten. Achtung: A muss nach § 122 BGB ggf. Vertrauensschaden des S ersetzen.\n\n*Ergebnis:* Wirksame Anfechtung gem. § 119 II BGB."
+    },
+    {
+      "id": "bgb-we-ex9",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Vertiefungsfall 3.3 – Das Erbe und das neue alte Besteckservice",
+      "source": "Praxisteil 3, Vertiefungsfall 3.3",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "P erbt von Onkel O (handschriftliches, eigenhändig unterschriebenes Testament gem. § 2247 BGB). P kauft bei Antiquar A ein 'silbernes' Besteckservice und stellt Wochen später fest, dass es nur versilbert ist. Er verlangt Geld zurück. Liegen wirksame WE vor?\n\n**Abwandlung:** P kauft Besteckservice für Geburtstagsfeier des O; O stirbt unerwartet vorher.",
+      "solution": "## Grundfall\n\n**Vorfrage Testament:** Das handschriftlich verfasste und eigenhändig unterschriebene Dokument erfüllt die Anforderungen des § 2247 I BGB → wirksames Testament → P ist Alleinerbe → P hat Geschäftsfähigkeit und Mittel.\n\n**WE des P beim Kauf:** Alle Tatbestandselemente der WE liegen vor; P kauft bewusst und gewollt (+). Wirksamer Kaufvertrag.\n\n**Anfechtungsgrund:** P irrte über die Eigenschaft des Besteckservices (Silber vs. versilbert). Die Zusammensetzung/Material ist eine **verkehrswesentliche Eigenschaft** der Sache → **Eigenschaftsirrtum gem. § 119 II BGB** (+). Kausalität: P hätte das Service nicht für 2.000 € gekauft, wenn er gewusst hätte, dass es nur versilbert ist (+). Frist: P handelt unverzüglich nach Entdeckung (+).\n\n*Ergebnis:* Anfechtung wirksam, § 142 I BGB. Kaufvertrag ex tunc nichtig. Rückabwicklung.\n\n---\n\n## Abwandlung\n\nP kauft das Service für O's Geburtstagsfeier. O stirbt vor dem Geburtstag. P kann das Service nun nicht mehr sinnvoll nutzen. Dies ist ein **Motivirrtum** – P hat sich über seinen Beweggrund (Nutzungszweck) geirrt, nicht über eine Eigenschaft des Service. Motivirrtümer sind grundsätzlich unbeachtlich. Kein Anfechtungsgrund nach § 119 II BGB. **Ergebnis:** Kaufvertrag wirksam; P bleibt gebunden."
+    },
+    {
+      "id": "bgb-we-ex10",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Vertiefungsfall 3.4 – Der Gartentisch von der Internetplattform",
+      "source": "Praxisteil 3, Vertiefungsfall 3.4",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "O schreibt H eine E-Mail und bietet an, den Gartentisch zum angegebenen Preis zu kaufen. H antwortet umgehend, dass er den Tisch an O verkauft. Diese Antwort-E-Mail landet im Spamordner des O. Liegt eine wirksame WE des H vor?\n\n**Abwandlung:** O und H telefonieren; O versteht H wegen eines Tinnitus' nur bruchstückhaft, teilt dies H aber nicht mit.",
+      "solution": "## Grundfall\n\nObersatz: H könnte durch seine Antwort-E-Mail eine wirksame WE (Annahme) abgegeben haben, die dem O zugegangen ist.\n\n**WE des H:** H verfasst und sendet eine E-Mail → wirksame WE des H abgegeben (+). Objektiver Tatbestand (+), alle subjektiven Elemente (+).\n\n**Zugang:** Die WE muss O zugehen (§ 130 I BGB). **Zugang unter Abwesenden:** WE muss in den Machtbereich des Empfängers gelangen und O muss nach gewöhnlichen Umständen mit Kenntnisnahme rechnen können. Eine E-Mail im **Spamordner** gelangt zwar technisch auf den Mailserver des O, jedoch kann O üblicherweise nicht damit rechnen, dass geschäftliche E-Mails im Spam landen. Der Spamordner ist nicht der normale Machtbereich für den Posteingang. **Kein Zugang** → WE des H ist abgegeben, aber O nicht zugegangen.\n\n*Ergebnis:* Keine wirksame WE mit Zugangswirkung; kein Vertragsschluss.\n\n---\n\n## Abwandlung\n\nO versteht H nur bruchstückhaft, teilt dies aber nicht mit. O nimmt Erklärung entgegen. Nach der **Vernehmungstheorie** unter Anwesenden: WE geht zu, sobald der Empfänger sie wahrnehmen **kann**. O hätte H unterbrechen und auf sein Nichtverstehen hinweisen müssen (Obliegenheit). Da O dies nicht tut und so tut, als habe er verstanden, kann er sich nicht auf fehlendem Zugang berufen. **Ergebnis:** WE des H ist zugegangen; Vertragsschluss möglich. O kann ggf. wegen Inhaltsirrtum (§ 119 I BGB) anfechten, wenn er irrtümlich einer bestimmten Aussage eine andere Bedeutung beigemessen hat."
+    },
+    {
+      "id": "bgb-we-ex11",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "label": "Vertiefungsfall 3.5 – Der freischaffende Auftragskiller",
+      "source": "Praxisteil 3, Vertiefungsfall 3.5",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Mafiosi M beauftragt Auftragskiller K gegen 15.000 €, Gastronom G zu töten. K ist einverstanden. Ist der Werkvertrag (§ 631 BGB) wirksam zustande gekommen?",
+      "solution": "Obersatz: M könnte gegen K einen Anspruch auf Durchführung des Auftrags aus § 631 I BGB haben. Fraglich ist, ob ein wirksamer Werkvertrag zustande gekommen ist.\n\n**Vertragsschluss:** M fragt an, K stimmt zu → Angebot (§ 145 BGB) und Annahme (§ 147 BGB) liegen vor. Beide WE sind wirksam abgegeben und zugegangen.\n\n**Wirksamkeit des Vertrags – § 134 BGB:** Ein Rechtsgeschäft, das gegen ein gesetzliches Verbot verstößt, ist nichtig. **§ 211 StGB** (Mord) stellt das vorsätzliche Töten eines Menschen aus Habgier unter Strafe. Das Strafgesetz ist ein gesetzliches Verbot i.S.d. § 134 BGB. Der Inhalt des Werkvertrags (Auftrag zur Tötung des G) ist gerade darauf gerichtet, einen nach § 211 StGB verbotenen Erfolg herbeizuführen. Die Missbilligung trifft den Inhalt des Vertrags.\n\n*Ergebnis:* Der Werkvertrag ist gem. § 134 BGB i.V.m. § 211 StGB **nichtig**. Es besteht kein Anspruch des M auf Durchführung des Auftrags. M kann auch keine Rückzahlung der 15.000 € verlangen, da § 817 S. 2 BGB dem entgegensteht (Kondiktionssperre bei beiderseitigem Gesetzesverstoß)."
+    }
+  ]
+}

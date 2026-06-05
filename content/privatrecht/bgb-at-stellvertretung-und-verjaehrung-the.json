@@ -1,0 +1,469 @@
+{
+  "id": "bgb-at-stellvertretung-und-verjaehrung-the",
+  "subjectId": "privatrecht",
+  "title": "BGB AT: Stellvertretung und Verjährung (Theorieteil 4)",
+  "summary": "Wer darf für wen handeln, und wie lange kann man Rechte geltend machen? Dieser Theorieteil erklärt die Stellvertretung (§§ 164 ff. BGB) – von der Vollmacht über den Vertreter ohne Vertretungsmacht bis zum In-Sich-Geschäft – sowie die Verjährung (§§ 194 ff. BGB) mit Beginn, Hemmung und Neubeginn.",
+  "order": 5,
+  "estMinutes": 60,
+  "sections": [
+    {
+      "id": "s1-grundidee",
+      "heading": "Grundidee: Warum brauchen wir Stellvertretung?",
+      "body": "Stell dir vor, du bist Inhaber einer kleinen GmbH. Du kannst unmöglich jeden Einkauf, jeden Vertragsschluss, jedes Telefonat selbst erledigen. Du brauchst Mitarbeiter, die **in deinem Namen** handeln können – und deren Handlungen sollen **dich** (bzw. deine GmbH) berechtigen und verpflichten, nicht sie selbst.\n\nGenau das leistet die **Stellvertretung** (§§ 164 ff. BGB). Sie erlaubt es, dass eine Person (der **Vertreter**) für eine andere Person (den **Vertretenen**) rechtswirksam handelt: Der Vertrag kommt dann direkt zwischen dem Vertretenen und dem Vertragspartner (dem **Dritten**) zustande – so, als hätte der Vertretene selbst unterschrieben.\n\n**Zwei Verhältnisse, die du immer trennen musst:**\n- **Außenverhältnis**: Vertreter ↔ Dritter (hier wird der Vertrag geschlossen; Wirkung tritt beim Vertretenen ein)\n- **Innenverhältnis**: Vertretener ↔ Vertreter (z. B. Arbeitsvertrag, Auftrag – regelt *warum* der Vertreter handeln darf)\n\nDaneben kennt das BGB auch die Zurechnung **tatsächlicher** Handlungen: Verschulden des **Erfüllungsgehilfen** (§ 278 BGB) und Handlungen des **Verrichtungsgehilfen** (§ 831 BGB). Für juristische Personen gilt § 31 BGB für ihre Organe.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Alltags-Beispiel",
+          "body": "Geschäftsführer K der G-GmbH bevollmächtigt Mitarbeiter L, Verträge abzuschließen. L schließt im Namen der G-GmbH einen Rasenmähvertrag mit Rentner R. Wirkung: Der Vertrag gilt zwischen G-GmbH und R – L ist nicht Vertragspartei."
+        },
+        {
+          "kind": "definition",
+          "title": "Vertreter / Vertretener / Dritter",
+          "body": "**Vertreter**: Die Person, die die Willenserklärung abgibt (z. B. Mitarbeiter L).\n**Vertretener**: Die Person, bei der die Rechtswirkung eintritt (z. B. G-GmbH).\n**Dritter**: Der Vertragspartner auf der anderen Seite (z. B. R)."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-stellvertretung-schema",
+          "title": "Dreiecksverhältnis der Stellvertretung",
+          "caption": "Außen- und Innenverhältnis bei der Stellvertretung. Der Vertrag entsteht direkt zwischen Vertretenem und Drittem.",
+          "code": "graph TD\n    V[\"Vertretener\\n(z.B. G-GmbH)\"]\n    VT[\"Vertreter\\n(z.B. Mitarbeiter L)\"]\n    D[\"Dritter\\n(z.B. Rentner R)\"]\n\n    V -- \"Innenverhältnis\\n(Arbeitsvertrag / Vollmacht)\" --- VT\n    VT -- \"Vertragsschluss\\nim Namen des V\" --> D\n    V -- \"Vertrag entsteht HIER\\n(§ 164 I BGB)\" === D\n\n    style V fill:#d4edda,stroke:#28a745\n    style VT fill:#fff3cd,stroke:#ffc107\n    style D fill:#cce5ff,stroke:#004085"
+        }
+      ]
+    },
+    {
+      "id": "s2-voraussetzungen",
+      "heading": "Die drei Voraussetzungen der Stellvertretung (§ 164 I BGB)",
+      "body": "Damit die Stellvertretung funktioniert, müssen **drei Voraussetzungen** kumulativ vorliegen. Fehlt eine, scheitert die Zurechnung – mit teils erheblichen Folgen.\n\n### 1. Eigene Willenserklärung des Vertreters\n\nDer Vertreter muss eine **eigene** Willenserklärung abgeben – er muss also selbst entscheiden und urteilen dürfen. Er ist damit vom **Boten** zu unterscheiden: Ein Bote überbringt nur eine fremde, fertige Erklärung (wie ein Postbote einen Brief). Der Vertreter dagegen bildet seinen Willen selbst.\n\n**Konsequenz**: Auf den Willen und das Wissen des Vertreters kommt es an (§ 166 I BGB) – nicht auf das des Vertretenen.\n\n> **Merke:** Mindestens beschränkt geschäftsfähig muss der Vertreter sein (§ 165 BGB). Ein Geschäftsunfähiger kann nur Bote, nicht Vertreter sein.\n\n### 2. Handeln in fremdem Namen (Offenkundigkeit)\n\nDer Vertreter muss **erkennbar** machen, dass er nicht für sich selbst, sondern für den Vertretenen handelt. Tut er das nicht, schließt er ein **Eigengeschäft** ab und wird selbst Vertragspartner (§ 164 II BGB).\n\n**Ausnahmen** (aus Praktikabilitätsgründen):\n- **Geschäft für den, den es angeht**: Bei Bargeschäften des täglichen Lebens spielt es keine Rolle, wer genau der Vertragspartner ist (z. B. Brötchen kaufen).\n- **Unternehmensbezogene Geschäfte**: Wenn jemand erkennbar für ein Unternehmen handelt (z. B. Kassierer im Supermarkt), wird immer der Unternehmensinhaber Vertragspartner.\n- **Handeln unter fremdem Namen**: Hier wird grundsätzlich der Handelnde selbst verpflichtet (Eigengeschäft), *es sei denn* dem Dritten ist wichtig, mit wem er kontrahiert – dann liegt eine Form der Stellvertretung vor.\n\n### 3. Vertretungsmacht\n\nDer Vertreter braucht **Macht**, d. h. eine rechtliche Befugnis, für den Vertretenen zu handeln. Woher diese Macht kommt, zeigt der nächste Abschnitt. Fehlt die Vertretungsmacht, liegt ein **Vertreter ohne Vertretungsmacht** vor – mit eigenen, schwerwiegenden Rechtsfolgen (§§ 177–179 BGB).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Prüfungsreihenfolge Stellvertretung",
+          "body": "**1.** Zulässigkeit (kein höchstpersönliches Geschäft, z. B. Eheschließung § 1311 BGB, Testament § 2064 BGB)\n**2.** Eigene Willenserklärung (kein Bote)\n**3.** In fremdem Namen (Offenkundigkeit; kein Eigengeschäft)\n**4.** Mit Vertretungsmacht (sonst: § 177 ff. BGB)"
+        },
+        {
+          "kind": "warning",
+          "title": "Häufiger Fehler: Bote vs. Vertreter",
+          "body": "Der Bote hat **keinen eigenen Entscheidungsspielraum** – er übermittelt nur. Der Vertreter trifft die Entscheidung selbst. Abzustellen ist auf das objektiv erkennbare Auftreten. Ein Geschäftsunfähiger (z. B. 5-Jähriger) kann nur Bote sein."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-pruefschema-stv",
+          "title": "Prüfungsschema Stellvertretung",
+          "caption": "Schritt-für-Schritt-Prüfung, ob eine wirksame Stellvertretung vorliegt.",
+          "code": "graph TD\n    A[\"Start: Jemand handelt für jemand anderen\"] --> B{\"Zulässig?\\n(kein höchstpersönliches RG)\"}\n    B -- \"Nein\" --> B1[\"Stellvertretung unzulässig\"]\n    B -- \"Ja\" --> C{\"Eigene WE?\\n(kein Bote)\"}\n    C -- \"Nein (Bote)\" --> C1[\"Kein Vertreter\\n→ Botenschaft\"]\n    C -- \"Ja\" --> D{\"In fremdem Namen?\\n(Offenkundigkeit)\"}\n    D -- \"Nein\" --> D1[\"Eigengeschäft\\n§ 164 II BGB\"]\n    D -- \"Ja\" --> E{\"Vertretungsmacht?\"}\n    E -- \"Ja\" --> E1[\"✓ Wirksame Stellvertretung\\n§ 164 I BGB\\nWirkung beim Vertretenen\"]\n    E -- \"Nein\" --> E2[\"Vertreter ohne VM\\n→ §§ 177-179 BGB\"]\n\n    style E1 fill:#d4edda,stroke:#28a745\n    style B1 fill:#f8d7da,stroke:#dc3545\n    style C1 fill:#f8d7da,stroke:#dc3545\n    style D1 fill:#fff3cd,stroke:#ffc107\n    style E2 fill:#f8d7da,stroke:#dc3545"
+        }
+      ]
+    },
+    {
+      "id": "s3-vollmacht",
+      "heading": "Vertretungsmacht und Vollmacht: Woher kommt die Befugnis?",
+      "body": "Die Vertretungsmacht – also die Befugnis, für jemand anderen zu handeln – kann auf drei Wegen entstehen:\n\n### 1. Gesetzliche Vertretungsmacht\nBeispiele: Eltern vertreten ihre minderjährigen Kinder kraft §§ 1626, 1629 BGB. Der Betreuer vertritt seinen Mündel (§§ 1814 ff. BGB).\n\n### 2. Organschaftliche Vertretungsmacht\nOrgane juristischer Personen leiten ihre Vertretungsmacht aus dem jeweiligen Organisationsgesetz ab (z. B. Geschäftsführer einer GmbH aus § 35 GmbHG, Vorstand einer AG aus § 78 AktG). Sie wird wie gesetzliche Vertretungsmacht behandelt.\n\n### 3. Rechtsgeschäftliche Vertretungsmacht = Vollmacht (§ 167 BGB)\nDer Vertretene erteilt dem Vertreter durch eine **einseitige, empfangsbedürftige Willenserklärung** die Vollmacht. Hier gibt es viel zu beachten:\n\n#### Innen- vs. Außenvollmacht (§ 167 I BGB)\n- **Innenvollmacht**: Der Vertretene erklärt die Vollmacht gegenüber dem **Vertreter** (im Innenverhältnis).\n- **Außenvollmacht**: Der Vertretene erklärt die Vollmacht gegenüber dem **Dritten** (im Außenverhältnis).\n\n#### Duldungs- und Anscheinsvollmacht (ungeschriebene Vollmachten)\nSelbst ohne ausdrückliche Erteilung kann eine Vollmacht vorliegen:\n- **Duldungsvollmacht**: Der Vertretene *weiß*, dass jemand als sein Vertreter auftritt, und duldet es wissentlich. Der Dritte vertraut auf die Vertretungsmacht.\n- **Anscheinsvollmacht**: Der Vertretene *hätte* erkennen und verhindern *können*, dass jemand als sein Vertreter auftritt. Der Dritte darf nach Treu und Glauben darauf vertrauen. Zusätzlich erforderlich: eine wiederholte tatsächliche Vertretung in der Vergangenheit.\n\n#### Form der Vollmacht (§ 167 II BGB)\nGrundsatz: **Formfreiheit** – die Vollmacht kann sogar mündlich oder konkludent erteilt werden, selbst wenn das vorzunehmende Rechtsgeschäft formgebunden ist.\n\n#### Arten der Vollmacht nach Umfang\n- **Generalvollmacht**: Umfasst alle möglichen Rechtsgeschäfte.\n- **Artvollmacht**: Nur für bestimmte Arten von Geschäften.\n- **Spezialvollmacht**: Nur für ein konkretes Rechtsgeschäft.\n- **Einzelvollmacht**: Ein Vertreter handelt allein.\n- **Gesamtvollmacht**: Mehrere Vertreter müssen gemeinsam handeln.\n\n#### Abstraktheit der Vollmacht\nDie Vollmacht ist **abstrakt**: Sie besteht unabhängig vom Innenverhältnis (z. B. Arbeitsvertrag). Auch wenn der Arbeitsvertrag endet, kann die Vollmacht noch bestehen – sie muss gesondert **widerrufen** werden (§ 168 S. 2 BGB).\n\n#### Widerruf und Fortgeltung (§§ 168–173 BGB)\nDie Vollmacht kann grundsätzlich jederzeit widerrufen werden. Aber Achtung: Wurde eine **Außenvollmacht** erteilt, wirkt der Widerruf im Außenverhältnis erst, wenn der Dritte davon weiß (§§ 170–173 BGB). Schützt den gutgläubigen Dritten.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Beschränkungen im Innenverhältnis ≠ keine Vertretungsmacht",
+          "body": "Der Vertretene kann dem Vertreter intern Schranken setzen (z. B. 'kaufe nie mehr als 50 Fässer'). Wenn diese Beschränkung dem Dritten **nicht bekannt** ist, besteht die Vertretungsmacht im Außenverhältnis trotzdem in vollem Umfang. Die interne Beschränkung ist nur für das Innenverhältnis relevant."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-vollmachtsarten",
+          "title": "Übersicht: Arten der Vollmacht",
+          "headers": ["Merkmal", "Variante A", "Variante B"],
+          "rows": [
+            ["Entstehung", "Gesetzlich (z. B. § 1629 BGB)", "Rechtsgeschäftlich = Vollmacht (§ 167 BGB)"],
+            ["Erteilung ggü.", "Vertreter (Innenvollmacht)", "Drittem (Außenvollmacht)"],
+            ["Umfang", "General- / Artvollmacht", "Spezialvollmacht"],
+            ["Ausübung", "Einzelvollmacht", "Gesamtvollmacht"],
+            ["Ohne Erklärung", "Duldungsvollmacht", "Anscheinsvollmacht"],
+            ["Bestand", "Abstrakt vom Innenverhältnis", "Erlischt mit Widerruf (§ 168 BGB)"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4-fehlerhafte-vertretung",
+      "heading": "Fehlerhafte Vertretung: Vertreter ohne Vertretungsmacht, In-Sich-Geschäft, Missbrauch",
+      "body": "### Vertreter ohne Vertretungsmacht (§§ 177–179 BGB)\n\nHandelt jemand als Vertreter, ohne die nötige Vertretungsmacht zu haben (z. B. weil er nie bevollmächtigt wurde, oder weil er seine Vollmacht überschritten hat), ist der Vertrag zunächst **schwebend unwirksam** (§ 177 I BGB). Das bedeutet: Er ist weder wirksam noch endgültig unwirksam – er hängt in der Luft.\n\n**Was passiert als nächstes?**\n- Der Vertretene **genehmigt** (§ 177 I BGB) → Vertrag wird rückwirkend wirksam.\n- Der Vertretene **verweigert die Genehmigung** → Vertrag ist endgültig unwirksam.\n- Bis zur Entscheidung: Dritter kann seine Willenserklärung **widerrufen** (§ 178 BGB).\n\n**Haftung des Vertreters ohne Vertretungsmacht (§ 179 BGB):**\nWenn die Genehmigung verweigert wird, haftet der Vertreter persönlich dem Dritten!\n- Wusste er von der fehlenden Vollmacht? → Er haftet auf **Erfüllungsinteresse** (§ 179 I BGB) – so als wäre der Vertrag zustande gekommen.\n- Wusste er es **nicht**? → Er haftet nur auf **Vertrauensschaden / Integritätsinteresse** (§ 179 II BGB) – z. B. nutzlose Aufwendungen.\n- Wusste der **Dritte** selbst vom Fehlen der Vollmacht? → Keine Haftung des Vertreters (§ 179 III BGB).\n- War der Vertreter **beschränkt geschäftsfähig**? → Grundsätzlich keine Haftung (§ 179 III S. 2 BGB), außer der gesetzliche Vertreter stimmte zu.\n\n**Sonderfall: Einseitige Rechtsgeschäfte (§ 180 BGB)**\nBei einseitigen Rechtsgeschäften (z. B. Kündigung, Anfechtung) ist ein Handeln ohne Vertretungsmacht grundsätzlich **unwirksam** (keine schwebende Unwirksamkeit). Ausnahme: Der Dritte hat die fehlende Vollmacht nicht beanstandet oder war damit einverstanden.\n\n### In-Sich-Geschäft (§ 181 BGB)\n\nEin **In-Sich-Geschäft** liegt vor, wenn der Vertreter gleichzeitig auf **beiden Seiten** des Rechtsgeschäfts steht:\n- Vertreter handelt mit sich **selbst** (er ist gleichzeitig Vertreter des Vertretenen und handelt für sein eigenes Konto), **oder**\n- Vertreter handelt für **zwei Vertretene** gleichzeitig.\n\n**Grundsatz**: In-Sich-Geschäfte sind **verboten**, weil der Vertreter in Interessenkonflikte gerät.\n**Ausnahmen**:\n1. Der Vertretene hat das In-Sich-Geschäft **gestattet** (Einwilligung).\n2. Das Rechtsgeschäft dient nur der **Erfüllung einer Verbindlichkeit**.\n3. Das Rechtsgeschäft ist für den Vertretenen **lediglich rechtlich vorteilhaft** (z. B. Schenkung an Minderjährigen – hier greift § 181 BGB nach Sinn und Zweck nicht).\n\n**Rechtsfolge**: Das In-Sich-Geschäft ist – wie beim Vertreter ohne Vertretungsmacht – **schwebend unwirksam** und kann noch genehmigt werden (§ 177 BGB analog).\n\n### Missbrauch der Vertretungsmacht\n\nHat der Vertreter formal Vertretungsmacht, handelt aber zum **Nachteil des Vertretenen**, ist das Rechtsgeschäft ebenfalls unwirksam:\n- **Kollusion**: Vertreter und Dritter **arbeiten zusammen** zum Schaden des Vertretenen (z. B. R verkauft den Oldtimer bewusst zu billig und bekommt dafür eine Provision).\n- **Evidenz**: Der Dritte erkennt, dass der Vertreter seine Macht missbraucht, und es wäre treuwidrig (§ 242 BGB), sich auf die Wirksamkeit zu berufen.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "§ 179 BGB – Haftung auf einen Blick",
+          "body": "Vertreter **wusste** von fehlender VM → Erfüllungsinteresse (§ 179 I BGB)\nVertreter **wusste nicht** → Vertrauensschaden (§ 179 II BGB)\nDritter **wusste** → Keine Haftung (§ 179 III BGB)\nVertreter **beschränkt geschäftsfähig** → Keine Haftung (§ 179 III S. 2 BGB)"
+        },
+        {
+          "kind": "beispiel",
+          "title": "In-Sich-Geschäft: R kauft N's Oldtimer von sich selbst",
+          "body": "N bevollmächtigt R, seinen Oldtimer (Wert: 330.000 EUR) zu verkaufen. R verkauft ihn im Namen des N an sich selbst für 33.000 EUR. Das ist ein klassisches In-Sich-Geschäft: R steht auf beiden Seiten. Rechtsfolge: schwebend unwirksam gem. §§ 181, 177 BGB analog. N kann genehmigen oder die Genehmigung verweigern."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-vertreter-ohne-vm",
+          "title": "Prüfungsschema: Vertreter ohne Vertretungsmacht",
+          "caption": "Ablauf nach § 177 und § 179 BGB wenn die Vertretungsmacht fehlt.",
+          "code": "graph TD\n    A[\"Vertreter handelt\\nohne Vertretungsmacht\"] --> B[\"Vertrag schwebend\\nunwirksam (§ 177 I BGB)\"]\n    B --> C{\"Genehmigung durch\\nVertretenen?\"}\n    C -- \"Ja\" --> C1[\"Vertrag wirksam\\n(rückwirkend)\"]\n    C -- \"Nein\" --> D[\"Vertrag endgültig\\nunwirksam\"]\n    D --> E{\"Kannte Vertreter\\nden Mangel?\"}\n    E -- \"Ja\" --> E1[\"§ 179 I BGB:\\nHaftung auf Erfüllungsinteresse\"]\n    E -- \"Nein\" --> F{\"Kannte Dritter\\nden Mangel?\"}\n    F -- \"Ja\" --> F1[\"§ 179 III BGB:\\nKeine Haftung\"]\n    F -- \"Nein\" --> F2[\"§ 179 II BGB:\\nHaftung auf Vertrauensschaden\"]\n\n    style C1 fill:#d4edda,stroke:#28a745\n    style E1 fill:#f8d7da,stroke:#dc3545\n    style F1 fill:#d4edda,stroke:#28a745\n    style F2 fill:#fff3cd,stroke:#ffc107"
+        }
+      ]
+    },
+    {
+      "id": "s5-wissenszurechnung",
+      "heading": "Wissenszurechnung und tatsächliche Zurechnung (§§ 166, 278, 831, 31 BGB)",
+      "body": "### Wissenszurechnung (§ 166 BGB)\n\nDa bei der Stellvertretung die Willenserklärung vom Vertreter stammt, muss auch das **Wissen und Nichtwissen** des Vertreters maßgeblich sein.\n\n**§ 166 I BGB**: Dem Vertretenen wird das Wissen (und Kennenmüssen) des Vertreters zugerechnet.\n\n> **Beispiel:** Vertreter L weiß, dass der verkaufte Rasenmäher defekt ist. Dieses Wissen wird dem Vertretenen (G-GmbH) zugerechnet – die GmbH kann sich nicht auf Unkenntnis berufen.\n\n**Ausnahme (§ 166 II BGB):** Handelt der Vertreter nach genauen Weisungen des Vertretenen, so ist das Wissen des **Vertretenen** maßgeblich. (Schutzmechanismus: Man kann nicht seinen Unwissenden vorschicken und sich dann auf dessen Unkenntnis berufen.)\n\n### Tatsächliche Zurechnung: Erfüllungsgehilfe vs. Verrichtungsgehilfe\n\nNeben der rechtsgeschäftlichen Stellvertretung gibt es die Zurechnung von **tatsächlichem Verhalten**:\n\n| | **Erfüllungsgehilfe (§ 278 BGB)** | **Verrichtungsgehilfe (§ 831 BGB)** |\n|---|---|---|\n| Wer? | Person, die der Schuldner zur Erfüllung einsetzt | Person, die in Weisungsabhängigkeit für den Geschäftsherrn tätig ist |\n| Was wird zugerechnet? | Handlung **und Verschulden** | Nur die **Handlung** (nicht das Verschulden) |\n| Bereich | Bestehende Sonderverbindung (z. B. Vertrag) | Auch ohne Sonderverbindung (Delikt) |\n| Entlastung? | Nein | Ja: Entlastungsbeweis möglich (§ 831 I S. 2 BGB) |\n\n**§ 31 BGB – Organe juristischer Personen**: Handlungen und Verschulden von Organen (z. B. Geschäftsführer der GmbH) werden der juristischen Person stets zugerechnet – sowohl im Vertrags- als auch im Deliktsbereich.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "§ 278 BGB vs. § 831 BGB im Vergleich",
+          "body": "**§ 278 BGB (Erfüllungsgehilfe):** Maler M schickt Gesellen G, um das Büro des O zu streichen. G schädigt dabei ein Gemälde. → M haftet für G's Verschulden wie für eigenes, weil G zur Erfüllung des Werkvertrags eingesetzt war.\n\n**§ 831 BGB (Verrichtungsgehilfe):** Fahrer F des Speditionsunternehmens S verursacht im Straßenverkehr einen Unfall. → S haftet grundsätzlich, kann sich aber entlasten, wenn er F sorgfältig ausgewählt hat."
+        }
+      ]
+    },
+    {
+      "id": "s6-verjaehrung",
+      "heading": "Verjährung: Wie lange kann man Ansprüche geltend machen?",
+      "body": "### Was ist Verjährung und warum gibt es sie?\n\nStell dir vor, du hast 1990 jemandem Geld geliehen und klagst jetzt, 35 Jahre später, auf Rückzahlung. Das wäre unzumutbar: Zeugen sind tot, Belege vernichtet, der Schuldner hat sich längst darauf eingerichtet, nichts mehr zahlen zu müssen. Die **Verjährung** schützt den Schuldner davor.\n\nWichtig: **Die Verjährung lässt den Anspruch nicht erlöschen.** Er existiert weiter. Aber der Schuldner erhält ein **Leistungsverweigerungsrecht** (eine *Einrede*), das er aktiv geltend machen muss (§ 214 I BGB). Tut er das nicht, muss er trotzdem zahlen.\n\n### Regelmäßige Verjährungsfrist: 3 Jahre (§ 195 BGB)\n\nDie wichtigste Frist: **3 Jahre**. Sie gilt für die allermeisten Ansprüche (Kaufpreis, Schadensersatz, etc.).\n\n### Wann beginnt die Frist? (§ 199 I BGB)\n\nNicht sofort beim Entstehen des Anspruchs, sondern erst mit dem **Schluss des Jahres**, in dem:\n1. der Anspruch **entstanden** ist, **und**\n2. der Gläubiger von den **anspruchsbegründenden Tatsachen** und der **Person des Schuldners** Kenntnis erlangt hat (oder grob fahrlässig nicht erlangt hat).\n\n> **Beispiel:** Anspruch entsteht am 15.03.2022, Gläubiger erfährt davon noch 2022. → Fristbeginn: 31.12.2022 (Schluss des Jahres). → Fristende: 31.12.2025 (3 Jahre später).\n\n### Hemmung (§§ 203, 204, 209 BGB)\n\nDie Verjährung kann **gehemmt** werden – sie läuft in dieser Zeit nicht. Typische Hemmungsgründe:\n- **§ 203 BGB**: Verhandlungen zwischen Gläubiger und Schuldner über den Anspruch.\n- **§ 204 I Nr. 1 BGB**: Erhebung einer Klage.\n- **§ 204 I Nr. 3 BGB**: Zustellung eines gerichtlichen Mahnbescheids.\n\nDie gehemmte Zeit wird **nicht mitgezählt** (§ 209 BGB). Nach Ende der Hemmung läuft die Verjährung weiter. Bei § 204 BGB endet die Frist frühestens 6 Monate nach Beendigung des Verfahrens (§ 204 II BGB).\n\n### Neubeginn (§ 212 BGB)\n\nIn bestimmten Fällen beginnt die gesamte Verjährungsfrist **von vorne zu laufen** (nicht nur Hemmung!), nämlich wenn:\n1. Der Schuldner den Anspruch **anerkennt** (ausdrücklich oder durch Abschlagszahlung, Zinszahlung etc.) → § 212 I Nr. 1 BGB.\n2. Es eine **gerichtliche oder behördliche Vollstreckungshandlung** gibt → § 212 I Nr. 2 BGB.\n\n### Ausschlussfristen und Verwirkung\n\n**Ausschlussfristen** sind noch strenger als Verjährung: Nach Ablauf **erlischt** der Anspruch (Einwendung, keine Einrede). Der Schuldner muss sie nicht einmal geltend machen. Beispiel: § 15 IV AGG (2 Monate nach Ablehnung für Entschädigungsklage).\n\n**Verwirkung (§ 242 BGB)**: Ein Sonderfall aus Treu und Glauben. Voraussetzungen:\n1. **Zeitmoment**: Über längere Zeit wurde das Recht nicht geltend gemacht.\n2. **Umstandsmoment**: Der Gläubiger hat durch sein Verhalten den Eindruck erweckt, den Anspruch nicht mehr verfolgen zu wollen.\n3. Der Schuldner hat darauf **vertraut** und sich entsprechend eingerichtet.\n\nRechtsfolge: Der Anspruch **erlischt** (wie Ausschlussfrist, nicht nur Einrede).",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Verjährung vs. Ausschlussfrist vs. Verwirkung",
+          "body": "**Verjährung**: Anspruch bleibt, aber Schuldner hat Einrede (muss geltend gemacht werden) → § 214 BGB\n**Ausschlussfrist**: Anspruch erlischt automatisch (Einwendung) → z. B. § 15 IV AGG\n**Verwirkung**: Anspruch erlischt durch widersprüchliches Verhalten (§ 242 BGB, Einwendung)"
+        },
+        {
+          "kind": "tip",
+          "title": "Klausurtrick: Verjährung immer unter 'Durchsetzbarkeit' prüfen",
+          "body": "Im dreistufigen Anspruchsschema (entstanden → nicht erloschen → durchsetzbar) ist die Verjährung **Stufe 3** (Einrede, hemmt die Durchsetzbarkeit). Ausschlussfristen und Verwirkung dagegen vernichten den Anspruch und sind daher auf **Stufe 2** (nicht erloschen) zu prüfen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-verjaehrung-zeitstrahl",
+          "title": "Zeitstrahl: Verjährung mit Hemmung und Neubeginn",
+          "caption": "Beispiel: Anspruch entsteht März 2022, Fristbeginn 31.12.2022, Anerkenntnis Aug. 2022 → Neubeginn.",
+          "code": "gantt\n    title Verjährungszeitstrahl (Beispiel § 195 / § 212 BGB)\n    dateFormat  YYYY-MM-DD\n    axisFormat  %Y\n\n    section Frist ohne Neubeginn\n    Anspruch entsteht (März 2022)   :milestone, m1, 2022-03-20, 0d\n    Fristbeginn (31.12.2022)        :milestone, m2, 2022-12-31, 0d\n    Regelmäßige Frist 3 Jahre       :a1, 2022-12-31, 2025-12-31\n    Ablauf ohne Neubeginn           :milestone, m3, 2025-12-31, 0d\n\n    section Mit Neubeginn (Anerkenntnis Aug. 2022)\n    Anerkenntnis → Neubeginn       :milestone, m4, 2022-08-19, 0d\n    Neue 3-Jahres-Frist             :a2, 2022-08-19, 2025-08-19\n    Ablauf nach Neubeginn           :milestone, m5, 2025-08-19, 0d"
+        },
+        {
+          "kind": "table",
+          "id": "fig-verjaehrung-vergleich",
+          "title": "Vergleich: Verjährung, Ausschlussfrist, Verwirkung",
+          "headers": ["Kriterium", "Verjährung", "Ausschlussfrist", "Verwirkung"],
+          "rows": [
+            ["Rechtsfolge", "Einrede (Schuldner muss geltend machen)", "Einwendung (automatisch)", "Einwendung (automatisch)"],
+            ["Anspruch erlischt?", "Nein (nur gehemmt durchsetzbar)", "Ja", "Ja"],
+            ["Rechtsgrundlage", "§§ 194 ff. BGB", "z. B. § 15 IV AGG", "§ 242 BGB"],
+            ["Im Anspruchsschema", "Stufe 3: Durchsetzbarkeit", "Stufe 2: Nicht erloschen", "Stufe 2: Nicht erloschen"],
+            ["Hemmung möglich?", "Ja (§§ 203, 204 BGB)", "Nein", "Nein"]
+          ]
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-1",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Was sind die drei Voraussetzungen der Stellvertretung (§ 164 I BGB)?",
+      "back": "1. **Eigene Willenserklärung** des Vertreters (kein Bote)\n2. **Handeln in fremdem Namen** (Offenkundigkeit; kein Eigengeschäft)\n3. **Vertretungsmacht** (gesetzlich, organschaftlich oder als Vollmacht)"
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-2",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Was ist der Unterschied zwischen Vertreter und Bote?",
+      "back": "Der **Vertreter** gibt eine *eigene* Willenserklärung ab – er entscheidet selbst. Der **Bote** übermittelt nur eine fertige fremde Erklärung. Geschäftsunfähige können nur Boten sein (Umkehrschluss § 165 BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-3",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Was ist schwebende Unwirksamkeit beim Vertreter ohne Vertretungsmacht?",
+      "back": "Der Vertrag ist weder wirksam noch endgültig unwirksam (§ 177 I BGB). Er wird wirksam durch **Genehmigung** des Vertretenen oder endgültig unwirksam durch deren Verweigerung. Bis dahin kann der Dritte widerrufen (§ 178 BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-4",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Wann haftet der Vertreter ohne Vertretungsmacht auf Erfüllungsinteresse?",
+      "back": "Wenn er den Mangel der Vertretungsmacht **kannte** (§ 179 I BGB). Kannte er ihn nicht, haftet er nur auf Vertrauensschaden (§ 179 II BGB). Kannte der Dritte den Mangel, haftet der Vertreter gar nicht (§ 179 III BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-5",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Was ist ein In-Sich-Geschäft (§ 181 BGB) und wann ist es ausnahmsweise wirksam?",
+      "back": "Der Vertreter steht auf beiden Seiten des Rechtsgeschäfts (z. B. kauft für sich selbst vom Vertretenen). Ausnahmsweise wirksam bei: (1) Gestattung durch den Vertretenen, (2) Erfüllung einer Verbindlichkeit, (3) lediglich rechtlich vorteilhaftem Geschäft für den Vertretenen."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-6",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Wie lange beträgt die regelmäßige Verjährungsfrist und wann beginnt sie?",
+      "back": "**3 Jahre** (§ 195 BGB). Beginn: Schluss des Jahres, in dem (1) der Anspruch **entstanden** ist und (2) der Gläubiger **Kenntnis** von Anspruch und Schuldner erlangt hat (oder grob fahrlässig nicht erlangt hat), § 199 I BGB."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-7",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Was ist der Unterschied zwischen Hemmung und Neubeginn der Verjährung?",
+      "back": "**Hemmung** (§§ 203, 204, 209 BGB): Die Verjährung pausiert; die Hemmungszeit wird nicht mitgezählt, danach läuft die restliche Frist weiter.\n**Neubeginn** (§ 212 BGB): Die gesamte Frist beginnt von vorne zu laufen (z. B. nach Anerkenntnis)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-fc-8",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Was ist der Unterschied zwischen Verjährungs-Einrede und Ausschlussfrist?",
+      "back": "**Verjährung**: Anspruch bleibt bestehen, Schuldner bekommt eine **Einrede** (Leistungsverweigerungsrecht) – er muss sie aktiv geltend machen (§ 214 BGB).\n**Ausschlussfrist**: Anspruch **erlischt** automatisch (Einwendung) – Schuldner muss nichts tun."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q1",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "leicht",
+      "prompt": "Welche drei Voraussetzungen müssen für eine wirksame Stellvertretung nach § 164 I BGB vorliegen?",
+      "options": [
+        "Eigene WE, in fremdem Namen, mit Vertretungsmacht",
+        "Schriftform, in fremdem Namen, mit Vollmacht",
+        "Eigene WE, Offenkundigkeit, Schriftform",
+        "Vertretungsmacht, Bote, fremder Name"
+      ],
+      "correct": [0],
+      "explanation": "§ 164 I BGB verlangt: (1) eigene Willenserklärung (kein Bote), (2) im fremden Namen (Offenkundigkeit), (3) mit Vertretungsmacht. Schriftform ist grundsätzlich nicht erforderlich (§ 167 II BGB)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q2",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "leicht",
+      "prompt": "Ein 6-jähriges Kind kann wirksam als Vertreter einer anderen Person auftreten und Verträge für sie abschließen.",
+      "answer": false,
+      "explanation": "Falsch. Ein Geschäftsunfähiger (Kinder bis 7 Jahre, § 104 BGB) kann kein Vertreter sein, weil § 165 BGB mindestens beschränkte Geschäftsfähigkeit verlangt. Das 6-jährige Kind kann aber als Bote eine fremde Erklärung übermitteln."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q3",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "mittel",
+      "prompt": "F kauft im Baumarkt für seinen Freund H, gibt aber aus Gewohnheit seinen eigenen Namen an. Welche Rechtsfolge tritt ein?",
+      "options": [
+        "Wirksame Stellvertretung: Vertrag gilt für H",
+        "Eigengeschäft: Vertrag gilt für F selbst (§ 164 II BGB)",
+        "Vertrag ist nichtig",
+        "Schwebende Unwirksamkeit bis zur Genehmigung durch H"
+      ],
+      "correct": [1],
+      "explanation": "Da F nicht erkennbar im fremden Namen handelt (Offenkundigkeit fehlt), liegt ein Eigengeschäft vor: F selbst wird Vertragspartner (§ 164 II BGB). Die fehlende Offenkundigkeit berechtigt auch nicht zur Anfechtung."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q4",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "mittel",
+      "prompt": "Mitarbeiter M bestellt im Namen seines Chefs A Waren, ohne hierzu bevollmächtigt zu sein. A verweigert die Genehmigung. M wusste, dass er keine Vollmacht hatte. Was kann der Verkäufer K von M verlangen?",
+      "options": [
+        "Nichts – der Vertrag ist unwirksam, M haftet nicht",
+        "Nur den Vertrauensschaden (§ 179 II BGB)",
+        "Erfüllung des Vertrages oder Schadensersatz auf das Erfüllungsinteresse (§ 179 I BGB)",
+        "Rückgabe der bestellten Ware"
+      ],
+      "correct": [2],
+      "explanation": "Da M den Mangel der Vertretungsmacht kannte, haftet er nach § 179 I BGB auf Erfüllung oder Schadensersatz in Höhe des Erfüllungsinteresses. Nur wenn M den Mangel nicht kannte, wäre § 179 II BGB (bloßer Vertrauensschaden) einschlägig."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q5",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "mittel",
+      "prompt": "Ein In-Sich-Geschäft (§ 181 BGB) ist stets nichtig und kann auch nicht nachträglich genehmigt werden.",
+      "answer": false,
+      "explanation": "Falsch. Das In-Sich-Geschäft ist – wie beim Vertreter ohne Vertretungsmacht – nur schwebend unwirksam. Es kann nachträglich durch den Vertretenen genehmigt werden (§§ 181, 177 BGB analog). Ausnahmen, in denen es sogar direkt wirksam ist: Gestattung, Erfüllung einer Verbindlichkeit, lediglich rechtlich vorteilhaftes Geschäft."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q6",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "mittel",
+      "prompt": "B hat am 15.06.2022 eine Schuld. Der Gläubiger G erlangt Kenntnis noch im Jahr 2022. Die regelmäßige Verjährungsfrist beträgt 3 Jahre. Wann läuft die Verjährungsfrist ab?",
+      "options": [
+        "15.06.2025",
+        "31.12.2024",
+        "31.12.2025",
+        "15.06.2024"
+      ],
+      "correct": [2],
+      "explanation": "Die regelmäßige Verjährungsfrist beginnt nach § 199 I BGB mit dem **Schluss des Jahres** der Kenntnis: also am 31.12.2022. Drei Jahre später: 31.12.2025. Nicht der konkrete Entstehungstag ist maßgeblich, sondern der Jahresschluss."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q7",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "mittel",
+      "prompt": "Welche der folgenden Ereignisse bewirken einen **Neubeginn** der Verjährung (§ 212 BGB)? (Mehrfachauswahl möglich)",
+      "options": [
+        "Anerkenntnis des Schuldners (z. B. durch Email 'ich werde zahlen')",
+        "Erhebung einer Klage durch den Gläubiger",
+        "Beantragung eines Mahnbescheids",
+        "Beantragung einer gerichtlichen Vollstreckungshandlung"
+      ],
+      "correct": [0, 3],
+      "multiple": true,
+      "explanation": "§ 212 I BGB: Neubeginn durch (Nr. 1) Anerkenntnis des Schuldners oder (Nr. 2) Vornahme/Beantragung einer gerichtlichen oder behördlichen Vollstreckungshandlung. Klageerhebung und Mahnbescheid bewirken dagegen nur eine **Hemmung** (§ 204 I Nr. 1 und Nr. 3 BGB)."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q8",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "leicht",
+      "prompt": "Mit Eintritt der Verjährung erlischt der Anspruch des Gläubigers automatisch.",
+      "answer": false,
+      "explanation": "Falsch. Die Verjährung lässt den Anspruch nicht erlöschen. Der Schuldner erhält lediglich eine **Einrede** (Leistungsverweigerungsrecht, § 214 I BGB), die er aktiv geltend machen muss. Zahlt er trotz eingetretener Verjährung, kann er das Gezahlte nicht zurückfordern (§ 214 II BGB)."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q9",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "schwer",
+      "prompt": "Was unterscheidet die Duldungsvollmacht von der Anscheinsvollmacht?",
+      "options": [
+        "Bei der Duldungsvollmacht weiß der Vertretene von der Vertretung und duldet sie; bei der Anscheinsvollmacht hätte er sie nur erkennen und verhindern können",
+        "Die Duldungsvollmacht erfordert eine schriftliche Erklärung, die Anscheinsvollmacht nicht",
+        "Beide sind identisch und werden im Gesetz synonym verwendet",
+        "Die Anscheinsvollmacht setzt voraus, dass der Dritte bösgläubig ist"
+      ],
+      "correct": [0],
+      "explanation": "Duldungsvollmacht: Der Vertretene *weiß* um die Vertretungshandlung und lässt sie zu. Anscheinsvollmacht: Der Vertretene *hätte* die Vertretung erkennen und verhindern *können* (ohne konkrete Kenntnis). In beiden Fällen vertraut der Dritte schutzwürdig auf die Vollmacht. Beide setzen zudem eine gewisse Häufigkeit/Wiederholung voraus."
+    },
+    {
+      "kind": "freetext",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q10",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "schwer",
+      "prompt": "Erkläre im Gutachtenstil kurz, ob ein 11-jähriges Kind wirksam als Stellvertreter seiner Großmutter einen Kaufvertrag abschließen kann.",
+      "sampleAnswer": "Die Großmutter O könnte gegen den Verkäufer S einen Anspruch auf Übereignung der Zeitschrift aus § 433 I BGB haben, wenn ein wirksamer Kaufvertrag zwischen O und S zustande gekommen ist. Hierzu könnte M als Stellvertreter der O gehandelt haben (§ 164 I BGB). (1) M hat eine eigene Willenserklärung abgegeben – er hat die Zeitschrift selbst ausgesucht und bezahlt; er ist kein bloßer Bote. (2) M handelte erkennbar im Namen der O (die Vollmacht und das Geld stammten von O). (3) M war bevollmächtigt. Fraglich ist, ob M als 11-Jähriger Vertreter sein kann. § 165 BGB setzt nur beschränkte Geschäftsfähigkeit voraus; M ist 11 Jahre alt und damit beschränkt geschäftsfähig (§§ 106 ff. BGB). Die Vollmachtserteilung ist für M nur rechtlich vorteilhaft (§ 107 BGB), daher wirksam. Somit sind alle Voraussetzungen der Stellvertretung erfüllt. Ergebnis: Der Kaufvertrag ist zwischen O und der S-GmbH wirksam zustande gekommen.",
+      "keywords": ["eigene willenserklärung", "fremdem namen", "vollmacht", "beschränkt geschäftsfähig", "§ 165 BGB", "§ 164 BGB", "stellvertretung"],
+      "explanation": "Kernpunkte: § 165 BGB erlaubt die beschränkt geschäftsfähige Person als Vertreter. Die Erteilung der Vollmacht ist für den Minderjährigen nur rechtlich vorteilhaft (kein Risiko), daher ohne Einwilligung des gesetzlichen Vertreters wirksam."
+    },
+    {
+      "kind": "mc",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q11",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "schwer",
+      "prompt": "Was ist der Unterschied zwischen der Wissenszurechnung beim Erfüllungsgehilfen (§ 278 BGB) und beim Verrichtungsgehilfen (§ 831 BGB)?",
+      "options": [
+        "Bei § 278 BGB wird Handlung UND Verschulden zugerechnet; bei § 831 BGB nur die Handlung, kein Verschulden; zudem ist bei § 831 ein Entlastungsbeweis möglich",
+        "Bei § 278 BGB ist ein Entlastungsbeweis möglich; bei § 831 BGB nicht",
+        "§ 278 BGB gilt nur im Deliktsrecht, § 831 BGB nur im Vertragsrecht",
+        "Beide Normen rechnen Handlung und Verschulden in gleicher Weise zu"
+      ],
+      "correct": [0],
+      "explanation": "§ 278 BGB (Erfüllungsgehilfe): Im Rahmen bestehender Schuldverhältnisse wird das Verschulden des Erfüllungsgehilfen dem Schuldner vollständig zugerechnet – kein Entlastungsbeweis. § 831 BGB (Verrichtungsgehilfe): Nur die schädigende Handlung wird zugerechnet; der Geschäftsherr kann sich durch Nachweis sorgfältiger Auswahl und Überwachung entlasten."
+    },
+    {
+      "kind": "truefalse",
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-q12",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "difficulty": "mittel",
+      "prompt": "Die Vollmacht muss stets in der Form erteilt werden, die für das vorzunehmende Rechtsgeschäft vorgeschrieben ist (z. B. bei einem Grundstückskauf notariell).",
+      "answer": false,
+      "explanation": "Falsch. Nach § 167 II BGB ist die Vollmacht grundsätzlich **formlos** erteilbar, auch wenn das Grundgeschäft formbedürftig ist. Ausnahmen gibt es dort, wo der Schutzgedanke der Form auch die Vollmacht erfassen soll (z. B. bei der Bürgschaft nach h.M.)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-1",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Besprechungsfall 4.1 – Der Mitarbeiter und der Auftrag zum Rasenmähen",
+      "source": "Praxisteil 4, Besprechungsfall 4.1 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "K hat sich mit einem Gärtnereibetrieb selbstständig gemacht, der G-GmbH, deren Geschäftsführer er ist. Für ihn arbeitet L, den er neu eingestellt hat und welcher durch K bevollmächtigt wird, Verträge für die GmbH abzuschließen. L schließt für die G-GmbH mit Rentner R einen Vertrag, dessen Rasen zu mähen. Hierbei verspricht er sich, indem er eine Vergütung von 23 Euro statt 32 Euro pro Stunde nennt. Das Rasenmähen führt L eine Woche später durch; zerstört aber leider das von R frisch angelegte Tulpenbeet. Außerdem schrammt er mit dem Rasenmäher am Zaun des Nachbarn N entlang, wodurch einige Zaunlatten ausgetauscht werden müssen.\n\n1. Welche Arten der Zurechnung von fremden Handlungen liegen vor?\n2. Liegt ein wirksamer Vertrag zwischen der G-GmbH und R vor?\n3. Kann die G-GmbH den Vertrag mit R anfechten?\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn K selbst den Rasen mäht und den Zaun des Nachbarn schrammt?",
+      "hint": "Prüfe für Frage 1 alle Arten der Zurechnung (rechtsgeschäftlich und tatsächlich). Für Frage 2: Prüfe die Voraussetzungen der Stellvertretung. Für Frage 3: Wessen Wille ist für die Anfechtung maßgeblich – §§ 119, 166 I BGB?",
+      "solution": "## Frage 1: Arten der Zurechnung fremder Handlungen\n\n**Rechtsgeschäftliche Zurechnung – Stellvertretung (§ 164 I BGB):**\nL schließt für die G-GmbH (= Vertretene) den Rasenmähvertrag mit R (= Drittem). L handelt als Vertreter im Außenverhältnis. Die Wirkung tritt bei der G-GmbH ein.\n\n**Organschaftliche Zurechnung (§ 35 GmbHG, § 31 BGB):**\nK ist Geschäftsführer der G-GmbH und damit deren Organ. Seine Handlungen werden der GmbH über § 35 GmbHG i.V.m. § 31 BGB zugerechnet.\n\n**Wissenszurechnung (§ 166 I BGB):**\nDas Wissen des L (z. B. sein Irrtum über den Preis) wird der G-GmbH zugerechnet.\n\n**Tatsächliche Zurechnung – Erfüllungsgehilfe (§ 278 BGB):**\nL wird von der G-GmbH zur Erfüllung des Rasenmähvertrages eingesetzt. Er ist Erfüllungsgehilfe der GmbH. Die Zerstörung des Tulpenbeetes ist im Zusammenhang mit der Vertragserfüllung geschehen → das Verschulden des L wird der G-GmbH gem. § 278 BGB zugerechnet.\n\n**Tatsächliche Zurechnung – Verrichtungsgehilfe (§ 831 I BGB):**\nL steht in einem Weisungsverhältnis zur G-GmbH. Die Schramme am Zaun des Nachbarn N erfolgte im Zusammenhang mit der Verrichtung (Rasenmähen) → Handlung des L wird der G-GmbH gem. § 831 I S. 1 BGB zugerechnet. Hier besteht jedoch ein Entlastungsbeweis (§ 831 I S. 2 BGB).\n\n---\n\n## Frage 2: Wirksamer Vertrag zwischen G-GmbH und R?\n\n**Obersatz:** R könnte gegen die G-GmbH einen Anspruch auf Durchführung des Rasenmähauftrages aus dem geschlossenen Werkvertrag haben, wenn ein wirksamer Vertrag zwischen G-GmbH und R zustande gekommen ist.\n\n**Voraussetzungen der Stellvertretung (§ 164 I BGB):**\n\n**(1) Eigene Willenserklärung des L:**\nL hat selbst über den Inhalt des Vertrages entschieden (Preis etc.) – er ist kein bloßer Bote, sondern Vertreter. (+)\n\n**(2) Handeln in fremdem Namen:**\nL schloss den Vertrag erkennbar für die G-GmbH ab (Offenkundigkeit). (+)\n\n**(3) Vertretungsmacht:**\nK hat L als Geschäftsführer der G-GmbH bevollmächtigt, Verträge für die GmbH abzuschließen (§ 167 I BGB). L handelte im Rahmen dieser Vollmacht. (+)\n\n**Irrtum des L:** L hat sich versprochen – 23 EUR statt 32 EUR. Dies ist ein Erklärungsirrtum (§ 119 I Alt. 2 BGB). Allerdings ist dieser zunächst unbeachtlich für das Zustandekommen des Vertrages. Der Vertrag ist mit dem erklärten Inhalt (23 EUR/h) zustande gekommen.\n\n**Ergebnis:** Ein wirksamer Vertrag zwischen G-GmbH und R über 23 EUR/h ist zustande gekommen.\n\n---\n\n## Frage 3: Kann die G-GmbH den Vertrag anfechten?\n\n**Obersatz:** Die G-GmbH könnte den Vertrag mit R wegen eines Erklärungsirrtums des L gem. § 119 I Alt. 2 BGB anfechten.\n\n**Anfechtungsgrund – Erklärungsirrtum (§ 119 I Alt. 2 BGB):**\nL hat sich versprochen: Er wollte 32 EUR erklären, sagte aber 23 EUR. Dies ist ein klassischer Erklärungsirrtum (Versprechen). (+)\n\n**Auf wessen Willen kommt es an?**\nGem. § 166 I BGB wird bei der Stellvertretung auf den subjektiven Tatbestand des **Vertreters** (L) abgestellt. Das Anfechtungsrecht steht dem Vertretenen (G-GmbH) zu – es ist der Wille des L, der für den Irrtum maßgeblich ist.\n\n**Kausalität:** L hätte bei Kenntnis des richtigen Preises (32 EUR) die Erklärung mit 32 EUR abgegeben. Der Irrtum war kausal für die Erklärung. (+)\n\n**Anfechtungserklärung (§ 143 I BGB):** Muss gegenüber R erklärt werden.\n\n**Anfechtungsfrist (§ 121 BGB):** Unverzüglich nach Kenntnis des Irrtums.\n\n**Rechtsfolge (§ 142 I BGB):** Der Vertrag gilt als von Anfang an nichtig (ex tunc). Die G-GmbH muss jedoch gem. § 122 BGB den Vertrauensschaden des R ersetzen.\n\n**Ergebnis:** Ja, die G-GmbH kann den Vertrag gem. §§ 119 I Alt. 2, 166 I, 143 I, 121 BGB anfechten.\n\n---\n\n## Abwandlung: K selbst mäht den Rasen und schrammt den Zaun\n\nWenn K selbst handelt: K ist Geschäftsführer (Organ) der G-GmbH. Seine Handlungen werden der GmbH direkt über §§ 35 GmbHG, 31 BGB zugerechnet – ohne dass es einer Stellvertretung bedarf. Die GmbH haftet gegenüber N aus § 823 I BGB (über § 31 BGB), wobei hier kein Entlastungsbeweis möglich ist (anders als bei § 831 BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-2",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Besprechungsfall 4.2 – Die neuen Fässer für die Winzerei",
+      "source": "Praxisteil 4, Besprechungsfall 4.2 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "A betreibt eine kleine Winzerei. Für ihn arbeitet Mitarbeiter M, der unter anderem für den Einkauf zuständig ist. Dies teilt er auch Küfer K mit, bei dem er regelmäßig neue Fässer einkauft. Da die Geschäfte schlechter laufen, teilt er M intern mit, dass er nur noch maximal 50 Fässer pro Jahr mit einem Gesamteinkaufspreis bis zu 25.000 Euro kaufen darf; eine entsprechende Mitteilung an K erfolgt nicht. Als M bereits 40 Fässer zu 500 Euro (= 20.000 Euro) für das laufende Jahr bei K bestellt hat, schlägt M bei einem Sonderangebot zu und bestellt im Namen des A weitere 15 Fässer zu 400 Euro (= 6.000 Euro).\n\nLiegt ein wirksamer Vertrag zwischen A und K vor?\n\nAbwandlung 1: Wie ist der Fall zu entscheiden, wenn A dem K zwar mitgeteilt hatte, dass M nur noch berechtigt ist, bis maximal 25.000 Euro im Jahr Fässer zu kaufen, er jedoch M umgehend mitteilt, dass er sehr froh über das gute Geschäft ist?\n\nAbwandlung 2: Wie ist die Abwandlung 1 zu entscheiden, wenn A stattdessen mit der Bestellung des M nicht zufrieden ist und K nunmehr die Bezahlung von M verlangt?",
+      "hint": "Hauptfall: Prüfe die Vollmacht des M. Interne Beschränkungen im Innenverhältnis und ihre Außenwirkung! Abwandlung 1: Was bewirkt die Mitteilung des A an M? Abwandlung 2: § 179 BGB – kannte M den Mangel?",
+      "solution": "## Hauptfall: Wirksamer Vertrag zwischen A und K?\n\n**Obersatz:** K könnte gegen A einen Anspruch auf Zahlung des Kaufpreises für die 15 Fässer aus § 433 II BGB haben, wenn ein wirksamer Kaufvertrag zustande gekommen ist.\n\n**Stellvertretung des M für A (§ 164 I BGB):**\n\n**(1) Eigene Willenserklärung:** M hat selbst entschieden, die 15 Fässer zu bestellen. (+)\n\n**(2) In fremdem Namen:** M handelte erkennbar im Namen des A. (+)\n\n**(3) Vertretungsmacht:**\nA hatte M bevollmächtigt, Fässer für ihn einzukaufen. Diese Vollmacht wurde auch dem K gegenüber kommuniziert (Außenvollmacht i.S.d. § 167 I BGB). Intern hat A die Vollmacht auf max. 50 Fässer / 25.000 EUR beschränkt. Diese Beschränkung wurde K jedoch **nicht mitgeteilt**.\n\n**Maßgeblichkeit der internen Beschränkung:**\nIm Außenverhältnis gegenüber dem gutgläubigen K wirkt die interne Beschränkung grundsätzlich **nicht**. K durfte darauf vertrauen, dass M die gleiche Vollmacht hat wie bisher. M hatte zwar intern die Grenze überschritten (40 + 15 = 55 Fässer, 26.000 EUR > 25.000 EUR), aber im Außenverhältnis war seine Vollmacht nicht beschränkt. Der Vertrag ist wirksam.\n\nAlternativ: Man könnte auch eine **Duldungsvollmacht** annehmen, da A den bisherigen Einkäufen des M gegenüber K nicht widersprochen hat, sodass K auf die Vertretungsmacht vertrauen durfte.\n\n**Ergebnis:** Ein wirksamer Kaufvertrag zwischen A und K über 15 Fässer ist zustande gekommen. A ist zur Zahlung verpflichtet.\n\n---\n\n## Abwandlung 1: A hatte K die Beschränkung mitgeteilt, genehmigt nun aber die Bestellung\n\n**Prüfung der Vertretungsmacht:**\nNun kannte K die Beschränkung (max. 25.000 EUR). M hat diese überschritten (55 Fässer, 26.000 EUR). M handelt damit als **Vertreter ohne Vertretungsmacht** (§ 177 I BGB).\n\n**Schwebende Unwirksamkeit:** Der Vertrag ist zunächst schwebend unwirksam.\n\n**Genehmigung (§ 177 I BGB):** A teilt M mit, dass er über das gute Geschäft froh ist. Diese Erklärung ist als **Genehmigung** des Vertrages auszulegen (§§ 182 ff. BGB). Die Genehmigung wirkt rückwirkend (§ 184 I BGB).\n\n**Ergebnis:** Durch die Genehmigung des A ist der Kaufvertrag zwischen A und K rückwirkend wirksam geworden.\n\n---\n\n## Abwandlung 2: A genehmigt nicht – K verlangt Zahlung von M\n\n**Situation:** A verweigert die Genehmigung. Der Vertrag bleibt endgültig unwirksam. K will M persönlich in Anspruch nehmen.\n\n**Haftung des Vertreters ohne Vertretungsmacht (§ 179 BGB):**\n\n**Obersatz:** K könnte gegen M einen Anspruch aus § 179 I oder II BGB haben.\n\n**§ 179 I BGB (Erfüllungsinteresse):** Voraussetzung: M kannte den Mangel der Vertretungsmacht. Da A dem K und M mitgeteilt hatte, dass M nur bis 25.000 EUR berechtigt ist, wusste M, dass er die Grenze überschreitet. Er **kannte** also den Mangel seiner Vertretungsmacht.\n\n**§ 179 III BGB (Ausschluss):** Kannte auch K den Mangel? Ja – A hatte K die Beschränkung mitgeteilt. Daher greift § 179 III S. 1 BGB: Da K wusste, dass M keine Vertretungsmacht für diesen Auftrag hatte, entfällt die Haftung des M!\n\n**Ergebnis:** K kann von M nichts verlangen. Beide Parteien (K und M) wussten von der fehlenden Vertretungsmacht. Die Haftung nach § 179 BGB ist gem. § 179 III S. 1 BGB ausgeschlossen."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-3",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Besprechungsfall 4.3 – Der Gartentisch von der Internetplattform",
+      "source": "Praxisteil 4, Besprechungsfall 4.3 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "O kauft gerne im Internet ein. Jetzt benötigt er einen Gartentisch; einen passenden findet er auf einer Internetplattform in einem 'Angebot' des H für 100 Euro zum Sofortkaufen. Da er jedoch über kein eigenes Konto auf der Internetplattform verfügt, verwendet er kurzerhand das Konto seines Freundes F, für das F ihm vor ein paar Monaten die Kontozugangsdaten einmalig für einen anderen Kaufvertrag überlassen hatte. Dieser hatte anschließend die Zugangsdaten nicht geändert.\n\nLiegt ein wirksamer Vertrag zwischen F und H vor?",
+      "hint": "Prüfe, wer tatsächlich die Willenserklärung abgegeben hat. Handeln 'unter fremdem Namen'. Ist F oder O Vertragspartner? Welche Rolle spielen die nicht geänderten Zugangsdaten?",
+      "solution": "## Wirksamer Vertrag zwischen F und H?\n\n**Obersatz:** H könnte gegen F einen Anspruch auf Zahlung des Kaufpreises aus § 433 II BGB haben, wenn ein wirksamer Kaufvertrag zwischen F und H zustande gekommen ist.\n\n**Wer hat die Willenserklärung abgegeben?**\nTatsächlich hat O auf dem Konto des F gehandelt. O hat dabei nicht erklärt, für F zu handeln – er hat den *Namen des F* (das Konto) verwendet, wollte aber für sich selbst kaufen. Dies ist ein Fall des **Handelns unter fremdem Namen**.\n\n**Handeln unter fremdem Namen – Grundregel:**\nGrundsätzlich wird beim Handeln unter fremdem Namen der **Handelnde selbst** (O) verpflichtet, da kein wirksamer Wille zur Stellvertretung vorliegt. Es liegt ein Eigengeschäft des O vor.\n\n**Ausnahme: Form der Stellvertretung?**\nEine Ausnahme gilt, wenn dem Dritten (H) **wichtig ist, mit wem** er kontrahiert, und die andere Person (F) tatsächlich existiert. Im Internethandel ist es dem Händler H typischerweise gleichgültig, wer genau der Käufer ist – es kommt nur auf die Zahlung an. Die Identität des F ist für H nicht wesentlich.\n\n**Ergebnis für F:** Mangels einer wirksamen Stellvertretung (kein Handeln im fremden Namen durch O; kein für H entscheidender Identitätswille) wird F **nicht** Vertragspartner.\n\n**Was ist mit der Anscheinsvollmacht?**\nMan könnte prüfen, ob F durch Nichtändern der Zugangsdaten eine Anscheinsvollmacht begründet hat. Eine Anscheinsvollmacht setzt u. a. voraus, dass der Vertretene die Vertretung hätte erkennen und verhindern können **und** dass es eine gewisse Häufigkeit der Vertretungshandlungen gab. Hier: F hatte die Zugangsdaten nur einmalig für einen anderen Kauf überlassen. Es fehlt an einer **wiederholten tatsächlichen Vertretung**. Eine Anscheinsvollmacht liegt nicht vor.\n\n**Gesamtergebnis:** Ein wirksamer Kaufvertrag zwischen **F und H** ist **nicht** zustande gekommen. O ist selbst Vertragspartner des H geworden (Eigengeschäft). H hat seine Ansprüche gegen O."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-4",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Besprechungsfall 4.4 – Der Bäcker und sein Brot (Verjährung)",
+      "source": "Praxisteil 4, Besprechungsfall 4.4 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "B betreibt eine Bäckerei. Hierfür hat er am 20.04.2021 Mehl beim Großhandel G bestellt, aber noch nicht gezahlt. Als ihn G am 03.04.2022 zur Zahlung auffordert, bestreitet er zunächst, dass noch eine Forderung offen ist, gesteht aber mit Email vom 19.08.2022 ein, dass er noch zahlen müsse. Hierauf vergisst er jedoch erneut zu zahlen und auch G meldet sich zunächst nicht mehr.\n\nMit seinem Kunden K hat B ebenfalls Ärger, da sich K am 24.12.2021 an einem Metallstück einen Zahn abgebrochen hat. Zunächst wusste K nicht, dass sich das Metallstück in einem Brot des B befunden hatte, bis er zufällig in einem Gespräch mit B am 02.01.2022 erfuhr, dass ein Mitarbeiter des B eine Maschine nicht richtig gewartet hatte und daher ein Metallstück in einem Brot vermutet wurde.\n\nAls G und K von B am 04.05.2025 Zahlung des Kaufpreises bzw. Schmerzensgeld verlangen, verweigert B dies, 'da dies schon so lange her sei'.\n\nSind die Ansprüche von G und K gegen B noch durchsetzbar?",
+      "hint": "Prüfe für beide Ansprüche: Beginn der Verjährungsfrist (§ 199 I BGB), Länge (§ 195 BGB), und ob besondere Ereignisse (Anerkenntnis → Neubeginn § 212 BGB) eingetreten sind. Für K: Wann hatte er Kenntnis?",
+      "solution": "## I. Anspruch des G gegen B: Kaufpreisforderung\n\n**Obersatz:** G könnte gegen B einen Anspruch auf Zahlung des Kaufpreises aus § 433 II BGB haben. Fraglich ist, ob dieser Anspruch am 04.05.2025 noch durchsetzbar ist oder ob B die Einrede der Verjährung erheben kann (§ 214 I BGB).\n\n### Entstehung des Anspruchs\nB bestellte am 20.04.2021 Mehl bei G. Der Kaufvertrag kam zustande, G hat geliefert. Der Kaufpreisanspruch des G entstand damit 2021. (+)\n\n### Regelmäßige Verjährungsfrist (§ 195 BGB): 3 Jahre\n\n### Beginn der Verjährungsfrist (§ 199 I BGB)\nAnspruch entstanden: 2021. G hatte Kenntnis vom Anspruch und der Person des Schuldners (B). Fristbeginn: **31.12.2021** (Schluss des Jahres 2021). Reguläres Fristende: **31.12.2024**.\n\n### Neubeginn durch Anerkenntnis (§ 212 I Nr. 1 BGB)\nMit E-Mail vom **19.08.2022** erkennt B an, dass er noch zahlen müsse. Dies ist ein ausdrückliches **Anerkenntnis** im Sinne des § 212 I Nr. 1 BGB. Die Verjährungsfrist beginnt daher ab dem **19.08.2022** von vorne zu laufen.\n\nNeue 3-Jahres-Frist ab 19.08.2022: **Ablauf am 19.08.2025**.\n\n### Ergebnis für G\nAm 04.05.2025 ist die neue Verjährungsfrist (Ablauf 19.08.2025) noch **nicht** abgelaufen. B kann die Einrede der Verjährung **nicht** erfolgreich erheben. Der Anspruch des G ist noch durchsetzbar.\n\n---\n\n## II. Anspruch des K gegen B: Schmerzensgeld\n\n**Obersatz:** K könnte gegen B einen Anspruch auf Schmerzensgeld aus § 823 I BGB (Körperverletzung durch Metallstück) haben. Fraglich ist, ob dieser Anspruch am 04.05.2025 noch durchsetzbar ist.\n\n### Entstehung des Anspruchs\nK hat sich am **24.12.2021** an einem Metallstück im Brot des B einen Zahn gebrochen. Der Schadensersatzanspruch aus § 823 I BGB entstand mit dem schädigenden Ereignis am 24.12.2021.\n\n### Beginn der Verjährungsfrist (§ 199 I BGB)\nDie regelmäßige Verjährungsfrist beginnt mit dem Schluss des Jahres, in dem:\n1. der Anspruch entstanden ist: ✓ 2021\n2. der Gläubiger (K) Kenntnis von den anspruchsbegründenden Tatsachen und der Person des Schuldners (B) erlangt hat.\n\n**Kenntnis des K:** Am 24.12.2021 wusste K noch nicht, dass das Metallstück aus einem Brot des B stammte. Erst am **02.01.2022** erfuhr er im Gespräch mit B, dass ein Mitarbeiter des B eine Maschine nicht gewartet hatte und ein Metallstück vermutet wurde. Ab diesem Zeitpunkt hatte K Kenntnis von Anspruch und Schuldner.\n\nDa die Kenntnis erst **2022** eintrat, beginnt die Verjährungsfrist: **31.12.2022** (Schluss des Jahres 2022).\n\nReguläres Fristende: **31.12.2025**.\n\n### Gibt es Hemmung oder Neubeginn?\nEs sind keine Hemmungs- oder Neubeginntatbestände ersichtlich (keine Klage, kein Mahnbescheid, kein Anerkenntnis durch B).\n\n### Ergebnis für K\nAm 04.05.2025 ist die Verjährungsfrist (Ablauf 31.12.2025) noch **nicht** abgelaufen. B kann die Einrede der Verjährung **nicht** erfolgreich erheben. Der Anspruch des K ist noch durchsetzbar.\n\n---\n\n## Gesamtergebnis\nSowohl der Kaufpreisanspruch des G als auch der Schmerzensgeldanspruch des K sind am 04.05.2025 noch durchsetzbar. B's Einwand 'das sei schon so lange her' greift rechtlich nicht."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-5",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Vertiefungsfall 4.1 – Der Minderjährige und die Zeitschrift für die Oma",
+      "source": "Praxisteil 4, Vertiefungsfall 4.1 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Die 90-jährige O bittet ihren 11-jährigen Enkel M im Schreibwarenladen des S (S-GmbH, S = einziger Geschäftsführer), eine neue Gartenzeitschrift für sie zu kaufen. O gibt M einen 5-Euroschein. M sucht eine Gartenzeitschrift für 4,90 Euro aus und bezahlt bei S; er erhält 10 Cent Wechselgeld.\n\nLiegt ein wirksamer Kaufvertrag zwischen O und der S-GmbH vor?\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn O stattdessen ihren 6-jährigen Enkel M gebeten hätte, eine bestimmte Zeitschrift für sie zu kaufen?",
+      "hint": "Prüfe: Kann ein 11-Jähriger wirksam Vertreter sein? § 165 BGB. Ist die Vollmachtserteilung für M vorteilhaft? Was ändert sich beim 6-Jährigen – Vertreter oder Bote?",
+      "solution": "## Wirksamer Kaufvertrag zwischen O und der S-GmbH?\n\n**Obersatz:** O könnte gegen die S-GmbH einen Anspruch auf Übereignung der Zeitschrift aus § 433 I BGB haben, wenn ein wirksamer Kaufvertrag zwischen O und der S-GmbH zustande gekommen ist.\n\nDas setzt voraus, dass M wirksam als Stellvertreter der O gehandelt hat (§ 164 I BGB).\n\n### Zulässigkeit der Stellvertretung\nKein höchstpersönliches Rechtsgeschäft. (+)\n\n### 1. Eigene Willenserklärung des M\nM hat selbst die Zeitschrift ausgesucht (O gab nur die Kategorie 'Gartenzeitschrift' vor, nicht die konkrete Zeitschrift). M hatte eigenen Entscheidungsspielraum → eigene Willenserklärung, kein Bote. (+)\n\n### 2. Handeln in fremdem Namen\nM handelte im Namen der O (Geld von O, erkennbar für O). (+)\n\n### 3. Vertretungsmacht\nO hat M bevollmächtigt, für sie eine Gartenzeitschrift zu kaufen (§ 167 I BGB). Fraglich ist, ob M als 11-Jähriger (beschränkt Geschäftsfähiger, § 106 BGB) wirksam bevollmächtigt werden kann.\n\n**§ 165 BGB:** Der Vertreter braucht nur beschränkt geschäftsfähig zu sein – nicht voll geschäftsfähig. M ist 11 Jahre alt und damit beschränkt geschäftsfähig. Er kann wirksam als Vertreter auftreten. (+)\n\n**Vollmachtserteilung an M:** Ist die Erteilung der Vollmacht für M lediglich rechtlich vorteilhaft? Die Vollmacht bringt M keine rechtlichen Nachteile (er haftet nicht persönlich, wenn er im Rahmen der Vollmacht handelt). Damit ist die Bevollmächtigung gem. § 107 BGB ohne Einwilligung der Eltern wirksam. (+)\n\n**M handelt im Rahmen der Vollmacht:** Die Zeitschrift kostet 4,90 EUR, O gab 5 EUR. M handelt innerhalb der Vollmacht. (+)\n\n**S-GmbH / Geschäftsführer S:** S als einziger Geschäftsführer der S-GmbH vertritt diese gem. § 35 GmbHG. Der Kaufvertrag wird mit der S-GmbH abgeschlossen.\n\n### Ergebnis\nAlle Voraussetzungen der Stellvertretung sind erfüllt. Ein wirksamer Kaufvertrag zwischen **O und der S-GmbH** über die Zeitschrift für 4,90 EUR ist zustande gekommen.\n\n---\n\n## Abwandlung: 6-jähriger Enkel M\n\n**Problem:** Ein 6-Jähriges Kind ist geschäftsunfähig (§ 104 Nr. 1 BGB – Kinder bis zu 7 Jahren). Ein Geschäftsunfähiger kann gem. Umkehrschluss aus § 165 BGB **nicht** Vertreter sein (§ 165 BGB verlangt beschränkte Geschäftsfähigkeit als Minimum).\n\n**Kann M als Bote auftreten?** Ja. O hat M genau gesagt, welche Zeitschrift er kaufen soll (bestimmte Zeitschrift). M überträgt die fertige Willenserklärung der O – er ist dann als **Bote** tätig, nicht als Vertreter.\n\n**Rechtsfolge der Botenschaft:** Die Willenserklärung stammt von O. Der Kaufvertrag kommt zwischen O und der S-GmbH zustande, sofern die Erklärung des O-Boten M dem S ordnungsgemäß zugegangen ist.\n\n**Ergebnis Abwandlung:** Wenn O eine bestimmte Zeitschrift benannt hat, ist M Bote der O. Der Kaufvertrag kommt wirksam zwischen O und der S-GmbH zustande."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-6",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Vertiefungsfall 4.2 – Die Hilfe des Freundes und der Sandkasten",
+      "source": "Praxisteil 4, Vertiefungsfall 4.2 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "H möchte für seine Kinder einen Sandkasten bauen. Da er hiervon keine Ahnung hat, bittet er seinen Freund F, für ihn im Baumarkt B auf Rechnung die nötigen Bauteile zu kaufen. Aus Gewohnheit gibt F als Rechnungsadresse seinen eigenen Namen und Adresse an. Als er zwei Wochen später die Rechnung in seinem Briefkasten findet, teilt er B mit, dass er irrtümlicherweise seinen Namen angegeben habe, da der Sandkasten für H bestimmt sei.\n\nLiegt ein wirksamer Vertrag zwischen F und B vor?\n\nAbwandlung: Wie ist der Fall zu entscheiden, wenn H stattdessen selbst, um anonym zu bleiben, den Namen des F angegeben und direkt bar bezahlt hätte?",
+      "hint": "Hauptfall: Fehlende Offenkundigkeit – Eigengeschäft oder Ausnahme? Abwandlung: Wer gibt welchen Namen an? 'Geschäft für den, den es angeht' oder Handeln unter fremdem Namen?",
+      "solution": "## Wirksamer Vertrag zwischen F und B?\n\n**Obersatz:** B könnte gegen F einen Anspruch auf Kaufpreiszahlung aus § 433 II BGB haben, wenn ein wirksamer Kaufvertrag zwischen F und B zustande gekommen ist.\n\n### Stellvertretung des H durch F?\nF wurde von H beauftragt, für ihn einzukaufen. Grundsätzlich könnte F als Stellvertreter des H handeln.\n\n**Eigene Willenserklärung:** F hat selbst entschieden, was zu kaufen ist (+). **In fremdem Namen:** F hat **seinen eigenen Namen** angegeben – er hat nicht erkennbar für H gehandelt. Das Merkmal der Offenkundigkeit fehlt.\n\n**Rechtsfolge fehlender Offenkundigkeit (§ 164 II BGB):** Wenn der Vertreter nicht erkennbar in fremdem Namen handelt, wird er selbst Vertragspartner (Eigengeschäft). Ein Anfechtungsrecht besteht insoweit nicht.\n\n**Ausnahme – Geschäft für den, den es angeht?** Bargeschäfte des täglichen Lebens, bei denen dem Dritten die Identität des Vertragspartners egal ist, können ausnahmsweise dem wahren Auftraggeber zugerechnet werden. Hier handelt es sich aber um einen Kauf auf Rechnung – B möchte wissen, wer sein Schuldner ist. Die Identität des Vertragspartners ist für B relevant. Die Ausnahme greift nicht.\n\n**Ergebnis:** Ein wirksamer Kaufvertrag zwischen **F und B** ist zustande gekommen. F ist selbst Vertragspartner. F hat intern einen Anspruch gegen H aus dem zwischen ihnen bestehenden Auftragsverhältnis (§ 662 BGB) auf Aufwendungsersatz (§ 670 BGB).\n\n---\n\n## Abwandlung: H selbst gibt den Namen des F an und zahlt bar\n\nH handelt selbst im Baumarkt, gibt aber den **Namen des F** an und zahlt direkt bar.\n\n**Handeln unter fremdem Namen:**\nH handelt hier unter dem fremden Namen des F. Grundsatz: Der Handelnde (H) wird selbst verpflichtet (Eigengeschäft).\n\n**Ausnahme – Geschäft für den, den es angeht:**\nH zahlt bar – der Baumarkt B erhält sofort seinen Kaufpreis. B ist es vollkommen egal, wer der Vertragspartner ist; es kommt nur auf die Zahlung an. Die Identität ist für B unerheblich.\n\nDamit greift die Ausnahme **'Geschäft für den, den es angeht'**: Da B die Identität des Käufers egal ist (Bargeschäft), ist H der wirksame Vertragspartner.\n\n**Ergebnis Abwandlung:** Der Kaufvertrag gilt zwischen **H und B**. F wird hier nicht Vertragspartner."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-7",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Vertiefungsfall 4.3 – Der Weiterverkauf des neuen alten Oldtimers",
+      "source": "Praxisteil 4, Vertiefungsfall 4.3 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "R ist gerade frisch verrentet. Er erfährt, dass sein Nachbar N gerade einen Oldtimer (Pkw Daimler Benz 280 SE, Wert: ca. 330.000 Euro) verkaufen möchte. Da N inzwischen schwerhörig ist, bittet er R, den Oldtimer für ihn zu verkaufen. R schließt sofort im Namen des N mit sich selbst einen Vertrag, in dem er den Oldtimer für 33.000 Euro an sich verkauft.\n\nLiegt ein wirksamer Vertrag zwischen R und N vor?\n\nAbwandlung 1: Wie ist der Fall zu entscheiden, wenn R stattdessen den Oldtimer zu dem Preis an T verkauft, der ihm eine Provision in Höhe von 10.000 Euro anbietet?\n\nAbwandlung 2: Wie ist der Fall zu entscheiden, wenn der alleinerziehende R seinen eigenen Oldtimer seinem 6-jährigen Kind K schenken möchte?",
+      "hint": "Hauptfall: In-Sich-Geschäft § 181 BGB. Greift eine Ausnahme? Welche Rechtsfolge? Abwandlung 1: Hat R formal Vollmacht? Was ist mit Missbrauch der Vertretungsmacht (Kollusion/Evidenz)? Abwandlung 2: § 181 BGB + lediglich rechtlich vorteilhaft für K?",
+      "solution": "## Wirksamer Vertrag zwischen R und N?\n\n**Obersatz:** R könnte gegen N einen Anspruch auf Übereignung des Oldtimers aus § 433 I BGB haben, wenn ein wirksamer Kaufvertrag zwischen R und N zustande gekommen ist.\n\n**Stellvertretung:** N hat R bevollmächtigt, den Oldtimer zu verkaufen. R handelt im Namen des N. R schließt aber den Vertrag mit **sich selbst** ab.\n\n**In-Sich-Geschäft (§ 181 BGB):**\nR ist gleichzeitig Vertreter des N (Verkäuferseite) und selbst der Käufer (Käuferseite). Er steht auf beiden Seiten des Rechtsgeschäfts → klassisches In-Sich-Geschäft.\n\n**Greift eine Ausnahme des § 181 BGB?**\n- **Gestattung durch N?** N hat R nur zum Verkauf an Dritte bevollmächtigt, nicht explizit erlaubt, an sich selbst zu verkaufen. (-)\n- **Erfüllung einer Verbindlichkeit?** Nein. (-)\n- **Lediglich rechtlich vorteilhaft für N?** Nein – N erleidet sogar einen erheblichen wirtschaftlichen Schaden (Wert 330.000 EUR, Kaufpreis 33.000 EUR). (-)\n\n**Rechtsfolge:** Das In-Sich-Geschäft ist **schwebend unwirksam** (§§ 181, 177 I BGB analog). N kann nachträglich genehmigen oder die Genehmigung verweigern. Da R den Oldtimer zu 1/10 des Wertes an sich selbst verkauft hat, wird N die Genehmigung verweigern.\n\n**Ergebnis:** Es liegt kein wirksamer Kaufvertrag zwischen R und N vor. Das In-Sich-Geschäft ist schwebend unwirksam und wird durch Verweigerung der Genehmigung endgültig unwirksam.\n\n---\n\n## Abwandlung 1: R verkauft an T für 10.000 EUR Provision\n\nR verkauft den Oldtimer im Namen des N an T zum Marktpreis (oder unter Wert?). R erhält von T 10.000 EUR Provision.\n\n**Vertretungsmacht vorhanden?** Ja – N hat R bevollmächtigt, den Oldtimer zu verkaufen. Formal handelt R im Rahmen seiner Vollmacht.\n\n**Kein In-Sich-Geschäft:** R und T sind verschiedene Personen. § 181 BGB greift nicht.\n\n**Missbrauch der Vertretungsmacht:**\nR handelt zwar formal mit Vollmacht, aber zum Nachteil des N: Er verkauft den Oldtimer offenbar zu einem für N nachteiligen Preis, um selbst Provision von T zu kassieren. Das ist ein klassisches **kollusives Zusammenwirken** zwischen R und T zum Nachteil des N.\n\n**Voraussetzungen des Missbrauchs:**\n- R und T handeln **zusammen** zum Nachteil des N (Kollusion: R verkauft bewusst günstig, T zahlt 10.000 EUR Provision). (+)\n- Das nachteilige Handeln ist für T **erkennbar** (er weiß, dass er von dem Missbrauch profitiert). (+)\n\n**Rechtsfolge:** Der Vertrag zwischen N (vertreten durch R) und T ist wegen Missbrauchs der Vertretungsmacht unwirksam. N kann sich darauf berufen. Daneben kommen Schadensersatzansprüche gegen R in Betracht.\n\n**Ergebnis:** Der Kaufvertrag zwischen N und T ist unwirksam.\n\n---\n\n## Abwandlung 2: R schenkt seinen eigenen Oldtimer seinem 6-jährigen Kind K\n\nR möchte **seinen eigenen** Oldtimer seinem Kind K schenken. R handelt hier in doppelter Funktion: als Schenker (für sich selbst) und als gesetzlicher Vertreter des K (Empfängerseite).\n\n**In-Sich-Geschäft (§ 181 BGB)?**\nR steht auf beiden Seiten (Schenker und gesetzlicher Vertreter des Beschenkten). Grundsätzlich wäre dies ein In-Sich-Geschäft.\n\n**Ausnahme: Lediglich rechtlich vorteilhaft für K (§ 107 BGB analog / Sinn und Zweck § 181 BGB)?**\nEine Schenkung ist für den Beschenkten lediglich **rechtlich vorteilhaft** (kein Nachteil für K). Der Sinn des § 181 BGB ist es, den Vertretenen vor Interessenkonflikten zu schützen. Wenn das Geschäft für den Vertretenen (K) ausschließlich vorteilhaft ist, besteht keine Schutzbedürftigkeit.\n\nNach dem Sinn und Zweck des § 181 BGB ist das In-Sich-Geschäft bei lediglich rechtlich vorteilhaften Rechtsgeschäften für den Vertretenen auch ohne Gestattung **wirksam**.\n\n**Ergebnis:** Die Schenkung des Oldtimers von R an sein Kind K ist wirksam, weil sie für K lediglich rechtlich vorteilhaft ist (Ausnahme vom Verbot des In-Sich-Geschäfts nach Sinn und Zweck des § 181 BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-ex-8",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "label": "Vertiefungsfall 4.4 – Die Malerarbeiten und die Farbe (Verjährung)",
+      "source": "Praxisteil 4, Vertiefungsfall 4.4 (PR-WIWI-Skript-PraxisteilS17-19.pdf)",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "O betreibt einen Farben-Großhandel und hat von Maler M kurz vor Weihnachten 2020 sein Büro für 2.000 Euro neu streichen lassen. Als M ihm erst Ende 2023 die Rechnung schickt, erinnert er sich, dass vor dreieinhalb Jahren der Geselle G des M bei ihm Farben im Wert von 1.500 Euro gekauft, aber noch nicht bezahlt hatte. G war für den Einkauf zuständig, und M wusste davon.\n\nO beantragt kurz vor Weihnachten 2023 einen gerichtlichen Mahnbescheid gegen M wegen der 1.500 Euro. M legt keinen Widerspruch ein; Anfang 2024 wird ein Vollstreckungsbescheid erlassen. O hat die Zwangsvollstreckung bis jetzt (kurz nach Ostern 2024) noch nicht betrieben. Kurz nach Ostern 2024 machen sowohl O als auch M ihre Ansprüche geltend.\n\nKönnen O bzw. M die Verjährung der Ansprüche des jeweils anderen geltend machen?\n\n(Hinweis: Gehen Sie davon aus, dass der gerichtliche Mahnbescheid noch rechtzeitig innerhalb der Verjährungsfrist zugestellt wurde, vgl. § 167 ZPO.)\n\nAbwandlung: O klagt Ende 2023, Verfahren läuft noch. M hat in der Zwischenzeit regelmäßig Farbe bei O bestellt, ohne die alte Forderung (Bürostreichung) zu begleichen. O hat M regelmäßig erheblichen Rabatt gewährt.",
+      "hint": "O's Forderung (1.500 EUR Farbe): Beginn Verjährung, Hemmung durch Mahnbescheid (§ 204 I Nr. 3 BGB), Neubeginn durch Vollstreckungsbescheid (§ 212 I Nr. 2 BGB). M's Forderung (2.000 EUR Malerarbeiten): Beginn, kein Hemmungstatbestand? Abwandlung: Verwirkung durch Rabattgewährung?",
+      "solution": "## I. Kann O die Verjährung des Anspruchs des M geltend machen?\n\n**Anspruch des M:** M hat gegen O einen Anspruch auf Zahlung des Werklohns für das Bürostreichen (2.000 EUR) aus § 631 II BGB.\n\n**Entstehung:** Kurz vor Weihnachten 2020 (Ende 2020). Kenntnis des M: sofort. Fristbeginn: **31.12.2020**. Regelmäßige Verjährungsfrist (§ 195 BGB): 3 Jahre. Reguläres Fristende: **31.12.2023**.\n\n**Hemmung oder Neubeginn?**\nM hat bis Ende 2023 keine verjährungsunterbrechenden Maßnahmen ergriffen. Erst Ende 2023 schickt er die Rechnung. Das bloße Schicken einer Rechnung ist keine Klage, kein Mahnbescheid, kein Verhandlungsangebot i.S.d. §§ 203, 204 BGB.\n\n**Ergebnis für M's Anspruch:** Die Verjährungsfrist lief vom 31.12.2020 bis **31.12.2023** ab. Zum Zeitpunkt der Geltendmachung kurz nach Ostern 2024 ist der Anspruch des M **verjährt**. O kann die Einrede der Verjährung (§ 214 I BGB) erfolgreich erheben.\n\n---\n\n## II. Kann M die Verjährung des Anspruchs des O geltend machen?\n\n**Anspruch des O:** O hat gegen M einen Anspruch auf Zahlung des Kaufpreises für die Farben (1.500 EUR) aus § 433 II BGB. Die Farben wurden vor dreieinhalb Jahren (ca. 2020) gekauft. G war Erfüllungsgehilfe/Vertreter des M für den Einkauf; M wusste davon → § 278 BGB bzw. Vollmacht des G.\n\n**Entstehung:** ca. 2020 (nehmen wir Ende 2020 an). Kenntnis des O: sofort. Fristbeginn: **31.12.2020**. Reguläres Fristende: **31.12.2023**.\n\n**Hemmung durch gerichtlichen Mahnbescheid (§ 204 I Nr. 3 BGB):**\nO beantragt kurz vor Weihnachten 2023 (also noch vor dem 31.12.2023) einen Mahnbescheid. Dieser wurde laut Sachverhalt noch rechtzeitig zugestellt (§ 167 ZPO). Damit tritt Hemmung ein (§ 204 I Nr. 3 BGB) – die Verjährung läuft nicht weiter.\n\n**Neubeginn durch Vollstreckungsbescheid (§ 212 I Nr. 2 BGB):**\nAnfang 2024 wird ein **Vollstreckungsbescheid** erlassen. Dies ist eine gerichtliche Vollstreckungshandlung i.S.d. § 212 I Nr. 2 BGB → die Verjährungsfrist beginnt von neuem zu laufen (ab Anfang 2024). Neue 3-Jahres-Frist: bis Anfang 2027.\n\n**Ergebnis für O's Anspruch:** Der Anspruch des O ist durch rechtzeitigen Mahnbescheid gehemmt und durch Vollstreckungsbescheid neu begonnen worden. Am Ostermontag 2024 ist er **nicht verjährt**. M kann die Einrede der Verjährung **nicht** erfolgreich erheben.\n\n---\n\n## III. Gesamtergebnis\n- **M's Anspruch** (Malerarbeiten, 2.000 EUR): **Verjährt** – O kann die Einrede der Verjährung (§ 214 I BGB) erheben.\n- **O's Anspruch** (Farben, 1.500 EUR): **Nicht verjährt** – M kann die Einrede der Verjährung nicht erheben.\n\n---\n\n## Abwandlung: O klagt Ende 2023; M bestellt regelmäßig Farbe mit Rabatt\n\n**O's Anspruch (Bürostreichung M → O):**\nO klagt Ende 2023 → Hemmung durch Klageerhebung (§ 204 I Nr. 1 BGB). O's Forderung (2.000 EUR für Streichen) ist gehemmt. Der Anspruch ist nicht verjährt, solange das Verfahren läuft (+ 6 Monate nach Ende, § 204 II BGB).\n\n**M's Anspruch (Farben O → M, 1.500 EUR):**\nDas Interessante hier: M bestellt regelmäßig Farbe bei O und O gewährt regelmäßig **erhebliche Rabatte**, ohne die alte Forderung aus dem Streichen anzusprechen. Könnte M's Werklohnforderung **verwirkt** sein?\n\n**Prüfung Verwirkung (§ 242 BGB):**\n- **Zeitmoment:** M hat über drei Jahre seine Forderung (Ende 2020 bis Ende 2023) nicht geltend gemacht. (+)\n- **Umstandsmoment:** O gewährt M regelmäßig erhebliche Rabatte ohne Hinweis auf die offene Forderung. Durch dieses Verhalten hat M den **Eindruck erweckt**, die Forderung nicht mehr geltend machen zu wollen.\n- **Vertrauen des O:** O hat durch die regelmäßigen Rabatte gezeigt, dass er sich auf eine Art 'Saldierung' oder Vergessenheit verlassen hat. O hat sein Verhalten danach eingerichtet (Rabattgewährung statt Zahlung).\n\nWenn alle drei Elemente bejaht werden, ist M's Forderung durch Verwirkung erloschen (§ 242 BGB). Sie wäre dann eine (rechtsvernichtende) Einwendung – O müsste sie nicht einmal geltend machen."
+    }
+  ]
+}

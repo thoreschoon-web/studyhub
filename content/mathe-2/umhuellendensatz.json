@@ -1,0 +1,354 @@
+{
+  "id": "umhuellendensatz",
+  "subjectId": "mathe-2",
+  "title": "Parameterabhängigkeit: Umhüllendensatz (Envelope-Theorem)",
+  "summary": "Wie ändert sich der optimale Wert einer Optimierungsaufgabe, wenn sich ein Parameter leicht ändert? Der Umhüllendensatz gibt eine elegante Antwort: Man muss die optimalen Variablen NICHT neu berechnen – es genügt, die partielle Ableitung der Lagrange-Funktion nach dem Parameter auszuwerten. Kernformel: dV/da = ∂L/∂a im Optimum. Das ist der Schattenpreis-Gedanke aus Lagrange neu verpackt.",
+  "order": 4,
+  "estMinutes": 40,
+  "sections": [
+    {
+      "id": "motivation",
+      "heading": "Warum parameterabhängige Optimierung?",
+      "body": "Stell dir vor, du maximierst den Nutzen eines Haushalts unter einer Budgetbeschränkung. Die Lösung hängt vom Budget $m$ ab. Jetzt erhöht sich das Budget um 1 €. Wie viel mehr Nutzen kann der Haushalt erreichen?\n\nNaive Antwort: Alles neu lösen. Das ist mühsam.\n\nSchlauere Antwort: Der **Umhüllendensatz** (englisch: *Envelope Theorem*) sagt, dass man nur eine einzige partielle Ableitung der Lagrange-Funktion nach dem Parameter berechnen muss – ausgewertet an der bekannten optimalen Stelle.\n\n**Allgemeine Situation:** Eine Zielfunktion $f(\\vec{x}, a)$ hängt sowohl von den Entscheidungsvariablen $\\vec{x}=(x_1,\\dots,x_n)$ als auch von einem **Parameter** $a$ ab. Das Optimum $\\vec{x}^*(a)$ hängt von $a$ ab, und damit auch der optimale Wert:\n$$M(a) = f(\\vec{x}^*(a),\\, a).$$\nDie Funktion $M(a)$ heißt **Optimalwertfunktion** (oder Wertefunktion). Die zentrale Frage: Wie schnell ändert sich $M$, wenn $a$ sich leicht ändert?",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Optimalwertfunktion",
+          "body": "Gegeben ein Optimierungsproblem mit Parameter $a$. Sei $\\vec{x}^*(a)$ die optimale Lösung. Dann ist die **Optimalwertfunktion** definiert als\n$$M(a) := f(\\vec{x}^*(a),\\, a).$$\n$M(a)$ gibt an, welchen Wert die Zielfunktion im Optimum hat – in Abhängigkeit vom Parameter $a$."
+        }
+      ]
+    },
+    {
+      "id": "satz4-ohne-nb",
+      "heading": "Satz 4: Umhüllendensatz ohne Nebenbedingungen",
+      "body": "Wir betrachten zunächst den einfachsten Fall: **keine Nebenbedingungen**, der Parameter $a$ erscheint direkt in der Zielfunktion.\n\n**Situation:** $\\max_{\\vec{x}} f(\\vec{x}, a)$. Die notwendige Bedingung erster Ordnung lautet $\\nabla_{\\vec{x}} f(\\vec{x}^*(a), a) = \\vec{0}$.\n\n**Frage:** Wie ändert sich $M(a) = f(\\vec{x}^*(a), a)$ bei Änderung von $a$?\n\n**Ableitung per Kettenregel:**\n$$\\frac{dM}{da} = \\underbrace{\\nabla_{\\vec{x}} f(\\vec{x}^*(a), a)}_{= \\vec{0}} \\cdot \\frac{d\\vec{x}^*}{da} + \\frac{\\partial f}{\\partial a}(\\vec{x}^*(a), a).$$\n\nDer erste Term verschwindet, weil $\\vec{x}^*(a)$ die Optimalitätsbedingung $\\nabla_{\\vec{x}} f = \\vec{0}$ erfüllt! Es bleibt:\n$$\\boxed{\\frac{dM}{da}(a) = \\frac{\\partial f}{\\partial a}(\\vec{x}^*(a),\\, a).}$$\n\n**Das ist der Kern:** Man braucht nur die **direkte** partielle Ableitung der Zielfunktion nach $a$, ausgewertet am Optimum. Der Einfluss über die veränderten optimalen $x$-Werte zählt nicht extra – er ist bereits durch die Optimalitätsbedingung eliminiert.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Satz 4 (Umhüllendensatz, kein NB)",
+          "body": "Sei $f(\\vec{x},a)$ die Zielfunktion, $\\vec{x}^*(a)$ die optimale Lösung. Dann gilt:\n$$\\frac{dM}{da} = \\frac{\\partial f}{\\partial a}\\bigg|_{\\vec{x}=\\vec{x}^*(a)}.$$\nDie innere Ableitung (über $\\vec{x}^*$) verschwindet dank der Optimalitätsbedingung."
+        },
+        {
+          "kind": "info",
+          "title": "Intuition: der Umhuellungs-Gedanke",
+          "body": "Stell dir vor, du zeichnest für verschiedene Werte von $a$ jeweils die Kurve $f(x, a)$ als Funktion von $x$. Jede Kurve hat ihr eigenes Maximum. Die Kurve der Maximalwerte $M(a)$ nennt man die **Umhüllende** (Einhüllende) dieser Kurvenschar.\n\nDer Satz besagt: Die Steigung von $M(a)$ ergibt sich einfach aus der partiellen Ableitung von $f$ nach $a$ – ausgewertet am jeweiligen Optimum."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "env-fig-1",
+          "title": "Optimalwertfunktion M(a) und lineare Näherung",
+          "caption": "M(a) = a²/4 ist die Optimalwertfunktion zu max_x (ax - x²). Am Punkt a=2 gilt M(2)=1 und M'(2)=1.",
+          "functions": [
+            { "fn": "x*x/4", "label": "M(a) = a²/4 (Optimalwert)", "color": "blue" },
+            { "fn": "x/2 - 0", "label": "Tangente bei a=2: M(2)+M'(2)·(a-2)", "color": "red", "dashed": true }
+          ],
+          "domain": [0, 4],
+          "points": [
+            { "x": 2, "y": 1, "label": "M(2) = 1" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mit-nb",
+      "heading": "Umhüllendensatz mit Nebenbedingungen (Lagrange-Version)",
+      "body": "Jetzt betrachten wir den wichtigeren Fall für die Praxis: **Optimierung mit Gleichungsnebenbedingungen**.\n\n**Situation:**\n$$\\max_{\\vec{x}} f(\\vec{x}) \\quad \\text{u.d.NB} \\quad h(\\vec{x}) = c.$$\nDer Parameter $a = c$ steht auf der rechten Seite der Nebenbedingung (z.B. das Budget, eine Ressourcenkapazität). Die **Lagrange-Funktion** lautet:\n$$L(\\vec{x}, \\lambda, c) = f(\\vec{x}) - \\lambda\\,[h(\\vec{x}) - c].$$\n\n**Umhüllendensatz für diesen Fall:**\n$$\\frac{dM}{dc} = \\frac{\\partial L}{\\partial c}\\bigg|_{(\\vec{x}^*(c),\\,\\lambda^*(c))} = \\lambda^*.$$\nDenn $\\frac{\\partial L}{\\partial c} = \\lambda$, ausgewertet am Optimum ergibt das $\\lambda^*$.\n\n**Allgemeiner:** Wenn der Parameter $a$ nicht nur in der NB, sondern auch in der Zielfunktion vorkommt, gilt:\n$$\\frac{dM}{da} = \\frac{\\partial L}{\\partial a}\\bigg|_{(\\vec{x}^*(a),\\,\\lambda^*(a))}.$$\n\nDas ist die **vollständige Formel des Umhüllendensatzes**: partielle Ableitung der Lagrange-Funktion nach dem Parameter, ausgewertet am Optimum.",
+      "callouts": [
+        {
+          "kind": "formel",
+          "title": "Umhüllendensatz (allgemeine Lagrange-Version)",
+          "body": "$$\\frac{dM}{da} = \\frac{\\partial L}{\\partial a}\\bigg|_{\\text{Optimum}} \\quad \\text{wobei } L = f - \\lambda[h - c].$$\n\nSpeziell: Steht $a=c$ nur auf der rechten Seite der NB $h(\\vec{x})=c$:\n$$\\frac{dM}{dc} = \\lambda^* \\quad (\\text{Schattenpreis!})$$"
+        },
+        {
+          "kind": "tip",
+          "title": "Lineare Näherungsformel",
+          "body": "Für eine kleine Parameteränderung $\\Delta a$ gilt:\n$$M(a + \\Delta a) \\approx M(a) + \\frac{dM}{da}(a) \\cdot \\Delta a.$$\nDas ist einfache lineare Approximation (Tangente an $M$)."
+        }
+      ]
+    },
+    {
+      "id": "schattenpreis",
+      "heading": "Schattenpreis: ökonomische Deutung von λ*",
+      "body": "Der Lagrange-Multiplikator $\\lambda^*$ hat eine unmittelbare ökonomische Bedeutung.\n\n**Beispiel Budget:** Ein Haushalt maximiert seinen Nutzen $U(x_1, x_2)$ unter der Budgetbeschränkung $p_1 x_1 + p_2 x_2 = m$. Der Umhüllendensatz liefert:\n$$\\frac{dU^*}{dm} = \\lambda^*.$$\nAlso: **$\\lambda^*$ ist der Grenznutzen des Einkommens** – wie viel mehr Nutzen erzielt der Haushalt, wenn er 1 € mehr Budget hat.\n\n**Beispiel Produktion:** Eine Firma maximiert Gewinn unter Ressourcenbeschränkung $h(x) = c$. Dann ist $\\lambda^*$ der **Grenzwert einer zusätzlichen Einheit** der Ressource $c$.\n\nDer Begriff *Schattenpreis* entsteht, weil $\\lambda^*$ den **Wert** der Nebenbedingung widerspiegelt – nicht den Marktpreis, sondern den inneren Wert im *Schatten* der Beschränkung.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Konkrete Deutung",
+          "body": "Sei das optimale Budget $m = 100$ und $\\lambda^* = 3$. Dann:\n- Bei $m = 101$: Nutzen steigt näherungsweise um $3$.\n- Bei $m = 99$: Nutzen sinkt näherungsweise um $3$.\n- Je größer $\\lambda^*$, desto wertvoller ist eine Lockerung der Beschränkung."
+        }
+      ]
+    },
+    {
+      "id": "beispiel1",
+      "heading": "Durchgerechnetes Beispiel 1: Nutzenmaximierung mit Budgetparameter",
+      "body": "**Problem:** Maximiere $U(x_1, x_2) = x_1 x_2$ unter $2x_1 + x_2 = m$. Wie hängt das Maximum von $m$ ab?\n\n**Schritt 1: Lagrange-Funktion aufstellen**\n$$L = x_1 x_2 - \\lambda(2x_1 + x_2 - m).$$\n\n**Schritt 2: Bedingungen erster Ordnung**\n$$L_{x_1} = x_2 - 2\\lambda = 0 \\quad\\Rightarrow\\quad \\lambda = \\frac{x_2}{2}.$$\n$$L_{x_2} = x_1 - \\lambda = 0 \\quad\\Rightarrow\\quad \\lambda = x_1.$$\n$$L_\\lambda = -(2x_1 + x_2 - m) = 0 \\quad\\Rightarrow\\quad 2x_1 + x_2 = m.$$\n\n**Schritt 3: Gleichungssystem lösen**\n\nAus den ersten beiden Gleichungen: $x_1 = x_2/2$, d.h. $x_2 = 2x_1$.\n\nEinsetzen in die Budgetgleichung: $2x_1 + 2x_1 = 4x_1 = m$, also\n$$x_1^* = \\frac{m}{4}, \\quad x_2^* = \\frac{m}{2}, \\quad \\lambda^* = \\frac{m}{4}.$$\n\n**Schritt 4: Optimalwertfunktion**\n$$M(m) = x_1^* \\cdot x_2^* = \\frac{m}{4} \\cdot \\frac{m}{2} = \\frac{m^2}{8}.$$\n\n**Schritt 5: Umhüllendensatz prüfen**\n\nDirekte Ableitung: $M'(m) = \\frac{2m}{8} = \\frac{m}{4} = \\lambda^*$. ✓\n\nUmhüllendensatz: $\\frac{\\partial L}{\\partial m} = \\lambda$. Ausgewertet am Optimum: $\\lambda^* = m/4$. ✓ Beide Wege stimmen überein.\n\n**Konkrete Anwendung:** Bei $p_1=2, p_2=1, m=12$:\n$$x_1^* = 3,\\quad x_2^* = 6,\\quad U^* = 18,\\quad \\lambda^* = 3.$$\nBei Erhöhung auf $m=13$: $\\Delta M \\approx \\lambda^* \\cdot 1 = 3$. Näherung: $U^* \\approx 21$.\n\nExakter Wert: $M(13) = 13^2/8 = 21{,}125$. Die Näherung ist sehr gut.",
+      "figures": [
+        {
+          "kind": "function-plot",
+          "id": "env-fig-2",
+          "title": "Optimalwert M(m) = m²/8 bei Nutzenmaximierung",
+          "caption": "M(m) = m²/8. Bei m=12 ist M=18, Steigung λ*=3. Tangente zeigt Näherung für m=13.",
+          "functions": [
+            { "fn": "x*x/8", "label": "M(m) = m²/8 (Optimalnutzen)", "color": "blue" },
+            { "fn": "3*(x-12)+18", "label": "Tangente bei m=12 (Näherung)", "color": "red", "dashed": true }
+          ],
+          "domain": [0, 16],
+          "points": [
+            { "x": 12, "y": 18, "label": "M(12)=18, λ*=3" },
+            { "x": 13, "y": 21.125, "label": "M(13)=21,125" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rechenweg",
+      "heading": "Systematischer Rechenweg und Aufgabentypen",
+      "body": "In der Klausur erscheint der Umhüllendensatz typischerweise als **Teilaufgabe b)**, nachdem in a) das Lagrange-Problem bereits gelöst wurde (Optimum $\\vec{x}^*$ und $\\lambda^*$ bekannt).\n\n**Standard-Kochrezept:**\n\n1. **Parameter identifizieren:** Welcher Wert $a$ ändert sich?\n2. **Lagrange-Funktion aufschreiben:** $L = f(\\vec{x}) - \\sum_i \\lambda_i [h_i(\\vec{x}) - c_i]$.\n3. **Partiell nach $a$ ableiten:** $\\frac{\\partial L}{\\partial a}$.\n4. **Am Optimum auswerten:** $\\vec{x} = \\vec{x}^*$, $\\lambda = \\lambda^*$ einsetzen.\n5. **Näherung berechnen:** $\\Delta M \\approx \\frac{\\partial L}{\\partial a}\\big|_* \\cdot \\Delta a$.\n\n**Drei häufige Typen:**\n\n| Typ | Änderung | $\\partial L / \\partial a$ |\n|-----|----------|--------------------------|\n| NB-Schranke $h = c + \\Delta c$ | $c$ | $+\\lambda^*$ |\n| Zielfunktion $f(\\vec{x}, a)$ | $a$ in $f$ | $\\partial f / \\partial a \\|_*$ |\n| Kombiniert (NB + Ziel) | beide | Summe beider Terme |\n\n**Wichtig bei mehreren Nebenbedingungen:**\n\nBei $g_1 = c_1$ und $g_2 = c_2$ (mit $\\lambda_1^*, \\lambda_2^*$) gilt:\n$$\\frac{\\partial M}{\\partial c_1} = \\lambda_1^*, \\quad \\frac{\\partial M}{\\partial c_2} = \\lambda_2^*.$$",
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "env-flow-1",
+          "title": "Rechenablauf Umhüllendensatz",
+          "caption": "Systematischer Ablauf vom gegebenen Optimum zur Näherungsformel.",
+          "code": "graph TD;\n  A[Optimum bekannt: x*, λ*] --> B[Parameter a identifizieren];\n  B --> C[L = f - λ·h aufschreiben];\n  C --> D[∂L/∂a berechnen];\n  D --> E[Am Optimum auswerten: ∂L/∂a|*];\n  E --> F[ΔM ≈ ∂L/∂a|* · Δa];"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "env-fc-1",
+      "topicId": "umhuellendensatz",
+      "front": "Was ist die Optimalwertfunktion $M(a)$?",
+      "back": "$M(a) = f(\\vec{x}^*(a), a)$ – der optimale Zielfunktionswert als Funktion des Parameters $a$."
+    },
+    {
+      "id": "env-fc-2",
+      "topicId": "umhuellendensatz",
+      "front": "Wie lautet der Umhüllendensatz (ohne NB)?",
+      "back": "$$\\frac{dM}{da} = \\frac{\\partial f}{\\partial a}\\bigg|_{\\vec{x}^*(a)}.$$\nDie innere Ableitung über $\\vec{x}^*$ verschwindet wegen der Optimalitätsbedingung."
+    },
+    {
+      "id": "env-fc-3",
+      "topicId": "umhuellendensatz",
+      "front": "Wie lautet der Umhüllendensatz mit Lagrange-NB $h(\\vec{x})=c$?",
+      "back": "$$\\frac{dM}{dc} = \\frac{\\partial L}{\\partial c}\\bigg|_* = \\lambda^*.$$\nDer Lagrange-Multiplikator $\\lambda^*$ gibt direkt die Änderungsrate des Optimalwerts an."
+    },
+    {
+      "id": "env-fc-4",
+      "topicId": "umhuellendensatz",
+      "front": "Was bedeutet $\\lambda^*$ ökonomisch (Schattenpreis)?",
+      "back": "$\\lambda^*$ ist der **Grenzwert einer zusätzlichen Einheit** der knappen Ressource. Z.B. bei Budgetbeschränkung: $\\lambda^*$ = Grenznutzen des Einkommens."
+    },
+    {
+      "id": "env-fc-5",
+      "topicId": "umhuellendensatz",
+      "front": "Lineare Näherungsformel für kleine Parameteränderung $\\Delta a$?",
+      "back": "$$M(a + \\Delta a) \\approx M(a) + \\frac{dM}{da}(a) \\cdot \\Delta a = M(a) + \\frac{\\partial L}{\\partial a}\\bigg|_* \\cdot \\Delta a.$$"
+    },
+    {
+      "id": "env-fc-6",
+      "topicId": "umhuellendensatz",
+      "front": "Warum verschwindet die innere Ableitung im Umhüllendensatz?",
+      "back": "Weil $\\vec{x}^*(a)$ die Optimalitätsbedingung $\\nabla_{\\vec{x}} f = \\vec{0}$ (bzw. $\\nabla_{\\vec{x}} L = \\vec{0}$) erfüllt. Das Skalarprodukt $\\nabla_{\\vec{x}} f \\cdot \\frac{d\\vec{x}^*}{da} = \\vec{0} \\cdot \\frac{d\\vec{x}^*}{da} = 0$."
+    },
+    {
+      "id": "env-fc-7",
+      "topicId": "umhuellendensatz",
+      "front": "Bei zwei NB mit $\\lambda_1^*, \\lambda_2^*$: Wie ändern sich $c_1$ bzw. $c_2$ den Optimalwert?",
+      "back": "$\\frac{\\partial M}{\\partial c_1} = \\lambda_1^*$ und $\\frac{\\partial M}{\\partial c_2} = \\lambda_2^*$. Bei simultaner Änderung: $\\Delta M \\approx \\lambda_1^* \\Delta c_1 + \\lambda_2^* \\Delta c_2$."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "env-q1",
+      "topicId": "umhuellendensatz",
+      "difficulty": "leicht",
+      "prompt": "Was berechnet die Optimalwertfunktion $M(a)$?",
+      "options": [
+        "Die optimale Stelle $x^*(a)$ als Funktion von $a$",
+        "Den Wert der Zielfunktion im Optimum als Funktion von $a$",
+        "Den Lagrange-Multiplikator als Funktion von $a$",
+        "Die Nebenbedingung als Funktion von $a$"
+      ],
+      "correct": [1],
+      "explanation": "$M(a) = f(x^*(a), a)$ ist der optimale Zielfunktionswert – nicht die optimale Stelle selbst."
+    },
+    {
+      "kind": "truefalse",
+      "id": "env-q2",
+      "topicId": "umhuellendensatz",
+      "difficulty": "leicht",
+      "prompt": "Der Umhüllendensatz besagt: Um $dM/da$ zu berechnen, muss man erst $x^*(a)$ explizit als Funktion von $a$ ausrechnen.",
+      "answer": false,
+      "explanation": "Nein – das ist gerade der Witz! Man wertet $\\partial L/\\partial a$ (bzw. $\\partial f/\\partial a$) am bekannten Optimum $\\vec{x}^*$ aus. Die genaue Abhängigkeit $\\vec{x}^*(a)$ wird nicht benötigt."
+    },
+    {
+      "kind": "mc",
+      "id": "env-q3",
+      "topicId": "umhuellendensatz",
+      "difficulty": "mittel",
+      "prompt": "Gegeben $\\max f(x,y)$ u.d.NB $h(x,y)=c$ mit $\\lambda^*=4$. Die Schranke ändert sich zu $c + 0{,}5$. Wie ändert sich der Optimalwert näherungsweise?",
+      "options": [
+        "Er sinkt um 2",
+        "Er steigt um 2",
+        "Er steigt um 4",
+        "Er bleibt unverändert"
+      ],
+      "correct": [1],
+      "explanation": "$\\Delta M \\approx \\lambda^* \\cdot \\Delta c = 4 \\cdot 0{,}5 = 2$. Der Optimalwert steigt um 2."
+    },
+    {
+      "kind": "numeric",
+      "id": "env-q4",
+      "topicId": "umhuellendensatz",
+      "difficulty": "mittel",
+      "prompt": "Bekannt: Maximiere $U(x_1,x_2)=x_1 x_2$ unter $2x_1+x_2=12$. Optimum: $x_1^*=3$, $x_2^*=6$, $U^*=18$, $\\lambda^*=3$. Budget steigt auf $m=13$. Wie lautet die Näherung für das neue Maximum?",
+      "answer": 21,
+      "tolerance": 0.01,
+      "explanation": "$\\Delta M \\approx \\lambda^* \\cdot \\Delta m = 3 \\cdot 1 = 3$. Näherung: $18 + 3 = 21$. (Exakter Wert: $13^2/8 = 21{,}125$.)"
+    },
+    {
+      "kind": "numeric",
+      "id": "env-q5",
+      "topicId": "umhuellendensatz",
+      "difficulty": "mittel",
+      "prompt": "Gegeben: $\\max f(x,y)=xy$ u.d.NB $x^2+y^2=1$, $x,y\\geq 0$. Optimum: $x^*=y^*=1/\\sqrt{2}$, $\\lambda^*=1/2$, $f^*=1/2$. Die NB ändert sich zu $x^2+y^2=1{,}2$ ($\\Delta c=0{,}2$). Wie groß ist die Näherung für das neue Maximum?",
+      "answer": 0.6,
+      "tolerance": 0.01,
+      "explanation": "$\\Delta M \\approx \\lambda^* \\cdot \\Delta c = 0{,}5 \\cdot 0{,}2 = 0{,}1$. Näherung: $0{,}5 + 0{,}1 = 0{,}6$."
+    },
+    {
+      "kind": "numeric",
+      "id": "env-q6",
+      "topicId": "umhuellendensatz",
+      "difficulty": "schwer",
+      "prompt": "Gegeben: $\\max f(x,y)=e^{x+y}$ u.d.NB $x^2-xy+y^2=1$ mit Optimum $(1,1)$, $\\lambda^*=e^2$, $f^*=e^2$. Jetzt soll statt $f$ die Funktion $p(x,y)=e^{0{,}9x+y}$ maximiert werden (NB bleibt). Wie lautet die Näherung für das neue Maximum? (Geben Sie den Wert auf 4 Nachkommastellen gerundet an; $e^2\\approx 7{,}3891$.)",
+      "answer": 6.6502,
+      "tolerance": 0.01,
+      "unit": "",
+      "explanation": "Parametrisiere $f(x,y,a)=e^{ax+y}$, $a=1$ original, $a=0{,}9$ neu. Dann $\\frac{\\partial L}{\\partial a}=x\\cdot e^{ax+y}$. Am Optimum $(1,1)$ mit $a=1$: $\\frac{dM}{da}=1\\cdot e^2=e^2$. $\\Delta a=-0{,}1$, also $\\Delta M\\approx e^2\\cdot(-0{,}1)\\approx -0{,}7389$. Näherung: $e^2 - 0{,}1 e^2 = 0{,}9 e^2 \\approx 6{,}6502$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "env-q7",
+      "topicId": "umhuellendensatz",
+      "difficulty": "mittel",
+      "prompt": "Ein negativer Lagrange-Multiplikator $\\lambda^* < 0$ bedeutet: Eine Lockerung der Nebenbedingung (Erhöhung von $c$) verringert den Optimalwert.",
+      "answer": true,
+      "explanation": "Ja: $dM/dc = \\lambda^* < 0$. Steigt $c$, fällt $M$. Das passiert z.B. bei Minimierungsproblemen, wo eine strengere NB den Minimalwert erhöht (und umgekehrt)."
+    },
+    {
+      "kind": "mc",
+      "id": "env-q8",
+      "topicId": "umhuellendensatz",
+      "difficulty": "schwer",
+      "prompt": "Welche der folgenden Aussagen zum Umhüllendensatz ist FALSCH?",
+      "options": [
+        "$dM/dc = \\lambda^*$ gilt, wenn $c$ die rechte Seite einer Gleichungsnebenbedingung ist.",
+        "Die innere Ableitung $\\nabla_{\\vec{x}} f \\cdot d\\vec{x}^*/da$ verschwindet, weil $\\nabla_{\\vec{x}} L = 0$ im Optimum.",
+        "Der Satz liefert den exakten, nicht nur näherungsweisen Wert von $M(a+\\Delta a)$.",
+        "Bei mehreren Nebenbedingungen gilt $\\partial M / \\partial c_i = \\lambda_i^*$ für jede Schranke $c_i$."
+      ],
+      "correct": [2],
+      "explanation": "Aussage C ist falsch. $\\Delta M \\approx \\lambda^* \\Delta c$ ist nur eine lineare Näherung (Tangente an $M$). Der exakte neue Optimalwert kann abweichen – besonders bei großen $\\Delta c$."
+    },
+    {
+      "kind": "numeric",
+      "id": "env-q9",
+      "topicId": "umhuellendensatz",
+      "difficulty": "schwer",
+      "prompt": "Bekannt: $\\min f(x_1,x_2,x_3)=x_1^2+3x_2^2+2x_3^2$ u.d.NB $4x_1+12x_2=120$ und $6x_2+12x_3=120$. Optimum $(6,8,6)$, $f^*=300$, $\\lambda_1^*=-3$, $\\lambda_2^*=-2$. Die erste Kapazitätsschranke erhöht sich um 1 (von 120 auf 121). Wie ändert sich das Minimum näherungsweise?",
+      "answer": 3,
+      "tolerance": 0.01,
+      "explanation": "NB: $g_1 = c_1 - 4x_1-12x_2=0$. $\\frac{\\partial L}{\\partial c_1}=-\\lambda_1^*=-(-3)=3$. Also $\\Delta M\\approx 3\\cdot 1=3$. Das Minimum steigt um 3. (Dass ein Minimum steigt, wenn eine Ressource zunimmt, ist plausibel, da die neue Kapazität die zulässige Menge verändert.)"
+    },
+    {
+      "kind": "freetext",
+      "id": "env-q10",
+      "topicId": "umhuellendensatz",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten: Warum liefert der Umhüllendensatz die Ableitung von $M(a)$ ohne explizite Kenntnis von $\\vec{x}^*(a)$ als Funktion von $a$?",
+      "sampleAnswer": "Beim Differenzieren von $M(a)=f(\\vec{x}^*(a),a)$ nach der Kettenregel entstehen zwei Terme: einer über die Änderung von $\\vec{x}^*$ und einer direkt nach $a$. Der erste Term ist das Skalarprodukt von $\\nabla_{\\vec{x}} f$ und $d\\vec{x}^*/da$. Im Optimum gilt aber $\\nabla_{\\vec{x}} L = \\nabla_{\\vec{x}} f - \\lambda \\nabla_{\\vec{x}} h = 0$, also $\\nabla_{\\vec{x}} f = 0$ (ohne NB) bzw. $\\nabla_{\\vec{x}} L = 0$ (mit NB). Damit verschwindet dieser erste Term, und es bleibt nur die direkte partielle Ableitung $\\partial L/\\partial a$ übrig.",
+      "keywords": ["kettenregel", "optimalitätsbedingung", "gradient", "verschwindet", "direkte"],
+      "explanation": "Der Schlüssel ist die Optimalitätsbedingung: Im Optimum ist $\\nabla_{\\vec{x}} L = 0$, wodurch der *Weg*-Term wegfällt."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "env-ex-1",
+      "topicId": "umhuellendensatz",
+      "label": "Aufgabe 4.1 – Lagrange + Umhüllendensatz (Einheitskreis)",
+      "source": "Übungsblatt 4, Aufgabe 4.1",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Betrachten Sie die Optimierungsaufgabe\n$$f(x, y) = x \\cdot y \\;\\to\\; \\text{Max!}, \\quad g(x, y) = x^2 + y^2 - 1 = 0, \\quad x, y \\geq 0.$$\n\n**(a)** Zeigen Sie, dass die Optimierungsaufgabe einen stationären Punkt an der Stelle $(x^*, y^*) = \\left(\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}\\right)$ mit $\\lambda^* = \\frac{1}{2}$ besitzt.\n\n**(b)** Wie ändert sich näherungsweise der Wert des Maximums, wenn anstelle der Nebenbedingung $g = 0$ bzw. der Optimierungsfunktion $f$ verwendet wird:\n- (i) $g_1(x,y) = 0{,}9x^2 + y^2 - 1 = 0$\n- (ii) $g_2(x,y) = 0{,}9x^2 + 1{,}1y^2 - 1{,}1 = 0$\n- (iii) $f_1(x,y) = (x + 0{,}1) \\cdot y$ und $g_3(x,y) = x^2 + (y - 0{,}2)^2 - 1 = 0$",
+      "hint": "Für (a): Stelle die Lagrange-Funktion auf und setze die Ableitungen null. Für (b): Schreibe die veränderte NB als ursprüngliche NB plus einem Term mit einem kleinen Parameter $a$. Dann nutze $\\partial L/\\partial a|_*$.",
+      "solution": "**Teil (a): Stationären Punkt zeigen**\n\nLagrange-Funktion: $L = xy - \\lambda(x^2+y^2-1)$.\n\nBedingungen erster Ordnung:\n$$L_x = y - 2\\lambda x = 0 \\quad\\Rightarrow\\quad y = 2\\lambda x. \\tag{1}$$\n$$L_y = x - 2\\lambda y = 0 \\quad\\Rightarrow\\quad x = 2\\lambda y. \\tag{2}$$\n$$L_\\lambda = -(x^2+y^2-1) = 0 \\quad\\Rightarrow\\quad x^2+y^2 = 1. \\tag{3}$$\n\nEinsetzen von (1) in (2): $x = 2\\lambda(2\\lambda x) = 4\\lambda^2 x$. Da $x > 0$: $4\\lambda^2 = 1$, also $\\lambda = \\frac{1}{2}$ (positiv wegen $x,y>0$).\n\nAus (1): $y = 2 \\cdot \\frac{1}{2} \\cdot x = x$, also $y = x$.\n\nNebenbedingung (3): $x^2 + x^2 = 2x^2 = 1$, also $x = \\frac{1}{\\sqrt{2}}$.\n\nSomit: $x^* = y^* = \\frac{1}{\\sqrt{2}}$, $\\lambda^* = \\frac{1}{2}$, $f^* = \\frac{1}{\\sqrt{2}} \\cdot \\frac{1}{\\sqrt{2}} = \\frac{1}{2}$. ✓\n\n---\n\n**Teil (b)(i): NB-Änderung $g_1 = 0{,}9x^2 + y^2 - 1 = 0$**\n\nSchreibe $g_1$ als parametrisierte NB: $h(x,y,a) = ax^2 + y^2 - 1$, mit $a=1$ (original) und $a=0{,}9$ (neu).\n\nLagrange-Funktion: $L = xy - \\lambda(ax^2 + y^2 - 1)$.\n\n$$\\frac{\\partial L}{\\partial a} = -\\lambda \\cdot x^2.$$\n\nAm Optimum auswerten: $\\frac{dM}{da} = -\\lambda^* \\cdot (x^*)^2 = -\\frac{1}{2} \\cdot \\frac{1}{2} = -\\frac{1}{4}.$\n\nParameteränderung: $\\Delta a = 0{,}9 - 1 = -0{,}1$.\n\n$$\\Delta M \\approx \\left(-\\frac{1}{4}\\right) \\cdot (-0{,}1) = \\frac{1}{40} = 0{,}025.$$\n\nNäherung: $f^* \\approx \\frac{1}{2} + 0{,}025 = 0{,}525$.\n\n---\n\n**Teil (b)(ii): NB-Änderung $g_2 = 0{,}9x^2 + 1{,}1y^2 - 1{,}1 = 0$**\n\nDrei Parameter ändern sich gleichzeitig. Schreibe: $h(x,y,a,b,c) = ax^2 + by^2 - c$ mit Original $(a,b,c)=(1,1,1)$ und Neu $(0{,}9;\\, 1{,}1;\\, 1{,}1)$.\n\n$$\\frac{\\partial L}{\\partial a} = -\\lambda x^2 \\big|_* = -\\frac{1}{2} \\cdot \\frac{1}{2} = -\\frac{1}{4}, \\quad \\Delta a = -0{,}1.$$\n$$\\frac{\\partial L}{\\partial b} = -\\lambda y^2 \\big|_* = -\\frac{1}{2} \\cdot \\frac{1}{2} = -\\frac{1}{4}, \\quad \\Delta b = +0{,}1.$$\n$$\\frac{\\partial L}{\\partial c} = +\\lambda \\big|_* = +\\frac{1}{2}, \\quad \\Delta c = +0{,}1.$$\n\n$$\\Delta M \\approx \\left(-\\frac{1}{4}\\right)(-0{,}1) + \\left(-\\frac{1}{4}\\right)(+0{,}1) + \\frac{1}{2}(+0{,}1) = 0{,}025 - 0{,}025 + 0{,}05 = 0{,}05.$$\n\nNäherung: $f^* \\approx 0{,}5 + 0{,}05 = 0{,}55$.\n\n---\n\n**Teil (b)(iii): Änderung von $f$ UND $g$**\n\n$f_1(x,y)=(x+0{,}1)y$ und $g_3 = x^2+(y-0{,}2)^2-1=0$.\n\n*Änderung der Zielfunktion:* Parametrisiere $f(x,y,a) = (x+a)y$, $a=0$ original, $a=0{,}1$ neu.\n$$\\frac{\\partial L}{\\partial a} = y \\big|_* = \\frac{1}{\\sqrt{2}}, \\quad \\Delta a = 0{,}1 \\quad\\Rightarrow\\quad \\Delta M_f \\approx \\frac{0{,}1}{\\sqrt{2}}.$$\n\n*Änderung der Nebenbedingung:* Parametrisiere $h(x,y,b) = x^2+(y-b)^2-1$, $b=0$ original, $b=0{,}2$ neu.\n$$\\frac{\\partial L}{\\partial b} = -\\lambda \\cdot \\frac{\\partial h}{\\partial b}\\big|_* = -\\lambda \\cdot (-2)(y^*-0) = 2\\lambda^* y^* = 2 \\cdot \\frac{1}{2} \\cdot \\frac{1}{\\sqrt{2}} = \\frac{1}{\\sqrt{2}}.$$\n$$\\Delta b = 0{,}2 \\quad\\Rightarrow\\quad \\Delta M_g \\approx \\frac{0{,}2}{\\sqrt{2}}.$$\n\nGesamt:\n$$\\Delta M \\approx \\frac{0{,}1}{\\sqrt{2}} + \\frac{0{,}2}{\\sqrt{2}} = \\frac{0{,}3}{\\sqrt{2}} = \\frac{3}{10\\sqrt{2}} = \\frac{3\\sqrt{2}}{20} \\approx 0{,}2121.$$\n\nNäherung: $f^* \\approx 0{,}5 + 0{,}212 = 0{,}712$."
+    },
+    {
+      "id": "env-ex-2",
+      "topicId": "umhuellendensatz",
+      "label": "Aufgabe 4.2 – Zielfunktionsänderung (Exponentialfunktion)",
+      "source": "Übungsblatt 4, Aufgabe 4.2",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Die Funktion $f(x,y)=e^{x+y}$ besitzt unter der Nebenbedingung $x^2 - xy + y^2 = 1$ an der Stelle $(x^*, y^*)=(1,1)$ ein Maximum mit dem Lagrange-Multiplikator $\\lambda^* = e^2$.\n\nWie ändert sich näherungsweise der Wert des Maximums, wenn statt $f$ die Funktion $p(x,y)=e^{0{,}9x+y}$ betrachtet wird?",
+      "hint": "Parametrisiere die Zielfunktion als $f(x,y,a)=e^{ax+y}$ mit $a=1$ (original) und $a=0{,}9$ (neu). Berechne $\\partial L/\\partial a$ am Optimum.",
+      "solution": "**Parametrisierung der Zielfunktion:**\n\nSchreibe $f(x,y,a) = e^{ax+y}$. Original: $a=1$, Neu: $a=0{,}9$, also $\\Delta a = -0{,}1$.\n\n**Lagrange-Funktion:**\n$$L(x,y,\\lambda,a) = e^{ax+y} - \\lambda(x^2 - xy + y^2 - 1).$$\n\n**Partielle Ableitung nach $a$:**\n$$\\frac{\\partial L}{\\partial a} = x \\cdot e^{ax+y}.$$\n\n**Am Optimum auswerten** ($(x^*,y^*)=(1,1)$, $a=1$):\n$$\\frac{dM}{da} = 1 \\cdot e^{1 \\cdot 1 + 1} = e^2.$$\n\n(Beachte: Die NB-Terme $\\partial[\\lambda(x^2-xy+y^2-1)]/\\partial a = 0$, da die NB nicht von $a$ abhängt.)\n\n**Näherung:**\n$$\\Delta M \\approx \\frac{dM}{da} \\cdot \\Delta a = e^2 \\cdot (-0{,}1) = -0{,}1 \\cdot e^2 \\approx -0{,}7389.$$\n\n**Ergebnis:**\n$$M_{\\text{neu}} \\approx e^2 + (-0{,}1 e^2) = 0{,}9 \\cdot e^2 \\approx 0{,}9 \\cdot 7{,}3891 \\approx 6{,}650.$$\n\n**Probe:** Original $f^* = e^{1+1} = e^2 \\approx 7{,}389$. Der neue Maximalwert ist kleiner, weil der Koeffizient von $x$ kleiner wurde ($0{,}9 < 1$) und damit $e^{0{,}9+1}=e^{1{,}9} \\approx 6{,}686$ (exakter neuer Maximalwert), was gut zur Näherung $6{,}650$ passt."
+    },
+    {
+      "id": "env-ex-3",
+      "topicId": "umhuellendensatz",
+      "label": "Aufgabe 4.3 – Sensitivität bei zwei Nebenbedingungen",
+      "source": "Übungsblatt 4, Aufgabe 4.3",
+      "type": "uebung",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "Die Funktion $f(x_1,x_2,x_3) = x_1^2 + 3x_2^2 + 2x_3^2$ besitzt unter den Nebenbedingungen\n$$g_1(x_1,x_2,x_3) = 120 - 4x_1 - 12x_2 = 0, \\quad g_2(x_1,x_2,x_3) = 120 - 6x_2 - 12x_3 = 0$$\nein lokales Minimum an der Stelle $\\vec{x}^* = (6, 8, 6)$ mit den Lagrange-Multiplikatoren $\\lambda_1^* = -3$ und $\\lambda_2^* = -2$.\n\nWie verhält sich der Wert des Minimums, wenn in den Nebenbedingungen die Kapazitätsschranken von 120 jeweils geringfügig geändert werden?",
+      "hint": "Schreibe $g_i = c_i - 4x_1 - 12x_2$ (bzw. $c_i - 6x_2 - 12x_3$) mit $c_1 = c_2 = 120$. Berechne $\\partial L/\\partial c_i$ am Optimum. Achtung: Die Lagrange-Funktion lautet $L = f - \\lambda_1 g_1 - \\lambda_2 g_2$.",
+      "solution": "**Ausgangswerte prüfen:**\n$$f(6,8,6) = 36 + 3 \\cdot 64 + 2 \\cdot 36 = 36 + 192 + 72 = 300.$$\n\n**Lagrange-Funktion** mit Parametern $c_1, c_2$:\n$$L = f - \\lambda_1(c_1 - 4x_1 - 12x_2) - \\lambda_2(c_2 - 6x_2 - 12x_3).$$\n\n**Partielle Ableitungen nach $c_1$ und $c_2$:**\n$$\\frac{\\partial L}{\\partial c_1} = -\\lambda_1, \\qquad \\frac{\\partial L}{\\partial c_2} = -\\lambda_2.$$\n\n**Am Optimum auswerten:**\n$$\\frac{\\partial M}{\\partial c_1} = -\\lambda_1^* = -(-3) = 3.$$\n$$\\frac{\\partial M}{\\partial c_2} = -\\lambda_2^* = -(-2) = 2.$$\n\n**Interpretation:**\n- Erhöht sich $c_1$ (erste Kapazitätsschranke) um $\\Delta c_1$, so ändert sich das Minimum näherungsweise um $+3 \\cdot \\Delta c_1$.\n- Erhöht sich $c_2$ um $\\Delta c_2$, so ändert sich das Minimum um $+2 \\cdot \\Delta c_2$.\n- Steigen **beide** Schranken um je 1: $\\Delta M \\approx 3 \\cdot 1 + 2 \\cdot 1 = 5$. Neues Minimum: $\\approx 305$.\n- Fällt **eine** Schranke um 1 (z.B. $c_1: 120 \\to 119$): $\\Delta M \\approx 3 \\cdot (-1) = -3$. Neues Minimum: $\\approx 297$.\n\n**Wichtiger Hinweis:** Die negativen Lagrange-Multiplikatoren ($\\lambda_1^*<0$, $\\lambda_2^*<0$) sind bei Minimierungsproblemen normal und bedeuten über $-\\lambda_i^* > 0$, dass eine Erhöhung der Schranke das Minimum vergrößert (weniger Freiheit für die Lösung)."
+    },
+    {
+      "id": "env-ex-4",
+      "topicId": "umhuellendensatz",
+      "label": "Aufgabe 4.4 – Maximierung, Lösung + Sensitivität",
+      "source": "Übungsblatt 4, Aufgabe 4.4 (Zusatzaufgabe)",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**(a)** Zeigen Sie, dass die Optimierungsaufgabe\n$$f(x,y) = x \\cdot y \\;\\to\\; \\text{Max!}, \\quad x^2 + 2y^2 = 3, \\quad x, y \\geq 0$$\ngenau eine Lösung besitzt und berechnen Sie diese.\n\n**(b)** Wie ändert sich näherungsweise der Wert des in (a) berechneten Maximums, wenn die Nebenbedingung zu $x^2 + 2y^2 = 2{,}9$ geändert wird? Verwenden Sie den Umhüllendensatz.",
+      "hint": "Für (a): Lagrange mit $g=x^2+2y^2-3$. Aus den Bedingungen $y=2\\lambda x$ und $x=4\\lambda y$ folgt $x^2=2y^2$. Für (b): Der Parameter ist $c=3$, es gilt $dM/dc = \\lambda^*$.",
+      "solution": "**Teil (a): Lagrange-Optimierung**\n\nLagrange-Funktion: $L = xy - \\lambda(x^2+2y^2-3)$.\n\nBedingungen erster Ordnung:\n$$L_x = y - 2\\lambda x = 0 \\quad\\Rightarrow\\quad y = 2\\lambda x. \\tag{1}$$\n$$L_y = x - 4\\lambda y = 0 \\quad\\Rightarrow\\quad x = 4\\lambda y. \\tag{2}$$\n$$L_\\lambda = -(x^2+2y^2-3) = 0 \\quad\\Rightarrow\\quad x^2+2y^2 = 3. \\tag{3}$$\n\nEinsetzen von (1) in (2): $x = 4\\lambda(2\\lambda x) = 8\\lambda^2 x$. Da $x > 0$: $8\\lambda^2 = 1$, also $\\lambda = \\frac{1}{2\\sqrt{2}}$.\n\nAus (1): $y = 2 \\cdot \\frac{1}{2\\sqrt{2}} \\cdot x = \\frac{x}{\\sqrt{2}}$, also $x = \\sqrt{2} \\cdot y$.\n\nNebenbedingung (3): $(\\sqrt{2}y)^2 + 2y^2 = 2y^2+2y^2 = 4y^2 = 3$, also $y^2 = \\frac{3}{4}$, $y^* = \\frac{\\sqrt{3}}{2}$.\n\nDamit: $x^* = \\sqrt{2} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{6}}{2}$.\n\n$$\\lambda^* = \\frac{y^*}{2x^*} = \\frac{\\sqrt{3}/2}{2 \\cdot \\sqrt{6}/2} = \\frac{\\sqrt{3}/2}{\\sqrt{6}} = \\frac{\\sqrt{3}}{2\\sqrt{6}} = \\frac{1}{2\\sqrt{2}}.$$\n\n**Maximalwert:**\n$$f^* = x^* y^* = \\frac{\\sqrt{6}}{2} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{18}}{4} = \\frac{3\\sqrt{2}}{4} \\approx 1{,}0607.$$\n\n**Eindeutigkeit:** Da $f=xy$ auf dem Viertelellipsenrand $x^2+2y^2=3, x,y\\geq 0$ stetig ist, nimmt sie ein Maximum an. Die Lagrange-Gleichungen liefern genau einen Kandidaten (da $\\lambda>0$ eindeutig bestimmt). Also genau ein Maximum.\n\n---\n\n**Teil (b): Umhüllendensatz**\n\nDer Parameter ist $c=3$ (rechte Seite der NB $x^2+2y^2=c$).\n\n$$\\frac{dM}{dc} = \\lambda^* = \\frac{1}{2\\sqrt{2}} \\approx 0{,}3536.$$\n\nParameteränderung: $\\Delta c = 2{,}9 - 3 = -0{,}1$.\n\n$$\\Delta M \\approx \\frac{1}{2\\sqrt{2}} \\cdot (-0{,}1) = -\\frac{0{,}1}{2\\sqrt{2}} = -\\frac{\\sqrt{2}}{40} \\approx -0{,}03536.$$\n\n**Näherung:** $f^*_{\\text{neu}} \\approx \\frac{3\\sqrt{2}}{4} - \\frac{\\sqrt{2}}{40} = \\frac{30\\sqrt{2} - \\sqrt{2}}{40} = \\frac{29\\sqrt{2}}{40} \\approx 1{,}025.$"
+    },
+    {
+      "id": "env-ex-5",
+      "topicId": "umhuellendensatz",
+      "label": "Aufgabe 4.5 – Stationärer Punkt + Sensitivität",
+      "source": "Übungsblatt 4, Aufgabe 4.5 (Zusatzaufgabe)",
+      "type": "zusatzaufgabe",
+      "difficulty": "mittel",
+      "hasOfficialSolution": false,
+      "prompt": "**(a)** Zeigen Sie: $\\vec{a}^* = (2,2)$ ist stationärer Punkt des Problems\n$$f(x,y) = x^2 y + y^2 x \\;\\to\\; \\text{Extr.!}, \\quad xy = 4.$$\nVerwenden Sie das Lagrange-Verfahren!\n\n**(b)** Berechnen Sie näherungsweise mittels des Umhüllendensatzes, um welchen Wert sich der Wert des Extremums ändert, wenn die Nebenbedingung ersetzt wird durch $xy = 4{,}2$.",
+      "hint": "Für (a): Lagrange-Funktion mit $g=xy-4$. Aus $L_x=0$ und $L_y=0$ erhält man $\\lambda$ in Abhängigkeit von $x,y$. Für (b): NB-Parameter ist $c=4$, also $dM/dc=\\lambda^*$.",
+      "solution": "**Teil (a): Stationären Punkt zeigen**\n\nLagrange-Funktion: $L = x^2 y + y^2 x - \\lambda(xy - 4)$.\n\nBedingungen erster Ordnung:\n$$L_x = 2xy + y^2 - \\lambda y = 0 \\quad\\Rightarrow\\quad y(2x + y - \\lambda) = 0.$$\nDa $y \\neq 0$: $\\lambda = 2x + y. \\tag{1}$\n$$L_y = x^2 + 2xy - \\lambda x = 0 \\quad\\Rightarrow\\quad x(x + 2y - \\lambda) = 0.$$\nDa $x \\neq 0$: $\\lambda = x + 2y. \\tag{2}$$\n$$L_\\lambda = -(xy - 4) = 0 \\quad\\Rightarrow\\quad xy = 4. \\tag{3}$$\n\n**An der Stelle $(2,2)$:**\n- (1): $\\lambda = 2 \\cdot 2 + 2 = 6$.\n- (2): $\\lambda = 2 + 2 \\cdot 2 = 6$. ✓\n- (3): $2 \\cdot 2 = 4$. ✓\n\nAlle Bedingungen sind erfüllt. $(2,2)$ mit $\\lambda^* = 6$ ist stationärer Punkt. $f(2,2) = 4 \\cdot 2 + 4 \\cdot 2 = 16$.\n\n---\n\n**Teil (b): Umhüllendensatz**\n\nDer Parameter ist $c=4$ (rechte Seite der NB $xy=c$).\n\n$$\\frac{dM}{dc} = \\lambda^* = 6.$$\n\nParameteränderung: $\\Delta c = 4{,}2 - 4 = 0{,}2$.\n\n$$\\Delta M \\approx 6 \\cdot 0{,}2 = 1{,}2.$$\n\n**Ergebnis:** Das Extremum ändert sich näherungsweise um $+1{,}2$. Neues Extremum: $\\approx 16 + 1{,}2 = 17{,}2$."
+    },
+    {
+      "id": "env-ex-6",
+      "topicId": "umhuellendensatz",
+      "label": "Aufgabe 4.6 – Haushalt: Optimum in Parameterabhängigkeit",
+      "source": "Übungsblatt 4, Aufgabe 4.6 (Zusatzaufgabe)",
+      "type": "zusatzaufgabe",
+      "difficulty": "schwer",
+      "hasOfficialSolution": false,
+      "prompt": "Bezeichnen $x_1$ und $x_2$ die Mengen zweier Güter, $m$ die Konsumsumme und $p_1, p_2$ die Güterpreise. Budgetgleichung: $p_1 x_1 + p_2 x_2 = m$.\n\nDer Haushalt maximiert: $u = f(x_1, x_2) = x_1 x_2$ unter der Budgetbeschränkung.\n\n**(a)** Wie hängt das Optimum von den Parametern $p_1, p_2, m$ ab?\n\n**(b)** Wie ändert sich das für $p_1=2$, $p_2=1$, $m=12$ bekannte Optimum $f(3,6)=18$, wenn $m$ auf $13$ erhöht wird? Kann man eine Näherungslösung ohne Teil (a) angeben? Welche Bedeutung hat der Lagrange-Multiplikator $\\lambda$?",
+      "hint": "Für (a): Lagrange liefert aus $L_{x_1}/L_{x_2} = p_1/p_2$ die Bedingung $x_2/x_1 = p_2/p_1$ – Budget teilt sich hälftig auf. Für (b): Ohne (a) genügt der Umhüllendensatz: $\\Delta u \\approx \\lambda^* \\cdot \\Delta m$. Berechne $\\lambda^*$ aus den Optimalitätsbedingungen bei $(3,6)$.",
+      "solution": "**Teil (a): Allgemeines Optimum**\n\nLagrange-Funktion: $L = x_1 x_2 - \\lambda(p_1 x_1 + p_2 x_2 - m)$.\n\nBedingungen erster Ordnung:\n$$L_{x_1} = x_2 - \\lambda p_1 = 0 \\quad\\Rightarrow\\quad \\lambda = \\frac{x_2}{p_1}. \\tag{1}$$\n$$L_{x_2} = x_1 - \\lambda p_2 = 0 \\quad\\Rightarrow\\quad \\lambda = \\frac{x_1}{p_2}. \\tag{2}$$\n$$L_\\lambda = -(p_1 x_1 + p_2 x_2 - m) = 0. \\tag{3}$$\n\nAus (1) und (2): $\\frac{x_2}{p_1} = \\frac{x_1}{p_2}$, also $p_2 x_2 = p_1 x_1$.\n\nIn (3) einsetzen: $p_1 x_1 + p_1 x_1 = 2p_1 x_1 = m$, also\n$$x_1^* = \\frac{m}{2p_1}, \\quad x_2^* = \\frac{m}{2p_2}.$$\n\nMaximaler Nutzen:\n$$u^* = x_1^* x_2^* = \\frac{m}{2p_1} \\cdot \\frac{m}{2p_2} = \\frac{m^2}{4p_1 p_2}.$$\n\nLagrange-Multiplikator:\n$$\\lambda^* = \\frac{x_1^*}{p_2} = \\frac{m/(2p_1)}{p_2} = \\frac{m}{2p_1 p_2}.$$\n\n---\n\n**Teil (b): Änderung bei $m: 12 \\to 13$**\n\n**Methode 1 (mit Teil a):** $\\frac{du^*}{dm} = \\frac{2m}{4p_1 p_2} = \\frac{m}{2p_1 p_2}$. Bei $m=12, p_1=2, p_2=1$: $du^*/dm = 12/(2 \\cdot 2 \\cdot 1) = 3$. Also $\\Delta u \\approx 3 \\cdot 1 = 3$.\n\n**Methode 2 (ohne Teil a, nur Umhüllendensatz):** Der Multiplikator am Optimum $(3,6)$:\n$$\\lambda^* = \\frac{x_2^*}{p_1} = \\frac{6}{2} = 3.$$\nUmhüllendensatz: $\\frac{du^*}{dm} = \\lambda^* = 3$. Näherung: $\\Delta u \\approx 3 \\cdot 1 = 3$, neues Optimum $\\approx 21$.\n\n**Exakter Wert:** $u^*(m=13) = 13^2/(4 \\cdot 2 \\cdot 1) = 169/8 = 21{,}125$. Näherung 21 weicht um $0{,}125$ ab.\n\n**Bedeutung von $\\lambda^*=3$:** Er ist der **Grenznutzen des Einkommens**: Jeder zusätzliche Euro Budget erhöht den maximalen Nutzen um ca. 3 Einheiten. Das ist der **Schattenpreis** des Budgets."
+    }
+  ]
+}

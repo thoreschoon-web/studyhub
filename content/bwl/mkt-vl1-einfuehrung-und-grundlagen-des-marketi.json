@@ -1,0 +1,517 @@
+{
+  "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+  "subjectId": "bwl",
+  "title": "VL1 — Einführung und Grundlagen des Marketing",
+  "summary": "Was ist Marketing überhaupt? Diese Einheit erklärt den Marketingbegriff von Grund auf: Definitionen (AMA, Kotler), Marktgrößen (Marktpotenzial, Marktvolumen, Marktanteil), Kostenbegriffe (fix, variabel, Grenzkosten), den Marketing-Mix mit den 4 Ps sowie das duale Marketingkonzept nach Meffert und die historischen Entwicklungslinien des Marketing.",
+  "order": 1,
+  "estMinutes": 55,
+  "group": "Marketing",
+  "sections": [
+    {
+      "id": "s1-was-ist-marketing",
+      "heading": "1. Was ist Marketing? — Definition und Herkunft",
+      "body": "**Marketing kommt von Markt.** Klingt simpel, ist aber der Schlüssel zum Verständnis.\n\nAls **Markt** bezeichnet man den Ort des Zusammentreffens eines Angebots an Produkten mit der Nachfrage nach diesen Produkten, durch das sich Preise bilden. Dieser Ort kann real sein (z. B. Supermarkt, Wochenmarkt) oder virtuell (z. B. Internet, Telefon).\n\n**Marketing** ist also alles, was ein Unternehmen tut, um erfolgreich auf diesem Markt zu agieren — Produkte zu schaffen, zu bepreisen, zu verteilen und bekannt zu machen.\n\nMarketing wird oft als **Kind mit vielen Eltern** bezeichnet, weil es aus vielen Wissenschaften schöpft: Volkswirtschaftslehre (Economics), Psychologie, Soziologie, Statistik, Geografie, Philosophie, Politikwissenschaft und mehr.\n\n### Die zwei wichtigsten Definitionen\n\n**AMA-Definition** (American Marketing Association):\n> the activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for customers, clients, partners, and society at large.\n\nAuf Deutsch: Marketing umfasst alle Aktivitäten, Institutionen und Prozesse, die darauf ausgerichtet sind, Angebote zu schaffen, zu kommunizieren, zu liefern und auszutauschen, die einen Wert für Kunden, Auftraggeber, Partner und die Gesellschaft haben.\n\n**Kotler-Definition** (Philip Kotler, Vater des modernen Marketing):\n> Marketing ist eine menschliche Tätigkeit, die darauf abzielt, durch Austauschprozesse Bedürfnisse und Wünsche zu befriedigen bzw. zu erfüllen.\n\nBeide Definitionen betonen: Es geht immer um **Wertaustausch** zwischen Anbieter und Nachfrager.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Merksatz: Was ist Marketing?",
+          "body": "Marketing = alle Aktivitäten eines Unternehmens, die darauf abzielen, Bedürfnisse von Kunden und Gesellschaft durch Austauschprozesse zu befriedigen — und dabei Gewinne zu erzielen."
+        },
+        {
+          "kind": "info",
+          "title": "Marketing als interdisziplinäres Fach",
+          "body": "Marketing ist kein isoliertes Fach. Es greift auf Erkenntnisse aus Psychologie (Wie denken Kunden?), Soziologie (Wie verhalten sich Gruppen?), Statistik (Wie werte ich Marktdaten aus?) und Volkswirtschaftslehre (Wie bilden sich Preise?) zurück."
+        }
+      ]
+    },
+    {
+      "id": "s2-marktgroessen",
+      "heading": "2. Marktgrößen — Marktpotenzial, Marktvolumen, Marktanteil",
+      "body": "Bevor ein Unternehmen Marketing-Entscheidungen trifft, muss es seinen Markt kennen. Dafür gibt es vier zentrale Messgrößen:\n\n### Die vier Marktgrößen im Überblick\n\n| Begriff | Definition | Wessen Sicht? |\n|---|---|---|\n| **Marktpotenzial** | Maximale Aufnahmekapazität des Marktes für ein Produkt (theoretisches Maximum) | Gesamter Markt |\n| **Marktvolumen** | Tatsächlicher Absatz aller Anbieter zusammen in einer Periode | Gesamter Markt |\n| **Absatzpotenzial** | Maximal erreichbarer Absatz eines einzelnen Unternehmens | Ein Unternehmen |\n| **Absatzvolumen** | Tatsächlicher Absatz eines einzelnen Unternehmens | Ein Unternehmen |\n\n**Wichtige Beziehung:** Das Marktvolumen liegt stets **unterhalb** des Marktpotenzials (nicht alle potenziellen Käufer kaufen tatsächlich). Das Absatzvolumen liegt stets **unterhalb** des Marktvolumens (kein Unternehmen hat 100 % Marktanteil).\n\n### Die Kernformel: Marktanteil\n\n$$\\text{Marktanteil} = \\frac{\\text{Absatzvolumen (Unternehmen)}}{\\text{Marktvolumen (gesamt)}}$$\n\nDer Marktanteil zeigt: Wie groß ist mein Stück vom Kuchen?\n\n### Rechenbeispiel Marktanteil\n\n**Situation:** Im deutschen Smartphone-Markt werden in einem Jahr insgesamt 22 Mio. Geräte verkauft (= Marktvolumen). Hersteller A verkauft davon 5,5 Mio. Stück (= Absatzvolumen).\n\n**Gelöst Schritt für Schritt:**\n$$\\text{Marktanteil}_A = \\frac{5{,}5\\,\\text{Mio.}}{22\\,\\text{Mio.}} = 0{,}25 = 25\\,\\%$$\n\nHersteller A hält also 25 % des Marktes.",
+      "callouts": [
+        {
+          "kind": "beispiel",
+          "title": "Anschauung: der Kuchen",
+          "body": "Stell dir den gesamten Markt als einen Kuchen vor. Das **Marktpotenzial** ist die maximale Kuchengröße (wenn alle Menschen, die theoretisch kaufen könnten, auch kaufen würden). Das **Marktvolumen** ist der tatsächlich gebackene Kuchen. Dein **Absatzvolumen** ist das Stück, das du davon bekommst. Dein **Marktanteil** zeigt, wie groß dein Stück im Verhältnis zum Gesamtkuchen ist."
+        },
+        {
+          "kind": "warning",
+          "title": "Häufige Verwechslung",
+          "body": "Marktpotenzial ≠ Marktvolumen! Das Marktpotenzial ist der theoretische Maximalwert (was wäre möglich?), das Marktvolumen ist der reale Ist-Wert (was wurde tatsächlich verkauft?). Das Marktvolumen ist immer kleiner oder gleich dem Marktpotenzial."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-marktgroessen",
+          "title": "Marktgrößen im Überblick",
+          "headers": [
+            "Begriff",
+            "Beschreibung",
+            "Beispiel (Smartphones DE)"
+          ],
+          "rows": [
+            [
+              "Marktpotenzial",
+              "Theoretisches Maximum aller möglichen Käufer",
+              "35 Mio. Stück/Jahr"
+            ],
+            [
+              "Marktvolumen",
+              "Tatsächlicher Gesamtabsatz aller Anbieter",
+              "22 Mio. Stück/Jahr"
+            ],
+            [
+              "Absatzpotenzial Hersteller A",
+              "Maximal erreichbarer Absatz von A",
+              "8 Mio. Stück/Jahr"
+            ],
+            [
+              "Absatzvolumen Hersteller A",
+              "Tatsächlicher Absatz von A",
+              "5,5 Mio. Stück/Jahr"
+            ],
+            [
+              "Marktanteil Hersteller A",
+              "5,5 Mio. / 22 Mio.",
+              "25 %"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3-kostenbegriffe",
+      "heading": "3. Kostenbegriffe — fix, variabel, Stückkosten, Grenzkosten",
+      "body": "Um den **Ertrag** eines Marketing-Mix berechnen zu können, müssen wir Kostenbegriffe kennen.\n\n### Grundlegende Kostenbegriffe\n\n| Abkürzung | Name | Was ist das? | Einheit |\n|---|---|---|---|\n| $K_{var}$ | Variable Kosten | Kosten, die mit der Produktionsmenge steigen/sinken (z. B. Rohstoffe) | €/Periode |\n| $K_{fix}$ | Fixe Kosten | Kosten, die sich bei Produktionsmengenänderung **nicht** ändern (z. B. Miete) | €/Periode |\n| $K$ | Gesamtkosten | $K = K_{var} + K_{fix}$ | €/Periode |\n| $k$ | Stückkosten | $k = K / X$ — Gesamtkosten pro produzierter Einheit | €/Stück |\n| $k_{var}$ | Variable Stückkosten | $k_{var} = K_{var} / X$ | €/Stück |\n| $k_{fix}$ | Fixe Stückkosten | $k_{fix} = K_{fix} / X$ | €/Stück |\n| $K'$ | Grenzkosten | $K' = \\frac{K_2 - K_1}{X_2 - X_1}$ — Kosten der nächsten zusätzlichen Einheit | €/Stück |\n\n### Die fünf Kostenverläufe\n\n1. **Fix:** Kosten bleiben konstant, egal wie viel produziert wird (z. B. Jahresmiete).\n2. **Proportional:** Jede weitere Einheit kostet gleich viel mehr (z. B. Rohstoffkosten).\n3. **Progressiv:** Jede weitere Einheit kostet immer **mehr** (z. B. Überstundenzuschläge bei hoher Auslastung).\n4. **Degressiv:** Jede weitere Einheit kostet immer **weniger** (z. B. Mengenrabatte, Lernkurveneffekte).\n5. **Regressiv:** Kosten sinken bei steigender Produktion absolut.\n\n### Wichtige Eigenschaft der Fixkosten\n\nFixe **Gesamtkosten** $K_{fix}$ bleiben konstant. Aber fixe **Stückkosten** $k_{fix} = K_{fix}/X$ sinken, je mehr produziert wird!\n\n**Beispiel:** $K_{fix} = 2.000\\,€$\n- Bei $X = 100$: $k_{fix} = 2.000/100 = 20\\,€/\\text{Stück}$\n- Bei $X = 500$: $k_{fix} = 2.000/500 = 4\\,€/\\text{Stück}$\n\nDieses Prinzip heißt **Fixkostendegression** — ein Kernargument für große Produktionsmengen.",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Grenzkosten verständlich erklärt",
+          "body": "Die **Grenzkosten** $K'$ beantworten die Frage: Was kostet es mich, eine einzige zusätzliche Einheit zu produzieren? Wenn ich bisher 100 Stück produziere und nun 101 produzieren will — wie viel mehr zahle ich? Das sind die Grenzkosten der 101. Einheit."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-kostenverlaeufe",
+          "title": "Zahlentabelle: Fünf Kostenverläufe im Vergleich",
+          "headers": [
+            "Menge X",
+            "K_fix (1)",
+            "k_fix (1)",
+            "K_var prop. (2)",
+            "k_var (2)",
+            "K_var prog. (3)",
+            "k_var (3)",
+            "K_var degr. (4)",
+            "k_var (4)"
+          ],
+          "rows": [
+            [
+              "100",
+              "2.000",
+              "20,00",
+              "500",
+              "5,00",
+              "500",
+              "5,00",
+              "500",
+              "5,00"
+            ],
+            [
+              "200",
+              "2.000",
+              "10,00",
+              "1.000",
+              "5,00",
+              "1.100",
+              "5,50",
+              "900",
+              "4,50"
+            ],
+            [
+              "300",
+              "2.000",
+              "6,67",
+              "1.500",
+              "5,00",
+              "1.800",
+              "6,00",
+              "1.200",
+              "4,00"
+            ],
+            [
+              "400",
+              "2.000",
+              "5,00",
+              "2.000",
+              "5,00",
+              "2.800",
+              "7,00",
+              "1.360",
+              "3,40"
+            ],
+            [
+              "500",
+              "2.000",
+              "4,00",
+              "2.500",
+              "5,00",
+              "4.500",
+              "9,00",
+              "1.500",
+              "3,00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4-marketing-mix",
+      "heading": "4. Der Marketing-Mix — die 4 Ps",
+      "body": "Der **Marketing-Mix** ist das zentrale Werkzeugset des Marketing. Er beschreibt die vier Hebel, mit denen ein Unternehmen seinen Marktauftritt gestaltet. Alle vier Instrumente beginnen auf Englisch mit dem Buchstaben P, daher der Name **4 Ps**.\n\n### Die vier Instrumente\n\n| P | Deutsch | Was gehört dazu? |\n|---|---|---|\n| **Product** | Produktpolitik | Was wird angeboten? Qualität, Design, Marke, Verpackung, Service |\n| **Price** | Preispolitik | Zu welchem Preis? Listenpreis, Rabatte, Zahlungskonditionen |\n| **Place** | Vertriebspolitik | Wo und wie wird es verkauft? Kanäle, Logistik, Online/Offline |\n| **Promotion** | Kommunikationspolitik | Wie wird geworben? Werbung, PR, Verkäuförderung, Social Media |\n\nAlle vier Instrumente müssen **aufeinander abgestimmt** sein — ein teures Luxusprodukt (Product) darf nicht billig beworben (Promotion) und im Discounter (Place) verkauft werden, wenn der Preis (Price) im Premiumsegment liegt.\n\n### Die Ertragsformel des Marketing-Mix\n\n$$Z = (P - k) \\cdot Q - K_{fix} - A - S$$\n\nDabei bedeuten:\n- $Z$ = Ertrag (das, was nach allen Kosten übrig bleibt)\n- $P$ = Listenpreis pro Stück (in €)\n- $k$ = durchschnittlicher Nachlass pro Stück (Rabatt, in €)\n- $Q$ = verkaufte Menge (in Stück)\n- $K_{fix}$ = fixe Kosten (in €)\n- $A$ = Werbeausgaben (in €)\n- $S$ = Verkäuförderungsausgaben (in €)\n\n**Intuition:** $(P - k)$ ist der Nettopreis, den das Unternehmen nach Rabatten tatsächlich erhält. Multipliziert mit der Menge $Q$ ergibt das den **Nettoumsatz**. Davon werden alle fixen Kosten, Werbung und Verkäuförderung abgezogen.\n\n### Rechenbeispiel: Basisfall Premiumshampoo\n\n**Situation aus der Vorlesung:** Ein Unternehmen verkauft Premiumshampoo für $P = 16\\,€$ und gewährt einen Nachlass von $k = 6\\,€$ pro Stück. Werbungsausgaben: $A = 10.000\\,€$. Verkäuförderung: $S = 10.000\\,€$. Fixe Kosten: $K_{fix} = 38.000\\,€$. Absatz: $Q = 12.000$ Stück.\n\n**Lösung:**\n$$Z = (16 - 6) \\cdot 12.000 - 38.000 - 10.000 - 10.000$$\n$$Z = 10 \\cdot 12.000 - 58.000 = 120.000 - 58.000 = 62.000\\,€$$",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Merkhilfe für die 4 Ps",
+          "body": "**P**rodukt = Was? | **P**reis = Wie viel? | **P**lace (Vertrieb) = Wo? | **P**romotion (Kommunikation) = Wie bekannt machen? — Alle vier Fragen muss jedes Unternehmen beantworten."
+        },
+        {
+          "kind": "formel",
+          "title": "Ertragsformel Marketing-Mix",
+          "body": "$$Z = (P - k) \\cdot Q - K_{fix} - A - S$$\nZ = Ertrag, P = Listenpreis, k = Nachlass/Stück, Q = Menge, $K_{fix}$ = Fixkosten, A = Werbung, S = Verkäuförderung"
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-mixvergleich",
+          "title": "Ertragsoptimierung: Vergleich von 5 Marketing-Mixen (k = 10 €, K_fix = 38.000 €)",
+          "headers": [
+            "Mix Nr.",
+            "Preis P (€)",
+            "Werbung A (€)",
+            "Verkaufsf. S (€)",
+            "Absatz Q (Stück)",
+            "Ertrag Z (€)"
+          ],
+          "rows": [
+            [
+              "1",
+              "16",
+              "10.000",
+              "10.000",
+              "12.400",
+              "16.400"
+            ],
+            [
+              "2",
+              "16",
+              "10.000",
+              "50.000",
+              "18.500",
+              "13.000"
+            ],
+            [
+              "3",
+              "16",
+              "50.000",
+              "10.000",
+              "15.100",
+              "-7.400"
+            ],
+            [
+              "4",
+              "16",
+              "50.000",
+              "50.000",
+              "22.600",
+              "-2.400"
+            ],
+            [
+              "5 (optimal)",
+              "24",
+              "10.000",
+              "10.000",
+              "5.500",
+              "19.000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5-duales-konzept",
+      "heading": "5. Das duale Marketingkonzept nach Meffert",
+      "body": "Heribert Meffert, einer der einflussreichsten deutschen Marketing-Professoren, prägte das **duale Marketingkonzept**. Er sieht Marketing in einer Doppelrolle:\n\n### Marketing als Funktion (die enge Sicht)\n\nIn jedem Unternehmen gibt es verschiedene **Funktionsbereiche**: Beschaffung, Produktion, Marketing, Personal, Finanzen — alle berichten an die Geschäftsleitung. Marketing ist hier **eine Abteilung unter vielen**, die für Ziele, Strategien, Maßnahmen und Kontrolle im Marktauftritt zuständig ist.\n\n### Marketing als Konzept / Leitidee (die weite Sicht)\n\nMeffert geht weiter: Marketing soll nicht nur eine Abteilung sein, sondern **Leitkonzept des gesamten Unternehmens**. Das bedeutet: Alle Abteilungen (auch Produktion, HR, IT) denken marktorientiert und stellen den Kunden in den Mittelpunkt.\n\nDieses Marketing als Führungskonzept muss ein **Spannungsfeld** managen:\n- **Konsumenten:** Was wollen die Kunden?\n- **Handel:** Wie erreichen wir Kunden über Vertriebspartner?\n- **Wettbewerber:** Was machen Konkurrenten?\n\nIm Mittelpunkt steht das Ziel: **marktorientierte Koordination aller betrieblichen Funktionsbereiche**.\n\n### Die drei Säulen einer Marketing-Konzeption\n\n1. **Informationsmanagement** — Marktforschung, Daten sammeln und auswerten\n2. **Planung und Kontrolle** — Ziele setzen, Strategien entwickeln, Ergebnisse prüfen\n3. **Implementierung** — Maßnahmen umsetzen, in der Organisation verankern",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Duales Marketingkonzept (Meffert)",
+          "body": "Marketing ist (1) eine **gleichberechtigte Unternehmensfunktion** (neben Produktion, Personal usw.) UND (2) ein **Leitkonzept des gesamten Managements**, das alle Abteilungen auf den Markt ausrichtet — im Spannungsfeld zwischen Konsumenten, Handel und Wettbewerbern."
+        },
+        {
+          "kind": "info",
+          "title": "Ziele-Strategien-Maßnahmen-Kontrolle",
+          "body": "Die Marketing-Abteilung arbeitet in einem Regelkreis: Zuerst werden **Ziele** definiert (z. B. 10 % Marktanteilsgewinn), dann **Strategien** entwickelt (z. B. Premiumpositionierung), dann **Maßnahmen** geplant und umgesetzt (z. B. neue Werbekampagne), und schließlich werden die **Ergebnisse kontrolliert** — woraus neue Ziele entstehen."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-duales-konzept",
+          "title": "Duales Marketingkonzept: Funktion und Leitkonzept",
+          "caption": "Marketing als gleichberechtigte Unternehmensfunktion (strukturell) und als Leitkonzept, das alle Funktionen auf den Markt ausrichtet (konzeptionell).",
+          "code": "graph TD\n  GL[Geschaeftsleitung]\n  GL --> B[Beschaffung]\n  GL --> P[Produktion]\n  GL --> M[Marketing]\n  GL --> HR[Personal]\n  GL --> F[Finanzen]\n  M -.->|Leitkonzept| B\n  M -.->|Leitkonzept| P\n  M -.->|Leitkonzept| HR\n  M -.->|Leitkonzept| F\n  style M fill:#4a90d9,color:#fff"
+        }
+      ]
+    },
+    {
+      "id": "s6-entwicklungsphasen",
+      "heading": "6. Entwicklungsphasen und -linien des Marketing",
+      "body": "Marketing hat sich im Laufe des 20. Jahrhunderts stark gewandelt. Die Vorlesung unterscheidet historische Phasen und drei Entwicklungslinien.\n\n### Historische Phasen (Zeitstrahl)\n\n| Zeitraum | Fokus | Was war neu? |\n|---|---|---|\n| ca. 1900–1920 | **Verkauf** | Hauptaufgabe: Produkte überhaupt an den Kunden bringen |\n| ca. 1920–1950 | **Werbung** | Werbung als Instrument zur Absatzsteigerung entdeckt |\n| ca. 1950–1980 | **Marketing-Mix (4 Ps)** | Systematischer Aufbau aller vier Marketinginstrumente |\n| ca. 1980–1990 | **Marketing-Implementierung** | Wie setzt man Marketing in der Organisation um? |\n| ab ca. 1990 | **Marktorientierte Unternehmensführung / Relationship Marketing** | Marketing als Führungsphilosophie für das ganze Unternehmen |\n\n### Die drei Entwicklungslinien\n\n**1. Strategisierung des Marketing:**\nMarketing entwickelt sich zur **Führungskonzeption für Organisationen**. Es geht nicht mehr nur um operative Maßnahmen, sondern um strategische Ausrichtung des gesamten Unternehmens auf den Markt.\n\n**2. Broadening (Ausweitung) des Marketing:**\nMarketing wird auf immer mehr **Anwendungsfelder** ausgeweitet. Ursprünglich nur für Konsumgüterunternehmen gedacht, umfasst es heute:\n- Dienstleistungsmarketing (Banken, Versicherungen)\n- Investitionsgütermarketing (Maschinen, Software)\n- Internationales Marketing\n- Nonprofit-Marketing (Vereine, NGOs, Parteien)\n\n**3. Deepening (Vertiefung) des Marketing:**\nMarketing berücksichtigt nicht mehr nur wirtschaftliche, sondern auch **gesellschaftliche Zieldimensionen**: Umwelt, Nachhaltigkeit, soziale Verantwortung, Stakeholder-Interessen.\n\n### Push- vs. Pull-Marketing\n\n- **Push-Marketing:** Der Hersteller baut Verkaufsdruck auf, indem er gezielt Schlüsselkunden (z. B. Händler) anspricht und Produkte in den Markt drückt.\n- **Pull-Marketing:** Ziel ist, einen Nachfragesog zu erzeugen. Endkunden werden direkt über Werbung angesprochen und fragen das Produkt dann beim Händler nach — der Händler bestellt beim Hersteller.\n\n### Die AIDA-Formel (historisch)\n\n- **A** — Attention (Aufmerksamkeit wecken)\n- **I** — Interest (Interesse erzeugen)\n- **D** — Desire (Kaufwunsch auslösen)\n- **A** — Action (Kaufhandlung auslösen)",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Drei Entwicklungslinien merken",
+          "body": "**Strategisierung** = Marketing wird Führungsaufgabe. **Broadening** = Marketing gilt für alle Branchen (nicht nur Konsumgüter). **Deepening** = Marketing trägt gesellschaftliche Verantwortung."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-entwicklungslinien",
+          "title": "Entwicklungslinien des Marketing",
+          "caption": "Von einfachen Verkaufstechniken über den Marketing-Mix zur modernen marktorientierten Unternehmensführung.",
+          "code": "graph TD\n  A[Einfache Verkaufs- und Kommunikationstechniken z.B. AIDA-Formel]\n  A --> B[Systematischer Marketing-Mix 4 Ps: Product Price Place Promotion]\n  B --> C1[Strategisierung: Marketing als Fuehrungskonzept]\n  B --> C2[Broadening: Ausweitung auf alle Sektoren]\n  B --> C3[Deepening: Gesellschaftliche Verantwortung]\n  C1 --> D[Heutiges Marketingverstaendnis]\n  C2 --> D\n  C3 --> D\n  style D fill:#2ecc71,color:#fff"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "mkt-vl1-fc-1",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Wie lautet die Kotler-Definition von Marketing?",
+      "back": "Marketing ist eine menschliche Tätigkeit, die darauf abzielt, durch **Austauschprozesse** Bedürfnisse und Wünsche zu befriedigen bzw. zu erfüllen."
+    },
+    {
+      "id": "mkt-vl1-fc-2",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was ist der Unterschied zwischen Marktpotenzial und Marktvolumen?",
+      "back": "**Marktpotenzial** = theoretische maximale Aufnahmekapazität des Marktes. **Marktvolumen** = tatsächlicher Gesamtabsatz aller Anbieter in einer Periode. Marktvolumen ≤ Marktpotenzial."
+    },
+    {
+      "id": "mkt-vl1-fc-3",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Wie berechnet man den Marktanteil?",
+      "back": "$$\\text{Marktanteil} = \\frac{\\text{Absatzvolumen (Unternehmen)}}{\\text{Marktvolumen (gesamt)}}$$\nBeispiel: 5,5 Mio. / 22 Mio. = 25 %"
+    },
+    {
+      "id": "mkt-vl1-fc-4",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was bedeuten die 4 Ps des Marketing-Mix?",
+      "back": "**Product** (Produktpolitik), **Price** (Preispolitik), **Place** (Vertriebspolitik), **Promotion** (Kommunikationspolitik). Zusammen bilden sie das Marketing-Instrumentarium."
+    },
+    {
+      "id": "mkt-vl1-fc-5",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Wie lautet die Ertragsformel des Marketing-Mix?",
+      "back": "$$Z = (P - k) \\cdot Q - K_{fix} - A - S$$\nZ = Ertrag, P = Listenpreis, k = Nachlass/Stück, Q = Menge, $K_{fix}$ = Fixkosten, A = Werbung, S = Verkäuförderung"
+    },
+    {
+      "id": "mkt-vl1-fc-6",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was ist das duale Marketingkonzept nach Meffert?",
+      "back": "Marketing ist (1) eine gleichberechtigte **Unternehmensfunktion** (neben Produktion, Personal etc.) UND (2) ein **Leitkonzept des Managements**, das alle Abteilungen auf den Markt ausrichtet."
+    },
+    {
+      "id": "mkt-vl1-fc-7",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was unterscheidet fixe Kosten von variablen Kosten?",
+      "back": "**Fixe Kosten** ($K_{fix}$) bleiben bei Produktionsmengenänderung konstant (z. B. Miete). **Variable Kosten** ($K_{var}$) steigen mit der Menge (z. B. Rohstoffkosten). Gesamtkosten: $K = K_{var} + K_{fix}$."
+    },
+    {
+      "id": "mkt-vl1-fc-8",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was bedeuten Broadening und Deepening des Marketing?",
+      "back": "**Broadening** = Ausweitung der Anwendungsfelder (Dienstleistungen, Investitionsgüter, Nonprofit). **Deepening** = Erweiterung um gesellschaftliche Zieldimensionen (Nachhaltigkeit, Stakeholder-Interessen)."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "mkt-vl1-q1",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "leicht",
+      "prompt": "Was ist laut Vorlesung der Ursprung des Begriffs Marketing?",
+      "options": [
+        "Marketing kommt vom Markt — dem Ort des Zusammentreffens von Angebot und Nachfrage",
+        "Marketing kommt vom lateinischen mercari (handeln)",
+        "Marketing ist ein Kunstwort ohne klare Herkunft",
+        "Marketing kommt von make und ring"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Marketing kommt von Markt — so beginnt die Vorlesung. Der Begriff beschreibt alle Aktivitäten, die auf dem Markt stattfinden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl1-q2",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "leicht",
+      "prompt": "Das Marktvolumen kann größer als das Marktpotenzial sein.",
+      "answer": false,
+      "explanation": "Falsch. Das Marktpotenzial ist das theoretische Maximum. Das Marktvolumen (tatsächlicher Absatz) ist immer kleiner oder höchstens gleich dem Marktpotenzial."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl1-q3",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "leicht",
+      "prompt": "Im Elektrofahrrad-Markt werden jährlich 800.000 E-Bikes verkauft (Marktvolumen). Hersteller X verkauft davon 200.000 Stück. Wie groß ist der Marktanteil von X in Prozent?",
+      "answer": 25,
+      "tolerance": 0.1,
+      "unit": "%",
+      "explanation": "Marktanteil = Absatzvolumen / Marktvolumen = 200.000 / 800.000 = 0,25 = 25 %. Hersteller X hält ein Viertel des Marktes."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl1-q4",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "leicht",
+      "prompt": "Welche vier Instrumente gehören zum Marketing-Mix (4 Ps)?",
+      "options": [
+        "Product, Price, Place, Promotion",
+        "Product, Profit, People, Promotion",
+        "Price, Place, Promotion, Positioning",
+        "Product, Price, People, Positioning"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Die klassischen 4 Ps sind: Product (Produktpolitik), Price (Preispolitik), Place (Vertriebspolitik) und Promotion (Kommunikationspolitik)."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl1-q5",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "mittel",
+      "prompt": "Berechne den Ertrag Z für den Basisfall: Listenpreis P = 16 €, Nachlass k = 6 €, Absatz Q = 12.000 Stück, Fixkosten K_fix = 38.000 €, Werbung A = 10.000 €, Verkäuförderung S = 10.000 €.",
+      "answer": 62000,
+      "tolerance": 1,
+      "unit": "€",
+      "explanation": "Z = (16 - 6) x 12.000 - 38.000 - 10.000 - 10.000 = 10 x 12.000 - 58.000 = 120.000 - 58.000 = 62.000 €."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl1-q6",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "mittel",
+      "prompt": "Berechne Ertrag Z für Marketing-Mix 5: P = 24 €, Nachlass k = 10 €, Absatz Q = 5.500 Stück, K_fix = 38.000 €, A = 10.000 €, S = 10.000 €.",
+      "answer": 19000,
+      "tolerance": 1,
+      "unit": "€",
+      "explanation": "Z = (24 - 10) x 5.500 - 38.000 - 10.000 - 10.000 = 14 x 5.500 - 58.000 = 77.000 - 58.000 = 19.000 €. Mix 5 ist der ertragstärkste."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl1-q7",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "mittel",
+      "prompt": "Was beschreibt das duale Marketingkonzept nach Meffert? (Mehrfachauswahl möglich)",
+      "options": [
+        "Marketing als gleichberechtigte Unternehmensfunktion neben Produktion, Personal etc.",
+        "Marketing als alleinige Entscheidungsinstanz im Unternehmen",
+        "Marketing als Leitkonzept des Managements zur marktorientierten Koordination",
+        "Marketing als ausschließlich operative Werbeabteilung"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "multiple": true,
+      "explanation": "Das duale Konzept nach Meffert sieht Marketing in zwei Rollen: (1) als eine von mehreren gleichberechtigten Funktionen UND (2) als Leitkonzept, das alle Funktionsbereiche auf den Markt ausrichtet."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl1-q8",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "mittel",
+      "prompt": "Fixe Stückkosten sinken, wenn die Produktionsmenge steigt.",
+      "answer": true,
+      "explanation": "Richtig! Die fixen Gesamtkosten bleiben konstant. Werden sie durch eine größere Menge geteilt, sinken die fixen Stückkosten: k_fix = K_fix / X. Bei K_fix = 2.000 € und X = 100 sind es 20 €/Stück; bei X = 500 nur noch 4 €/Stück. Dieses Prinzip heißt Fixkostendegression."
+    },
+    {
+      "kind": "mc",
+      "id": "mkt-vl1-q9",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "mittel",
+      "prompt": "Was bedeutet Broadening in der Entwicklung des Marketing?",
+      "options": [
+        "Marketing wird zur Führungsphilosophie des gesamten Unternehmens",
+        "Marketing wird auf gesellschaftliche Zieldimensionen wie Nachhaltigkeit ausgeweitet",
+        "Marketing wird auf neue Anwendungsfelder wie Dienstleistungen und Nonprofit ausgeweitet",
+        "Marketing integriert digitale Technologien"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Broadening = sektorale Ausweitung. Ursprünglich für Konsumgüter gedacht, gilt Marketing heute auch für Dienstleistungen, Investitionsgüter und Nonprofit-Organisationen. Deepening (nicht Broadening) bezeichnet die Ausweitung auf gesellschaftliche Zieldimensionen."
+    },
+    {
+      "kind": "freetext",
+      "id": "mkt-vl1-q10",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "schwer",
+      "prompt": "Erkläre in eigenen Worten, warum ein Unternehmen beim Vergleich von Marketing-Mixen nicht einfach den Mix mit dem höchsten Absatz wählen sollte, sondern den Ertrag Z berechnen muss.",
+      "sampleAnswer": "Ein hoher Absatz bedeutet nicht automatisch einen hohen Ertrag. Wenn ein Unternehmen viel Geld für Werbung und Verkäuförderung ausgibt oder hohe Rabatte gewährt, können diese Kosten den Mehrerloes übersteigen. Mix 3 in der Vorlesung hat z. B. höheren Absatz als Mix 1, aber negativen Ertrag (-7.400 €), weil die Werbeausgaben zu hoch sind. Daher muss immer der Ertrag — nicht der Absatz — als Erfolgsgröße dienen.",
+      "keywords": [
+        "ertrag",
+        "kosten",
+        "werbung",
+        "rabatt",
+        "absatz",
+        "formel",
+        "fixkosten"
+      ],
+      "explanation": "Der Absatz (Menge) ist nur eine Teilgröße. Erst die vollständige Ertragsformel zeigt, ob ein Mix wirklich profitabel ist."
+    },
+    {
+      "kind": "truefalse",
+      "id": "mkt-vl1-q11",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "leicht",
+      "prompt": "Die AMA-Definition von Marketing stammt von Philip Kotler.",
+      "answer": false,
+      "explanation": "Falsch. Die AMA-Definition stammt von der American Marketing Association. Die Kotler-Definition lautet: Marketing ist eine menschliche Tätigkeit, die darauf abzielt, durch Austauschprozesse Bedürfnisse und Wünsche zu befriedigen. Beide sind in der Vorlesung genannt, aber von verschiedenen Quellen."
+    },
+    {
+      "kind": "numeric",
+      "id": "mkt-vl1-q12",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "difficulty": "leicht",
+      "prompt": "Ein Unternehmen hat Fixkosten K_fix = 2.000 € und produziert X = 400 Stück. Wie hoch sind die fixen Stückkosten k_fix in €/Stück?",
+      "answer": 5,
+      "tolerance": 0.01,
+      "unit": "€/Stück",
+      "explanation": "k_fix = K_fix / X = 2.000 / 400 = 5 €/Stück. Dies illustriert die Fixkostendegression: Bei X = 100 wären es noch 20 €/Stück."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mkt-vl1-ex-1",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "label": "Ertragsoptimierung durch alternative Marketing-Mixe (VL1, Folie 14-15)",
+      "source": "PoM VL1 Einführung und Grundlagen des Marketing (Folie 14-15)",
+      "type": "beispiel",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Ein Unternehmen verkauft Premiumshampoo.\n\n**Ausgangssituation:** Listenpreis P = 16 €, Nachlass k = 6 €, Absatz Q = 12.000 Stück, Fixkosten K_fix = 38.000 €, Werbung A = 10.000 €, Verkäuförderung S = 10.000 €.\n\n**Allgemeine Ertragsformel:** $Z = (P - k) \\cdot Q - K_{fix} - A - S$\n\nBerechne zunächst den Ertrag Z für die Ausgangssituation.\n\nDanach werden folgende **fünf alternative Marketing-Mixe** mit Nachlass k = 10 € und K_fix = 38.000 € betrachtet:\n\n| Mix | P (€) | A (€) | S (€) | Q (Stück) |\n|---|---|---|---|---|\n| 1 | 16 | 10.000 | 10.000 | 12.400 |\n| 2 | 16 | 10.000 | 50.000 | 18.500 |\n| 3 | 16 | 50.000 | 10.000 | 15.100 |\n| 4 | 16 | 50.000 | 50.000 | 22.600 |\n| 5 | 24 | 10.000 | 10.000 | 5.500 |\n\n**(a)** Berechne den Ertrag Z für alle fünf Mixe.\n**(b)** Welcher Mix ist optimal?\n**(c)** Erkläre, warum Mix 3 trotz höherem Absatz als Mix 1 einen negativen Ertrag hat.",
+      "hint": "Wende die Formel Z = (P - k) x Q - K_fix - A - S für jeden Mix an. Bei den Alternativen gilt k = 10 € (nicht 6 €).",
+      "solution": "### Ausgangssituation\n\n$$Z = (16 - 6) \\cdot 12.000 - 38.000 - 10.000 - 10.000 = 10 \\cdot 12.000 - 58.000 = 120.000 - 58.000 = \\mathbf{62.000\\,€}$$\n\n---\n\n### Teil (a): Ertragsberechnung für alle fünf Mixe\n\n**Allgemein:** $Z = (P - 10) \\cdot Q - 38.000 - A - S$\n\n**Mix 1:** $Z_1 = (16 - 10) \\cdot 12.400 - 38.000 - 10.000 - 10.000 = 6 \\cdot 12.400 - 58.000 = 74.400 - 58.000 = \\mathbf{16.400\\,€}$\n\n**Mix 2:** $Z_2 = (16 - 10) \\cdot 18.500 - 38.000 - 10.000 - 50.000 = 6 \\cdot 18.500 - 98.000 = 111.000 - 98.000 = \\mathbf{13.000\\,€}$\n\n**Mix 3:** $Z_3 = (16 - 10) \\cdot 15.100 - 38.000 - 50.000 - 10.000 = 6 \\cdot 15.100 - 98.000 = 90.600 - 98.000 = \\mathbf{-7.400\\,€}$\n\n**Mix 4:** $Z_4 = (16 - 10) \\cdot 22.600 - 38.000 - 50.000 - 50.000 = 6 \\cdot 22.600 - 138.000 = 135.600 - 138.000 = \\mathbf{-2.400\\,€}$\n\n**Mix 5:** $Z_5 = (24 - 10) \\cdot 5.500 - 38.000 - 10.000 - 10.000 = 14 \\cdot 5.500 - 58.000 = 77.000 - 58.000 = \\mathbf{19.000\\,€}$\n\n---\n\n### Teil (b): Optimaler Mix\n\n| Mix | Ertrag Z |\n|---|---|\n| 1 | 16.400 € |\n| 2 | 13.000 € |\n| 3 | -7.400 € |\n| 4 | -2.400 € |\n| **5** | **19.000 €** |\n\n**Mix 5 ist optimal** mit 19.000 €. Trotz des niedrigsten Absatzes (5.500 Stück) liefert der höhere Preis (24 €) nach Nachlass 14 € Nettopreis je Stück — mehr als doppelt so viel wie bei Mix 1-4 (6 €/Stück).\n\n---\n\n### Teil (c): Warum hat Mix 3 trotz höherem Absatz negativen Ertrag?\n\nMix 1: Absatz 12.400 Stück, Z = 16.400 €\nMix 3: Absatz 15.100 Stück, Z = -7.400 €\n\nBei Mix 3 wurden die Werbeausgaben von 10.000 € auf 50.000 € verfünffacht (+40.000 €). Der Absatz stieg von 12.400 auf 15.100 Stück (+2.700 Stück). Mehrerloes: 2.700 x 6 = 16.200 €. Mehrausgaben für Werbung: 40.000 €. Saldo: 16.200 - 40.000 = -23.800 € Verschlechterung. Der höhere Absatz bezahlt die Mehrinvestition nicht."
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "id": "methodik-gutachtenstil-und-fallloesung-met",
+  "subjectId": "privatrecht",
+  "title": "Methodik: Gutachtenstil und Falllösung (Methodikteil 3)",
+  "summary": "Der Gutachtenstil ist die zentrale Methode juristischer Falllösung: Von einer Hypothese (Obersatz) über die abstrakte Rechtslage (Definition) und den Sachverhaltsvergleich (Subsumtion) zum Ergebnis. Dieses Thema erklärt alle vier Schritte von Grund auf, zeigt den Unterschied zum Urteilsstil, und übt die Methode an vollständig ausgearbeiteten Beispielen.",
+  "order": 10,
+  "estMinutes": 50,
+  "sections": [
+    {
+      "id": "was-ist-gutachtenstil",
+      "heading": "Was ist der Gutachtenstil – und warum brauche ich ihn?",
+      "body": "Wenn du in der Klausur einen Rechtsfall löst, musst du deinen Gedankengang für den Leser **Schritt für Schritt nachvollziehbar** machen. Genau das leistet der **Gutachtenstil**.\n\nVorstell dir: Du arbeitest als Anwalt und sollst prüfen, ob dein Mandant Anspruch auf Schadensersatz hat. Du weißt das Ergebnis noch nicht – du musst es erst **herausarbeiten**. Dein Gutachten zeigt den Weg: Hypothese → Begründung → Ergebnis.\n\nIn der Privatrecht-Klausur wird **ausschließlich der Gutachtenstil** erwartet. Wer einfach schreibt „A hat einen Anspruch, weil …\" (also das Ergebnis voranstellt) schreibt im **Urteilsstil** – und verliert Punkte, selbst wenn die inhaltliche Aussage stimmt.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Gutachtenstil vs. Urteilsstil – der Kernunterschied",
+          "body": "**Gutachtenstil:** Hypothese → Begründung → Ergebnis (Reihenfolge: erst prüfen, dann urteilen)\n\n**Urteilsstil:** Ergebnis → Begründung (wie ein Richterspruch: erst das Urteil, dann die Begründung)\n\nIn dieser Veranstaltung wird **durchgehend der Gutachtenstil** verlangt."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "table",
+          "id": "fig-vergleich-stile",
+          "title": "Gutachtenstil vs. Urteilsstil im Vergleich",
+          "headers": ["Merkmal", "Gutachtenstil", "Urteilsstil"],
+          "rows": [
+            ["Reihenfolge", "Hypothese → Begründung → Ergebnis", "Ergebnis → Begründung"],
+            ["Typische Einleitung", "„Fraglich ist …\" / „… könnte …\"", "„A hat einen Anspruch, weil …\""],
+            ["Wer verwendet ihn?", "Gutachter, Rechtsanwalt, Student", "Richter (Urteil), Behörde (Bescheid)"],
+            ["In dieser Klausur erwartet?", "Ja – durchgehend", "Nein"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vier-schritte",
+      "heading": "Die vier Schritte des Gutachtenstils",
+      "body": "Jeder Prüfungspunkt – egal ob groß oder klein – wird in **vier Schritten** abgehandelt. Diese Schritte haben feste Namen und eine feste Reihenfolge. Du wirst sie auswendig lernen müssen, weil du sie in jeder Klausuraufgabe immer wieder anwendest.\n\n**Schritt 1 – Obersatz (Hypothese)**\nDu formulierst eine Frage oder Vermutung, was du prüfen möchtest. Wichtig: Es klingt wie eine offene Frage, nicht wie eine Antwort. Typische Signalwörter sind: *„könnte\"*, *„müsste\"*, *„Fraglich ist\"*, *„Zu prüfen ist\"*.\n\n> Beispiel: „A könnte gegen B einen Anspruch auf Zahlung des Kaufpreises aus § 433 Abs. 2 BGB haben.\"\n\n**Schritt 2 – Definition (abstrakte Voraussetzungen)**\nDu nennst die rechtlichen Voraussetzungen in abstrakter Form – also was das Gesetz generell verlangt, unabhängig vom konkreten Fall. Du zitierst dabei die einschlägige Norm (§).\n\n> Beispiel: „Ein Kaufvertrag kommt gem. §§ 145 ff. BGB durch zwei übereinstimmende Willenserklärungen – Angebot und Annahme – zustande.\"\n\n**Schritt 3 – Subsumtion (Sachverhalts-Vergleich)**\nDu nimmst den konkreten Sachverhalt und prüfst ihn anhand der Definition. Du fragst: Passt das, was im Fall passiert ist, zu den abstrakten Voraussetzungen? Dies ist der **Kern** des juristischen Denkens.\n\n> Beispiel: „A hat B per E-Mail ein verbindliches Angebot gemacht (Angebot +). B hat dieses Angebot rechtzeitig und ohne Änderung angenommen (Annahme +). Die Willenserklärungen sind übereinstimmend.\"\n\n**Schritt 4 – Ergebnis (Conclusio)**\nDu fasst zusammen, ob die Voraussetzungen erfüllt sind oder nicht. Signalwörter: *„somit\"*, *„folglich\"*, *„damit\"*, *„mithin\"*. Wichtig: **kein Konjunktiv** mehr, kein weiteres Argument mehr nach dem Ergebnis.\n\n> Beispiel: „Folglich ist ein wirksamer Kaufvertrag zwischen A und B zustande gekommen.\"",
+      "callouts": [
+        {
+          "kind": "definition",
+          "title": "Die vier Schritte – Kurzformel",
+          "body": "**O**bersatz → **D**efinition → **S**ubsumtion → **E**rgebnis\n\nEselsbrücke: **O**ft **D**enken **S**tudenten **E**infach"
+        },
+        {
+          "kind": "warning",
+          "title": "Häufige Fehler",
+          "body": "• **Ergebnis im Konjunktiv**: Falsch: „A könnte somit einen Anspruch haben.\" Richtig: „A hat somit einen Anspruch.\"\n• **Begründung nach dem Ergebnis**: Was nach dem Ergebnis kommt, gehört vor das Ergebnis – in die Subsumtion.\n• **Obersatz als Aussage**: Falsch: „A hat einen Anspruch.\" Richtig: „A könnte einen Anspruch haben.\" Der Obersatz ist eine Hypothese.\n• **Sachverhalt in der Definition**: Die Definition ist abstrakt, der Sachverhalt gehört in die Subsumtion."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-vier-schritte",
+          "title": "Die vier Schritte des Gutachtenstils",
+          "caption": "Jeder Prüfungspunkt folgt exakt dieser Abfolge. Der Obersatz stellt eine Hypothese auf; das Ergebnis beantwortet sie ohne Konjunktiv.",
+          "code": "graph TD\n    A[\"1. OBERSATZ\\n(Hypothese)\\n'könnte / müsste / fraglich ist'\\n→ offene Prüfungsfrage\"] --> B[\"2. DEFINITION\\n(abstrakte Voraussetzungen)\\n'gem. § ... BGB ...'\\n→ Was verlangt das Gesetz?\"]\n    B --> C[\"3. SUBSUMTION\\n(konkreter Sachverhalt)\\n→ Passt der Fall zur Definition?\\nSachverhalt + Bewertung\"]\n    C --> D[\"4. ERGEBNIS\\n(Conclusio)\\n'somit / folglich / mithin'\\n→ Antwort auf den Obersatz\\nKEIN Konjunktiv!\"]\n    style A fill:#dbeafe,stroke:#2563eb\n    style B fill:#dcfce7,stroke:#16a34a\n    style C fill:#fef3c7,stroke:#d97706\n    style D fill:#f3f4f6,stroke:#374151"
+        }
+      ]
+    },
+    {
+      "id": "mini-beispiele",
+      "heading": "Drei Mini-Beispiele – so sieht Gutachtenstil in der Praxis aus",
+      "body": "Die beste Art, den Gutachtenstil zu verstehen, ist ihn an konkreten Fällen zu sehen. Die folgenden drei Beispiele gehen von einfach nach schwieriger.\n\n---\n\n**Beispiel 1: Ist der 6-jährige A geschäftsfähig?** (Kurzgutachten)\n\nDies ist das Musterbeispiel aus dem Skript. Es zeigt, wie ein ganzes Gutachten in wenigen Sätzen steht:\n\n> **[Obersatz – Hypothese]** *Fraglich ist, ob A das Eis wirksam kaufen konnte.*\n>\n> **[Definition – abstrakte Voraussetzungen]** *Eine Erklärung eines Geschäftsunfähigen, d. h. gem. § 104 Nr. 1 BGB bis zu seinem vollendeten siebten Lebensjahr, ist gem. § 105 Abs. 1 BGB nichtig und unwirksam.*\n>\n> **[Subsumtion – Sachverhaltsvergleich]** *A ist 6 Jahre alt und damit geschäftsunfähig. Seine Erklärung, das Eis kaufen zu wollen, ist damit nichtig.*\n>\n> **[Ergebnis – Conclusio]** *Folglich konnte A das Eis nicht wirksam kaufen.*\n\nBeachte: **Vier Sätze, vier Schritte** – und die Frage aus dem Obersatz wird im Ergebnis präzise beantwortet.\n\n---\n\n**Beispiel 2: Ist A (11 Jahre) beschränkt geschäftsfähig?** (Unterpunkt eines längeren Gutachtens)\n\n> **[Obersatz]** *A könnte beschränkt geschäftsfähig sein.*\n>\n> **[Definition]** *Eine Person ist gem. § 106 BGB beschränkt geschäftsfähig, wenn sie minderjährig ist, d. h. das achtzehnte Lebensjahr noch nicht (§ 2 BGB), jedoch das siebte Lebensjahr vollendet hat.*\n>\n> **[Subsumtion]** *A ist elf Jahre alt und damit noch nicht volljährig, sondern minderjährig. Gleichzeitig hat er das siebte Lebensjahr vollendet.*\n>\n> **[Zwischenergebnis]** *A ist mithin beschränkt geschäftsfähig.*\n\n---\n\n**Beispiel 3: Ist ein Kaufvertrag zwischen A und B zustande gekommen?**\n\n> **[Obersatz]** *A könnte gegen B einen Anspruch auf Übergabe und Übereignung der Zeitschrift aus § 433 Abs. 1 BGB haben. Dazu müsste zwischen A und B ein wirksamer Kaufvertrag zustande gekommen sein.*\n>\n> **[Definition]** *Ein Kaufvertrag kommt gem. §§ 145 ff. BGB durch zwei übereinstimmende Willenserklärungen zustande: ein Angebot und eine darauf abgestimmte Annahme.*\n>\n> **[Subsumtion]** *A hat durch das Aufnehmen der Zeitschrift und Hinlegen des Geldes konkludent ein Angebot auf Abschluss eines Kaufvertrages gemacht. B hat dieses durch Entgegennahme des Geldes angenommen. Die Willenserklärungen sind inhaltlich übereinstimmend.*\n>\n> **[Ergebnis]** *Folglich ist ein Kaufvertrag zustande gekommen.*",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Wie erkenne ich, wo Obersatz endet und Definition beginnt?",
+          "body": "Der **Obersatz** enthält die Prüfungsfrage (Was will ich prüfen?). Die **Definition** beginnt, sobald du das Gesetz zitierst und die allgemeinen Voraussetzungen nennst. In kurzen Gutachten können Obersatz und Definition in einem einzigen Satz verbunden sein – das ist zulässig und in der Praxis häufig."
+        }
+      ]
+    },
+    {
+      "id": "aufgaben-gutachten",
+      "heading": "Aufgaben des Gutachtens: Komplexe Fälle in Teilfragen zerlegen",
+      "body": "Ein realer Klausurfall enthält oft **mehrere rechtliche Fragen** gleichzeitig. Das Gutachten hat dabei eine wichtige strukturierende Funktion: Es zerlegt den komplexen Sachverhalt in **handhabbare Unterfragen**.\n\nDas Vorgehen:\n1. Lies den Sachverhalt und identifiziere alle rechtlich relevanten Fragen.\n2. Ordne die Fragen logisch: Welche Frage hängt von welcher ab?\n3. Beantworte jede Teilfrage separat im Gutachtenstil (mit Zwischenergebnis).\n4. Am Ende: Gesamtergebnis aus den Zwischenergebnissen zusammenführen.\n\nBeispiel: „Konnte A das Eis wirksam kaufen?\" hat mehrere Teilfragen:\n- Ist A geschäftsfähig? (§§ 104, 106 BGB)\n- Wenn beschränkt geschäftsfähig: Ist die Erklärung trotzdem wirksam? (§ 107 BGB)\n- Wenn ja: Lediglich rechtlich vorteilhaft?\n- Wenn nein: Haben die Eltern eingewilligt? (§ 183 BGB)\n\nJede dieser Teilfragen wird als eigener Prüfungspunkt im Gutachtenstil behandelt.",
+      "callouts": [
+        {
+          "kind": "info",
+          "title": "Hilfsgutachten mit \"hilfsweise\"",
+          "body": "Manchmal ergibt die Prüfung eines Punktes, dass eine Voraussetzung nicht erfüllt ist – aber der Sachverhalt legt nahe, auch den nächsten Schritt zu prüfen (weil z. B. Punkte dafür vergeben werden). In diesem Fall:\n\n1. Ergebnis für den negativen Punkt feststellen.\n2. Den nächsten Prüfungspunkt mit dem Zusatz **„hilfsweise\"** im Obersatz beginnen.\n3. Für die weitere Prüfung unterstellen, dass der fehlgeschlagene Punkt bejaht worden wäre.\n\nBeispiel: „Da kein wirksamer Vertrag vorliegt, hat A keinen Anspruch aus § 433 Abs. 1 BGB. **Hilfsweise**, d. h. für den Fall, dass ein Vertrag zustande gekommen wäre, ist zu prüfen, ob dieser wirksam angefochten wurde ...\""
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-komplex-zerlegung",
+          "title": "Komplexen Sachverhalt in Teilfragen zerlegen",
+          "caption": "Ein komplexer Fall wird in logisch aufeinander aufbauende Teilfragen zerlegt. Jede Teilfrage wird separat im Gutachtenstil gelöst; am Ende steht das Gesamtergebnis.",
+          "code": "graph LR\n    K[\"Komplexer\\nSachverhalt\"] --> T1[\"Teilfrage 1\\nAnspruch entstanden?\"]\n    K --> T2[\"Teilfrage 2\\nAnspruch erloschen?\"]\n    K --> T3[\"Teilfrage 3\\nAnspruch durchsetzbar?\"]\n    T1 --> ZE1[\"Zwischenergebnis 1\"]\n    T2 --> ZE2[\"Zwischenergebnis 2\"]\n    T3 --> ZE3[\"Zwischenergebnis 3\"]\n    ZE1 --> GE[\"Gesamtergebnis\"]\n    ZE2 --> GE\n    ZE3 --> GE\n    style K fill:#dbeafe,stroke:#2563eb\n    style GE fill:#dcfce7,stroke:#16a34a"
+        }
+      ]
+    },
+    {
+      "id": "loesungsskizze",
+      "heading": "Die Lösungsskizze – Vorbereitung vor dem Schreiben",
+      "body": "Bevor du das eigentliche Gutachten schreibst, erstellst du eine **Lösungsskizze**. Das ist ein Stichwort-Entwurf – kein ausformulierter Text – der dir hilft, Struktur und Schwerpunkte zu erkennen.\n\n**Was gehört in die Lösungsskizze?**\n- Die Prüfungspunkte (welche Normen sind einschlägig?)\n- Stichpunktartig: relevante Tatbestandsmerkmale, Definitionen\n- Angaben aus dem Sachverhalt mit dem entsprechenden Argument\n- Kurzzeichen für Zwischenergebnisse: **(+)** = erfüllt, **(-)** = nicht erfüllt, **(P)** = Problem, vertiefte Auseinandersetzung nötig\n\n**Beispiel Lösungsskizze** (Besprechungsfall 3.7: Anfechtung durch Stadt S):\n\n```\n1. Anfechtbares Rechtsgeschäft → Angebot = Willenserklärung (+)\n2. Anfechtungsgrund § 119 I Alt. 2 BGB (Erklärungsirrtum)\n   → vertippt: 5,2 m statt 2,5 m geschrieben (+)\n3. Kausalität → sonst nicht abgegeben (+)\n4. Anfechtungserklärung § 143 I BGB → erklärt, nicht mehr gebunden sein zu wollen (+)\n5. Anfechtungsfrist § 121 BGB → unverzüglich? → 2 Wochen später (-)\n6. Rechtsfolge § 142 I BGB → nichtig ex tunc (-)\n```\n\n**Zeitregel:** Verwende **maximal ein Drittel** der Bearbeitungszeit auf die Lösungsskizze. Wer 60 Minuten für einen Fall hat, sollte nach 20 Minuten mit dem Schreiben beginnen.",
+      "callouts": [
+        {
+          "kind": "tip",
+          "title": "Lösungsskizze ≠ Gutachten",
+          "body": "Die Lösungsskizze ist ein **privates Hilfsmittel** – sie wird nicht bewertet. Nur das ausformulierte Gutachten zählt. Aber: Wer keine Lösungsskizze macht, vergisst leicht wichtige Prüfungspunkte oder verliert die Struktur."
+        }
+      ]
+    },
+    {
+      "id": "gutachten-im-gutachten",
+      "heading": "Gutachtenstil im längeren Gutachten – Verschachtelung",
+      "body": "In einem längeren Gutachten **wiederholen sich die vier Schritte**. Aus einem Obersatz werden weitere Unterpunkte abgeleitet, die jeweils wieder im Gutachtenstil bearbeitet werden.\n\n**Das Prinzip der Verschachtelung:**\n\nDer übergeordnete Obersatz steht für sich – er wird **nicht** direkt mit Subsumtion und Ergebnis abgeschlossen, sondern zuerst in Unterpunkte gegliedert. Jeder Unterpunkt wird dann vollständig (Obersatz, Definition, Subsumtion, Zwischenergebnis) bearbeitet.\n\n**Muster (schematisch):**\n\n```\nObersatz: „Fraglich ist, ob A gegen B einen Anspruch aus § 433 Abs. 1 BGB hat.\"\n(Definition: Ein solcher Anspruch setzt einen wirksamen Kaufvertrag voraus.)\n\n  1. Könnte ein Kaufvertrag zustande gekommen sein?\n     Definition: §§ 145 ff. BGB → Angebot + Annahme\n     Subsumtion: A bot an, B nahm an.\n     Zwischenergebnis: Kaufvertrag (+)\n\n  2. Könnte der Vertrag wirksam sein?\n     a. Könnte A beschränkt geschäftsfähig sein?\n        Definition: § 106 BGB\n        Subsumtion: A ist 11 Jahre alt.\n        Zwischenergebnis: beschränkt geschäftsfähig (+)\n     b. Könnte die Erklärung wirksam sein?\n        Definition: § 107 BGB\n        Subsumtion: Eltern haben eingewilligt.\n        Zwischenergebnis + Ergebnis: Vertrag ist wirksam (+)\n```\n\nBeachte: Mehrere Obersätze hintereinander ohne Subsumtion sind **normal und korrekt** – sie werden erst durch die Unterpunkte aufgelöst.",
+      "callouts": [
+        {
+          "kind": "merksatz",
+          "title": "Wann brauche ich Verschachtelung?",
+          "body": "Immer dann, wenn ein Prüfungspunkt aus **mehreren Untervoraussetzungen** besteht, die jeweils eigene rechtliche Prüfung erfordern. Einfache Merkmale (offensichtlich erfüllt oder nicht erfüllt) können auch ohne eigenen Unterpunkt kurz abgehandelt werden – das nennt sich Schwerpunktsetzung."
+        }
+      ],
+      "figures": [
+        {
+          "kind": "mermaid",
+          "id": "fig-verschachtelung",
+          "title": "Verschachtelung im längeren Gutachten",
+          "caption": "Der übergeordnete Obersatz wird nicht direkt beantwortet, sondern durch Unterpunkte entfaltet. Jeder Unterpunkt schließt mit einem Zwischenergebnis. Das Gesamtergebnis steht am Ende.",
+          "code": "graph TD\n    O[\"Obersatz (Hauptfrage)\"] --> D[\"(Definition – optional)\"]\n    D --> U1[\"1. Obersatz (Unterpunkt 1)\\n→ Definition\\n→ Subsumtion\\n→ Zwischenergebnis\"]\n    D --> U2[\"2. Obersatz (Unterpunkt 2)\"]\n    U2 --> UA[\"a. Obersatz\\n→ Definition\\n→ Subsumtion\\n→ Zwischenergebnis\"]\n    U2 --> UB[\"b. Obersatz\\n→ Definition\\n→ Subsumtion\\n→ Zwischenergebnis + Ergebnis\"]\n    style O fill:#dbeafe,stroke:#2563eb\n    style U1 fill:#dcfce7,stroke:#16a34a\n    style UA fill:#fef3c7,stroke:#d97706\n    style UB fill:#fef3c7,stroke:#d97706"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "met-fc-1",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Welche vier Schritte hat der Gutachtenstil?",
+      "back": "1. Obersatz (Hypothese) – 2. Definition (abstrakte Voraussetzungen) – 3. Subsumtion (Sachverhaltsvergleich) – 4. Ergebnis (Conclusio)"
+    },
+    {
+      "id": "met-fc-2",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was ist der Unterschied zwischen Gutachtenstil und Urteilsstil?",
+      "back": "Gutachtenstil: Hypothese → Begründung → Ergebnis (offen, prüfend). Urteilsstil: Ergebnis → Begründung (wie ein Richterspruch). In dieser Klausur ist ausschließlich der Gutachtenstil zu verwenden."
+    },
+    {
+      "id": "met-fc-3",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Wie darf das Ergebnis im Gutachtenstil NICHT formuliert sein?",
+      "back": "Nicht im Konjunktiv! Falsch: „A könnte somit einen Anspruch haben.\" Richtig: „A hat somit einen Anspruch.\" Das Ergebnis ist eine klare Aussage, keine Vermutung."
+    },
+    {
+      "id": "met-fc-4",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was enthält die Definition im Gutachtenstil?",
+      "back": "Die abstrakten, allgemeinen Voraussetzungen der zu prüfenden Rechtsnorm – unabhängig vom konkreten Fall. Die einschlägige Norm (§) wird zitiert. Keine Sachverhaltsangaben."
+    },
+    {
+      "id": "met-fc-5",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was ist die Subsumtion?",
+      "back": "Der dritte Schritt: Der konkrete Sachverhalt wird anhand der abstrakten Definition bewertet. Man vergleicht, ob die Tatsachen des Falls die rechtlichen Voraussetzungen erfüllen."
+    },
+    {
+      "id": "met-fc-6",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was bedeutet \"hilfsweise\" im Gutachten?",
+      "back": "Wenn eine Voraussetzung nicht erfüllt ist, aber weitere Prüfungspunkte relevant bleiben, fährt man mit „hilfsweise\" fort. Man unterstellt dabei, die fehlgeschlagene Voraussetzung wäre bejaht worden."
+    },
+    {
+      "id": "met-fc-7",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was ist eine Lösungsskizze und wie viel Zeit sollte sie beanspruchen?",
+      "back": "Ein stichpunktartiger Vorentwurf des Gutachtens mit Prüfungspunkten, Definitionen und Kurzzeichen (+)/(-)/P. Maximal ein Drittel der Bearbeitungszeit."
+    },
+    {
+      "id": "met-fc-8",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Welche Signalwörter leiten den Obersatz typischerweise ein?",
+      "back": "„Fraglich ist …\", „Zu prüfen ist …\", „… könnte …\", „… müsste …\". Der Obersatz muss deutlich machen, dass noch kein Ergebnis feststeht."
+    }
+  ],
+  "quiz": [
+    {
+      "kind": "mc",
+      "id": "met-q1",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "leicht",
+      "prompt": "In welcher Reihenfolge werden die vier Schritte des Gutachtenstils angewendet?",
+      "options": [
+        "Obersatz → Definition → Subsumtion → Ergebnis",
+        "Ergebnis → Definition → Subsumtion → Obersatz",
+        "Obersatz → Subsumtion → Definition → Ergebnis",
+        "Definition → Obersatz → Ergebnis → Subsumtion"
+      ],
+      "correct": [0],
+      "explanation": "Die korrekte Reihenfolge ist: (1) Obersatz (Hypothese), (2) Definition (abstrakte Voraussetzungen), (3) Subsumtion (Sachverhaltsvergleich), (4) Ergebnis (Conclusio). Diese Reihenfolge muss exakt eingehalten werden."
+    },
+    {
+      "kind": "truefalse",
+      "id": "met-q2",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "leicht",
+      "prompt": "Das Ergebnis im Gutachtenstil darf im Konjunktiv formuliert sein, z. B. „A könnte somit einen Anspruch haben.\"",
+      "answer": false,
+      "explanation": "Das Ergebnis darf NICHT im Konjunktiv stehen. Richtig: „A hat somit einen Anspruch.\" oder „Folglich liegt kein Anspruch vor.\" Das Ergebnis ist eine abschließende, klare Aussage."
+    },
+    {
+      "kind": "mc",
+      "id": "met-q3",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "leicht",
+      "prompt": "Welcher Satz ist ein korrekt formulierter Obersatz?",
+      "options": [
+        "„A hat gegen B einen Anspruch aus § 433 Abs. 1 BGB.\"",
+        "„Fraglich ist, ob A gegen B einen Anspruch aus § 433 Abs. 1 BGB hat.\"",
+        "„Gem. § 433 Abs. 1 BGB hat A einen Anspruch.\"",
+        "„Somit hat A gegen B einen Anspruch aus § 433 Abs. 1 BGB.\""
+      ],
+      "correct": [1],
+      "explanation": "Nur Option B ist ein Obersatz: Er formuliert eine offene Prüfungsfrage mit „Fraglich ist\". Die anderen Optionen formulieren das Ergebnis direkt (Urteilsstil) oder schließen mit „Somit\" ab (das ist ein Ergebnis-Signal)."
+    },
+    {
+      "kind": "mc",
+      "id": "met-q4",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "mittel",
+      "prompt": "Was gehört in die Definition des Gutachtenstils?",
+      "options": [
+        "Die konkreten Tatsachen des Sachverhalts",
+        "Die abstrakten, allgemeinen Voraussetzungen der Rechtsnorm, mit Nennung der einschlägigen §§",
+        "Das Ergebnis der Prüfung",
+        "Die Zusammenfassung aus Sachverhalt und Rechtsnorm"
+      ],
+      "correct": [1],
+      "explanation": "Die Definition enthält ausschließlich die abstrakten Voraussetzungen – was das Gesetz generell verlangt, unabhängig vom Fall. Der konkrete Sachverhalt gehört erst in die Subsumtion (Schritt 3). Die einschlägige Norm wird zitiert."
+    },
+    {
+      "kind": "truefalse",
+      "id": "met-q5",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "mittel",
+      "prompt": "Im Gutachtenstil kann der Obersatz unmittelbar mit dem nächsten Obersatz (Unterpunkt) fortgeführt werden, ohne Subsumtion und Ergebnis für den übergeordneten Punkt.",
+      "answer": true,
+      "explanation": "Ja, das ist die sogenannte Verschachtelung. Im längeren Gutachten bleibt der übergeordnete Obersatz ohne Subsumtion stehen und wird durch Unterpunkte entfaltet. Erst die Unterpunkte schließen mit Subsumtion und Zwischenergebnis ab."
+    },
+    {
+      "kind": "mc",
+      "id": "met-q6",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "mittel",
+      "prompt": "Was ist die Aufgabe der Subsumtion?",
+      "options": [
+        "Die allgemeinen Voraussetzungen der Rechtsnorm nennen",
+        "Den konkreten Sachverhalt mit den abstrakten Voraussetzungen der Definition vergleichen und bewerten",
+        "Das Ergebnis in einem Satz zusammenfassen",
+        "Die Prüfungsfrage als Hypothese formulieren"
+      ],
+      "correct": [1],
+      "explanation": "Die Subsumtion (Schritt 3) vergleicht den konkreten Sachverhalt mit den in der Definition herausgearbeiteten abstrakten Voraussetzungen. Sie bewertet, ob die Tatsachen des Falls die rechtlichen Merkmale erfüllen oder nicht."
+    },
+    {
+      "kind": "mc",
+      "id": "met-q7",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "mittel",
+      "prompt": "Welche Signalwörter sind typisch für das Ergebnis im Gutachtenstil? (Mehrfachauswahl möglich)",
+      "options": [
+        "„somit\"",
+        "„könnte\"",
+        "„folglich\"",
+        "„fraglich ist\""
+      ],
+      "correct": [0, 2],
+      "multiple": true,
+      "explanation": "„Somit\" und „folglich\" (sowie „mithin\", „damit\") sind Ergebnis-Signalwörter. „Könnte\" und „fraglich ist\" gehören in den Obersatz und signalisieren, dass noch kein Ergebnis vorliegt."
+    },
+    {
+      "kind": "truefalse",
+      "id": "met-q8",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "mittel",
+      "prompt": "Der Urteilsstil ist in der Privatrecht-Klausur für unproblematische Punkte ausdrücklich erlaubt.",
+      "answer": false,
+      "explanation": "Nein. Laut Skript (Dr. von Zastrow) wird der Urteilsstil in dieser Veranstaltung NICHT erwartet – auch nicht für unproblematische Punkte. Stattdessen wird empfohlen, unproblematische Aspekte als zusammengefassten Prüfungspunkt im Gutachtenstil abzuhandeln."
+    },
+    {
+      "kind": "mc",
+      "id": "met-q9",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "schwer",
+      "prompt": "Was versteht man unter einem \"Hilfsgutachten\" und wann setzt man es ein?",
+      "options": [
+        "Ein Gutachten, das von einem Hilfswissenschaftler erstellt wird",
+        "Ein zweites Gutachten, das man schreibt, wenn man unsicher ist",
+        "Die Fortführung der Prüfung mit „hilfsweise\" im Obersatz, wenn ein Prüfungspunkt negativ ausgefallen ist, aber weitere Punkte geprüft werden sollen",
+        "Eine Zusammenfassung aller Zwischenergebnisse am Ende"
+      ],
+      "correct": [2],
+      "explanation": "Ein Hilfsgutachten (gekennzeichnet durch „hilfsweise\" im Obersatz) wird eingesetzt, wenn eine Voraussetzung fehlt, aber der Sachverhalt oder Bearbeitungshinweis Anlass gibt, weitere Punkte zu prüfen. Für die weitere Prüfung wird unterstellt, dass der fehlgeschlagene Punkt bejaht worden wäre."
+    },
+    {
+      "kind": "freetext",
+      "id": "met-q10",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "schwer",
+      "prompt": "Schreibe einen vollständigen Gutachtenstil für folgende Frage: \"Ist K (8 Jahre) beschränkt geschäftsfähig gem. § 106 BGB?\"",
+      "sampleAnswer": "K könnte beschränkt geschäftsfähig sein. Gem. § 106 BGB ist eine Person beschränkt geschäftsfähig, wenn sie minderjährig ist, d. h. das achtzehnte Lebensjahr noch nicht (§ 2 BGB), jedoch das siebte Lebensjahr vollendet hat. K ist 8 Jahre alt und damit noch nicht volljährig. Gleichzeitig hat er das siebte Lebensjahr vollendet. K ist somit beschränkt geschäftsfähig.",
+      "keywords": ["beschränkt geschäftsfähig", "§ 106 BGB", "minderjährig", "siebte", "achtzehnte", "somit"],
+      "explanation": "Ein korrektes Kurzgutachten enthält alle vier Schritte: Obersatz mit „könnte\", Definition mit § 106 BGB und den Altersgrenzen (7–18 Jahre), Subsumtion mit den konkreten Altersangaben, Ergebnis ohne Konjunktiv mit „somit\"."
+    },
+    {
+      "kind": "mc",
+      "id": "met-q11",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "difficulty": "schwer",
+      "prompt": "Welche Aussage über die Lösungsskizze ist KORREKT?",
+      "options": [
+        "Die Lösungsskizze wird als Teil der Klausur abgegeben und bewertet",
+        "Die Lösungsskizze sollte maximal ein Drittel der Bearbeitungszeit beanspruchen",
+        "Die Lösungsskizze muss vollständig ausformuliert sein",
+        "Auf eine Lösungsskizze sollte verzichtet werden, um Zeit zu sparen"
+      ],
+      "correct": [1],
+      "explanation": "Die Lösungsskizze ist ein privates Hilfsmittel und wird nicht bewertet (Option A falsch). Sie besteht aus Stichworten, nicht aus ausformulierten Sätzen (Option C falsch). Sie hilft, Struktur und Schwerpunkte zu erkennen, und sollte max. ein Drittel der Zeit beanspruchen (Option B korrekt). Der Verzicht kostet in der Regel Struktur und Vollständigkeit (Option D falsch)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "met-ex-1",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "label": "Vertiefungsfall 1.3 Abwandlung 3 – Der 6-jährige A und das Eis",
+      "source": "PR-WIWI-Skript-Methodikteil S. 12–13 (Musterbeispiel)",
+      "type": "fall",
+      "difficulty": "leicht",
+      "hasOfficialSolution": true,
+      "prompt": "Der 6-jährige A hat auf dem Nachhauseweg von der Schule ein 2-Eurostück gefunden. Als er am Kiosk des B vorbeikommt, sieht er im Schaufenster ein großes Schild „Eis für 1 €\". Da es ein heißer Sommertag ist, geht A in den Kiosk und kauft bei B für 1 Euro ein Eis. Neben dem Eis erhält A 1 Euro Wechselgeld.\n\n**Frage:** Konnte A das Eis wirksam kaufen?",
+      "hint": "Prüfe zunächst: Wie alt ist A? Welche Altersgrenze ist für die Geschäftsfähigkeit relevant? Schau in § 104 Nr. 1 BGB und § 105 Abs. 1 BGB.",
+      "solution": "**Gutachten:**\n\n**Obersatz:** Fraglich ist, ob A das Eis wirksam kaufen konnte.\n\n**Definition:** Eine Erklärung eines Geschäftsunfähigen, d. h. gem. § 104 Nr. 1 BGB bis zu seinem vollendeten siebten Lebensjahr, ist gem. § 105 Abs. 1 BGB nichtig und unwirksam.\n\n**Subsumtion:** A ist 6 Jahre alt und damit geschäftsunfähig. Seine Erklärung, das Eis kaufen zu wollen, ist damit nichtig.\n\n**Ergebnis:** Folglich konnte A das Eis nicht wirksam kaufen.\n\n---\n\n**Erläuterung zum Gutachten:**\n\n- **Obersatz**: Die Frage „Konnte A das Eis wirksam kaufen?\" wird als Hypothese formuliert.\n- **Definition**: § 104 Nr. 1 BGB definiert die Geschäftsunfähigkeit (bis zum vollendeten 7. Lebensjahr). § 105 Abs. 1 BGB bestimmt die Rechtsfolge (Nichtigkeit). Beide §§ werden zitiert.\n- **Subsumtion**: A ist 6 Jahre alt → er hat das 7. Lebensjahr noch nicht vollendet → er ist geschäftsunfähig → seine Erklärung ist nichtig. Kein Sachverhaltsdetail mehr als nötig.\n- **Ergebnis**: „Folglich\" leitet das Ergebnis ein. Kein Konjunktiv. Die Frage aus dem Obersatz wird direkt beantwortet."
+    },
+    {
+      "id": "met-ex-2",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "label": "Besprechungsfall 1.3 – Der Minderjährige und die neue Zeitschrift (Frage 1)",
+      "source": "PR-WIWI-Skript-Methodikteil S. 12, 17 (Musterbeispiel mit Verschachtelung)",
+      "type": "fall",
+      "difficulty": "mittel",
+      "hasOfficialSolution": true,
+      "prompt": "Der 11-jährige A möchte sich mit einem 2-Euro-Stück, das ihm seine Eltern gegeben haben, die aktuelle Ausgabe seiner Lieblingszeitschrift kaufen. Die Eltern haben ihm das Geld ausdrücklich für diesen Zweck gegeben.\n\n**Frage:** Konnte A die Willenserklärung, die Zeitschrift kaufen zu wollen, wirksam abgeben?",
+      "hint": "Prüfe zunächst: Wie alt ist A genau, und was bedeutet das für seine Geschäftsfähigkeit? Schau in §§ 106, 107, 183 BGB. Beachte die Verschachtelung: Der Hauptobersatz wird in drei Unterpunkte aufgeteilt.",
+      "solution": "**Gutachten:**\n\n**Obersatz (Hauptfrage):** Fraglich ist, ob A die Willenserklärung, die Zeitschrift kaufen zu wollen, wirksam abgeben konnte. Die Willenserklärung eines beschränkt Geschäftsfähigen ist gem. § 106 BGB unter anderem gem. § 107 BGB wirksam, wenn er durch diese entweder lediglich einen rechtlichen Vorteil erlangt oder seine gesetzlichen Vertreter eingewilligt haben.\n\n**1. Unterpunkt – A könnte beschränkt geschäftsfähig sein.**\n\nDefinition: Eine Person ist gem. § 106 BGB beschränkt geschäftsfähig, wenn sie minderjährig ist, d. h. das achtzehnte Lebensjahr noch nicht (§ 2 BGB), jedoch das siebte Lebensjahr vollendet hat.\n\nSubsumtion: A ist elf Jahre alt und damit noch nicht volljährig, sondern minderjährig. Gleichzeitig hat er das siebte Lebensjahr vollendet.\n\nZwischenergebnis: A ist mithin beschränkt geschäftsfähig.\n\n**2. Unterpunkt – Die Erklärung könnte lediglich rechtlich vorteilhaft sein.**\n\nDefinition: Eine Erklärung ist nur rechtlich vorteilhaft, wenn durch sie nicht gleichzeitig Pflichten eingegangen werden.\n\nSubsumtion: Ein Kaufvertrag schafft die Pflicht, den Kaufpreis zahlen zu müssen (§ 433 Abs. 2 BGB). Die Erklärung des A, die Zeitschrift kaufen zu wollen, verpflichtet ihn damit zur Kaufpreiszahlung.\n\nZwischenergebnis: Sie ist nicht lediglich rechtlich vorteilhaft.\n\n**3. Unterpunkt – Die Erklärung könnte jedoch durch Einwilligung seiner Eltern wirksam sein.**\n\nDefinition: Gesetzliche Vertreter eines Minderjährigen sind gem. § 1629 Abs. 1 S. 1 BGB die Eltern. Eine Einwilligung ist gem. § 183 S. 1 BGB die vorherige Zustimmung, die zu einem konkreten Rechtsgeschäft erteilt werden muss.\n\nSubsumtion: Die Eltern des A haben ihm als seine gesetzlichen Vertreter das 2-Eurostück gegeben, damit er sich die aktuelle Ausgabe seiner Lieblingszeitschrift kaufen geht. Diese vorher erteilte Zustimmung richtet sich damit auf ein konkretes Rechtsgeschäft.\n\nErgebnis: Sie haben somit eingewilligt. A konnte damit die Willenserklärung wirksam abgeben.\n\n---\n\n**Struktur-Erläuterung:**\n\nDieses Gutachten zeigt Verschachtelung: Der Hauptobersatz nennt die Hauptfrage und gibt bereits die Definition (§§ 106, 107 BGB). Dann folgen drei Unterpunkte, jeder mit eigenem Obersatz, Definition, Subsumtion und Zwischenergebnis. Das letzte Zwischenergebnis beantwortet gleichzeitig die Hauptfrage."
+    },
+    {
+      "id": "met-ex-3",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "label": "Besprechungsfall 3.7 – Der Stand auf dem Wochenmarkt (Anfechtung)",
+      "source": "PR-WIWI-Skript-Methodikteil S. 14–15 (Lösungsskizzen-Beispiel)",
+      "type": "fall",
+      "difficulty": "schwer",
+      "hasOfficialSolution": true,
+      "prompt": "B betreibt mit ihrem Mann M zusammen eine Bäckerei und verkauft ihr Brot auf dem Wochenmarkt. Hierzu haben sie bei der Stadt S einen Marktstand auf dem Wochenmarkt gemietet. In dem Angebot hatte der Bürgermeister sich jedoch verschrieben und einen Stand mit 5,2 statt einen mit 2,5 Frontmeter vermietet. Als er dies bemerkt, hat er zunächst keine Zeit und erklärt erst zwei Wochen später der B, dass er sich verschrieben habe und den Vertrag rückgängig machen möchte. B ist hiermit nicht einverstanden und fordert die Stadt auf, den Vertrag weiterhin zu erfüllen.\n\n**Frage:** Konnte die Stadt S das Rechtsgeschäft wirksam anfechten?",
+      "hint": "Prüfe die sechs Voraussetzungen der Anfechtung: (1) Anfechtbares Rechtsgeschäft, (2) Anfechtungsgrund (welcher Irrtum?), (3) Kausalität, (4) Anfechtungserklärung und -gegner, (5) Anfechtungsfrist, (6) Rechtsfolge. Entscheidend ist: Was bedeutet „unverzüglich\" bei § 121 BGB?",
+      "solution": "**Lösungsskizze (Kurzform):**\n\n```\n1. Anfechtbares Rechtsgeschäft → Angebot = Willenserklärung (+)\n2. Anfechtungsgrund § 119 I Alt. 2 BGB (Erklärungsirrtum)\n   → Bürgermeister hat 5,2 m erklärt, aber 2,5 m gewollt: vertippt (+)\n3. Kausalität → sonst nicht abgegeben (+)\n4. Anfechtungserklärung § 143 I BGB → erklärt, nicht mehr gebunden zu sein (+)\n5. Anfechtungsfrist § 121 BGB → unverzüglich? → zwei Wochen später (-)\n6. Rechtsfolge § 142 I BGB → nichtig ex tunc (-)\n```\n\n---\n\n**Gutachten:**\n\n**Obersatz:** Fraglich ist, ob die Stadt S das Angebot auf Abschluss des Mietvertrages wirksam anfechten konnte. Gem. §§ 119 Abs. 1, 121, 142, 143 BGB setzt eine wirksame Anfechtung ein anfechtbares Rechtsgeschäft, einen Anfechtungsgrund, Kausalität, eine Anfechtungserklärung gegenüber dem richtigen Anfechtungsgegner sowie die Einhaltung der Anfechtungsfrist voraus.\n\n**1. Anfechtbares Rechtsgeschäft**\n\nDas Angebot des Bürgermeisters stellt eine Willenserklärung der Stadt S dar, durch die ein Mietvertrag herbeigeführt werden sollte.\n\nZwischenergebnis: Ein anfechtbares Rechtsgeschäft liegt vor (+).\n\n**2. Anfechtungsgrund – Erklärungsirrtum gem. § 119 Abs. 1 Alt. 2 BGB**\n\nDefinition: Ein Erklärungsirrtum liegt vor, wenn der Erklärende sich bei der Abgabe der Willenserklärung im Ausdruck vergriffen hat, d. h. etwas anderes erklärt hat, als er erklären wollte.\n\nSubsumtion: Der Bürgermeister wollte einen Stand mit 2,5 Frontmeter anbieten, hat aber 5,2 Frontmeter in das Angebot geschrieben. Er hat sich vertippt und damit etwas anderes erklärt, als er wollte.\n\nZwischenergebnis: Ein Erklärungsirrtum gem. § 119 Abs. 1 Alt. 2 BGB liegt vor (+).\n\n**3. Kausalität**\n\nDefinition: Der Irrtum muss kausal für die Abgabe der Erklärung gewesen sein, d. h. bei Kenntnis der Sachlage und vernünftiger Würdigung des Falles hätte der Erklärende die Willenserklärung nicht abgegeben.\n\nSubsumtion: Der Bürgermeister hätte das Angebot mit 5,2 Frontmeter bei Kenntnis des Fehlers nicht abgegeben.\n\nZwischenergebnis: Kausalität liegt vor (+).\n\n**4. Anfechtungserklärung und Anfechtungsgegner gem. § 143 Abs. 1 BGB**\n\nDefinition: Gem. § 143 Abs. 1 BGB muss die Anfechtung dem Anfechtungsgegner gegenüber erklärt werden. Bei einem Vertrag ist dies der Vertragspartner.\n\nSubsumtion: Der Bürgermeister hat gegenüber B erklärt, er habe sich verschrieben und möchte den Vertrag rückgängig machen. Diese Erklärung richtete sich an B als Vertragspartnerin.\n\nZwischenergebnis: Eine wirksame Anfechtungserklärung gegenüber dem richtigen Anfechtungsgegner liegt vor (+).\n\n**5. Anfechtungsfrist gem. § 121 BGB**\n\nDefinition: Bei einem Irrtum nach § 119 BGB muss die Anfechtung gem. § 121 Abs. 1 BGB unverzüglich, d. h. ohne schuldhaftes Zögern (§ 121 Abs. 1 S. 1 BGB i. V. m. § 276 BGB), nach Kenntniserlangung vom Anfechtungsgrund erfolgen.\n\nSubsumtion: Der Bürgermeister hat den Fehler bemerkt, aber zunächst nichts unternommen und erst zwei Wochen später die Anfechtung erklärt. Zwei Wochen stellen kein unverzügliches Handeln dar, da keine außergewöhnlichen Umstände erkennbar sind, die diesen Zeitraum rechtfertigen würden.\n\nZwischenergebnis: Die Anfechtungsfrist wurde nicht gewahrt (-).\n\n**Ergebnis:** Da die Anfechtungsfrist gem. § 121 Abs. 1 BGB nicht eingehalten wurde, konnte die Stadt S das Rechtsgeschäft nicht wirksam anfechten. B kann die Stadt S auf Erfüllung des Mietvertrages in Anspruch nehmen.\n\n---\n\n**Hinweis zur Rechtsfolge:** Hätte die Anfechtung alle Voraussetzungen erfüllt, wäre das Rechtsgeschäft gem. § 142 Abs. 1 BGB von Anfang an (ex tunc) nichtig gewesen. Da die Anfechtungsfrist scheitert, bleibt der Vertrag wirksam."
+    }
+  ]
+}
