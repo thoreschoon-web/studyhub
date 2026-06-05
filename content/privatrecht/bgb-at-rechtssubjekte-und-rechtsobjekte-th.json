@@ -240,6 +240,72 @@
       "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
       "front": "Wie handelt eine GmbH nach außen und auf welcher Norm beruht dies?",
       "back": "Die GmbH wird durch ihre Geschäftsführer vertreten (§ 35 GmbHG). Für deliktisches Handeln der Organwalter haftet die GmbH nach § 31 BGB (analog). Im Prozess wird sie durch ihre gesetzlichen Vertreter vertreten (§ 51 ZPO)."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z1",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Wann beginnt die Rechtsfähigkeit natürlicher Personen?",
+      "back": "Mit Vollendung der Geburt, § 1 BGB."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z2",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Geschäftsunfähigkeit - Voraussetzungen (§ 104 BGB)",
+      "back": "Kinder unter 7 Jahren ODER dauerhafte krankhafte Storung der Geiststatigkeit. Rechtsfolge: WE nichtig (§ 105 BGB)."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z3",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Beschränkte Geschäftsfähigkeit - Altersgruppe?",
+      "back": "7 bis unter 18 Jahre, §§ 106 ff. BGB."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z4",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Wann ist ein Minderjährigengeschäft ohne Einwilligung wirksam?",
+      "back": "Wenn es lediglich rechtlich vorteilhaft ist, § 107 BGB (kein rechtlicher Nachteil)."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z5",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Taschengeldparagraf § 110 BGB",
+      "back": "Vertrag des Minderj. wirksam, wenn Leistung mit Mitteln bewirkt wird, die der Minderj. zu diesem Zweck oder zur freien Verfugung uberlassen wurden."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z6",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Genehmigung vs. Einwilligung bei Minderjährigen",
+      "back": "Einwilligung = vorherige Zustimmung (§ 183 BGB). Genehmigung = nachtragliche Zustimmung (§ 184 BGB, wirkt ex tunc). Ohne: schwebend unwirksam (§ 108 BGB)."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z7",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Deliktsfähigkeit - Altersgrenzen (§§ 827, 828 BGB)",
+      "back": "Unter 7 J.: deliktsunfahig. 7-10 J.: nicht haftbar bei Kfz-/Bahn-/Schienenunfall (§ 828 II BGB). Ab 7 J.: haftbar, wenn Einsichtsfahigkeit vorhanden (§ 828 III BGB)."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z8",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Wesentliche Bestandteile - Rechtsfolge (§ 93 BGB)",
+      "back": "Konnen nicht Gegenstand besonderer Rechte sein; Trennung nur mit wesent. Zerstorung/Beschadigung moglich."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z9",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Zubehör (§§ 97 f. BGB) - Definition",
+      "back": "Bewegliche Sachen, die ohne Bestandteil zu sein dem wirtsch. Zweck der Hauptsache dauerhaft zu dienen bestimmt sind (z.B. Schlusselbund zu Auto)."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z10",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Scheinbestandteil § 95 BGB",
+      "back": "Verbindung nur vorubergehend oder in Ausubung eines Rechts an fremdem Grundstuck: kein wesentl. Bestandteil."
+    },
+    {
+      "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z11",
+      "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+      "front": "Zurechnung bei juristischen Personen - § 31 BGB",
+      "back": "Jurist. Person haftet fur unerlaubte Handlungen ihrer Organe (verfassungsm. berufene Vertreter) in Ausubung der ihnen zustehenden Verrichtungen."
     }
   ],
   "quiz": [
@@ -255,7 +321,9 @@
         "Mit Vollendung des 7. Lebensjahres",
         "Mit Vollendung des 18. Lebensjahres"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "§ 1 BGB bestimmt ausdrücklich: Die Rechtsfähigkeit des Menschen beginnt mit der Vollendung der Geburt. Davor (pränatale Phase) gibt es nur einzelne Sonderregelungen."
     },
     {
@@ -279,7 +347,9 @@
         "Ja, weil die Eltern durch Hingabe des Geldes eingewilligt haben (§ 107 BGB)",
         "Ja, weil der Taschengeldparagraf (§ 110 BGB) greift"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Die Eltern haben A das 2-Euro-Stück ausdrücklich zum Kauf der Zeitschrift gegeben — damit haben sie als gesetzliche Vertreter ihre Einwilligung (vorherige Zustimmung, § 183 BGB) zu genau diesem konkreten Rechtsgeschäft erteilt. Der Kaufvertrag ist wirksam gemäß § 107 BGB. Option 4 (§ 110 BGB) wäre nur einschlägig, wenn das Geld zur freien Verfügung überlassen wurde — hier war es zweckgebunden, was jedoch ebenfalls § 110 BGB erfüllt. Die herrschende Meinung stützt die Wirksamkeit hier primär auf die in der Geldübergabe liegende Einwilligung (§ 107 BGB)."
     },
     {
@@ -303,7 +373,9 @@
         "Eine GmbH ist nie deliktsfähig, da sie keine natürliche Person ist",
         "Die Stadt Hannover ist eine juristische Person des Privatrechts"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "§ 13 GmbHG bestimmt: Die GmbH als solche hat erst mit der Eintragung ins Handelsregister Rechtsfähigkeit. Vorher besteht eine 'Vor-GmbH'. Die Stadt Hannover ist eine Körperschaft des öffentlichen Rechts (§ 2 NKomVG), keine juristische Person des Privatrechts. Deliktshaftung ist über § 31 BGB möglich."
     },
     {
@@ -318,7 +390,9 @@
         "Scheinbestandteil (§ 95 BGB) — bleibt eigenständige Sache",
         "Frucht des Grundstücks (§ 99 BGB)"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der Aufzug wird zur Herstellung des Gebäudes eingefügt (§ 94 Abs. 2 BGB) und ist dauerhaft eingebaut — er ist wesentlicher Bestandteil. § 95 BGB (Scheinbestandteil) greift nur bei vorübergehendem Zweck oder Ausübung eines Rechts an fremdem Grundstück. Da D Eigentümer des Hauses ist, liegt kein solcher Fall vor."
     },
     {
@@ -342,7 +416,9 @@
         "Die Fertiggarage ist Zubehör des Grundstücks und der Schlüssel ein wesentlicher Bestandteil der Garage",
         "Der Schlüssel gehört F, weil er ihn als Geschenk erhalten hat und Schenkungen formlos wirksam sind"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Fertiggarage wird in Ausübung eines Rechts (Mietrecht) auf fremdem Grundstück aufgestellt — sie ist gem. § 95 BGB Scheinbestandteil und bleibt Eigentum des M. Der Autoschlüssel ist Zubehör der Garage (§ 97 BGB): bewegliche Sache, dient dem wirtschaftlichen Zweck der Garage, räumliches Verhältnis. Als Zubehör gehört er M. Eine wirksame Schenkung des Schlüssels an F würde eine Einigung und Übergabe voraussetzen — nach dem Sachverhalt ist dies noch nicht erfolgt."
     },
     {
@@ -352,7 +428,13 @@
       "difficulty": "schwer",
       "prompt": "Erklären Sie in 3–5 Sätzen, was unter dem Taschengeldparagrafen (§ 110 BGB) zu verstehen ist und warum ein Ratenkauf eines Minderjährigen in der Regel nicht darunter fällt.",
       "sampleAnswer": "§ 110 BGB ermöglicht es Minderjährigen, Verträge wirksam zu schließen, wenn sie die vertragsgemäße Leistung vollständig mit Mitteln bewirken, die ihnen zu diesem Zweck oder zur freien Verfügung überlassen wurden. 'Vollständig bewirkt' bedeutet, dass die gesamte geschuldete Leistung (Kaufpreis) aus diesen Mitteln erbracht sein muss. Bei einem Ratenkauf schuldet der Minderjährige den Gesamtpreis in Teilbeträgen. Solange er nicht alle Raten bezahlt hat, ist die Leistung nicht vollständig bewirkt. Da Taschengeld in aller Regel nicht für mehrere zukünftige Ratenzahlungen ausreicht und der Minderjährige verpflichtet ist, zukünftige Raten zu zahlen, greift § 110 BGB nicht — der Vertrag bleibt schwebend unwirksam (§ 108 BGB).",
-      "keywords": ["vollständig bewirkt", "freie Verfügung", "Ratenkauf", "schwebend unwirksam", "§ 110 BGB"],
+      "keywords": [
+        "vollständig bewirkt",
+        "freie Verfügung",
+        "Ratenkauf",
+        "schwebend unwirksam",
+        "§ 110 BGB"
+      ],
       "explanation": "Das Merkmal 'vollständig bewirkt' in § 110 BGB ist der entscheidende Punkt: Der gesamte Kaufpreis muss aus den erlaubten Mitteln geleistet sein, bevor der Vertrag als wirksam gilt. Bei Raten ist das erst mit der letzten Rate der Fall — und ob das Taschengeld dafür reicht, ist ungewiss."
     },
     {
@@ -367,7 +449,9 @@
         "Die Pflicht, eine Leistung zu erbringen",
         "Ein Gestaltungsrecht wie die Anfechtung"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "§ 194 Abs. 1 BGB definiert den Anspruch als 'das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen'. Die Klagemöglichkeit ist eine prozessuale Konsequenz, aber nicht die Definition des Anspruchs selbst."
     },
     {
@@ -391,7 +475,10 @@
         "Eingetragener Verein (e.V.)",
         "Land Niedersachsen"
       ],
-      "correct": [1, 3],
+      "correct": [
+        1,
+        3
+      ],
       "multiple": true,
       "explanation": "Die Stadt Hannover und das Land Niedersachsen sind Körperschaften des öffentlichen Rechts — juristische Personen des öffentlichen Rechts. Eine GmbH und ein e.V. sind juristische Personen des Privatrechts."
     }

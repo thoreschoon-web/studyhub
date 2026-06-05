@@ -28,11 +28,27 @@
           "kind": "table",
           "id": "pe-massnahmen-tabelle",
           "title": "PE-Maßnahmen nach Becker (2005)",
-          "headers": ["Kategorie", "Beispiele", "PE-Sinn"],
+          "headers": [
+            "Kategorie",
+            "Beispiele",
+            "PE-Sinn"
+          ],
           "rows": [
-            ["Bildung", "Berufsausbildung, Weiterbildung, Führungsbildung, Anlernung, Umschulung", "PE im engen Sinn"],
-            ["Förderung", "Training, Arbeitsplatzwechsel, Auslandseinsatz, Karriereplanung, Coaching, Mentoring", "PE im erweiterten Sinn (Bildung + Förderung)"],
-            ["Organisationsentwicklung (OE)", "Teamentwicklung, Projektarbeit, Gruppenarbeit, sozio-technische Systemgestaltung", "PE im weiteren Sinn (Bildung + Förderung + OE)"]
+            [
+              "Bildung",
+              "Berufsausbildung, Weiterbildung, Führungsbildung, Anlernung, Umschulung",
+              "PE im engen Sinn"
+            ],
+            [
+              "Förderung",
+              "Training, Arbeitsplatzwechsel, Auslandseinsatz, Karriereplanung, Coaching, Mentoring",
+              "PE im erweiterten Sinn (Bildung + Förderung)"
+            ],
+            [
+              "Organisationsentwicklung (OE)",
+              "Teamentwicklung, Projektarbeit, Gruppenarbeit, sozio-technische Systemgestaltung",
+              "PE im weiteren Sinn (Bildung + Förderung + OE)"
+            ]
           ]
         }
       ]
@@ -105,13 +121,43 @@
           "kind": "table",
           "id": "kirkpatrick-tabelle",
           "title": "Kirkpatrick-Modell + ROI nach Phillips",
-          "headers": ["Ebene", "Was wird gemessen?", "Wie?", "Schwierigkeit"],
+          "headers": [
+            "Ebene",
+            "Was wird gemessen?",
+            "Wie?",
+            "Schwierigkeit"
+          ],
           "rows": [
-            ["1 — Reaktion", "Zufriedenheit der Teilnehmenden", "Feedbackbogen", "Sehr einfach"],
-            ["2 — Lernen", "Wissenszuwachs, neue Fähigkeiten", "Test vor/nach Training", "Einfach"],
-            ["3 — Verhalten", "Transfer: Anwendung am Arbeitsplatz", "Beobachtung, Vorgesetztenbefragung", "Mittel"],
-            ["4 — Ergebnisse", "Produktivität, Qualität, Kosten, Fluktuation", "Unternehmens-KPIs", "Schwierig"],
-            ["5 — ROI (Phillips)", "Finanzieller Rückfluss der Investition", "ROI-Formel", "Sehr schwierig"]
+            [
+              "1 — Reaktion",
+              "Zufriedenheit der Teilnehmenden",
+              "Feedbackbogen",
+              "Sehr einfach"
+            ],
+            [
+              "2 — Lernen",
+              "Wissenszuwachs, neue Fähigkeiten",
+              "Test vor/nach Training",
+              "Einfach"
+            ],
+            [
+              "3 — Verhalten",
+              "Transfer: Anwendung am Arbeitsplatz",
+              "Beobachtung, Vorgesetztenbefragung",
+              "Mittel"
+            ],
+            [
+              "4 — Ergebnisse",
+              "Produktivität, Qualität, Kosten, Fluktuation",
+              "Unternehmens-KPIs",
+              "Schwierig"
+            ],
+            [
+              "5 — ROI (Phillips)",
+              "Finanzieller Rückfluss der Investition",
+              "ROI-Formel",
+              "Sehr schwierig"
+            ]
           ]
         }
       ]
@@ -137,13 +183,37 @@
           "kind": "table",
           "id": "ki-pe-tabelle",
           "title": "KI-Anwendungsfelder in der Personalentwicklung",
-          "headers": ["KI-Format", "Beschreibung", "Praxisbeispiel"],
+          "headers": [
+            "KI-Format",
+            "Beschreibung",
+            "Praxisbeispiel"
+          ],
           "rows": [
-            ["VR-Training mit KI", "Simulation realer Situationen in Virtual Reality; KI generiert variable Szenarien", "Lufthansa: Konflikttraining Kabinenpersonal"],
-            ["KI-Avatar / digitaler Trainer", "Mitarbeitende üben mit realistischem Avatar; personalisiertes Feedback", "Jungheinrich: Jahresgespräch-Training"],
-            ["Learning Intelligence Assistant", "CustomGPT sucht passende Lernangebote, erstellt individuelle Lernpläne", "Otto Group: LIA für 36.000 Mitarbeitende"],
-            ["Skill-Mapping", "KI analysiert Kompetenzlücken und empfiehlt passende Weiterbildungen", "Haufe Akademie: Automatisiertes Skill-Mapping"],
-            ["Micro-Learning", "KI zerlegt Training in kleine, zeitlich flexible Lerneinheiten", "Jungheinrich: Training für neue Lagerfahrzeuge"]
+            [
+              "VR-Training mit KI",
+              "Simulation realer Situationen in Virtual Reality; KI generiert variable Szenarien",
+              "Lufthansa: Konflikttraining Kabinenpersonal"
+            ],
+            [
+              "KI-Avatar / digitaler Trainer",
+              "Mitarbeitende üben mit realistischem Avatar; personalisiertes Feedback",
+              "Jungheinrich: Jahresgespräch-Training"
+            ],
+            [
+              "Learning Intelligence Assistant",
+              "CustomGPT sucht passende Lernangebote, erstellt individuelle Lernpläne",
+              "Otto Group: LIA für 36.000 Mitarbeitende"
+            ],
+            [
+              "Skill-Mapping",
+              "KI analysiert Kompetenzlücken und empfiehlt passende Weiterbildungen",
+              "Haufe Akademie: Automatisiertes Skill-Mapping"
+            ],
+            [
+              "Micro-Learning",
+              "KI zerlegt Training in kleine, zeitlich flexible Lerneinheiten",
+              "Jungheinrich: Training für neue Lagerfahrzeuge"
+            ]
           ]
         }
       ]
@@ -223,6 +293,36 @@
       "topicId": "hr-personal-und-karriereentwicklung",
       "front": "Was ist der PE-Prozess und seine vier Phasen?",
       "back": "1. **Bedarfsanalyse** (Organisations-, Aufgaben-, Personenanalyse → Leistungslücke identifizieren) 2. **Design** (Ziele, Methoden, Zeitplan) 3. **Implementierung** (Durchführung) 4. **Evaluation** (Kirkpatrick-Modell). Der Prozess ist ein Kreislauf."
+    },
+    {
+      "id": "hr-personal-und-karriereentwicklung-z1",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "PE-Maßnahmen nach Becker – Systematik",
+      "back": "Bildung, Förderung, Organisationsentwicklung. Nach Zeitpunkt: Into-the-job / On-the-job / Near-the-job / Off-the-job / Out-of-the-job."
+    },
+    {
+      "id": "hr-personal-und-karriereentwicklung-z2",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Kirkpatrick-Modell – 4 Ebenen",
+      "back": "1. Reaktion (Zufriedenheit) 2. Lernen (Wissenszuwachs) 3. Verhalten (Transferleistung am Arbeitsplatz) 4. Ergebnisse (Unternehmensnutzen). 5. Ebene: ROI nach Phillips."
+    },
+    {
+      "id": "hr-personal-und-karriereentwicklung-z3",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "ROI-Formel (Personalentwicklung, Phillips)",
+      "back": "ROI = (Programmnutzen − Programmkosten) / Programmkosten × 100"
+    },
+    {
+      "id": "hr-personal-und-karriereentwicklung-z4",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Boundaryless Career / Protean Career",
+      "back": "Boundaryless: Karriere über Unternehmensgrenzen hinweg. Protean: selbstgesteuert, wertegeleitet, flexibel – nicht mehr nur vertikal."
+    },
+    {
+      "id": "hr-personal-und-karriereentwicklung-z5",
+      "topicId": "hr-personal-und-karriereentwicklung",
+      "front": "Schein-Karrierekegel – 3 Bewegungsrichtungen",
+      "back": "Vertikal (Aufstieg), Horizontal (Funktionswechsel), Radial/Zentripetal (Zugang zum Machtzentrum)."
     }
   ],
   "quiz": [
@@ -238,7 +338,9 @@
         "E-Learning-Kurs auf einer Online-Plattform",
         "Universitätsstudium neben dem Beruf"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Job Rotation findet direkt am Arbeitsplatz statt — die Mitarbeitenden wechseln zwischen Abteilungen und lernen dabei 'on the job'. Seminare, E-Learning und Studium sind 'off the job'."
     },
     {
@@ -253,7 +355,9 @@
         "Ebene 3 — Verhalten",
         "Ebene 4 — Ergebnisse"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Ebene 3 'Verhalten' misst den Transfer: Wird das im Training Gelernte am Arbeitsplatz angewendet? Das ist die kritischste Ebene, da hier PE am häufigsten scheitert."
     },
     {
@@ -277,7 +381,9 @@
         "Das Training wird in eine andere Abteilung verlegt.",
         "Mitarbeitende wechseln nach dem Training das Unternehmen."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das Transferproblem beschreibt, dass viele Mitarbeitende zwar im Seminar lernen, das Wissen aber nicht in ihren Arbeitsalltag übertragen. Dies ist das zentrale Scheitern vieler PE-Maßnahmen (Kirkpatrick-Ebene 3)."
     },
     {
@@ -301,7 +407,9 @@
         "4",
         "200%"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "ROI = (Programmnutzen − Programmkosten) / Programmkosten × 100 = (80.000 − 20.000) / 20.000 × 100 = 60.000 / 20.000 × 100 = 300%."
     },
     {
@@ -316,7 +424,9 @@
         "Wechsel zwischen verschiedenen Unternehmen der Branche",
         "Karriereunterbrechung durch ein Sabbatical"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Fachlaufbahn ist eine Alternative zur Führungslaufbahn: Mitarbeitende steigen nicht in die Hierarchie auf, werden aber als Spezialisten tiefer und breiter qualifiziert — ohne Führungsverantwortung zu übernehmen."
     },
     {
@@ -326,7 +436,16 @@
       "difficulty": "schwer",
       "prompt": "Erklären Sie, welche Argumente für und gegen das Angebot von 'Social Freezing' durch Arbeitgeber (wie Apple und Facebook) sprechen. Beziehen Sie sich dabei auf den HR-Kontext.",
       "sampleAnswer": "Pro: Frauen erhalten mehr zeitliche Flexibilität; die biologische Uhr wird von der Karriereuhr entkoppelt. Unternehmen positionieren sich als familienfreundlicher Arbeitgeber. Contra: Das Angebot verschiebt das strukturelle Problem der Vereinbarkeit nur zeitlich, löst es nicht. Ursachen wie fehlende Kinderbetreuung und Karrierepausen-Stigma bleiben bestehen. Medizinisch: Erfolgsrate bei aufgetauten Eizellen über 40 nur 5–10%. Zudem sendet die Botschaft 'Erst Karriere, dann Kind' ein fragwürdiges Signal darüber, was von Frauen erwartet wird.",
-      "keywords": ["vereinbarkeit", "biologisch", "struktur", "karriere", "kind", "arbeitgeber", "apple", "facebook"],
+      "keywords": [
+        "vereinbarkeit",
+        "biologisch",
+        "struktur",
+        "karriere",
+        "kind",
+        "arbeitgeber",
+        "apple",
+        "facebook"
+      ],
       "explanation": "Der HR-Kontext ist zentral: Arbeitgeber, die Social Freezing bezahlen, investieren in eine Scheinlösung statt in echte Vereinbarkeit (z.B. Betriebskitas, Elternzeit für Väter, flexible Karrierewege nach der Elternzeit)."
     },
     {
@@ -341,7 +460,9 @@
         "Sie ersetzen alle anderen PE-Maßnahmen vollständig.",
         "Sie sind ausschließlich für technische Berufe geeignet."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der zentrale Vorteil: Gamification erhöht die intrinsische Motivation — Menschen lernen, weil sie Spaß haben und sich herausgefordert fühlen, nicht weil sie müssen. Beispiel: Seat-Verkäufer spielten freiwillig 1,5 Millionen Quiz-Runden."
     },
     {
@@ -365,7 +486,9 @@
         "Stärken, Schwächen, Chancen (SWOT)",
         "Trainingsdesign, Implementierung, Evaluation"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Bedarfsermittlung besteht aus: (1) Organisationsdiagnose (Ziele, Ressourcen, Klima), (2) Aufgaben- und Anforderungsanalyse (was braucht die Stelle?) und (3) Personenanalyse (kann der/die aktuelle Mitarbeitende das?). Aus der Differenz entsteht die Leistungslücke."
     },
     {
@@ -375,7 +498,16 @@
       "difficulty": "schwer",
       "prompt": "Nennen und erläutern Sie drei konkrete KI-Anwendungsfelder in der Personalentwicklung und erklären Sie, wie sie traditionelle Lernformate ergänzen oder verändern.",
       "sampleAnswer": "1. VR-Training mit KI-Avataren (z.B. Lufthansa): KI simuliert realistische Krisensituationen, die beliebig oft wiederholt werden können. Vorteil gegenüber Rollenspiel vor Kollegen: kein soziales Risiko, individuelle Anpassung. 2. Learning Intelligence Assistant (z.B. Otto Group LIA): Ein KI-Assistent sucht aus dem Weiterbildungsangebot die passenden Kurse, erstellt individuelle Lernpläne — skalierbar für tausende Mitarbeitende. 3. Skill-Mapping (z.B. Haufe Akademie): KI analysiert Kompetenzlücken aller Jobprofile und empfiehlt gezielte Weiterbildungen. Traditionelle PE-Abteilungen könnten das nie manuell für alle Positionen leisten.",
-      "keywords": ["vr", "avatar", "skill-mapping", "lernplan", "individuell", "skalierbar", "lufthansa", "otto"],
+      "keywords": [
+        "vr",
+        "avatar",
+        "skill-mapping",
+        "lernplan",
+        "individuell",
+        "skalierbar",
+        "lufthansa",
+        "otto"
+      ],
       "explanation": "KI verändert PE von standardisierten Gruppenangeboten hin zu individualisierten, skalierbaren Lösungen. Die Rolle von Trainern wandelt sich zum 'Bildungsbegleiter'."
     }
   ],

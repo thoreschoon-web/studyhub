@@ -291,6 +291,48 @@
       "topicId": "mkt-vl4-planung-des-strategischen-marketing",
       "front": "Fuer was stehen P-E-S-T-L-E in der PESTLE-Analyse?",
       "back": "P = Political, E = Economic, S = Sociocultural, T = Technological, L = Legal, E = Ecological. Die PESTLE-Analyse erfasst das Makro-Umfeld des Unternehmens."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z1",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was ist die Ansoff-Matrix?",
+      "back": "Vier Marktfeld-Strategien (Produkt × Markt):\n- **Marktdurchdringung** (bestehend/bestehend, höchste Synergien)\n- **Marktentwicklung** (bestehend/neu)\n- **Produktentwicklung** (neu/bestehend)\n- **Diversifikation** (neu/neu, größtes Risiko)\nGünstigste Reihenfolge = Z-Strategie."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z2",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Porters drei generische Wettbewerbsstrategien",
+      "back": "1. **Kostenführerschaft** (geringste Kosten im Markt)\n2. **Differenzierung** (einzigartiges Angebot, Preispremium)\n3. **Fokus/Nische** (Konzentration auf ein Segment)\nFalle: \"Stuck in the middle\" – weder Kosten- noch Differenzierungsvorteil → unterdurchschnittliche Rendite (U-Kurve)."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z3",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was ist die SWOT-Analyse?",
+      "back": "Interne **S**tärken und **W**eaknesses × externe **O**pportunities und **T**hreats → vier Strategiefelder: SO (Ausbauen), ST (Absichern), WO (Aufholen), WT (Meiden). Basis: PESTLE + Stärken/Schwächen-Profil."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z4",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Formel: Relativer Marktanteil",
+      "back": "$\\text{rel. MA} = \\dfrac{\\text{Marktanteil eigenes Produkt}}{\\text{Marktanteil größter Wettbewerber}}$\n\n$> 1{,}0$ = Marktführer. Relevant für BCG-Matrix und strategische Einordnung."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z5",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "STP-Logik – was bedeutet das?",
+      "back": "**S**egmentation → **T**argeting → **P**ositioning. Markt segmentieren (homogene Teilmärkte bilden), Zielsegmente auswählen, Produkt im Zielgruppenbewusstsein positionieren."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z6",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Was ist PESTLE?",
+      "back": "Umfeldanalyse-Framework: **P**olitical, **E**conomic, **S**ociocultural, **T**echnological, **L**egal, **E**cological. Systematische Checkliste zur Analyse der Makroumwelt eines Unternehmens."
+    },
+    {
+      "id": "mkt-vl4-planung-des-strategischen-marketing-z7",
+      "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+      "front": "Formel: Share of Wallet (SoW)",
+      "back": "$\\text{SoW} = \\left(1 - \\dfrac{\\text{Rang}}{\\text{Anzahl Unternehmen} + 1}\\right) \\cdot \\dfrac{2}{\\text{Anzahl Unternehmen}}$\n\nAnnäherung über Rang-Daten aus Kundenbefragungen."
     }
   ],
   "quiz": [

@@ -61,14 +61,49 @@
           "kind": "table",
           "id": "ac-guete",
           "title": "Güte des Assessment Centers nach Studien",
-          "headers": ["Kriterium", "Studie", "Ergebnis", "Bewertung"],
+          "headers": [
+            "Kriterium",
+            "Studie",
+            "Ergebnis",
+            "Bewertung"
+          ],
           "rows": [
-            ["Reliabilität", "Howard (1974)", "Korrelation 0,60–0,98", "+  gut"],
-            ["Progn. Validität", "Schmidt & Hunter (1998)", "r = 0,37", "+/- mittel"],
-            ["Progn. Validität", "Hardison & Sackett (2007)", "r = 0,22 (Gesamt), 0,27 (Beförderung), 0,07 (Fluktuation)", "+/- gemischt"],
-            ["Progn. Validität", "Holzenkamp et al. (2008)", "r = 0,36 (Gesamt)", "+/- mittel"],
-            ["Konstruktvalidität", "Woehr et al. (2007)", "Konvergent: 0,33 / Diskriminant: 0,54", "- problematisch"],
-            ["Inhaltsvalidität", "Dreher & Sackett (1981)", "—", "als gegeben betrachtet (Augenscheinvalidität)"]
+            [
+              "Reliabilität",
+              "Howard (1974)",
+              "Korrelation 0,60–0,98",
+              "+  gut"
+            ],
+            [
+              "Progn. Validität",
+              "Schmidt & Hunter (1998)",
+              "r = 0,37",
+              "+/- mittel"
+            ],
+            [
+              "Progn. Validität",
+              "Hardison & Sackett (2007)",
+              "r = 0,22 (Gesamt), 0,27 (Beförderung), 0,07 (Fluktuation)",
+              "+/- gemischt"
+            ],
+            [
+              "Progn. Validität",
+              "Holzenkamp et al. (2008)",
+              "r = 0,36 (Gesamt)",
+              "+/- mittel"
+            ],
+            [
+              "Konstruktvalidität",
+              "Woehr et al. (2007)",
+              "Konvergent: 0,33 / Diskriminant: 0,54",
+              "- problematisch"
+            ],
+            [
+              "Inhaltsvalidität",
+              "Dreher & Sackett (1981)",
+              "—",
+              "als gegeben betrachtet (Augenscheinvalidität)"
+            ]
           ]
         }
       ],
@@ -110,19 +145,91 @@
           "kind": "table",
           "id": "validitaet-vergleich",
           "title": "Prognostische Validität von Auswahlverfahren im Vergleich",
-          "headers": ["Auswahlverfahren", "Schmidt & Hunter (1998)", "Sackett et al. (2021)", "Veränderung", "Einordnung"],
+          "headers": [
+            "Auswahlverfahren",
+            "Schmidt & Hunter (1998)",
+            "Sackett et al. (2021)",
+            "Veränderung",
+            "Einordnung"
+          ],
           "rows": [
-            ["Strukturiertes Interview", "0,51", "0,42", "-0,09", "gut — top-Empfehlung"],
-            ["Arbeitswissen-Test", "0,48", "0,40", "-0,08", "gut"],
-            ["Biografischer Fragebogen", "0,35", "0,38", "+0,03", "gut — einziger Anstieg"],
-            ["Arbeitsprobe", "0,54", "0,33", "-0,21", "mittel — starker Rückgang"],
-            ["Kognitiver Faehigkeitstest", "0,51", "0,31", "-0,20", "mittel — starker Rückgang"],
-            ["Integritaetstest", "0,41", "0,31", "-0,10", "mittel"],
-            ["Assessment Center", "0,37", "0,29", "-0,08", "mittel"],
-            ["Interessen", "0,10", "0,24", "+0,14", "angestiegen — Überraschung"],
-            ["Gewissenhaftigkeit", "0,31", "0,19", "-0,12", "gering"],
-            ["Unstrukturiertes Interview", "0,38", "0,19", "-0,19", "gering — trotz Beliebtheit!"],
-            ["Berufserfahrung in Jahren", "0,18", "0,07", "-0,11", "sehr gering"]
+            [
+              "Strukturiertes Interview",
+              "0,51",
+              "0,42",
+              "-0,09",
+              "gut — top-Empfehlung"
+            ],
+            [
+              "Arbeitswissen-Test",
+              "0,48",
+              "0,40",
+              "-0,08",
+              "gut"
+            ],
+            [
+              "Biografischer Fragebogen",
+              "0,35",
+              "0,38",
+              "+0,03",
+              "gut — einziger Anstieg"
+            ],
+            [
+              "Arbeitsprobe",
+              "0,54",
+              "0,33",
+              "-0,21",
+              "mittel — starker Rückgang"
+            ],
+            [
+              "Kognitiver Faehigkeitstest",
+              "0,51",
+              "0,31",
+              "-0,20",
+              "mittel — starker Rückgang"
+            ],
+            [
+              "Integritaetstest",
+              "0,41",
+              "0,31",
+              "-0,10",
+              "mittel"
+            ],
+            [
+              "Assessment Center",
+              "0,37",
+              "0,29",
+              "-0,08",
+              "mittel"
+            ],
+            [
+              "Interessen",
+              "0,10",
+              "0,24",
+              "+0,14",
+              "angestiegen — Überraschung"
+            ],
+            [
+              "Gewissenhaftigkeit",
+              "0,31",
+              "0,19",
+              "-0,12",
+              "gering"
+            ],
+            [
+              "Unstrukturiertes Interview",
+              "0,38",
+              "0,19",
+              "-0,19",
+              "gering — trotz Beliebtheit!"
+            ],
+            [
+              "Berufserfahrung in Jahren",
+              "0,18",
+              "0,07",
+              "-0,11",
+              "sehr gering"
+            ]
           ]
         }
       ],
@@ -200,6 +307,36 @@
       "topicId": "hr-personalauswahl",
       "front": "Warum hat Berufserfahrung in Jahren laut Sackett et al. (2021) eine sehr geringe prognostische Validität (r = 0,07)?",
       "back": "Weil bloße Jahre nichts über die Qualität der Erfahrung aussagen. Jemand kann 10 Jahre lang dieselbe Aufgabe schlecht ausgeführt haben. Entscheidend ist, WAS jemand gelernt hat — nicht WIE LANGE er dabei war. Arbeitswissen-Tests (r = 0,40) messen das besser."
+    },
+    {
+      "id": "hr-personalauswahl-z1",
+      "topicId": "hr-personalauswahl",
+      "front": "Drei Hauptgütekriterien der Personalauswahl",
+      "back": "1. Objektivität (Durchführung, Auswertung, Interpretation unabhängig vom Beurteiler) 2. Reliabilität (Messgenauigkeit/Zuverlässigkeit) 3. Validität (misst, was es soll)"
+    },
+    {
+      "id": "hr-personalauswahl-z2",
+      "topicId": "hr-personalauswahl",
+      "front": "Prognostische Validität – strukturiertes vs. unstrukturiertes Interview",
+      "back": "Strukturierte Interviews haben deutlich höhere prognostische Validität als unstrukturierte. Sackett et al. (2021) revidierten viele Werte von Schmidt & Hunter (1998) nach unten."
+    },
+    {
+      "id": "hr-personalauswahl-z3",
+      "topicId": "hr-personalauswahl",
+      "front": "Assessment Center – Merkmale",
+      "back": "Mehrere Beobachter, mehrere Verfahren (Postkorb, Rollenspiel, Gruppendiskussion, Präsentation). Ziel: valide, objektive Einschätzung von Kompetenzen."
+    },
+    {
+      "id": "hr-personalauswahl-z4",
+      "topicId": "hr-personalauswahl",
+      "front": "Interviewformen – Übersicht",
+      "back": "Stressinterview, Tiefeninterview, Situatives Interview (hypothetische Szenarien), Multimodales Interview (Kombination). Strukturierung erhöht Validität."
+    },
+    {
+      "id": "hr-personalauswahl-z5",
+      "topicId": "hr-personalauswahl",
+      "front": "Robot Recruiting / CV-Parsing",
+      "back": "Automatisierte Vorauswahl durch Algorithmen (z.B. Xerox, Precire/Sprachanalyse). Vorteil: Effizienz. Kritik: Black-Box, mögliche Diskriminierung."
     }
   ],
   "quiz": [
@@ -215,7 +352,9 @@
         "Prognostische Validität",
         "Konstruktvalidität"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Gütekriterien bauen aufeinander auf: Objektivität → Reliabilität → Validität. Ohne Objektivität (Unabhängigkeit vom Tester) kann ein Verfahren nicht reliabel (konsistent) sein."
     },
     {
@@ -239,7 +378,9 @@
         "Die Körpersprache des Kandidaten",
         "Die Anzahl der Berufsjahre"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Ankerantworten sind vorab von Experten definierte Musterlösungen (z.B. 0, 3 oder 5 Punkte), die festlegen, was eine schlechte, mittlere oder gute Antwort auf eine konkrete Situationsfrage ist. Das erhöht die Auswertungsobjektivität."
     },
     {
@@ -254,7 +395,11 @@
         "Berufserfahrung in Jahren sank auf r = 0,07",
         "Der biografische Fragebogen ist einer der wenigen Werte, die gestiegen sind"
       ],
-      "correct": [0, 2, 3],
+      "correct": [
+        0,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "A: Korrekt — methodische Verbesserung (keine Overcorrection). B: Falsch — strukturiertes Interview sank von 0,51 auf 0,42. C: Korrekt — Berufserfahrung in Jahren ist sehr gering valide. D: Korrekt — biografischer Fragebogen stieg von 0,35 auf 0,38."
     },
@@ -279,7 +424,9 @@
         "Assessment Center (0,29) und Gewissenhaftigkeit (0,19)",
         "Arbeitsprobe (0,33) und Interessen (0,24)"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Nur das strukturierte Interview (0,42) und der Arbeitswissen-Test (0,40) liegen bei oder über 0,38. Biografischer Fragebogen (0,38) wäre auch korrekt, ist aber nicht in den Optionen. Die anderen Verfahren liegen darunter."
     },
     {
@@ -289,7 +436,14 @@
       "difficulty": "mittel",
       "prompt": "Erläutern Sie, warum ein Assessment Center trotz hohem Aufwand nur eine moderate prognostische Validität hat. Nennen Sie mindestens zwei Probleme.",
       "sampleAnswer": "Das AC hat laut Sackett et al. (2021) eine prognostische Validität von nur r = 0,29. Probleme: (1) Self-fulfilling prophecy: Kandidaten wurden bereits vorselektiert — das verengt die Spannbreite und beeinflusst die Validitätsschätzung. (2) Erlernbarkeit: AC-Übungen können trainiert werden, d.h. das Ergebnis reflektiert möglicherweise Übungseffekte statt tatsächliche Eignung (Kriterium-Kontamination). (3) Konstruktvalidität ist problematisch: Beobachter beurteilen denselben Kandidaten in verschiedenen Übungen oft nicht konsistent (diskriminante Validität 0,54 in Woehr et al. 2007 — Konstrukte werden nicht sauber unterschieden).",
-      "keywords": ["self-fulfilling", "erlernbar", "vorselektion", "konstruktvalidität", "kosten", "beobachter"],
+      "keywords": [
+        "self-fulfilling",
+        "erlernbar",
+        "vorselektion",
+        "konstruktvalidität",
+        "kosten",
+        "beobachter"
+      ],
       "explanation": "Das AC ist beliebt (hohe Akzeptanz, Augenscheinvalidität), aber seine tatsächliche prognostische Kraft ist begrenzt — vor allem durch methodische und konzeptionelle Probleme."
     },
     {
@@ -304,7 +458,9 @@
         "Es ist subjektiv, hat geringe Validität (r = 0,19) und erschwert Vergleiche zwischen Kandidaten",
         "Es verletzt gesetzliche Vorschriften (AGG)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Das unstrukturierte Interview ist hochgradig subjektiv — verschiedene Interviewer kommen zu verschiedenen Urteilen. Die prognostische Validität ist mit r = 0,19 (Sackett et al. 2021) gering. Außerdem sind die Ergebnisse verschiedener Kandidaten kaum vergleichbar, weil alle unterschiedliche Fragen erhalten. Option B ist falsch, weil auch die Reliabilität oft gering ist."
     },
     {
@@ -323,7 +479,13 @@
       "difficulty": "schwer",
       "prompt": "Ein Startup möchte für eine Marketing-Stelle auswählen. Budget ist begrenzt. Empfehlen Sie — auf Basis der Validitätsdaten von Sackett et al. (2021) — ein kostengünstiges Verfahren mit guter Validität. Begründen Sie Ihre Empfehlung.",
       "sampleAnswer": "Empfehlung: Strukturiertes Einstellungsinterview (r = 0,42) kombiniert mit einem Arbeitswissen-Test (r = 0,40) oder biografischen Fragebogen (r = 0,38). Diese Verfahren haben die höchsten Validitätswerte und sind vergleichsweise günstig durchzuführen. Ein Assessment Center (r = 0,29) würde höheren Aufwand bei geringerer Validität bedeuten. Berufserfahrung in Jahren (r = 0,07) ist kein gutes Kriterium. Wichtig: Das Interview strukturieren — gleiche Fragen, Ankerantworten, mehrere Interviewer.",
-      "keywords": ["strukturiertes interview", "arbeitswissen", "validität", "kosten", "sackett"],
+      "keywords": [
+        "strukturiertes interview",
+        "arbeitswissen",
+        "validität",
+        "kosten",
+        "sackett"
+      ],
       "explanation": "Die Validitätsdaten zeigen klar: Struktur ist der wichtigste Hebel. Günstige, valide Verfahren priorisieren und teure AC-Verfahren nur bei strategisch wichtigen Stellen einsetzen."
     }
   ],

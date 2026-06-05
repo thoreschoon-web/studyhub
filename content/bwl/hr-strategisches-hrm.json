@@ -33,11 +33,35 @@
           "kind": "table",
           "id": "fig-drei-ansaetze",
           "title": "Vergleich der drei SHRM-Ansätze",
-          "headers": ["Ansatz", "Grundannahme", "Fit-Typ", "Metapher", "Kritik"],
+          "headers": [
+            "Ansatz",
+            "Grundannahme",
+            "Fit-Typ",
+            "Metapher",
+            "Kritik"
+          ],
           "rows": [
-            ["Best-Practice", "Bestimmte HR-Praktiken wirken universell", "Kein Fit nötig", "Guter Schuh passt allen", "Ignoriert Kontext"],
-            ["Kontingenzansatz", "Wirkung hängt von Strategie ab", "Vertikaler Fit (HR ↔ Strategie)", "Schlüssel zum Schloss", "Schwer zu messen"],
-            ["Konfigurationaler Ansatz", "Bündel von Praktiken wirken am stärksten", "Horizontaler Fit (HR ↔ HR)", "Orchester", "Komplexität der Abstimmung"]
+            [
+              "Best-Practice",
+              "Bestimmte HR-Praktiken wirken universell",
+              "Kein Fit nötig",
+              "Guter Schuh passt allen",
+              "Ignoriert Kontext"
+            ],
+            [
+              "Kontingenzansatz",
+              "Wirkung hängt von Strategie ab",
+              "Vertikaler Fit (HR ↔ Strategie)",
+              "Schlüssel zum Schloss",
+              "Schwer zu messen"
+            ],
+            [
+              "Konfigurationaler Ansatz",
+              "Bündel von Praktiken wirken am stärksten",
+              "Horizontaler Fit (HR ↔ HR)",
+              "Orchester",
+              "Komplexität der Abstimmung"
+            ]
           ]
         }
       ],
@@ -126,14 +150,49 @@
           "kind": "table",
           "id": "fig-abc-positions",
           "title": "A / B / C Positionen nach Huselid, Beatty & Becker (2005)",
-          "headers": ["Kriterium", "A-Position (Strategic)", "B-Position (Support)", "C-Position (Surplus)"],
+          "headers": [
+            "Kriterium",
+            "A-Position (Strategic)",
+            "B-Position (Support)",
+            "C-Position (Surplus)"
+          ],
           "rows": [
-            ["Strategischer Einfluss", "Direkt und hoch", "Indirekt / gering variabel", "Kaum vorhanden"],
-            ["Leistungsvariabilität", "Hoch (großer Unterschied)", "Gering bis mittel", "Sehr gering"],
-            ["Entscheidungsfreiheit", "Autonomes Handeln", "Vorgegebene Prozesse", "Wenig Ermessen"],
-            ["Vergütungsbasis", "Leistung", "Stellenniveau", "Marktpreis"],
-            ["Folgen falscher Besetzung", "Sehr teuer", "Teuer, ersetzbar", "Leicht korrigierbar"],
-            ["Anteil Belegschaft", "< 20 %", "Mittel", "Rest"]
+            [
+              "Strategischer Einfluss",
+              "Direkt und hoch",
+              "Indirekt / gering variabel",
+              "Kaum vorhanden"
+            ],
+            [
+              "Leistungsvariabilität",
+              "Hoch (großer Unterschied)",
+              "Gering bis mittel",
+              "Sehr gering"
+            ],
+            [
+              "Entscheidungsfreiheit",
+              "Autonomes Handeln",
+              "Vorgegebene Prozesse",
+              "Wenig Ermessen"
+            ],
+            [
+              "Vergütungsbasis",
+              "Leistung",
+              "Stellenniveau",
+              "Marktpreis"
+            ],
+            [
+              "Folgen falscher Besetzung",
+              "Sehr teuer",
+              "Teuer, ersetzbar",
+              "Leicht korrigierbar"
+            ],
+            [
+              "Anteil Belegschaft",
+              "< 20 %",
+              "Mittel",
+              "Rest"
+            ]
           ]
         }
       ],
@@ -193,6 +252,36 @@
       "topicId": "hr-strategisches-hrm",
       "front": "Nenne die drei Strategieebenen nach Chandler und erkläre, wo die Personalstrategie eingeordnet ist.",
       "back": "1) Corporate Strategy (Gesamtunternehmen, z. B. Diversifikation). 2) Business Strategy (Wettbewerb, z. B. Kostenführerschaft). 3) Functional Strategy (Funktionsbereich). Die Personalstrategie ist eine Funktionsbereichsstrategie und muss mit der Business Strategy abgestimmt sein (vertikaler Fit)."
+    },
+    {
+      "id": "hr-strategisches-hrm-z1",
+      "topicId": "hr-strategisches-hrm",
+      "front": "SHRM: Drei Ansätze",
+      "back": "1. Best Practice (universell wirksam) 2. Kontingenz (vertikaler Fit zur Strategie) 3. Konfigurational (horizontaler Fit: HR-Bündel intern stimmig)"
+    },
+    {
+      "id": "hr-strategisches-hrm-z2",
+      "topicId": "hr-strategisches-hrm",
+      "front": "VRIO-Kriterien (Resource-Based View)",
+      "back": "Ressource muss sein: Wertvoll (Valuable), Selten (Rare), Nicht imitierbar (Inimitable), Organisational verankert (Organized). Dann → nachhaltiger Wettbewerbsvorteil."
+    },
+    {
+      "id": "hr-strategisches-hrm-z3",
+      "topicId": "hr-strategisches-hrm",
+      "front": "Human Resource Advantage (Wright et al.)",
+      "back": "Human Capital Advantage (überlegene Mitarbeitende) + Human Process Advantage (überlegene HR-Prozesse) = Human Resource Advantage."
+    },
+    {
+      "id": "hr-strategisches-hrm-z4",
+      "topicId": "hr-strategisches-hrm",
+      "front": "Vertikaler vs. horizontaler Fit",
+      "back": "Vertikaler Fit: HR-Strategie passt zur Unternehmensstrategie. Horizontaler Fit: HR-Praktiken stimmen untereinander überein."
+    },
+    {
+      "id": "hr-strategisches-hrm-z5",
+      "topicId": "hr-strategisches-hrm",
+      "front": "Lepak & Snell HR-Architektur (1999): Vier Quadranten",
+      "back": "Zwei Dimensionen: strategischer Wert × Einzigartigkeit des Humankapitals. Quadranten: Entwicklung / Akquise / Kontrahierung / Allianz."
     }
   ],
   "quiz": [
@@ -208,7 +297,9 @@
         "Konfigurationaler Ansatz",
         "Ressourcenbasierter Ansatz"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der Best-Practice-Ansatz (universalistisch) geht davon aus, dass bestimmte HR-Praktiken universell wirken — 'mehr ist besser', unabhängig vom Kontext. Der Kontingenzansatz betont dagegen die Kontextabhängigkeit."
     },
     {
@@ -223,7 +314,9 @@
         "Die Ausrichtung der HR auf internationale Märkte",
         "Die Abstimmung zwischen Personalplanung und Recruiting"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Horizontaler Fit beschreibt die interne Stimmigkeit der HR-Praktiken untereinander (z. B. Training, Vergütung, Leistungsbeurteilung passen zusammen). Vertikaler Fit hingegen bezeichnet die Abstimmung der HR-Strategie auf die Unternehmensstrategie."
     },
     {
@@ -247,7 +340,11 @@
         "Die Ressource ist selten (rare)",
         "Die Ressource ist nicht substituierbar (non-substitutable)"
       ],
-      "correct": [0, 2, 3],
+      "correct": [
+        0,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "Eine Ressource muss VRIN-Kriterien erfüllen: Valuable, Rare, Inimitable (nicht imitierbar) und Non-substitutable. 'Leicht imitierbar' ist das Gegenteil von 'Inimitable' und würde nachhaltigen Vorteil verhindern."
     },
@@ -263,7 +360,9 @@
         "Q1 — Interne Entwicklung (Commitment)",
         "Q4 — Allianz (kollaborativ)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Q1 (hoch wertvoll + einzigartig): Diese Mitarbeitenden sind strategisch unverzichtbar und besitzen seltenes Know-how. Strategie: intern entwickeln und langfristig binden (Commitment-HR-Konfiguration)."
     },
     {
@@ -287,7 +386,9 @@
         "Maximales Outsourcing aller Forschenden, rein marktbasierte Vergütung",
         "Standardisierte Ausbildung für alle, Beförderung nach Dienstalter"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Eine Differenzierungsstrategie auf Basis von Innovation erfordert Talentförderung, hohe Autonomie, langfristige Bindung und Innovationsanreize — das sind die passenden HR-Praktiken (vertikaler Fit). Enge Kontrolle und Standardisierung würden Innovation hemmen."
     },
     {
@@ -297,7 +398,15 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, warum die Unternehmenskultur eines erfolgreichen Unternehmens nach dem RBV (Resource-Based View) eine Quelle nachhaltigen Wettbewerbsvorteils sein kann.",
       "sampleAnswer": "Die Unternehmenskultur erfüllt die VRIN-Kriterien: Sie ist wertvoll (sie ermöglicht Koordination, Motivation und Innovation), selten (jede Unternehmenskultur ist einzigartig gewachsen), kaum imitierbar (sie entstand über Jahre durch Geschichte, Führungspersönlichkeiten und unsichtbare Normen — Kausalambiguität, Pfadabhängigkeit) und schwer substituierbar (kein anderes Element ersetzt die gleiche integrierende Wirkung). Wettbewerber können die Kultur von außen beobachten, aber nicht einfach kopieren.",
-      "keywords": ["vrin", "selten", "imitierbar", "kultur", "pfadabhängigkeit", "kausalambiguität", "nachhaltig"],
+      "keywords": [
+        "vrin",
+        "selten",
+        "imitierbar",
+        "kultur",
+        "pfadabhängigkeit",
+        "kausalambiguität",
+        "nachhaltig"
+      ],
       "explanation": "Schlüssel: VRIN-Kriterien benennen und erklären, warum Kultur insbesondere die Kriterien 'Inimitable' und 'Non-substitutable' erfüllt."
     },
     {
@@ -312,7 +421,9 @@
         "Große Abteilung und viele Mitarbeitende",
         "Nur Top-Management-Positionen"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "A-Positionen haben zwei definierende Merkmale: (1) direkter strategischer Einfluss auf die Unternehmensstrategie und (2) hohe Leistungsvariabilität — d. h. der Unterschied zwischen gutem und schlechtem Stelleninhaber ist enorm groß."
     },
     {
@@ -336,7 +447,9 @@
         "Ressourcenbasierter Ansatz — weil die Mitarbeitenden VRIN-Kriterien erfüllen",
         "Vertikaler Fit — weil die HR nicht zur Strategie passt"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das Pyramidensystem der Big Four ist ein Beispiel für konfigurationalen Ansatz / horizontalen Fit: niedrige Einstiegsgehälter, hohe Arbeitslast, begrenzte Beförderungen und bewusste Fluktuation bilden ein intern stimmiges Bündel. Günstige Junior-Kräfte werden eingesetzt, nicht-Beförderte verlassen das Unternehmen — das passt zur Geschäftsstrategie."
     },
     {
@@ -346,7 +459,14 @@
       "difficulty": "schwer",
       "prompt": "Ein Unternehmen möchte seine Personalstrategie an eine neue Wachstums- und Innovationsstrategie anpassen. Erläutere, was dabei unter 'vertikalem Fit' und 'horizontalem Fit' zu verstehen ist und gib jeweils ein konkretes Beispiel.",
       "sampleAnswer": "Vertikaler Fit: Die Personalstrategie muss die Innovationsstrategie unterstützen. Beispiel: Wenn das Unternehmen auf kreative Produktentwicklung setzt, müssen HR-Praktiken wie Talentauswahl (Kreative einstellen), Weiterbildung (Innovationsmethoden) und Vergütung (Ideen-Prämien) darauf ausgerichtet sein. Horizontaler Fit: Die einzelnen HR-Praktiken müssen untereinander stimmig sein. Beispiel: Ein Training für kreatives Denken bringt nichts, wenn die Leistungsbeurteilung nur Effizienz misst und die Vergütung keine Innovationsanreize setzt — dann fehlt horizontaler Fit.",
-      "keywords": ["vertikaler fit", "unternehmensstrategie", "personalstrategie", "horizontaler fit", "hr-praktiken", "stimmig"],
+      "keywords": [
+        "vertikaler fit",
+        "unternehmensstrategie",
+        "personalstrategie",
+        "horizontaler fit",
+        "hr-praktiken",
+        "stimmig"
+      ],
       "explanation": "Wichtig: Vertikaler Fit = HR ↔ Strategie (oben-unten), horizontaler Fit = HR-Praktiken ↔ HR-Praktiken (nebeneinander). Beide müssen mit konkreten Beispielen belegt werden."
     }
   ],

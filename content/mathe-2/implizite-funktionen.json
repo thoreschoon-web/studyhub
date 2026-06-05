@@ -31,9 +31,114 @@
     }
   ],
   "flashcards": [
-    { "id": "impl-fc-1", "topicId": "implizite-funktionen", "front": "Ableitung einer implizit gegebenen Funktion $F(x,y)=0$?", "back": "$y'(x) = -\\dfrac{F_x}{F_y}$ (sofern $F_y\\neq 0$)." },
-    { "id": "impl-fc-2", "topicId": "implizite-funktionen", "front": "Was steht in Zeile $i$, Spalte $j$ der Jacobi-Matrix?", "back": "Die partielle Ableitung $\\dfrac{\\partial f_i}{\\partial x_j}$." },
-    { "id": "impl-fc-3", "topicId": "implizite-funktionen", "front": "Wann garantiert der Satz über implizite Funktionen eine lokale Auflösung $y(x)$?", "back": "Wenn $F(x_0,y_0)=0$ **und** $F_y(x_0,y_0)\\neq 0$." }
+    {
+      "id": "impl-fc-1",
+      "topicId": "implizite-funktionen",
+      "front": "Ableitung einer implizit gegebenen Funktion $F(x,y)=0$?",
+      "back": "$y'(x) = -\\dfrac{F_x}{F_y}$ (sofern $F_y\\neq 0$)."
+    },
+    {
+      "id": "impl-fc-2",
+      "topicId": "implizite-funktionen",
+      "front": "Was steht in Zeile $i$, Spalte $j$ der Jacobi-Matrix?",
+      "back": "Die partielle Ableitung $\\dfrac{\\partial f_i}{\\partial x_j}$."
+    },
+    {
+      "id": "impl-fc-3",
+      "topicId": "implizite-funktionen",
+      "front": "Wann garantiert der Satz über implizite Funktionen eine lokale Auflösung $y(x)$?",
+      "back": "Wenn $F(x_0,y_0)=0$ **und** $F_y(x_0,y_0)\\neq 0$."
+    },
+    {
+      "id": "implizite-funktionen-z1",
+      "topicId": "implizite-funktionen",
+      "front": "Was ist eine implizit definierte Funktion?",
+      "back": "Eine Funktion $y = y(x)$, die nicht explizit gegeben ist, sondern nur durch eine Gleichung $G(x, y) = c$ bestimmt wird."
+    },
+    {
+      "id": "implizite-funktionen-z2",
+      "topicId": "implizite-funktionen",
+      "front": "Nenne die Bedingung des Fundamentalsatzes über implizite Funktionen (Satz 1).",
+      "back": "$G$ stetig differenzierbar in einer Umgebung von $(x^*, y^*)$, $G(x^*, y^*) = c$ und $\\frac{\\partial G}{\\partial y}(x^*, y^*) \\neq 0$. Dann existiert lokal eine stetig diff. Funktion $y = y(x)$."
+    },
+    {
+      "id": "implizite-funktionen-z3",
+      "topicId": "implizite-funktionen",
+      "front": "Wie lautet die Ableitungsformel für implizite Funktionen (1D)?",
+      "back": "$y'(x^*) = -\\frac{\\frac{\\partial G}{\\partial x}(x^*, y^*)}{\\frac{\\partial G}{\\partial y}(x^*, y^*)}$"
+    },
+    {
+      "id": "implizite-funktionen-z4",
+      "topicId": "implizite-funktionen",
+      "front": "Wie berechnet man die partiellen Ableitungen von $y(x_1, \\dots, x_n)$?",
+      "back": "$\\frac{\\partial y}{\\partial x_i}(\\vec{x}^*) = -\\frac{\\frac{\\partial G}{\\partial x_i}(\\vec{x}^*, y^*)}{\\frac{\\partial G}{\\partial y}(\\vec{x}^*, y^*)}$"
+    },
+    {
+      "id": "implizite-funktionen-z5",
+      "topicId": "implizite-funktionen",
+      "front": "Was passiert, wenn $\\frac{\\partial G}{\\partial y}(x^*, y^*) = 0$?",
+      "back": "Der Satz liefert keine Aussage — die Bedingung ist verletzt. Die Kurve kann dort eine senkrechte Tangente haben, und eine Auflösung nach $y$ ist lokal möglicherweise nicht eindeutig."
+    },
+    {
+      "id": "implizite-funktionen-z6",
+      "topicId": "implizite-funktionen",
+      "front": "Wie lautet die Tangente an den Graphen der impliziten Funktion?",
+      "back": "$y = y(x^*) + y'(x^*)(x - x^*)$"
+    },
+    {
+      "id": "implizite-funktionen-z7",
+      "topicId": "implizite-funktionen",
+      "front": "Wie lautet das vollständige Differential der impliziten Funktion?",
+      "back": "$dy \\approx \\frac{\\partial y}{\\partial x_1} dx_1 + \\dots + \\frac{\\partial y}{\\partial x_n} dx_n$"
+    },
+    {
+      "id": "implizite-funktionen-z8",
+      "topicId": "implizite-funktionen",
+      "front": "Explizit vs. implizit: Beispiel?",
+      "back": "Explizit: $y = x^2$. Implizit: $x^2 - y = 0$. Implizit lässt sich nicht immer auflösen, z.B. $x^3 + y^3 - 3xy = 0$."
+    },
+    {
+      "id": "implizite-funktionen-z9",
+      "topicId": "implizite-funktionen",
+      "front": "Wie prüft man, ob eine implizite Funktion nach $x$ (statt $y$) auflösbar ist?",
+      "back": "Bedingung: $\\frac{\\partial G}{\\partial x}(x^*, y^*) \\neq 0$. Dann gilt $x'(y^*) = -\\frac{\\frac{\\partial G}{\\partial y}}{\\frac{\\partial G}{\\partial x}}$."
+    },
+    {
+      "id": "implizite-funktionen-z10",
+      "topicId": "implizite-funktionen",
+      "front": "Typischer Fehler bei impliziter Differentiation?",
+      "back": "Vergessen, dass $y$ von $x$ abhängt: beim Differenzieren von $G(x,y)=c$ nach $x$ muss die Kettenregel auf $y = y(x)$ angewendet werden."
+    },
+    {
+      "id": "implizite-funktionen-z11",
+      "topicId": "implizite-funktionen",
+      "front": "Wie nutzt man implizite Differentiation für Nachfragefunktionen?",
+      "back": "Wenn $G(p_1, p_2, q) = c$ einen Marktgleichgewicht beschreibt, folgt $\\frac{\\partial q}{\\partial p_i} = -\\frac{G_{p_i}}{G_q}$ — Preiselastizität ohne explizite Auflösung."
+    },
+    {
+      "id": "implizite-funktionen-z12",
+      "topicId": "implizite-funktionen",
+      "front": "Was ist der Gradient der implizit definierten Funktion $y(\\vec{x})$?",
+      "back": "$\\operatorname{grad} y(\\vec{x}^*) = \\left( -\\frac{G_{x_1}}{G_y}, \\dots, -\\frac{G_{x_n}}{G_y} \\right)$ ausgewertet an $(\\vec{x}^*, y^*)$."
+    },
+    {
+      "id": "implizite-funktionen-z13",
+      "topicId": "implizite-funktionen",
+      "front": "Kann man immer entscheiden, ob eine implizite Funktion existiert?",
+      "back": "Nein — der Satz gibt nur eine *hinreichende* Bedingung (lokal). Er sagt nichts über globale Auflösbarkeit oder Eindeutigkeit weit vom Punkt $(x^*, y^*)$ entfernt."
+    },
+    {
+      "id": "implizite-funktionen-z14",
+      "topicId": "implizite-funktionen",
+      "front": "Wie lautet die implizite Differentiationsformel für $F(x, y) = c$ nach $x$ und nach $y$ gleichzeitig?",
+      "back": "$\\frac{dy}{dx} = -\\frac{F_x}{F_y}$ und $\\frac{dx}{dy} = -\\frac{F_y}{F_x}$. Beide gelten, wenn der jeweilige Nenner $\\neq 0$."
+    },
+    {
+      "id": "implizite-funktionen-z15",
+      "topicId": "implizite-funktionen",
+      "front": "Merksatz: Formel für implizite Ableitung in Worten?",
+      "back": "\"Minus partielle Ableitung nach der gesuchten Variablen durch partielle Ableitung nach der abhängigen Variablen.\""
+    }
   ],
   "quiz": [
     {
@@ -42,8 +147,15 @@
       "topicId": "implizite-funktionen",
       "difficulty": "mittel",
       "prompt": "Für $F(x,y)=x^2+y^2-1=0$ ist $y'(x)$ gleich…",
-      "options": ["$-\\dfrac{x}{y}$", "$-\\dfrac{y}{x}$", "$\\dfrac{x}{y}$", "$-\\dfrac{2x}{1}$"],
-      "correct": [0],
+      "options": [
+        "$-\\dfrac{x}{y}$",
+        "$-\\dfrac{y}{x}$",
+        "$\\dfrac{x}{y}$",
+        "$-\\dfrac{2x}{1}$"
+      ],
+      "correct": [
+        0
+      ],
       "explanation": "$F_x=2x$, $F_y=2y$, also $y'=-F_x/F_y=-\\dfrac{2x}{2y}=-\\dfrac{x}{y}$."
     },
     {

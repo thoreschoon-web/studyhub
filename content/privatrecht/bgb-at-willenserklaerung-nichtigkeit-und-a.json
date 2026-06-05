@@ -61,14 +61,49 @@
           "kind": "table",
           "id": "tab-anfecht-gruende",
           "title": "Übersicht Anfechtungsgründe",
-          "headers": ["Grund", "Norm", "Frist", "Besonderheit"],
+          "headers": [
+            "Grund",
+            "Norm",
+            "Frist",
+            "Besonderheit"
+          ],
           "rows": [
-            ["Inhaltsirrtum", "§ 119 I Alt. 1 BGB", "unverzüglich (§ 121 BGB)", "objektiver Empfängerhorizont maßgeblich"],
-            ["Erklärungsirrtum", "§ 119 I Alt. 2 BGB", "unverzüglich (§ 121 BGB)", "mechanischer Fehler"],
-            ["Eigenschaftsirrtum", "§ 119 II BGB", "unverzüglich (§ 121 BGB)", "nur verkehrswesentliche Eigenschaften"],
-            ["Übermittlungsirrtum", "§ 120 BGB", "unverzüglich (§ 121 BGB)", "fehlerhafte Übermittlung durch Bote/Einrichtung"],
-            ["Arglistige Täuschung", "§ 123 I BGB", "1 Jahr ab Kenntnis (§ 124 BGB)", "auch Täuschung durch Dritte beachtlich"],
-            ["Widerrechtliche Drohung", "§ 123 I BGB", "1 Jahr ab Ende Bedrohung (§ 124 BGB)", "max. 10 Jahre ab Abgabe"]
+            [
+              "Inhaltsirrtum",
+              "§ 119 I Alt. 1 BGB",
+              "unverzüglich (§ 121 BGB)",
+              "objektiver Empfängerhorizont maßgeblich"
+            ],
+            [
+              "Erklärungsirrtum",
+              "§ 119 I Alt. 2 BGB",
+              "unverzüglich (§ 121 BGB)",
+              "mechanischer Fehler"
+            ],
+            [
+              "Eigenschaftsirrtum",
+              "§ 119 II BGB",
+              "unverzüglich (§ 121 BGB)",
+              "nur verkehrswesentliche Eigenschaften"
+            ],
+            [
+              "Übermittlungsirrtum",
+              "§ 120 BGB",
+              "unverzüglich (§ 121 BGB)",
+              "fehlerhafte Übermittlung durch Bote/Einrichtung"
+            ],
+            [
+              "Arglistige Täuschung",
+              "§ 123 I BGB",
+              "1 Jahr ab Kenntnis (§ 124 BGB)",
+              "auch Täuschung durch Dritte beachtlich"
+            ],
+            [
+              "Widerrechtliche Drohung",
+              "§ 123 I BGB",
+              "1 Jahr ab Ende Bedrohung (§ 124 BGB)",
+              "max. 10 Jahre ab Abgabe"
+            ]
           ]
         }
       ]
@@ -177,6 +212,84 @@
       "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
       "front": "Wann geht eine WE unter Abwesenden zu (§ 130 I BGB)?",
       "back": "Wenn sie in den Machtbereich des Empfängers gelangt und nach gewöhnlichen Umständen damit zu rechnen ist, dass er von ihr Kenntnis erlangt. Bsp.: Brief im Briefkasten während üblicher Leerungszeit → zugegangen. E-Mail im Spam → fraglich."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z1",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Elemente der Willenserklärung (subjektiver Tatbestand)",
+      "back": "1. Handlungswille 2. Erklarungsbewusstsein (Rechtsbindungswille) 3. Geschaftswille."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z2",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Zugang einer Willenserklärung (§ 130 BGB)",
+      "back": "WE geht zu, wenn sie so in den Machtbereich des Empfangers gelangt, dass dieser unter normalen Umstanden Kenntnis nehmen kann."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z3",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Anfechtung wegen Inhaltsirrtums? § ?",
+      "back": "§ 119 I Alt. 1 BGB; Erklärungsinhalt entspricht nicht dem Gewollten (z.B. falsche Bezeichnung eines Gegenstands)."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z4",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Anfechtung wegen Erklärungsirrtums? § ?",
+      "back": "§ 119 I Alt. 2 BGB; Versprechen, Verschreiben, Vergreifen (Erklarungshandlung falsch)."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z5",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Anfechtung wegen Eigenschaftsirrtums? § ?",
+      "back": "§ 119 II BGB; Irrtum uber verkehrswesentliche Eigenschaft einer Person oder Sache."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z6",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Anfechtung wegen arglistiger Täuschung? § ?",
+      "back": "§ 123 I BGB. Frist: 1 Jahr ab Kenntnis der Tauschung (§ 124 BGB)."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z7",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Anfechtungsfolge (§ 142 I BGB)",
+      "back": "Nichtigkeit ex tunc (von Anfang an); das Rechtsgeschaft gilt als nie vorgenommen."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z8",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Schadensersatz bei Anfechtung wegen Irrtums? § ?",
+      "back": "§ 122 BGB: Anfechtender ersetzt Vertrauensschaden (negatives Interesse), max. Erfulungsinteresse."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z9",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Anfechtungsfrist bei Irrtum (§ 121 BGB)",
+      "back": "Unverzuglich (ohne schuldhaftes Zogern) nach Kenntnis des Anfechtungsgrundes; spatestens 10 Jahre nach WE-Abgabe."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z10",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Sittenwidrigkeit (§ 138 I BGB) - Rechtsfolge",
+      "back": "Nichtigkeit; auffalliges Missverhaltnis zwischen Leistung und Gegenleistung kann Wucher sein (§ 138 II BGB)."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z11",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Teilnichtigkeit (§ 139 BGB)",
+      "back": "Nur der nichtige Teil ist unwirksam, wenn anzunehmen ist, dass das Geschaft auch ohne diesen Teil vorgenommen worden ware."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z12",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Motivirrtum - anfechtbar?",
+      "back": "Grundsatzlich nicht anfechtbar (kein Anfechtungsgrund); Ausnahme: § 119 II BGB (verkehrswesentl. Eigenschaft) oder § 313 BGB (Geschaftsgrundlage)."
+    },
+    {
+      "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z13",
+      "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+      "front": "Formanforderungen im BGB (Stufen)",
+      "back": "Formfrei > Textform (§ 126b) > Schriftform (§ 126) > offentl. Beglaubigung (§ 129) > notarielle Beurkundung (§ 128). Verstos: § 125 BGB Nichtigkeit."
     }
   ],
   "quiz": [
@@ -186,8 +299,15 @@
       "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
       "difficulty": "leicht",
       "prompt": "Welches Element der Willenserklärung ist 'konstitutiv' – d. h. ohne es existiert die WE rechtlich gar nicht?",
-      "options": ["Der Geschäftswille", "Der objektive Tatbestand", "Das Erklärungsbewusstsein", "Die Anfechtungsmöglichkeit"],
-      "correct": [1],
+      "options": [
+        "Der Geschäftswille",
+        "Der objektive Tatbestand",
+        "Das Erklärungsbewusstsein",
+        "Die Anfechtungsmöglichkeit"
+      ],
+      "correct": [
+        1
+      ],
       "explanation": "Der objektive Tatbestand (nach außen wahrnehmbares Verhalten) ist konstitutiv. Fehlt er, existiert die WE rechtlich nicht. Der subjektive Tatbestand (Wille) ist bei fehlendem Erklärungsbewusstsein oder Geschäftswillen zwar problematisch, führt aber in der Regel nur zur Anfechtbarkeit, nicht zum Fehlen der WE."
     },
     {
@@ -211,7 +331,9 @@
         "Eigenschaftsirrtum: Käufer irrt über den Kilometerstand eines Fahrzeugs",
         "Erklärungsirrtum: Verkäufer schreibt versehentlich '500 Euro' statt '5.000 Euro'"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der Motivirrtum betrifft nur die inneren Beweggründe für die WE und ist grundsätzlich unbeachtlich. Er berechtigt nicht zur Anfechtung nach § 119 BGB. Der Eigenschaftsirrtum (§ 119 II) ist die eng begrenzte Ausnahme für Motivirrtümer, die sich auf verkehrswesentliche Eigenschaften beziehen."
     },
     {
@@ -220,8 +342,15 @@
       "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
       "difficulty": "mittel",
       "prompt": "G erklärt schriftlich, er biete für 1.500 € an, obwohl er intern 2.500 € verlangt und dies dem Empfänger auch mitteilt. Beide wissen, dass die schriftliche Erklärung nicht ernst gemeint ist. Welche Norm ist einschlägig?",
-      "options": ["§ 116 BGB – geheimer Vorbehalt", "§ 117 BGB – Scheingeschäft", "§ 118 BGB – Scherzerklärung", "§ 119 I BGB – Inhaltsirrtum"],
-      "correct": [1],
+      "options": [
+        "§ 116 BGB – geheimer Vorbehalt",
+        "§ 117 BGB – Scheingeschäft",
+        "§ 118 BGB – Scherzerklärung",
+        "§ 119 I BGB – Inhaltsirrtum"
+      ],
+      "correct": [
+        1
+      ],
       "explanation": "§ 117 BGB: Beide Parteien sind sich einig, dass die Erklärung über 1.500 € nicht ernstlich gilt (einvernehmliche Simulation). Das ist das Scheingeschäft. Das dahinterstehende Geschäft über 2.500 € kann nach § 117 II BGB wirksam sein."
     },
     {
@@ -245,7 +374,9 @@
         "Das Rechtsgeschäft wird schwebend unwirksam",
         "Das Rechtsgeschäft bleibt wirksam, aber es entsteht ein Schadensersatzanspruch"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "§ 142 I BGB: Wird ein anfechtbares Rechtsgeschäft angefochten, so ist es als von Anfang an nichtig anzusehen (ex tunc). Bereits erbrachte Leistungen sind nach Bereicherungsrecht (§§ 812 ff. BGB) zurückzuerstatten."
     },
     {
@@ -260,7 +391,9 @@
         "§ 123 I BGB – arglistige Täuschung",
         "§ 118 BGB – Scherzerklärung"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "K hat aktiv falsche Angaben zum Zustand und Kilometerstand gemacht und damit arglistig getäuscht (§ 123 I BGB). Die Anfechtungsfrist beträgt 1 Jahr ab Kenntnis der Täuschung (§ 124 BGB). Zusätzlich kommt § 119 II BGB (Eigenschaftsirrtum über Kilometerstand/Unfallschaden) in Betracht, aber § 123 BGB geht weiter, weil keine Schadensersatzpflicht nach § 122 BGB entsteht."
     },
     {
@@ -279,7 +412,14 @@
       "difficulty": "schwer",
       "prompt": "Bürgermeister B verschreibt sich im Vertragsangebot und schreibt '5,2 m' statt '2,5 m' Frontmeter. Zwei Wochen später erklärt er die Anfechtung. Prüfen Sie kurz, ob die Anfechtung wirksam ist.",
       "sampleAnswer": "1. Anfechtbares RG: Mietvertrag mit WE des B. 2. Anfechtungsgrund: Erklärungsirrtum § 119 I Alt. 2 BGB (Verschreiben). 3. Kausalität: Bei Kenntnis hätte B nicht mit '5,2 m' angeboten. 4. Anfechtungserklärung: gegenüber Vertragspartnerin B (§ 143 II BGB). 5. Anfechtungsgegner: korrekt. 6. Frist: Anfechtung muss unverzüglich erfolgen (§ 121 BGB). Zwei Wochen Zögerung sind i.d.R. nicht 'unverzüglich' → Frist versäumt → Anfechtung unwirksam.",
-      "keywords": ["Erklärungsirrtum", "119", "unverzüglich", "121", "Frist", "verschreiben"],
+      "keywords": [
+        "Erklärungsirrtum",
+        "119",
+        "unverzüglich",
+        "121",
+        "Frist",
+        "verschreiben"
+      ],
       "explanation": "Der Erklärungsirrtum (§ 119 I Alt. 2 BGB) ist einschlägig. Die Anfechtungsfrist des § 121 BGB verlangt unverzügliches Handeln. Zwei Wochen ohne sachlichen Grund gelten regelmäßig als schuldhaftes Zögern."
     },
     {
@@ -294,7 +434,9 @@
         "Das gesamte Rechtsgeschäft ist grundsätzlich nichtig, außer es ist anzunehmen, es wäre auch ohne den nichtigen Teil vorgenommen worden",
         "Der nichtige Teil wird automatisch nach § 140 BGB umgedeutet"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "§ 139 BGB: Grundsatz ist die Gesamtnichtigkeit. Ausnahme: Es ist anzunehmen, dass das Rechtsgeschäft auch ohne den nichtigen Teil vorgenommen worden wäre (hypothetischer Parteiwille). Dann bleibt der Rest wirksam."
     }
   ],

@@ -1,0 +1,542 @@
+[
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z1",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Was ist ein Bernoulli-Experiment?",
+    "back": "Zufallsexperiment mit genau zwei möglichen Ausgängen: Ereignis A (Erfolg) oder Nicht-A (Misserfolg), mit fester Erfolgswahrscheinlichkeit $p$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z2",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Bernoulli-Verteilung: Wahrscheinlichkeitsfunktion",
+    "back": "$X \\sim BE(p)$: $P(X=0)=1-p$, $P(X=1)=p$. Erwartungswert $E(X)=p$, Varianz $Var(X)=p(1-p)$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z3",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Was ist ein Bernoulli-Prozess?",
+    "back": "Folge unabhängiger Wiederholungen eines Bernoulli-Experiments mit konstantem $p$. Grundlage der Binomialverteilung."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z4",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Binomialverteilung: Wahrscheinlichkeitsfunktion",
+    "back": "$X \\sim B(n,p)$: $f(x)=\\binom{n}{x}p^x(1-p)^{n-x}$, $x=0,1,\\dots,n$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z5",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Erwartungswert und Varianz der Binomialverteilung $B(n,p)$",
+    "back": "$E(X)=np$, $\\quad Var(X)=np(1-p)$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z6",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Ableseregel für Binomialtabelle bei $p > 0{,}5$",
+    "back": "$f(x;n,p)=f(n-x;n,1-p)$ und $F(x;n,p)=1-F(n-x-1;n,1-p)$. Tabelle enthält nur $p \\le 0{,}5$; Trick: Erfolge umkodieren."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z7",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Reproduktionseigenschaft der Binomialverteilung",
+    "back": "$X_1 \\sim B(n_1,p)$ und $X_2 \\sim B(n_2,p)$ unabhängig $\\Rightarrow X_1+X_2 \\sim B(n_1+n_2,p)$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z8",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Anteilsschätzer $\\hat{p}$ bei der Binomialverteilung",
+    "back": "$\\hat{p}=\\tfrac{X}{n}$, $E(\\hat{p})=p$, $Var(\\hat{p})=\\tfrac{p(1-p)}{n}$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z9",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Normalverteilung: Dichtefunktion",
+    "back": "$X \\sim N(\\mu,\\sigma^2)$: $f(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z10",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Erwartungswert und Varianz der Normalverteilung",
+    "back": "$E(X)=\\mu$, $Var(X)=\\sigma^2$. Symmetrisch um $\\mu$, Wendepunkte bei $\\mu \\pm \\sigma$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z11",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Standardisierung einer normalverteilten Zufallsvariable",
+    "back": "$Z=\\frac{X-\\mu}{\\sigma} \\sim N(0,1)$. Ermöglicht Ablesen aus der Standard-Normaltabelle $\\Phi$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z12",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Symmetrieregel der Standardnormalverteilung",
+    "back": "$\\Phi(-x)=1-\\Phi(x)$. Tabelle enthält nur positive $x$-Werte; negative Werte mit dieser Regel berechnen."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z13",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Wahrscheinlichkeit eines Intervalls bei $N(\\mu,\\sigma^2)$",
+    "back": "$P(a \\le X \\le b)=\\Phi\\!\\left(\\frac{b-\\mu}{\\sigma}\\right)-\\Phi\\!\\left(\\frac{a-\\mu}{\\sigma}\\right)$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z14",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Lineartransformation normalverteilter Zufallsvariablen",
+    "back": "$Y=aX+b \\sim N(a\\mu+b,\\,a^2\\sigma^2)$ sowie $X_1+X_2 \\sim N(\\mu_1+\\mu_2,\\,\\sigma_1^2+\\sigma_2^2)$ (unabhängig)."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z15",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Quantilsberechnung bei der Normalverteilung",
+    "back": "$x_w = z_w \\cdot \\sigma + \\mu$, wobei $z_w = \\Phi^{-1}(w)$ das $w$-Quantil der Standardnormalverteilung ist."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z16",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Zentrales Schwankungsintervall: Definition",
+    "back": "$[\\mu - k\\sigma;\\; \\mu + k\\sigma]$ mit $P(\\mu-k\\sigma \\le X \\le \\mu+k\\sigma)=2\\Phi(k)-1$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z17",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "68-95-99,7-Regel der Normalverteilung",
+    "back": "$k=1$: ca. 68 %, $k=2$: ca. 95 %, $k=3$: ca. 99,7 % der Werte liegen im $k$-fachen Schwankungsintervall."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z18",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Zentrales $(1-\\alpha)$-Schwankungsintervall über Quantile",
+    "back": "$P(x_{\\alpha/2} \\le X \\le x_{1-\\alpha/2})=1-\\alpha$, wobei $x_{\\alpha/2}$ und $x_{1-\\alpha/2}$ die entsprechenden Quantile von $X$ sind."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z19",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Grenzwertsatz von de Moivre (Binomial → Normal)",
+    "back": "$\\lim_{n\\to\\infty}P\\!\\left(\\frac{X-np}{\\sqrt{np(1-p)}}\\le x\\right)=\\Phi(x)$. Faustregeln: $n \\ge 30$, $np \\ge 10$, $n(1-p) \\ge 10$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z20",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Zentraler Grenzwertsatz (ZGWS) für i.i.d. Zufallsvariablen",
+    "back": "$\\lim_{n\\to\\infty}P\\!\\left(\\frac{\\frac{1}{n}\\sum X_i-\\mu}{\\sqrt{\\sigma^2/n}}\\le x\\right)=\\Phi(x)$. Faustregel: $n \\ge 30$."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z21",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Normalapproximation: Quantil der Binomialverteilung",
+    "back": "$x_{1-\\alpha} \\approx np + z_{1-\\alpha}\\sqrt{np(1-p)}$. Gilt näherungsweise für große $n$ bei Erfüllung der Faustregeln."
+  },
+  {
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-z22",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "front": "Faustregeln für Normalapproximation der Binomialverteilung",
+    "back": "$n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$ müssen alle gleichzeitig erfüllt sein."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z1",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Was ist eine einfache Zufallsstichprobe?",
+    "back": "$X_1, \\dots, X_n$ i.i.d. (unabhängig und identisch verteilt) mit $E(X_i)=\\mu$ und $Var(X_i)=\\sigma^2$."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z2",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Was ist eine Stichprobenfunktion (Schätzstatistik)?",
+    "back": "Funktion der Stichprobenwerte $g(X_1,\\dots,X_n)$, die einen unbekannten Parameter schätzt, z. B. $\\bar{X}$ oder $\\hat{\\sigma}^2$."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z3",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Definition des Stichprobenmittels $\\bar{X}$",
+    "back": "$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^{n}X_i$. Selbst eine Zufallsvariable mit eigener Verteilung."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z4",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Erwartungswert des Stichprobenmittels",
+    "back": "$E(\\bar{X})=\\mu$. Das Stichprobenmittel ist ein erwartungstreuer Schätzer für $\\mu$."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z5",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Varianz und Standardfehler des Stichprobenmittels",
+    "back": "$Var(\\bar{X})=\\frac{\\sigma^2}{n}$, $\\quad \\sigma_{\\bar{X}}=\\frac{\\sigma}{\\sqrt{n}}$. Mit wachsendem $n$ sinkt die Streuung von $\\bar{X}$."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z6",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Verteilung von $\\bar{X}$ bei normalverteilter Grundgesamtheit",
+    "back": "$\\bar{X} \\sim N\\!\\left(\\mu,\\,\\tfrac{\\sigma^2}{n}\\right)$, also $\\sqrt{n}\\cdot\\frac{\\bar{X}-\\mu}{\\sigma} \\sim N(0,1)$ für alle $n$."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z7",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Wozu dient der Standardfehler $\\sigma_{\\bar{X}}$?",
+    "back": "Er misst die Streuung des Stichprobenmittels um $\\mu$. Größeres $n$ $\\Rightarrow$ kleinerer Standardfehler $\\Rightarrow$ präzisere Schätzung."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z8",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Relative Häufigkeit als Stichprobenfunktion",
+    "back": "$\\hat{p}=\\bar{X}=\\frac{1}{n}\\sum X_i$ (bei $X_i \\in \\{0,1\\}$). Schätzt den Anteil $p$ in der Grundgesamtheit."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z9",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Was bedeutet i.i.d.?",
+    "back": "Unabhängig und identisch verteilt (independent and identically distributed). Grundvoraussetzung für Stichprobentheorie und ZGWS."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z10",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Verteilung von $\\bar{X}$ bei nicht-normalverteilter Grundgesamtheit",
+    "back": "Für $n \\ge 30$ gilt näherungsweise $\\bar{X} \\approx N(\\mu,\\,\\tfrac{\\sigma^2}{n})$ dank ZGWS."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z11",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Ziel der induktiven Statistik",
+    "back": "Von der Stichprobe auf die Grundgesamtheit schließen: Schätzen unbekannter Parameter und Testen von Hypothesen."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z12",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Unterschied: Stichprobenvarianz vs. Populationsvarianz",
+    "back": "Stichprobenvarianz $\\hat{\\sigma}^2=\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$ ist erwartungstreu; $\\frac{1}{n}\\sum(X_i-\\bar{X})^2$ ist verzerrt nach unten."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z13",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Was versteht man unter dem Standardfehler des Mittelwerts?",
+    "back": "$SE(\\bar{X})=\\frac{\\sigma}{\\sqrt{n}}$. Gibt die durchschnittliche Abweichung von $\\bar{X}$ vom wahren $\\mu$ an."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z14",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Wie verhält sich $Var(\\bar{X})$ bei Verdopplung von $n$?",
+    "back": "$Var(\\bar{X})=\\sigma^2/n$ halbiert sich. Um die Streuung zu halbieren, muss $n$ vervierfacht werden."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z15",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Warum sind $X_1,\\dots,X_n$ Zufallsvariablen (nicht Zahlen)?",
+    "back": "Vor der Erhebung sind die Stichprobenwerte unbekannt und zufällig. Erst nach der Ziehung liegen feste Realisierungen $x_1,\\dots,x_n$ vor."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z16",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Pivotgröße für $\\mu$ bei bekanntem $\\sigma$",
+    "back": "$Z=\\sqrt{n}\\cdot\\frac{\\bar{X}-\\mu}{\\sigma} \\sim N(0,1)$. Verteilt unabhängig von $\\mu$ und $\\sigma$; Grundlage für KI und Tests."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z17",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Was ist der Unterschied zwischen Schätzer und Schätzung?",
+    "back": "Schätzer: Stichprobenfunktion $\\hat{\\theta}(X_1,\\dots,X_n)$ als ZV. Schätzung: konkreter Zahlenwert $\\hat{\\theta}(x_1,\\dots,x_n)$ nach der Ziehung."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z18",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Welche Größen charakterisieren die Verteilung von $\\bar{X}$?",
+    "back": "Lage: $E(\\bar{X})=\\mu$. Streuung: $\\sigma_{\\bar{X}}=\\sigma/\\sqrt{n}$. Form: normal (bei normaler GG oder via ZGWS für $n\\ge30$)."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z19",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Bedeutung der Unabhängigkeit in der Stichprobe",
+    "back": "Unabhängige Ziehungen stellen sicher, dass $Var(\\bar{X})=\\sigma^2/n$. Bei abhängigen Daten (Klumpenstichprobe) ist diese Formel falsch."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z20",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Wofür steht der Begriff 'induktive Statistik'?",
+    "back": "Schluss vom Speziellen (Stichprobe) auf das Allgemeine (Grundgesamtheit). Gegensatz: deskriptive Statistik beschreibt nur die Stichprobe."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z21",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Wie wirkt sich $\\sigma^2$ auf die Stichprobengröße aus?",
+    "back": "Größeres $\\sigma^2$ $\\Rightarrow$ größerer Standardfehler $\\Rightarrow$ mehr Beobachtungen nötig für gleiche Präzision der Schätzung."
+  },
+  {
+    "id": "grundlagen-der-induktiven-statistik-z22",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "front": "Stichprobenmittel als Schätzer: Zusammenfassung",
+    "back": "$\\bar{X}$: erwartungstreu ($E=\\mu$), konsistent ($Var\\to0$), effizientester linearer Schätzer. Verteilt $N(\\mu,\\sigma^2/n)$ bei normaler GG."
+  },
+  {
+    "id": "punktschaetzung-z1",
+    "topicId": "punktschaetzung",
+    "front": "Was bedeutet Erwartungstreue eines Schätzers?",
+    "back": "$E(\\hat{\\theta})=\\theta$ für alle $\\theta$. Der Schätzer trifft den wahren Parameter im Durchschnitt ohne systematische Abweichung."
+  },
+  {
+    "id": "punktschaetzung-z2",
+    "topicId": "punktschaetzung",
+    "front": "Definition des Bias (Verzerrung)",
+    "back": "$Bias(\\theta,\\hat{\\theta})=E(\\hat{\\theta})-\\theta$. Erwartungstreu $\\Leftrightarrow$ $Bias=0$."
+  },
+  {
+    "id": "punktschaetzung-z3",
+    "topicId": "punktschaetzung",
+    "front": "Asymptotische Erwartungstreue",
+    "back": "$\\lim_{n\\to\\infty}E(\\hat{\\theta})=\\theta$. Der Bias verschwindet erst für $n \\to \\infty$, nicht für endliche $n$."
+  },
+  {
+    "id": "punktschaetzung-z4",
+    "topicId": "punktschaetzung",
+    "front": "Effizienz eines Schätzers",
+    "back": "$\\hat{\\theta}_1$ heißt effizienter als $\\hat{\\theta}_2$, wenn $Var(\\hat{\\theta}_1) < Var(\\hat{\\theta}_2)$ (bei gleicher Erwartungstreue)."
+  },
+  {
+    "id": "punktschaetzung-z5",
+    "topicId": "punktschaetzung",
+    "front": "Schwache Konsistenz eines Schätzers",
+    "back": "$\\lim_{n\\to\\infty}P(|\\hat{\\theta}-\\theta|>\\varepsilon)=0$ für alle $\\varepsilon>0$. Schätzer konvergiert in Wahrscheinlichkeit gegen $\\theta$."
+  },
+  {
+    "id": "punktschaetzung-z6",
+    "topicId": "punktschaetzung",
+    "front": "Starke Konsistenz (Konsistenz im quadratischen Mittel)",
+    "back": "$\\lim_{n\\to\\infty}MSE(\\theta,\\hat{\\theta})=0$. Hinreichend: $Bias\\to 0$ und $Var(\\hat{\\theta})\\to 0$."
+  },
+  {
+    "id": "punktschaetzung-z7",
+    "topicId": "punktschaetzung",
+    "front": "MSE: Definition und Zerlegung",
+    "back": "$MSE(\\theta,\\hat{\\theta})=E[(\\hat{\\theta}-\\theta)^2]=Var(\\hat{\\theta})+Bias(\\hat{\\theta})^2$. Fairer Vergleich verzerrter und unverzerrter Schätzer."
+  },
+  {
+    "id": "punktschaetzung-z8",
+    "topicId": "punktschaetzung",
+    "front": "Verschiebungssatz für die Varianz",
+    "back": "$Var(X)=E(X^2)-[E(X)]^2$. Nützlich zur Berechnung von $Var(\\hat{\\theta})$ ohne direktes Zentrieren."
+  },
+  {
+    "id": "punktschaetzung-z9",
+    "topicId": "punktschaetzung",
+    "front": "$\\bar{X}$ als Schätzer für $\\mu$: Eigenschaften",
+    "back": "Erwartungstreu: $E(\\bar{X})=\\mu$. Effizientester linearer erwartungstreuer Schätzer für $\\mu$ (Gauß-Markov)."
+  },
+  {
+    "id": "punktschaetzung-z10",
+    "topicId": "punktschaetzung",
+    "front": "Erwartungstreue Stichprobenvarianz",
+    "back": "$\\hat{\\sigma}^2=\\frac{1}{n-1}\\sum_{i=1}^{n}(X_i-\\bar{X})^2$, $\\quad E(\\hat{\\sigma}^2)=\\sigma^2$. Division durch $n-1$ (nicht $n$) sichert Erwartungstreue."
+  },
+  {
+    "id": "punktschaetzung-z11",
+    "topicId": "punktschaetzung",
+    "front": "Varianz des Varianzschätzers $\\hat{\\sigma}^2$",
+    "back": "$Var(\\hat{\\sigma}^2)=\\frac{1}{n}\\!\\left(\\mu_4-\\frac{n-3}{n-1}\\sigma^4\\right)$, wobei $\\mu_4$ das vierte zentrale Moment ist."
+  },
+  {
+    "id": "punktschaetzung-z12",
+    "topicId": "punktschaetzung",
+    "front": "Schätzer für den Anteilswert $p$",
+    "back": "$\\bar{p}=\\hat{p}=\\bar{X}=\\frac{X}{n}$, $\\quad E(\\bar{p})=p$, $\\quad Var(\\bar{p})=\\frac{p(1-p)}{n}$."
+  },
+  {
+    "id": "punktschaetzung-z13",
+    "topicId": "punktschaetzung",
+    "front": "Asymptotische Normalverteilung des Anteilsschätzers",
+    "back": "$\\sqrt{n}\\cdot\\frac{\\bar{p}-p}{\\sqrt{p(1-p)}} \\xrightarrow{d} N(0,1)$ für $n \\to \\infty$ (via ZGWS)."
+  },
+  {
+    "id": "punktschaetzung-z14",
+    "topicId": "punktschaetzung",
+    "front": "Wann ist ein Schätzer einem anderen vorzuziehen?",
+    "back": "Bei gleichem Bias: kleinerer MSE bzw. kleinere Varianz. Ohne Erwartungstreue: MSE-Vergleich entscheidend."
+  },
+  {
+    "id": "punktschaetzung-z15",
+    "topicId": "punktschaetzung",
+    "front": "Dartscheiben-Analogie für Schätzgüte",
+    "back": "Erwartungstreu = trifft im Mittel die Mitte. Effizient = enge Streuung. Ideal: erwartungstreu UND geringe Varianz."
+  },
+  {
+    "id": "punktschaetzung-z16",
+    "topicId": "punktschaetzung",
+    "front": "Wann ist ein Schätzer asymptotisch normalverteilt?",
+    "back": "Wenn er via ZGWS für $n \\to \\infty$ gegen $N(\\theta, \\sigma^2/n)$ konvergiert. Gilt z. B. für $\\bar{X}$ und $\\bar{p}$."
+  },
+  {
+    "id": "punktschaetzung-z17",
+    "topicId": "punktschaetzung",
+    "front": "Warum Division durch $n-1$ bei $\\hat{\\sigma}^2$?",
+    "back": "Die $n$ Abweichungen $(X_i-\\bar{X})$ haben nur $n-1$ Freiheitsgrade, da $\\sum(X_i-\\bar{X})=0$ eine lineare Nebenbedingung ist."
+  },
+  {
+    "id": "punktschaetzung-z18",
+    "topicId": "punktschaetzung",
+    "front": "Konsistenz von $\\bar{X}$: Nachweis",
+    "back": "$Var(\\bar{X})=\\sigma^2/n \\to 0$ und $Bias=0 \\Rightarrow MSE \\to 0 \\Rightarrow$ stark konsistent."
+  },
+  {
+    "id": "punktschaetzung-z19",
+    "topicId": "punktschaetzung",
+    "front": "Was ist ein Punkt­schätzer?",
+    "back": "Eine Stichprobenfunktion, die einen unbekannten Parameter durch einen einzigen Zahlenwert (Punktschätzung) approximiert."
+  },
+  {
+    "id": "punktschaetzung-z20",
+    "topicId": "punktschaetzung",
+    "front": "MSE bei erwartungstreuen Schätzern",
+    "back": "Wenn $Bias=0$: $MSE(\\theta,\\hat{\\theta})=Var(\\hat{\\theta})$. Effizienzvergleich reduziert sich auf Varianzvergleich."
+  },
+  {
+    "id": "punktschaetzung-z21",
+    "topicId": "punktschaetzung",
+    "front": "Asymptotischer Bias",
+    "back": "$\\lim_{n\\to\\infty}Bias(\\theta,\\hat{\\theta})=0$. Schwächer als Erwartungstreue; akzeptabel wenn Varianz ebenfalls gegen 0 geht."
+  },
+  {
+    "id": "punktschaetzung-z22",
+    "topicId": "punktschaetzung",
+    "front": "Beispiel: verzerrter Varianzschätzer",
+    "back": "$\\tilde{\\sigma}^2=\\frac{1}{n}\\sum(X_i-\\bar{X})^2$ hat $E(\\tilde{\\sigma}^2)=\\frac{n-1}{n}\\sigma^2$, also $Bias=-\\frac{\\sigma^2}{n}$ (negativ verzerrt)."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z1",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Was ist ein Konfidenzintervall?",
+    "back": "Zufälliges Intervall $[S_u; S_o]$ mit $P(\\theta \\in [S_u; S_o])=1-\\alpha$. Überdeckt den wahren Parameter mit Wahrscheinlichkeit $1-\\alpha$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z2",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Konfidenzniveau $1-\\alpha$",
+    "back": "Vertrauenswahrscheinlichkeit, mit der das KI den wahren Parameter enthält. Typisch: $0{,}90$, $0{,}95$, $0{,}99$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z3",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Irrtumswahrscheinlichkeit $\\alpha$",
+    "back": "$P(\\theta \\notin [S_u; S_o])=\\alpha$. Wahrscheinlichkeit, dass das konkrete KI den wahren Parameter nicht enthält."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z4",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Intervalllänge eines KI",
+    "back": "$L=S_o-S_u$. Kürzeres Intervall = präzisere Schätzung; abhängig von $n$, $\\sigma^2$ und $\\alpha$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z5",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "KI für $\\mu$ bei bekannter Varianz (Gauß-KI)",
+    "back": "$\\left[\\bar{X}-\\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}};\\;\\bar{X}+\\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}}\\right]$. Setzt Normalverteilung oder $n \\ge 30$ voraus."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z6",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Intervalllänge des Gauß-KI",
+    "back": "$L=\\frac{2\\,\\sigma\\,z_{1-\\alpha/2}}{\\sqrt{n}}$. Kleiner bei größerem $n$, kleinerem $\\sigma$ oder kleinerem $z_{1-\\alpha/2}$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z7",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Mindeststichprobenumfang für vorgegebene Länge $L$ (bekannte Varianz)",
+    "back": "$n \\ge \\left(\\frac{2\\,\\sigma\\,z_{1-\\alpha/2}}{L}\\right)^2$. Immer aufrunden auf nächste ganze Zahl."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z8",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Wie beeinflusst $\\alpha$ die KI-Länge?",
+    "back": "Größeres $\\alpha$ $\\Rightarrow$ kleineres $z_{1-\\alpha/2}$ $\\Rightarrow$ kürzeres KI, aber geringere Vertrauenswahrscheinlichkeit. Trade-off."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z9",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "KI für $\\mu$ bei unbekannter Varianz",
+    "back": "$\\left[\\bar{X} \\pm t_{n-1,\\,1-\\alpha/2}\\,\\frac{\\hat{\\sigma}}{\\sqrt{n}}\\right]$. Verwendet $t$-Verteilung mit $n-1$ Freiheitsgraden statt $z$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z10",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Pivotgröße bei unbekannter Varianz",
+    "back": "$\\frac{\\sqrt{n}(\\bar{X}-\\mu)}{\\hat{\\sigma}} \\sim t_{n-1}$. Analog zur Standardisierung, aber mit $\\hat{\\sigma}$ statt $\\sigma$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z11",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "$t$-Verteilung vs. Standardnormalverteilung",
+    "back": "$t_{n-1}$ hat breitere Ränder als $N(0,1)$. Für $n \\ge 30$ Faustregel: $t_{n-1,1-\\alpha/2} \\approx z_{1-\\alpha/2}$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z12",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "KI für $\\mu$ bei nicht-normalverteilter GG (bekannte Varianz)",
+    "back": "$\\left[\\bar{X} \\pm \\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}}\\right]$. Approximativ gültig via ZGWS für $n \\ge 30$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z13",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "KI für $\\mu$ bei nicht-normalverteilter GG (unbekannte Varianz)",
+    "back": "$\\left[\\bar{X} \\pm \\frac{z_{1-\\alpha/2}\\,\\hat{\\sigma}}{\\sqrt{n}}\\right]$. Doppelt approximativ (ZGWS + $\\hat{\\sigma}$ statt $\\sigma$); $n \\ge 30$ erforderlich."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z14",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Approximatives KI für den Anteil $p$",
+    "back": "$\\left[\\bar{X} \\pm \\frac{z_{1-\\alpha/2}\\,\\hat{\\sigma}}{\\sqrt{n}}\\right]$ mit $\\hat{\\sigma}=\\sqrt{\\bar{X}(1-\\bar{X})}$. Approximation via ZGWS."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z15",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Obere Schranke der geschätzten Varianz beim Anteil",
+    "back": "$\\hat{\\sigma}^2=\\hat{p}(1-\\hat{p}) \\le \\tfrac{1}{4}$. Maximum bei $\\hat{p}=0{,}5$ (Worst Case für konservative KI-Bestimmung)."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z16",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Mindeststichprobenumfang für Anteil $p$ (konservativ)",
+    "back": "$n \\ge \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$. Nutzt $\\hat{\\sigma}^2 \\le 1/4$; $\\varepsilon$ ist die halbe gewünschte Intervalllänge."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z17",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Mindeststichprobenumfang bei bekanntem $\\hat{p}$",
+    "back": "$n \\ge \\left(\\frac{z_{1-\\alpha/2}}{L^*}\\right)^2$ mit $L^*=2\\varepsilon$. Kleiner als konservativer Wert, wenn $\\hat{p}$ weit von $0{,}5$ entfernt."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z18",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Richtige Interpretation eines 95%-KI",
+    "back": "Bei 100 unabhängigen Stichproben überdecken ca. 95 der berechneten KIs den wahren Parameter. Nicht: der Parameter liegt mit 95% Wahrscheinlichkeit im konkreten Intervall."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z19",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Wann t-KI, wann z-KI?",
+    "back": "t-KI: $\\sigma$ unbekannt, normalverteilte GG. z-KI: $\\sigma$ bekannt oder $n \\ge 30$ (Approximation). Bei $n \\ge 30$ und unbekanntem $\\sigma$: z-KI mit $\\hat{\\sigma}$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z20",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Stichprobenvarianz $S^2$ im KI-Kontext",
+    "back": "$S^2=\\hat{\\sigma}^2=\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$. Wird im t-KI als Ersatz für unbekanntes $\\sigma^2$ eingesetzt."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z21",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Einfluss von $n$ auf die KI-Länge",
+    "back": "$L \\propto \\frac{1}{\\sqrt{n}}$. Vierfaches $n$ halbiert die Intervalllänge. Präzision wächst langsam mit dem Stichprobenumfang."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z22",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Zusammenfassung: KI-Formeln im Überblick",
+    "back": "Bekannt $\\sigma$, normal/groß $n$: z-KI. Unbekannt $\\sigma$, normal: t-KI. Unbekannt $\\sigma$, $n\\ge30$: z-KI mit $\\hat{\\sigma}$. Anteil: z-KI mit $\\hat{p}(1-\\hat{p})$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z23",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Quantil $z_{1-\\alpha/2}$ für gängige Niveaus",
+    "back": "$1-\\alpha=0{,}90$: $z=1{,}645$. $1-\\alpha=0{,}95$: $z=1{,}960$. $1-\\alpha=0{,}99$: $z=2{,}576$."
+  },
+  {
+    "id": "intervallschaetzung-konfidenzintervalle-z24",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "front": "Warum ist das KI zufällig, der Parameter aber fest?",
+    "back": "In der frequentistischen Statistik ist $\\theta$ ein fester unbekannter Wert. Die Zufälligkeit liegt im Intervall $[S_u,S_o]$, das von der zufälligen Stichprobe abhängt."
+  }
+]

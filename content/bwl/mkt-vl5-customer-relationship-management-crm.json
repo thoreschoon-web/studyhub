@@ -472,6 +472,48 @@
       "topicId": "mkt-vl5-customer-relationship-management-crm",
       "front": "Warum ist der CLV im Gewinnungsjahr oft negativ?",
       "back": "Weil die hohen **Akquisitionskosten** (CAC) im ersten Jahr anfallen und der Deckungsbeitrag aus dem noch geringen Geschaeftsvolumen nicht ausreicht. Der CLV amortisiert sich erst in den Folgejahren."
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z1",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Formel: Customer Lifetime Value (CLV)",
+      "back": "$CLV = -I_0 + \\sum_{t=1}^{n} \\dfrac{x_t \\cdot (p - k) - A_t}{(1 + r)^t}$\n\n$I_0$=Akquisitionskosten, $x_t$=Absatz, $p-k$=Deckungsbeitrag/Einheit, $A_t$=Betreuungskosten, $r$=Diskontierungssatz."
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z2",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was sind die Phasen des Kundenlebenszyklus im CRM?",
+      "back": "**Gewinnung → Bindung → Entwicklung → Trennung** (ggf. Rückgewinnung). CRM gestaltet diese Phasen systematisch mithilfe von Analyse, Strategie, Technologie und Prozessen."
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z3",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was ist die RFMR-Methode?",
+      "back": "Kundenstrukturanalyse anhand von:\n- **R**ecency (letztes Kaufdatum)\n- **F**requency (Kaufhäufigkeit)\n- **M**onetary Ratio (Umsatzhöhe)\nJede Dimension wird bepunktet; der Gesamtscore dient zur Kundensegmentierung."
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z4",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Formel: Customer Acquisition Cost (CAC)",
+      "back": "$CAC = \\dfrac{\\text{Gesamtkosten Marketing} + \\text{Vertriebskosten}}{\\text{Anzahl Neukunden}}$"
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z5",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Was ist Up-Selling vs. Cross-Selling?",
+      "back": "**Up-Selling**: Kunde kauft höherwertige Variante statt Basisprodukt. **Cross-Selling**: Kunde kauft zusätzliche Produkte (Zukaufmatrix zeigt Wahrscheinlichkeiten). Beide dienen der Kundenentwicklung im CRM."
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z6",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Vier Felder des Kundenportfolios",
+      "back": "Matrix: **Kundenattraktivität** × **relative Lieferantenposition**.\n- **Stars**: ausbauen\n- **Ertrags-Kunden**: sichern\n- **Fragezeichen**: großer Schritt oder Exit\n- **Mitnahme-Kunden**: selektiver Rückzug"
+    },
+    {
+      "id": "mkt-vl5-customer-relationship-management-crm-z7",
+      "topicId": "mkt-vl5-customer-relationship-management-crm",
+      "front": "Formel: CLV-Abzinsungsrate mit Risikofaktor",
+      "back": "$AR = (1 + i \\cdot rf)^n$\n\n$i$=Zinssatz, $rf$=Risikofaktor, $n$=Perioden. Beispiel: $(1{,}16)^2 = 1{,}35$."
     }
   ],
   "quiz": [

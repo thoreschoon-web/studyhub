@@ -42,12 +42,42 @@
           "kind": "table",
           "id": "vier-ansaetze-tabelle",
           "title": "Vier Ansätze der Leistungsbeurteilung im Vergleich",
-          "headers": ["Ansatz", "Was wird gemessen?", "Methoden/Beispiele", "Vorteile", "Nachteile"],
+          "headers": [
+            "Ansatz",
+            "Was wird gemessen?",
+            "Methoden/Beispiele",
+            "Vorteile",
+            "Nachteile"
+          ],
           "rows": [
-            ["**1. Vergleichender Ansatz**", "Leistung im Vergleich zu anderen Mitarbeitern", "Forced Ranking, Forced Distribution (20-70-10)", "Einfach, erzwingt Differenzierung", "Willkürlich bei kleinen Teams, fördert Konkurrenz"],
-            ["**2. Eigenschaftsansatz**", "Persönlichkeitseigenschaften (Traits) des Mitarbeiters", "Beurteilungsskalen für Pünktlichkeit, Initiative, Zuverlässigkeit", "Einfach zu verstehen", "Subjektiv, wenig verhaltensbasiert, rechtlich angreifbar"],
-            ["**3. Verhaltensansatz**", "Konkretes beobachtbares Verhalten", "BARS (Behaviorally Anchored Rating Scales)", "Objektiver, verhaltensorientiert", "Aufwändig zu entwickeln, nicht für alle Jobs geeignet"],
-            ["**4. Ergebnisorientierter Ansatz**", "Erreichte Ziele und messbare Ergebnisse", "Management by Objectives (MbO), OKR", "Klar messbar, leistungsgerecht", "Kann zu Tunnelblick führen (nur Zahlen zählen)"]
+            [
+              "**1. Vergleichender Ansatz**",
+              "Leistung im Vergleich zu anderen Mitarbeitern",
+              "Forced Ranking, Forced Distribution (20-70-10)",
+              "Einfach, erzwingt Differenzierung",
+              "Willkürlich bei kleinen Teams, fördert Konkurrenz"
+            ],
+            [
+              "**2. Eigenschaftsansatz**",
+              "Persönlichkeitseigenschaften (Traits) des Mitarbeiters",
+              "Beurteilungsskalen für Pünktlichkeit, Initiative, Zuverlässigkeit",
+              "Einfach zu verstehen",
+              "Subjektiv, wenig verhaltensbasiert, rechtlich angreifbar"
+            ],
+            [
+              "**3. Verhaltensansatz**",
+              "Konkretes beobachtbares Verhalten",
+              "BARS (Behaviorally Anchored Rating Scales)",
+              "Objektiver, verhaltensorientiert",
+              "Aufwändig zu entwickeln, nicht für alle Jobs geeignet"
+            ],
+            [
+              "**4. Ergebnisorientierter Ansatz**",
+              "Erreichte Ziele und messbare Ergebnisse",
+              "Management by Objectives (MbO), OKR",
+              "Klar messbar, leistungsgerecht",
+              "Kann zu Tunnelblick führen (nur Zahlen zählen)"
+            ]
           ]
         }
       ],
@@ -123,11 +153,31 @@
           "kind": "table",
           "id": "9-box-grid",
           "title": "9-Box-Matrix: Leistung × Potenzial",
-          "headers": ["", "Niedriges Potenzial", "Mittleres Potenzial", "Hohes Potenzial"],
+          "headers": [
+            "",
+            "Niedriges Potenzial",
+            "Mittleres Potenzial",
+            "Hohes Potenzial"
+          ],
           "rows": [
-            ["**Hohe Leistung**", "Experte (halten)", "Schlüsselkraft (entwickeln)", "Star (fördern, binden)"],
-            ["**Mittlere Leistung**", "Sackgasse (beobachten)", "Kernkraft (coachen)", "Aufsteiger (fördern)"],
-            ["**Niedrige Leistung**", "Problem (ansprechen)", "Fragezeichen (unterstützen)", "Rätsel (investieren)"]
+            [
+              "**Hohe Leistung**",
+              "Experte (halten)",
+              "Schlüsselkraft (entwickeln)",
+              "Star (fördern, binden)"
+            ],
+            [
+              "**Mittlere Leistung**",
+              "Sackgasse (beobachten)",
+              "Kernkraft (coachen)",
+              "Aufsteiger (fördern)"
+            ],
+            [
+              "**Niedrige Leistung**",
+              "Problem (ansprechen)",
+              "Fragezeichen (unterstützen)",
+              "Rätsel (investieren)"
+            ]
           ]
         }
       ],
@@ -153,18 +203,62 @@
           "kind": "table",
           "id": "beurteilungsfehler-tabelle",
           "title": "Typische Beurteilungsfehler in der Leistungsbeurteilung",
-          "headers": ["Fehler", "Was passiert?", "Anschauliches Beispiel"],
+          "headers": [
+            "Fehler",
+            "Was passiert?",
+            "Anschauliches Beispiel"
+          ],
           "rows": [
-            ["**Halo-Effekt**", "Eine herausragende Eigenschaft überstrahlt alles andere — alle Dimensionen werden zu positiv bewertet", "Mitarbeiterin ist sehr gepflegt und freundlich → Führungskraft bewertet auch Fachkompetenz und Pünktlichkeit automatisch besser"],
-            ["**Horns-Effekt** (Gegenteil Halo)", "Eine negative Eigenschaft färbt alle anderen Dimensionen negativ", "Mitarbeiter hat einmal einen Fehler gemacht → wird in allen Bereichen schlechter bewertet"],
-            ["**Kontrasteffekt**", "Beurteilung wird durch den vorherigen Beurteilten verzerrt", "Nach einem sehr schlechten Mitarbeiter wirkt der nächste durchschnittliche Mitarbeiter plötzlich sehr gut"],
-            ["**Primäreffekt**", "Erster Eindruck bleibt haften, prägt die gesamte Beurteilung", "Mitarbeiter hatte im Januar einen starken Start → wird trotz späterer Schwäche gut bewertet"],
-            ["**Recency-Effekt** (Nikolaus-Effekt)", "Nur die jüngsten Ereignisse (kurz vor der Beurteilung) zählen", "Mitarbeiter hat kurz vor dem Jahresgespräch ein Projekt gut abgeschlossen → verdeckt sein schlechtes erstes Halbjahr"],
-            ["**Kleber-Effekt**", "Vorjahresbewertung klebt fest — kaum Veränderung von Jahr zu Jahr", "Wer letztes Jahr eine 3 hatte, bekommt wieder eine 3, egal ob er sich verbessert hat"],
-            ["**Pygmalion-Effekt**", "Hohe Erwartungen der Führungskraft führen zu tatsächlich höherer Leistung des Mitarbeiters", "Führungskraft glaubt an Mitarbeiterin → gibt ihr anspruchsvollere Aufgaben → sie wächst daran"],
-            ["**Tendenz zur Mitte**", "Alle Mitarbeiter werden mittelmäßig bewertet — extreme Noten werden vermieden", "Niemand bekommt 1 oder 5, alle erhalten eine 3 — um Konflikte zu vermeiden"],
-            ["**Milde-Effekt**", "Systematisch zu gute Bewertungen (Grade Inflation)", "Alle bekommen 4 oder 5, weil Vorgesetzte keine Konflikte möchten (Gentleman's Three-Problem)"],
-            ["**Strenge-Effekt**", "Systematisch zu schlechte Bewertungen — übertrieben kritische Maßstäbe", "Ein perfektionistischer Chef gibt nie eine 5 — der Beste bekommt eine 3"]
+            [
+              "**Halo-Effekt**",
+              "Eine herausragende Eigenschaft überstrahlt alles andere — alle Dimensionen werden zu positiv bewertet",
+              "Mitarbeiterin ist sehr gepflegt und freundlich → Führungskraft bewertet auch Fachkompetenz und Pünktlichkeit automatisch besser"
+            ],
+            [
+              "**Horns-Effekt** (Gegenteil Halo)",
+              "Eine negative Eigenschaft färbt alle anderen Dimensionen negativ",
+              "Mitarbeiter hat einmal einen Fehler gemacht → wird in allen Bereichen schlechter bewertet"
+            ],
+            [
+              "**Kontrasteffekt**",
+              "Beurteilung wird durch den vorherigen Beurteilten verzerrt",
+              "Nach einem sehr schlechten Mitarbeiter wirkt der nächste durchschnittliche Mitarbeiter plötzlich sehr gut"
+            ],
+            [
+              "**Primäreffekt**",
+              "Erster Eindruck bleibt haften, prägt die gesamte Beurteilung",
+              "Mitarbeiter hatte im Januar einen starken Start → wird trotz späterer Schwäche gut bewertet"
+            ],
+            [
+              "**Recency-Effekt** (Nikolaus-Effekt)",
+              "Nur die jüngsten Ereignisse (kurz vor der Beurteilung) zählen",
+              "Mitarbeiter hat kurz vor dem Jahresgespräch ein Projekt gut abgeschlossen → verdeckt sein schlechtes erstes Halbjahr"
+            ],
+            [
+              "**Kleber-Effekt**",
+              "Vorjahresbewertung klebt fest — kaum Veränderung von Jahr zu Jahr",
+              "Wer letztes Jahr eine 3 hatte, bekommt wieder eine 3, egal ob er sich verbessert hat"
+            ],
+            [
+              "**Pygmalion-Effekt**",
+              "Hohe Erwartungen der Führungskraft führen zu tatsächlich höherer Leistung des Mitarbeiters",
+              "Führungskraft glaubt an Mitarbeiterin → gibt ihr anspruchsvollere Aufgaben → sie wächst daran"
+            ],
+            [
+              "**Tendenz zur Mitte**",
+              "Alle Mitarbeiter werden mittelmäßig bewertet — extreme Noten werden vermieden",
+              "Niemand bekommt 1 oder 5, alle erhalten eine 3 — um Konflikte zu vermeiden"
+            ],
+            [
+              "**Milde-Effekt**",
+              "Systematisch zu gute Bewertungen (Grade Inflation)",
+              "Alle bekommen 4 oder 5, weil Vorgesetzte keine Konflikte möchten (Gentleman's Three-Problem)"
+            ],
+            [
+              "**Strenge-Effekt**",
+              "Systematisch zu schlechte Bewertungen — übertrieben kritische Maßstäbe",
+              "Ein perfektionistischer Chef gibt nie eine 5 — der Beste bekommt eine 3"
+            ]
           ]
         }
       ],
@@ -235,6 +329,42 @@
       "topicId": "hr-performance-management-leistungsbeurteilun",
       "front": "Was ist das 360-Grad-Feedback?",
       "back": "Beim **360-Grad-Feedback** wird ein Mitarbeiter nicht nur vom Vorgesetzten bewertet, sondern aus **mehreren Perspektiven**: Vorgesetzter, Kollegen (Peers), eigene Mitarbeitende, externe Kunden und die eigene Selbsteinschätzung. Das liefert ein vollständigeres, runderes Bild der Leistung."
+    },
+    {
+      "id": "hr-performance-management-leistungsbeurteilun-z1",
+      "topicId": "hr-performance-management-leistungsbeurteilun",
+      "front": "Performance Management – Definition (Armstrong)",
+      "back": "Kontinuierlicher Prozess: Ziele setzen → beobachten → beurteilen → fördern. Ziel: Mitarbeiterleistung systematisch steuern und entwickeln."
+    },
+    {
+      "id": "hr-performance-management-leistungsbeurteilun-z2",
+      "topicId": "hr-performance-management-leistungsbeurteilun",
+      "front": "Vier Ansätze der Leistungsbeurteilung",
+      "back": "1. Vergleichend (Ranking, Forced Distribution) 2. Eigenschaft (trait-based) 3. Verhalten (BARS) 4. Ergebnis/Ziele (MbO)"
+    },
+    {
+      "id": "hr-performance-management-leistungsbeurteilun-z3",
+      "topicId": "hr-performance-management-leistungsbeurteilun",
+      "front": "Forced Ranking / Forced Distribution (20-70-10)",
+      "back": "Pflichtverteilung: 20% Top-Performer, 70% Mittelmäßige, 10% Low-Performer (Jack Welch). Praxis: Yahoo (Marissa Mayer). Kritik: destruktiv, willkürlich in guten Teams."
+    },
+    {
+      "id": "hr-performance-management-leistungsbeurteilun-z4",
+      "topicId": "hr-performance-management-leistungsbeurteilun",
+      "front": "Typische Beurteilungsfehler",
+      "back": "Halo-Effekt (ein Merkmal strahlt aus), Kontrasteffekt, Primär-/Recency-Effekt (Nikolaus-Effekt), Kleber-Effekt, Pygmalion-Effekt, Tendenz zur Mitte, Milde-/Strenge-Effekt."
+    },
+    {
+      "id": "hr-performance-management-leistungsbeurteilun-z5",
+      "topicId": "hr-performance-management-leistungsbeurteilun",
+      "front": "HBR: 'The Gentleman's Three' – Problem",
+      "back": "Grade Inflation/Compression: Fast alle Mitarbeitenden bekommen 4–5 (von 5). Differenzierung fehlt, Feedback wertlos. → Leistungsanreize kollabieren."
+    },
+    {
+      "id": "hr-performance-management-leistungsbeurteilun-z6",
+      "topicId": "hr-performance-management-leistungsbeurteilun",
+      "front": "9-Box-Grid",
+      "back": "Matrix: Leistung (niedrig/mittel/hoch) × Potenzial (niedrig/mittel/hoch). Instrument zur Identifikation von High Potentials und Entwicklungsbedarf."
     }
   ],
   "quiz": [
@@ -244,8 +374,15 @@
       "topicId": "hr-performance-management-leistungsbeurteilun",
       "difficulty": "leicht",
       "prompt": "Welcher Ansatz der Leistungsbeurteilung bewertet Mitarbeitende anhand ihrer persönlichen Eigenschaften wie Pünktlichkeit oder Initiative?",
-      "options": ["Vergleichender Ansatz", "Eigenschaftsansatz", "Verhaltensansatz", "Ergebnisorientierter Ansatz"],
-      "correct": [1],
+      "options": [
+        "Vergleichender Ansatz",
+        "Eigenschaftsansatz",
+        "Verhaltensansatz",
+        "Ergebnisorientierter Ansatz"
+      ],
+      "correct": [
+        1
+      ],
       "explanation": "Der **Eigenschaftsansatz** (trait-based) bewertet persönliche Charaktereigenschaften. Problem: Diese sind schwer objektiv zu messen und können diskriminierend sein."
     },
     {
@@ -269,7 +406,9 @@
         "20 % werden entlassen, 70 % befördert, 10 % erhalten Boni",
         "20 % OKR-Nutzer, 70 % MbO-Nutzer, 10 % ohne Zielvereinbarung"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das 20-70-10-Modell: **Top 20 %** (Stars, hohe Boni) — **Mittlere 70 %** (Vital Few, Weiterentwicklung) — **Untere 10 %** (Low Performer, müssen das Unternehmen verlassen). Jack Welch nannte die unteren 10 % 'Lemons'."
     },
     {
@@ -278,8 +417,15 @@
       "topicId": "hr-performance-management-leistungsbeurteilun",
       "difficulty": "mittel",
       "prompt": "Ein Mitarbeiter ist bekannt für sein eindrucksvolles, gepflegtes Auftreten. Sein Vorgesetzter bewertet ihn deshalb auch bei Fachkompetenz und Termintreue automatisch besser, obwohl er dort nur mittelmäßig ist. Welcher Beurteilungsfehler liegt vor?",
-      "options": ["Kontrasteffekt", "Recency-Effekt", "Halo-Effekt", "Kleber-Effekt"],
-      "correct": [2],
+      "options": [
+        "Kontrasteffekt",
+        "Recency-Effekt",
+        "Halo-Effekt",
+        "Kleber-Effekt"
+      ],
+      "correct": [
+        2
+      ],
       "explanation": "**Halo-Effekt**: Eine positive Eigenschaft (hier: gepflegtes Auftreten) wirft einen 'Heiligenschein' auf alle anderen Bewertungsdimensionen. Der Vorgesetzte generalisiert unbewusst von einer Stärke auf alle Bereiche."
     },
     {
@@ -303,7 +449,9 @@
         "Bewertungen verlieren ihre Aussagekraft für Personalentscheidungen",
         "Mitarbeiter werden demotiviert durch zu gute Noten"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Wenn alle Mitarbeiter 4er und 5er bekommen (Grade Inflation), lassen sich keine fundierten Personalentscheidungen mehr treffen: Wer soll befördert werden? Wer braucht Entwicklungsmaßnahmen? Das zentrale Problem im HBR-Case 'The Gentleman's Three': Ekdahl konnte mit den Daten (Durchschnitt 4,6) keine Entlassungen bei der M&A-Integration begründen."
     },
     {
@@ -318,7 +466,10 @@
         "Zyklus ist meist quartalsweise statt jährlich",
         "Zielerreichung wird mit dem Jahresbonus verknüpft"
       ],
-      "correct": [1, 2],
+      "correct": [
+        1,
+        2
+      ],
       "multiple": true,
       "explanation": "OKR-spezifische Merkmale: **(1) Transparenz** — OKRs sind oft unternehmensöffentlich, jeder sieht die Ziele aller Teams. **(2) Quartalsweise Zyklen** — deutlich kürzere Planungsperioden als das klassische MbO-Jahresmodell. Die Bonus-Verknüpfung gilt eher für MbO. Das gemeinsame Vereinbaren von Zielen kennen beide Methoden."
     },
@@ -329,7 +480,15 @@
       "difficulty": "mittel",
       "prompt": "Erkläre in 3–4 Sätzen, warum Forced Ranking auch in gut funktionierenden Teams problematisch ist.",
       "sampleAnswer": "Beim Forced Ranking müssen Führungskräfte einen fixen Prozentsatz (z.B. 10 %) als Low Performer einstufen, unabhängig von der tatsächlichen Teamleistung. Selbst wenn alle Mitarbeitenden ausgezeichnete Arbeit leisten, muss jemand 'verlieren'. Das demotiviert Mitarbeitende und fördert interne Konkurrenz statt Zusammenarbeit. Zudem kann es dazu führen, dass gute Mitarbeiter das Unternehmen verlassen (Regrettable Turnover), weil sie unfair beurteilt wurden.",
-      "keywords": ["unfair", "quota", "demotiviert", "konkurrenz", "unabhängig", "teamleistung", "low performer"],
+      "keywords": [
+        "unfair",
+        "quota",
+        "demotiviert",
+        "konkurrenz",
+        "unabhängig",
+        "teamleistung",
+        "low performer"
+      ],
       "explanation": "Das zentrale Problem: Die vorgegebene Verteilung ist unabhängig von der Realität. In einem Spitzen-Team verliert trotzdem jemand — was als zutiefst ungerecht empfunden wird und die Kooperationsbereitschaft senkt."
     },
     {
@@ -338,8 +497,15 @@
       "topicId": "hr-performance-management-leistungsbeurteilun",
       "difficulty": "schwer",
       "prompt": "SAP bewertet Mitarbeitende nicht nur nach messbaren Ergebnissen, sondern auch nach der 'How-Komponente'. Welchem der vier Beurteilungsansätze entspricht die 'How-Komponente' am ehesten?",
-      "options": ["Ergebnisorientierter Ansatz", "Verhaltensansatz", "Eigenschaftsansatz", "Vergleichender Ansatz"],
-      "correct": [1],
+      "options": [
+        "Ergebnisorientierter Ansatz",
+        "Verhaltensansatz",
+        "Eigenschaftsansatz",
+        "Vergleichender Ansatz"
+      ],
+      "correct": [
+        1
+      ],
       "explanation": "Die 'How-Komponente' bei SAP fragt, **wie** jemand arbeitet — also nach konkretem Verhalten (Teamfähigkeit, Hilfsbereitschaft, Kollegialität). Das entspricht dem **Verhaltensansatz**, der beobachtbares Verhalten bewertet. Der ergebnisorientierte Ansatz würde nur auf die Zahlen (Was wurde erreicht?) schauen."
     },
     {
@@ -358,7 +524,15 @@
       "difficulty": "schwer",
       "prompt": "Nils Ekdahl, HR-VP bei Circale Corporation, stellt fest, dass alle Mitarbeiter-Bewertungen zwischen 4 und 5 liegen (Durchschnitt 4,6). Die CFO verlangt datenbasierte Personalentscheidungen für den Stellenabbau nach einer M&A-Transaktion. Welches Problem liegt vor und welche Handlungsoptionen hat Ekdahl?",
       "sampleAnswer": "Das Problem ist Grade Inflation: Alle Bewertungen sind nach oben verzerrt, weil Führungskräfte aus Bequemlichkeit oder Angst vor Konflikten zu gute Noten vergeben. Dadurch sind die Daten für Personalentscheidungen wertlos. Ekdahl hat zwei Optionen: (1) Neue Bewertungsrunde anordnen — Führungskräfte werden trainiert, ehrlichere, differenziertere Noten zu vergeben; Vorteil: bessere Datenbasis; Nachteil: zeitaufwändig, Widerstände bei Managern. (2) Mit den vorhandenen Daten arbeiten — schnell, aber riskant, da Entlassungen ohne belastbare Grundlage rechtlich und moralisch schwierig sind. Langfristig sollte ein System eingeführt werden, das Grade Inflation strukturell verhindert (z.B. Forced Distribution mit Mindestanzahl niedriger Noten oder kalibrierte Bewertungssitzungen).",
-      "keywords": ["grade inflation", "differenzierung", "training", "neue runde", "datenbasiert", "personnel", "kalibrierung"],
+      "keywords": [
+        "grade inflation",
+        "differenzierung",
+        "training",
+        "neue runde",
+        "datenbasiert",
+        "personnel",
+        "kalibrierung"
+      ],
       "explanation": "Kernerkenntnis aus dem HBR-Case: Bewertungssysteme scheitern, wenn Ehrlichkeit nicht eingefordert oder incentiviert wird. Die Qualität des Feedback-Gesprächs und die Konsequenzen für Führungskräfte sind entscheidend."
     },
     {
@@ -367,8 +541,15 @@
       "topicId": "hr-performance-management-leistungsbeurteilun",
       "difficulty": "leicht",
       "prompt": "Welcher Beurteilungsfehler liegt vor, wenn ein Mitarbeiter kurz vor dem Jahresgespräch ein Projekt erfolgreich abschließt und dafür insgesamt sehr gut bewertet wird, obwohl er das ganze Jahr zuvor unterdurchschnittlich war?",
-      "options": ["Halo-Effekt", "Primäreffekt", "Recency-Effekt (Nikolaus-Effekt)", "Kontrasteffekt"],
-      "correct": [2],
+      "options": [
+        "Halo-Effekt",
+        "Primäreffekt",
+        "Recency-Effekt (Nikolaus-Effekt)",
+        "Kontrasteffekt"
+      ],
+      "correct": [
+        2
+      ],
       "explanation": "**Recency-Effekt (Nikolaus-Effekt):** Nur die aktuellen, jüngsten Ereignisse prägen die Beurteilung — weiter zurückliegende Leistungen (gut oder schlecht) werden untergewichtet. Der Name 'Nikolaus-Effekt' kommt daher, dass Kinder kurz vor dem 6. Dezember besonders brav sind."
     }
   ],

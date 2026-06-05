@@ -337,6 +337,48 @@
       "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
       "front": "Was bedeuten Broadening und Deepening des Marketing?",
       "back": "**Broadening** = Ausweitung der Anwendungsfelder (Dienstleistungen, Investitionsgüter, Nonprofit). **Deepening** = Erweiterung um gesellschaftliche Zieldimensionen (Nachhaltigkeit, Stakeholder-Interessen)."
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z1",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was ist Marketing laut AMA-/Kotler-Definition?",
+      "back": "Menschliche Tätigkeit zur Bedürfnisbefriedigung durch Austauschprozesse. Marketing = marktorientierte Unternehmensführung; ein Markt ist der (reale/virtuelle) Ort, an dem Angebot und Nachfrage aufeinandertreffen."
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z2",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Formel: Marktanteil",
+      "back": "$\\text{Marktanteil} = \\dfrac{\\text{Absatzvolumen}}{\\text{Marktvolumen}}$"
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z3",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was sind die 4 Ps des Marketing-Mix?",
+      "back": "**Product** (Produktpolitik), **Price** (Preispolitik), **Place** (Vertriebspolitik), **Promotion** (Kommunikationspolitik)."
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z4",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Formel: Ertrag Z im Marketing-Mix",
+      "back": "$Z = (P - k) \\cdot Q - K_{fix} - A - S$\n\n$P$=Listenpreis, $k$=Nachlass/Stück, $Q$=Menge, $A$=Werbung, $S$=Verkaufsförderung."
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z5",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was sind die Phasen der historischen Marketing-Entwicklung?",
+      "back": "Verkaufs- → Werbe- → 4-P- → Implementierungs- → marktorientierte Unternehmensführung / Relationship Marketing. Dazu Strategisierung, Broadening (sektorales Marketing) und Deepening (gesellschaftliche Ziele)."
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z6",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Was bedeutet AIDA?",
+      "back": "Stufenmodell der Werbewirkung: **A**ttention → **I**nterest → **D**esire → **A**ction."
+    },
+    {
+      "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z7",
+      "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+      "front": "Formel: Grenzkosten",
+      "back": "$K' = \\dfrac{dK}{dX} = \\dfrac{K_2 - K_1}{X_2 - X_1}$\n\nGrenzkosten = Kostenanstieg bei einer zusätzlichen produzierten Einheit."
     }
   ],
   "quiz": [

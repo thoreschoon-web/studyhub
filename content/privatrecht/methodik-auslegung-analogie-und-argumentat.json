@@ -31,12 +31,37 @@
           "kind": "table",
           "id": "fig-auslegung-tabelle",
           "title": "Die vier Auslegungsmethoden im Überblick",
-          "headers": ["Methode", "Frage", "Hilfsmittel", "Typisches Beispiel"],
+          "headers": [
+            "Methode",
+            "Frage",
+            "Hilfsmittel",
+            "Typisches Beispiel"
+          ],
           "rows": [
-            ["Grammatikalisch", "Was bedeutet das Wort?", "Duden, Rechtswörterbuch, Legaldefinitionen", "\"körperlich\" in § 90 BGB → kein Strom"],
-            ["Systematisch", "Wie passt der Begriff in den Kontext?", "Umliegende Paragraphen, Abschnittsüberschriften", "\"unverzüglich\" in § 121 BGB durch § 121 I 1 BGB definiert"],
-            ["Teleologisch", "Welchen Zweck verfolgt die Norm?", "Schutzzweck, Interessenabwägung", "Enge Auslegung von § 107 BGB zum Schutz Minderjähriger"],
-            ["Historisch", "Was wollte der Gesetzgeber?", "Gesetzesbegründungen, Parlamentsprotokolle", "BGB-Materialien zu Begriff \"Sache\" (1900)"]
+            [
+              "Grammatikalisch",
+              "Was bedeutet das Wort?",
+              "Duden, Rechtswörterbuch, Legaldefinitionen",
+              "\"körperlich\" in § 90 BGB → kein Strom"
+            ],
+            [
+              "Systematisch",
+              "Wie passt der Begriff in den Kontext?",
+              "Umliegende Paragraphen, Abschnittsüberschriften",
+              "\"unverzüglich\" in § 121 BGB durch § 121 I 1 BGB definiert"
+            ],
+            [
+              "Teleologisch",
+              "Welchen Zweck verfolgt die Norm?",
+              "Schutzzweck, Interessenabwägung",
+              "Enge Auslegung von § 107 BGB zum Schutz Minderjähriger"
+            ],
+            [
+              "Historisch",
+              "Was wollte der Gesetzgeber?",
+              "Gesetzesbegründungen, Parlamentsprotokolle",
+              "BGB-Materialien zu Begriff \"Sache\" (1900)"
+            ]
           ]
         }
       ],
@@ -86,13 +111,43 @@
           "kind": "table",
           "id": "fig-argumentationsformen",
           "title": "Juristische Argumentationsformen im Überblick",
-          "headers": ["Argumentationsform", "Lateinischer Begriff", "Kernaussage", "Einsatz"],
+          "headers": [
+            "Argumentationsform",
+            "Lateinischer Begriff",
+            "Kernaussage",
+            "Einsatz"
+          ],
           "rows": [
-            ["Umkehrschluss", "argumentum e contrario", "Gilt hier → gilt dort umgekehrt nicht", "Gegen Analogie; bewusstes Schweigen des Gesetzes"],
-            ["Erst-recht-Schluss", "a fortiori / a minore / a maiore", "Was schon für weniger gilt, gilt erst recht für mehr", "Für Analogie; Erweiterung einer Norm"],
-            ["Regel-Ausnahme", "–", "Ausnahmen sind eng auszulegen", "Gegen analoge Anwendung von Ausnahmeregelungen"],
-            ["Schluss zum Absurden", "argumentum ad absurdum", "Untragbares Ergebnis → Auslegung falsch", "Stütze für Analogie oder teleologische Reduktion"],
-            ["Zirkelschluss", "–", "Ergebnis ist Teil der Begründung", "UNZULÄSSIG – nie verwenden!"]
+            [
+              "Umkehrschluss",
+              "argumentum e contrario",
+              "Gilt hier → gilt dort umgekehrt nicht",
+              "Gegen Analogie; bewusstes Schweigen des Gesetzes"
+            ],
+            [
+              "Erst-recht-Schluss",
+              "a fortiori / a minore / a maiore",
+              "Was schon für weniger gilt, gilt erst recht für mehr",
+              "Für Analogie; Erweiterung einer Norm"
+            ],
+            [
+              "Regel-Ausnahme",
+              "–",
+              "Ausnahmen sind eng auszulegen",
+              "Gegen analoge Anwendung von Ausnahmeregelungen"
+            ],
+            [
+              "Schluss zum Absurden",
+              "argumentum ad absurdum",
+              "Untragbares Ergebnis → Auslegung falsch",
+              "Stütze für Analogie oder teleologische Reduktion"
+            ],
+            [
+              "Zirkelschluss",
+              "–",
+              "Ergebnis ist Teil der Begründung",
+              "UNZULÄSSIG – nie verwenden!"
+            ]
           ]
         }
       ],
@@ -174,6 +229,66 @@
       "topicId": "methodik-auslegung-analogie-und-argumentat",
       "front": "Welche Auslegungsmethode verliert mit zunehmendem Zeitablauf an Gewicht?",
       "back": "Die historische Auslegung – weil der ursprüngliche Wille des Gesetzgebers auf heutige Sachverhalte immer schlechter passt, je länger das Gesetz zurückliegt."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z1",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was sind die vier klassischen Auslegungsmethoden?",
+      "back": "1. Grammatikalisch (Wortlaut), 2. Systematisch (Zusammenhang im Gesetz), 3. Teleologisch (Sinn und Zweck), 4. Historisch (Entstehungsgeschichte)."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z2",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was pruft die grammatikalische Auslegung?",
+      "back": "Den sprachlichen Wortlaut der Norm: mogliche Bedeutungen nach dem allgemeinen oder juristischen Sprachgebrauch. Bildet die Wortlautgrenze."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z3",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was ist die teleologische Auslegung?",
+      "back": "Auslegung nach Sinn und Zweck der Norm (ratio legis). Fragt, welches Ziel der Gesetzgeber mit der Regelung verfolgt."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z4",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was sind unbestimmte Rechtsbegriffe und wie werden sie gehandhabt?",
+      "back": "Begriffe mit Auslegungsspielraum (z.B. 'gute Sitten', 'Treu und Glauben'). Sie werden durch Auslegung und Konkretisierung im Einzelfall gefullt."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z5",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was sind die Voraussetzungen einer Analogie?",
+      "back": "1. Planwidrige Regelungslucke im Gesetz, 2. vergleichbare Interessenlage (Gleichheit der Sachverhalte). Die Norm wird auf den nicht geregelten Fall angewendet."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z6",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was ist die Wortlautgrenze?",
+      "back": "Auslegung darf den moglichen Wortsinn nicht uberschreiten; daruber hinaus ist nur Analogie (oder teleologische Reduktion) zugelassen, keine Auslegung."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z7",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was ist eine teleologische Reduktion?",
+      "back": "Einschrankung des zu weit gefassten Wortlauts einer Norm auf ihren eigentlichen Zweck. Gegenstuck zur Analogie (dort Ausdehnung, hier Einschrankung)."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z8",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was ist ein Umkehrschluss (argumentum e contrario)?",
+      "back": "Aus dem Schweigen des Gesetzes zu einem Fall wird geschlossen, dass die Norm auf diesen Fall gerade nicht angewendet werden soll."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z9",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was ist ein Erst-recht-Schluss (a maiore / a minore)?",
+      "back": "A maiore ad minus: Was fur das Mehr gilt, gilt erst recht fur das Weniger. A minore ad maius: Was beim Weniger verboten ist, ist beim Mehr erst recht verboten."
+    },
+    {
+      "id": "methodik-auslegung-analogie-und-argumentat-z10",
+      "topicId": "methodik-auslegung-analogie-und-argumentat",
+      "front": "Was ist das Regel-Ausnahme-Verhaltnis in der Argumentation?",
+      "back": "Ausnahmenormen sind eng auszulegen und nicht analog anzuwenden. Die Regel gilt im Zweifel; die Ausnahme bedarf besonderer Begrundung."
     }
   ],
   "quiz": [
@@ -189,7 +304,9 @@
         "Teleologische Auslegung",
         "Historische Auslegung"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Teleologisch kommt von griech. 'telos' = Ziel/Zweck. Diese Methode fragt nach den hinter der Norm liegenden Interessen und dem Normzweck."
     },
     {
@@ -204,7 +321,9 @@
         "Den Sinnzusammenhang, in dem ein Begriff im Gesetz verwendet wird",
         "Das Ergebnis der Norm im Einzelfall"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Systematisch = Zusammenhang. Diese Methode betrachtet, wie ein Begriff im Kontext des Gesetzes (umliegende Paragraphen, Abschnitte) zu verstehen ist."
     },
     {
@@ -228,7 +347,9 @@
         "Das In-sich-Geschäft ist sofort wirksam, da § 108 BGB nur für Minderjährige gilt.",
         "Es bedarf keiner Genehmigung, weil § 181 BGB abschließend ist."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Durch analoge Anwendung des § 108 I BGB auf das In-sich-Geschäft nach § 181 BGB ist dieses zunächst nur schwebend unwirksam. Eine Genehmigung kann die Wirksamkeit herbeiführen – genauso wie beim Minderjährigengeschäft."
     },
     {
@@ -243,7 +364,9 @@
         "Beide Methoden sind identisch – sie unterscheiden sich nur in der Begründung.",
         "Die teleologische Reduktion ist nur bei zwingenden Normen möglich."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Merke: Analogie = Norm über Wortlautgrenze hinaus anwenden (Lücke füllen). Teleologische Reduktion = Norm trotz eindeutigen Wortlauts einschränken (Anwendungsbereich reduzieren). Beide stützen sich auf teleologische (zweckorientierte) Argumente."
     },
     {
@@ -267,7 +390,9 @@
         "Teleologische Reduktion: § 165 BGB muss auf Vollkaufleute eingeschränkt werden.",
         "Analogie: § 165 BGB wird auf den Geschäftsunfähigen analog angewendet."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Aus § 165 BGB folgt per Umkehrschluss: Da das Gesetz nur den beschränkt Geschäftsfähigen als tauglichen Vertreter nennt, kann ein Geschäftsunfähiger nicht wirksam vertreten. Der Umkehrschluss schließt die Lücke, weil sie gewollt ist."
     },
     {
@@ -282,7 +407,11 @@
         "Identische Tatbestandsmerkmale mit der heranzuziehenden Norm",
         "Teleologische Begründung, warum die Rechtsfolge zu übertragen ist"
       ],
-      "correct": [0, 1, 3],
+      "correct": [
+        0,
+        1,
+        3
+      ],
       "multiple": true,
       "explanation": "Für eine Analogie braucht man: (1) planwidrige Lücke, (2) vergleichbare – nicht identische! – Interessenlage und (3) teleologische Begründung der Übertragung. Identische Tatbestandsmerkmale sind gerade nicht erforderlich – sonst wäre keine Analogie nötig."
     },
@@ -302,7 +431,14 @@
       "difficulty": "schwer",
       "prompt": "Erläutern Sie in eigenen Worten, warum Ausnahmevorschriften grundsätzlich eng ausgelegt werden und nicht analog angewendet werden sollten.",
       "sampleAnswer": "Ausnahmen durchbrechen die allgemeine Regelung. Wenn Ausnahmen weit ausgelegt oder analog angewendet werden, kehrt sich das Regel-Ausnahme-Verhältnis um: Die Ausnahme wird zur Regel. Das widerspricht dem Willen des Gesetzgebers, der die Grundregel als Normalfall gedacht hat. Außerdem hat das Gesetz bewusst nur bestimmte Fälle von der Regel ausgenommen – das Schweigen für andere Fälle ist daher als gewollte Entscheidung zu verstehen (Umkehrschluss). Deshalb gilt: je eindeutiger eine Vorschrift als Ausnahme gestaltet ist, desto stärker spricht das gegen eine Analogie.",
-      "keywords": ["ausnahme", "regel", "umkehrschluss", "eng", "gesetzgeber", "planwidrig"],
+      "keywords": [
+        "ausnahme",
+        "regel",
+        "umkehrschluss",
+        "eng",
+        "gesetzgeber",
+        "planwidrig"
+      ],
       "explanation": "Kerngedanke: Regel-Ausnahme-Verhältnis + Umkehrschluss sprechen gegen Analogie bei Ausnahmevorschriften. Das Schweigen des Gesetzgebers für weitere Fälle ist bewusst."
     },
     {
@@ -317,7 +453,9 @@
         "Man wendet § 108 BGB analog auf § 181 BGB an, weil die Interessenlage vergleichbar ist.",
         "Man schränkt § 388 S. 2 BGB auf außergerichtliche Aufrechnungen ein."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das ist der klassische Zirkelschluss aus dem Skript: Der Tarifvertrag setzt einen wirksamen Arbeitsvertrag voraus – kann also nicht gleichzeitig die Wirksamkeitsvoraussetzungen dieses Vertrags regeln. Das Ergebnis (Schriftform) wird mit sich selbst begründet."
     },
     {
@@ -332,7 +470,9 @@
         "Teleologische Auslegung",
         "Historische Auslegung"
       ],
-      "correct": [3],
+      "correct": [
+        3
+      ],
       "explanation": "Die historische Auslegung fragt nach dem Willen des Gesetzgebers beim Erlass. Je länger eine Norm zurückliegt, desto weniger passt dieser historische Wille auf heutige Verhältnisse – daher verliert sie mit der Zeit an Gewicht."
     }
   ],

@@ -61,13 +61,37 @@
           "kind": "table",
           "id": "tab-taylorismus-merkmale",
           "title": "Taylorismus auf einen Blick",
-          "headers": ["Merkmal", "Beschreibung", "Beispiel"],
+          "headers": [
+            "Merkmal",
+            "Beschreibung",
+            "Beispiel"
+          ],
           "rows": [
-            ["Arbeitsteilung", "Extrem hohe Spezialisierung, jeder macht nur eine Tätigkeit", "Fließbandarbeiter schraubt nur Räder an"],
-            ["Planung vs. Ausführung", "Management plant, Arbeiter führen aus — strikte Trennung", "Ingenieure legen Bewegungsablauf fest"],
-            ["Zeit- & Bewegungsstudien", "Jeder Schritt wird gemessen und optimiert", "Stoppuhr am Fließband"],
-            ["Leistungslohn", "Mehr Leistung = mehr Geld (Akkordlohn)", "Bonus bei Überschreitung der Tagesnorm"],
-            ["'One best way'", "Es gibt genau eine optimale Methode für jeden Vorgang", "Standardisierter Schraubenanzugsmoment"]
+            [
+              "Arbeitsteilung",
+              "Extrem hohe Spezialisierung, jeder macht nur eine Tätigkeit",
+              "Fließbandarbeiter schraubt nur Räder an"
+            ],
+            [
+              "Planung vs. Ausführung",
+              "Management plant, Arbeiter führen aus — strikte Trennung",
+              "Ingenieure legen Bewegungsablauf fest"
+            ],
+            [
+              "Zeit- & Bewegungsstudien",
+              "Jeder Schritt wird gemessen und optimiert",
+              "Stoppuhr am Fließband"
+            ],
+            [
+              "Leistungslohn",
+              "Mehr Leistung = mehr Geld (Akkordlohn)",
+              "Bonus bei Überschreitung der Tagesnorm"
+            ],
+            [
+              "'One best way'",
+              "Es gibt genau eine optimale Methode für jeden Vorgang",
+              "Standardisierter Schraubenanzugsmoment"
+            ]
           ]
         }
       ]
@@ -100,11 +124,35 @@
           "kind": "table",
           "id": "tab-job-design-vergleich",
           "title": "Vergleich der drei Arbeitsgestaltungsmaßnahmen",
-          "headers": ["Maßnahme", "Richtung", "Was ändert sich?", "Vorteil", "Nachteil"],
+          "headers": [
+            "Maßnahme",
+            "Richtung",
+            "Was ändert sich?",
+            "Vorteil",
+            "Nachteil"
+          ],
           "rows": [
-            ["Job Enlargement", "Horizontal", "Mehr Aufgaben auf gleichem Niveau", "Weniger Monotonie", "Kein echter Zuwachs an Verantwortung"],
-            ["Job Enrichment", "Vertikal", "Mehr Verantwortung & Autonomie", "Höhere intrinsische Motivation", "Überforderung möglich"],
-            ["Job Rotation", "Zeitlich", "Systematischer Stellenwechsel", "Breites Wissen, Entwicklung", "Einarbeitungszeit, Produktivitätsdelle"]
+            [
+              "Job Enlargement",
+              "Horizontal",
+              "Mehr Aufgaben auf gleichem Niveau",
+              "Weniger Monotonie",
+              "Kein echter Zuwachs an Verantwortung"
+            ],
+            [
+              "Job Enrichment",
+              "Vertikal",
+              "Mehr Verantwortung & Autonomie",
+              "Höhere intrinsische Motivation",
+              "Überforderung möglich"
+            ],
+            [
+              "Job Rotation",
+              "Zeitlich",
+              "Systematischer Stellenwechsel",
+              "Breites Wissen, Entwicklung",
+              "Einarbeitungszeit, Produktivitätsdelle"
+            ]
           ]
         }
       ]
@@ -195,6 +243,42 @@
       "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
       "front": "Was versteht man unter 'Taylorismus 2.0' und welche Unternehmen sind Beispiele?",
       "back": "Taylorismus 2.0 = digitale Neuauflage tayloristischer Kontrolle durch Wearables und Datenanalyse. Beispiele: Hitachi (ID-Badge mit Bewegungssensor), Percolata (Traffic-Sensoren in Supermärkten), BP (24.000 Fitbit-Tracker mit Wellnesspunkte-System)."
+    },
+    {
+      "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z1",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Scientific Management (Taylor, 1911) – Kernprinzipien",
+      "back": "Extreme Arbeitsteilung, 'one best way', Trennung Hand-/Kopfarbeit, Zeit- und Bewegungsstudien. Kritik: Dehumanisierung, Entfremdung."
+    },
+    {
+      "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z2",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Hawthorne-Studien – Kernbefund",
+      "back": "Soziale Faktoren und das Beobachtetwerden (Hawthorne-Effekt) erhöhen die Leistung mehr als physische Arbeitsbedingungen → Bedeutung informeller Gruppen."
+    },
+    {
+      "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z3",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "JCM (Job Characteristics Model) – 5 Kernmerkmale",
+      "back": "Aufgabenvielfalt, Ganzheitlichkeit, Bedeutungsgehalt, Autonomie, Feedback. → kritische psychologische Zustände → Motivation, Zufriedenheit, Leistung."
+    },
+    {
+      "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z4",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "MPS-Formel (Motivating Potential Score)",
+      "back": "MPS = ((Vielfalt + Ganzheitlichkeit + Bedeutung) / 3) × Autonomie × Feedback"
+    },
+    {
+      "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z5",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Job Enrichment vs. Job Enlargement vs. Job Rotation",
+      "back": "Enrichment: vertikale Erweiterung (mehr Verantwortung). Enlargement: horizontale Erweiterung (mehr Aufgaben gleicher Ebene). Rotation: Stellenwechsel zur Abwechslung."
+    },
+    {
+      "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z6",
+      "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+      "front": "Taylorismus 2.0 – Beispiele",
+      "back": "Wearables und Tracking (Hitachi, Percolata, BP, Amazon) – moderne digitale Kontrolle nach tayloristischen Prinzipien."
     }
   ],
   "quiz": [
@@ -210,7 +294,9 @@
         "... soziale Bedürfnisse der Mitarbeitenden im Vordergrund stehen.",
         "... Teamarbeit die effizienteste Arbeitsform ist."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Taylor trennte strikt Kopf- (Planung durch Management) und Handarbeit (Ausführung durch Arbeiter). Das Zitat 'Alle Denkarbeit muss aus dem Betrieb herausgenommen werden' ist charakteristisch für sein Scientific Management."
     },
     {
@@ -234,7 +320,9 @@
         "Autonomie und Feedback",
         "Aufgabenvielfalt und Autonomie"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Autonomie und Feedback werden in der MPS-Formel multipliziert: MPS = ((Vielfalt + Ganzheitlichkeit + Bedeutungsgehalt)/3) × Autonomie × Feedback. Ist Autonomie oder Feedback null, ist der gesamte MPS null — sie sind also unverzichtbar."
     },
     {
@@ -249,7 +337,9 @@
         "Die Mehrheit der Unternehmen brach das Pilotprogramm vorzeitig ab.",
         "Nur Unternehmen aus dem Tech-Bereich profitierten von der Viertagewoche."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Studie zeigte: 71 % niedrigeres Burnout, 65 % weniger Krankheitstage, Kündigungen halbierten sich — bei gleichbleibender oder leicht steigender Produktivität (Einnahmen +1,4 %). Kritisch zu beachten: Die Studie wurde von einer Interessengruppe durchgeführt."
     },
     {
@@ -264,7 +354,9 @@
         "Ganzheitlichkeit (task identity)",
         "Autonomie"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Task Identity (Ganzheitlichkeit) beschreibt das Ausmaß, in dem eine Person eine vollständige und sichtbare Aufgabeneinheit von Anfang bis Ende erledigt. Beispiel: Ein Schreiner, der einen ganzen Stuhl baut, hat hohe task identity; jemand, der nur eine Schraube anzieht, hat niedrige."
     },
     {
@@ -288,7 +380,9 @@
         "Der MPS ist sehr niedrig, weil Feedback nur 1 beträgt und multipliziert wird.",
         "Der MPS entspricht dem Durchschnitt aller fünf Werte: 4."
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "MPS = ((4+4+4)/3) × 7 × 1 = 4 × 7 × 1 = 28. Weil Feedback nur 1 ist und multipliziert wird, bleibt der MPS trotz maximaler Autonomie sehr niedrig. Wäre Feedback = 0, wäre der MPS = 0. Das zeigt: Feedback ist unverzichtbar."
     },
     {
@@ -298,7 +392,15 @@
       "difficulty": "schwer",
       "prompt": "Erläutere, warum moderne Wearable-Überwachung (z. B. Fitbit-Tracker bei BP) als 'Taylorismus 2.0' bezeichnet werden kann. Welche Kritikpunkte gibt es?",
       "sampleAnswer": "Taylorismus 2.0 bezeichnet die digitale Neuauflage tayloristischer Kontrollprinzipien: Genau wie Taylor Zeit- und Bewegungsstudien nutzte, um Arbeitsabläufe zu optimieren und Mitarbeitende zu kontrollieren, setzen Unternehmen heute Wearables (Fitbit, Sensoren) ein, um biometrische Daten (Schritte, Puls, Aufenthaltsort) zu erfassen und daraus Rückschlüsse auf Produktivität zu ziehen. Kritikpunkte: (1) Datenschutz und ethische Bedenken, (2) Fehlinterpretation von Daten (viele Schritte ≠ hohe Produktivität), (3) Kontrollregime unter dem Deckmantel von 'Wellness', (4) Menschen werden zu Datenpunkten degradiert — ähnlich wie im klassischen Taylorismus zur Dehumanisierung.",
-      "keywords": ["kontrolle", "wearables", "daten", "überwachung", "taylor", "dehumanisierung", "datenschutz"],
+      "keywords": [
+        "kontrolle",
+        "wearables",
+        "daten",
+        "überwachung",
+        "taylor",
+        "dehumanisierung",
+        "datenschutz"
+      ],
       "explanation": "Der Kern: Taylorismus setzt auf externe Kontrolle und Standardisierung von Arbeit. Digitale Tools ermöglichen heute eine noch umfassendere Kontrolle als Taylors Stoppuhr."
     },
     {
@@ -322,7 +424,9 @@
         "Die Arbeit wird durch Spielelemente (Punkte, Ranglisten) attraktiver gestaltet.",
         "Mitarbeitende teilen sich eine Vollzeitstelle."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Job Rotation = systematischer Wechsel zwischen verschiedenen Stellen oder Abteilungen über Zeit. Ziel: breites Wissen aufbauen, Einseitigkeit vermeiden, Nachwuchsführungskräfte entwickeln. Jobsharing wäre Option D, Gamification wäre Option C."
     }
   ],

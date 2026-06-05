@@ -1,0 +1,296 @@
+[
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z1",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Was ist Marketing laut AMA-/Kotler-Definition?",
+    "back": "Menschliche Tätigkeit zur Bedürfnisbefriedigung durch Austauschprozesse. Marketing = marktorientierte Unternehmensführung; ein Markt ist der (reale/virtuelle) Ort, an dem Angebot und Nachfrage aufeinandertreffen."
+  },
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z2",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Formel: Marktanteil",
+    "back": "$\\text{Marktanteil} = \\dfrac{\\text{Absatzvolumen}}{\\text{Marktvolumen}}$"
+  },
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z3",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Was sind die 4 Ps des Marketing-Mix?",
+    "back": "**Product** (Produktpolitik), **Price** (Preispolitik), **Place** (Vertriebspolitik), **Promotion** (Kommunikationspolitik)."
+  },
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z4",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Formel: Ertrag Z im Marketing-Mix",
+    "back": "$Z = (P - k) \\cdot Q - K_{fix} - A - S$\n\n$P$=Listenpreis, $k$=Nachlass/Stück, $Q$=Menge, $A$=Werbung, $S$=Verkaufsförderung."
+  },
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z5",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Was sind die Phasen der historischen Marketing-Entwicklung?",
+    "back": "Verkaufs- → Werbe- → 4-P- → Implementierungs- → marktorientierte Unternehmensführung / Relationship Marketing. Dazu Strategisierung, Broadening (sektorales Marketing) und Deepening (gesellschaftliche Ziele)."
+  },
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z6",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Was bedeutet AIDA?",
+    "back": "Stufenmodell der Werbewirkung: **A**ttention → **I**nterest → **D**esire → **A**ction."
+  },
+  {
+    "id": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi-z7",
+    "topicId": "mkt-vl1-einfuehrung-und-grundlagen-des-marketi",
+    "front": "Formel: Grenzkosten",
+    "back": "$K' = \\dfrac{dK}{dX} = \\dfrac{K_2 - K_1}{X_2 - X_1}$\n\nGrenzkosten = Kostenanstieg bei einer zusätzlichen produzierten Einheit."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z1",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Was ist das S-O-R-Modell?",
+    "back": "**Stimulus–Organism–Response** (Neobehaviorismus, Howard & Sheth 1969). Im Gegensatz zum S-R-Modell (Black Box) berücksichtigt es intervenierende Variablen im Organismus (Wahrnehmung, Lernen, Einstellung)."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z2",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Welche 5 Phasen hat das EKB-Kaufentscheidungsmodell?",
+    "back": "Engel-Kollat-Blackwell (1968): 1. Problemerkennung, 2. Informationssuche, 3. Alternativenbewertung (Evoked/Inert/Inept Set), 4. Kaufentscheidung, 5. Nachkaufverhalten / kognitive Dissonanz."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z3",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Formel: Fluktuationsmatrix – Übergangswahrscheinlichkeit",
+    "back": "$p_{ij} = \\dfrac{\\text{Kaufhäufigkeit Zelle}(i \\to j)}{\\text{Zeilensumme}_i}$\n\nBeispiel: $\\dfrac{270}{525} = 0{,}52$. Alle Werte einer Zeile summieren sich zu 1."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z4",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Was ist kognitive Dissonanz im Kaufprozess?",
+    "back": "Nach dem Kauf auftretendes psychisches Spannungsgefühl (\"buyer's remorse\"). Reduktion durch Hinzufügen konsonanter oder Abschwächen dissonanter Überzeugungen. Marketing reagiert mit Nachkauf-Kommunikation, Garantien und Service."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z5",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Fishbein-Formel zur Einstellungsmessung",
+    "back": "$A_{ij} = \\sum_{k=1}^{n} B_{ijk} \\cdot a_{ijk}$\n\n$A_{ij}$=Einstellung Person $i$ zu Objekt $j$, $B_{ijk}$=Wahrscheinlichkeit Merkmal $k$, $a_{ijk}$=Bewertung Merkmal $k$."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z6",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Was sind die drei Komponenten einer Einstellung?",
+    "back": "**Affektiv** (Fühlen/Bewertung), **Kognitiv** (Wissen/Überzeugungen), **Konativ** (Handlungsabsicht). Grundlage des Drei-Komponenten-Ansatzes und des Fishbein-Modells."
+  },
+  {
+    "id": "mkt-vl2-konsumentenverhalten-z7",
+    "topicId": "mkt-vl2-konsumentenverhalten",
+    "front": "Maslows Bedürfnispyramide – welche 5 Stufen?",
+    "back": "Von unten: 1. Physiologische Bedürfnisse, 2. Sicherheit, 3. Soziale Zugehörigkeit, 4. Wertschätzung/Ego, 5. Selbstverwirklichung. Erst erfüllte Stufen motivieren die nächste."
+  },
+  {
+    "id": "mkt-vl3-marktforschung-marketingforschung-z1",
+    "topicId": "mkt-vl3-marktforschung-marketingforschung",
+    "front": "Was ist das 5D-Schema der Marktforschung?",
+    "back": "**D**efinition (Ziele) → **D**esign (Forschungsdesign) → **D**atenerhebung → **D**atenanalyse → **D**okumentation/Interpretation. Systematischer Prozess vom Problem zur Entscheidungsgrundlage."
+  },
+  {
+    "id": "mkt-vl3-marktforschung-marketingforschung-z2",
+    "topicId": "mkt-vl3-marktforschung-marketingforschung",
+    "front": "Primär- vs. Sekundärforschung – Unterschied?",
+    "back": "**Primärforschung**: neue Daten für ein spezifisches Problem (teurer, langsamer). **Sekundärforschung**: bereits vorhandene Daten (interne Quellen, externe Statistiken) – schneller und günstiger, aber oft nicht passgenau."
+  },
+  {
+    "id": "mkt-vl3-marktforschung-marketingforschung-z3",
+    "topicId": "mkt-vl3-marktforschung-marketingforschung",
+    "front": "Was ist ein Panel in der Marktforschung?",
+    "back": "Gleichbleibender Kreis von Probanden, der regelmäßig zum gleichen Gegenstand befragt wird. Typen: Handelspanel, Verbraucherpanel, Spezialpanel. Problem: Panelsterblichkeit (~15 % p.a.), Paneleffekte (Over-/Underreporting, Ermüdung)."
+  },
+  {
+    "id": "mkt-vl3-marktforschung-marketingforschung-z4",
+    "topicId": "mkt-vl3-marktforschung-marketingforschung",
+    "front": "Welche vier Skalenniveaus gibt es?",
+    "back": "1. **Nominalskala** (Zuordnung), 2. **Ordinalskala** (Rangordnung), 3. **Intervallskala** (gleiche Abstände, kein absoluter Nullpunkt), 4. **Ratioskala/Absolutskala** (absoluter Nullpunkt). Likert-Skala ist streng ordinal, wird aber oft als Intervallskala behandelt."
+  },
+  {
+    "id": "mkt-vl3-marktforschung-marketingforschung-z5",
+    "topicId": "mkt-vl3-marktforschung-marketingforschung",
+    "front": "Welche Analyseverfahren gibt es – univariat, bivariat, multivariat?",
+    "back": "**Univariat**: Häufigkeiten, Mittelwert, Median, Streuung. **Bivariat**: Chi²-Test, Korrelation, einfache Regression, t-Test. **Multivariat**: multiple Regression, Varianz-, Cluster-, Faktorenanalyse, MDS."
+  },
+  {
+    "id": "mkt-vl3-marktforschung-marketingforschung-z6",
+    "topicId": "mkt-vl3-marktforschung-marketingforschung",
+    "front": "Was ist eine Fokusgruppe?",
+    "back": "Moderierte Gruppendiskussion mit 6–10 Teilnehmern. Qualitative Methode. Ziel: Tiefenverständnis von Einstellungen, Bedürfnissen und Sprachmustern der Zielgruppe."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z1",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "Was ist die Ansoff-Matrix?",
+    "back": "Vier Marktfeld-Strategien (Produkt × Markt):\n- **Marktdurchdringung** (bestehend/bestehend, höchste Synergien)\n- **Marktentwicklung** (bestehend/neu)\n- **Produktentwicklung** (neu/bestehend)\n- **Diversifikation** (neu/neu, größtes Risiko)\nGünstigste Reihenfolge = Z-Strategie."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z2",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "Porters drei generische Wettbewerbsstrategien",
+    "back": "1. **Kostenführerschaft** (geringste Kosten im Markt)\n2. **Differenzierung** (einzigartiges Angebot, Preispremium)\n3. **Fokus/Nische** (Konzentration auf ein Segment)\nFalle: \"Stuck in the middle\" – weder Kosten- noch Differenzierungsvorteil → unterdurchschnittliche Rendite (U-Kurve)."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z3",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "Was ist die SWOT-Analyse?",
+    "back": "Interne **S**tärken und **W**eaknesses × externe **O**pportunities und **T**hreats → vier Strategiefelder: SO (Ausbauen), ST (Absichern), WO (Aufholen), WT (Meiden). Basis: PESTLE + Stärken/Schwächen-Profil."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z4",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "Formel: Relativer Marktanteil",
+    "back": "$\\text{rel. MA} = \\dfrac{\\text{Marktanteil eigenes Produkt}}{\\text{Marktanteil größter Wettbewerber}}$\n\n$> 1{,}0$ = Marktführer. Relevant für BCG-Matrix und strategische Einordnung."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z5",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "STP-Logik – was bedeutet das?",
+    "back": "**S**egmentation → **T**argeting → **P**ositioning. Markt segmentieren (homogene Teilmärkte bilden), Zielsegmente auswählen, Produkt im Zielgruppenbewusstsein positionieren."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z6",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "Was ist PESTLE?",
+    "back": "Umfeldanalyse-Framework: **P**olitical, **E**conomic, **S**ociocultural, **T**echnological, **L**egal, **E**cological. Systematische Checkliste zur Analyse der Makroumwelt eines Unternehmens."
+  },
+  {
+    "id": "mkt-vl4-planung-des-strategischen-marketing-z7",
+    "topicId": "mkt-vl4-planung-des-strategischen-marketing",
+    "front": "Formel: Share of Wallet (SoW)",
+    "back": "$\\text{SoW} = \\left(1 - \\dfrac{\\text{Rang}}{\\text{Anzahl Unternehmen} + 1}\\right) \\cdot \\dfrac{2}{\\text{Anzahl Unternehmen}}$\n\nAnnäherung über Rang-Daten aus Kundenbefragungen."
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z1",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Formel: Customer Lifetime Value (CLV)",
+    "back": "$CLV = -I_0 + \\sum_{t=1}^{n} \\dfrac{x_t \\cdot (p - k) - A_t}{(1 + r)^t}$\n\n$I_0$=Akquisitionskosten, $x_t$=Absatz, $p-k$=Deckungsbeitrag/Einheit, $A_t$=Betreuungskosten, $r$=Diskontierungssatz."
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z2",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Was sind die Phasen des Kundenlebenszyklus im CRM?",
+    "back": "**Gewinnung → Bindung → Entwicklung → Trennung** (ggf. Rückgewinnung). CRM gestaltet diese Phasen systematisch mithilfe von Analyse, Strategie, Technologie und Prozessen."
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z3",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Was ist die RFMR-Methode?",
+    "back": "Kundenstrukturanalyse anhand von:\n- **R**ecency (letztes Kaufdatum)\n- **F**requency (Kaufhäufigkeit)\n- **M**onetary Ratio (Umsatzhöhe)\nJede Dimension wird bepunktet; der Gesamtscore dient zur Kundensegmentierung."
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z4",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Formel: Customer Acquisition Cost (CAC)",
+    "back": "$CAC = \\dfrac{\\text{Gesamtkosten Marketing} + \\text{Vertriebskosten}}{\\text{Anzahl Neukunden}}$"
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z5",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Was ist Up-Selling vs. Cross-Selling?",
+    "back": "**Up-Selling**: Kunde kauft höherwertige Variante statt Basisprodukt. **Cross-Selling**: Kunde kauft zusätzliche Produkte (Zukaufmatrix zeigt Wahrscheinlichkeiten). Beide dienen der Kundenentwicklung im CRM."
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z6",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Vier Felder des Kundenportfolios",
+    "back": "Matrix: **Kundenattraktivität** × **relative Lieferantenposition**.\n- **Stars**: ausbauen\n- **Ertrags-Kunden**: sichern\n- **Fragezeichen**: großer Schritt oder Exit\n- **Mitnahme-Kunden**: selektiver Rückzug"
+  },
+  {
+    "id": "mkt-vl5-customer-relationship-management-crm-z7",
+    "topicId": "mkt-vl5-customer-relationship-management-crm",
+    "front": "Formel: CLV-Abzinsungsrate mit Risikofaktor",
+    "back": "$AR = (1 + i \\cdot rf)^n$\n\n$i$=Zinssatz, $rf$=Risikofaktor, $n$=Perioden. Beispiel: $(1{,}16)^2 = 1{,}35$."
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z1",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "BCG-Matrix: vier Felder und Strategien",
+    "back": "Matrix: **Marktwachstum** × **relativer Marktanteil**.\n- **Stars** (hoch/hoch): ausbauen/halten\n- **Cash Cows** (niedrig/hoch): abschöpfen\n- **Question Marks** (hoch/niedrig): ausbauen oder liquidieren\n- **Poor Dogs** (niedrig/niedrig): abschöpfen oder liquidieren\nGrenze: rel. MA = 1,0"
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z2",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "Formel: Marktwachstum (BCG)",
+    "back": "$\\text{Marktwachstum} = \\dfrac{\\text{Marktumsatz aktuelles Jahr}}{\\text{Marktumsatz Vorjahr}}$"
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z3",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "Formel: Kannibalisierungsrate",
+    "back": "$\\text{Kannibalisierungsrate} = \\dfrac{\\text{Umsatzverlust vorhandener Produkte}}{\\text{Umsatz des neuen Produkts}} \\times 100\\,\\%$\n\nBeispiel: 35 % × 5.000 Einheiten = 1.750 kannibalisierende Einheiten; Nettomehrabsatz = 3.250."
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z4",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "Phasen des Produktlebenszyklus",
+    "back": "**Einführung → Wachstum → Reife → Sättigung → Degeneration**. Umsatzkurve ist glockenförmig, Gewinne entstehen typisch ab Wachstumsphase und sinken vor dem Umsatz. BCG-Pfad: Question Mark → Star → Cash Cow → Poor Dog."
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z5",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "Produktvariation vs. Produktdifferenzierung – Unterschied?",
+    "back": "**Variation**: Eigenschaften des bestehenden Produkts werden verändert, ersetzt das alte Produkt (Programmtiefe gleich). **Differenzierung**: neues Produkt als Ableger, altes bleibt bestehen → erhöht Programmbreite; Risiko: Consumer Confusion und Kannibalisierung."
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z6",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "ASSESSOR-Modell: Marktanteilsprognose",
+    "back": "$\\text{Marktanteil} = \\text{Erstkaufrate} \\times \\text{Wiederkaufrate} \\times \\text{rel. Kaufintensität}$\n\nTriad-Repeat: $M = T \\cdot S$; $T = F \\cdot K \\cdot D + C \\cdot U - (F \\cdot K \\cdot D)(C \\cdot U)$. Endprognose = Mittelwert aus Präferenz- und Trial-Repeat-Modell."
+  },
+  {
+    "id": "mkt-vl6-produktpolitik-z7",
+    "topicId": "mkt-vl6-produktpolitik",
+    "front": "Was ist eine USP (Unique Selling Proposition)?",
+    "back": "Alleinstellungsmerkmal eines Produkts/einer Marke, das es von Wettbewerbern differenziert. Bildet die Grundlage der Positionierung im Wahrnehmungsraum der Zielgruppe (Positionierungskreuz)."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z1",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Lineare Preisabsatzfunktion (PAF) – Formel und Parameter",
+    "back": "$X(p) = a - b \\cdot p$\n\n$a$=Sättigungsmenge (bei $p=0$), $a/b$=Prohibitivpreis (bei $X=0$), $b$=Steigung (negativ). Beispiel: $p = 14 - 0{,}2x$."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z2",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Formel: Preiselastizität der Nachfrage",
+    "back": "$e = \\dfrac{\\Delta x / x}{\\Delta p / p} = \\dfrac{\\text{Nachfrageänderung (\\%)}}{\\text{Preisänderung (\\%)}}$\n\n$|e| > 1$: elastisch (z. B. Kaffeepads). $|e| < 1$: unelastisch (z. B. Medikamente). Vorzeichen meist negativ."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z3",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Gewinnmaximierung durch Differenzialrechnung – Vorgehen",
+    "back": "1. Nachfragefunktion $M = a - bP$ aufstellen.\n2. Kostenfunktion $K = K_F + k_v \\cdot M$.\n3. $G = U - K = P \\cdot M - K$ in $P$ ausdrücken.\n4. $G'(P) = 0$ lösen → $P^*$.\n\nBeispiel: $G' = 1200 - 8P = 0 \\Rightarrow P = 150\\,€$; $G_{max} = 34.000\\,€$."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z4",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Kostenorientierte Preisfestlegung – Formel",
+    "back": "$\\text{Stückkosten} = k_v + \\dfrac{K_F}{M}$\n\n$p = \\dfrac{\\text{Stückkosten}}{1 - \\text{Umsatzrendite}}$\n\nProblem: Bei sinkendem Absatz steigen Stückkosten → Preis steigt → weiterer Absatzrückgang (\"sich aus dem Markt kalkulieren\")."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z5",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Penetration vs. Skimming-Strategie",
+    "back": "**Penetration**: niedriger Einführungspreis → schnelle Marktdurchdringung, hohe Preiselastizität nötig (z. B. Wii). **Skimming**: hoher Einführungspreis → Abschöpfen zahlungsbereiter Kunden, dann sukzessive Preisreduktion; setzt Technologie-/Konkurrenzvorsprung voraus."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z6",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Gutenberg-PAF – was ist der monopolistische Bereich?",
+    "back": "Im **heterogenen Polypol** (Markenartikel) ist die PAF doppelt-geknickt. Der flache mittlere Teil = monopolistischer Bereich (Preissetzungsspielraum dank Markenpräferenz). Die steilen Randbereiche = kompetitiv (Preissensibilität hoch)."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z7",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Wettbewerbsorientierte Preisfestlegung – Erwartungswert",
+    "back": "$EW(p_A) = \\sum_i P(\\text{Reaktion}_i) \\cdot DB_i$\n\nBeispiel: $EW(p=12) = 0{,}5 \\cdot 10500 + 0{,}25 \\cdot 8400 + 0{,}25 \\cdot 7000 = 9.100\\,€$. Preisalternative mit höchstem Erwartungswert wird gewählt."
+  },
+  {
+    "id": "mkt-vl7-preispolitik-z8",
+    "topicId": "mkt-vl7-preispolitik",
+    "front": "Was sind die drei Einflussfaktoren der Preisfestlegung (3 Ks)?",
+    "back": "**Käufer** (Zahlungsbereitschaft, Preissensibilität, Wertgewinn), **Kosten** (Kostenboden), **Konkurrenz** (Wettbewerbspreise). Ergänzt durch interne Ziele (Positionierung, Liquidität) und externe Rahmenbedingungen (Konjunktur, Saisonalität)."
+  }
+]

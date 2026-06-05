@@ -17,13 +17,39 @@
           "title": "Exponentialfunktion und ihre Varianten",
           "caption": "e^x wächst exponentiell; e^{-x} fällt; beide schneiden die y-Achse bei 1.",
           "functions": [
-            { "fn": "exp(x)", "label": "e^x", "color": "#2563eb" },
-            { "fn": "exp(-x)", "label": "e^{-x}", "color": "#dc2626", "dashed": true },
-            { "fn": "1", "label": "y = 1 (Referenz)", "color": "#6b7280", "dashed": true }
+            {
+              "fn": "exp(x)",
+              "label": "e^x",
+              "color": "#2563eb"
+            },
+            {
+              "fn": "exp(-x)",
+              "label": "e^{-x}",
+              "color": "#dc2626",
+              "dashed": true
+            },
+            {
+              "fn": "1",
+              "label": "y = 1 (Referenz)",
+              "color": "#6b7280",
+              "dashed": true
+            }
           ],
-          "domain": [-3, 3],
-          "range": [0, 8],
-          "points": [{ "x": 0, "y": 1, "label": "e^0 = 1" }]
+          "domain": [
+            -3,
+            3
+          ],
+          "range": [
+            0,
+            8
+          ],
+          "points": [
+            {
+              "x": 0,
+              "y": 1,
+              "label": "e^0 = 1"
+            }
+          ]
         }
       ],
       "callouts": [
@@ -45,13 +71,31 @@
           "title": "Natürlicher Logarithmus ln(x)",
           "caption": "ln(x) ist die Umkehrfunktion von e^x; er wächst langsam und ist nur für x > 0 definiert.",
           "functions": [
-            { "fn": "log(x)", "label": "ln(x)", "color": "#16a34a" }
+            {
+              "fn": "log(x)",
+              "label": "ln(x)",
+              "color": "#16a34a"
+            }
           ],
-          "domain": [0.1, 8],
-          "range": [-3, 3],
+          "domain": [
+            0.1,
+            8
+          ],
+          "range": [
+            -3,
+            3
+          ],
           "points": [
-            { "x": 1, "y": 0, "label": "ln(1) = 0" },
-            { "x": 2.718, "y": 1, "label": "ln(e) = 1" }
+            {
+              "x": 1,
+              "y": 0,
+              "label": "ln(1) = 0"
+            },
+            {
+              "x": 2.718,
+              "y": 1,
+              "label": "ln(e) = 1"
+            }
           ]
         }
       ],
@@ -74,12 +118,31 @@
           "title": "Kapitalwachstum: jährlich vs. monatlich vs. stetig (K₀ = 1000 €, r = 5 %)",
           "caption": "Stetige Verzinsung wächst am schnellsten, der Unterschied zur monatlichen ist aber gering.",
           "functions": [
-            { "fn": "1000 * (1.05)^x", "label": "jährlich: K₀·(1,05)^t", "color": "#2563eb" },
-            { "fn": "1000 * (1 + 0.05/12)^(12*x)", "label": "monatlich", "color": "#16a34a", "dashed": true },
-            { "fn": "1000 * exp(0.05*x)", "label": "stetig: K₀·e^{0,05t}", "color": "#dc2626" }
+            {
+              "fn": "1000 * (1.05)^x",
+              "label": "jährlich: K₀·(1,05)^t",
+              "color": "#2563eb"
+            },
+            {
+              "fn": "1000 * (1 + 0.05/12)^(12*x)",
+              "label": "monatlich",
+              "color": "#16a34a",
+              "dashed": true
+            },
+            {
+              "fn": "1000 * exp(0.05*x)",
+              "label": "stetig: K₀·e^{0,05t}",
+              "color": "#dc2626"
+            }
           ],
-          "domain": [0, 20],
-          "range": [1000, 2800]
+          "domain": [
+            0,
+            20
+          ],
+          "range": [
+            1000,
+            2800
+          ]
         }
       ],
       "callouts": [
@@ -125,11 +188,28 @@
           "title": "Marktwert V(t) und Barwert F(t) = V(t)·e^{−0,05t}",
           "caption": "Das Barwertmaximum liegt vor dem Marktwertmaximum – je früher diskontiert wird, desto wichtiger ist das Timing.",
           "functions": [
-            { "fn": "100000 * exp(0.1 * sqrt(x))", "label": "V(t) Marktwert", "color": "#2563eb" },
-            { "fn": "100000 * exp(0.1 * sqrt(x)) * exp(-0.05 * x)", "label": "F(t) Barwert", "color": "#dc2626" }
+            {
+              "fn": "100000 * exp(0.1 * sqrt(x))",
+              "label": "V(t) Marktwert",
+              "color": "#2563eb"
+            },
+            {
+              "fn": "100000 * exp(0.1 * sqrt(x)) * exp(-0.05 * x)",
+              "label": "F(t) Barwert",
+              "color": "#dc2626"
+            }
           ],
-          "domain": [0, 10],
-          "points": [{ "x": 1, "y": 100000, "label": "Optimum t* = 1" }]
+          "domain": [
+            0,
+            10
+          ],
+          "points": [
+            {
+              "x": 1,
+              "y": 100000,
+              "label": "Optimum t* = 1"
+            }
+          ]
         }
       ],
       "callouts": [
@@ -183,6 +263,84 @@
       "topicId": "exp-log-zins",
       "front": "Sparvertragsformel (jährliche Einzahlung $a$, Zinssatz $r$, $n$ Jahre)",
       "back": "$K_n = a \\cdot \\dfrac{(1+r)^n - 1}{r}$. Herleitung: geometrische Reihe mit Quotient $q = 1+r$."
+    },
+    {
+      "id": "exp-log-zins-z1",
+      "topicId": "exp-log-zins",
+      "front": "Definition der Euler-Zahl $e$?",
+      "back": "$e := \\lim_{n\\to\\infty}\\left(1+\\dfrac{1}{n}\\right)^n \\approx 2{,}71828\\ldots$"
+    },
+    {
+      "id": "exp-log-zins-z2",
+      "topicId": "exp-log-zins",
+      "front": "Grenzwert für kontinuierliche Verzinsung mit Rate $r$?",
+      "back": "$\\lim_{n\\to\\infty}\\left(1+\\dfrac{r}{n}\\right)^{nt} = e^{rt}$."
+    },
+    {
+      "id": "exp-log-zins-z3",
+      "topicId": "exp-log-zins",
+      "front": "Kapital nach $t$ Jahren bei stetiger Verzinsung mit Rate $r$?",
+      "back": "$K(t) = A \\cdot e^{rt}$, wobei $A$ das Anfangskapital ist."
+    },
+    {
+      "id": "exp-log-zins-z4",
+      "topicId": "exp-log-zins",
+      "front": "Kapital bei monatlicher Verzinsung mit Jahreszins $r$?",
+      "back": "$K(t) = A\\left(1+\\dfrac{r}{12}\\right)^{12t}$."
+    },
+    {
+      "id": "exp-log-zins-z5",
+      "topicId": "exp-log-zins",
+      "front": "Was ist der Barwert (diskontierter Marktwert)?",
+      "back": "$F(t) = V(t)\\, e^{-rt}$: heutiger Wert eines in $t$ Jahren erzielten Marktwerts $V(t)$ bei Diskontrate $r$."
+    },
+    {
+      "id": "exp-log-zins-z6",
+      "topicId": "exp-log-zins",
+      "front": "Bedingung für den optimalen Verkaufszeitpunkt $t_0$?",
+      "back": "$F'(t) = 0 \\Rightarrow \\dfrac{V'(t)}{V(t)} = (\\ln V(t))' = r$. Die relative Wachstumsrate von $V$ muss gleich dem Zinssatz $r$ sein."
+    },
+    {
+      "id": "exp-log-zins-z7",
+      "topicId": "exp-log-zins",
+      "front": "Herleitung der Optimalitätsbedingung für den Barwert?",
+      "back": "$F'(t) = V'(t)e^{-rt} - r V(t)e^{-rt} = 0 \\Rightarrow V'(t) = r V(t)$."
+    },
+    {
+      "id": "exp-log-zins-z8",
+      "topicId": "exp-log-zins",
+      "front": "Verdopplungszeit bei stetiger Verzinsung mit Rate $r$?",
+      "back": "$2A = A e^{rt} \\Rightarrow t = \\dfrac{\\ln 2}{r}$."
+    },
+    {
+      "id": "exp-log-zins-z9",
+      "topicId": "exp-log-zins",
+      "front": "Unterschied: jährliche, monatliche, stetige Verzinsung?",
+      "back": "Jährlich: $(1+r)^t$. Monatlich: $\\left(1+\\frac{r}{12}\\right)^{12t}$. Stetig: $e^{rt}$. Stetig wächst am schnellsten."
+    },
+    {
+      "id": "exp-log-zins-z10",
+      "topicId": "exp-log-zins",
+      "front": "Warum ist $e^{rt}$ der Grenzwert häufigerer Verzinsung?",
+      "back": "Weil $\\lim_{n\\to\\infty}\\left(1+\\frac{r}{n}\\right)^{nt} = e^{rt}$ nach der Definition von $e$."
+    },
+    {
+      "id": "exp-log-zins-z11",
+      "topicId": "exp-log-zins",
+      "front": "Sparvertrag mit regelmäßigen Einzahlungen: warum geometrische Reihe?",
+      "back": "Jede Rate wird unterschiedlich lang aufgezinst; die aufgezinsten Beträge bilden eine geometrische Folge, deren Summe eine geometrische Reihe ist."
+    },
+    {
+      "id": "exp-log-zins-z12",
+      "topicId": "exp-log-zins",
+      "front": "Ableitung von $F(t) = V(t)e^{-rt}$ nach der Produktregel?",
+      "back": "$F'(t) = V'(t)e^{-rt} + V(t)\\cdot(-r)e^{-rt} = e^{-rt}\\bigl(V'(t) - r V(t)\\bigr)$."
+    },
+    {
+      "id": "exp-log-zins-z13",
+      "topicId": "exp-log-zins",
+      "front": "Verdreifachungszeit bei stetiger Verzinsung?",
+      "back": "$3A = A e^{rt} \\Rightarrow t = \\dfrac{\\ln 3}{r}$."
     }
   ],
   "quiz": [
@@ -198,7 +356,9 @@
         "$\\lim_{n \\to \\infty}\\left(1+n\\right)^{1/n}$",
         "$\\lim_{n \\to \\infty} n^{1/n}$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die Euler-Zahl ist definiert als $e = \\lim_{n \\to \\infty}(1+1/n)^n \\approx 2{,}718$. Alle anderen Ausdrücke ergeben andere Grenzwerte (z.B. $n^{1/n} \\to 1$)."
     },
     {
@@ -239,7 +399,7 @@
       "difficulty": "mittel",
       "prompt": "3000 € werden bei 3 % p.a. **monatlich** verzinst. Wie viel € stehen nach 10 Jahren zur Verfügung (auf Cent gerundet)? Hinweis: $(1{,}0025)^{120} \\approx 1{,}34935$.",
       "answer": 4048.05,
-      "tolerance": 1.0,
+      "tolerance": 1,
       "unit": "€",
       "explanation": "$K = 3000 \\cdot (1 + 0{,}03/12)^{12 \\cdot 10} = 3000 \\cdot (1{,}0025)^{120} \\approx 3000 \\cdot 1{,}34935 \\approx 4048{,}05$ €."
     },
@@ -255,7 +415,9 @@
         "$\\ln(a^r) = a \\cdot \\ln(r)$",
         "$\\ln(a/b) = \\ln(a) \\cdot \\ln(b)$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Nur Option (a) ist korrekt: $\\ln(a \\cdot b) = \\ln(a) + \\ln(b)$. Entsprechend gilt $\\ln(a/b) = \\ln(a) - \\ln(b)$ und $\\ln(a^r) = r \\cdot \\ln(a)$."
     },
     {
@@ -279,7 +441,9 @@
         "$t^* = 5$",
         "$t^* = 2$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "$(\\ln V(t))' = (\\ln(200000 t^2))' = (\\ln 200000 + 2\\ln t)' = 2/t$. Optimalbedingung: $2/t = 0{,}10 \\Rightarrow t^* = 20$. Also in 20 Jahren verkaufen."
     },
     {
@@ -289,7 +453,13 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, warum stetige Verzinsung stärker ist als jährliche Verzinsung, und was die Euler-Zahl damit zu tun hat.",
       "sampleAnswer": "Bei jährlicher Verzinsung mit Rate $r$ werden Zinsen einmal pro Jahr dem Kapital zugeschlagen. Bei $m$-maliger Gutschrift teilt man den Jahreszins durch $m$, potenziert aber $m$-mal öfter. Je häufiger man gutschreibt, desto mehr profitiert man vom Zinseszins-Effekt innerhalb des Jahres. Wenn $m$ gegen unendlich geht, nähert sich der Wachstumsfaktor dem Grenzwert $e^r$ – das ist stetige Verzinsung. Die Euler-Zahl $e$ ist genau der Grenzwert dieses Prozesses für $r=1$.",
-      "keywords": ["zinseszins", "grenzwert", "euler", "gutschrift", "häufiger"],
+      "keywords": [
+        "zinseszins",
+        "grenzwert",
+        "euler",
+        "gutschrift",
+        "häufiger"
+      ],
       "explanation": "Kernidee: Häufigere Gutschrift bedeutet mehr Zinseszins innerhalb des Jahres. Der Grenzwert ist $e^r$."
     },
     {

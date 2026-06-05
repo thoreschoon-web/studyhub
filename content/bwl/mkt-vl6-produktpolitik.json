@@ -28,12 +28,42 @@
           "kind": "table",
           "id": "bcg-tabelle",
           "title": "BCG-Matrix: Vier Felder im Überblick",
-          "headers": ["Feld", "Marktwachstum", "Rel. Marktanteil", "Cash-Flow", "Empfehlung"],
+          "headers": [
+            "Feld",
+            "Marktwachstum",
+            "Rel. Marktanteil",
+            "Cash-Flow",
+            "Empfehlung"
+          ],
           "rows": [
-            ["Stars", "hoch", "> 1,0", "ausgeglichen", "Ausbauen / Halten"],
-            ["Fragezeichen", "hoch", "< 1,0", "negativ", "Ausbauen oder Liquidieren"],
-            ["Cash Cows", "niedrig", "> 1,0", "stark positiv", "Abschöpfen / Halten"],
-            ["Arme Hunde", "niedrig", "< 1,0", "negativ", "Abschöpfen / Liquidieren"]
+            [
+              "Stars",
+              "hoch",
+              "> 1,0",
+              "ausgeglichen",
+              "Ausbauen / Halten"
+            ],
+            [
+              "Fragezeichen",
+              "hoch",
+              "< 1,0",
+              "negativ",
+              "Ausbauen oder Liquidieren"
+            ],
+            [
+              "Cash Cows",
+              "niedrig",
+              "> 1,0",
+              "stark positiv",
+              "Abschöpfen / Halten"
+            ],
+            [
+              "Arme Hunde",
+              "niedrig",
+              "< 1,0",
+              "negativ",
+              "Abschöpfen / Liquidieren"
+            ]
           ]
         }
       ],
@@ -73,13 +103,35 @@
               "dashed": true
             }
           ],
-          "domain": [0, 8],
-          "range": [-0.8, 4.5],
+          "domain": [
+            0,
+            8
+          ],
+          "range": [
+            -0.8,
+            4.5
+          ],
           "points": [
-            {"x": 1, "y": 0, "label": "Einführung"},
-            {"x": 3, "y": 0, "label": "Wachstum"},
-            {"x": 5, "y": 0, "label": "Reife"},
-            {"x": 6.5, "y": 0, "label": "Sättigung"}
+            {
+              "x": 1,
+              "y": 0,
+              "label": "Einführung"
+            },
+            {
+              "x": 3,
+              "y": 0,
+              "label": "Wachstum"
+            },
+            {
+              "x": 5,
+              "y": 0,
+              "label": "Reife"
+            },
+            {
+              "x": 6.5,
+              "y": 0,
+              "label": "Sättigung"
+            }
           ]
         }
       ],
@@ -212,6 +264,48 @@
       "topicId": "mkt-vl6-produktpolitik",
       "front": "Was ist die Unique Selling Proposition (USP)?",
       "back": "Der **einzigartige Produktvorteil** — der Unterschied zwischen dem eigenen Produkt und der Konkurrenz, der Kunden zum Kauf animiert. Formel: **Benefits = Equity**. Besteht aus Produktmerkmalen, psychologischen Merkmalen und Assoziationen."
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z1",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "BCG-Matrix: vier Felder und Strategien",
+      "back": "Matrix: **Marktwachstum** × **relativer Marktanteil**.\n- **Stars** (hoch/hoch): ausbauen/halten\n- **Cash Cows** (niedrig/hoch): abschöpfen\n- **Question Marks** (hoch/niedrig): ausbauen oder liquidieren\n- **Poor Dogs** (niedrig/niedrig): abschöpfen oder liquidieren\nGrenze: rel. MA = 1,0"
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z2",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Formel: Marktwachstum (BCG)",
+      "back": "$\\text{Marktwachstum} = \\dfrac{\\text{Marktumsatz aktuelles Jahr}}{\\text{Marktumsatz Vorjahr}}$"
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z3",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Formel: Kannibalisierungsrate",
+      "back": "$\\text{Kannibalisierungsrate} = \\dfrac{\\text{Umsatzverlust vorhandener Produkte}}{\\text{Umsatz des neuen Produkts}} \\times 100\\,\\%$\n\nBeispiel: 35 % × 5.000 Einheiten = 1.750 kannibalisierende Einheiten; Nettomehrabsatz = 3.250."
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z4",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Phasen des Produktlebenszyklus",
+      "back": "**Einführung → Wachstum → Reife → Sättigung → Degeneration**. Umsatzkurve ist glockenförmig, Gewinne entstehen typisch ab Wachstumsphase und sinken vor dem Umsatz. BCG-Pfad: Question Mark → Star → Cash Cow → Poor Dog."
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z5",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Produktvariation vs. Produktdifferenzierung – Unterschied?",
+      "back": "**Variation**: Eigenschaften des bestehenden Produkts werden verändert, ersetzt das alte Produkt (Programmtiefe gleich). **Differenzierung**: neues Produkt als Ableger, altes bleibt bestehen → erhöht Programmbreite; Risiko: Consumer Confusion und Kannibalisierung."
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z6",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "ASSESSOR-Modell: Marktanteilsprognose",
+      "back": "$\\text{Marktanteil} = \\text{Erstkaufrate} \\times \\text{Wiederkaufrate} \\times \\text{rel. Kaufintensität}$\n\nTriad-Repeat: $M = T \\cdot S$; $T = F \\cdot K \\cdot D + C \\cdot U - (F \\cdot K \\cdot D)(C \\cdot U)$. Endprognose = Mittelwert aus Präferenz- und Trial-Repeat-Modell."
+    },
+    {
+      "id": "mkt-vl6-produktpolitik-z7",
+      "topicId": "mkt-vl6-produktpolitik",
+      "front": "Was ist eine USP (Unique Selling Proposition)?",
+      "back": "Alleinstellungsmerkmal eines Produkts/einer Marke, das es von Wettbewerbern differenziert. Bildet die Grundlage der Positionierung im Wahrnehmungsraum der Zielgruppe (Positionierungskreuz)."
     }
   ],
   "quiz": [
@@ -227,7 +321,9 @@
         "Das Kernprodukt beinhaltet After-Sales-Service und Garantieleistungen.",
         "Das Kernprodukt ist identisch mit dem eigentlichen Produkt."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das Kernprodukt ist der Kernnutzen — was der Käufer wirklich kauft (z.B. 'ein Loch in der Wand' statt 'einen Bohrer'). Design/Verpackung/Marke gehören zum eigentlichen Produkt; Service/Garantie zum erweiterten Produkt."
     },
     {
@@ -242,7 +338,9 @@
         "Relativer Marktanteil = 0,5 → Star oder Cash Cow",
         "Relativer Marktanteil = 2,0 → Fragezeichen oder Poor Dog"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Relativer MA = 20 % / 40 % = 0,5. Da 0,5 < 1,0, ist das Unternehmen kein Marktführer → das Produkt liegt im rechten Teil der BCG-Matrix (Fragezeichen bei hohem Wachstum, Poor Dog bei niedrigem Wachstum)."
     },
     {
@@ -273,7 +371,7 @@
       "topicId": "mkt-vl6-produktpolitik",
       "difficulty": "schwer",
       "prompt": "ASSESSOR-Modell: Das Präferenzmodell ergibt $M_I = 0{,}18$ und das Trial-Repeat-Modell ergibt $M_{II} = 0{,}12$. Wie hoch ist der prognostizierte Marktanteil in Prozent (auf eine Dezimalstelle)?",
-      "answer": 15.0,
+      "answer": 15,
       "tolerance": 0.05,
       "unit": "%",
       "explanation": "Prognostizierter Marktanteil = (M_I + M_II) / 2 = (0,18 + 0,12) / 2 = 0,30 / 2 = 0,15 = 15,0 %."
@@ -308,7 +406,9 @@
         "Reife",
         "Sättigung"
       ],
-      "correct": [3],
+      "correct": [
+        3
+      ],
       "explanation": "Die Sättigungsphase (Saturation) ist dadurch gekennzeichnet, dass fast alle potenziellen Käufer das Produkt haben. Umsätze stagnieren, es beginnt Preiskampf, und die Gewinne sinken. In der Reifephase wächst der Umsatz noch etwas."
     },
     {
@@ -324,7 +424,11 @@
         "Schritt 6: Produktentwicklung",
         "Schritt 7: Markttest"
       ],
-      "correct": [1, 2, 4],
+      "correct": [
+        1,
+        2,
+        4
+      ],
       "multiple": true,
       "explanation": "Bewertungsphasen sind: 3 (Ideenvorauswahl), 4 (Konzepttest — auch Konzeptionsphase!), 5 (Geschäftsanalyse), 7 (Markttest). Konzeptionsphasen sind: 1, 2, 4, 6, 8. Schritt 4 gehört zu beiden."
     },
@@ -334,7 +438,14 @@
       "topicId": "mkt-vl6-produktpolitik",
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, warum die BCG-Matrix empfiehlt, dass Cash Cows Stars und Fragezeichen finanzieren sollen. Was passiert, wenn ein Unternehmen nur Arme Hunde im Portfolio hat?",
-      "keywords": ["cash flow", "investitionen", "wachstum", "marktanteil", "ausgewogen", "finanzierung"],
+      "keywords": [
+        "cash flow",
+        "investitionen",
+        "wachstum",
+        "marktanteil",
+        "ausgewogen",
+        "finanzierung"
+      ],
       "sampleAnswer": "Cash Cows sind etablierte Marktführer in langsam wachsenden Märkten. Sie benötigen wenig Investitionen (Markt wächst nicht mehr stark) und generieren deshalb hohen positiven Cash-Flow. Dieser Cash-Flow wird genutzt, um Stars (hohe Investitionen im wachsenden Markt halten) und Fragezeichen (könnten zu Stars werden, wenn investiert wird) zu finanzieren. Hat ein Unternehmen nur Arme Hunde, fehlt der Geldfluss — es kann nicht in Wachstumsmärkte investieren und stirbt langfristig aus. Ein ausgewogenes Portfolio ist daher entscheidend.",
       "explanation": "Kernidee: Cash-Flow-Kreislauf im Portfolio — Cash Cows generieren, Stars/Fragezeichen konsumieren. Ohne Cash Cows fehlt das Geld für Wachstum."
     },
@@ -350,7 +461,9 @@
         "Eine Marke, die aus einer Kombination aus Bild und Text besteht.",
         "Eine Marke, die gesetzlich nicht schützbar ist."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Eine Textmarke besteht nur aus Schrift/Schriftzug, ohne Bildelement. Beispiele: JOOP!, Vapiano. Eine Bildmarke hat nur ein Symbol (Deutsche Bank, Puma), eine Bild-/Textmarke kombiniert beides (BMW, Continental)."
     },
     {

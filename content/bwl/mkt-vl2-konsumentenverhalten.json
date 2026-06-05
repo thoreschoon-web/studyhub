@@ -78,24 +78,90 @@
           "kind": "table",
           "id": "fig-flukt-roh",
           "title": "Fluktuationsmatrix: Rohdaten (Kaufhäufigkeiten)",
-          "headers": ["", "Marke A (t)", "Marke B (t)", "Marke C (t)", "Summe t-1", "MA t-1"],
+          "headers": [
+            "",
+            "Marke A (t)",
+            "Marke B (t)",
+            "Marke C (t)",
+            "Summe t-1",
+            "MA t-1"
+          ],
           "rows": [
-            ["Marke A (t-1)", "270", "190", "65", "525", "35 %"],
-            ["Marke B (t-1)", "170", "445", "60", "675", "45 %"],
-            ["Marke C (t-1)", "85", "115", "100", "300", "20 %"],
-            ["Summe (t)", "525", "750", "225", "1.500", ""],
-            ["MA (t)", "35 %", "50 %", "15 %", "", "100 %"]
+            [
+              "Marke A (t-1)",
+              "270",
+              "190",
+              "65",
+              "525",
+              "35 %"
+            ],
+            [
+              "Marke B (t-1)",
+              "170",
+              "445",
+              "60",
+              "675",
+              "45 %"
+            ],
+            [
+              "Marke C (t-1)",
+              "85",
+              "115",
+              "100",
+              "300",
+              "20 %"
+            ],
+            [
+              "Summe (t)",
+              "525",
+              "750",
+              "225",
+              "1.500",
+              ""
+            ],
+            [
+              "MA (t)",
+              "35 %",
+              "50 %",
+              "15 %",
+              "",
+              "100 %"
+            ]
           ]
         },
         {
           "kind": "table",
           "id": "fig-flukt-prob",
           "title": "Übergangswahrscheinlichkeitsmatrix (abgeleitet aus den Rohdaten)",
-          "headers": ["", "→ Marke A", "→ Marke B", "→ Marke C", "Summe"],
+          "headers": [
+            "",
+            "→ Marke A",
+            "→ Marke B",
+            "→ Marke C",
+            "Summe"
+          ],
           "rows": [
-            ["Marke A (t-1)", "0,52", "0,36", "0,12", "1,00"],
-            ["Marke B (t-1)", "0,25", "0,66", "0,09", "1,00"],
-            ["Marke C (t-1)", "0,28", "0,38", "0,34", "1,00"]
+            [
+              "Marke A (t-1)",
+              "0,52",
+              "0,36",
+              "0,12",
+              "1,00"
+            ],
+            [
+              "Marke B (t-1)",
+              "0,25",
+              "0,66",
+              "0,09",
+              "1,00"
+            ],
+            [
+              "Marke C (t-1)",
+              "0,28",
+              "0,38",
+              "0,34",
+              "1,00"
+            ]
           ]
         }
       ]
@@ -178,6 +244,48 @@
       "topicId": "mkt-vl2-konsumentenverhalten",
       "front": "Nenne zwei Vor- und zwei Nachteile von Fluktuationsmatrizen.",
       "back": "**Vorteile:** (1) Markenloyalität und -wechsel transparent. (2) Daten einfach über Haushaltspanel erhebbar. (3) Leicht interpretierbar.\n\n**Nachteile:** (1) Theorielosigkeit – kein Erklärungsansatz für Wechselursachen. (2) Keine verhaltenswissenschaftliche Fundierung."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z1",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was ist das S-O-R-Modell?",
+      "back": "**Stimulus–Organism–Response** (Neobehaviorismus, Howard & Sheth 1969). Im Gegensatz zum S-R-Modell (Black Box) berücksichtigt es intervenierende Variablen im Organismus (Wahrnehmung, Lernen, Einstellung)."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z2",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Welche 5 Phasen hat das EKB-Kaufentscheidungsmodell?",
+      "back": "Engel-Kollat-Blackwell (1968): 1. Problemerkennung, 2. Informationssuche, 3. Alternativenbewertung (Evoked/Inert/Inept Set), 4. Kaufentscheidung, 5. Nachkaufverhalten / kognitive Dissonanz."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z3",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Formel: Fluktuationsmatrix – Übergangswahrscheinlichkeit",
+      "back": "$p_{ij} = \\dfrac{\\text{Kaufhäufigkeit Zelle}(i \\to j)}{\\text{Zeilensumme}_i}$\n\nBeispiel: $\\dfrac{270}{525} = 0{,}52$. Alle Werte einer Zeile summieren sich zu 1."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z4",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was ist kognitive Dissonanz im Kaufprozess?",
+      "back": "Nach dem Kauf auftretendes psychisches Spannungsgefühl (\"buyer's remorse\"). Reduktion durch Hinzufügen konsonanter oder Abschwächen dissonanter Überzeugungen. Marketing reagiert mit Nachkauf-Kommunikation, Garantien und Service."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z5",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Fishbein-Formel zur Einstellungsmessung",
+      "back": "$A_{ij} = \\sum_{k=1}^{n} B_{ijk} \\cdot a_{ijk}$\n\n$A_{ij}$=Einstellung Person $i$ zu Objekt $j$, $B_{ijk}$=Wahrscheinlichkeit Merkmal $k$, $a_{ijk}$=Bewertung Merkmal $k$."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z6",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Was sind die drei Komponenten einer Einstellung?",
+      "back": "**Affektiv** (Fühlen/Bewertung), **Kognitiv** (Wissen/Überzeugungen), **Konativ** (Handlungsabsicht). Grundlage des Drei-Komponenten-Ansatzes und des Fishbein-Modells."
+    },
+    {
+      "id": "mkt-vl2-konsumentenverhalten-z7",
+      "topicId": "mkt-vl2-konsumentenverhalten",
+      "front": "Maslows Bedürfnispyramide – welche 5 Stufen?",
+      "back": "Von unten: 1. Physiologische Bedürfnisse, 2. Sicherheit, 3. Soziale Zugehörigkeit, 4. Wertschätzung/Ego, 5. Selbstverwirklichung. Erst erfüllte Stufen motivieren die nächste."
     }
   ],
   "quiz": [
@@ -193,7 +301,9 @@
         "Das S-O-R-Modell misst nur den Kauf, nicht die Reaktion.",
         "Das S-R-Modell wurde von Howard und Sheth entwickelt."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das S-O-R-Modell öffnet die 'Black Box' des S-R-Modells: Zwischen Stimulus (S) und Response (R) steht der Organismus (O) mit intervenierenden Variablen wie Einstellungen, Wahrnehmungen und Erfahrungen."
     },
     {
@@ -208,7 +318,9 @@
         "Problemerkennung → Kauf → Informationssuche → Bewertung → Nachkauf",
         "Bewertung → Informationssuche → Problemerkennung → Kauf → Nachkauf"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der EKB-Prozess verläuft immer: (1) Problemerkennung, (2) Informationssuche, (3) Bewertung von Alternativen, (4) Kaufentscheidung, (5) Nachkauf-Bewertung."
     },
     {
@@ -265,7 +377,11 @@
         "Informationen aus sozialen Quellen (Familie, Referenzgruppen)",
         "Die Kaufentscheidung selbst"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "multiple": true,
       "explanation": "Im Howard/Sheth-Modell gibt es drei Arten von Inputvariablen (Stimuli): (1) Signifikative Infos (direkte Produkteigenschaften), (2) kommerzielle Quellen (Werbung), (3) soziale Quellen (Familie, Referenzgruppen). Die Kaufentscheidung ist eine Outputvariable."
     },
@@ -290,7 +406,9 @@
         "Das Fishbein-Modell (gewichtete Einstellungsmessung)",
         "Das Fluktuationsmodell"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Bei einem Impulskauf reagiert der Konsument direkt auf einen Reiz (Werbung = Stimulus) mit dem Kauf (Response), ohne ausführliche innere Verarbeitung. Das entspricht dem einfachen S-R-Gedanken."
     },
     {
@@ -300,7 +418,14 @@
       "difficulty": "schwer",
       "prompt": "Erklären Sie, wie ein Unternehmen das Fishbein-Modell nutzen kann, um seine Marketingstrategie zu verbessern. Gehen Sie auf mindestens zwei Ansatzpunkte ein.",
       "sampleAnswer": "Das Fishbein-Modell liefert zwei strategische Ansatzpunkte: (1) **Markenvergleich:** Berechnet man den Fishbein-Score für die eigene Marke und Wettbewerber, sieht man, wo man besser oder schlechter bewertet wird. (2) **Merkmal-Analyse:** Merkmale mit hohem $a_{ijk}$ (sehr wichtig für Kunden) aber niedrigem $B_{ijk}$ (Marke wird dort schwach wahrgenommen) sind Schwachstellen – hier sollte Produkt oder Kommunikation verbessert werden. (3) Merkmale mit hohem $B_{ijk}$ aber niedrigem $a_{ijk}$ (wie Duft bei Super Blend) sind weniger relevant für die Marketingbotschaft.",
-      "keywords": ["merkmal", "bewertung", "wahrscheinlichkeit", "vergleich", "schwachstelle", "strategie"],
+      "keywords": [
+        "merkmal",
+        "bewertung",
+        "wahrscheinlichkeit",
+        "vergleich",
+        "schwachstelle",
+        "strategie"
+      ],
       "explanation": "Das Fishbein-Modell ermöglicht präzise Diagnosen: Wo liegt das Problem – an der wahrgenommenen Eigenschaftsausprägung (B) oder an der Wichtigkeit (a)? Beides hat unterschiedliche Marketingimplikationen (Produktverbesserung vs. Kommunikation)."
     },
     {
@@ -315,7 +440,9 @@
         "Fishbein-Einstellungsmessung",
         "PESTLE-Analyse"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Für eine Fluktuationsmatrix braucht man Daten über dasselbe Kaufverhalten über mehrere Perioden – genau das liefert ein Haushaltspanel, bei dem dieselben Haushalte regelmäßig zu ihren Käufen befragt werden."
     },
     {

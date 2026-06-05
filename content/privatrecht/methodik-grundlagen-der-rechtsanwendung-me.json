@@ -78,12 +78,32 @@
           "kind": "table",
           "id": "me-table-merkmale",
           "title": "Merkmale der Rechtsnorm im Überblick",
-          "headers": ["Merkmal", "Was es bedeutet", "Gegenbegriff"],
+          "headers": [
+            "Merkmal",
+            "Was es bedeutet",
+            "Gegenbegriff"
+          ],
           "rows": [
-            ["Generell-abstrakt", "Gilt für viele Personen & viele Sachverhalte", "Konkret-individuell (z. B. Urteil)"],
-            ["Hoheitlich", "Vom Staat in vorgeschriebenem Verfahren erlassen", "Privat (z. B. Hausordnung)"],
-            ["Allgemeinverbindlich", "Kann mit staatlichem Zwang durchgesetzt werden", "Unverbindlich (z. B. Moral)"],
-            ["Außenwirkung", "Gilt für Personen außerhalb des Staatsapparats", "Nur Innenwirkung (z. B. Behörden-GO)"]
+            [
+              "Generell-abstrakt",
+              "Gilt für viele Personen & viele Sachverhalte",
+              "Konkret-individuell (z. B. Urteil)"
+            ],
+            [
+              "Hoheitlich",
+              "Vom Staat in vorgeschriebenem Verfahren erlassen",
+              "Privat (z. B. Hausordnung)"
+            ],
+            [
+              "Allgemeinverbindlich",
+              "Kann mit staatlichem Zwang durchgesetzt werden",
+              "Unverbindlich (z. B. Moral)"
+            ],
+            [
+              "Außenwirkung",
+              "Gilt für Personen außerhalb des Staatsapparats",
+              "Nur Innenwirkung (z. B. Behörden-GO)"
+            ]
           ]
         }
       ]
@@ -104,13 +124,43 @@
           "kind": "table",
           "id": "me-table-normen",
           "title": "Rechtsnormen vs. sonstige Sozialnormen",
-          "headers": ["Norm", "Hoheitlich?", "Allgemeinverbindlich?", "Sanktion bei Verstoß"],
+          "headers": [
+            "Norm",
+            "Hoheitlich?",
+            "Allgemeinverbindlich?",
+            "Sanktion bei Verstoß"
+          ],
           "rows": [
-            ["Rechtsnorm", "Ja", "Ja", "Staatlicher Zwang (Strafe, Schadensersatz, Vollstreckung)"],
-            ["Sitte / Brauch", "Nein", "Nein", "Gesellschaftliche Missbilligung"],
-            ["Moral / Ethik", "Nein", "Nein", "Moralische / soziale Ächtung"],
-            ["Religion", "Nein", "Nein", "Religiöse Ächtung"],
-            ["Technische Norm (privat)", "Nein (grds.)", "Nein (grds.)", "Keine direkte staatliche Sanktion"]
+            [
+              "Rechtsnorm",
+              "Ja",
+              "Ja",
+              "Staatlicher Zwang (Strafe, Schadensersatz, Vollstreckung)"
+            ],
+            [
+              "Sitte / Brauch",
+              "Nein",
+              "Nein",
+              "Gesellschaftliche Missbilligung"
+            ],
+            [
+              "Moral / Ethik",
+              "Nein",
+              "Nein",
+              "Moralische / soziale Ächtung"
+            ],
+            [
+              "Religion",
+              "Nein",
+              "Nein",
+              "Religiöse Ächtung"
+            ],
+            [
+              "Technische Norm (privat)",
+              "Nein (grds.)",
+              "Nein (grds.)",
+              "Keine direkte staatliche Sanktion"
+            ]
           ]
         }
       ]
@@ -196,6 +246,60 @@
       "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
       "front": "Was versteht man unter dem \"ethischen Minimum\" des Rechts?",
       "back": "Das Recht verkörpert die Mindestanforderungen der Moral, die rechtlich verbindlich gemacht wurden. Sitte, Moral und Religion gehen in ihren Anforderungen über das Recht hinaus. § 138 BGB (Sittenwidrigkeit) ist ein Beispiel, wo Moral und Recht sich überschneiden."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z1",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist die Ordnungsfunktion des Rechts?",
+      "back": "Das Recht regelt das Zusammenleben, schafft stabile Verhaltenserwartungen und koordiniert Interessen in der Gesellschaft."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z2",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist die Gestaltungs-/Steuerungsfunktion des Rechts?",
+      "back": "Das Recht lenkt Verhalten durch Ge- und Verbote sowie Anreize gezielt in eine bestimmte Richtung (z.B. Umweltschutz, Verbraucherschutz)."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z3",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Wie unterscheiden sich Rechtsnorm und Gesetz?",
+      "back": "Das Gesetz ist ein formeller Akt des Gesetzgebers; die Rechtsnorm ist die kleinste Einheit innerhalb eines Gesetzes (einzelne Wenn-dann-Regel)."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z4",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was bedeutet generell-abstrakt bei einer Rechtsnorm?",
+      "back": "Generell = richtet sich an eine unbestimmte Vielzahl von Personen; abstrakt = regelt eine unbestimmte Vielzahl von Fällen."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z5",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist ein subjektives Recht?",
+      "back": "Ein der Person zugeordnetes, individuell durchsetzbares Recht (z.B. Anspruch, Eigentum). Gegenteil: objektives Recht (Gesamtheit der Rechtsnormen)."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z6",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Wie unterscheiden sich absolute und relative Rechte?",
+      "back": "Absolute Rechte wirken gegen jedermann (z.B. Eigentum, Personlichkeitsrecht). Relative Rechte wirken nur zwischen bestimmten Personen (z.B. Forderung aus Vertrag)."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z7",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist eine Anspruchsgrundlage?",
+      "back": "Eine Rechtsnorm, die einem Rechtssubjekt das Recht gibt, von einem anderen ein Tun, Dulden oder Unterlassen zu verlangen (z.B. § 433 I BGB)."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z8",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was versteht man unter dem ethischen Minimum?",
+      "back": "Der kleinste gemeinsame Nenner von Moral und Recht: Nur ein Teil der moralischen Normen ist rechtlich verbindlich (z.B. Verbot von Totschlag)."
+    },
+    {
+      "id": "methodik-grundlagen-der-rechtsanwendung-me-z9",
+      "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+      "front": "Was ist die Streitentscheidungs-/Befriedungsfunktion des Rechts?",
+      "back": "Das Recht bietet Mechanismen zur verbindlichen Losung von Konflikten und ersetzt private Selbsthilfe durch staatliches Verfahren."
     }
   ],
   "quiz": [
@@ -211,7 +315,9 @@
         "Ordnung, Sanktionierung, Regelung, Befriedung",
         "Steuerung, Auslegung, Subsumtion, Befriedung"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die vier Aufgaben des Rechts sind: (1) Gestaltungs- und Steuerungsfunktion, (2) Ordnungsfunktion, (3) Zuordnungsfunktion, (4) Streitentscheidungs- und Befriedungsfunktion. Option A fasst diese korrekt zusammen."
     },
     {
@@ -226,7 +332,9 @@
         "Gesetz ist der Oberbegriff; das Recht besteht aus Rechtsnormen.",
         "Alle drei Begriffe sind gleichbedeutend."
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Das Recht ist der Oberbegriff (die gesamte Rechtsordnung). Gesetze (z. B. BGB) sind Teile des Rechts und bestehen jeweils aus Rechtsnormen (den kleinsten selbstständigen Einheiten)."
     },
     {
@@ -241,7 +349,10 @@
         "Hoheitlich erlassen",
         "Von einer Mehrheit befürwortet"
       ],
-      "correct": [0, 2],
+      "correct": [
+        0,
+        2
+      ],
       "multiple": true,
       "explanation": "Rechtsnormen müssen u. a. generell-abstrakt und hoheitlich erlassen sein. Das Merkmal \"schriftlich\" ist nicht zwingend (Gewohnheitsrecht ist ungeschrieben). Eine Mehrheitsbefürwortung ist für die Eigenschaft als Rechtsnorm nicht entscheidend (auch wenn Demokratie zugrunde liegt)."
     },
@@ -284,7 +395,9 @@
         "Objektives Recht, da es im BGB geregelt ist",
         "Hoheitliches Recht, da es vom Staat verliehen wird"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das Eigentum ist ein absolutes Recht: Es wirkt gegenüber jedermann — jeder Dritte ist verpflichtet, das Eigentum des Eigentümers zu respektieren. \"Objektives Recht\" (Option C) wäre die Bezeichnung für das Rechtssystem als Ganzes, nicht für ein individuelles Recht."
     },
     {
@@ -299,7 +412,9 @@
         "Das Recht verkörpert das \"ethische Minimum\": Sitte und Moral gehen in ihren Anforderungen über das Recht hinaus.",
         "Moralische Regeln haben stets Außenwirkung, Rechtsnormen dagegen nicht."
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Sitte, Moral und Religion zielen auf mehr als das Recht: Sie fordern oft auch innere Haltungen und gelten in ihren Forderungen weiter als das Recht. Das Recht beschränkt sich auf das \"ethische Minimum\" — das Mindestmaß, das rechtlich erzwingbar ist. § 138 BGB (Sittenwidrigkeit) zeigt, wo Moral ins Recht einfließt."
     },
     {
@@ -314,7 +429,9 @@
         "Außenwirkung — DIN-Normen haben nur Innenwirkung",
         "Allgemeinverbindlich — DIN-Normen werden von niemandem befolgt"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "DIN-Normen sind generell-abstrakt (sie gelten für viele Produkte und Verfahren), haben Außenwirkung und werden in der Praxis weitgehend befolgt. Was fehlt, ist das Merkmal \"hoheitlich\": Sie werden von einem privaten Verein (DIN e.V.) erlassen, nicht von einer staatlich legitimierten Instanz in einem dafür vorgesehenen Verfahren. Erst wenn der Gesetzgeber sie übernimmt (\"technische Vorschriften\"), werden sie zu Rechtsnormen."
     },
     {
@@ -324,7 +441,15 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in 3-5 Sätzen: Was ist der Unterschied zwischen objektivem und subjektivem Recht? Nenne jeweils ein Beispiel.",
       "sampleAnswer": "Das objektive Recht bezeichnet die Gesamtheit aller Rechtsnormen — also das Rechtssystem als Ganzes, z. B. das BGB oder das StGB. Es gilt abstrakt für alle Menschen. Das subjektive Recht ist dagegen ein konkretes Recht, das einer bestimmten Person zusteht, z. B. der Anspruch des Verkäufers auf Zahlung des Kaufpreises gegen den Käufer aus § 433 Abs. 2 BGB. Subjektive Rechte werden durch das objektive Recht verliehen. Ein weiteres Beispiel: Das Eigentumsrecht (§ 903 BGB, objektives Recht) verleiht mir als Eigentümer ein subjektives Recht, andere von meiner Sache auszuschließen.",
-      "keywords": ["objektiv", "gesamtheit", "rechtsnormen", "subjektiv", "person", "zugeordnet", "verliehen"],
+      "keywords": [
+        "objektiv",
+        "gesamtheit",
+        "rechtsnormen",
+        "subjektiv",
+        "person",
+        "zugeordnet",
+        "verliehen"
+      ],
       "explanation": "Kernunterschied: Objektives Recht = Normensystem (für alle). Subjektives Recht = konkretes Recht einer Person (verliehen durch das objektive Recht). Diese Unterscheidung ist grundlegend für die gesamte Rechtsanwendung."
     },
     {
@@ -348,7 +473,9 @@
         "Das Urteil ist eine Rechtsnorm, da es hoheitlich durch ein Gericht erlassen wurde.",
         "Das Urteil ist eine Rechtsnorm, da es Außenwirkung hat."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das Urteil ist eine konkret-individuelle Entscheidung — es gilt nur für A und B in genau diesem Fall. Rechtsnormen müssen dagegen generell-abstrakt sein (für viele Personen und Sachverhalte gelten). Zwar ist das Urteil hoheitlich erlassen und hat Außenwirkung, aber das Merkmal \"generell-abstrakt\" fehlt. Daher ist es keine Rechtsnorm, sondern ein Einzelfallakt."
     }
   ],

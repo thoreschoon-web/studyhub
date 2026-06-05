@@ -29,11 +29,22 @@
           "title": "Ablehnbereiche und Fehlerarten (zweiseitiger Test)",
           "caption": "Die schraffierten Flächen links und rechts (je α/2) sind die Ablehnbereiche. Fällt die Prüfgröße hinein, wird H0 abgelehnt. Die Gesamtfläche der Ablehnbereiche ist genau α.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "tail": "two" },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "tail": "two"
+          },
           "markers": [
-            { "x": -1.96, "label": "-z_{1-α/2}" },
-            { "x": 1.96, "label": "+z_{1-α/2}" }
+            {
+              "x": -1.96,
+              "label": "-z_{1-α/2}"
+            },
+            {
+              "x": 1.96,
+              "label": "+z_{1-α/2}"
+            }
           ]
         }
       ],
@@ -61,15 +72,55 @@
           "kind": "table",
           "id": "fig-testuebersicht",
           "title": "Übersicht: Prüfgrößen und Ablehnbereiche der wichtigsten Tests",
-          "headers": ["Test", "Prüfgröße T", "Verteilung unter H0", "Ablehnbereich (zweiseitig)"],
+          "headers": [
+            "Test",
+            "Prüfgröße T",
+            "Verteilung unter H0",
+            "Ablehnbereich (zweiseitig)"
+          ],
           "rows": [
-            ["Gauß-Test (σ bekannt)", "$(\\bar{X}-\\mu_0)\\cdot\\sqrt{n}/\\sigma$", "$N(0,1)$", "$|T|>z_{1-\\alpha/2}$"],
-            ["t-Test (σ unbekannt)", "$(\\bar{X}-\\mu_0)\\cdot\\sqrt{n}/\\hat{\\sigma}$", "$t_{n-1}$", "$|T|>t_{n-1,\\,1-\\alpha/2}$"],
-            ["Anteilstest", "$(\\hat{p}-p_0)\\cdot\\sqrt{n}/\\sqrt{p_0(1-p_0)}$", "$N(0,1)$", "$|T|>z_{1-\\alpha/2}$"],
-            ["Chi²-Anpassungstest", "$\\sum(n_i-\\tilde{n}_i)^2/\\tilde{n}_i$", "$\\chi^2_{K-1}$ bzw. $\\chi^2_{K-m-1}$", "$T>\\chi^2_{K-1,\\,1-\\alpha}$"],
-            ["Chi²-Unabhängigkeitstest", "$\\sum\\sum(n_{jl}-\\tilde{n}_{jl})^2/\\tilde{n}_{jl}$", "$\\chi^2_{(J-1)(L-1)}$", "$T>\\chi^2_{(J-1)(L-1),\\,1-\\alpha}$"],
-            ["Korrelationstest (ρ=0)", "$r\\cdot\\sqrt{n-2}/\\sqrt{1-r^2}$", "$t_{n-2}$", "$|T|>t_{n-2,\\,1-\\alpha/2}$"],
-            ["Fisher-Z-Test (ρ=ρ₀)", "$\\frac{1}{2}[\\ln\\frac{1+r}{1-r}-\\ln\\frac{1+\\rho_0}{1-\\rho_0}]\\cdot\\sqrt{n-3}$", "$N(0,1)$", "$|Z|>z_{1-\\alpha/2}$"]
+            [
+              "Gauß-Test (σ bekannt)",
+              "$(\\bar{X}-\\mu_0)\\cdot\\sqrt{n}/\\sigma$",
+              "$N(0,1)$",
+              "$|T|>z_{1-\\alpha/2}$"
+            ],
+            [
+              "t-Test (σ unbekannt)",
+              "$(\\bar{X}-\\mu_0)\\cdot\\sqrt{n}/\\hat{\\sigma}$",
+              "$t_{n-1}$",
+              "$|T|>t_{n-1,\\,1-\\alpha/2}$"
+            ],
+            [
+              "Anteilstest",
+              "$(\\hat{p}-p_0)\\cdot\\sqrt{n}/\\sqrt{p_0(1-p_0)}$",
+              "$N(0,1)$",
+              "$|T|>z_{1-\\alpha/2}$"
+            ],
+            [
+              "Chi²-Anpassungstest",
+              "$\\sum(n_i-\\tilde{n}_i)^2/\\tilde{n}_i$",
+              "$\\chi^2_{K-1}$ bzw. $\\chi^2_{K-m-1}$",
+              "$T>\\chi^2_{K-1,\\,1-\\alpha}$"
+            ],
+            [
+              "Chi²-Unabhängigkeitstest",
+              "$\\sum\\sum(n_{jl}-\\tilde{n}_{jl})^2/\\tilde{n}_{jl}$",
+              "$\\chi^2_{(J-1)(L-1)}$",
+              "$T>\\chi^2_{(J-1)(L-1),\\,1-\\alpha}$"
+            ],
+            [
+              "Korrelationstest (ρ=0)",
+              "$r\\cdot\\sqrt{n-2}/\\sqrt{1-r^2}$",
+              "$t_{n-2}$",
+              "$|T|>t_{n-2,\\,1-\\alpha/2}$"
+            ],
+            [
+              "Fisher-Z-Test (ρ=ρ₀)",
+              "$\\frac{1}{2}[\\ln\\frac{1+r}{1-r}-\\ln\\frac{1+\\rho_0}{1-\\rho_0}]\\cdot\\sqrt{n-3}$",
+              "$N(0,1)$",
+              "$|Z|>z_{1-\\alpha/2}$"
+            ]
           ]
         }
       ]
@@ -85,10 +136,18 @@
           "title": "Linksseitiger Gauß-Test (α = 0,01)",
           "caption": "Der Ablehnbereich liegt links von -z_{0,99} = -2,326. Fällt die Prüfgröße Z in die schraffierte Fläche (α = 1%), wird H0 abgelehnt.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "tail": "left" },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "tail": "left"
+          },
           "markers": [
-            { "x": -2.326, "label": "-2,326" }
+            {
+              "x": -2.326,
+              "label": "-2,326"
+            }
           ]
         },
         {
@@ -97,10 +156,18 @@
           "title": "Rechtsseitiger Gauß-Test (α = 0,05)",
           "caption": "Der Ablehnbereich liegt rechts von z_{0,95} = 1,645. Prüfgröße Z > 1,645 → H0 ablehnen.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "tail": "right" },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "tail": "right"
+          },
           "markers": [
-            { "x": 1.645, "label": "1,645" }
+            {
+              "x": 1.645,
+              "label": "1,645"
+            }
           ]
         },
         {
@@ -109,11 +176,21 @@
           "title": "t-Verteilung vs. Standardnormalverteilung",
           "caption": "Die t-Verteilung (df = 5, rote Kurve) hat breitere Ränder als N(0,1). Mit wachsendem n nähert sie sich der Normalverteilung an — ab n ≈ 30 ist der Unterschied klein.",
           "dist": "t",
-          "params": { "df": 5 },
-          "shade": { "tail": "two" },
+          "params": {
+            "df": 5
+          },
+          "shade": {
+            "tail": "two"
+          },
           "markers": [
-            { "x": -2.571, "label": "-t_{5;0,975}" },
-            { "x": 2.571, "label": "+t_{5;0,975}" }
+            {
+              "x": -2.571,
+              "label": "-t_{5;0,975}"
+            },
+            {
+              "x": 2.571,
+              "label": "+t_{5;0,975}"
+            }
           ]
         }
       ],
@@ -136,11 +213,22 @@
           "title": "Anteilstest (linksseitig, α = 0,05)",
           "caption": "Ablehnbereich links von -1,645. Die berechnete Prüfgröße T = -1,0 liegt außerhalb des Ablehnbereichs → H0 nicht ablehnen.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "tail": "left" },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "tail": "left"
+          },
           "markers": [
-            { "x": -1.645, "label": "-1,645" },
-            { "x": -1.0, "label": "T = -1,0" }
+            {
+              "x": -1.645,
+              "label": "-1,645"
+            },
+            {
+              "x": -1,
+              "label": "T = -1,0"
+            }
           ]
         }
       ]
@@ -156,24 +244,64 @@
           "title": "Chi-Quadrat-Verteilung (df = 3, α = 0,05)",
           "caption": "Der Ablehnbereich liegt rechts von χ²_{3; 0,95} = 7,815. Der berechnete Testwert T = 0,693 liegt weit links davon — H0 wird nicht abgelehnt.",
           "dist": "chi2",
-          "params": { "df": 3 },
-          "shade": { "tail": "right" },
+          "params": {
+            "df": 3
+          },
+          "shade": {
+            "tail": "right"
+          },
           "markers": [
-            { "x": 7.815, "label": "7,815" },
-            { "x": 0.693, "label": "T = 0,693" }
+            {
+              "x": 7.815,
+              "label": "7,815"
+            },
+            {
+              "x": 0.693,
+              "label": "T = 0,693"
+            }
           ]
         },
         {
           "kind": "table",
           "id": "fig-chi2-berechnung",
           "title": "Chi-Quadrat-Berechnung: beobachtete vs. erwartete Häufigkeiten",
-          "headers": ["Klasse", "n_i (beob.)", "ñ_i (erw.)", "(n_i − ñ_i)²/ñ_i"],
+          "headers": [
+            "Klasse",
+            "n_i (beob.)",
+            "ñ_i (erw.)",
+            "(n_i − ñ_i)²/ñ_i"
+          ],
           "rows": [
-            ["[0; 1)", "11", "12,5", "0,180"],
-            ["[1; 2)", "41", "37,5", "0,327"],
-            ["[2; 3)", "35", "37,5", "0,167"],
-            ["[3; 4)", "13", "12,5", "0,020"],
-            ["Summe", "100", "100", "**T = 0,693**"]
+            [
+              "[0; 1)",
+              "11",
+              "12,5",
+              "0,180"
+            ],
+            [
+              "[1; 2)",
+              "41",
+              "37,5",
+              "0,327"
+            ],
+            [
+              "[2; 3)",
+              "35",
+              "37,5",
+              "0,167"
+            ],
+            [
+              "[3; 4)",
+              "13",
+              "12,5",
+              "0,020"
+            ],
+            [
+              "Summe",
+              "100",
+              "100",
+              "**T = 0,693**"
+            ]
           ]
         }
       ]
@@ -189,10 +317,17 @@
           "title": "Chi-Quadrat-Unabhängigkeitstest (df = 4, α = 0,05)",
           "caption": "Kritischer Wert χ²_{4; 0,95} = 9,488. Die Prüfgröße T = 37,5 liegt weit rechts im Ablehnbereich — starke Abhängigkeit zwischen Region und Kaufintensität.",
           "dist": "chi2",
-          "params": { "df": 4 },
-          "shade": { "tail": "right" },
+          "params": {
+            "df": 4
+          },
+          "shade": {
+            "tail": "right"
+          },
           "markers": [
-            { "x": 9.488, "label": "9,488" }
+            {
+              "x": 9.488,
+              "label": "9,488"
+            }
           ]
         }
       ],
@@ -253,6 +388,168 @@
       "topicId": "statistische-signifikanztests",
       "front": "Wie lautet die Prüfgröße für den Korrelationstest (H0: ρ = 0)?",
       "back": "$$T = \\frac{r}{\\sqrt{1-r^2}} \\cdot \\sqrt{n-2} \\sim t_{n-2} \\text{ unter } H_0$$\nAblehne H0: ρ=0, wenn $|T| > t_{n-2;\\,1-\\alpha/2}$."
+    },
+    {
+      "id": "statistische-signifikanztests-z1",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was ist die Nullhypothese $H_0$?",
+      "back": "Die zu testende Behauptung, die beibehalten wird, solange die Daten sie nicht klar widerlegen."
+    },
+    {
+      "id": "statistische-signifikanztests-z2",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was ist die Alternativhypothese $H_1$?",
+      "back": "Die Gegenhypothese zu $H_0$; sie wird angenommen, wenn $H_0$ verworfen wird."
+    },
+    {
+      "id": "statistische-signifikanztests-z3",
+      "topicId": "statistische-signifikanztests",
+      "front": "Fehler 1. Art",
+      "back": "$H_0$ wird abgelehnt, obwohl sie wahr ist. Wahrscheinlichkeit $= \\alpha$ (Signifikanzniveau)."
+    },
+    {
+      "id": "statistische-signifikanztests-z4",
+      "topicId": "statistische-signifikanztests",
+      "front": "Fehler 2. Art",
+      "back": "$H_0$ wird nicht abgelehnt, obwohl $H_1$ wahr ist. Wahrscheinlichkeit $= \\beta$."
+    },
+    {
+      "id": "statistische-signifikanztests-z5",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was ist der p-Wert?",
+      "back": "Die Wahrscheinlichkeit, unter $H_0$ einen mindestens so extremen Prüfgrößenwert zu erhalten. $H_0$ ablehnen, wenn $p \\le \\alpha$."
+    },
+    {
+      "id": "statistische-signifikanztests-z6",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wann lehnt man $H_0$ ab?",
+      "back": "Wenn die Prüfgröße $T$ im Ablehnbereich $B$ liegt: $T \\in B$."
+    },
+    {
+      "id": "statistische-signifikanztests-z7",
+      "topicId": "statistische-signifikanztests",
+      "front": "Prüfgröße des Gauß-Tests (bekannte Varianz $\\sigma^2$)",
+      "back": "$Z = \\dfrac{\\bar{X} - \\mu_0}{\\sigma} \\sqrt{n} \\sim N(0,1)$"
+    },
+    {
+      "id": "statistische-signifikanztests-z8",
+      "topicId": "statistische-signifikanztests",
+      "front": "Ablehnbereich: zweiseitiger Gauß-Test ($H_0: \\mu = \\mu_0$)",
+      "back": "$B = (-\\infty,\\,-z_{1-\\alpha/2}) \\cup (z_{1-\\alpha/2},\\,\\infty)$"
+    },
+    {
+      "id": "statistische-signifikanztests-z9",
+      "topicId": "statistische-signifikanztests",
+      "front": "Ablehnbereich: rechtsseitiger Gauß-Test ($H_0: \\mu \\le \\mu_0$)",
+      "back": "$B = (z_{1-\\alpha},\\,\\infty)$"
+    },
+    {
+      "id": "statistische-signifikanztests-z10",
+      "topicId": "statistische-signifikanztests",
+      "front": "Ablehnbereich: linksseitiger Gauß-Test ($H_0: \\mu \\ge \\mu_0$)",
+      "back": "$B = (-\\infty,\\,-z_{1-\\alpha})$"
+    },
+    {
+      "id": "statistische-signifikanztests-z11",
+      "topicId": "statistische-signifikanztests",
+      "front": "Prüfgröße des t-Tests (unbekannte Varianz)",
+      "back": "$T = \\dfrac{\\bar{X} - \\mu_0}{\\hat{\\sigma}} \\sqrt{n} \\sim t_{n-1}$"
+    },
+    {
+      "id": "statistische-signifikanztests-z12",
+      "topicId": "statistische-signifikanztests",
+      "front": "Wann wird beim t-Test die Normalverteilung approximiert?",
+      "back": "Ab $n \\ge 30$; dann gilt $t_{n-1} \\approx N(0,1)$."
+    },
+    {
+      "id": "statistische-signifikanztests-z13",
+      "topicId": "statistische-signifikanztests",
+      "front": "Prüfgröße des Anteilstests ($H_0: p = p_0$)",
+      "back": "$T = \\dfrac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}} \\sqrt{n} \\sim N(0,1)$"
+    },
+    {
+      "id": "statistische-signifikanztests-z14",
+      "topicId": "statistische-signifikanztests",
+      "front": "Voraussetzungen für den Anteilstest",
+      "back": "$n \\ge 30$, $n p_0 \\ge 10$, $n(1-p_0) \\ge 10$."
+    },
+    {
+      "id": "statistische-signifikanztests-z15",
+      "topicId": "statistische-signifikanztests",
+      "front": "Chi-Quadrat-Anpassungstest: Prüfgröße",
+      "back": "$T = \\sum_{i=1}^{K} \\dfrac{(n_i - \\tilde{n}_i)^2}{\\tilde{n}_i} \\sim \\chi^2_{K-1}$, wobei $\\tilde{n}_i = n \\cdot p_i$."
+    },
+    {
+      "id": "statistische-signifikanztests-z16",
+      "topicId": "statistische-signifikanztests",
+      "front": "Freiheitsgrade beim Chi-Quadrat-Anpassungstest",
+      "back": "$\\nu = K - m - 1$; $K$ = Klassen, $m$ = Anzahl geschätzter Parameter."
+    },
+    {
+      "id": "statistische-signifikanztests-z17",
+      "topicId": "statistische-signifikanztests",
+      "front": "Bedingung für Klassen im Chi-Quadrat-Test",
+      "back": "Erwartete Häufigkeit $\\tilde{n}_i \\ge 5$ je Klasse; ggf. Klassen zusammenfassen."
+    },
+    {
+      "id": "statistische-signifikanztests-z18",
+      "topicId": "statistische-signifikanztests",
+      "front": "Ablehnen beim Chi-Quadrat-Anpassungstest",
+      "back": "Verwerfe $H_0$, falls $T > \\chi^2_{K-1,\\,1-\\alpha}$."
+    },
+    {
+      "id": "statistische-signifikanztests-z19",
+      "topicId": "statistische-signifikanztests",
+      "front": "Stichprobener Korrelationskoeffizient $r_{XY}$",
+      "back": "$r_{XY} = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2 \\sum(y_i-\\bar{y})^2}}$, $\\;-1 \\le r_{XY} \\le 1$."
+    },
+    {
+      "id": "statistische-signifikanztests-z20",
+      "topicId": "statistische-signifikanztests",
+      "front": "Test auf $\\rho = 0$: Prüfgröße",
+      "back": "$T = \\dfrac{r_{XY}}{\\sqrt{1 - r_{XY}^2}} \\sqrt{n-2} \\sim t_{n-2}$"
+    },
+    {
+      "id": "statistische-signifikanztests-z21",
+      "topicId": "statistische-signifikanztests",
+      "front": "Fisher-Z-Transformation (Test auf $\\rho = \\rho_0 \\ne 0$)",
+      "back": "$Z = \\dfrac{1}{2}\\left[\\ln\\dfrac{1+r}{1-r} - \\ln\\dfrac{1+\\rho_0}{1-\\rho_0}\\right]\\sqrt{n-3} \\sim N(0,1)$"
+    },
+    {
+      "id": "statistische-signifikanztests-z22",
+      "topicId": "statistische-signifikanztests",
+      "front": "Chi-Quadrat-Unabhängigkeitstest: erwartete Häufigkeit",
+      "back": "$\\tilde{n}_{jl} = \\dfrac{n_{j\\cdot} \\cdot n_{\\cdot l}}{n}$ (Produkt der Randhäufigkeiten geteilt durch $n$)."
+    },
+    {
+      "id": "statistische-signifikanztests-z23",
+      "topicId": "statistische-signifikanztests",
+      "front": "Freiheitsgrade beim Chi-Quadrat-Unabhängigkeitstest",
+      "back": "$\\nu = (J-1)(L-1)$; $J$ = Zeilen, $L$ = Spalten der Kontingenztafel."
+    },
+    {
+      "id": "statistische-signifikanztests-z24",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was ist der Unterschied zwischen ein- und zweiseitigem Test?",
+      "back": "Einseitig: Ablehnbereich nur auf einer Seite; der kritische Wert ist $z_{1-\\alpha}$. Zweiseitig: Ablehnbereiche beidseitig; kritischer Wert $z_{1-\\alpha/2}$."
+    },
+    {
+      "id": "statistische-signifikanztests-z25",
+      "topicId": "statistische-signifikanztests",
+      "front": "Stochastische Unabhängigkeit vs. lineare Unabhängigkeit",
+      "back": "Stochastische Unabhängigkeit $\\Rightarrow$ $\\rho = 0$. Aber $\\rho = 0$ bedeutet nur keine lineare Abhängigkeit, nicht unbedingt stochastische Unabhängigkeit."
+    },
+    {
+      "id": "statistische-signifikanztests-z26",
+      "topicId": "statistische-signifikanztests",
+      "front": "Signifikanzniveau $\\alpha$ — typische Werte",
+      "back": "$\\alpha = 0{,}01$, $0{,}05$ oder $0{,}10$. Kleineres $\\alpha$ $\\Rightarrow$ strengerer Test, aber höheres Risiko für Fehler 2. Art."
+    },
+    {
+      "id": "statistische-signifikanztests-z27",
+      "topicId": "statistische-signifikanztests",
+      "front": "Was passiert mit Fehler 2. Art, wenn $\\alpha$ verkleinert wird?",
+      "back": "$\\beta$ steigt (bei festem $n$). Fehler 1. und 2. Art stehen in einem Trade-off."
     }
   ],
   "quiz": [
@@ -268,7 +565,9 @@
         "H1 wird bewiesen, obwohl H0 gilt.",
         "Der Test hat keine Aussagekraft."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der Fehler 1. Art (α-Fehler) tritt auf, wenn H0 abgelehnt wird, obwohl sie in Wirklichkeit wahr ist. Das ist genau Option (2). Das Signifikanzniveau α ist die maximal zulässige Wahrscheinlichkeit für diesen Fehler."
     },
     {
@@ -316,8 +615,15 @@
       "topicId": "statistische-signifikanztests",
       "difficulty": "mittel",
       "prompt": "Beim Chi-Quadrat-Anpassungstest mit K = 5 Klassen, wobei 2 Parameter aus den Daten geschätzt werden: Wie viele Freiheitsgrade hat die Prüfgröße?",
-      "options": ["5", "4", "3", "2"],
-      "correct": [3],
+      "options": [
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "correct": [
+        3
+      ],
       "explanation": "ν = K − 1 − m = 5 − 1 − 2 = 2. K ist die Anzahl der Klassen, m die Anzahl der geschätzten Parameter. Jeder geschätzte Parameter kostet einen Freiheitsgrad."
     },
     {
@@ -335,7 +641,7 @@
       "topicId": "statistische-signifikanztests",
       "difficulty": "schwer",
       "prompt": "Anteilstest: Von n = 100 Befragten sind 45 zufrieden. Prüfgröße T für H0: p ≥ 0,5? (Auf 1 Dezimalstelle gerundet.)",
-      "answer": -1.0,
+      "answer": -1,
       "tolerance": 0.05,
       "explanation": "T = (0,45 − 0,5)/√(0,5·0,5)·√100 = (−0,05/0,5)·10 = −0,1·10 = −1,0. Kritischer Wert (linksseitig, α=0,05): −1,645. Da T = −1,0 > −1,645: H0 nicht ablehnen."
     },
@@ -345,8 +651,15 @@
       "topicId": "statistische-signifikanztests",
       "difficulty": "mittel",
       "prompt": "Im Chi-Quadrat-Unabhängigkeitstest mit einer 3×4-Kontingenztafel (3 Zeilen, 4 Spalten): Wie viele Freiheitsgrade hat die Prüfgröße?",
-      "options": ["12", "11", "6", "8"],
-      "correct": [2],
+      "options": [
+        "12",
+        "11",
+        "6",
+        "8"
+      ],
+      "correct": [
+        2
+      ],
       "explanation": "ν = (J−1)(L−1) = (3−1)(4−1) = 2·3 = 6."
     },
     {
@@ -356,7 +669,13 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten: Warum verwendet man beim Anteilstest im Nenner der Prüfgröße den Hypothesenwert p₀ und nicht den geschätzten Wert p̂?",
       "sampleAnswer": "Die Prüfgröße soll messen, wie weit p̂ von p₀ entfernt ist, unter der Annahme, dass H0 (d.h. p = p₀) wahr ist. Der Standardfehler von p̂ unter H0 ist √(p₀(1−p₀)/n). Würde man p̂ verwenden, würde man die Verteilung der Prüfgröße mit den Daten verändern, die man gerade testen möchte — das wäre zirkulär und mathematisch falsch.",
-      "keywords": ["h0", "p0", "standardfehler", "unter h0", "wahr"],
+      "keywords": [
+        "h0",
+        "p0",
+        "standardfehler",
+        "unter h0",
+        "wahr"
+      ],
       "explanation": "Unter H0 gilt p = p₀. Die Varianz von p̂ ist unter H0 gleich p₀(1−p₀)/n. Deshalb steht p₀ im Nenner."
     },
     {
@@ -381,8 +700,90 @@
         "Den Gauß-Test direkt mit r als Prüfgröße",
         "Den Chi-Quadrat-Test"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Für H0: ρ = 0 kann man den t-Test verwenden. Sobald ρ₀ ≠ 0, ist r nicht mehr normalverteilt, und man braucht die Fisher-Z-Transformation: Z = ½[ln((1+r)/(1−r)) − ln((1+ρ₀)/(1−ρ₀))]·√(n−3) ~ N(0,1)."
+    },
+    {
+      "kind": "mc",
+      "id": "statistische-signifikanztests-zq1",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "leicht",
+      "prompt": "Ein Fehler 1. Art liegt vor, wenn:",
+      "options": [
+        "Die Nullhypothese $H_0$ abgelehnt wird, obwohl sie wahr ist.",
+        "Die Nullhypothese $H_0$ nicht abgelehnt wird, obwohl $H_1$ wahr ist.",
+        "Der p-Wert kleiner als $\\alpha$ ist.",
+        "Die Prüfgröße $T$ im Annahmebereich liegt."
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Fehler 1. Art: $H_0$ ablehnen, obwohl $H_0$ wahr ist. Die Wahrscheinlichkeit dafür ist das Signifikanzniveau $\\alpha$. Fehler 2. Art ist das Gegenteil: $H_0$ nicht ablehnen, obwohl $H_1$ wahr ist."
+    },
+    {
+      "kind": "truefalse",
+      "id": "statistische-signifikanztests-zq2",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "leicht",
+      "prompt": "Beim zweiseitigen Gauß-Test ($H_0: \\mu = \\mu_0$) wird $H_0$ abgelehnt, wenn die Prüfgröße $Z = \\frac{\\bar{X} - \\mu_0}{\\sigma}\\sqrt{n}$ dem Betrag nach größer als $z_{1-\\alpha/2}$ ist.",
+      "answer": true,
+      "explanation": "Beim zweiseitigen Test lautet der Ablehnbereich $B = (-\\infty, -z_{1-\\alpha/2}) \\cup (z_{1-\\alpha/2}, \\infty)$, also wird $H_0$ abgelehnt, wenn $|Z| > z_{1-\\alpha/2}$."
+    },
+    {
+      "kind": "numeric",
+      "id": "statistische-signifikanztests-zq3",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Beim Anteilstest lautet die Prüfgröße $T = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}}\\sqrt{n}$. Bei $n = 100$ Befragten, 45 Zufriedenen ($\\hat{p} = 0{,}45$) und $H_0: p \\ge 0{,}5$ ($p_0 = 0{,}5$): Berechnen Sie den Wert der Prüfgröße $T$.",
+      "answer": -1,
+      "tolerance": 0.01,
+      "unit": "",
+      "explanation": "$T = \\frac{0{,}45 - 0{,}5}{\\sqrt{0{,}5 \\cdot 0{,}5}} \\cdot \\sqrt{100} = \\frac{-0{,}05}{0{,}5} \\cdot 10 = -0{,}1 \\cdot 10 = -1{,}0$."
+    },
+    {
+      "kind": "mc",
+      "id": "statistische-signifikanztests-zq4",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Beim Chi-Quadrat-Anpassungstest mit $K$ Klassen und $m$ geschätzten Parametern hat die Teststatistik unter $H_0$ asymptotisch eine $\\chi^2$-Verteilung mit wie vielen Freiheitsgraden?",
+      "options": [
+        "$\\nu = K - m - 1$",
+        "$\\nu = K - 1$",
+        "$\\nu = K - m$",
+        "$\\nu = (K-1)(m-1)$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Die Freiheitsgrade beim Chi-Quadrat-Anpassungstest sind $\\nu = K - m - 1$, wobei $K$ die Anzahl der Klassen und $m$ die Anzahl der aus den Daten geschätzten Parameter ist. Werden keine Parameter geschätzt ($m=0$), gilt $\\nu = K-1$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "statistische-signifikanztests-zq5",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "mittel",
+      "prompt": "Beim Chi-Quadrat-Unabhängigkeitstest für eine $J \\times L$-Kontingenztafel berechnet sich die erwartete Häufigkeit in Zelle $(j,l)$ als $\\tilde{n}_{jl} = \\frac{n_{j\\cdot} \\cdot n_{\\cdot l}}{n}$.",
+      "answer": true,
+      "explanation": "Unter Unabhängigkeit gilt $P(X=j, Y=l) = P(X=j) \\cdot P(Y=l)$. Die erwartete Häufigkeit ist daher $\\tilde{n}_{jl} = n \\cdot \\hat{P}(X=j) \\cdot \\hat{P}(Y=l) = n \\cdot \\frac{n_{j\\cdot}}{n} \\cdot \\frac{n_{\\cdot l}}{n} = \\frac{n_{j\\cdot}\\,n_{\\cdot l}}{n}$."
+    },
+    {
+      "kind": "mc",
+      "id": "statistische-signifikanztests-zq6",
+      "topicId": "statistische-signifikanztests",
+      "difficulty": "schwer",
+      "prompt": "Für den Test auf Korrelation $H_0: \\rho = 0$ bei $n = 12$ Beobachtungen und Stichprobenkorrelation $r$ lautet die Prüfgröße:",
+      "options": [
+        "$T = \\dfrac{r}{\\sqrt{1 - r^2}} \\sqrt{n-2} \\sim t_{n-2}$",
+        "$T = r \\cdot \\sqrt{n-2} \\sim t_{n-2}$",
+        "$T = \\dfrac{r}{\\sqrt{1 - r^2}} \\sqrt{n-1} \\sim t_{n-1}$",
+        "$T = r^2 \\cdot (n-2) \\sim \\chi^2_{n-2}$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Die Prüfgröße für $H_0: \\rho = 0$ ist $T = \\frac{r_{XY}}{\\sqrt{1 - r_{XY}^2}}\\sqrt{n-2} \\sim t_{n-2}$. Für $n=12$ gilt $t_{10}$ als Vergleichsverteilung."
     }
   ],
   "exercises": [

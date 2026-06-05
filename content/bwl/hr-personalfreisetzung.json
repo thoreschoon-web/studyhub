@@ -54,16 +54,61 @@
           "kind": "table",
           "id": "fig-instrumente-tabelle",
           "title": "Instrumente der Personalfreisetzung im Überblick",
-          "headers": ["Stufe", "Instrument", "Wirkung", "Beispiel"],
+          "headers": [
+            "Stufe",
+            "Instrument",
+            "Wirkung",
+            "Beispiel"
+          ],
           "rows": [
-            ["1 – Vorbeugend", "Einstellungsstopp", "Langsamer natürlicher Abbau", "Keine Neueinstellungen"],
-            ["1 – Vorbeugend", "Kurzarbeit", "Kostenreduktion, Jobs bleiben", "Kurzarbeitergeld (Arbeitsagentur)"],
-            ["1 – Vorbeugend", "Viertagewoche", "Arbeitszeitreduktion", "VW 1994, Honeywell Furloughs 2009"],
-            ["2 – Personalpolitisch", "Versetzung (Inplacement)", "Mitarbeiter bleibt im Unternehmen", "Abteilungswechsel"],
-            ["2 – Personalpolitisch", "Aufhebungsvertrag", "Einvernehmliche Trennung", "Mit Abfindungszahlung"],
-            ["2 – Personalpolitisch", "Frühverrentung", "Ältere scheiden freiwillig aus", "Vorruhestandsregelung"],
-            ["3 – Direkter Abbau", "Ordentliche Kündigung", "Fristgebundene Beendigung", "Betriebsbedingte Kündigung"],
-            ["3 – Direkter Abbau", "Massenentlassung", "Viele gleichzeitig", "Mercedes, Bayer, Lufthansa"]
+            [
+              "1 – Vorbeugend",
+              "Einstellungsstopp",
+              "Langsamer natürlicher Abbau",
+              "Keine Neueinstellungen"
+            ],
+            [
+              "1 – Vorbeugend",
+              "Kurzarbeit",
+              "Kostenreduktion, Jobs bleiben",
+              "Kurzarbeitergeld (Arbeitsagentur)"
+            ],
+            [
+              "1 – Vorbeugend",
+              "Viertagewoche",
+              "Arbeitszeitreduktion",
+              "VW 1994, Honeywell Furloughs 2009"
+            ],
+            [
+              "2 – Personalpolitisch",
+              "Versetzung (Inplacement)",
+              "Mitarbeiter bleibt im Unternehmen",
+              "Abteilungswechsel"
+            ],
+            [
+              "2 – Personalpolitisch",
+              "Aufhebungsvertrag",
+              "Einvernehmliche Trennung",
+              "Mit Abfindungszahlung"
+            ],
+            [
+              "2 – Personalpolitisch",
+              "Frühverrentung",
+              "Ältere scheiden freiwillig aus",
+              "Vorruhestandsregelung"
+            ],
+            [
+              "3 – Direkter Abbau",
+              "Ordentliche Kündigung",
+              "Fristgebundene Beendigung",
+              "Betriebsbedingte Kündigung"
+            ],
+            [
+              "3 – Direkter Abbau",
+              "Massenentlassung",
+              "Viele gleichzeitig",
+              "Mercedes, Bayer, Lufthansa"
+            ]
           ]
         }
       ]
@@ -89,12 +134,37 @@
           "kind": "table",
           "id": "fig-kuendigungsarten",
           "title": "Überblick: Kündigungsarten nach KSchG",
-          "headers": ["Kündigungsart", "Grund", "Beispiel", "Besonderheit"],
+          "headers": [
+            "Kündigungsart",
+            "Grund",
+            "Beispiel",
+            "Besonderheit"
+          ],
           "rows": [
-            ["Personenbedingt", "In der Person des AN", "Dauerkrankheit, Führerscheinverlust", "Kein Verschulden nötig"],
-            ["Verhaltensbedingt", "Fehlverhalten des AN", "Diebstahl, Beleidigung", "Meist Abmahnung vorher nötig"],
-            ["Betriebsbedingt", "Unternehmerische Entscheidung", "Auftragsrückgang, Automatisierung", "Sozialauswahl zwingend"],
-            ["Außerordentlich (fristlos)", "Schwere Pflichtverletzung", "Straftat am Arbeitsplatz", "Sofort, §626 BGB, ohne Frist"]
+            [
+              "Personenbedingt",
+              "In der Person des AN",
+              "Dauerkrankheit, Führerscheinverlust",
+              "Kein Verschulden nötig"
+            ],
+            [
+              "Verhaltensbedingt",
+              "Fehlverhalten des AN",
+              "Diebstahl, Beleidigung",
+              "Meist Abmahnung vorher nötig"
+            ],
+            [
+              "Betriebsbedingt",
+              "Unternehmerische Entscheidung",
+              "Auftragsrückgang, Automatisierung",
+              "Sozialauswahl zwingend"
+            ],
+            [
+              "Außerordentlich (fristlos)",
+              "Schwere Pflichtverletzung",
+              "Straftat am Arbeitsplatz",
+              "Sofort, §626 BGB, ohne Frist"
+            ]
           ]
         },
         {
@@ -196,6 +266,42 @@
       "topicId": "hr-personalfreisetzung",
       "front": "Was ist Outplacement-Beratung und welche Vorteile hat sie für das entlassende Unternehmen?",
       "back": "**Outplacement** = das Unternehmen bezahlt externe Berater, die entlassenen Mitarbeitenden bei der Jobsuche helfen. Vorteile für das Unternehmen: (1) Vermeidung von Rechtsstreitigkeiten, (2) Motivation der Verbleibenden (Zeichen fairen Umgangs), (3) besseres Image als Arbeitgeber. Nachteile: hohe Kosten, meist nur für Führungskräfte, empirisch schwach belegt."
+    },
+    {
+      "id": "hr-personalfreisetzung-z1",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Instrumente der Personalfreisetzung – Stufenmodell",
+      "back": "1. Vorbeugend (Einstellungsstopp, Überstundenabbau, Kurzarbeit) 2. Personalpolitisch (Versetzung, Fluktuation, Frühverrentung) 3. Direkter Abbau (Kündigung, Aufhebungsvertrag)"
+    },
+    {
+      "id": "hr-personalfreisetzung-z2",
+      "topicId": "hr-personalfreisetzung",
+      "front": "KSchG – Kündigungsschutzgesetz: Anwendungsbereich",
+      "back": "Gilt ab >10 Arbeitnehmern und >6 Monate Betriebszugehörigkeit. Schützt vor sozial ungerechtfertigten Kündigungen (betriebs-, personen-, verhaltensbedingt)."
+    },
+    {
+      "id": "hr-personalfreisetzung-z3",
+      "topicId": "hr-personalfreisetzung",
+      "front": "BetrVG §102 – Betriebsrat und Kündigung",
+      "back": "Arbeitgeber muss Betriebsrat vor jeder Kündigung anhören. Ohne Anhörung ist die Kündigung unwirksam."
+    },
+    {
+      "id": "hr-personalfreisetzung-z4",
+      "topicId": "hr-personalfreisetzung",
+      "front": "BetrVG §112 – Sozialplan",
+      "back": "Bei Betriebsänderungen (z.B. Massenentlassung) ist ein Interessenausgleich und ggf. Sozialplan mit dem Betriebsrat zu vereinbaren (Ausgleich wirtschaftlicher Nachteile)."
+    },
+    {
+      "id": "hr-personalfreisetzung-z5",
+      "topicId": "hr-personalfreisetzung",
+      "front": "HBR: 'How Honeywell Avoided Layoffs' – Kernbotschaft",
+      "back": "Honeywell setzte in der Rezession 2008/09 auf unbezahlte Furloughs (Zwangsurlaub) statt Entlassungen. 'False Promise of Layoffs': Einsparungen werden überschätzt, Kosten (Abfindungen, Wissens-/Kulturverlust) unterschätzt."
+    },
+    {
+      "id": "hr-personalfreisetzung-z6",
+      "topicId": "hr-personalfreisetzung",
+      "front": "Survivor-Syndrom",
+      "back": "Verbleibende Mitarbeitende nach Personalabbau leiden unter Schuldgefühlen, Misstrauen, sinkender Motivation und Loyalität – negativ für Unternehmenskultur."
     }
   ],
   "quiz": [
@@ -211,7 +317,9 @@
         "Aufhebungsvertrag mit Abfindung",
         "Massenentlassung mit Sozialplan"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Vorbeugende Maßnahmen (Stufe 1) umfassen Einstellungsstopp, Abbau von Überstunden, Kurzarbeit und Viertagewoche — sie sollen verhindern, dass es überhaupt zu direktem Personalabbau kommt. Aufhebungsvertrag ist Stufe 2, Kündigung/Massenentlassung ist Stufe 3."
     },
     {
@@ -235,7 +343,9 @@
         "Die Kündigung ist unwirksam.",
         "Der Arbeitgeber muss die Kündigung innerhalb von 3 Tagen wiederholen."
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "§ 102 Abs. 1 Satz 3 BetrVG ist eindeutig: Eine Kündigung ohne vorherige Anhörung des Betriebsrats ist **unwirksam**. Dies ist eine der wichtigsten Formvorschriften im deutschen Kündigungsrecht."
     },
     {
@@ -250,7 +360,9 @@
         "Die Furloughs führten dazu, dass der regrettable turnover stark anstieg.",
         "CEO Cote empfiehlt Entlassungen für Unternehmen, die schnell Kosten senken wollen."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Honeywell bat Mitarbeitende, unbezahlte Freistellungen (Furloughs) zu nehmen. Entgegen der üblichen Kritik sank der regrettable turnover sogar. Cote kritisiert die \"False Promise of Layoffs\" und empfiehlt stattdessen Furloughs."
     },
     {
@@ -274,7 +386,9 @@
         "Maßnahmen zum Ausgleich wirtschaftlicher Nachteile der Arbeitnehmer bei Betriebsänderungen.",
         "Die maximale Höhe einer Abfindungszahlung."
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Der Sozialplan (§ 112 BetrVG) enthält Regelungen, die wirtschaftliche Nachteile der Arbeitnehmer bei Betriebsänderungen ausgleichen oder mildern — z.B. Abfindungen, Qualifizierungsmaßnahmen, Übernahme in Beschäftigungsgesellschaften. Er wird zwischen Arbeitgeber und Betriebsrat ausgehandelt."
     },
     {
@@ -289,7 +403,9 @@
         "Weil Entlassungen die Produktivität der verbleibenden Mitarbeitenden sofort um 50% steigern.",
         "Weil staatliche Subventionen für Kurzarbeit Entlassungen ohnehin unrentabel machen."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Cotes Kernargument: Entlassene erhalten im Schnitt 6 Monate Abfindung + Outplacement. Also dauert es 6 Monate, bis überhaupt Einsparungen fließen. Da Rezessionen typischerweise 12–18 Monate dauern, muss das Unternehmen oft schon wieder einstellen — und zahlt dann erneut Rekrutierungs- und Einarbeitungskosten. Netto: kaum gespart, aber viel Know-how verloren."
     },
     {
@@ -299,7 +415,15 @@
       "difficulty": "schwer",
       "prompt": "Erklären Sie das Konzept des \"Survivor-Syndroms\" bei Entlassungen. Was sind die typischen Reaktionen verbleibender Mitarbeitender und welche Konsequenzen hat das für das Unternehmen?",
       "sampleAnswer": "Das Survivor-Syndrom beschreibt die negativen psychologischen Reaktionen von Mitarbeitenden, die eine Entlassungswelle im Unternehmen \"überlebt\" haben. Typische Reaktionen: Zukunftsängste (Existenz-, Verteilungs- und Statusangst), sinkende Arbeitszufriedenheit, Verlust von Vertrauen in das Management und Commitment. Paradoxerweise steigt der freiwillige Abgang (Voluntary Turnover) — gerade leistungsstarke High Potentials verlassen das Unternehmen, weil sie am meisten Alternativen haben. Konsequenzen für das Unternehmen: Wissensverlust, zerstörte Teams, hohe Kosten für Neubesetzungen, schlechteres Employer Branding. HR-Praktiken (z.B. Kommunikation, faires Trennungsmanagement, Outplacement) können die negativen Effekte abmildern.",
-      "keywords": ["survivor", "angst", "voluntary turnover", "vertrauen", "high potentials", "wissensverlust", "commitment"],
+      "keywords": [
+        "survivor",
+        "angst",
+        "voluntary turnover",
+        "vertrauen",
+        "high potentials",
+        "wissensverlust",
+        "commitment"
+      ],
       "explanation": "Das Survivor-Syndrom ist zentral in der Vorlesung: Entlassungen betreffen nicht nur die Entlassenen, sondern destabilisieren die gesamte verbleibende Belegschaft. Gutes Trennungsmanagement ist daher nicht nur für die Betroffenen wichtig, sondern auch für das Gesamtunternehmen."
     },
     {
@@ -314,7 +438,9 @@
         "Operative, taktische und strategische Ebene",
         "Kurz-, mittel- und langfristige Ebene"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Vorlesung unterscheidet drei Ebenen der Konsequenzen: (1) individuelle Ebene (psychische Probleme, Einkommensverlust), (2) soziale Ebene (Isolation, Familienprobleme) und (3) gesellschaftliche Ebene (Perspektivenverlust, Ablehnung der Wirtschaftsordnung). Grundlage ist die Marienthalstudie (Jahoda et al. 1933)."
     },
     {
@@ -338,7 +464,11 @@
         "Abschluss eines Sozialplans mit dem Betriebsrat (§ 112 BetrVG)",
         "Zustimmung des Arbeitsgerichts vor Ausspruch der Kündigungen"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "multiple": true,
       "explanation": "Alle drei ersten Optionen sind zwingend: § 102 BetrVG (Anhörung vor jeder Kündigung), § 1 KSchG (Sozialauswahl bei betriebsbedingter Kündigung), § 112 BetrVG (Sozialplan bei wesentlichen Betriebsänderungen mit erheblichen Nachteilen für Arbeitnehmer — 15 von 200 ist eine deutliche Betriebsänderung). Die Zustimmung des Arbeitsgerichts ist vor den Kündigungen nicht erforderlich; das Arbeitsgericht wird nur im Nachhinein angerufen, wenn der Arbeitnehmer klagt."
     },
@@ -349,7 +479,18 @@
       "difficulty": "schwer",
       "prompt": "Nennen und erklären Sie drei konkrete Fehler, die Unternehmen beim Führen von Kündigungsgesprächen typischerweise machen, und warum diese problematisch sind.",
       "sampleAnswer": "1. **Überraschendes Gespräch ohne Vorbereitung**: Wenn die Kündigung für den Mitarbeitenden vollkommen aus heiterem Himmel kommt, ist er emotional nicht in der Lage, die Informationen aufzunehmen. Außerdem zeigt es mangelnden Respekt und wird als unfair wahrgenommen. 2. **Öffentliche Bloßstellung** (z.B. Massenentlassung per Zoom vor 900 Kollegen wie bei Better.com): Das verletzt die Würde des Betroffenen massiv und signalisiert allen Verbleibenden: 'Mit Ihnen gehen wir so um.' Das zerstört Vertrauen nachhaltig und erhöht den Voluntary Turnover. 3. **Keine klaren nächsten Schritte kommunizieren**: Wenn dem Mitarbeitenden nicht klar ist, was jetzt passiert (Fristen, Abfindung, Outplacement, Übergabe), entsteht zusätzliche Unsicherheit und Hilflosigkeit. Ein gutes Kündigungsgespräch gibt dem Betroffenen trotz der schlechten Nachricht die nötige Orientierung.",
-      "keywords": ["vorbereitung", "respekt", "öffentlich", "würde", "zoom", "better.com", "nächste schritte", "abfindung", "outplacement", "vertrauen"],
+      "keywords": [
+        "vorbereitung",
+        "respekt",
+        "öffentlich",
+        "würde",
+        "zoom",
+        "better.com",
+        "nächste schritte",
+        "abfindung",
+        "outplacement",
+        "vertrauen"
+      ],
       "explanation": "Gutes Trennungsmanagement ist nicht nur eine moralische Frage, sondern hat handfeste wirtschaftliche Konsequenzen: Es reduziert das Survivor-Syndrom, schützt das Employer Branding und senkt den regrettable turnover."
     }
   ],

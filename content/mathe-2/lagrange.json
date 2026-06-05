@@ -33,9 +33,23 @@
           "id": "lag-fig-1",
           "title": "Zielfunktion entlang der Nebenbedingung",
           "caption": "h(x) = x·(10−x); Maximum bei x = 5 mit Wert 25.",
-          "functions": [{ "fn": "x*(10-x)", "label": "h(x) = x·(10−x)" }],
-          "domain": [0, 10],
-          "points": [{ "x": 5, "y": 25, "label": "Max (5, 25)" }]
+          "functions": [
+            {
+              "fn": "x*(10-x)",
+              "label": "h(x) = x·(10−x)"
+            }
+          ],
+          "domain": [
+            0,
+            10
+          ],
+          "points": [
+            {
+              "x": 5,
+              "y": 25,
+              "label": "Max (5, 25)"
+            }
+          ]
         }
       ],
       "callouts": [
@@ -59,10 +73,126 @@
     }
   ],
   "flashcards": [
-    { "id": "lag-fc-1", "topicId": "lagrange", "front": "Wie lautet die Lagrange-Funktion zu $f$ unter $g=0$?", "back": "$L(x,y,\\lambda)=f(x,y)-\\lambda\\,g(x,y)$" },
-    { "id": "lag-fc-2", "topicId": "lagrange", "front": "Notwendige Bedingung 1. Ordnung (geometrisch)?", "back": "$\\nabla f=\\lambda\\,\\nabla g$ – die Gradienten sind parallel; zusätzlich gilt $g=0$." },
-    { "id": "lag-fc-3", "topicId": "lagrange", "front": "Was bedeutet der Lagrange-Multiplikator $\\lambda$ ökonomisch?", "back": "Schattenpreis: $\\frac{dV}{dc}=\\lambda$ – Änderung des Optimalwerts pro gelockerter Einheit der Nebenbedingung." },
-    { "id": "lag-fc-4", "topicId": "lagrange", "front": "Maximiere $xy$ unter $x+y=10$. Lösung?", "back": "$x=y=5$, $\\lambda=5$, Maximalwert $25$." }
+    {
+      "id": "lag-fc-1",
+      "topicId": "lagrange",
+      "front": "Wie lautet die Lagrange-Funktion zu $f$ unter $g=0$?",
+      "back": "$L(x,y,\\lambda)=f(x,y)-\\lambda\\,g(x,y)$"
+    },
+    {
+      "id": "lag-fc-2",
+      "topicId": "lagrange",
+      "front": "Notwendige Bedingung 1. Ordnung (geometrisch)?",
+      "back": "$\\nabla f=\\lambda\\,\\nabla g$ – die Gradienten sind parallel; zusätzlich gilt $g=0$."
+    },
+    {
+      "id": "lag-fc-3",
+      "topicId": "lagrange",
+      "front": "Was bedeutet der Lagrange-Multiplikator $\\lambda$ ökonomisch?",
+      "back": "Schattenpreis: $\\frac{dV}{dc}=\\lambda$ – Änderung des Optimalwerts pro gelockerter Einheit der Nebenbedingung."
+    },
+    {
+      "id": "lag-fc-4",
+      "topicId": "lagrange",
+      "front": "Maximiere $xy$ unter $x+y=10$. Lösung?",
+      "back": "$x=y=5$, $\\lambda=5$, Maximalwert $25$."
+    },
+    {
+      "id": "lagrange-z1",
+      "topicId": "lagrange",
+      "front": "Was ist die Lagrange-Funktion (eine Nebenbedingung)?",
+      "back": "$L(x_1, x_2, \\lambda) = f(x_1, x_2) - \\lambda [h(x_1, x_2) - c]$"
+    },
+    {
+      "id": "lagrange-z2",
+      "topicId": "lagrange",
+      "front": "Wie lauten die Optimalitätsbedingungen erster Ordnung (FOC) bei Lagrange?",
+      "back": "$\\frac{\\partial L}{\\partial x_1} = 0$, $\\frac{\\partial L}{\\partial x_2} = 0$, $\\frac{\\partial L}{\\partial \\lambda} = 0$ (letzte Bedingung $= h(x_1,x_2) - c = 0$)."
+    },
+    {
+      "id": "lagrange-z3",
+      "topicId": "lagrange",
+      "front": "Was ist die geometrische Bedingung im Lagrange-Optimum?",
+      "back": "Die Gradienten von Zielfunktion und Nebenbedingung sind parallel: $\\operatorname{grad}f(\\vec{x}^*) = \\lambda^* \\operatorname{grad}h(\\vec{x}^*)$."
+    },
+    {
+      "id": "lagrange-z4",
+      "topicId": "lagrange",
+      "front": "Was bedeutet der Lagrange-Multiplikator $\\lambda^*$ ökonomisch?",
+      "back": "Schattenpreis: $\\lambda^* = \\frac{dM}{da}$ — gibt an, wie sich der Optimalwert ändert, wenn die Nebenbedingungsschranke $c$ leicht gelockert wird."
+    },
+    {
+      "id": "lagrange-z5",
+      "topicId": "lagrange",
+      "front": "Wie lautet die allgemeine Lagrange-Funktion mit $m$ Nebenbedingungen?",
+      "back": "$L(\\vec{x}, \\lambda_1, \\dots, \\lambda_m) = f(\\vec{x}) - \\sum_{i=1}^{m} \\lambda_i [h_i(\\vec{x}) - a_i]$"
+    },
+    {
+      "id": "lagrange-z6",
+      "topicId": "lagrange",
+      "front": "Was ist die Rangvoraussetzung bei mehreren Nebenbedingungen?",
+      "back": "$\\operatorname{Rang}(\\operatorname{Jac}(h_1, \\dots, h_m)(\\vec{x}^*)) = m$ — die Gradienten der Nebenbedingungen sind linear unabhängig."
+    },
+    {
+      "id": "lagrange-z7",
+      "topicId": "lagrange",
+      "front": "Wie lautet das Sensitivitätsresultat für mehrere Nebenbedingungen?",
+      "back": "$\\lambda_i^* = \\frac{\\partial M}{\\partial a_i}(\\vec{a})$ — jeder Multiplikator gibt die Sensitivität des Optimalwerts bzgl. der $i$-ten Schranke an."
+    },
+    {
+      "id": "lagrange-z8",
+      "topicId": "lagrange",
+      "front": "Was ist die Eliminationsmethode bei Optimierung unter Nebenbedingungen?",
+      "back": "Man löst die Nebenbedingung $h(x_1, x_2) = c$ explizit nach $x_2$ auf, setzt ein und optimiert $f(x_1, x_2(x_1))$ als Funktion einer Variablen."
+    },
+    {
+      "id": "lagrange-z9",
+      "topicId": "lagrange",
+      "front": "Nutzenmaximierung: Wie lautet das Standardproblem?",
+      "back": "$\\max U(x_1, \\dots, x_n)$ unter $p_1 x_1 + \\dots + p_n x_n = K$ (Budgetbeschränkung)."
+    },
+    {
+      "id": "lagrange-z10",
+      "topicId": "lagrange",
+      "front": "Warum hat die Lagrange-Methode Vorteile gegenüber der Eliminationsmethode?",
+      "back": "Keine explizite Auflösung der Nebenbedingung nötig; funktioniert auch wenn die NB nicht explizit auflösbar ist; systematisch für viele Nebenbedingungen erweiterbar."
+    },
+    {
+      "id": "lagrange-z11",
+      "topicId": "lagrange",
+      "front": "Typischer Klausurfehler bei Lagrange?",
+      "back": "Das System $\\partial L/\\partial x_i = 0$ vergessen mit der Nebenbedingung $h=c$ zu kombinieren; oder die Rangvoraussetzung nicht zu prüfen."
+    },
+    {
+      "id": "lagrange-z12",
+      "topicId": "lagrange",
+      "front": "Wann ist ein Punkt stationär der Lagrange-Funktion?",
+      "back": "Wenn alle $n + m$ partiellen Ableitungen von $L$ nach $(x_1,\\dots,x_n,\\lambda_1,\\dots,\\lambda_m)$ gleich Null sind."
+    },
+    {
+      "id": "lagrange-z13",
+      "topicId": "lagrange",
+      "front": "Was gilt für die Niveaukurve von $f$ und die Kurve $h = c$ im Optimum?",
+      "back": "Sie sind tangential, d.h. sie berühren sich und haben dieselbe Tangente — daher sind die Gradienten (Normalenrichtungen) parallel."
+    },
+    {
+      "id": "lagrange-z14",
+      "topicId": "lagrange",
+      "front": "Was ist der Unterschied zwischen Lagrange (Gleichung) und KKT (Ungleichung)?",
+      "back": "Lagrange: Nebenbedingungen sind Gleichungen $h_i = c_i$. KKT: Nebenbedingungen sind Ungleichungen $g_i \\leq b_i$ mit Vorzeichenbedingung $\\lambda_i \\geq 0$ und Komplementarität."
+    },
+    {
+      "id": "lagrange-z15",
+      "topicId": "lagrange",
+      "front": "Was ist die Optimalwertfunktion $M(a)$ im Lagrange-Kontext?",
+      "back": "$M(a) = f(x_1^*(a), x_2^*(a))$ — der optimale Zielfunktionswert wenn die Nebenbedingung $h = a$ lautet."
+    },
+    {
+      "id": "lagrange-z16",
+      "topicId": "lagrange",
+      "front": "Warum muss man nach Aufstellen der FOC prüfen, ob es tatsächlich ein Maximum ist?",
+      "back": "Die FOC sind nur notwendig, kein hinreichendes Kriterium. Man muss zusätzlich z.B. durch Vergleich von Kandidaten auf der kompakten NB-Menge oder durch die bordered Hessian argumentieren."
+    }
   ],
   "quiz": [
     {
@@ -71,8 +201,15 @@
       "topicId": "lagrange",
       "difficulty": "leicht",
       "prompt": "Welche Funktion stellt man bei der Lagrange-Methode auf?",
-      "options": ["$L=f-\\lambda g$", "$L=f\\cdot g$", "$L=f+g$", "$L=\\nabla f-\\nabla g$"],
-      "correct": [0],
+      "options": [
+        "$L=f-\\lambda g$",
+        "$L=f\\cdot g$",
+        "$L=f+g$",
+        "$L=\\nabla f-\\nabla g$"
+      ],
+      "correct": [
+        0
+      ],
       "explanation": "Die Lagrange-Funktion ist $L=f-\\lambda g$. Ihre stationären Punkte liefern die Kandidaten."
     },
     {
@@ -81,8 +218,17 @@
       "topicId": "lagrange",
       "difficulty": "mittel",
       "prompt": "Welche der folgenden Gleichungen gehören zu den notwendigen Bedingungen 1. Ordnung? (Mehrfachauswahl)",
-      "options": ["$f_x-\\lambda g_x=0$", "$f_y-\\lambda g_y=0$", "$g(x,y)=0$", "$f(x,y)=0$"],
-      "correct": [0, 1, 2],
+      "options": [
+        "$f_x-\\lambda g_x=0$",
+        "$f_y-\\lambda g_y=0$",
+        "$g(x,y)=0$",
+        "$f(x,y)=0$"
+      ],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "multiple": true,
       "explanation": "Die drei Bedingungen sind $L_x=0$, $L_y=0$ und $L_\\lambda=0$ (also $g=0$). $f=0$ gehört nicht dazu."
     },
@@ -111,7 +257,13 @@
       "topicId": "lagrange",
       "difficulty": "schwer",
       "prompt": "Beschreibe in eigenen Worten, warum im Optimum die Gradienten von $f$ und $g$ parallel sind.",
-      "keywords": ["höhenlinie", "gradient", "senkrecht", "nebenbedingung", "richtung"],
+      "keywords": [
+        "höhenlinie",
+        "gradient",
+        "senkrecht",
+        "nebenbedingung",
+        "richtung"
+      ],
       "sampleAnswer": "Bewegt man sich entlang der Nebenbedingung und $\\nabla f$ hätte eine Komponente in diese Richtung, könnte man $f$ noch verbessern – also ist man nicht optimal. Im Optimum steht $\\nabla f$ daher **senkrecht** auf der Nebenbedingung, genau wie $\\nabla g$. Zwei Vektoren senkrecht auf derselben Kurve sind parallel: $\\nabla f=\\lambda\\nabla g$.",
       "explanation": "Kernidee: tangentiale Komponente von $\\nabla f$ muss im Optimum verschwinden, sonst ginge es besser."
     }

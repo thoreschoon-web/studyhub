@@ -16,12 +16,37 @@
           "kind": "table",
           "id": "hbr-overview-table",
           "title": "Überblick: Vier HBR-Cases und ihre Vorlesungszuordnung",
-          "headers": ["Case", "Kernbegriff (EN)", "Deutsch", "Vorlesung"],
+          "headers": [
+            "Case",
+            "Kernbegriff (EN)",
+            "Deutsch",
+            "Vorlesung"
+          ],
           "rows": [
-            ["A Players or A Positions?", "Workforce Differentiation", "Differenzierte Belegschaftssteuerung", "V4 Talent Management"],
-            ["Risky Business of Hiring Stars", "Star Portability", "Portabilität von Starleistung", "V5 Rekrutierung"],
-            ["The Gentleman's Three", "Grade Inflation / Compression", "Notenaufblähung / Notenkompression", "V7 Performance Management"],
-            ["How Honeywell Avoided Layoffs", "Furlough vs. Layoff", "Zwangsurlaub vs. Entlassung", "V9 Personalfreisetzung"]
+            [
+              "A Players or A Positions?",
+              "Workforce Differentiation",
+              "Differenzierte Belegschaftssteuerung",
+              "V4 Talent Management"
+            ],
+            [
+              "Risky Business of Hiring Stars",
+              "Star Portability",
+              "Portabilität von Starleistung",
+              "V5 Rekrutierung"
+            ],
+            [
+              "The Gentleman's Three",
+              "Grade Inflation / Compression",
+              "Notenaufblähung / Notenkompression",
+              "V7 Performance Management"
+            ],
+            [
+              "How Honeywell Avoided Layoffs",
+              "Furlough vs. Layoff",
+              "Zwangsurlaub vs. Entlassung",
+              "V9 Personalfreisetzung"
+            ]
           ]
         }
       ]
@@ -52,13 +77,43 @@
           "kind": "table",
           "id": "abc-positions-table",
           "title": "A-, B-, C-Positionen im Vergleich",
-          "headers": ["Merkmal", "A-Position (Strategisch)", "B-Position (Support)", "C-Position (Surplus)"],
+          "headers": [
+            "Merkmal",
+            "A-Position (Strategisch)",
+            "B-Position (Support)",
+            "C-Position (Surplus)"
+          ],
           "rows": [
-            ["Strategischer Einfluss", "Direkt, hoch", "Indirekt / gering", "Kaum vorhanden"],
-            ["Leistungsvariabilität", "Hoch (großer Unterschied zwischen gut/schlecht)", "Gering (kaum Unterschied)", "Sehr gering"],
-            ["Vergütungslogik", "Nach Leistung (Performance)", "Nach Stellenniveau", "Nach Marktpreis"],
-            ["Fehlerkonsequenz", "Sehr teuer (Umsatzverlust)", "Teuer, aber behebbar", "Leicht behebbar"],
-            ["Falsche Person eingestellt", "Großer Schaden", "Moderat", "Leicht zu ersetzen"]
+            [
+              "Strategischer Einfluss",
+              "Direkt, hoch",
+              "Indirekt / gering",
+              "Kaum vorhanden"
+            ],
+            [
+              "Leistungsvariabilität",
+              "Hoch (großer Unterschied zwischen gut/schlecht)",
+              "Gering (kaum Unterschied)",
+              "Sehr gering"
+            ],
+            [
+              "Vergütungslogik",
+              "Nach Leistung (Performance)",
+              "Nach Stellenniveau",
+              "Nach Marktpreis"
+            ],
+            [
+              "Fehlerkonsequenz",
+              "Sehr teuer (Umsatzverlust)",
+              "Teuer, aber behebbar",
+              "Leicht behebbar"
+            ],
+            [
+              "Falsche Person eingestellt",
+              "Großer Schaden",
+              "Moderat",
+              "Leicht zu ersetzen"
+            ]
           ]
         }
       ]
@@ -192,6 +247,36 @@
       "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
       "front": "Warum leidet die Teamleistung, wenn ein extern eingekaufter Star kommt?",
       "back": "Kollegen werden demotiviert (Karrierechancen blockiert), es entsteht Verbitterung (Resentment), Kommunikation bricht ein. Junior-Manager werten die Star-Anstellung als Signal, dass das Unternehmen interne Entwicklung nicht wertschätzt."
+    },
+    {
+      "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z1",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "HBR: 'A Players or A Positions?' – Kernthese",
+      "back": "Nicht nur A-Player identifizieren, sondern A-Positionen (strategisch kritische Stellen mit hohem Leistungshebel, <20% der Belegschaft). In diese Stellen überproportional investieren."
+    },
+    {
+      "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z2",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "HBR: 'Risky Business of Hiring Stars' – 30/70-Regel",
+      "back": "~30% der Starleistung ist individuell portabel, ~70% hängen vom Unternehmenskontext ab (Ressourcen, Team, Kultur). Eingekaufte Stars enttäuschen daher oft."
+    },
+    {
+      "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z3",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "HBR: 'The Gentleman's Three' – Lösung",
+      "back": "Grade Inflation bekämpfen durch: erzwungene Differenzierung (z.B. Forced Distribution), Kalibrierungsrunden unter Führungskräften, klare Bewertungskriterien und Feedback-Training."
+    },
+    {
+      "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z4",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "HBR: 'How Honeywell Avoided Layoffs' – Furlough",
+      "back": "Furlough (dt. Zwangsurlaub): vorübergehende unbezahlte Freistellung statt Kündigung. Erhält Wissen und Kultur, reduziert regrettable Turnover, günstiger im Aufschwung."
+    },
+    {
+      "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z5",
+      "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+      "front": "Regrettable Turnover",
+      "back": "Freiwilliger Abgang von Mitarbeitenden, den das Unternehmen bedauert (Leistungsträger, schwer ersetzbar). Gegenteil: funktionaler Turnover (Low Performer gehen freiwillig)."
     }
   ],
   "quiz": [
@@ -207,7 +292,9 @@
         "Viele Mitarbeitende auf dieser Stelle und hoher Ausbildungsgrad",
         "Schwierige Besetzbarkeit und hohe Verantwortung in der Hierarchie"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "A-Positionen sind nicht über Gehalt oder Hierarchie definiert, sondern über (1) direkten strategischen Einfluss auf die Unternehmenstrategie und (2) hohe Leistungsunterschiede zwischen den Stelleninhabern. Ein Kassierer bei Nordstrom kann eine A-Position sein -- bei Costco nicht."
     },
     {
@@ -231,7 +318,9 @@
         "Die Leistung bricht um ca. 20 % ein und erholt sich kaum über Jahre",
         "Die Leistung schwankt stark -- bei manchen steigt sie, bei anderen fällt sie"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "46 % der untersuchten Analysten schnitten im Jahr nach dem Wechsel schlechter ab. Der durchschnittliche Leistungseinbruch betrug ca. 20 % und hielt über mehrere Jahre an. Ursache: firmenspezifisches Kapital (Systeme, Netzwerke, Prozesse) kann nicht mitgenommen werden."
     },
     {
@@ -255,7 +344,9 @@
         "Furloughs sind rechtlich sicherer als Entlassungen in den USA",
         "Die Produktivität stieg sofort um 30 % nach Ende der Furloughs"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "'Regrettable Turnover' (bedauerliche Fluktuation) bezeichnet den Verlust von Mitarbeitern, die man eigentlich halten wollte. Entgegen der Erwartung, dass Furloughs Leistungsträger vertreiben, sank dieser Wert bei Honeywell -- weil Mitarbeitende Vertrauen in die Unternehmensführung hatten."
     },
     {
@@ -265,7 +356,14 @@
       "difficulty": "schwer",
       "prompt": "Erklären Sie in 3-4 Sätzen, warum Spitzenleistung laut Groysberg et al. (2004) nicht vollständig 'portabel' ist. Nennen Sie mindestens zwei Gründe.",
       "sampleAnswer": "Spitzenleistung entsteht nicht allein aus individuellen Fähigkeiten, sondern zu einem erheblichen Teil aus firmenspezifischen Ressourcen: Systemen, Prozessen, Netzwerken und Unternehmenskultur. Beim Arbeitgeberwechsel bleibt dieses firmenspezifische Kapital zurück -- der Star kann es nicht mitnehmen. Hinzu kommt, dass Kollegen im neuen Unternehmen oft nicht kooperativ sind (Ressentiments gegenüber dem hochbezahlten Neuankömmling), was die Einarbeitungszeit verlängert. Außerdem sind Stars oft schlecht darin, alte Gewohnheiten abzulegen und neue Praktiken anzunehmen.",
-      "keywords": ["firmenspezifisch", "netzwerk", "systeme", "ressentiment", "portabel", "kontext"],
+      "keywords": [
+        "firmenspezifisch",
+        "netzwerk",
+        "systeme",
+        "ressentiment",
+        "portabel",
+        "kontext"
+      ],
       "explanation": "Die Kernunterscheidung: individuelle Kompetenz vs. firmenspezifisches Kapital. Nur ersteres ist portabel. Der Rest bleibt beim alten Arbeitgeber."
     },
     {
@@ -280,7 +378,9 @@
         "The Gentleman's Three (Hall & Wasynczuk)",
         "How Honeywell Avoided Layoffs (Cote)"
       ],
-      "correct": [3],
+      "correct": [
+        3
+      ],
       "explanation": "Der Honeywell-Case von CEO David Cote (2013) behandelt unbezahlte Furloughs als Alternative zu Massenentlassungen in der Rezession 2008/09 -- damit gehört er direkt zur Vorlesung Personalfreisetzung (V9)."
     },
     {
@@ -304,7 +404,9 @@
         "Furloughs kosten mehr als Entlassungen, weil das Unternehmen weiterhin Sozialleistungen zahlt",
         "Entlassungen verbessern die Moral der verbliebenen Mitarbeiter, weil Unsicherheit endet"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Richtig: Jeder Entlassene bekommt im Schnitt 6 Monate Abfindung. Erst danach beginnt das Unternehmen zu sparen. Da Rezessionen typischerweise 12-18 Monate dauern, muss man kurz nach Beginn der Einsparphase wieder einstellen -- und zahlt erneut Rekrutierungskosten. Das Survivor-Syndrom (Angst und Demotivation der Verbliebenen) macht Aussage D falsch."
     },
     {
@@ -314,7 +416,14 @@
       "difficulty": "schwer",
       "prompt": "Ein Pharmaunternehmen identifiziert folgende Stellen als am schwierigsten zu besetzen: (a) Leiter Klinische Studien, (b) Direktor Finanzen, (c) Kassiererin im Betriebsrestaurant. Welche ist laut Huselid et al. (2005) die A-Position -- und warum nicht unbedingt die anderen?",
       "sampleAnswer": "Laut Huselid et al. ist (a) der Leiter Klinische Studien die A-Position: Die Fähigkeit, Produktsicherheit und -wirksamkeit zu testen, ist eine strategisch kritische Kompetenz des Pharmaunternehmens. Zudem gibt es große Leistungsunterschiede zwischen herausragenden und mittelmäßigen klinischen Prüfern. (b) Der Finanzdirektor ist wichtig für das Funktionieren des Unternehmens, hat aber weniger direkte Auswirkung auf Innovationsfähigkeit und Wettbewerbsvorteil -- eher eine B-Position (Support). (c) Die Kassiererin ist eindeutig eine C-Position (Surplus): kein strategischer Einfluss, geringe Leistungsvariabilität.",
-      "keywords": ["strategisch", "leistungsvariabilität", "a-position", "b-position", "c-position", "kontext"],
+      "keywords": [
+        "strategisch",
+        "leistungsvariabilität",
+        "a-position",
+        "b-position",
+        "c-position",
+        "kontext"
+      ],
       "explanation": "Entscheidend sind immer zwei Kriterien: strategischer Einfluss (aus der Unternehmensstrategie abgeleitet) und Leistungsvariabilität. Schwer zu besetzen ist kein Kriterium für A-Position."
     },
     {
@@ -329,7 +438,9 @@
         "Unternehmen sollten Talente intern entwickeln und halten, statt externe Stars einzukaufen",
         "Nur Stars aus direkten Wettbewerbern sind portabel genug und daher sinnvoll anzuwerben"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "'Grow stars, don't buy them' ist die Kernempfehlung. Intern entwickelte Stars behalten ihre Leistung, weil ihr firmenspezifisches Kapital (Netzwerke, Vertrautheit mit Systemen, Kulturpassung) erhalten bleibt. Extern eingekaufte Stars verlieren typischerweise ~20 % ihrer Leistung."
     },
     {

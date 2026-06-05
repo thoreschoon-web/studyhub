@@ -65,12 +65,42 @@
           "kind": "table",
           "id": "fig-jac-struktur",
           "title": "Struktur der Jacobi-Matrix",
-          "headers": ["", "nach x₁", "nach x₂", "…", "nach xₙ"],
+          "headers": [
+            "",
+            "nach x₁",
+            "nach x₂",
+            "…",
+            "nach xₙ"
+          ],
           "rows": [
-            ["f₁ (Zeile 1)", "∂f₁/∂x₁", "∂f₁/∂x₂", "…", "∂f₁/∂xₙ"],
-            ["f₂ (Zeile 2)", "∂f₂/∂x₁", "∂f₂/∂x₂", "…", "∂f₂/∂xₙ"],
-            ["⋮", "⋮", "⋮", "⋱", "⋮"],
-            ["fₘ (Zeile m)", "∂fₘ/∂x₁", "∂fₘ/∂x₂", "…", "∂fₘ/∂xₙ"]
+            [
+              "f₁ (Zeile 1)",
+              "∂f₁/∂x₁",
+              "∂f₁/∂x₂",
+              "…",
+              "∂f₁/∂xₙ"
+            ],
+            [
+              "f₂ (Zeile 2)",
+              "∂f₂/∂x₁",
+              "∂f₂/∂x₂",
+              "…",
+              "∂f₂/∂xₙ"
+            ],
+            [
+              "⋮",
+              "⋮",
+              "⋮",
+              "⋱",
+              "⋮"
+            ],
+            [
+              "fₘ (Zeile m)",
+              "∂fₘ/∂x₁",
+              "∂fₘ/∂x₂",
+              "…",
+              "∂fₘ/∂xₙ"
+            ]
           ]
         }
       ]
@@ -159,6 +189,102 @@
       "topicId": "jacobi-matrix",
       "front": "Was bedeutet $\\frac{\\partial f}{\\partial y}(2, 2) = -2$ bei $f(x,y) = xy(5-x-y)$ anschaulich?",
       "back": "Wenn man vom Punkt $(2,2)$ aus $y$ um $\\Delta y$ erhöht (bei festem $x=2$), sinkt $f$ näherungsweise um $2 \\cdot \\Delta y$. Die Steigung in $y$-Richtung beträgt $-2$."
+    },
+    {
+      "id": "jacobi-matrix-z1",
+      "topicId": "jacobi-matrix",
+      "front": "Was ist die Jacobi-Matrix von $\\vec{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$?",
+      "back": "Matrix aller partiellen Ableitungen: $\\operatorname{Jac}\\vec{F}(\\vec{x}^*) = \\begin{pmatrix} \\frac{\\partial f_1}{\\partial x_1} & \\cdots & \\frac{\\partial f_1}{\\partial x_n} \\\\ \\vdots & \\ddots & \\vdots \\\\ \\frac{\\partial f_m}{\\partial x_1} & \\cdots & \\frac{\\partial f_m}{\\partial x_n} \\end{pmatrix}$, ausgewertet an $\\vec{x}^*$."
+    },
+    {
+      "id": "jacobi-matrix-z2",
+      "topicId": "jacobi-matrix",
+      "front": "Welche Form hat die Jacobi-Matrix im Spezialfall $m=1$?",
+      "back": "Sie reduziert sich auf den transponierten Gradienten: $\\operatorname{Jac}f(\\vec{x}^*) = \\operatorname{grad}f(\\vec{x}^*) = \\left(\\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n}\\right)$ (Zeilenvektor)."
+    },
+    {
+      "id": "jacobi-matrix-z3",
+      "topicId": "jacobi-matrix",
+      "front": "Wie berechnet man den näherungsweisen Zuwachs $d\\vec{F}$?",
+      "back": "$d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{x}^*) \\cdot d\\vec{x}$, also $\\vec{F}(\\vec{x}^* + \\Delta\\vec{x}) \\approx \\vec{F}(\\vec{x}^*) + \\operatorname{Jac}\\vec{F}(\\vec{x}^*) \\cdot \\Delta\\vec{x}$."
+    },
+    {
+      "id": "jacobi-matrix-z4",
+      "topicId": "jacobi-matrix",
+      "front": "Was sind Komponentenfunktionen einer vektorwertigen Funktion?",
+      "back": "$\\vec{F}(\\vec{x}) = \\begin{pmatrix} f_1(x_1,\\dots,x_n) \\\\ \\vdots \\\\ f_m(x_1,\\dots,x_n) \\end{pmatrix}$ — jede $f_i: \\mathbb{R}^n \\to \\mathbb{R}$ ist eine skalare Funktion."
+    },
+    {
+      "id": "jacobi-matrix-z5",
+      "topicId": "jacobi-matrix",
+      "front": "Was gibt der Rang der Jacobi-Matrix an?",
+      "back": "Die Anzahl linear unabhängiger Zeilen (bzw. Spalten). Wird bei Nebenbedingungen geprüft: Rang muss gleich der Anzahl der Nebenbedingungen $m$ sein."
+    },
+    {
+      "id": "jacobi-matrix-z6",
+      "topicId": "jacobi-matrix",
+      "front": "Wie lautet die komponentenweise lineare Approximation?",
+      "back": "$f_i(\\vec{x}^* + \\Delta\\vec{x}) - f_i(\\vec{x}^*) \\approx \\sum_{j=1}^{n} \\frac{\\partial f_i}{\\partial x_j}(\\vec{x}^*) \\, \\Delta x_j$ für jede Komponente $i$."
+    },
+    {
+      "id": "jacobi-matrix-z7",
+      "topicId": "jacobi-matrix",
+      "front": "Wie lautet die Tangentialhyperebene von $f$ an der Stelle $\\vec{a}$?",
+      "back": "$x_{n+1} = f(\\vec{a}) + \\operatorname{grad}f(\\vec{a}) \\cdot (\\vec{x} - \\vec{a})$"
+    },
+    {
+      "id": "jacobi-matrix-z8",
+      "topicId": "jacobi-matrix",
+      "front": "Was sind stationäre Punkte einer Funktion $f$?",
+      "back": "Punkte $\\vec{x}^*$ mit $\\operatorname{grad}f(\\vec{x}^*) = \\vec{0}$, d.h. alle partiellen Ableitungen verschwinden."
+    },
+    {
+      "id": "jacobi-matrix-z9",
+      "topicId": "jacobi-matrix",
+      "front": "Was bedeutet die relative prozentuale Änderung über das vollständige Differential?",
+      "back": "$\\frac{\\Delta f}{f} \\cdot 100\\% \\approx \\frac{\\operatorname{grad}f(\\vec{a}) \\cdot d\\vec{x}}{f(\\vec{a})} \\cdot 100\\%$"
+    },
+    {
+      "id": "jacobi-matrix-z10",
+      "topicId": "jacobi-matrix",
+      "front": "Was ist der Unterschied zwischen exaktem und näherungsweisem Zuwachs?",
+      "back": "Exakt: $\\Delta F = \\vec{F}(\\vec{x}^* + \\Delta\\vec{x}) - \\vec{F}(\\vec{x}^*)$. Näherungsweise: $dF = \\operatorname{Jac}\\vec{F}(\\vec{x}^*) \\cdot \\Delta\\vec{x}$. Die Näherung ist nur für kleine $\\Delta\\vec{x}$ gut."
+    },
+    {
+      "id": "jacobi-matrix-z11",
+      "topicId": "jacobi-matrix",
+      "front": "Ökonomische Bedeutung: Wozu dient die Jacobi-Matrix bei Nachfragefunktionen?",
+      "back": "Sie beschreibt näherungsweise, wie sich die Nachfragen mehrerer Güter ändern, wenn Preise oder Einkommen sich leicht verändern: $\\begin{pmatrix}dq_1 \\\\ dq_2\\end{pmatrix} = \\operatorname{Jac}\\vec{F} \\cdot \\begin{pmatrix}dp_1 \\\\ dp_2 \\\\ dy\\end{pmatrix}$."
+    },
+    {
+      "id": "jacobi-matrix-z12",
+      "topicId": "jacobi-matrix",
+      "front": "Wie lautet die Kettenregel für Funktionen mehrerer Variablen?",
+      "back": "$\\frac{d}{dt} f(\\vec{x}(t)) = \\operatorname{grad}f(\\vec{x}(t)) \\cdot \\dot{\\vec{x}}(t) = \\sum_{i=1}^{n} \\frac{\\partial f}{\\partial x_i} \\cdot \\frac{dx_i}{dt}$"
+    },
+    {
+      "id": "jacobi-matrix-z13",
+      "topicId": "jacobi-matrix",
+      "front": "Dimension der Jacobi-Matrix von $F: \\mathbb{R}^n \\to \\mathbb{R}^m$?",
+      "back": "$m \\times n$ (Zeilen = Anzahl Ausgaben $m$, Spalten = Anzahl Eingaben $n$)."
+    },
+    {
+      "id": "jacobi-matrix-z14",
+      "topicId": "jacobi-matrix",
+      "front": "Wie lautet der $(i,j)$-Eintrag der Jacobi-Matrix?",
+      "back": "$[\\operatorname{Jac}\\vec{F}]_{ij} = \\frac{\\partial f_i}{\\partial x_j}(\\vec{x}^*)$ — partielle Ableitung der $i$-ten Komponentenfunktion nach der $j$-ten Variable."
+    },
+    {
+      "id": "jacobi-matrix-z15",
+      "topicId": "jacobi-matrix",
+      "front": "Was gilt, wenn der Rang der Jacobi-Matrix kleiner als $m$ ist?",
+      "back": "Die Zeilen sind linear abhängig — die Nebenbedingungen sind nicht unabhängig, und der Lagrange/KKT-Satz kann nicht direkt angewendet werden."
+    },
+    {
+      "id": "jacobi-matrix-z16",
+      "topicId": "jacobi-matrix",
+      "front": "Wie lautet der Gradient $\\operatorname{grad}f(\\vec{a})$ formal?",
+      "back": "$\\operatorname{grad}f(\\vec{a}) = \\left(\\frac{\\partial f}{\\partial x_1}(\\vec{a}), \\dots, \\frac{\\partial f}{\\partial x_n}(\\vec{a})\\right)$ (Zeilenvektor)."
     }
   ],
   "quiz": [
@@ -168,8 +294,15 @@
       "topicId": "jacobi-matrix",
       "difficulty": "leicht",
       "prompt": "Die Jacobi-Matrix von $\\vec{F}: \\mathbb{R}^3 \\to \\mathbb{R}^2$ hat welche Dimension?",
-      "options": ["$2 \\times 3$", "$3 \\times 2$", "$2 \\times 2$", "$3 \\times 3$"],
-      "correct": [0],
+      "options": [
+        "$2 \\times 3$",
+        "$3 \\times 2$",
+        "$2 \\times 2$",
+        "$3 \\times 3$"
+      ],
+      "correct": [
+        0
+      ],
       "explanation": "Jacobi-Matrix hat Dimension $m \\times n$ = (Anzahl Ausgaben) × (Anzahl Eingaben) = $2 \\times 3$."
     },
     {
@@ -178,8 +311,15 @@
       "topicId": "jacobi-matrix",
       "difficulty": "leicht",
       "prompt": "Was steht in der 2. Zeile, 3. Spalte der Jacobi-Matrix von $\\vec{F}$?",
-      "options": ["$\\frac{\\partial f_2}{\\partial x_3}$", "$\\frac{\\partial f_3}{\\partial x_2}$", "$\\frac{\\partial f_2}{\\partial x_2}$", "$\\frac{\\partial f_3}{\\partial x_3}$"],
-      "correct": [0],
+      "options": [
+        "$\\frac{\\partial f_2}{\\partial x_3}$",
+        "$\\frac{\\partial f_3}{\\partial x_2}$",
+        "$\\frac{\\partial f_2}{\\partial x_2}$",
+        "$\\frac{\\partial f_3}{\\partial x_3}$"
+      ],
+      "correct": [
+        0
+      ],
       "explanation": "Zeile $i$, Spalte $j$ enthält $\\frac{\\partial f_i}{\\partial x_j}$. Zeile 2, Spalte 3 also $\\frac{\\partial f_2}{\\partial x_3}$."
     },
     {
@@ -234,7 +374,9 @@
         "$d\\vec{F} = \\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$",
         "$d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) + \\Delta\\vec{x}$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die Näherungsformel lautet $d\\vec{F} = \\operatorname{Jac}\\vec{F}(\\vec{a}^*) \\cdot \\Delta\\vec{x}$ (Matrix-Vektor-Produkt)."
     },
     {
@@ -264,7 +406,13 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, was die Jacobi-Matrix geometrisch bedeutet. Was entspricht ihr bei einer gewöhnlichen Funktion $f: \\mathbb{R} \\to \\mathbb{R}$?",
       "sampleAnswer": "Die Jacobi-Matrix ist die 'Ableitung' einer vektorwertigen Funktion. Sie beschreibt die beste lokale lineare Annäherung von F in der Nähe eines Punktes a*. Sie gibt an, wie stark und in welche Richtung jede Ausgabekomponente reagiert, wenn man die Eingabe leicht ändert. Bei f: R → R ist die Ableitung f'(a*) der Spezialfall – dort hat die Jacobi-Matrix nur einen Eintrag. Die Näherungsformel entspricht der Tangente.",
-      "keywords": ["lineare näherung", "ableitung", "tangente", "partielle ableitung", "lokal"],
+      "keywords": [
+        "lineare näherung",
+        "ableitung",
+        "tangente",
+        "partielle ableitung",
+        "lokal"
+      ],
       "explanation": "Die Jacobi-Matrix ist das mehrdimensionale Analogon zur Ableitung. Sie beschreibt die Linearisierung von F am Punkt a*."
     },
     {
@@ -289,7 +437,11 @@
         "Alle partiellen Ableitungen von $f$ verschwinden in $\\vec{x}^*$",
         "Die Jacobi-Matrix von $f$ an $\\vec{x}^*$ ist die Nullmatrix (Nullzeile)"
       ],
-      "correct": [0, 2, 3],
+      "correct": [
+        0,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "Stationärer Punkt: $\\operatorname{grad} f = \\vec{0}$, d.h. alle partiellen Ableitungen sind Null (Aussagen 0, 2). Da der Gradient die Jacobi-Matrix von $f$ ist, ist auch die Jacobi-Matrix an $\\vec{x}^*$ die Nullzeile (Aussage 3). Aussage 1 ($f=0$) ist keine Bedingung für einen stationären Punkt."
     }

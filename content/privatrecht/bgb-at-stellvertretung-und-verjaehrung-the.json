@@ -74,14 +74,42 @@
           "kind": "table",
           "id": "fig-vollmachtsarten",
           "title": "Übersicht: Arten der Vollmacht",
-          "headers": ["Merkmal", "Variante A", "Variante B"],
+          "headers": [
+            "Merkmal",
+            "Variante A",
+            "Variante B"
+          ],
           "rows": [
-            ["Entstehung", "Gesetzlich (z. B. § 1629 BGB)", "Rechtsgeschäftlich = Vollmacht (§ 167 BGB)"],
-            ["Erteilung ggü.", "Vertreter (Innenvollmacht)", "Drittem (Außenvollmacht)"],
-            ["Umfang", "General- / Artvollmacht", "Spezialvollmacht"],
-            ["Ausübung", "Einzelvollmacht", "Gesamtvollmacht"],
-            ["Ohne Erklärung", "Duldungsvollmacht", "Anscheinsvollmacht"],
-            ["Bestand", "Abstrakt vom Innenverhältnis", "Erlischt mit Widerruf (§ 168 BGB)"]
+            [
+              "Entstehung",
+              "Gesetzlich (z. B. § 1629 BGB)",
+              "Rechtsgeschäftlich = Vollmacht (§ 167 BGB)"
+            ],
+            [
+              "Erteilung ggü.",
+              "Vertreter (Innenvollmacht)",
+              "Drittem (Außenvollmacht)"
+            ],
+            [
+              "Umfang",
+              "General- / Artvollmacht",
+              "Spezialvollmacht"
+            ],
+            [
+              "Ausübung",
+              "Einzelvollmacht",
+              "Gesamtvollmacht"
+            ],
+            [
+              "Ohne Erklärung",
+              "Duldungsvollmacht",
+              "Anscheinsvollmacht"
+            ],
+            [
+              "Bestand",
+              "Abstrakt vom Innenverhältnis",
+              "Erlischt mit Widerruf (§ 168 BGB)"
+            ]
           ]
         }
       ]
@@ -152,13 +180,43 @@
           "kind": "table",
           "id": "fig-verjaehrung-vergleich",
           "title": "Vergleich: Verjährung, Ausschlussfrist, Verwirkung",
-          "headers": ["Kriterium", "Verjährung", "Ausschlussfrist", "Verwirkung"],
+          "headers": [
+            "Kriterium",
+            "Verjährung",
+            "Ausschlussfrist",
+            "Verwirkung"
+          ],
           "rows": [
-            ["Rechtsfolge", "Einrede (Schuldner muss geltend machen)", "Einwendung (automatisch)", "Einwendung (automatisch)"],
-            ["Anspruch erlischt?", "Nein (nur gehemmt durchsetzbar)", "Ja", "Ja"],
-            ["Rechtsgrundlage", "§§ 194 ff. BGB", "z. B. § 15 IV AGG", "§ 242 BGB"],
-            ["Im Anspruchsschema", "Stufe 3: Durchsetzbarkeit", "Stufe 2: Nicht erloschen", "Stufe 2: Nicht erloschen"],
-            ["Hemmung möglich?", "Ja (§§ 203, 204 BGB)", "Nein", "Nein"]
+            [
+              "Rechtsfolge",
+              "Einrede (Schuldner muss geltend machen)",
+              "Einwendung (automatisch)",
+              "Einwendung (automatisch)"
+            ],
+            [
+              "Anspruch erlischt?",
+              "Nein (nur gehemmt durchsetzbar)",
+              "Ja",
+              "Ja"
+            ],
+            [
+              "Rechtsgrundlage",
+              "§§ 194 ff. BGB",
+              "z. B. § 15 IV AGG",
+              "§ 242 BGB"
+            ],
+            [
+              "Im Anspruchsschema",
+              "Stufe 3: Durchsetzbarkeit",
+              "Stufe 2: Nicht erloschen",
+              "Stufe 2: Nicht erloschen"
+            ],
+            [
+              "Hemmung möglich?",
+              "Ja (§§ 203, 204 BGB)",
+              "Nein",
+              "Nein"
+            ]
           ]
         }
       ]
@@ -212,6 +270,66 @@
       "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
       "front": "Was ist der Unterschied zwischen Verjährungs-Einrede und Ausschlussfrist?",
       "back": "**Verjährung**: Anspruch bleibt bestehen, Schuldner bekommt eine **Einrede** (Leistungsverweigerungsrecht) – er muss sie aktiv geltend machen (§ 214 BGB).\n**Ausschlussfrist**: Anspruch **erlischt** automatisch (Einwendung) – Schuldner muss nichts tun."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z1",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Voraussetzungen der Stellvertretung (§ 164 BGB)",
+      "back": "1. Zulassigkeit 2. Eigene WE des Vertreters 3. Handeln im Namen des Vertretenen (Offenkundigkeit) 4. Vertretungsmacht."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z2",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Abgrenzung Vertreter vs. Bote",
+      "back": "Vertreter: gibt eigene WE ab. Bote: ubermittelt fremde WE (kein Handlungsspielraum)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z3",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Vollmacht erteilen (§ 167 BGB)",
+      "back": "Durch WE an Vertreter (Innenvollmacht) oder an Dritten (Außenvollmacht); grds. formfrei (§ 167 II BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z4",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Duldungsvollmacht vs. Anscheinsvollmacht",
+      "back": "Duldungsvollmacht: Vertretener weis und duldet Auftreten des Vertreters. Anscheinsvollmacht: Vertretener weis es nicht, hatte es aber erkennen konnen."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z5",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Vertreter ohne Vertretungsmacht - Rechtsfolge (§ 177 BGB)",
+      "back": "Vertrag schwebend unwirksam; wirksam bei Genehmigung des Vertretenen; andernfalls Haftung des Vertreters (§ 179 BGB)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z6",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "In-Sich-Geschäft (§ 181 BGB)",
+      "back": "Vertreter schließt Vertrag mit sich selbst als Vertreter oder zugleich als Vertreter beider Parteien; grds. unzulassig (Ausnahmen: Erfullung, Gestattung)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z7",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Regelmäßige Verjährungsfrist + Beginn",
+      "back": "3 Jahre, § 195 BGB. Beginn: Schluss des Jahres der Entstehung und Kenntnis (oder grob fahrlassiger Unkenntnis) von Anspruch und Schuldner, § 199 BGB."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z8",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Verjährungs-Einrede (§ 214 BGB)",
+      "back": "Schuldner kann nach Eintritt der Verjahrung die Leistung verweigern (Einrede, nicht Einwendung; muss geltend gemacht werden)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z9",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Hemmung der Verjährung - Beispiele",
+      "back": "§§ 203, 204, 209 BGB: Verhandlungen, Klageerhebung, Mahnbescheid; hemmt den Ablauf der Frist (Zeit der Hemmung wird nicht angerechnet)."
+    },
+    {
+      "id": "bgb-at-stellvertretung-und-verjaehrung-the-z10",
+      "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+      "front": "Ausschlussfrist vs. Verjährung",
+      "back": "Ausschlussfrist (Einwendung): wirkt von Amts wegen, nicht hemmbar, nicht verlangerbar. Verjahrung (Einrede): muss gerügt werden, hemmbar."
     }
   ],
   "quiz": [
@@ -227,7 +345,9 @@
         "Eigene WE, Offenkundigkeit, Schriftform",
         "Vertretungsmacht, Bote, fremder Name"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "§ 164 I BGB verlangt: (1) eigene Willenserklärung (kein Bote), (2) im fremden Namen (Offenkundigkeit), (3) mit Vertretungsmacht. Schriftform ist grundsätzlich nicht erforderlich (§ 167 II BGB)."
     },
     {
@@ -251,7 +371,9 @@
         "Vertrag ist nichtig",
         "Schwebende Unwirksamkeit bis zur Genehmigung durch H"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Da F nicht erkennbar im fremden Namen handelt (Offenkundigkeit fehlt), liegt ein Eigengeschäft vor: F selbst wird Vertragspartner (§ 164 II BGB). Die fehlende Offenkundigkeit berechtigt auch nicht zur Anfechtung."
     },
     {
@@ -266,7 +388,9 @@
         "Erfüllung des Vertrages oder Schadensersatz auf das Erfüllungsinteresse (§ 179 I BGB)",
         "Rückgabe der bestellten Ware"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Da M den Mangel der Vertretungsmacht kannte, haftet er nach § 179 I BGB auf Erfüllung oder Schadensersatz in Höhe des Erfüllungsinteresses. Nur wenn M den Mangel nicht kannte, wäre § 179 II BGB (bloßer Vertrauensschaden) einschlägig."
     },
     {
@@ -290,7 +414,9 @@
         "31.12.2025",
         "15.06.2024"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Die regelmäßige Verjährungsfrist beginnt nach § 199 I BGB mit dem **Schluss des Jahres** der Kenntnis: also am 31.12.2022. Drei Jahre später: 31.12.2025. Nicht der konkrete Entstehungstag ist maßgeblich, sondern der Jahresschluss."
     },
     {
@@ -305,7 +431,10 @@
         "Beantragung eines Mahnbescheids",
         "Beantragung einer gerichtlichen Vollstreckungshandlung"
       ],
-      "correct": [0, 3],
+      "correct": [
+        0,
+        3
+      ],
       "multiple": true,
       "explanation": "§ 212 I BGB: Neubeginn durch (Nr. 1) Anerkenntnis des Schuldners oder (Nr. 2) Vornahme/Beantragung einer gerichtlichen oder behördlichen Vollstreckungshandlung. Klageerhebung und Mahnbescheid bewirken dagegen nur eine **Hemmung** (§ 204 I Nr. 1 und Nr. 3 BGB)."
     },
@@ -330,7 +459,9 @@
         "Beide sind identisch und werden im Gesetz synonym verwendet",
         "Die Anscheinsvollmacht setzt voraus, dass der Dritte bösgläubig ist"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Duldungsvollmacht: Der Vertretene *weiß* um die Vertretungshandlung und lässt sie zu. Anscheinsvollmacht: Der Vertretene *hätte* die Vertretung erkennen und verhindern *können* (ohne konkrete Kenntnis). In beiden Fällen vertraut der Dritte schutzwürdig auf die Vollmacht. Beide setzen zudem eine gewisse Häufigkeit/Wiederholung voraus."
     },
     {
@@ -340,7 +471,15 @@
       "difficulty": "schwer",
       "prompt": "Erkläre im Gutachtenstil kurz, ob ein 11-jähriges Kind wirksam als Stellvertreter seiner Großmutter einen Kaufvertrag abschließen kann.",
       "sampleAnswer": "Die Großmutter O könnte gegen den Verkäufer S einen Anspruch auf Übereignung der Zeitschrift aus § 433 I BGB haben, wenn ein wirksamer Kaufvertrag zwischen O und S zustande gekommen ist. Hierzu könnte M als Stellvertreter der O gehandelt haben (§ 164 I BGB). (1) M hat eine eigene Willenserklärung abgegeben – er hat die Zeitschrift selbst ausgesucht und bezahlt; er ist kein bloßer Bote. (2) M handelte erkennbar im Namen der O (die Vollmacht und das Geld stammten von O). (3) M war bevollmächtigt. Fraglich ist, ob M als 11-Jähriger Vertreter sein kann. § 165 BGB setzt nur beschränkte Geschäftsfähigkeit voraus; M ist 11 Jahre alt und damit beschränkt geschäftsfähig (§§ 106 ff. BGB). Die Vollmachtserteilung ist für M nur rechtlich vorteilhaft (§ 107 BGB), daher wirksam. Somit sind alle Voraussetzungen der Stellvertretung erfüllt. Ergebnis: Der Kaufvertrag ist zwischen O und der S-GmbH wirksam zustande gekommen.",
-      "keywords": ["eigene willenserklärung", "fremdem namen", "vollmacht", "beschränkt geschäftsfähig", "§ 165 BGB", "§ 164 BGB", "stellvertretung"],
+      "keywords": [
+        "eigene willenserklärung",
+        "fremdem namen",
+        "vollmacht",
+        "beschränkt geschäftsfähig",
+        "§ 165 BGB",
+        "§ 164 BGB",
+        "stellvertretung"
+      ],
       "explanation": "Kernpunkte: § 165 BGB erlaubt die beschränkt geschäftsfähige Person als Vertreter. Die Erteilung der Vollmacht ist für den Minderjährigen nur rechtlich vorteilhaft (kein Risiko), daher ohne Einwilligung des gesetzlichen Vertreters wirksam."
     },
     {
@@ -355,7 +494,9 @@
         "§ 278 BGB gilt nur im Deliktsrecht, § 831 BGB nur im Vertragsrecht",
         "Beide Normen rechnen Handlung und Verschulden in gleicher Weise zu"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "§ 278 BGB (Erfüllungsgehilfe): Im Rahmen bestehender Schuldverhältnisse wird das Verschulden des Erfüllungsgehilfen dem Schuldner vollständig zugerechnet – kein Entlastungsbeweis. § 831 BGB (Verrichtungsgehilfe): Nur die schädigende Handlung wird zugerechnet; der Geschäftsherr kann sich durch Nachweis sorgfältiger Auswahl und Überwachung entlasten."
     },
     {

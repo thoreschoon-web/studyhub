@@ -28,14 +28,35 @@
           "kind": "table",
           "id": "fig-mfo-bereiche",
           "title": "Informationserfordernisse in verschiedenen Marketingbereichen",
-          "headers": ["Marketingbereich", "Informationsgrundlage"],
+          "headers": [
+            "Marketingbereich",
+            "Informationsgrundlage"
+          ],
           "rows": [
-            ["Strategisches Marketing: Marktfeld", "Umsatzpotenzial des neuen Marktes"],
-            ["Marktstimulierungsstrategien", "Kaufverhalten (preis- vs. markenbewusst)"],
-            ["Produktpolitik", "Wichtigste Produktmerkmale (Conjoint-Analyse)"],
-            ["Preispolitik", "Preisbereitschaft der Kunden"],
-            ["Distributionspolitik", "Bevorzugte Absatzkanaele der Kunden"],
-            ["Kommunikationspolitik", "Werbewirkung (Day-after-recall-Test)"]
+            [
+              "Strategisches Marketing: Marktfeld",
+              "Umsatzpotenzial des neuen Marktes"
+            ],
+            [
+              "Marktstimulierungsstrategien",
+              "Kaufverhalten (preis- vs. markenbewusst)"
+            ],
+            [
+              "Produktpolitik",
+              "Wichtigste Produktmerkmale (Conjoint-Analyse)"
+            ],
+            [
+              "Preispolitik",
+              "Preisbereitschaft der Kunden"
+            ],
+            [
+              "Distributionspolitik",
+              "Bevorzugte Absatzkanaele der Kunden"
+            ],
+            [
+              "Kommunikationspolitik",
+              "Werbewirkung (Day-after-recall-Test)"
+            ]
           ]
         }
       ]
@@ -113,12 +134,32 @@
           "kind": "table",
           "id": "fig-paneltypen",
           "title": "Ueberblick ueber Paneltypen",
-          "headers": ["Paneltyp", "Beispiele", "Wer wird befragt?"],
+          "headers": [
+            "Paneltyp",
+            "Beispiele",
+            "Wer wird befragt?"
+          ],
           "rows": [
-            ["Handelspanel", "AC Nielsen", "Einzelhandel, Grosshandel"],
-            ["Unternehmenspanel", "GfK", "Repraesentative Unternehmen"],
-            ["Verbraucherpanel", "GfK Consumer Panel", "Haushalte, Einzelpersonen"],
-            ["Spezialpanel", "Fernsehpanel, Onlinepanel", "Themenspezifisch"]
+            [
+              "Handelspanel",
+              "AC Nielsen",
+              "Einzelhandel, Grosshandel"
+            ],
+            [
+              "Unternehmenspanel",
+              "GfK",
+              "Repraesentative Unternehmen"
+            ],
+            [
+              "Verbraucherpanel",
+              "GfK Consumer Panel",
+              "Haushalte, Einzelpersonen"
+            ],
+            [
+              "Spezialpanel",
+              "Fernsehpanel, Onlinepanel",
+              "Themenspezifisch"
+            ]
           ]
         }
       ]
@@ -144,12 +185,37 @@
           "kind": "table",
           "id": "fig-skalenniveaus",
           "title": "Die vier Skalenniveaus im Ueberblick",
-          "headers": ["Skala", "Eigenschaft", "Erlaubte Statistik", "Beispiele"],
+          "headers": [
+            "Skala",
+            "Eigenschaft",
+            "Erlaubte Statistik",
+            "Beispiele"
+          ],
           "rows": [
-            ["Nominalskala", "Eindeutige Zuordnung zu Kategorien, keine Rangordnung", "Haeufigkeiten, Modus", "Berufsgruppe, Wohnort, Geschlecht, Marke"],
-            ["Ordinalskala", "Rangordnung (mehr/weniger), Abstaende unkontrolliert", "Median, Rangkorrelation", "Schulnoten, Platzierungen, Likert (streng)"],
-            ["Intervallskala", "Gleiche Abstaende, kein absoluter Nullpunkt", "Mittelwert, Standardabweichung", "Temperatur in Grad Celsius, Geburtsjahr"],
-            ["Ratio-/Absolutskala", "Gleiche Abstaende + absoluter Nullpunkt (0 = wirklich nichts)", "Alle Operationen inkl. Verhaeltnisse", "Alter, Einkommen, Laenge, Gewicht"]
+            [
+              "Nominalskala",
+              "Eindeutige Zuordnung zu Kategorien, keine Rangordnung",
+              "Haeufigkeiten, Modus",
+              "Berufsgruppe, Wohnort, Geschlecht, Marke"
+            ],
+            [
+              "Ordinalskala",
+              "Rangordnung (mehr/weniger), Abstaende unkontrolliert",
+              "Median, Rangkorrelation",
+              "Schulnoten, Platzierungen, Likert (streng)"
+            ],
+            [
+              "Intervallskala",
+              "Gleiche Abstaende, kein absoluter Nullpunkt",
+              "Mittelwert, Standardabweichung",
+              "Temperatur in Grad Celsius, Geburtsjahr"
+            ],
+            [
+              "Ratio-/Absolutskala",
+              "Gleiche Abstaende + absoluter Nullpunkt (0 = wirklich nichts)",
+              "Alle Operationen inkl. Verhaeltnisse",
+              "Alter, Einkommen, Laenge, Gewicht"
+            ]
           ]
         }
       ]
@@ -175,11 +241,31 @@
           "kind": "table",
           "id": "fig-datenanalyse",
           "title": "Ueberblick Datenanalyseverfahren",
-          "headers": ["Ebene", "Anzahl Variablen", "Ziel", "Methoden (Auswahl)"],
+          "headers": [
+            "Ebene",
+            "Anzahl Variablen",
+            "Ziel",
+            "Methoden (Auswahl)"
+          ],
           "rows": [
-            ["Univariat", "1", "Beschreibung", "Haeufigkeiten, Mittelwert, Median, Modalwert, Streuung"],
-            ["Bivariat", "2", "Zusammenhaenge zwischen 2 Merkmalen", "Chi2-Test, Korrelation, einfache Regression, t-Test"],
-            ["Multivariat", "> 2", "Zusammenhaenge zwischen mehr als 2 Merkmalen", "Multiple Regression, Faktorenanalyse, Clusteranalyse, ANOVA"]
+            [
+              "Univariat",
+              "1",
+              "Beschreibung",
+              "Haeufigkeiten, Mittelwert, Median, Modalwert, Streuung"
+            ],
+            [
+              "Bivariat",
+              "2",
+              "Zusammenhaenge zwischen 2 Merkmalen",
+              "Chi2-Test, Korrelation, einfache Regression, t-Test"
+            ],
+            [
+              "Multivariat",
+              "> 2",
+              "Zusammenhaenge zwischen mehr als 2 Merkmalen",
+              "Multiple Regression, Faktorenanalyse, Clusteranalyse, ANOVA"
+            ]
           ]
         }
       ]
@@ -233,6 +319,42 @@
       "topicId": "mkt-vl3-marktforschung-marketingforschung",
       "front": "Warum ist die Likert-Skala streng genommen nur ordinal?",
       "back": "Weil man nicht sicher wissen kann, ob Befragte die Abstaende zwischen den Stufen als gleich gross wahrnehmen. In der Praxis wird sie oft trotzdem als intervallskaliert behandelt, wenn die Annahme gleicher Abstaende plausibel ist."
+    },
+    {
+      "id": "mkt-vl3-marktforschung-marketingforschung-z1",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was ist das 5D-Schema der Marktforschung?",
+      "back": "**D**efinition (Ziele) → **D**esign (Forschungsdesign) → **D**atenerhebung → **D**atenanalyse → **D**okumentation/Interpretation. Systematischer Prozess vom Problem zur Entscheidungsgrundlage."
+    },
+    {
+      "id": "mkt-vl3-marktforschung-marketingforschung-z2",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Primär- vs. Sekundärforschung – Unterschied?",
+      "back": "**Primärforschung**: neue Daten für ein spezifisches Problem (teurer, langsamer). **Sekundärforschung**: bereits vorhandene Daten (interne Quellen, externe Statistiken) – schneller und günstiger, aber oft nicht passgenau."
+    },
+    {
+      "id": "mkt-vl3-marktforschung-marketingforschung-z3",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was ist ein Panel in der Marktforschung?",
+      "back": "Gleichbleibender Kreis von Probanden, der regelmäßig zum gleichen Gegenstand befragt wird. Typen: Handelspanel, Verbraucherpanel, Spezialpanel. Problem: Panelsterblichkeit (~15 % p.a.), Paneleffekte (Over-/Underreporting, Ermüdung)."
+    },
+    {
+      "id": "mkt-vl3-marktforschung-marketingforschung-z4",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Welche vier Skalenniveaus gibt es?",
+      "back": "1. **Nominalskala** (Zuordnung), 2. **Ordinalskala** (Rangordnung), 3. **Intervallskala** (gleiche Abstände, kein absoluter Nullpunkt), 4. **Ratioskala/Absolutskala** (absoluter Nullpunkt). Likert-Skala ist streng ordinal, wird aber oft als Intervallskala behandelt."
+    },
+    {
+      "id": "mkt-vl3-marktforschung-marketingforschung-z5",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Welche Analyseverfahren gibt es – univariat, bivariat, multivariat?",
+      "back": "**Univariat**: Häufigkeiten, Mittelwert, Median, Streuung. **Bivariat**: Chi²-Test, Korrelation, einfache Regression, t-Test. **Multivariat**: multiple Regression, Varianz-, Cluster-, Faktorenanalyse, MDS."
+    },
+    {
+      "id": "mkt-vl3-marktforschung-marketingforschung-z6",
+      "topicId": "mkt-vl3-marktforschung-marketingforschung",
+      "front": "Was ist eine Fokusgruppe?",
+      "back": "Moderierte Gruppendiskussion mit 6–10 Teilnehmern. Qualitative Methode. Ziel: Tiefenverständnis von Einstellungen, Bedürfnissen und Sprachmustern der Zielgruppe."
     }
   ],
   "quiz": [
@@ -248,7 +370,9 @@
         "Forschung, die ausschliesslich von externen Instituten durchgefuehrt wird",
         "Forschung mit computergestuetzten Methoden (CATI/CAPI)"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Primaerforschung (Field Research) bedeutet, dass neue Daten eigens fuer das aktuelle Forschungsproblem erhoben werden -- durch Befragung, Beobachtung oder Experiment. Sekundaerforschung (Desk Research) nutzt dagegen vorhandene Daten."
     },
     {
@@ -264,7 +388,11 @@
         "Dokumentation",
         "Diversifikation"
       ],
-      "correct": [0, 2, 3],
+      "correct": [
+        0,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "Das 5D-Schema besteht aus: Definition, Design, Datenerhebung, Datenanalyse, Dokumentation. Differenzierung und Diversifikation gehoeren nicht dazu -- das sind Marketingstrategien."
     },
@@ -289,7 +417,9 @@
         "Panel",
         "Sekundaerforschung (intern)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Ein Panel ist definiert als Erhebung bei einem gleichbleibenden Kreis von Einheiten in regelmaessigen Abstaenden zum gleichen Untersuchungsgegenstand. Genau das passiert hier: dieselben 500 Haushalte, jedes Quartal, Thema Waschmittelkauf."
     },
     {
@@ -304,7 +434,9 @@
         "Intervallskala",
         "Ratio-/Absolutskala"
       ],
-      "correct": [3],
+      "correct": [
+        3
+      ],
       "explanation": "Koerpergroesse in cm ist ratio-/absolutskaliert: Die Abstaende sind gleich (1 cm ist immer 1 cm) und es gibt einen absoluten Nullpunkt (0 cm = keine Groesse). Damit sind alle Rechenoperationen erlaubt, auch Verhaeltnisse."
     },
     {
@@ -319,7 +451,9 @@
         "Negation in der Frage",
         "Zu kurze Formulierung"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Frage enthaelt zwei separate Fragen in einer: (1) Wie viele TV-Spots in diesem Monat? und (2) Wie viele im selben Vorjahresmonat? Befragte koennen beide Aspekte nicht in einer Antwort angeben -- das ist ein klassischer Formulierungsfehler ('Mehrere Gedanken pro Item')."
     },
     {
@@ -344,7 +478,11 @@
         "Sie ermoeglicht keine Rangordnung der Antworten",
         "Typisches Beispiel: 1 = stimme ueberhaupt nicht zu, 5 = stimme voll zu"
       ],
-      "correct": [0, 2, 4],
+      "correct": [
+        0,
+        2,
+        4
+      ],
       "multiple": true,
       "explanation": "Die Likert-Skala ist streng genommen ordinal (kein garantierter gleicher Abstand zwischen den Stufen). In der Praxis wird sie oft intervallskaliert behandelt. Einen absoluten Nullpunkt hat sie nicht. Rangordnung ist natuerlich moeglich."
     },
@@ -355,7 +493,14 @@
       "difficulty": "schwer",
       "prompt": "Erklaere die drei Guetekriterien der Marktforschung (Validitaet, Reliabilitaet, Objektivitaet) in eigenen Worten und nenne jeweils ein Beispiel.",
       "sampleAnswer": "Validitaet: Eine Messung ist valide, wenn sie wirklich das misst, was sie messen soll. Beispiel: Ein Fragebogen zur Markenloyalitaet ist nur dann valide, wenn er tatsaechlich Loyalitaet erfasst und nicht nur Gewohnheit.\n\nReliabilitaet: Eine Messung ist reliabel, wenn sie bei Wiederholung unter gleichen Bedingungen dasselbe Ergebnis liefert. Beispiel: Wenn dieselbe Person denselben Fragebogen zweimal ausfuellt, sollte das Ergebnis aehnlich sein.\n\nObjektivitaet: Eine Messung ist objektiv, wenn das Ergebnis unabhaengig davon ist, wer die Messung durchfuehrt. Beispiel: Ein standardisierter Fragebogen ist objektiver als ein Tiefeninterview.",
-      "keywords": ["validitaet", "reliabilitaet", "objektivitaet", "misst", "wiederholung", "interviewer"],
+      "keywords": [
+        "validitaet",
+        "reliabilitaet",
+        "objektivitaet",
+        "misst",
+        "wiederholung",
+        "interviewer"
+      ],
       "explanation": "Die drei Guetekriterien bilden die Qualitaetsbasis jeder wissenschaftlichen Messung. Validitaet ist das wichtigste Kriterium -- eine reliable, aber nicht valide Messung misst das Falsche immer gleich."
     },
     {
@@ -379,7 +524,9 @@
         "Einfache lineare Regression",
         "Faktorenanalyse"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der Chi-Quadrat-Test ist das klassische Verfahren der bivariaten Analyse fuer den Zusammenhang zwischen zwei nominalen (kategorischen) Variablen. Der t-Test vergleicht Mittelwerte, Regression setzt metrische Variablen voraus, die Faktorenanalyse ist multivariat."
     },
     {
@@ -394,7 +541,11 @@
         "Zu geringe Marktabdeckung durch Ausschluss bestimmter Vertriebskanaele",
         "Nachlaessigkeit und Ermuedungserscheinungen bei der Dateneingabe"
       ],
-      "correct": [0, 1, 3],
+      "correct": [
+        0,
+        1,
+        3
+      ],
       "multiple": true,
       "explanation": "Paneleffekte (Antworten 0, 1, 3) entstehen durch die Teilnahme am Panel selbst. Antwort 2 beschreibt das Coverage-Problem (ungenuegend Marktabdeckung) -- das ist ein separates Problem, kein Paneleffekt."
     }

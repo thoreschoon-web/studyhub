@@ -34,8 +34,20 @@
           "title": "Wahrscheinlichkeitsverteilung der Bernoulli-Verteilung",
           "caption": "Die Bernoulli-Verteilung hat nur zwei mögliche Werte: 0 (Misserfolg) und 1 (Erfolg). Bei p=0,3 ist Misserfolg wahrscheinlicher.",
           "dist": "binomial",
-          "params": { "n": 1, "p": 0.3 },
-          "markers": [{ "x": 0, "label": "0 (Misserfolg)" }, { "x": 1, "label": "1 (Erfolg)" }]
+          "params": {
+            "n": 1,
+            "p": 0.3
+          },
+          "markers": [
+            {
+              "x": 0,
+              "label": "0 (Misserfolg)"
+            },
+            {
+              "x": 1,
+              "label": "1 (Erfolg)"
+            }
+          ]
         }
       ]
     },
@@ -67,8 +79,16 @@
           "title": "Binomialverteilung B(10; 0,5) — symmetrisch",
           "caption": "Bei p=0,5 ist die Verteilung perfekt symmetrisch um den Erwartungswert np=5.",
           "dist": "binomial",
-          "params": { "n": 10, "p": 0.5 },
-          "markers": [{ "x": 5, "label": "E(X)=5" }]
+          "params": {
+            "n": 10,
+            "p": 0.5
+          },
+          "markers": [
+            {
+              "x": 5,
+              "label": "E(X)=5"
+            }
+          ]
         },
         {
           "kind": "distribution",
@@ -76,8 +96,16 @@
           "title": "Binomialverteilung B(10; 0,2) — rechtsschief",
           "caption": "Bei p=0,2 ist die Verteilung rechtsschief: kleine Anzahlen von Erfolgen sind wahrscheinlicher. Erwartungswert np=2.",
           "dist": "binomial",
-          "params": { "n": 10, "p": 0.2 },
-          "markers": [{ "x": 2, "label": "E(X)=2" }]
+          "params": {
+            "n": 10,
+            "p": 0.2
+          },
+          "markers": [
+            {
+              "x": 2,
+              "label": "E(X)=2"
+            }
+          ]
         }
       ]
     },
@@ -109,9 +137,24 @@
           "title": "Standardnormalverteilung N(0,1)",
           "caption": "Die Standardnormalverteilung ist symmetrisch um 0. Die Fläche unter der gesamten Kurve beträgt 1. Schattiert: P(-1,96 ≤ Z ≤ 1,96) ≈ 0,95.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "from": -1.96, "to": 1.96 },
-          "markers": [{ "x": -1.96, "label": "-1,96" }, { "x": 1.96, "label": "1,96" }]
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "from": -1.96,
+            "to": 1.96
+          },
+          "markers": [
+            {
+              "x": -1.96,
+              "label": "-1,96"
+            },
+            {
+              "x": 1.96,
+              "label": "1,96"
+            }
+          ]
         },
         {
           "kind": "distribution",
@@ -119,9 +162,24 @@
           "title": "Normalverteilung N(60, 16) — Beispiel Aufgabe 1",
           "caption": "X~N(60,16): Mittelwert μ=60, Standardabweichung σ=4. Schattiert: P(X ≤ 62,4) ≈ 0,726.",
           "dist": "normal",
-          "params": { "mu": 60, "sigma": 4 },
-          "shade": { "to": 62.4, "tail": "left" },
-          "markers": [{ "x": 60, "label": "μ=60" }, { "x": 62.4, "label": "62,4" }]
+          "params": {
+            "mu": 60,
+            "sigma": 4
+          },
+          "shade": {
+            "to": 62.4,
+            "tail": "left"
+          },
+          "markers": [
+            {
+              "x": 60,
+              "label": "μ=60"
+            },
+            {
+              "x": 62.4,
+              "label": "62,4"
+            }
+          ]
         },
         {
           "kind": "distribution",
@@ -129,7 +187,10 @@
           "title": "Einfluss von σ auf die Normalverteilung (μ=0)",
           "caption": "Größeres σ bedeutet eine breitere, flachere Glocke. Die Fläche unter jeder Kurve ist immer gleich 1.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 }
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          }
         }
       ]
     },
@@ -156,12 +217,27 @@
           "title": "Zentrales Schwankungsintervall (95%)",
           "caption": "Das 95%-Schwankungsintervall liegt bei μ ± 1,96σ. Je 2,5% der Wahrscheinlichkeit liegt in den Randbereichen (hellrot schattiert).",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "from": -1.96, "to": 1.96 },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "from": -1.96,
+            "to": 1.96
+          },
           "markers": [
-            { "x": -1.96, "label": "μ−1,96σ" },
-            { "x": 0, "label": "μ" },
-            { "x": 1.96, "label": "μ+1,96σ" }
+            {
+              "x": -1.96,
+              "label": "μ−1,96σ"
+            },
+            {
+              "x": 0,
+              "label": "μ"
+            },
+            {
+              "x": 1.96,
+              "label": "μ+1,96σ"
+            }
           ]
         }
       ]
@@ -194,8 +270,20 @@
           "title": "Normalapproximation der Binomialverteilung B(50; 0,2)",
           "caption": "Die Binomialverteilung B(50; 0,2) (Balken) wird durch N(10; 8) (Kurve) gut approximiert. Die Faustregeln sind erfüllt: n=50≥30, np=10≥10, n(1-p)=40≥10.",
           "dist": "normal",
-          "params": { "mu": 10, "sigma": 2.828 },
-          "markers": [{ "x": 10, "label": "np=10" }, { "x": 12, "label": "k=12" }]
+          "params": {
+            "mu": 10,
+            "sigma": 2.828
+          },
+          "markers": [
+            {
+              "x": 10,
+              "label": "np=10"
+            },
+            {
+              "x": 12,
+              "label": "k=12"
+            }
+          ]
         }
       ]
     },
@@ -215,14 +303,42 @@
           "kind": "table",
           "id": "tab-quantile",
           "title": "Wichtige Quantile der Standardnormalverteilung",
-          "headers": ["Wahrscheinlichkeit w", "Quantil z_w", "Typische Verwendung"],
+          "headers": [
+            "Wahrscheinlichkeit w",
+            "Quantil z_w",
+            "Typische Verwendung"
+          ],
           "rows": [
-            ["0,80", "0,842", "Schwankungsintervall 60%"],
-            ["0,90", "1,282", "90%-Niveau, einseitig α=0,10"],
-            ["0,95", "1,645", "95%-Niveau einseitig, zweiseitig 90%"],
-            ["0,975", "1,960", "Zweiseitig α=0,05 (Standard-KI)"],
-            ["0,99", "2,326", "99%-Niveau einseitig"],
-            ["0,995", "2,576", "Zweiseitig α=0,01"]
+            [
+              "0,80",
+              "0,842",
+              "Schwankungsintervall 60%"
+            ],
+            [
+              "0,90",
+              "1,282",
+              "90%-Niveau, einseitig α=0,10"
+            ],
+            [
+              "0,95",
+              "1,645",
+              "95%-Niveau einseitig, zweiseitig 90%"
+            ],
+            [
+              "0,975",
+              "1,960",
+              "Zweiseitig α=0,05 (Standard-KI)"
+            ],
+            [
+              "0,99",
+              "2,326",
+              "99%-Niveau einseitig"
+            ],
+            [
+              "0,995",
+              "2,576",
+              "Zweiseitig α=0,01"
+            ]
           ]
         }
       ]
@@ -270,6 +386,138 @@
       "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
       "front": "Wie lautet die Umkehrformel, um aus einer gegebenen Wahrscheinlichkeit $w$ das Quantil $x_w$ zu berechnen?",
       "back": "1. Standardnormalquantil $z_w$ aus der Tabelle ablesen: $\\Phi(z_w) = w$\n2. Zurückrechnen auf die Originalverteilung:\n$$x_w = \\mu + z_w \\cdot \\sigma$$\n\nBsp.: $X \\sim N(60, 16)$, $w=0{,}9$: $z_{0{,}9} = 1{,}282$ → $x_{0{,}9} = 60 + 1{,}282 \\cdot 4 = 65{,}13$"
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z1",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Was ist ein Bernoulli-Experiment?",
+      "back": "Zufallsexperiment mit genau zwei möglichen Ausgängen: Ereignis A (Erfolg) oder Nicht-A (Misserfolg), mit fester Erfolgswahrscheinlichkeit $p$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z2",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Bernoulli-Verteilung: Wahrscheinlichkeitsfunktion",
+      "back": "$X \\sim BE(p)$: $P(X=0)=1-p$, $P(X=1)=p$. Erwartungswert $E(X)=p$, Varianz $Var(X)=p(1-p)$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z3",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Was ist ein Bernoulli-Prozess?",
+      "back": "Folge unabhängiger Wiederholungen eines Bernoulli-Experiments mit konstantem $p$. Grundlage der Binomialverteilung."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z4",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Binomialverteilung: Wahrscheinlichkeitsfunktion",
+      "back": "$X \\sim B(n,p)$: $f(x)=\\binom{n}{x}p^x(1-p)^{n-x}$, $x=0,1,\\dots,n$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z5",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Erwartungswert und Varianz der Binomialverteilung $B(n,p)$",
+      "back": "$E(X)=np$, $\\quad Var(X)=np(1-p)$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z6",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Ableseregel für Binomialtabelle bei $p > 0{,}5$",
+      "back": "$f(x;n,p)=f(n-x;n,1-p)$ und $F(x;n,p)=1-F(n-x-1;n,1-p)$. Tabelle enthält nur $p \\le 0{,}5$; Trick: Erfolge umkodieren."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z7",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Reproduktionseigenschaft der Binomialverteilung",
+      "back": "$X_1 \\sim B(n_1,p)$ und $X_2 \\sim B(n_2,p)$ unabhängig $\\Rightarrow X_1+X_2 \\sim B(n_1+n_2,p)$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z8",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Anteilsschätzer $\\hat{p}$ bei der Binomialverteilung",
+      "back": "$\\hat{p}=\\tfrac{X}{n}$, $E(\\hat{p})=p$, $Var(\\hat{p})=\\tfrac{p(1-p)}{n}$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z9",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Normalverteilung: Dichtefunktion",
+      "back": "$X \\sim N(\\mu,\\sigma^2)$: $f(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z10",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Erwartungswert und Varianz der Normalverteilung",
+      "back": "$E(X)=\\mu$, $Var(X)=\\sigma^2$. Symmetrisch um $\\mu$, Wendepunkte bei $\\mu \\pm \\sigma$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z11",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Standardisierung einer normalverteilten Zufallsvariable",
+      "back": "$Z=\\frac{X-\\mu}{\\sigma} \\sim N(0,1)$. Ermöglicht Ablesen aus der Standard-Normaltabelle $\\Phi$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z12",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Symmetrieregel der Standardnormalverteilung",
+      "back": "$\\Phi(-x)=1-\\Phi(x)$. Tabelle enthält nur positive $x$-Werte; negative Werte mit dieser Regel berechnen."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z13",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Wahrscheinlichkeit eines Intervalls bei $N(\\mu,\\sigma^2)$",
+      "back": "$P(a \\le X \\le b)=\\Phi\\!\\left(\\frac{b-\\mu}{\\sigma}\\right)-\\Phi\\!\\left(\\frac{a-\\mu}{\\sigma}\\right)$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z14",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Lineartransformation normalverteilter Zufallsvariablen",
+      "back": "$Y=aX+b \\sim N(a\\mu+b,\\,a^2\\sigma^2)$ sowie $X_1+X_2 \\sim N(\\mu_1+\\mu_2,\\,\\sigma_1^2+\\sigma_2^2)$ (unabhängig)."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z15",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Quantilsberechnung bei der Normalverteilung",
+      "back": "$x_w = z_w \\cdot \\sigma + \\mu$, wobei $z_w = \\Phi^{-1}(w)$ das $w$-Quantil der Standardnormalverteilung ist."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z16",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Zentrales Schwankungsintervall: Definition",
+      "back": "$[\\mu - k\\sigma;\\; \\mu + k\\sigma]$ mit $P(\\mu-k\\sigma \\le X \\le \\mu+k\\sigma)=2\\Phi(k)-1$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z17",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "68-95-99,7-Regel der Normalverteilung",
+      "back": "$k=1$: ca. 68 %, $k=2$: ca. 95 %, $k=3$: ca. 99,7 % der Werte liegen im $k$-fachen Schwankungsintervall."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z18",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Zentrales $(1-\\alpha)$-Schwankungsintervall über Quantile",
+      "back": "$P(x_{\\alpha/2} \\le X \\le x_{1-\\alpha/2})=1-\\alpha$, wobei $x_{\\alpha/2}$ und $x_{1-\\alpha/2}$ die entsprechenden Quantile von $X$ sind."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z19",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Grenzwertsatz von de Moivre (Binomial → Normal)",
+      "back": "$\\lim_{n\\to\\infty}P\\!\\left(\\frac{X-np}{\\sqrt{np(1-p)}}\\le x\\right)=\\Phi(x)$. Faustregeln: $n \\ge 30$, $np \\ge 10$, $n(1-p) \\ge 10$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z20",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Zentraler Grenzwertsatz (ZGWS) für i.i.d. Zufallsvariablen",
+      "back": "$\\lim_{n\\to\\infty}P\\!\\left(\\frac{\\frac{1}{n}\\sum X_i-\\mu}{\\sqrt{\\sigma^2/n}}\\le x\\right)=\\Phi(x)$. Faustregel: $n \\ge 30$."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z21",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Normalapproximation: Quantil der Binomialverteilung",
+      "back": "$x_{1-\\alpha} \\approx np + z_{1-\\alpha}\\sqrt{np(1-p)}$. Gilt näherungsweise für große $n$ bei Erfüllung der Faustregeln."
+    },
+    {
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-z22",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "front": "Faustregeln für Normalapproximation der Binomialverteilung",
+      "back": "$n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$ müssen alle gleichzeitig erfüllt sein."
     }
   ],
   "quiz": [
@@ -285,7 +533,9 @@
         "$E(X) = 0{,}4$, $\\text{Var}(X) = 2{,}4$",
         "$E(X) = 10$, $\\text{Var}(X) = 0{,}4$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "$E(X) = np = 10 \\cdot 0{,}4 = 4$ und $\\text{Var}(X) = np(1-p) = 10 \\cdot 0{,}4 \\cdot 0{,}6 = 2{,}4$."
     },
     {
@@ -342,7 +592,9 @@
         "$p = 0{,}5$",
         "$n \\ge 100$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die korrekten Faustregeln sind: $n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$. Alle drei müssen gleichzeitig erfüllt sein."
     },
     {
@@ -366,7 +618,9 @@
         "$P(X=3; 10; 0{,}8) = 1 - P(X=7; 10; 0{,}2)$",
         "$P(X=3; 10; 0{,}8) = P(X=6; 10; 0{,}2)$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die Symmetrie-Formel lautet: $f(x; n, p) = f(n-x; n, 1-p)$. Mit $x=3$, $n=10$, $p=0{,}8$: $P(X=3; 10; 0{,}8) = P(X = 10-3; 10; 1-0{,}8) = P(X=7; 10; 0{,}2)$. Diesen Wert kann man direkt aus der Tabelle ablesen."
     },
     {
@@ -376,7 +630,14 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, warum die Normalverteilung in der Natur so häufig vorkommt. Was sagt der Zentrale Grenzwertsatz dazu?",
       "sampleAnswer": "Viele Zufallsgrößen in der Natur entstehen als Summe oder Mittelwert vieler kleiner, unabhängiger Einflüsse. Der Zentrale Grenzwertsatz besagt, dass eine solche Summe unabhängig von der Verteilung der Einzeleinflüsse für große n näherungsweise normalverteilt ist. Körpergröße z.B. wird durch viele Gene und Umweltfaktoren bestimmt — die Summe dieser vielen kleinen, unabhängigen Einflüsse führt zur beobachteten Glockenkurve.",
-      "keywords": ["summe", "unabhängig", "grenzwertsatz", "viele einflüsse", "näherungsweise", "normalverteilt"],
+      "keywords": [
+        "summe",
+        "unabhängig",
+        "grenzwertsatz",
+        "viele einflüsse",
+        "näherungsweise",
+        "normalverteilt"
+      ],
       "explanation": "Der ZGWS erklärt, warum Normalverteilungen so häufig auftreten: Sobald eine Zufallsgröße durch die Addition vieler kleiner unabhängiger Effekte entsteht, konvergiert ihre Verteilung gegen die Normalverteilung."
     },
     {
@@ -391,7 +652,11 @@
         "Die Fläche unter der Dichtefunktion beträgt genau 1.",
         "$P(X = \\mu) > 0$"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "multiple": true,
       "explanation": "Aussagen 1, 2 und 3 sind korrekt. Aussage 4 ist falsch: Da die Normalverteilung stetig ist, gilt $P(X=x)=0$ für jeden einzelnen Wert — nur Intervallwahrscheinlichkeiten sind positiv."
     },
@@ -414,6 +679,80 @@
       "prompt": "Wenn $X_1 \\sim B(5, 0{,}3)$ und $X_2 \\sim B(7, 0{,}3)$ unabhängig sind, dann gilt $X_1 + X_2 \\sim B(12, 0{,}3)$.",
       "answer": true,
       "explanation": "Die Additivitätseigenschaft der Binomialverteilung besagt: Wenn $X_1 \\sim B(n_1, p)$ und $X_2 \\sim B(n_2, p)$ unabhängig sind (gleiches $p$!), dann $X_1+X_2 \\sim B(n_1+n_2, p)$. Hier: $B(5+7, 0{,}3) = B(12, 0{,}3)$ ✓."
+    },
+    {
+      "kind": "mc",
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-zq1",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "leicht",
+      "prompt": "Eine Zufallsvariable $X \\sim B(n, p)$ hat Erwartungswert $E(X) = np$ und Varianz $Var(X) =$",
+      "options": [
+        "$np(1-p)$",
+        "$np^2$",
+        "$n^2 p(1-p)$",
+        "$\\sqrt{np(1-p)}$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Die Varianz der Binomialverteilung lautet $Var(X) = np(1-p)$. Die Standardabweichung ist $\\sigma = \\sqrt{np(1-p)}$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-zq2",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "leicht",
+      "prompt": "Die Standardnormalverteilung $N(0,1)$ ist symmetrisch um 0, sodass gilt: $\\Phi(-x) = 1 - \\Phi(x)$.",
+      "answer": true,
+      "explanation": "Die Symmetrie der Standardnormalverteilung um 0 liefert genau diese Beziehung: $\\Phi(-x) = 1 - \\Phi(x)$. Dies erlaubt das Ablesen negativer Argumente aus einseitigen Tabellen."
+    },
+    {
+      "kind": "numeric",
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-zq3",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Sei $X \\sim N(60, 16)$ (also $\\mu = 60$, $\\sigma^2 = 16$, $\\sigma = 4$). Berechnen Sie $P(X \\le 62{,}4)$. Drücken Sie das Ergebnis als $\\Phi(z)$ aus und geben Sie den Wert von $z$ an.",
+      "answer": 0.6,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "Standardisierung: $z = \\frac{62{,}4 - 60}{4} = \\frac{2{,}4}{4} = 0{,}6$. Somit $P(X \\le 62{,}4) = \\Phi(0{,}6)$. Der gesuchte $z$-Wert ist $0{,}6$."
+    },
+    {
+      "kind": "mc",
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-zq4",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Welche Faustregeln müssen für die Normalapproximation der Binomialverteilung ($B(n,p) \\approx N(np, np(1-p))$) erfüllt sein?",
+      "options": [
+        "$n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$",
+        "$n \\ge 10$ und $p \\ge 0{,}5$",
+        "$n \\ge 30$ und $p = 0{,}5$",
+        "$np \\ge 5$ und $n(1-p) \\ge 5$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Die gängigen Faustregeln für die Normalapproximation der Binomialverteilung sind $n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$. Sind diese erfüllt, ist die Approximation hinreichend gut."
+    },
+    {
+      "kind": "truefalse",
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-zq5",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "mittel",
+      "prompt": "Sind $X_1 \\sim B(n_1, p)$ und $X_2 \\sim B(n_2, p)$ unabhängig, so gilt $X_1 + X_2 \\sim B(n_1 + n_2, p)$.",
+      "answer": true,
+      "explanation": "Die Reproduktionseigenschaft der Binomialverteilung besagt, dass die Summe zweier unabhängiger binomialverteilter ZV mit gleichem $p$ wieder binomialverteilt ist: $X_1 + X_2 \\sim B(n_1 + n_2, p)$."
+    },
+    {
+      "kind": "numeric",
+      "id": "spezielle-verteilungen-und-grenzwertsaetze-zq6",
+      "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+      "difficulty": "schwer",
+      "prompt": "Für $X \\sim N(\\mu, \\sigma^2)$ gilt $P(\\mu - 2\\sigma \\le X \\le \\mu + 2\\sigma) = 2\\Phi(2) - 1$. Gegeben $\\Phi(2) = 0{,}9772$, berechnen Sie diese Wahrscheinlichkeit.",
+      "answer": 0.9544,
+      "tolerance": 0.0001,
+      "unit": "",
+      "explanation": "$P(\\mu - 2\\sigma \\le X \\le \\mu + 2\\sigma) = 2\\Phi(2) - 1 = 2 \\cdot 0{,}9772 - 1 = 1{,}9544 - 1 = 0{,}9544$. Die 2-Sigma-Regel: ca. 95,44% aller Werte liegen im Intervall $[\\mu - 2\\sigma; \\mu + 2\\sigma]$."
     }
   ],
   "exercises": [

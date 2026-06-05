@@ -1,0 +1,502 @@
+[
+  {
+    "kind": "mc",
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-zq1",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "difficulty": "leicht",
+    "prompt": "Eine Zufallsvariable $X \\sim B(n, p)$ hat Erwartungswert $E(X) = np$ und Varianz $Var(X) =$",
+    "options": [
+      "$np(1-p)$",
+      "$np^2$",
+      "$n^2 p(1-p)$",
+      "$\\sqrt{np(1-p)}$"
+    ],
+    "correct": [0],
+    "explanation": "Die Varianz der Binomialverteilung lautet $Var(X) = np(1-p)$. Die Standardabweichung ist $\\sigma = \\sqrt{np(1-p)}$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-zq2",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "difficulty": "leicht",
+    "prompt": "Die Standardnormalverteilung $N(0,1)$ ist symmetrisch um 0, sodass gilt: $\\Phi(-x) = 1 - \\Phi(x)$.",
+    "answer": true,
+    "explanation": "Die Symmetrie der Standardnormalverteilung um 0 liefert genau diese Beziehung: $\\Phi(-x) = 1 - \\Phi(x)$. Dies erlaubt das Ablesen negativer Argumente aus einseitigen Tabellen."
+  },
+  {
+    "kind": "numeric",
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-zq3",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "difficulty": "mittel",
+    "prompt": "Sei $X \\sim N(60, 16)$ (also $\\mu = 60$, $\\sigma^2 = 16$, $\\sigma = 4$). Berechnen Sie $P(X \\le 62{,}4)$. Drücken Sie das Ergebnis als $\\Phi(z)$ aus und geben Sie den Wert von $z$ an.",
+    "answer": 0.6,
+    "tolerance": 0.001,
+    "unit": "",
+    "explanation": "Standardisierung: $z = \\frac{62{,}4 - 60}{4} = \\frac{2{,}4}{4} = 0{,}6$. Somit $P(X \\le 62{,}4) = \\Phi(0{,}6)$. Der gesuchte $z$-Wert ist $0{,}6$."
+  },
+  {
+    "kind": "mc",
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-zq4",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "difficulty": "mittel",
+    "prompt": "Welche Faustregeln müssen für die Normalapproximation der Binomialverteilung ($B(n,p) \\approx N(np, np(1-p))$) erfüllt sein?",
+    "options": [
+      "$n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$",
+      "$n \\ge 10$ und $p \\ge 0{,}5$",
+      "$n \\ge 30$ und $p = 0{,}5$",
+      "$np \\ge 5$ und $n(1-p) \\ge 5$"
+    ],
+    "correct": [0],
+    "explanation": "Die gängigen Faustregeln für die Normalapproximation der Binomialverteilung sind $n \\ge 30$, $np \\ge 10$ und $n(1-p) \\ge 10$. Sind diese erfüllt, ist die Approximation hinreichend gut."
+  },
+  {
+    "kind": "truefalse",
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-zq5",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "difficulty": "mittel",
+    "prompt": "Sind $X_1 \\sim B(n_1, p)$ und $X_2 \\sim B(n_2, p)$ unabhängig, so gilt $X_1 + X_2 \\sim B(n_1 + n_2, p)$.",
+    "answer": true,
+    "explanation": "Die Reproduktionseigenschaft der Binomialverteilung besagt, dass die Summe zweier unabhängiger binomialverteilter ZV mit gleichem $p$ wieder binomialverteilt ist: $X_1 + X_2 \\sim B(n_1 + n_2, p)$."
+  },
+  {
+    "kind": "numeric",
+    "id": "spezielle-verteilungen-und-grenzwertsaetze-zq6",
+    "topicId": "spezielle-verteilungen-und-grenzwertsaetze",
+    "difficulty": "schwer",
+    "prompt": "Für $X \\sim N(\\mu, \\sigma^2)$ gilt $P(\\mu - 2\\sigma \\le X \\le \\mu + 2\\sigma) = 2\\Phi(2) - 1$. Gegeben $\\Phi(2) = 0{,}9772$, berechnen Sie diese Wahrscheinlichkeit.",
+    "answer": 0.9544,
+    "tolerance": 0.0001,
+    "unit": "",
+    "explanation": "$P(\\mu - 2\\sigma \\le X \\le \\mu + 2\\sigma) = 2\\Phi(2) - 1 = 2 \\cdot 0{,}9772 - 1 = 1{,}9544 - 1 = 0{,}9544$. Die 2-Sigma-Regel: ca. 95,44% aller Werte liegen im Intervall $[\\mu - 2\\sigma; \\mu + 2\\sigma]$."
+  },
+  {
+    "kind": "mc",
+    "id": "grundlagen-der-induktiven-statistik-zq1",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "difficulty": "leicht",
+    "prompt": "Der Standardfehler des Stichprobenmittels $\\bar{X}$ bei bekannter Varianz $\\sigma^2$ und Stichprobenumfang $n$ beträgt:",
+    "options": [
+      "$\\dfrac{\\sigma}{\\sqrt{n}}$",
+      "$\\dfrac{\\sigma^2}{n}$",
+      "$\\dfrac{\\sigma}{n}$",
+      "$\\sigma \\cdot \\sqrt{n}$"
+    ],
+    "correct": [0],
+    "explanation": "Die Varianz von $\\bar{X}$ ist $Var(\\bar{X}) = \\frac{\\sigma^2}{n}$, daher ist der Standardfehler (Standardabweichung von $\\bar{X}$) gleich $\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "grundlagen-der-induktiven-statistik-zq2",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "difficulty": "leicht",
+    "prompt": "Bei einer einfachen Zufallsstichprobe $X_1, \\dots, X_n$ aus einer normalverteilten Grundgesamtheit mit Erwartungswert $\\mu$ und Varianz $\\sigma^2$ gilt: $\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$.",
+    "answer": true,
+    "explanation": "Sind die $X_i$ i.i.d. normalverteilt mit $N(\\mu, \\sigma^2)$, so ist das Stichprobenmittel $\\bar{X}$ exakt normalverteilt mit $N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$."
+  },
+  {
+    "kind": "numeric",
+    "id": "grundlagen-der-induktiven-statistik-zq3",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "difficulty": "mittel",
+    "prompt": "Eine Zufallsvariable $X$ hat $\\mu = 10$ und $\\sigma^2 = 4$. Wie groß ist die Varianz des Stichprobenmittels $\\bar{X}$ bei $n = 25$?",
+    "answer": 0.16,
+    "tolerance": 0.001,
+    "unit": "",
+    "explanation": "$Var(\\bar{X}) = \\frac{\\sigma^2}{n} = \\frac{4}{25} = 0{,}16$. Der Standardfehler beträgt $\\sigma_{\\bar{X}} = \\sqrt{0{,}16} = 0{,}4$."
+  },
+  {
+    "kind": "mc",
+    "id": "grundlagen-der-induktiven-statistik-zq4",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "difficulty": "mittel",
+    "prompt": "Was beschreibt der Zentrale Grenzwertsatz (ZGWS) für i.i.d. Zufallsvariablen?",
+    "options": [
+      "Die standardisierte Summe/das standardisierte Mittel konvergiert für $n \\to \\infty$ in Verteilung gegen $N(0,1)$, unabhängig von der Verteilung der $X_i$.",
+      "Das Stichprobenmittel ist immer exakt normalverteilt.",
+      "Die Binomialverteilung konvergiert gegen die Poisson-Verteilung.",
+      "Die Varianz des Stichprobenmittels strebt gegen 0, wenn $n$ gegen unendlich geht."
+    ],
+    "correct": [0],
+    "explanation": "Der ZGWS besagt: $\\frac{\\frac{1}{n}\\sum X_i - \\mu}{\\sqrt{\\sigma^2/n}} \\xrightarrow{d} N(0,1)$ für $n \\to \\infty$. Als Faustregel gilt $n \\ge 30$. Die Grundverteilung der $X_i$ muss nicht normal sein."
+  },
+  {
+    "kind": "truefalse",
+    "id": "grundlagen-der-induktiven-statistik-zq5",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "difficulty": "mittel",
+    "prompt": "Der Erwartungswert des Stichprobenmittels $\\bar{X}$ ist stets gleich dem Erwartungswert $\\mu$ der Grundgesamtheit: $E(\\bar{X}) = \\mu$.",
+    "answer": true,
+    "explanation": "$E(\\bar{X}) = E\\!\\left(\\frac{1}{n}\\sum_{i=1}^n X_i\\right) = \\frac{1}{n} \\sum_{i=1}^n E(X_i) = \\frac{1}{n} \\cdot n\\mu = \\mu$. Das Stichprobenmittel ist also ein erwartungstreuer Schätzer für $\\mu$."
+  },
+  {
+    "kind": "numeric",
+    "id": "grundlagen-der-induktiven-statistik-zq6",
+    "topicId": "grundlagen-der-induktiven-statistik",
+    "difficulty": "schwer",
+    "prompt": "Ein Ladungsgewicht sei normalverteilt mit $\\mu = 10$ t und $\\sigma = 2$ t. Bei einer Stichprobe von $n = 25$ Fahrten: Wie groß ist der Standardfehler $\\sigma_{\\bar{X}}$?",
+    "answer": 0.4,
+    "tolerance": 0.001,
+    "unit": "t",
+    "explanation": "$\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{2}{\\sqrt{25}} = \\frac{2}{5} = 0{,}4$ t."
+  },
+  {
+    "kind": "mc",
+    "id": "punktschaetzung-zq1",
+    "topicId": "punktschaetzung",
+    "difficulty": "leicht",
+    "prompt": "Ein Schätzer $\\hat{\\theta}$ heißt erwartungstreu, wenn:",
+    "options": [
+      "$E(\\hat{\\theta}) = \\theta$",
+      "$Var(\\hat{\\theta}) = 0$",
+      "$\\lim_{n \\to \\infty} P(|\\hat{\\theta} - \\theta| > \\varepsilon) = 0$",
+      "$MSE(\\theta, \\hat{\\theta}) < 1$"
+    ],
+    "correct": [0],
+    "explanation": "Erwartungstreue (Unverzerrtheit) bedeutet $E(\\hat{\\theta}) = \\theta$, d.h. der Schätzer trifft im Mittel den wahren Parameter. Der Bias ist dann $Bias(\\theta, \\hat{\\theta}) = E(\\hat{\\theta}) - \\theta = 0$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "punktschaetzung-zq2",
+    "topicId": "punktschaetzung",
+    "difficulty": "leicht",
+    "prompt": "Die Stichprobenvarianz $\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum_{i=1}^n (X_i - \\bar{X})^2$ ist ein erwartungstreuer Schätzer für $\\sigma^2$.",
+    "answer": true,
+    "explanation": "Mit dem Divisor $n-1$ (statt $n$) wird die Stichprobenvarianz erwartungstreu: $E(\\hat{\\sigma}^2) = \\sigma^2$. Der Divisor $n$ würde zu einem negativen Bias führen."
+  },
+  {
+    "kind": "mc",
+    "id": "punktschaetzung-zq3",
+    "topicId": "punktschaetzung",
+    "difficulty": "mittel",
+    "prompt": "Der mittlere quadratische Fehler (MSE) lässt sich zerlegen in:",
+    "options": [
+      "$MSE(\\theta, \\hat{\\theta}) = Var(\\hat{\\theta}) + Bias(\\hat{\\theta})^2$",
+      "$MSE(\\theta, \\hat{\\theta}) = Var(\\hat{\\theta}) - Bias(\\hat{\\theta})$",
+      "$MSE(\\theta, \\hat{\\theta}) = Var(\\hat{\\theta}) \\cdot Bias(\\hat{\\theta})^2$",
+      "$MSE(\\theta, \\hat{\\theta}) = E(\\hat{\\theta}) + Var(\\hat{\\theta})$"
+    ],
+    "correct": [0],
+    "explanation": "Es gilt $MSE(\\theta, \\hat{\\theta}) = E[(\\hat{\\theta} - \\theta)^2] = Var(\\hat{\\theta}) + Bias(\\hat{\\theta})^2$. Bei erwartungstreuen Schätzern ($Bias = 0$) stimmt der MSE mit der Varianz überein."
+  },
+  {
+    "kind": "truefalse",
+    "id": "punktschaetzung-zq4",
+    "topicId": "punktschaetzung",
+    "difficulty": "mittel",
+    "prompt": "Ein stark konsistenter Schätzer erfüllt $\\lim_{n \\to \\infty} MSE(\\theta, \\hat{\\theta}) = 0$.",
+    "answer": true,
+    "explanation": "Starke Konsistenz (Konsistenz im quadratischen Mittel) bedeutet genau $\\lim_{n \\to \\infty} MSE(\\theta, \\hat{\\theta}) = 0$. Dies impliziert auch schwache Konsistenz ($\\lim_{n\\to\\infty} P(|\\hat{\\theta}-\\theta|>\\varepsilon)=0$)."
+  },
+  {
+    "kind": "numeric",
+    "id": "punktschaetzung-zq5",
+    "topicId": "punktschaetzung",
+    "difficulty": "mittel",
+    "prompt": "Gegeben sei der Schätzer $g_2 = \\frac{1}{n+1}\\sum_{i=1}^n X_i$ für $\\mu$ mit $E(X_i) = \\mu$ und $Var(X_i) = \\sigma^2$. Berechnen Sie $E(g_2)$ und geben Sie den Bias $Bias(\\mu, g_2) = E(g_2) - \\mu$ für $n = 4$ und $\\mu = 5$ an.",
+    "answer": -1.0,
+    "tolerance": 0.001,
+    "unit": "",
+    "explanation": "$E(g_2) = \\frac{n}{n+1}\\mu$. Für $n=4$, $\\mu=5$: $E(g_2) = \\frac{4}{5} \\cdot 5 = 4$. $Bias = 4 - 5 = -1{,}0$. Der Schätzer ist negativ verzerrt."
+  },
+  {
+    "kind": "mc",
+    "id": "punktschaetzung-zq6",
+    "topicId": "punktschaetzung",
+    "difficulty": "schwer",
+    "prompt": "Zwei Schätzer $\\hat{\\theta}_1$ und $\\hat{\\theta}_2$ sind beide erwartungstreu für $\\theta$. Welches Kriterium entscheidet dann über die Effizienz?",
+    "options": [
+      "Der Schätzer mit der kleineren Varianz ist effizienter: $Var(\\hat{\\theta}_1) < Var(\\hat{\\theta}_2) \\Rightarrow \\hat{\\theta}_1$ effizienter.",
+      "Der Schätzer mit dem kleineren MSE ist effizienter, unabhängig vom Bias.",
+      "Der Schätzer mit dem größeren Stichprobenumfang ist effizienter.",
+      "Effizienz ist nur für nicht-erwartungstreue Schätzer definiert."
+    ],
+    "correct": [0],
+    "explanation": "Bei zwei erwartungstreuen Schätzern gilt $MSE = Var$ (da $Bias = 0$). Der effizientere Schätzer ist derjenige mit der kleineren Varianz. Das Stichprobenmittel $\\bar{X}$ ist z.B. der effizienteste Schätzer für $\\mu$."
+  },
+  {
+    "kind": "mc",
+    "id": "intervallschaetzung-konfidenzintervalle-zq1",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "difficulty": "leicht",
+    "prompt": "Das 95%-Konfidenzintervall für $\\mu$ bei bekannter Varianz $\\sigma^2$ und normalverteilter Grundgesamtheit lautet:",
+    "options": [
+      "$\\left[\\bar{X} - \\frac{1{,}96\\, \\sigma}{\\sqrt{n}}\\;\\;,\\;\\; \\bar{X} + \\frac{1{,}96\\, \\sigma}{\\sqrt{n}}\\right]$",
+      "$\\left[\\bar{X} - \\frac{1{,}645\\, \\sigma}{\\sqrt{n}}\\;\\;,\\;\\; \\bar{X} + \\frac{1{,}645\\, \\sigma}{\\sqrt{n}}\\right]$",
+      "$\\left[\\bar{X} - \\frac{1{,}96\\, \\hat{\\sigma}}{n}\\;\\;,\\;\\; \\bar{X} + \\frac{1{,}96\\, \\hat{\\sigma}}{n}\\right]$",
+      "$\\left[\\bar{X} - \\frac{\\sigma}{n}\\;\\;,\\;\\; \\bar{X} + \\frac{\\sigma}{n}\\right]$"
+    ],
+    "correct": [0],
+    "explanation": "Für $\\alpha = 0{,}05$ ist $z_{1-\\alpha/2} = z_{0{,}975} = 1{,}96$. Das KI lautet $\\bar{X} \\pm \\frac{1{,}96\\,\\sigma}{\\sqrt{n}}$. Die Intervalllänge ist $L = \\frac{2 \\cdot 1{,}96 \\cdot \\sigma}{\\sqrt{n}}$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "intervallschaetzung-konfidenzintervalle-zq2",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "difficulty": "leicht",
+    "prompt": "Bei unbekannter Varianz und normalverteilter Grundgesamtheit wird für das KI von $\\mu$ die $t$-Verteilung mit $n-1$ Freiheitsgraden verwendet.",
+    "answer": true,
+    "explanation": "Da $\\sigma$ unbekannt ist, wird $\\hat{\\sigma}$ geschätzt. Dann gilt $\\frac{\\sqrt{n}(\\bar{X}-\\mu)}{\\hat{\\sigma}} \\sim t_{n-1}$, und das KI verwendet das Quantil $t_{n-1,\\, 1-\\alpha/2}$ statt $z_{1-\\alpha/2}$."
+  },
+  {
+    "kind": "numeric",
+    "id": "intervallschaetzung-konfidenzintervalle-zq3",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "difficulty": "mittel",
+    "prompt": "Rohrlängen seien normalverteilt mit bekannter Varianz $\\sigma^2 = 2{,}25$ ($\\sigma = 1{,}5$). Bei $n = 9$ und $\\bar{x} = 10$ sowie $z_{0{,}975} = 1{,}96$ berechnen Sie die Halbbreite des 95%-KI (also $\\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}}$).",
+    "answer": 0.98,
+    "tolerance": 0.01,
+    "unit": "",
+    "explanation": "Halbbreite $= \\frac{1{,}96 \\cdot 1{,}5}{\\sqrt{9}} = \\frac{1{,}96 \\cdot 1{,}5}{3} = \\frac{2{,}94}{3} = 0{,}98$."
+  },
+  {
+    "kind": "mc",
+    "id": "intervallschaetzung-konfidenzintervalle-zq4",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "difficulty": "mittel",
+    "prompt": "Der Mindeststichprobenumfang für ein KI für den Anteil $p$ mit Genauigkeit $\\varepsilon$ (Halbbreite $\\le \\varepsilon$) beträgt im schlechtesten Fall:",
+    "options": [
+      "$n \\ge \\left(\\dfrac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$",
+      "$n \\ge \\left(\\dfrac{z_{1-\\alpha/2}}{\\varepsilon}\\right)^2$",
+      "$n \\ge \\dfrac{z_{1-\\alpha/2}}{4\\varepsilon^2}$",
+      "$n \\ge \\dfrac{4}{z_{1-\\alpha/2}\\,\\varepsilon}$"
+    ],
+    "correct": [0],
+    "explanation": "Da $\\hat{\\sigma}^2 = \\hat{p}(1-\\hat{p}) \\le \\frac{1}{4}$ (Maximum bei $p=0{,}5$), ergibt sich im Worst Case: $n \\ge \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "intervallschaetzung-konfidenzintervalle-zq5",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "difficulty": "mittel",
+    "prompt": "Ein konkretes 95%-Konfidenzintervall, das aus einer realisierten Stichprobe berechnet wurde, enthält den wahren Parameter $\\mu$ mit Wahrscheinlichkeit 0,95.",
+    "answer": false,
+    "explanation": "Das realisierte KI ist eine feste Menge von Zahlen — es enthält $\\mu$ entweder oder nicht. Die Aussage '95% Wahrscheinlichkeit' bezieht sich auf das Verfahren: von vielen wiederholten Stichproben enthalten 95% der so berechneten Intervalle $\\mu$."
+  },
+  {
+    "kind": "numeric",
+    "id": "intervallschaetzung-konfidenzintervalle-zq6",
+    "topicId": "intervallschaetzung-konfidenzintervalle",
+    "difficulty": "schwer",
+    "prompt": "Bei einer Umfrage zum Wähleranteil einer Partei soll der geschätzte Anteil um höchstens $\\varepsilon = 0{,}01$ vom wahren Wert abweichen (Niveau $1 - \\alpha = 0{,}95$, $z_{0{,}975} = 1{,}96$). Berechnen Sie den Mindeststichprobenumfang.",
+    "answer": 9604.0,
+    "tolerance": 1.0,
+    "unit": "",
+    "explanation": "$n \\ge \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2 = \\left(\\frac{1{,}96}{2 \\cdot 0{,}01}\\right)^2 = \\left(\\frac{1{,}96}{0{,}02}\\right)^2 = 98^2 = 9604$."
+  },
+  {
+    "kind": "mc",
+    "id": "statistische-signifikanztests-zq1",
+    "topicId": "statistische-signifikanztests",
+    "difficulty": "leicht",
+    "prompt": "Ein Fehler 1. Art liegt vor, wenn:",
+    "options": [
+      "Die Nullhypothese $H_0$ abgelehnt wird, obwohl sie wahr ist.",
+      "Die Nullhypothese $H_0$ nicht abgelehnt wird, obwohl $H_1$ wahr ist.",
+      "Der p-Wert kleiner als $\\alpha$ ist.",
+      "Die Prüfgröße $T$ im Annahmebereich liegt."
+    ],
+    "correct": [0],
+    "explanation": "Fehler 1. Art: $H_0$ ablehnen, obwohl $H_0$ wahr ist. Die Wahrscheinlichkeit dafür ist das Signifikanzniveau $\\alpha$. Fehler 2. Art ist das Gegenteil: $H_0$ nicht ablehnen, obwohl $H_1$ wahr ist."
+  },
+  {
+    "kind": "truefalse",
+    "id": "statistische-signifikanztests-zq2",
+    "topicId": "statistische-signifikanztests",
+    "difficulty": "leicht",
+    "prompt": "Beim zweiseitigen Gauß-Test ($H_0: \\mu = \\mu_0$) wird $H_0$ abgelehnt, wenn die Prüfgröße $Z = \\frac{\\bar{X} - \\mu_0}{\\sigma}\\sqrt{n}$ dem Betrag nach größer als $z_{1-\\alpha/2}$ ist.",
+    "answer": true,
+    "explanation": "Beim zweiseitigen Test lautet der Ablehnbereich $B = (-\\infty, -z_{1-\\alpha/2}) \\cup (z_{1-\\alpha/2}, \\infty)$, also wird $H_0$ abgelehnt, wenn $|Z| > z_{1-\\alpha/2}$."
+  },
+  {
+    "kind": "numeric",
+    "id": "statistische-signifikanztests-zq3",
+    "topicId": "statistische-signifikanztests",
+    "difficulty": "mittel",
+    "prompt": "Beim Anteilstest lautet die Prüfgröße $T = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}}\\sqrt{n}$. Bei $n = 100$ Befragten, 45 Zufriedenen ($\\hat{p} = 0{,}45$) und $H_0: p \\ge 0{,}5$ ($p_0 = 0{,}5$): Berechnen Sie den Wert der Prüfgröße $T$.",
+    "answer": -1.0,
+    "tolerance": 0.01,
+    "unit": "",
+    "explanation": "$T = \\frac{0{,}45 - 0{,}5}{\\sqrt{0{,}5 \\cdot 0{,}5}} \\cdot \\sqrt{100} = \\frac{-0{,}05}{0{,}5} \\cdot 10 = -0{,}1 \\cdot 10 = -1{,}0$."
+  },
+  {
+    "kind": "mc",
+    "id": "statistische-signifikanztests-zq4",
+    "topicId": "statistische-signifikanztests",
+    "difficulty": "mittel",
+    "prompt": "Beim Chi-Quadrat-Anpassungstest mit $K$ Klassen und $m$ geschätzten Parametern hat die Teststatistik unter $H_0$ asymptotisch eine $\\chi^2$-Verteilung mit wie vielen Freiheitsgraden?",
+    "options": [
+      "$\\nu = K - m - 1$",
+      "$\\nu = K - 1$",
+      "$\\nu = K - m$",
+      "$\\nu = (K-1)(m-1)$"
+    ],
+    "correct": [0],
+    "explanation": "Die Freiheitsgrade beim Chi-Quadrat-Anpassungstest sind $\\nu = K - m - 1$, wobei $K$ die Anzahl der Klassen und $m$ die Anzahl der aus den Daten geschätzten Parameter ist. Werden keine Parameter geschätzt ($m=0$), gilt $\\nu = K-1$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "statistische-signifikanztests-zq5",
+    "topicId": "statistische-signifikanztests",
+    "difficulty": "mittel",
+    "prompt": "Beim Chi-Quadrat-Unabhängigkeitstest für eine $J \\times L$-Kontingenztafel berechnet sich die erwartete Häufigkeit in Zelle $(j,l)$ als $\\tilde{n}_{jl} = \\frac{n_{j\\cdot} \\cdot n_{\\cdot l}}{n}$.",
+    "answer": true,
+    "explanation": "Unter Unabhängigkeit gilt $P(X=j, Y=l) = P(X=j) \\cdot P(Y=l)$. Die erwartete Häufigkeit ist daher $\\tilde{n}_{jl} = n \\cdot \\hat{P}(X=j) \\cdot \\hat{P}(Y=l) = n \\cdot \\frac{n_{j\\cdot}}{n} \\cdot \\frac{n_{\\cdot l}}{n} = \\frac{n_{j\\cdot}\\,n_{\\cdot l}}{n}$."
+  },
+  {
+    "kind": "mc",
+    "id": "statistische-signifikanztests-zq6",
+    "topicId": "statistische-signifikanztests",
+    "difficulty": "schwer",
+    "prompt": "Für den Test auf Korrelation $H_0: \\rho = 0$ bei $n = 12$ Beobachtungen und Stichprobenkorrelation $r$ lautet die Prüfgröße:",
+    "options": [
+      "$T = \\dfrac{r}{\\sqrt{1 - r^2}} \\sqrt{n-2} \\sim t_{n-2}$",
+      "$T = r \\cdot \\sqrt{n-2} \\sim t_{n-2}$",
+      "$T = \\dfrac{r}{\\sqrt{1 - r^2}} \\sqrt{n-1} \\sim t_{n-1}$",
+      "$T = r^2 \\cdot (n-2) \\sim \\chi^2_{n-2}$"
+    ],
+    "correct": [0],
+    "explanation": "Die Prüfgröße für $H_0: \\rho = 0$ ist $T = \\frac{r_{XY}}{\\sqrt{1 - r_{XY}^2}}\\sqrt{n-2} \\sim t_{n-2}$. Für $n=12$ gilt $t_{10}$ als Vergleichsverteilung."
+  },
+  {
+    "kind": "mc",
+    "id": "lineare-regression-zq1",
+    "topicId": "lineare-regression",
+    "difficulty": "leicht",
+    "prompt": "Der KQ-Schätzer für die Steigung $b$ der einfachen linearen Regression lautet:",
+    "options": [
+      "$\\hat{b} = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}$",
+      "$\\hat{b} = \\dfrac{\\sum x_i y_i}{\\sum x_i^2}$",
+      "$\\hat{b} = \\bar{y} - \\hat{a}\\bar{x}$",
+      "$\\hat{b} = \\dfrac{\\sum(y_i - \\bar{y})^2}{\\sum(x_i - \\bar{x})^2}$"
+    ],
+    "correct": [0],
+    "explanation": "Der KQ-Schätzer für $b$ minimiert $\\sum (y_i - a - bx_i)^2$ und ergibt $\\hat{b} = \\frac{s_{xy}}{s_x^2} = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sum(x_i-\\bar{x})^2}$. Der Achsenabschnitt folgt aus $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x}$."
+  },
+  {
+    "kind": "truefalse",
+    "id": "lineare-regression-zq2",
+    "topicId": "lineare-regression",
+    "difficulty": "leicht",
+    "prompt": "Die Regressionsgerade $\\hat{y} = \\hat{a} + \\hat{b}x$ verläuft stets durch den Schwerpunkt $(\\bar{x}, \\bar{y})$ der Daten.",
+    "answer": true,
+    "explanation": "Da $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x}$ gilt, folgt für $x = \\bar{x}$: $\\hat{y} = (\\bar{y} - \\hat{b}\\bar{x}) + \\hat{b}\\bar{x} = \\bar{y}$. Die Gerade geht also durch $( \\bar{x}, \\bar{y})$."
+  },
+  {
+    "kind": "numeric",
+    "id": "lineare-regression-zq3",
+    "topicId": "lineare-regression",
+    "difficulty": "mittel",
+    "prompt": "Gegeben: $n = 42$, $\\sum x_i = 252$, $\\sum y_i = 210$, $\\sum(x_i-\\bar{x})(y_i-\\bar{y}) = 30$, $\\sum(x_i-\\bar{x})^2 = 100$. Berechnen Sie den KQ-Schätzer $\\hat{b}$.",
+    "answer": 0.3,
+    "tolerance": 0.001,
+    "unit": "",
+    "explanation": "$\\hat{b} = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\frac{30}{100} = 0{,}3$."
+  },
+  {
+    "kind": "mc",
+    "id": "lineare-regression-zq4",
+    "topicId": "lineare-regression",
+    "difficulty": "mittel",
+    "prompt": "Das Bestimmtheitsmaß $R^2$ der einfachen linearen Regression kann interpretiert werden als:",
+    "options": [
+      "Anteil der durch die Regression erklärten Varianz an der Gesamtvarianz von $y$: $R^2 = \\frac{s_{\\hat{y}}^2}{s_y^2}$",
+      "Quadrat des Standardfehlers der Residuen",
+      "Anzahl der statistisch signifikanten Koeffizienten geteilt durch $n$",
+      "Wahrscheinlichkeit, dass das Modell korrekt ist"
+    ],
+    "correct": [0],
+    "explanation": "$R^2 = r_{xy}^2 = \\frac{s_{\\hat{y}}^2}{s_y^2} = 1 - \\frac{s_{\\hat{u}}^2}{s_y^2} \\in [0,1]$. Ein $R^2 = 1$ bedeutet perfekte Anpassung, $R^2 = 0$ bedeutet, dass die Regression nichts erklärt."
+  },
+  {
+    "kind": "truefalse",
+    "id": "lineare-regression-zq5",
+    "topicId": "lineare-regression",
+    "difficulty": "mittel",
+    "prompt": "Der erwartungstreue Schätzer für die Störtermvarianz $\\sigma^2$ im linearen Regressionsmodell teilt die Residuenquadratsumme durch $n-2$ (nicht $n$).",
+    "answer": true,
+    "explanation": "Da im Regressionsmodell zwei Parameter ($a$ und $b$) geschätzt werden, sind nur $n-2$ Freiheitsgrade für die Residuen übrig: $\\hat{\\sigma}^2 = \\frac{1}{n-2}\\sum_{i=1}^n \\hat{u}_i^2$, und es gilt $E(\\hat{\\sigma}^2) = \\sigma^2$."
+  },
+  {
+    "kind": "numeric",
+    "id": "lineare-regression-zq6",
+    "topicId": "lineare-regression",
+    "difficulty": "schwer",
+    "prompt": "Gegeben: $n = 42$, $\\bar{x} = 6$, $\\bar{y} = 5$, $\\hat{b} = 0{,}3$. Berechnen Sie den KQ-Schätzer $\\hat{a}$ für den Achsenabschnitt.",
+    "answer": 3.2,
+    "tolerance": 0.001,
+    "unit": "",
+    "explanation": "$\\bar{x} = \\frac{252}{42} = 6$, $\\bar{y} = \\frac{210}{42} = 5$. $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x} = 5 - 0{,}3 \\cdot 6 = 5 - 1{,}8 = 3{,}2$."
+  },
+  {
+    "kind": "mc",
+    "id": "r-programmierung-begleituebung-zq1",
+    "topicId": "r-programmierung-begleituebung",
+    "difficulty": "leicht",
+    "prompt": "Welcher R-Befehl berechnet die Wahrscheinlichkeit $P(X = k)$ für eine Binomialverteilung $X \\sim B(n, p)$?",
+    "options": [
+      "`dbinom(k, size = n, prob = p)`",
+      "`pbinom(k, size = n, prob = p)`",
+      "`qbinom(p, size = n, prob = k)`",
+      "`rbinom(k, size = n, prob = p)`"
+    ],
+    "correct": [0],
+    "explanation": "`dbinom(k, size=n, prob=p)` berechnet die Wahrscheinlichkeitsfunktion $f(k) = P(X=k)$. `pbinom` liefert die kumulative Verteilungsfunktion $F(k) = P(X \\le k)$, `qbinom` das Quantil und `rbinom` Zufallszahlen."
+  },
+  {
+    "kind": "truefalse",
+    "id": "r-programmierung-begleituebung-zq2",
+    "topicId": "r-programmierung-begleituebung",
+    "difficulty": "leicht",
+    "prompt": "In R berechnet `var(x)` die Stichprobenvarianz mit Nenner $n-1$, nicht die Populationsvarianz mit Nenner $n$.",
+    "answer": true,
+    "explanation": "Die R-Funktion `var(x)` verwendet den Divisor $n-1$ (erwartungstreue Stichprobenvarianz). Um die Populationsvarianz mit Divisor $n$ zu erhalten, muss man `var(x) * (n-1)/n` rechnen, also $\\hat{\\sigma}^2_{pop} = \\frac{n-1}{n}\\hat{\\sigma}^2$."
+  },
+  {
+    "kind": "mc",
+    "id": "r-programmierung-begleituebung-zq3",
+    "topicId": "r-programmierung-begleituebung",
+    "difficulty": "mittel",
+    "prompt": "Mit welchem R-Befehl wird ein einfaches lineares Regressionsmodell $y = a + bx$ geschätzt?",
+    "options": [
+      "`lm(y ~ x)`",
+      "`glm(y ~ x, family = 'linear')`",
+      "`reg(y, x)`",
+      "`ols(y ~ x)`"
+    ],
+    "correct": [0],
+    "explanation": "`lm(y ~ x)` schätzt das lineare Modell per Kleinste-Quadrate-Methode. Das Ergebnis enthält Koeffizientenschätzungen, $R^2$, Standardfehler und $t$-Werte, die mit `summary()` ausgegeben werden."
+  },
+  {
+    "kind": "truefalse",
+    "id": "r-programmierung-begleituebung-zq4",
+    "topicId": "r-programmierung-begleituebung",
+    "difficulty": "mittel",
+    "prompt": "In R liefert `pnorm(1.96)` annähernd den Wert 0,975, was dem $(1-\\alpha/2)$-Quantil der Standardnormalverteilung für $\\alpha = 0{,}05$ entspricht.",
+    "answer": true,
+    "explanation": "`pnorm(1.96)` berechnet $\\Phi(1{,}96) \\approx 0{,}975$, das obere 97,5%-Quantil. Umgekehrt liefert `qnorm(0.975)` den Wert $z_{0{,}975} \\approx 1{,}96$, der für das 95%-KI verwendet wird."
+  },
+  {
+    "kind": "mc",
+    "id": "r-programmierung-begleituebung-zq5",
+    "topicId": "r-programmierung-begleituebung",
+    "difficulty": "mittel",
+    "prompt": "Welche R-Funktion führt einen t-Test auf den Mittelwert durch?",
+    "options": [
+      "`t.test(x, mu = mu0, alternative = 'two.sided')`",
+      "`ttest(x, mu = mu0)`",
+      "`wilcox.test(x, mu = mu0)`",
+      "`chisq.test(x, mu = mu0)`"
+    ],
+    "correct": [0],
+    "explanation": "`t.test(x, mu = mu0, alternative = 'two.sided')` führt den zweiseitigen Einstichproben-t-Test durch. Das Argument `alternative` kann auch `'less'` oder `'greater'` sein (einseitige Tests)."
+  },
+  {
+    "kind": "truefalse",
+    "id": "r-programmierung-begleituebung-zq6",
+    "topicId": "r-programmierung-begleituebung",
+    "difficulty": "schwer",
+    "prompt": "In R gibt `qt(0.975, df = 10)` das 97,5%-Quantil der $t$-Verteilung mit 10 Freiheitsgraden zurück, das für das 95%-KI bei $n = 11$ benötigt wird.",
+    "answer": true,
+    "explanation": "Bei $n = 11$ Beobachtungen und unbekannter Varianz hat die Pivotgröße eine $t_{n-1} = t_{10}$-Verteilung. Das benötigte Quantil ist $t_{10,\\, 0{,}975}$, berechnet in R mit `qt(0.975, df=10)` $\\approx 2{,}228$."
+  }
+]

@@ -41,12 +41,28 @@
           "title": "Optimalwertfunktion M(a) und lineare Näherung",
           "caption": "M(a) = a²/4 ist die Optimalwertfunktion zu max_x (ax - x²). Am Punkt a=2 gilt M(2)=1 und M'(2)=1.",
           "functions": [
-            { "fn": "x*x/4", "label": "M(a) = a²/4 (Optimalwert)", "color": "blue" },
-            { "fn": "x/2 - 0", "label": "Tangente bei a=2: M(2)+M'(2)·(a-2)", "color": "red", "dashed": true }
+            {
+              "fn": "x*x/4",
+              "label": "M(a) = a²/4 (Optimalwert)",
+              "color": "blue"
+            },
+            {
+              "fn": "x/2 - 0",
+              "label": "Tangente bei a=2: M(2)+M'(2)·(a-2)",
+              "color": "red",
+              "dashed": true
+            }
           ],
-          "domain": [0, 4],
+          "domain": [
+            0,
+            4
+          ],
           "points": [
-            { "x": 2, "y": 1, "label": "M(2) = 1" }
+            {
+              "x": 2,
+              "y": 1,
+              "label": "M(2) = 1"
+            }
           ]
         }
       ]
@@ -91,13 +107,33 @@
           "title": "Optimalwert M(m) = m²/8 bei Nutzenmaximierung",
           "caption": "M(m) = m²/8. Bei m=12 ist M=18, Steigung λ*=3. Tangente zeigt Näherung für m=13.",
           "functions": [
-            { "fn": "x*x/8", "label": "M(m) = m²/8 (Optimalnutzen)", "color": "blue" },
-            { "fn": "3*(x-12)+18", "label": "Tangente bei m=12 (Näherung)", "color": "red", "dashed": true }
+            {
+              "fn": "x*x/8",
+              "label": "M(m) = m²/8 (Optimalnutzen)",
+              "color": "blue"
+            },
+            {
+              "fn": "3*(x-12)+18",
+              "label": "Tangente bei m=12 (Näherung)",
+              "color": "red",
+              "dashed": true
+            }
           ],
-          "domain": [0, 16],
+          "domain": [
+            0,
+            16
+          ],
           "points": [
-            { "x": 12, "y": 18, "label": "M(12)=18, λ*=3" },
-            { "x": 13, "y": 21.125, "label": "M(13)=21,125" }
+            {
+              "x": 12,
+              "y": 18,
+              "label": "M(12)=18, λ*=3"
+            },
+            {
+              "x": 13,
+              "y": 21.125,
+              "label": "M(13)=21,125"
+            }
           ]
         }
       ]
@@ -159,6 +195,96 @@
       "topicId": "umhuellendensatz",
       "front": "Bei zwei NB mit $\\lambda_1^*, \\lambda_2^*$: Wie ändern sich $c_1$ bzw. $c_2$ den Optimalwert?",
       "back": "$\\frac{\\partial M}{\\partial c_1} = \\lambda_1^*$ und $\\frac{\\partial M}{\\partial c_2} = \\lambda_2^*$. Bei simultaner Änderung: $\\Delta M \\approx \\lambda_1^* \\Delta c_1 + \\lambda_2^* \\Delta c_2$."
+    },
+    {
+      "id": "umhuellendensatz-z1",
+      "topicId": "umhuellendensatz",
+      "front": "Was ist die Optimalwertfunktion $M(a)$?",
+      "back": "$M(a) = f(x^*(a), a)$ — der maximale Zielfunktionswert in Abhängigkeit vom Parameter $a$."
+    },
+    {
+      "id": "umhuellendensatz-z2",
+      "topicId": "umhuellendensatz",
+      "front": "Wie lautet der Umhüllendensatz (Satz 4, ohne Nebenbedingungen)?",
+      "back": "$\\frac{dM}{da}(a) = \\frac{\\partial f}{\\partial a}(x^*(a), a)$ — nur direkte partielle Ableitung nach $a$; der Term über $\\frac{dx^*}{da}$ verschwindet (FOC!)."
+    },
+    {
+      "id": "umhuellendensatz-z3",
+      "topicId": "umhuellendensatz",
+      "front": "Warum verschwindet der Term $\\operatorname{grad}_x f \\cdot \\frac{dx^*}{da}$?",
+      "back": "Weil $x^*(a)$ ein stationärer Punkt ist: $\\operatorname{grad}_x f(x^*(a), a) = \\vec{0}$ (notwendige Bedingung für das innere Maximum)."
+    },
+    {
+      "id": "umhuellendensatz-z4",
+      "topicId": "umhuellendensatz",
+      "front": "Wie nutzt man den Umhüllendensatz zur Näherungsberechnung?",
+      "back": "$M(a + \\Delta a) \\approx M(a) + \\frac{dM}{da}(a) \\cdot \\Delta a$ — lineare Approximation des Optimalwerts."
+    },
+    {
+      "id": "umhuellendensatz-z5",
+      "topicId": "umhuellendensatz",
+      "front": "Zusammenhang Umhüllendensatz und Lagrange-Multiplikator?",
+      "back": "Bei einer Nebenbedingung $h(x) = a$ gilt: $\\frac{dM}{da} = \\lambda^*$ — der Multiplikator ist die Ableitung des Optimalwerts nach der Schranke."
+    },
+    {
+      "id": "umhuellendensatz-z6",
+      "topicId": "umhuellendensatz",
+      "front": "Was ist die Umhüllende einer Schar von Kurven?",
+      "back": "Die Kurve $M(a)$, die jede Kurve $f(x, a)$ tangential berührt — das Supremum (oder Infimum) der Schar als Funktion von $a$."
+    },
+    {
+      "id": "umhuellendensatz-z7",
+      "topicId": "umhuellendensatz",
+      "front": "Auf was wird der Umhüllendensatz in der Klausur typischerweise angewendet?",
+      "back": "Meistens als Teilaufgabe 1b: \"Berechnen Sie näherungsweise, wie sich der Optimalwert ändert, wenn die Nebenbedingung von $c$ auf $c + \\Delta c$ geändert wird.\""
+    },
+    {
+      "id": "umhuellendensatz-z8",
+      "topicId": "umhuellendensatz",
+      "front": "Näherung bei NB-Änderung: Formel?",
+      "back": "$\\Delta M \\approx \\lambda^* \\cdot \\Delta a$ — bei kleiner Änderung $\\Delta a$ der Schranke."
+    },
+    {
+      "id": "umhuellendensatz-z9",
+      "topicId": "umhuellendensatz",
+      "front": "Was besagt der Umhüllendensatz bei Änderung der Zielfunktion (statt NB)?",
+      "back": "Wenn $f$ von einem Parameter $a$ abhängt: $\\frac{dM}{da} = \\frac{\\partial f}{\\partial a}(x^*(a), a)$ — nur direkter Einfluss zählt."
+    },
+    {
+      "id": "umhuellendensatz-z10",
+      "topicId": "umhuellendensatz",
+      "front": "Typischer Fehler beim Umhüllendensatz?",
+      "back": "Den Term $\\operatorname{grad}_x f \\cdot \\frac{dx^*}{da}$ nicht weglassen und unnötig berechnen — er ist immer Null im Optimum."
+    },
+    {
+      "id": "umhuellendensatz-z11",
+      "topicId": "umhuellendensatz",
+      "front": "Ist $M(a)$ immer differenzierbar?",
+      "back": "Unter den Voraussetzungen des Satzes (stetig diff. $f$, regulärer Optimalpunkt) ja — lokal in $a$."
+    },
+    {
+      "id": "umhuellendensatz-z12",
+      "topicId": "umhuellendensatz",
+      "front": "Wie lautet die vollständige Ableitung $\\frac{dM}{da}$ via Kettenregel (vor Vereinfachung)?",
+      "back": "$\\frac{dM}{da} = \\underbrace{\\operatorname{grad}_x f \\cdot \\frac{dx^*}{da}}_{= 0 \\text{ (FOC)}} + \\frac{\\partial f}{\\partial a} = \\frac{\\partial f}{\\partial a}$"
+    },
+    {
+      "id": "umhuellendensatz-z13",
+      "topicId": "umhuellendensatz",
+      "front": "Was ist die intuitive Bedeutung der Umhüllenden?",
+      "back": "Bei Variation des Parameters $a$ verschiebt sich das Optimum — die Kurve $M(a)$ ist die Umhüllende der parametrischen Funktionsschar und gibt immer den besten erreichbaren Wert an."
+    },
+    {
+      "id": "umhuellendensatz-z14",
+      "topicId": "umhuellendensatz",
+      "front": "Wie hängen Umhüllendensatz und Sensitivitätsanalyse zusammen?",
+      "back": "Der Satz erlaubt Sensitivitätsanalyse ohne Neuberechnung des Optimums: $\\Delta M \\approx \\frac{\\partial f}{\\partial a}(x^*(a), a) \\cdot \\Delta a$."
+    },
+    {
+      "id": "umhuellendensatz-z15",
+      "topicId": "umhuellendensatz",
+      "front": "Für welchen Parametertyp gilt Satz 4 des Umhüllendensatzes?",
+      "back": "Für beliebige Parameter $a$, die in der Zielfunktion oder Nebenbedingung erscheinen. Ohne Nebenbedingungen tritt nur $\\frac{\\partial f}{\\partial a}$ auf."
     }
   ],
   "quiz": [
@@ -174,7 +300,9 @@
         "Den Lagrange-Multiplikator als Funktion von $a$",
         "Die Nebenbedingung als Funktion von $a$"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "$M(a) = f(x^*(a), a)$ ist der optimale Zielfunktionswert – nicht die optimale Stelle selbst."
     },
     {
@@ -198,7 +326,9 @@
         "Er steigt um 4",
         "Er bleibt unverändert"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "$\\Delta M \\approx \\lambda^* \\cdot \\Delta c = 4 \\cdot 0{,}5 = 2$. Der Optimalwert steigt um 2."
     },
     {
@@ -253,7 +383,9 @@
         "Der Satz liefert den exakten, nicht nur näherungsweisen Wert von $M(a+\\Delta a)$.",
         "Bei mehreren Nebenbedingungen gilt $\\partial M / \\partial c_i = \\lambda_i^*$ für jede Schranke $c_i$."
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Aussage C ist falsch. $\\Delta M \\approx \\lambda^* \\Delta c$ ist nur eine lineare Näherung (Tangente an $M$). Der exakte neue Optimalwert kann abweichen – besonders bei großen $\\Delta c$."
     },
     {
@@ -273,7 +405,13 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten: Warum liefert der Umhüllendensatz die Ableitung von $M(a)$ ohne explizite Kenntnis von $\\vec{x}^*(a)$ als Funktion von $a$?",
       "sampleAnswer": "Beim Differenzieren von $M(a)=f(\\vec{x}^*(a),a)$ nach der Kettenregel entstehen zwei Terme: einer über die Änderung von $\\vec{x}^*$ und einer direkt nach $a$. Der erste Term ist das Skalarprodukt von $\\nabla_{\\vec{x}} f$ und $d\\vec{x}^*/da$. Im Optimum gilt aber $\\nabla_{\\vec{x}} L = \\nabla_{\\vec{x}} f - \\lambda \\nabla_{\\vec{x}} h = 0$, also $\\nabla_{\\vec{x}} f = 0$ (ohne NB) bzw. $\\nabla_{\\vec{x}} L = 0$ (mit NB). Damit verschwindet dieser erste Term, und es bleibt nur die direkte partielle Ableitung $\\partial L/\\partial a$ übrig.",
-      "keywords": ["kettenregel", "optimalitätsbedingung", "gradient", "verschwindet", "direkte"],
+      "keywords": [
+        "kettenregel",
+        "optimalitätsbedingung",
+        "gradient",
+        "verschwindet",
+        "direkte"
+      ],
       "explanation": "Der Schlüssel ist die Optimalitätsbedingung: Im Optimum ist $\\nabla_{\\vec{x}} L = 0$, wodurch der *Weg*-Term wegfällt."
     }
   ],

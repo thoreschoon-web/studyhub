@@ -24,14 +24,37 @@
           "title": "Folgenglieder a_n = 1/n und d_n (Rekursion)",
           "caption": "Beide Folgen nähern sich dem Wert 1 an – a_n von oben, d_n von unten.",
           "functions": [
-            { "fn": "1/x", "label": "a_n = 1/n", "color": "#e74c3c" },
-            { "fn": "1 - (5/3)*(1/3)^x", "label": "d_n (Näherung)", "color": "#2980b9", "dashed": true }
+            {
+              "fn": "1/x",
+              "label": "a_n = 1/n",
+              "color": "#e74c3c"
+            },
+            {
+              "fn": "1 - (5/3)*(1/3)^x",
+              "label": "d_n (Näherung)",
+              "color": "#2980b9",
+              "dashed": true
+            }
           ],
-          "domain": [1, 12],
-          "range": [-0.2, 1.3],
+          "domain": [
+            1,
+            12
+          ],
+          "range": [
+            -0.2,
+            1.3
+          ],
           "points": [
-            { "x": 1, "y": 1, "label": "a₁=1" },
-            { "x": 5, "y": 0.2, "label": "a₅=0,2" }
+            {
+              "x": 1,
+              "y": 1,
+              "label": "a₁=1"
+            },
+            {
+              "x": 5,
+              "y": 0.2,
+              "label": "a₅=0,2"
+            }
           ]
         }
       ]
@@ -71,14 +94,38 @@
           "title": "ε-Konvergenz: a_n = 1/n gegen Grenzwert 0",
           "caption": "Ab n=5 liegen alle Folgenglieder im Toleranzband ε=0,2 um den Grenzwert 0.",
           "functions": [
-            { "fn": "1/x", "label": "a_n = 1/n", "color": "#e74c3c" },
-            { "fn": "0.2", "label": "ε = 0,2", "color": "#27ae60", "dashed": true },
-            { "fn": "-0.2", "label": "−ε = −0,2", "color": "#27ae60", "dashed": true }
+            {
+              "fn": "1/x",
+              "label": "a_n = 1/n",
+              "color": "#e74c3c"
+            },
+            {
+              "fn": "0.2",
+              "label": "ε = 0,2",
+              "color": "#27ae60",
+              "dashed": true
+            },
+            {
+              "fn": "-0.2",
+              "label": "−ε = −0,2",
+              "color": "#27ae60",
+              "dashed": true
+            }
           ],
-          "domain": [1, 15],
-          "range": [-0.4, 1.2],
+          "domain": [
+            1,
+            15
+          ],
+          "range": [
+            -0.4,
+            1.2
+          ],
           "points": [
-            { "x": 5, "y": 0.2, "label": "n(ε)=5" }
+            {
+              "x": 5,
+              "y": 0.2,
+              "label": "n(ε)=5"
+            }
           ]
         }
       ]
@@ -156,6 +203,150 @@
       "topicId": "folgen",
       "front": "Wie berechnet man $\\lim_{n\\to\\infty}\\frac{3n^2 + 5}{2n^2 - n}$?",
       "back": "Höchste Potenz $n^2$ ausklammern:\n$$\\frac{n^2(3+5/n^2)}{n^2(2-1/n)} \\to \\frac{3}{2}$$\nFaustregel: gleicher Grad → Quotient der Leitkoeffizienten."
+    },
+    {
+      "id": "folgen-z1",
+      "topicId": "folgen",
+      "front": "Was ist eine reelle Folge?",
+      "back": "Eine Abbildung $\\mathbb{N} \\to \\mathbb{R}$, $n \\mapsto a_n$. Schreibweise: $\\{a_n\\}_{n \\in \\mathbb{N}}$ oder $(a_n)_{n \\in \\mathbb{N}}$."
+    },
+    {
+      "id": "folgen-z2",
+      "topicId": "folgen",
+      "front": "Wie lautet das allgemeine Glied einer geometrischen Folge?",
+      "back": "$a_n = a_1 \\cdot q^{n-1}$, wobei $a_1$ der Anfangswert und $q$ der Quotient ist."
+    },
+    {
+      "id": "folgen-z3",
+      "topicId": "folgen",
+      "front": "Wie lautet die $\\varepsilon$-Definition der Konvergenz?",
+      "back": "$\\lim_{n \\to \\infty} a_n = a \\iff \\forall \\varepsilon > 0 \\; \\exists n(\\varepsilon) : |a_n - a| \\leq \\varepsilon \\; \\forall n \\geq n(\\varepsilon)$."
+    },
+    {
+      "id": "folgen-z4",
+      "topicId": "folgen",
+      "front": "Was bedeutet monoton wachsend / fallend?",
+      "back": "Monoton wachsend: $a_n \\leq a_{n+1}$ für alle $n$. Streng monoton wachsend: $a_n < a_{n+1}$."
+    },
+    {
+      "id": "folgen-z5",
+      "topicId": "folgen",
+      "front": "Was ist eine nach oben beschränkte Folge?",
+      "back": "Es existiert ein $S \\in \\mathbb{R}$ mit $a_n \\leq S$ für alle $n$. $S$ heißt obere Schranke; die kleinste heißt Supremum."
+    },
+    {
+      "id": "folgen-z6",
+      "topicId": "folgen",
+      "front": "Wie lautet die Partialsummenformel der geometrischen Folge?",
+      "back": "$s_n = \\sum_{k=1}^{n} a_1 q^{k-1} = a_1 \\frac{1 - q^n}{1 - q}$ (für $q \\neq 1$)."
+    },
+    {
+      "id": "folgen-z7",
+      "topicId": "folgen",
+      "front": "Wann konvergiert $q^n$ gegen Null?",
+      "back": "Genau dann, wenn $|q| < 1$."
+    },
+    {
+      "id": "folgen-z8",
+      "topicId": "folgen",
+      "front": "Wie lautet der Grenzwert $\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n$?",
+      "back": "$e \\approx 2{,}71828\\dots$ (Euler-Zahl)."
+    },
+    {
+      "id": "folgen-z9",
+      "topicId": "folgen",
+      "front": "Wie lautet die Gaußsche Summenformel?",
+      "back": "$\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}$"
+    },
+    {
+      "id": "folgen-z10",
+      "topicId": "folgen",
+      "front": "Was ist ein Häufungspunkt einer Folge?",
+      "back": "Ein $h \\in \\mathbb{R}$, in dessen jeder $\\varepsilon$-Umgebung unendlich viele Folgenglieder liegen. Jeder Grenzwert ist Häufungspunkt, aber nicht umgekehrt."
+    },
+    {
+      "id": "folgen-z11",
+      "topicId": "folgen",
+      "front": "Wie berechnet man $\\lim_{n\\to\\infty} \\frac{3n^4 + n^2}{2n^4 + 5n^3}$?",
+      "back": "Höchste Potenz ausklammern: $\\frac{n^4(3 + 1/n^2)}{n^4(2 + 5/n)} \\to \\frac{3}{2}$."
+    },
+    {
+      "id": "folgen-z12",
+      "topicId": "folgen",
+      "front": "Wie lautet die Verzinsungsformel mit monatlicher Verzinsung?",
+      "back": "$A_t = A_0 \\left(1 + \\frac{r}{12}\\right)^{12t}$, wobei $r$ der Jahreszinssatz ist."
+    },
+    {
+      "id": "folgen-z13",
+      "topicId": "folgen",
+      "front": "Was ist der Grenzwert $\\lim_{n\\to\\infty} \\left(1 + \\frac{r}{n}\\right)^n$?",
+      "back": "$e^r$ — die Basis der stetigen (kontinuierlichen) Verzinsung."
+    },
+    {
+      "id": "folgen-z14",
+      "topicId": "folgen",
+      "front": "Wie konvergiert $\\sqrt{n+1} - \\sqrt{n}$?",
+      "back": "Gegen $0$. Beweis: Erweitern mit $\\sqrt{n+1} + \\sqrt{n}$: $\\frac{1}{\\sqrt{n+1} + \\sqrt{n}} \\to 0$."
+    },
+    {
+      "id": "folgen-z15",
+      "topicId": "folgen",
+      "front": "Kann eine Folge mehrere Grenzwerte haben?",
+      "back": "Nein. Der Grenzwert ist eindeutig. Aber eine Folge kann mehrere Häufungspunkte haben (z.B. alternierende Folge: $+1$ und $-1$)."
+    },
+    {
+      "id": "folgen-z16",
+      "topicId": "folgen",
+      "front": "Wie lautet die geometrische Reihe (unendlich)?",
+      "back": "$\\sum_{k=0}^{\\infty} a \\cdot q^k = \\frac{a}{1-q}$ für $|q| < 1$. Divergiert für $|q| \\geq 1$."
+    },
+    {
+      "id": "folgen-z17",
+      "topicId": "folgen",
+      "front": "Was ist die Fibonacci-Folge?",
+      "back": "$a_1 = 1, a_2 = 1$, $a_n = a_{n-1} + a_{n-2}$ für $n \\geq 3$. Beispiel: $1, 1, 2, 3, 5, 8, 13, \\dots$"
+    },
+    {
+      "id": "folgen-z18",
+      "topicId": "folgen",
+      "front": "Rechenregeln für Grenzwerte: Summe?",
+      "back": "$\\lim(a_n + b_n) = \\lim a_n + \\lim b_n = a + b$ (wenn beide Grenzwerte existieren)."
+    },
+    {
+      "id": "folgen-z19",
+      "topicId": "folgen",
+      "front": "Wann ist eine Folge divergent?",
+      "back": "Wenn sie keinen Grenzwert besitzt — etwa wenn sie gegen $\\pm\\infty$ geht oder zwischen mehreren Werten hin- und herspringt."
+    },
+    {
+      "id": "folgen-z20",
+      "topicId": "folgen",
+      "front": "Wie ist die Partialsumme $s_n$ definiert?",
+      "back": "$s_n = \\sum_{k=1}^{n} a_k = a_1 + a_2 + \\dots + a_n$."
+    },
+    {
+      "id": "folgen-z21",
+      "topicId": "folgen",
+      "front": "Produktregel für Grenzwerte?",
+      "back": "$\\lim(a_n \\cdot b_n) = \\lim a_n \\cdot \\lim b_n = a \\cdot b$ (wenn beide Grenzwerte existieren)."
+    },
+    {
+      "id": "folgen-z22",
+      "topicId": "folgen",
+      "front": "Quotientenregel für Grenzwerte?",
+      "back": "$\\lim \\frac{a_n}{b_n} = \\frac{a}{b}$, falls $b \\neq 0$ und beide Grenzwerte existieren."
+    },
+    {
+      "id": "folgen-z23",
+      "topicId": "folgen",
+      "front": "Summenformel der geometrischen Reihe (endlich, Startindex $k=0$)?",
+      "back": "$\\sum_{k=0}^{n} q^k = \\frac{1 - q^{n+1}}{1 - q}$ für $q \\neq 1$."
+    },
+    {
+      "id": "folgen-z24",
+      "topicId": "folgen",
+      "front": "Was ist der Unterschied zwischen Schranke und Häufungspunkt?",
+      "back": "Eine Schranke $S$ muss $a_n \\leq S$ für alle $n$ erfüllen. Ein Häufungspunkt ist ein Grenzwert einer Teilfolge — kein direkter Bezug zu allen Gliedern."
     }
   ],
   "quiz": [
@@ -171,7 +362,9 @@
         "$\\forall\\,\\varepsilon>0\\;\\exists\\,n(\\varepsilon):\\;|a_n - a| > \\varepsilon\\;\\forall\\,n\\geq n(\\varepsilon)$",
         "$\\forall\\,\\varepsilon>0\\;\\forall\\,n:\\;|a_n - a| \\leq \\varepsilon$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die korrekte Definition verlangt, dass für JEDES $\\varepsilon>0$ ein Index $n(\\varepsilon)$ existiert, ab dem ALLE Folgenglieder innerhalb der $\\varepsilon$-Umgebung liegen. Die Reihenfolge $\\forall\\varepsilon\\;\\exists n$ ist entscheidend."
     },
     {
@@ -235,7 +428,9 @@
         "$a_n = \\left(\\frac{1}{3}\\right)^n$",
         "$a_n = \\frac{n^2}{2n^2+5}$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Bei (a) ist Grad Zähler (3) > Grad Nenner (2), also divergiert sie gegen $+\\infty$. Bei (b) Grad Zähler < Nenner → Grenzwert 0. Bei (c) $|1/3|<1$ → Grenzwert 0. Bei (d) gleicher Grad → Grenzwert 1/2."
     },
     {
@@ -259,7 +454,9 @@
         "$\\dfrac{a_0}{2}$",
         "hängt von $a_0$ ab, ob die Folge konvergiert"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Fixpunkt: $L = -\\frac{1}{2}L + \\frac{a_0}{4} \\Rightarrow \\frac{3}{2}L = \\frac{a_0}{4} \\Rightarrow L = \\frac{a_0}{6}$. Da $|-1/2|<1$, konvergiert die Folge für alle $a_0$."
     },
     {
@@ -269,7 +466,14 @@
       "difficulty": "mittel",
       "prompt": "Erkläre in eigenen Worten: Warum kann eine Folge mehrere Häufungspunkte, aber höchstens einen Grenzwert haben?",
       "sampleAnswer": "Ein Häufungspunkt erfordert nur, dass unendlich viele Folgenglieder in einer Umgebung um ihn liegen. Wenn die Folge zwischen zwei Werten alterniert, kann das für beide Werte gleichzeitig gelten. Ein Grenzwert hingegen fordert, dass ALLE Folgenglieder ab einem bestimmten Index in einer beliebig kleinen Umgebung liegen. Das kann nur für einen einzigen Wert gelten – sonst läge irgendwann ein Glied gleichzeitig nah an zwei verschiedenen Punkten, was für beliebig kleine Umgebungen unmöglich ist.",
-      "keywords": ["häufungspunkt", "grenzwert", "unendlich viele", "alle", "umgebung", "eindeutig"],
+      "keywords": [
+        "häufungspunkt",
+        "grenzwert",
+        "unendlich viele",
+        "alle",
+        "umgebung",
+        "eindeutig"
+      ],
       "explanation": "Der Schlüsselunterschied: Häufungspunkt = unendlich viele Glieder nahe dran; Grenzwert = ab einem Index ALLE Glieder nahe dran."
     },
     {

@@ -22,12 +22,32 @@
           "kind": "table",
           "id": "fig-vergleich-stile",
           "title": "Gutachtenstil vs. Urteilsstil im Vergleich",
-          "headers": ["Merkmal", "Gutachtenstil", "Urteilsstil"],
+          "headers": [
+            "Merkmal",
+            "Gutachtenstil",
+            "Urteilsstil"
+          ],
           "rows": [
-            ["Reihenfolge", "Hypothese → Begründung → Ergebnis", "Ergebnis → Begründung"],
-            ["Typische Einleitung", "„Fraglich ist …\" / „… könnte …\"", "„A hat einen Anspruch, weil …\""],
-            ["Wer verwendet ihn?", "Gutachter, Rechtsanwalt, Student", "Richter (Urteil), Behörde (Bescheid)"],
-            ["In dieser Klausur erwartet?", "Ja – durchgehend", "Nein"]
+            [
+              "Reihenfolge",
+              "Hypothese → Begründung → Ergebnis",
+              "Ergebnis → Begründung"
+            ],
+            [
+              "Typische Einleitung",
+              "„Fraglich ist …\" / „… könnte …\"",
+              "„A hat einen Anspruch, weil …\""
+            ],
+            [
+              "Wer verwendet ihn?",
+              "Gutachter, Rechtsanwalt, Student",
+              "Richter (Urteil), Behörde (Bescheid)"
+            ],
+            [
+              "In dieser Klausur erwartet?",
+              "Ja – durchgehend",
+              "Nein"
+            ]
           ]
         }
       ]
@@ -173,6 +193,60 @@
       "topicId": "methodik-gutachtenstil-und-fallloesung-met",
       "front": "Welche Signalwörter leiten den Obersatz typischerweise ein?",
       "back": "„Fraglich ist …\", „Zu prüfen ist …\", „… könnte …\", „… müsste …\". Der Obersatz muss deutlich machen, dass noch kein Ergebnis feststeht."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z1",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was sind die vier Schritte des Gutachtenstils?",
+      "back": "1. Obersatz (Hypothese), 2. Definition (abstrakte Voraussetzungen), 3. Subsumtion (Sachverhalt unter Definition), 4. Ergebnis (positiv, kein Konjunktiv)."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z2",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Wie lautet ein typischer Obersatz im Gutachtenstil?",
+      "back": "Fraglich ist, ob / K konnte gegen V einen Anspruch auf ... aus § ... BGB haben. (Konjunktiv + offene Frage)."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z3",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Wie unterscheidet sich Gutachtenstil vom Urteilsstil?",
+      "back": "Gutachtenstil: Hypothese --> Begrundung --> Ergebnis (offenes Ergebnis zuerst). Urteilsstil: Ergebnis --> Begrundung (Ergebnis vorweg). Im Examen: Gutachtenstil."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z4",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was ist Subsumtion?",
+      "back": "Das Unterordnen des konkreten Sachverhalts unter die abstrakt definierte Voraussetzung der Rechtsnorm: 'Hier liegt X vor, weil ...'."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z5",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was bedeutet Schwerpunktsetzung im Gutachten?",
+      "back": "Unstreitige und klare Merkmale werden kurz abgehandelt; problematische Merkmale erhalten ausfuhrliche Prufung. Zeit und Umfang dem Schwierigkeitsgrad anpassen."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z6",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was ist ein Hilfsgutachten?",
+      "back": "Pruft man ein weiteres Merkmal, obwohl ein fruheres bereits verneint wurde (hypothetisch 'hilfsweise'). Sichert Punkte fur den Fall falscher Vorentscheidung."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z7",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Was bedeuten die Zeichen (+), (-), (P) in der Losungsskizze?",
+      "back": "(+) Merkmal liegt vor, (-) Merkmal fehlt, (P) Merkmal ist problematisch/strittig und bedarf ausfuhrlicher Prufung."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z8",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Warum enthalt das Ergebnis keinen Konjunktiv?",
+      "back": "Das Ergebnis ist eine feststehende Feststellung ('Somit hat K gegen V einen Anspruch ...'). Der Konjunktiv ist nur im Obersatz (Hypothese) zulassig."
+    },
+    {
+      "id": "methodik-gutachtenstil-und-fallloesung-met-z9",
+      "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+      "front": "Wie viel Zeit sollte die Losungsskizze in Anspruch nehmen?",
+      "back": "Maximal ein Drittel der gesamten Bearbeitungszeit, um ausreichend Zeit fur das eigentliche Gutachten zu behalten."
     }
   ],
   "quiz": [
@@ -188,7 +262,9 @@
         "Obersatz → Subsumtion → Definition → Ergebnis",
         "Definition → Obersatz → Ergebnis → Subsumtion"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die korrekte Reihenfolge ist: (1) Obersatz (Hypothese), (2) Definition (abstrakte Voraussetzungen), (3) Subsumtion (Sachverhaltsvergleich), (4) Ergebnis (Conclusio). Diese Reihenfolge muss exakt eingehalten werden."
     },
     {
@@ -212,7 +288,9 @@
         "„Gem. § 433 Abs. 1 BGB hat A einen Anspruch.\"",
         "„Somit hat A gegen B einen Anspruch aus § 433 Abs. 1 BGB.\""
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Nur Option B ist ein Obersatz: Er formuliert eine offene Prüfungsfrage mit „Fraglich ist\". Die anderen Optionen formulieren das Ergebnis direkt (Urteilsstil) oder schließen mit „Somit\" ab (das ist ein Ergebnis-Signal)."
     },
     {
@@ -227,7 +305,9 @@
         "Das Ergebnis der Prüfung",
         "Die Zusammenfassung aus Sachverhalt und Rechtsnorm"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Definition enthält ausschließlich die abstrakten Voraussetzungen – was das Gesetz generell verlangt, unabhängig vom Fall. Der konkrete Sachverhalt gehört erst in die Subsumtion (Schritt 3). Die einschlägige Norm wird zitiert."
     },
     {
@@ -251,7 +331,9 @@
         "Das Ergebnis in einem Satz zusammenfassen",
         "Die Prüfungsfrage als Hypothese formulieren"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Subsumtion (Schritt 3) vergleicht den konkreten Sachverhalt mit den in der Definition herausgearbeiteten abstrakten Voraussetzungen. Sie bewertet, ob die Tatsachen des Falls die rechtlichen Merkmale erfüllen oder nicht."
     },
     {
@@ -266,7 +348,10 @@
         "„folglich\"",
         "„fraglich ist\""
       ],
-      "correct": [0, 2],
+      "correct": [
+        0,
+        2
+      ],
       "multiple": true,
       "explanation": "„Somit\" und „folglich\" (sowie „mithin\", „damit\") sind Ergebnis-Signalwörter. „Könnte\" und „fraglich ist\" gehören in den Obersatz und signalisieren, dass noch kein Ergebnis vorliegt."
     },
@@ -291,7 +376,9 @@
         "Die Fortführung der Prüfung mit „hilfsweise\" im Obersatz, wenn ein Prüfungspunkt negativ ausgefallen ist, aber weitere Punkte geprüft werden sollen",
         "Eine Zusammenfassung aller Zwischenergebnisse am Ende"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Ein Hilfsgutachten (gekennzeichnet durch „hilfsweise\" im Obersatz) wird eingesetzt, wenn eine Voraussetzung fehlt, aber der Sachverhalt oder Bearbeitungshinweis Anlass gibt, weitere Punkte zu prüfen. Für die weitere Prüfung wird unterstellt, dass der fehlgeschlagene Punkt bejaht worden wäre."
     },
     {
@@ -301,7 +388,14 @@
       "difficulty": "schwer",
       "prompt": "Schreibe einen vollständigen Gutachtenstil für folgende Frage: \"Ist K (8 Jahre) beschränkt geschäftsfähig gem. § 106 BGB?\"",
       "sampleAnswer": "K könnte beschränkt geschäftsfähig sein. Gem. § 106 BGB ist eine Person beschränkt geschäftsfähig, wenn sie minderjährig ist, d. h. das achtzehnte Lebensjahr noch nicht (§ 2 BGB), jedoch das siebte Lebensjahr vollendet hat. K ist 8 Jahre alt und damit noch nicht volljährig. Gleichzeitig hat er das siebte Lebensjahr vollendet. K ist somit beschränkt geschäftsfähig.",
-      "keywords": ["beschränkt geschäftsfähig", "§ 106 BGB", "minderjährig", "siebte", "achtzehnte", "somit"],
+      "keywords": [
+        "beschränkt geschäftsfähig",
+        "§ 106 BGB",
+        "minderjährig",
+        "siebte",
+        "achtzehnte",
+        "somit"
+      ],
       "explanation": "Ein korrektes Kurzgutachten enthält alle vier Schritte: Obersatz mit „könnte\", Definition mit § 106 BGB und den Altersgrenzen (7–18 Jahre), Subsumtion mit den konkreten Altersangaben, Ergebnis ohne Konjunktiv mit „somit\"."
     },
     {
@@ -316,7 +410,9 @@
         "Die Lösungsskizze muss vollständig ausformuliert sein",
         "Auf eine Lösungsskizze sollte verzichtet werden, um Zeit zu sparen"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Lösungsskizze ist ein privates Hilfsmittel und wird nicht bewertet (Option A falsch). Sie besteht aus Stichworten, nicht aus ausformulierten Sätzen (Option C falsch). Sie hilft, Struktur und Schwerpunkte zu erkennen, und sollte max. ein Drittel der Zeit beanspruchen (Option B korrekt). Der Verzicht kostet in der Regel Struktur und Vollständigkeit (Option D falsch)."
     }
   ],

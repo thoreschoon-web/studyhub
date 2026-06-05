@@ -53,14 +53,42 @@
           "kind": "table",
           "id": "tab-rechtshindernde",
           "title": "Übersicht: Rechtshindernde Einwendungen (Stufe 1)",
-          "headers": ["Einwendung", "Norm", "Wirkung"],
+          "headers": [
+            "Einwendung",
+            "Norm",
+            "Wirkung"
+          ],
           "rows": [
-            ["Geschäftsunfähigkeit", "§§ 104, 105 BGB", "Willenserklärung nichtig"],
-            ["Formmangel", "§ 125 BGB", "Rechtsgeschäft nichtig"],
-            ["Gesetzesverstoß", "§ 134 BGB", "Rechtsgeschäft nichtig"],
-            ["Sittenwidrigkeit / Wucher", "§ 138 BGB", "Rechtsgeschäft nichtig"],
-            ["Anfechtung (ex tunc)", "§§ 119 ff., 142 BGB", "Rückwirkende Nichtigkeit"],
-            ["Fehlende Zustimmung", "§§ 107, 108, 177 BGB", "Schwebend unwirksam / nichtig"]
+            [
+              "Geschäftsunfähigkeit",
+              "§§ 104, 105 BGB",
+              "Willenserklärung nichtig"
+            ],
+            [
+              "Formmangel",
+              "§ 125 BGB",
+              "Rechtsgeschäft nichtig"
+            ],
+            [
+              "Gesetzesverstoß",
+              "§ 134 BGB",
+              "Rechtsgeschäft nichtig"
+            ],
+            [
+              "Sittenwidrigkeit / Wucher",
+              "§ 138 BGB",
+              "Rechtsgeschäft nichtig"
+            ],
+            [
+              "Anfechtung (ex tunc)",
+              "§§ 119 ff., 142 BGB",
+              "Rückwirkende Nichtigkeit"
+            ],
+            [
+              "Fehlende Zustimmung",
+              "§§ 107, 108, 177 BGB",
+              "Schwebend unwirksam / nichtig"
+            ]
           ]
         }
       ],
@@ -115,11 +143,35 @@
           "kind": "table",
           "id": "tab-einwendungen-einreden",
           "title": "Gegenrechte: Einwendungen und Einreden im Vergleich",
-          "headers": ["Typ", "Prüfungsstufe", "Wirkung", "Geltendmachung", "Beispiele"],
+          "headers": [
+            "Typ",
+            "Prüfungsstufe",
+            "Wirkung",
+            "Geltendmachung",
+            "Beispiele"
+          ],
           "rows": [
-            ["Rechtshindernde Einwendung", "Stufe 1 (entstanden)", "Anspruch entsteht erst gar nicht", "Von Amts wegen", "§§ 104, 125, 134, 138, 119 ff. BGB"],
-            ["Rechtsvernichtende Einwendung", "Stufe 2 (nicht erloschen)", "Entstandener Anspruch erlischt nachträglich", "Von Amts wegen", "§§ 362, 387, 397, 346 BGB"],
-            ["Rechtshemmende Einrede", "Stufe 3 (durchsetzbar)", "Anspruch wird gehemmt, besteht aber weiter", "Muss erhoben werden", "§§ 214, 273, 320, 275 II/III BGB"]
+            [
+              "Rechtshindernde Einwendung",
+              "Stufe 1 (entstanden)",
+              "Anspruch entsteht erst gar nicht",
+              "Von Amts wegen",
+              "§§ 104, 125, 134, 138, 119 ff. BGB"
+            ],
+            [
+              "Rechtsvernichtende Einwendung",
+              "Stufe 2 (nicht erloschen)",
+              "Entstandener Anspruch erlischt nachträglich",
+              "Von Amts wegen",
+              "§§ 362, 387, 397, 346 BGB"
+            ],
+            [
+              "Rechtshemmende Einrede",
+              "Stufe 3 (durchsetzbar)",
+              "Anspruch wird gehemmt, besteht aber weiter",
+              "Muss erhoben werden",
+              "§§ 214, 273, 320, 275 II/III BGB"
+            ]
           ]
         }
       ],
@@ -147,13 +199,31 @@
           "kind": "table",
           "id": "tab-beispielschemata",
           "title": "Beispielschemata: Wirksamer Kaufvertrag und Schadensersatz § 280 I BGB",
-          "headers": ["Wirksamer Kaufvertrag (§§ 145 ff. BGB)", "Schadensersatz (§ 280 Abs. 1 BGB)"],
+          "headers": [
+            "Wirksamer Kaufvertrag (§§ 145 ff. BGB)",
+            "Schadensersatz (§ 280 Abs. 1 BGB)"
+          ],
           "rows": [
-            ["1. Angebot K (invitatio ad offerendum?)", "1. Schuldverhältnis (z. B. Kaufvertrag)"],
-            ["2. Angebot V (wesentl. Inhalt, Rechtsbindungswille)", "2. Obj. rechtswidrige Pflichtverletzung"],
-            ["3. Annahme K (modifizierte Annahme?)", "3. Nebenpflichtverletzung / keine Verzögerung"],
-            ["4. Annahme V (Einigung)", "4. Vertretenmüssen"],
-            ["5. Wirksamkeit (ggf. Anfechtung)", "5. Rechtsfolge: Schadensersatz neben der Leistung"]
+            [
+              "1. Angebot K (invitatio ad offerendum?)",
+              "1. Schuldverhältnis (z. B. Kaufvertrag)"
+            ],
+            [
+              "2. Angebot V (wesentl. Inhalt, Rechtsbindungswille)",
+              "2. Obj. rechtswidrige Pflichtverletzung"
+            ],
+            [
+              "3. Annahme K (modifizierte Annahme?)",
+              "3. Nebenpflichtverletzung / keine Verzögerung"
+            ],
+            [
+              "4. Annahme V (Einigung)",
+              "4. Vertretenmüssen"
+            ],
+            [
+              "5. Wirksamkeit (ggf. Anfechtung)",
+              "5. Rechtsfolge: Schadensersatz neben der Leistung"
+            ]
           ]
         }
       ],
@@ -214,6 +284,66 @@
       "topicId": "methodik-gliederung-der-anspruchspruefung",
       "front": "Wann kann man in der Klausur die Gliederungsebenen 2 und 3 weglassen?",
       "back": "Gliederungsebenen 2 (nicht erloschen) und 3 (durchsetzbar) werden **nur gebildet**, wenn der Sachverhalt dazu Anlass gibt (d. h. wenn Erlöschens- oder Durchsetzbarkeitshindernisse relevant werden). Sonst genügt die Prüfung der Entstehungsvoraussetzungen."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z1",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Was sind die drei Stufen der Anspruchsprufung?",
+      "back": "1. Anspruch entstanden? 2. Anspruch nicht erloschen? 3. Anspruch durchsetzbar? Erst wenn alle drei bejaht sind, besteht der Anspruch."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z2",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Was sind rechtshindernde Einwendungen?",
+      "back": "Sie verhindern das Entstehen des Anspruchs (Stufe 1), z.B. Geschaftsunfahigkeit, Formmangel, Verstoss gegen § 134 oder § 138 BGB, fehlende Zustimmung."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z3",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Was sind rechtsvernichtende Einwendungen?",
+      "back": "Sie lassen den zunachst entstandenen Anspruch erlischen (Stufe 2), z.B. Erfullung, Aufrechnung, Unmoglichkeit, Rucktritt, Erlass."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z4",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Was sind rechtshemmende Einreden?",
+      "back": "Sie machen den Anspruch (vorubergehend) nicht durchsetzbar (Stufe 3). Mussen geltend gemacht werden, z.B. Verjahrungs- oder Zuruckbehaltungseinrede."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z5",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Welche Wirkung hat die Verjahrungs­einrede?",
+      "back": "Der Schuldner kann die Leistung dauerhaft verweigern (§ 214 BGB); der Anspruch erloscht nicht, ist aber nicht mehr durchsetzbar (rechtshemmende Einrede)."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z6",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Was bedeutet Falligkeit im Rahmen der Durchsetzbarkeit?",
+      "back": "Der Anspruch muss fallig sein, d.h. der Glaubiger kann die Leistung sofort verlangen (§ 271 BGB: im Zweifel sofort fallig)."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z7",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Warum werden ruckbeziehende Tatbestandsmerkmale zuletzt gepruft?",
+      "back": "Sie setzen das Vorliegen anderer Merkmale voraus (z.B. Verschulden nach Pflichtverletzung). Pruft man sie zuerst, fehlt die Grundlage."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z8",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Was bedeutet 'Wirknorm vor Rechtsgrund' bei der Prufungsreihenfolge?",
+      "back": "Die anspruchsbegrundende (wirkende) Norm wird zuerst gepruft; danach folgen Rechtsgrundfragen (z.B. ob ein Behaltensdurfnis besteht)."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z9",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Wie lautet das Grundschema fur § 280 I BGB (Schadensersatz)?",
+      "back": "1. Schuldverhaltnis, 2. Pflichtverletzung, 3. Vertretenmussen (wird vermutet, § 280 I 2 BGB), 4. Schaden -- dann Schadensersatzpflicht."
+    },
+    {
+      "id": "methodik-gliederung-der-anspruchspruefung-z10",
+      "topicId": "methodik-gliederung-der-anspruchspruefung",
+      "front": "Welche Einwendung ist § 138 BGB und auf welcher Prufungsstufe?",
+      "back": "§ 138 BGB (sittenwidriges Rechtsgeschaft) ist eine rechtshindernde Einwendung (Stufe 1): das Rechtsgeschaft ist nichtig, der Anspruch entsteht gar nicht erst."
     }
   ],
   "quiz": [
@@ -229,7 +359,9 @@
         "Die Pflicht des Schuldners, einen Schaden zu ersetzen",
         "Eine öffentlich-rechtliche Forderung des Staates"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "§ 194 Abs. 1 BGB definiert den Anspruch als das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen. Dies ist die Grundlage jeder Anspruchsprüfung im BGB."
     },
     {
@@ -244,7 +376,9 @@
         "Nicht erloschen → entstanden → durchsetzbar",
         "Entstanden → durchsetzbar → nicht erloschen"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die drei Stufen der Anspruchsprüfung sind in der Reihenfolge: (1) Anspruch entstanden, (2) Anspruch nicht erloschen, (3) Anspruch durchsetzbar. Diese Reihenfolge ist logisch: Zuerst muss der Anspruch entstanden sein, bevor er erlöschen oder blockiert werden kann."
     },
     {
@@ -278,7 +412,11 @@
         "Verjährung nach § 214 BGB",
         "Geschäftsunfähigkeit nach § 104 BGB"
       ],
-      "correct": [0, 2, 4],
+      "correct": [
+        0,
+        2,
+        4
+      ],
       "multiple": true,
       "explanation": "Rechtshindernde Einwendungen (Stufe 1) verhindern das Entstehen des Anspruchs: Formmangel (§ 125 BGB), Sittenwidrigkeit (§ 138 BGB) und Geschäftsunfähigkeit (§ 104 BGB). — Erfüllung (§ 362 BGB) ist rechtsvernichtend (Stufe 2). Verjährung (§ 214 BGB) ist eine rechtshemmende Einrede (Stufe 3)."
     },
@@ -294,7 +432,9 @@
         "Einreden vernichten den Anspruch dauerhaft; Einwendungen sind nur vorübergehend",
         "Es gibt keinen Unterschied — beide Begriffe sind austauschbar"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Der entscheidende Unterschied: Einwendungen wirken von Amts wegen (Gericht berücksichtigt sie ohne Berufung des Schuldners) und vernichten bzw. hindern den Anspruch. Einreden (z. B. Verjährung, § 273 BGB) muss der Schuldner ausdrücklich erheben; sie hemmen den Anspruch, vernichten ihn aber nicht."
     },
     {
@@ -309,7 +449,9 @@
         "Ausnahmetatbestände werden stets vor Grundtatbeständen geprüft",
         "Die chronologisch frühesten Ereignisse werden zuletzt im Gutachten abgehandelt"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Rückbeziehende Tatbestandsmerkmale bauen auf anderen Merkmalen auf und werden deshalb danach geprüft. Beispiel: Die Annahme bezieht sich auf das Angebot — also wird das Angebot zuerst geprüft. Die Arglist bei der arglistigen Täuschung bezieht sich auf die Täuschungshandlung — also erst Täuschung, dann Arglist."
     },
     {
@@ -333,7 +475,9 @@
         "Zahlung ist eine Einrede; Verjährung ist eine rechtsvernichtende Einwendung",
         "Beides sind rechtshindernde Einwendungen, da sie das Entstehen des Anspruchs verhindern"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Korrekt: Erfüllung durch Zahlung ist eine rechtsvernichtende Einwendung (§ 362 BGB, Stufe 2) — sie wirkt von Amts wegen. Die Verjährungseinrede (§ 214 BGB) ist eine rechtshemmende Einrede (Stufe 3) — K muss sie ausdrücklich erheben, was er hier getan hat. Das Gericht prüft Stufe 2 von Amts wegen, Stufe 3 erst nach Erhebung durch K."
     },
     {
@@ -343,7 +487,16 @@
       "difficulty": "schwer",
       "prompt": "Formuliere im Gutachtenstil einen vollständigen Obersatz und prüfe, ob V gegen K einen Anspruch auf Kaufpreiszahlung von 500 € hat. V und K haben mündlich einen Kaufvertrag über ein Smartphone geschlossen. K hat noch nicht gezahlt und behauptet, er sei bei Vertragsschluss volltrunken gewesen (Geschäftsunfähigkeit).",
       "sampleAnswer": "V könnte gegen K einen Anspruch auf Zahlung von 500 € aus § 433 Abs. 2 BGB haben.\n\n**I. Anspruch entstanden**\nDazu müsste zwischen V und K ein wirksamer Kaufvertrag über das Smartphone zum Preis von 500 € geschlossen worden sein.\n\n1. Angebot und Annahme: V und K haben sich mündlich geeinigt. Ein Angebot und eine korrespondierende Annahme liegen vor.\n\n2. Wirksamkeit — Rechtshindernde Einwendung Geschäftsunfähigkeit:\nK behauptet, er sei bei Vertragsschluss volltrunken gewesen. Gemäß § 104 Nr. 2 BGB ist geschäftsunfähig, wer sich in einem die freie Willensbestimmung ausschließenden Zustand krankhafter Störung der Geistestätigkeit befindet. Ein vorübergehender Rausch kann diesen Zustand begründen, wenn K nicht mehr in der Lage war, seinen Willen zu bilden. Ob dieser Grad der Trunkenheit vorlag, ist anhand des Sachverhalts zu bestimmen. Liegt Geschäftsunfähigkeit vor, wäre die Willenserklärung des K nach § 105 Abs. 1 BGB nichtig; ein wirksamer Vertrag käme nicht zustande.\n\n**Ergebnis:** Soweit K bei Vertragsschluss geschäftsunfähig war, ist der Anspruch nicht entstanden. V hat dann keinen Zahlungsanspruch.",
-      "keywords": ["Anspruch entstanden", "§ 433 Abs. 2 BGB", "Obersatz", "Geschäftsunfähigkeit", "§ 104 BGB", "§ 105 BGB", "rechtshindernde Einwendung", "Gutachtenstil"],
+      "keywords": [
+        "Anspruch entstanden",
+        "§ 433 Abs. 2 BGB",
+        "Obersatz",
+        "Geschäftsunfähigkeit",
+        "§ 104 BGB",
+        "§ 105 BGB",
+        "rechtshindernde Einwendung",
+        "Gutachtenstil"
+      ],
       "explanation": "Im Gutachtenstil: Obersatz (könnte … haben) → Definition/Prüfung → Subsumtion → Ergebnis. Die Geschäftsunfähigkeit ist eine rechtshindernde Einwendung (Stufe 1), die das Entstehen des Anspruchs verhindert. Das Ergebnis hängt von der tatsächlichen Intensität der Trunkenheit ab."
     },
     {
@@ -359,7 +512,12 @@
         "Anzahl der Paragraphen im BGB",
         "Zeitfaktor / verbleibende Bearbeitungszeit"
       ],
-      "correct": [0, 1, 2, 4],
+      "correct": [
+        0,
+        1,
+        2,
+        4
+      ],
       "multiple": true,
       "explanation": "Der Detailgrad hängt ab von: (1) Erwartungshorizont (in Anfängerklausuren auch einfache Aspekte ausführlich), (2) Anteil des Punktes an der Gesamtprüfung, (3) tatsächlichen Details im Sachverhalt und (4) verbleibender Zeit. Die Anzahl der BGB-Paragrafen ist kein Maßstab für den Detailgrad."
     },

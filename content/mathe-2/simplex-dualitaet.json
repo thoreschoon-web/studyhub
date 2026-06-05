@@ -32,11 +32,39 @@
           "kind": "table",
           "id": "tab-start-se19",
           "title": "Start-Tableau (SoSe19)",
-          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "headers": [
+            "BV",
+            "x₁",
+            "x₂",
+            "s₁",
+            "s₂",
+            "rhs"
+          ],
           "rows": [
-            ["x₀", "−4", "−1", "0", "0", "0"],
-            ["s₁", "1", "2", "1", "0", "10"],
-            ["s₂", "1", "−1", "0", "1", "7"]
+            [
+              "x₀",
+              "−4",
+              "−1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "s₁",
+              "1",
+              "2",
+              "1",
+              "0",
+              "10"
+            ],
+            [
+              "s₂",
+              "1",
+              "−1",
+              "0",
+              "1",
+              "7"
+            ]
           ]
         }
       ],
@@ -57,11 +85,39 @@
           "kind": "table",
           "id": "tab-step1-se19",
           "title": "Tableau nach 1. Pivotschritt (x₁ ersetzt s₂)",
-          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "headers": [
+            "BV",
+            "x₁",
+            "x₂",
+            "s₁",
+            "s₂",
+            "rhs"
+          ],
           "rows": [
-            ["x₀", "0", "−5", "0", "4", "28"],
-            ["s₁", "0", "3", "1", "−1", "3"],
-            ["x₁", "1", "−1", "0", "1", "7"]
+            [
+              "x₀",
+              "0",
+              "−5",
+              "0",
+              "4",
+              "28"
+            ],
+            [
+              "s₁",
+              "0",
+              "3",
+              "1",
+              "−1",
+              "3"
+            ],
+            [
+              "x₁",
+              "1",
+              "−1",
+              "0",
+              "1",
+              "7"
+            ]
           ]
         }
       ],
@@ -87,33 +143,117 @@
           "kind": "table",
           "id": "tab-start-se19-full",
           "title": "Schritt 0 — Starttableau",
-          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "headers": [
+            "BV",
+            "x₁",
+            "x₂",
+            "s₁",
+            "s₂",
+            "rhs"
+          ],
           "rows": [
-            ["x₀", "−4", "−1", "0", "0", "0"],
-            ["s₁", "1", "2", "1", "0", "10"],
-            ["s₂", "1", "−1", "0", "1", "7"]
+            [
+              "x₀",
+              "−4",
+              "−1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "s₁",
+              "1",
+              "2",
+              "1",
+              "0",
+              "10"
+            ],
+            [
+              "s₂",
+              "1",
+              "−1",
+              "0",
+              "1",
+              "7"
+            ]
           ]
         },
         {
           "kind": "table",
           "id": "tab-s1-se19-full",
           "title": "Schritt 1 — nach Pivot (x₁ in Basis, Pivotelement 1 in Zeile 2)",
-          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "headers": [
+            "BV",
+            "x₁",
+            "x₂",
+            "s₁",
+            "s₂",
+            "rhs"
+          ],
           "rows": [
-            ["x₀", "0", "−5", "0", "4", "28"],
-            ["s₁", "0", "3", "1", "−1", "3"],
-            ["x₁", "1", "−1", "0", "1", "7"]
+            [
+              "x₀",
+              "0",
+              "−5",
+              "0",
+              "4",
+              "28"
+            ],
+            [
+              "s₁",
+              "0",
+              "3",
+              "1",
+              "−1",
+              "3"
+            ],
+            [
+              "x₁",
+              "1",
+              "−1",
+              "0",
+              "1",
+              "7"
+            ]
           ]
         },
         {
           "kind": "table",
           "id": "tab-s2-se19-full",
           "title": "Schritt 2 — nach Pivot (x₂ in Basis, Pivotelement 3 in Zeile 1) — OPTIMAL",
-          "headers": ["BV", "x₁", "x₂", "s₁", "s₂", "rhs"],
+          "headers": [
+            "BV",
+            "x₁",
+            "x₂",
+            "s₁",
+            "s₂",
+            "rhs"
+          ],
           "rows": [
-            ["x₀", "0", "0", "5/3", "7/3", "33"],
-            ["x₂", "0", "1", "1/3", "−1/3", "1"],
-            ["x₁", "1", "0", "1/3", "2/3", "8"]
+            [
+              "x₀",
+              "0",
+              "0",
+              "5/3",
+              "7/3",
+              "33"
+            ],
+            [
+              "x₂",
+              "0",
+              "1",
+              "1/3",
+              "−1/3",
+              "1"
+            ],
+            [
+              "x₁",
+              "1",
+              "0",
+              "1/3",
+              "2/3",
+              "8"
+            ]
           ]
         }
       ],
@@ -153,15 +293,47 @@
           "kind": "table",
           "id": "tab-primal-dual",
           "title": "Primal ↔ Dual — Gegenüberstellung",
-          "headers": ["Merkmal", "Primales Problem (P)", "Duales Problem (D)"],
+          "headers": [
+            "Merkmal",
+            "Primales Problem (P)",
+            "Duales Problem (D)"
+          ],
           "rows": [
-            ["Ziel", "Maximierung", "Minimierung"],
-            ["Zielfunktionskoeffizienten", "c (werden zu RHS)", "b (werden zu RHS)"],
-            ["Matrix", "A", "Aᵀ (transponiert)"],
-            ["Ungleichungsrichtung", "Ax ≤ b", "AᵀY ≥ c"],
-            ["Vorzeichen Variablen", "x ≥ 0", "y ≥ 0"],
-            ["Anzahl Variablen", "n (Entscheidungsvar.)", "m (= Anzahl primal. NB)"],
-            ["Anzahl NB", "m", "n"]
+            [
+              "Ziel",
+              "Maximierung",
+              "Minimierung"
+            ],
+            [
+              "Zielfunktionskoeffizienten",
+              "c (werden zu RHS)",
+              "b (werden zu RHS)"
+            ],
+            [
+              "Matrix",
+              "A",
+              "Aᵀ (transponiert)"
+            ],
+            [
+              "Ungleichungsrichtung",
+              "Ax ≤ b",
+              "AᵀY ≥ c"
+            ],
+            [
+              "Vorzeichen Variablen",
+              "x ≥ 0",
+              "y ≥ 0"
+            ],
+            [
+              "Anzahl Variablen",
+              "n (Entscheidungsvar.)",
+              "m (= Anzahl primal. NB)"
+            ],
+            [
+              "Anzahl NB",
+              "m",
+              "n"
+            ]
           ]
         }
       ],
@@ -239,6 +411,90 @@
       "topicId": "simplex-dualitaet",
       "front": "Was passiert beim Simplex, wenn alle Einträge in der Pivotspalte $\\leq 0$ sind?",
       "back": "Das Problem ist **unbeschränkt** — der Zielfunktionswert kann beliebig groß werden. Es gibt kein endliches Optimum."
+    },
+    {
+      "id": "simplex-dualitaet-z1",
+      "topicId": "simplex-dualitaet",
+      "front": "Was ist das Simplex-Tableau?",
+      "back": "Eine Matrixdarstellung des LP in $x_0$-Form: Zeile 0 ist die Zielfunktionszeile, weitere Zeilen sind die Gleichungsnebenbedingungen; Basisvariablen stehen in der ersten Spalte."
+    },
+    {
+      "id": "simplex-dualitaet-z2",
+      "topicId": "simplex-dualitaet",
+      "front": "Wie wählt man die Pivot-Spalte?",
+      "back": "Spalte mit dem kleinsten (betragsmäßig größten negativen) Eintrag in Zeile 0."
+    },
+    {
+      "id": "simplex-dualitaet-z3",
+      "topicId": "simplex-dualitaet",
+      "front": "Wie wählt man die Pivot-Zeile?",
+      "back": "Zeile $i_0$ mit kleinstem Quotienten $y_{i,0}/y_{i,j_0}$ bei $y_{i,j_0} > 0$."
+    },
+    {
+      "id": "simplex-dualitaet-z4",
+      "topicId": "simplex-dualitaet",
+      "front": "Abbruchkriterium des Simplex-Algorithmus?",
+      "back": "Alle Einträge in Zeile 0 sind $\\geq 0$: die aktuelle Basislösung ist optimal."
+    },
+    {
+      "id": "simplex-dualitaet-z5",
+      "topicId": "simplex-dualitaet",
+      "front": "Sonderfall: Wann ist das LP unbeschränkt?",
+      "back": "Es gibt eine Pivot-Spalte $j_0$ mit $y_{0,j_0} < 0$, aber $y_{i,j_0} \\leq 0$ für alle $i \\geq 1$ → kein Minimum des Quotienten → unbeschränkt."
+    },
+    {
+      "id": "simplex-dualitaet-z6",
+      "topicId": "simplex-dualitaet",
+      "front": "Was ist das verkürzte Simplex-Tableau?",
+      "back": "Tableau ohne die Basisspalten (Einheitsvektoren); spart Platz, da Basisvariablen-Spalten redundant sind."
+    },
+    {
+      "id": "simplex-dualitaet-z7",
+      "topicId": "simplex-dualitaet",
+      "front": "Wie liest man die aktuelle Basislösung aus dem Tableau ab?",
+      "back": "Basisvariablen nehmen den Wert in der rechten Spalte (Konstantenspalte) ihrer Zeile an; Nicht-Basisvariablen sind $= 0$."
+    },
+    {
+      "id": "simplex-dualitaet-z8",
+      "topicId": "simplex-dualitaet",
+      "front": "Primales LP $(P)$ in Standardform?",
+      "back": "$\\max\\; \\vec{c}^T \\vec{x}$ u.d.NB $A\\vec{x} \\leq \\vec{b}$, $\\vec{x} \\geq 0$."
+    },
+    {
+      "id": "simplex-dualitaet-z9",
+      "topicId": "simplex-dualitaet",
+      "front": "Duales LP $(D)$ zum primalen $(P)$?",
+      "back": "$\\min\\; \\vec{b}^T \\vec{y}$ u.d.NB $A^T \\vec{y} \\geq \\vec{c}$, $\\vec{y} \\geq 0$."
+    },
+    {
+      "id": "simplex-dualitaet-z10",
+      "topicId": "simplex-dualitaet",
+      "front": "Schwache Dualität (Satz 11)?",
+      "back": "Für jeden zulässigen Primalpunkt $\\vec{x}$ und Dualpunkt $\\vec{y}$ gilt: $\\vec{c}^T \\vec{x} \\leq \\vec{b}^T \\vec{y}$."
+    },
+    {
+      "id": "simplex-dualitaet-z11",
+      "topicId": "simplex-dualitaet",
+      "front": "Starke Dualität (Satz 11)?",
+      "back": "Sind $(P)$ und $(D)$ beide zulässig, dann existieren Optimallösungen $\\vec{x}^*$, $\\vec{y}^*$ mit $\\vec{c}^T \\vec{x}^* = \\vec{b}^T \\vec{y}^*$."
+    },
+    {
+      "id": "simplex-dualitaet-z12",
+      "topicId": "simplex-dualitaet",
+      "front": "Folgerung: $(P)$ unbeschränkt $\\Rightarrow$?",
+      "back": "$(D)$ ist unzulässig (aus schwacher Dualität: kein endlicher Wert $\\vec{b}^T\\vec{y}$ kann obere Schranke sein)."
+    },
+    {
+      "id": "simplex-dualitaet-z13",
+      "topicId": "simplex-dualitaet",
+      "front": "Dual des Dualen?",
+      "back": "Das Dual des dualen LP $(D)$ ist wieder das primale LP $(P)$."
+    },
+    {
+      "id": "simplex-dualitaet-z14",
+      "topicId": "simplex-dualitaet",
+      "front": "Optimalitätskriterium via Dualität?",
+      "back": "$\\vec{x}$ ist optimal für $(P)$ und $\\vec{y}$ für $(D)$, falls beide zulässig sind und $\\vec{c}^T\\vec{x} = \\vec{b}^T\\vec{y}$ gilt (starke Dualität)."
     }
   ],
   "quiz": [
@@ -254,7 +510,9 @@
         "Sie ist immer gleich null",
         "Sie ersetzt die Zielfunktionskoeffizienten"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die Schlupfvariable $s_i \\geq 0$ wird zur Ungleichung $a^T x \\leq b_i$ addiert: $a^T x + s_i = b_i$. Sie misst den ungenutzten Spielraum der Nebenbedingung."
     },
     {
@@ -269,7 +527,9 @@
         "Die Basisvariablen sind alle Schlupfvariablen",
         "Der Zielfunktionswert ist 0"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Optimalitätskriterium: Zeile 0 hat keine negativen Einträge mehr. Dann kann kein weiterer Basiswechsel den Zielfunktionswert erhöhen."
     },
     {
@@ -323,7 +583,9 @@
         "Beide Probleme haben dieselbe Anzahl an Variablen",
         "Das duale Problem hat keine Lösung"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Starker Dualitätssatz: Falls (P) optimal ist, ist auch (D) optimal, und die Optimalwerte stimmen überein: $c^T x^* = b^T y^*$."
     },
     {
@@ -338,7 +600,9 @@
         "$x^* = 4{,}5$, $y^* = 0$, $\\pi^* = -4{,}5$",
         "$x^* = 0$, $y^* = 4{,}5$, $\\pi^* = 13{,}5$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Simplex: Schritt 1 → $y$ in Basis (Pivot in Zeile 1), Schritt 2 → $x$ in Basis (Pivot in Zeile 2). Ergebnis: $x^* = 0{,}25$, $y^* = 4{,}25$, $\\pi^* = -0{,}25 + 12{,}75 = 12{,}5$."
     },
     {
@@ -357,7 +621,15 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, warum der Simplex-Algorithmus immer von Ecke zu Ecke des zulässigen Bereichs springt.",
       "sampleAnswer": "Eine Basislösung entspricht genau einer Ecke des Polyeders. Ein Pivotschritt tauscht eine Basisvariable gegen eine Nicht-Basisvariable aus — das entspricht dem Wechsel zu einer benachbarten Ecke entlang einer Kante des Polyeders. Der neue Zielfunktionswert ist dabei mindestens so gut wie der alte. Da es nur endlich viele Ecken gibt (und bei Nicht-Entartung jede nur einmal besucht wird), terminiert der Algorithmus.",
-      "keywords": ["ecke", "basislösung", "pivotschritt", "tausch", "nachbar", "polyeder", "kante"],
+      "keywords": [
+        "ecke",
+        "basislösung",
+        "pivotschritt",
+        "tausch",
+        "nachbar",
+        "polyeder",
+        "kante"
+      ],
       "explanation": "Jede Basislösung = Ecke des Polyeders. Pivotschritt = Kantenwechsel zur besseren Ecke. Endliche Terminierung folgt aus endlicher Eckenanzahl."
     },
     {
@@ -366,8 +638,15 @@
       "topicId": "simplex-dualitaet",
       "difficulty": "mittel",
       "prompt": "Wie viele duale Variablen hat das duale LOP zu einem primalen Problem mit 3 Nebenbedingungen und 4 Entscheidungsvariablen?",
-      "options": ["3", "4", "7", "12"],
-      "correct": [0],
+      "options": [
+        "3",
+        "4",
+        "7",
+        "12"
+      ],
+      "correct": [
+        0
+      ],
       "explanation": "Die Anzahl der dualen Variablen entspricht der Anzahl der primalen Nebenbedingungen — also 3. Das duale Problem hat dann 4 Nebenbedingungen (entsprechend den 4 primalen Variablen)."
     },
     {

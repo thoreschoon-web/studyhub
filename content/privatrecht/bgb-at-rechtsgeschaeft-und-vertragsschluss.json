@@ -192,6 +192,66 @@
       "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
       "front": "Was bedeutet Abstraktionsprinzip?",
       "back": "Die Wirksamkeit des **Verfügungsgeschäfts** (z. B. Eigentumsübertragung) ist rechtlich **unabhängig** von Fehlern des **Verpflichtungsgeschäfts** (z. B. Kaufvertrag). Ein nichtiger Kaufvertrag macht die Übereignung nicht automatisch nichtig – Rückforderung nur über § 812 BGB."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z1",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Trennungsprinzip",
+      "back": "Verpflichtungsgeschaft (z.B. Kaufvertrag) und Verfugungsgeschaft (z.B. Ubereignung) sind rechtlich getrennte Geschafte."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z2",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Abstraktionsprinzip",
+      "back": "Wirksamkeit des Verfugungsgeschafts ist unabhangig vom Verpflichtungsgeschaft (Fehler beim Kauf lasst Ubereignung unberuhrt)."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z3",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Antrag (Angebot) - Voraussetzungen § 145 BGB",
+      "back": "Empfangsbedurft. WE; wesentl. Vertragsinhalt (essentialia negotii) bestimmt/bestimmbar; Rechtsbindungswille; Bindung des Antragenden."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z4",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Invitatio ad offerendum",
+      "back": "Aufforderung zur Abgabe eines Angebots (kein Angebot selbst); z.B. Schaufensterauslage, Internetshop-Anzeige."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z5",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Modifizierte Annahme - Rechtsfolge (§ 150 II BGB)",
+      "back": "Gilt als Ablehnung des urspr. Angebots verbunden mit neuem Angebot (Ablehnung + Gegenangebot)."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z6",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Offener vs. versteckter Dissens",
+      "back": "Offener Dissens (§ 154 BGB): Parteien wissen, dass keine Einigung; kein Vertrag. Versteckter Dissens (§ 155 BGB): Parteien glauben einig, sind es aber nicht; im Zweifel kein Vertrag."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z7",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Aufschiebende vs. auflösende Bedingung (§ 158 BGB)",
+      "back": "Aufschiebend: Rechtswirkung tritt erst mit Bedingungseintritt ein. Auflosend: Rechtswirkung endet mit Bedingungseintritt."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z8",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Fristberechnung: Ereignisfrist vs. Tagesbeginnfrist",
+      "back": "Ereignisfrist (§ 187 I BGB): Tag des Ereignisses wird nicht mitgezahlt. Tagesbeginnfrist (§ 187 II BGB): Beginn eines Tages zahlt mit."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z9",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "§ 193 BGB - Fristende",
+      "back": "Fallt Fristende auf Sonn-/Feiertag oder Samstag, endet Frist am nachsten Werktag."
+    },
+    {
+      "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z10",
+      "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+      "front": "Annahmefrist unter Abwesenden (§ 147 II BGB)",
+      "back": "Annahme muss innerhalb der Frist zugehen, die der Antragende fur den Eingang der Antwort erwarten darf (ubliche Postlaufzeit + Uberlegungszeit)."
     }
   ],
   "quiz": [
@@ -207,7 +267,9 @@
         "Jede Werbung für ein Produkt",
         "Eine schriftliche Erklärung, die nur wirksam ist, wenn sie unterschrieben ist"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Ein Angebot (§ 145 BGB) ist eine empfangsbedürftige Willenserklärung, die alle wesentlichen Vertragsbestandteile enthält und so bestimmt ist, dass die Gegenseite mit einem einfachen 'Ja' annehmen kann. Es bindet den Antragesteller grundsätzlich."
     },
     {
@@ -231,7 +293,9 @@
         "A's Angebot ist abgelehnt; B's Erklärung ist ein neues Angebot über 250 Euro (§ 150 Abs. 2 BGB)",
         "Kein Angebot und keine Annahme; alles ist nichtig"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Eine modifizierte Annahme gilt nach § 150 Abs. 2 BGB als Ablehnung des ursprünglichen Angebots und gleichzeitig als neues Angebot. A's Angebot über 300 Euro ist damit erloschen. Nun hat B A ein neues Angebot über 250 Euro gemacht, das A noch annehmen müsste."
     },
     {
@@ -246,7 +310,9 @@
         "Lateinische Bezeichnung für den Vertragsschluss",
         "Formvorschriften für notarielle Verträge"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Essentialia negotii sind die wesentlichen Vertragsbestandteile – beim Kaufvertrag z. B. Kaufgegenstand und Kaufpreis. Ohne sie ist ein Angebot zu unbestimmt; der Empfänger kann nicht mit einem einfachen 'Ja' annehmen."
     },
     {
@@ -270,7 +336,9 @@
         "Beide Parteien können den Vertrag anfechten",
         "Es bedarf einer notariellen Beurkundung, um den Vertrag zu heilen"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "§ 155 BGB bestimmt: Bei verstecktem Dissens über Nebenpunkte ist der Vertrag wirksam, wenn anzunehmen ist, dass er auch ohne Einigung über diesen Punkt geschlossen worden wäre. Die fehlende Einigung über einen Nebenpunkt ist damit vernachlässigbar."
     },
     {
@@ -285,7 +353,9 @@
         "Donnerstag, 18. September 2025",
         "Mittwoch, 10. September 2025"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Ereignisfrist: Der 3. September wird nicht mitgezählt (§ 187 Abs. 1 BGB), die Frist beginnt am 4. September. 2-Wochen-Ereignisfrist endet nach § 188 Abs. 2 Alt. 1 BGB am gleichen Wochentag 2 Wochen nach dem Ereignis: Ereignis war Mittwoch → Fristende: Mittwoch, 17. September 2025, 24:00 Uhr."
     },
     {
@@ -310,7 +380,11 @@
         "Kündigung",
         "Einwilligung"
       ],
-      "correct": [0, 2, 3],
+      "correct": [
+        0,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "Bedingungsfeindlich sind Gestaltungsrechte (Anfechtung, Kündigung, Rücktritt) und die Aufrechnung (§ 388 S. 2 BGB) sowie die Genehmigung. Die Einwilligung kann bedingt erteilt werden. Ein Kaufvertrag kann grundsätzlich unter einer Bedingung geschlossen werden (z. B. Eigentumsvorbehalt)."
     },
@@ -321,7 +395,14 @@
       "difficulty": "schwer",
       "prompt": "A sieht auf der Website von Händler H ein Laptop für 999 Euro. Er klickt auf 'Kaufen' und schließt den Bestellvorgang ab. H sendet eine automatische Eingangsbestätigung, aber noch keine Auftragsbestätigung. Ist bereits ein Kaufvertrag zustande gekommen? Erläutern Sie kurz.",
       "sampleAnswer": "Die Produktpräsentation auf der Website ist eine invitatio ad offerendum, da H sich gegenüber einer unbestimmten Anzahl von Personen noch nicht verbindlich binden wollte (Gefahr unerfüllbarer Verträge). Das Angebot im Rechtssinn (§ 145 BGB) macht A durch Abschluss des Bestellvorgangs. Die automatische Eingangsbestätigung ist keine Annahme, sondern nur die Bestätigung des Eingangs der Bestellung. H hat das Angebot noch nicht angenommen. Ein Kaufvertrag ist noch nicht zustande gekommen.",
-      "keywords": ["invitatio", "angebot", "annahme", "eingangsbestätigung", "keine annahme", "rechtsbindungswille"],
+      "keywords": [
+        "invitatio",
+        "angebot",
+        "annahme",
+        "eingangsbestätigung",
+        "keine annahme",
+        "rechtsbindungswille"
+      ],
       "explanation": "Kern der Antwort: Website = invitatio, Bestellung von A = Angebot, automatische Eingangsbestätigung = noch keine Annahme. Erst Versandbestätigung/Auftragsbestätigung = Annahme."
     },
     {
@@ -336,7 +417,9 @@
         "Bei Fristende an einem Sonntag verlängert sich die Frist um 7 Tage",
         "§ 193 BGB gilt für alle Fristen, also auch für Erlöschensfristen"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "§ 193 BGB verschiebt das Fristende auf den nächsten Werktag, wenn es auf Samstag, Sonntag oder Feiertag fällt – aber nur, wenn innerhalb der Frist eine Willenserklärung abzugeben oder eine Leistung zu bewirken ist (Handlungsfrist). Reine Erlöschensfristen (z. B. Kündigungsfristen) fallen nicht darunter."
     },
     {

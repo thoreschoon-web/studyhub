@@ -1,0 +1,344 @@
+[
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z1",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was ist die Ordnungsfunktion des Rechts?",
+    "back": "Das Recht regelt das Zusammenleben, schafft stabile Verhaltenserwartungen und koordiniert Interessen in der Gesellschaft."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z2",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was ist die Gestaltungs-/Steuerungsfunktion des Rechts?",
+    "back": "Das Recht lenkt Verhalten durch Ge- und Verbote sowie Anreize gezielt in eine bestimmte Richtung (z.B. Umweltschutz, Verbraucherschutz)."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z3",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Wie unterscheiden sich Rechtsnorm und Gesetz?",
+    "back": "Das Gesetz ist ein formeller Akt des Gesetzgebers; die Rechtsnorm ist die kleinste Einheit innerhalb eines Gesetzes (einzelne Wenn-dann-Regel)."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z4",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was bedeutet generell-abstrakt bei einer Rechtsnorm?",
+    "back": "Generell = richtet sich an eine unbestimmte Vielzahl von Personen; abstrakt = regelt eine unbestimmte Vielzahl von Fällen."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z5",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was ist ein subjektives Recht?",
+    "back": "Ein der Person zugeordnetes, individuell durchsetzbares Recht (z.B. Anspruch, Eigentum). Gegenteil: objektives Recht (Gesamtheit der Rechtsnormen)."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z6",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Wie unterscheiden sich absolute und relative Rechte?",
+    "back": "Absolute Rechte wirken gegen jedermann (z.B. Eigentum, Personlichkeitsrecht). Relative Rechte wirken nur zwischen bestimmten Personen (z.B. Forderung aus Vertrag)."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z7",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was ist eine Anspruchsgrundlage?",
+    "back": "Eine Rechtsnorm, die einem Rechtssubjekt das Recht gibt, von einem anderen ein Tun, Dulden oder Unterlassen zu verlangen (z.B. § 433 I BGB)."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z8",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was versteht man unter dem ethischen Minimum?",
+    "back": "Der kleinste gemeinsame Nenner von Moral und Recht: Nur ein Teil der moralischen Normen ist rechtlich verbindlich (z.B. Verbot von Totschlag)."
+  },
+  {
+    "id": "methodik-grundlagen-der-rechtsanwendung-me-z9",
+    "topicId": "methodik-grundlagen-der-rechtsanwendung-me",
+    "front": "Was ist die Streitentscheidungs-/Befriedungsfunktion des Rechts?",
+    "back": "Das Recht bietet Mechanismen zur verbindlichen Losung von Konflikten und ersetzt private Selbsthilfe durch staatliches Verfahren."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z1",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Wie ist eine Rechtsnorm aufgebaut?",
+    "back": "Wenn-dann-Struktur: Tatbestand (Voraussetzungen) --> Rechtsfolge. Sind alle Tatbestandsmerkmale erfullt, tritt die Rechtsfolge ein."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z2",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was ist der Unterschied zwischen kumulativen und alternativen Tatbestandsmerkmalen?",
+    "back": "Kumulativ (und): alle Merkmale mussen vorliegen. Alternativ (oder): es genugt das Vorliegen eines Merkmals."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z3",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was sind negativ gefasste Tatbestandsmerkmale?",
+    "back": "Voraussetzungen, die gerade nicht vorliegen durfen (z.B. kein Ausschlussgrund). Ihr Fehlen wird zur Voraussetzung der Rechtsfolge."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z4",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was ist eine Legaldefinition?",
+    "back": "Eine gesetzlich festgelegte Definition eines Begriffs (Hilfsnorm), die fur alle Normen gilt, die diesen Begriff verwenden (z.B. § 90 BGB: Sache)."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z5",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was ist der Unterschied zwischen Rechtsgrundverweis und Rechtsfolgenverweis?",
+    "back": "Rechtsgrundverweis: Tatbestand der Verweisungsnorm ist vollstandig zu prufen. Rechtsfolgenverweis: nur die Rechtsfolge der anderen Norm wird ubernommen."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z6",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Wie zitiert man eine Rechtsnorm korrekt (Kurzform)?",
+    "back": "Paragrafzeichen, Absatz (Abs. oder romische Zahl), Satz (S.), Nummer (Nr.), Buchstabe (lit.), Alternative (Alt.) -- z.B. § 433 Abs. 1 S. 1 BGB."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z7",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Wann verwendet man 'i.V.m.' beim Zitieren?",
+    "back": "Bei Verweisungsnormen: die Grundnorm wird zusammen mit der Verweisungsnorm angegeben, z.B. § 985 BGB i.V.m. § 90 BGB."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z8",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was bedeutet §§ 433 ff. BGB?",
+    "back": "§§ 433 und folgende: erfasst § 433 und alle direkt anschliessenden Paragraphen eines Abschnitts (nicht nur den nachsten)."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z9",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was ist die Beweislastfunktion des Tatbestands?",
+    "back": "Wer die Rechtsfolge einer Norm geltend macht, tragt die Beweislast fur das Vorliegen der positiven Tatbestandsmerkmale (Grundsatz: Vollbeweislast beim Anspruchsteller)."
+  },
+  {
+    "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z10",
+    "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+    "front": "Was ist ein Gestaltungsrecht?",
+    "back": "Ein subjektives Recht, durch einseitige Erklarung ein Rechtsverhaltnis zu verandern (z.B. Anfechtung, Rucktritt, Kundigung)."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z1",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Was sind die vier Schritte des Gutachtenstils?",
+    "back": "1. Obersatz (Hypothese), 2. Definition (abstrakte Voraussetzungen), 3. Subsumtion (Sachverhalt unter Definition), 4. Ergebnis (positiv, kein Konjunktiv)."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z2",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Wie lautet ein typischer Obersatz im Gutachtenstil?",
+    "back": "Fraglich ist, ob / K konnte gegen V einen Anspruch auf ... aus § ... BGB haben. (Konjunktiv + offene Frage)."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z3",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Wie unterscheidet sich Gutachtenstil vom Urteilsstil?",
+    "back": "Gutachtenstil: Hypothese --> Begrundung --> Ergebnis (offenes Ergebnis zuerst). Urteilsstil: Ergebnis --> Begrundung (Ergebnis vorweg). Im Examen: Gutachtenstil."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z4",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Was ist Subsumtion?",
+    "back": "Das Unterordnen des konkreten Sachverhalts unter die abstrakt definierte Voraussetzung der Rechtsnorm: 'Hier liegt X vor, weil ...'."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z5",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Was bedeutet Schwerpunktsetzung im Gutachten?",
+    "back": "Unstreitige und klare Merkmale werden kurz abgehandelt; problematische Merkmale erhalten ausfuhrliche Prufung. Zeit und Umfang dem Schwierigkeitsgrad anpassen."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z6",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Was ist ein Hilfsgutachten?",
+    "back": "Pruft man ein weiteres Merkmal, obwohl ein fruheres bereits verneint wurde (hypothetisch 'hilfsweise'). Sichert Punkte fur den Fall falscher Vorentscheidung."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z7",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Was bedeuten die Zeichen (+), (-), (P) in der Losungsskizze?",
+    "back": "(+) Merkmal liegt vor, (-) Merkmal fehlt, (P) Merkmal ist problematisch/strittig und bedarf ausfuhrlicher Prufung."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z8",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Warum enthalt das Ergebnis keinen Konjunktiv?",
+    "back": "Das Ergebnis ist eine feststehende Feststellung ('Somit hat K gegen V einen Anspruch ...'). Der Konjunktiv ist nur im Obersatz (Hypothese) zulassig."
+  },
+  {
+    "id": "methodik-gutachtenstil-und-fallloesung-met-z9",
+    "topicId": "methodik-gutachtenstil-und-fallloesung-met",
+    "front": "Wie viel Zeit sollte die Losungsskizze in Anspruch nehmen?",
+    "back": "Maximal ein Drittel der gesamten Bearbeitungszeit, um ausreichend Zeit fur das eigentliche Gutachten zu behalten."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z1",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was sind die vier klassischen Auslegungsmethoden?",
+    "back": "1. Grammatikalisch (Wortlaut), 2. Systematisch (Zusammenhang im Gesetz), 3. Teleologisch (Sinn und Zweck), 4. Historisch (Entstehungsgeschichte)."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z2",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was pruft die grammatikalische Auslegung?",
+    "back": "Den sprachlichen Wortlaut der Norm: mogliche Bedeutungen nach dem allgemeinen oder juristischen Sprachgebrauch. Bildet die Wortlautgrenze."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z3",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was ist die teleologische Auslegung?",
+    "back": "Auslegung nach Sinn und Zweck der Norm (ratio legis). Fragt, welches Ziel der Gesetzgeber mit der Regelung verfolgt."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z4",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was sind unbestimmte Rechtsbegriffe und wie werden sie gehandhabt?",
+    "back": "Begriffe mit Auslegungsspielraum (z.B. 'gute Sitten', 'Treu und Glauben'). Sie werden durch Auslegung und Konkretisierung im Einzelfall gefullt."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z5",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was sind die Voraussetzungen einer Analogie?",
+    "back": "1. Planwidrige Regelungslucke im Gesetz, 2. vergleichbare Interessenlage (Gleichheit der Sachverhalte). Die Norm wird auf den nicht geregelten Fall angewendet."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z6",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was ist die Wortlautgrenze?",
+    "back": "Auslegung darf den moglichen Wortsinn nicht uberschreiten; daruber hinaus ist nur Analogie (oder teleologische Reduktion) zugelassen, keine Auslegung."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z7",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was ist eine teleologische Reduktion?",
+    "back": "Einschrankung des zu weit gefassten Wortlauts einer Norm auf ihren eigentlichen Zweck. Gegenstuck zur Analogie (dort Ausdehnung, hier Einschrankung)."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z8",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was ist ein Umkehrschluss (argumentum e contrario)?",
+    "back": "Aus dem Schweigen des Gesetzes zu einem Fall wird geschlossen, dass die Norm auf diesen Fall gerade nicht angewendet werden soll."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z9",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was ist ein Erst-recht-Schluss (a maiore / a minore)?",
+    "back": "A maiore ad minus: Was fur das Mehr gilt, gilt erst recht fur das Weniger. A minore ad maius: Was beim Weniger verboten ist, ist beim Mehr erst recht verboten."
+  },
+  {
+    "id": "methodik-auslegung-analogie-und-argumentat-z10",
+    "topicId": "methodik-auslegung-analogie-und-argumentat",
+    "front": "Was ist das Regel-Ausnahme-Verhaltnis in der Argumentation?",
+    "back": "Ausnahmenormen sind eng auszulegen und nicht analog anzuwenden. Die Regel gilt im Zweifel; die Ausnahme bedarf besonderer Begrundung."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z1",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was ist der Anwendungsvorrang des EU-Rechts?",
+    "back": "Kollidierendes nationales Recht wird verdrangt und darf nicht angewendet werden (kein Geltungsvorrang -- die nationale Norm bleibt, wird aber unangewendet gelassen)."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z2",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was besagt Art. 31 GG?",
+    "back": "Bundesrecht bricht Landesrecht: Bei Widerspruch zwischen Bundes- und Landesrecht gilt das Bundesrecht."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z3",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Wie lautet die Normenpyramide im Privatrecht?",
+    "back": "Zwingendes Gesetzesrecht > Vertrag (Privatautonomie) > dispositives Gesetzesrecht. Dispositives Recht gilt nur, wenn die Parteien nichts anderes vereinbart haben."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z4",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was ist Gewohnheitsrecht?",
+    "back": "Ungeschriebenes Recht, das durch langere einheitliche Ubung (consuetudo) und die Uberzeugung seiner Rechtsgeltung (opinio iuris) entsteht."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z5",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was ist die Subordinationstheorie zur Abgrenzung offentliches Recht / Privatrecht?",
+    "back": "Offentliches Recht regelt Verhaltnisse zwischen Uber- und Untergeordneten (Staat -- Burger). Privatrecht regelt Verhaltnisse zwischen Gleichgeordneten."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z6",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was besagt der lex-specialis-Grundsatz?",
+    "back": "Das speziellere Gesetz geht dem allgemeinen vor. Das allgemeine Gesetz gilt nur erganzend (subsidiare Geltung), wenn das Spezialgesetz keine Regelung enthalt."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z7",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was besagt der lex-posterior-Grundsatz?",
+    "back": "Das spatere Gesetz verdrangt das fruhere, sofern beide denselben Rang haben und denselben Sachverhalt regeln."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z8",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Was ist der Unterschied zwischen Primar- und Sekundarrecht der EU?",
+    "back": "Primarrecht: Grundervertrage (EUV, AEUV). Sekundarrecht: abgeleitetes Recht (Verordnungen, Richtlinien, Beschlusse). Primarrecht geht vor."
+  },
+  {
+    "id": "methodik-rechtsquellen-normenpyramide-und-z9",
+    "topicId": "methodik-rechtsquellen-normenpyramide-und",
+    "front": "Welche Funktion hat das BGB AT gegenuber den Sondergesetzen?",
+    "back": "Das BGB AT ist allgemeines Gesetz und gilt subsidiare (Erganzungsfunktion), soweit Sondergesetze (z.B. HGB, AGBG, VerbrKrG) keine eigene Regelung treffen."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z1",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Was sind die drei Stufen der Anspruchsprufung?",
+    "back": "1. Anspruch entstanden? 2. Anspruch nicht erloschen? 3. Anspruch durchsetzbar? Erst wenn alle drei bejaht sind, besteht der Anspruch."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z2",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Was sind rechtshindernde Einwendungen?",
+    "back": "Sie verhindern das Entstehen des Anspruchs (Stufe 1), z.B. Geschaftsunfahigkeit, Formmangel, Verstoss gegen § 134 oder § 138 BGB, fehlende Zustimmung."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z3",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Was sind rechtsvernichtende Einwendungen?",
+    "back": "Sie lassen den zunachst entstandenen Anspruch erlischen (Stufe 2), z.B. Erfullung, Aufrechnung, Unmoglichkeit, Rucktritt, Erlass."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z4",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Was sind rechtshemmende Einreden?",
+    "back": "Sie machen den Anspruch (vorubergehend) nicht durchsetzbar (Stufe 3). Mussen geltend gemacht werden, z.B. Verjahrungs- oder Zuruckbehaltungseinrede."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z5",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Welche Wirkung hat die Verjahrungs­einrede?",
+    "back": "Der Schuldner kann die Leistung dauerhaft verweigern (§ 214 BGB); der Anspruch erloscht nicht, ist aber nicht mehr durchsetzbar (rechtshemmende Einrede)."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z6",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Was bedeutet Falligkeit im Rahmen der Durchsetzbarkeit?",
+    "back": "Der Anspruch muss fallig sein, d.h. der Glaubiger kann die Leistung sofort verlangen (§ 271 BGB: im Zweifel sofort fallig)."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z7",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Warum werden ruckbeziehende Tatbestandsmerkmale zuletzt gepruft?",
+    "back": "Sie setzen das Vorliegen anderer Merkmale voraus (z.B. Verschulden nach Pflichtverletzung). Pruft man sie zuerst, fehlt die Grundlage."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z8",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Was bedeutet 'Wirknorm vor Rechtsgrund' bei der Prufungsreihenfolge?",
+    "back": "Die anspruchsbegrundende (wirkende) Norm wird zuerst gepruft; danach folgen Rechtsgrundfragen (z.B. ob ein Behaltensdurfnis besteht)."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z9",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Wie lautet das Grundschema fur § 280 I BGB (Schadensersatz)?",
+    "back": "1. Schuldverhaltnis, 2. Pflichtverletzung, 3. Vertretenmussen (wird vermutet, § 280 I 2 BGB), 4. Schaden -- dann Schadensersatzpflicht."
+  },
+  {
+    "id": "methodik-gliederung-der-anspruchspruefung-z10",
+    "topicId": "methodik-gliederung-der-anspruchspruefung",
+    "front": "Welche Einwendung ist § 138 BGB und auf welcher Prufungsstufe?",
+    "back": "§ 138 BGB (sittenwidriges Rechtsgeschaft) ist eine rechtshindernde Einwendung (Stufe 1): das Rechtsgeschaft ist nichtig, der Anspruch entsteht gar nicht erst."
+  }
+]

@@ -53,13 +53,37 @@
           "kind": "table",
           "id": "tab-oeffentlich-privat",
           "title": "Öffentliches Recht vs. Privatrecht im Überblick",
-          "headers": ["Merkmal", "Öffentliches Recht", "Privatrecht"],
+          "headers": [
+            "Merkmal",
+            "Öffentliches Recht",
+            "Privatrecht"
+          ],
           "rows": [
-            ["Verhältnis", "Über-/Unterordnung (Staat – Bürger)", "Gleichordnung (Bürger – Bürger)"],
-            ["Beispiele", "Staatsrecht, Verwaltungsrecht, Strafrecht, Sozialrecht", "Bürgerliches Recht (BGB), Handelsrecht, Gesellschaftsrecht, Arbeitsrecht"],
-            ["Gerichtszweig", "Verwaltungsgerichte, Strafgerichte", "Zivilgerichte (Amts-/Landgericht)"],
-            ["Grundprinzip", "Legalitätsprinzip – Staat darf nur, was erlaubt ist", "Privatautonomie – Bürger darf alles, was nicht verboten ist"],
-            ["Klausurrelevanz", "Nachbarveranstaltung \"Öffentliches Recht\"", "Diese Veranstaltung"]
+            [
+              "Verhältnis",
+              "Über-/Unterordnung (Staat – Bürger)",
+              "Gleichordnung (Bürger – Bürger)"
+            ],
+            [
+              "Beispiele",
+              "Staatsrecht, Verwaltungsrecht, Strafrecht, Sozialrecht",
+              "Bürgerliches Recht (BGB), Handelsrecht, Gesellschaftsrecht, Arbeitsrecht"
+            ],
+            [
+              "Gerichtszweig",
+              "Verwaltungsgerichte, Strafgerichte",
+              "Zivilgerichte (Amts-/Landgericht)"
+            ],
+            [
+              "Grundprinzip",
+              "Legalitätsprinzip – Staat darf nur, was erlaubt ist",
+              "Privatautonomie – Bürger darf alles, was nicht verboten ist"
+            ],
+            [
+              "Klausurrelevanz",
+              "Nachbarveranstaltung \"Öffentliches Recht\"",
+              "Diese Veranstaltung"
+            ]
           ]
         }
       ],
@@ -118,11 +142,27 @@
           "kind": "table",
           "id": "tab-rechtsquellen",
           "title": "Rechtsquellen und ihre Rangordnung (Kollisionsregeln)",
-          "headers": ["Kollisionsregel", "Bedeutung", "Beispiel"],
+          "headers": [
+            "Kollisionsregel",
+            "Bedeutung",
+            "Beispiel"
+          ],
           "rows": [
-            ["Lex superior (höherrangig)", "Höheres Recht geht vor niedrigerem", "GG bricht einfaches Gesetz; EU-Recht hat Anwendungsvorrang"],
-            ["Lex specialis (spezieller)", "Spezielleres Gesetz geht vor allgemeinerem", "Kaufrecht §§ 433 ff. BGB geht vor BGB AT als allg. Regelung"],
-            ["Lex posterior (jünger)", "Neueres Gesetz verdrängt älteres", "Weimarer Reichsverfassung wurde durch GG verdrängt"]
+            [
+              "Lex superior (höherrangig)",
+              "Höheres Recht geht vor niedrigerem",
+              "GG bricht einfaches Gesetz; EU-Recht hat Anwendungsvorrang"
+            ],
+            [
+              "Lex specialis (spezieller)",
+              "Spezielleres Gesetz geht vor allgemeinerem",
+              "Kaufrecht §§ 433 ff. BGB geht vor BGB AT als allg. Regelung"
+            ],
+            [
+              "Lex posterior (jünger)",
+              "Neueres Gesetz verdrängt älteres",
+              "Weimarer Reichsverfassung wurde durch GG verdrängt"
+            ]
           ]
         }
       ],
@@ -143,16 +183,52 @@
           "kind": "table",
           "id": "tab-zitierweise",
           "title": "Zitierweise von Rechtsnormen: lang vs. kurz",
-          "headers": ["Element", "Langversion (für Klausur/Hausarbeit)", "Kurzversion (für Lösungsskizze)"],
+          "headers": [
+            "Element",
+            "Langversion (für Klausur/Hausarbeit)",
+            "Kurzversion (für Lösungsskizze)"
+          ],
           "rows": [
-            ["Paragraf", "§ 1 BGB", "§ 1 BGB"],
-            ["Mit Absatz", "§ 92 Abs. 2 BGB", "§ 92 II BGB"],
-            ["Mit Absatz + Satz", "Art. 5 Abs. 1 S. 2 GG", "Art. 5 I 2 GG"],
-            ["Satz ohne Absatz", "§ 111 S. 2 BGB", "§ 111 S. 2 BGB"],
-            ["Mit Nummer", "§ 104 Nr. 1 BGB", "§ 104 Nr. 1 BGB"],
-            ["Mit Buchstabe", "§ 309 Nr. 1 lit. c BGB", "§ 309 Nr. 1 c) BGB"],
-            ["Mehrere §§", "§§ 145 ff. BGB", "§§ 145 ff. BGB"],
-            ["Verweis", "§ 108 i.V.m. § 184 BGB", "§ 108 i.V.m. § 184 BGB"]
+            [
+              "Paragraf",
+              "§ 1 BGB",
+              "§ 1 BGB"
+            ],
+            [
+              "Mit Absatz",
+              "§ 92 Abs. 2 BGB",
+              "§ 92 II BGB"
+            ],
+            [
+              "Mit Absatz + Satz",
+              "Art. 5 Abs. 1 S. 2 GG",
+              "Art. 5 I 2 GG"
+            ],
+            [
+              "Satz ohne Absatz",
+              "§ 111 S. 2 BGB",
+              "§ 111 S. 2 BGB"
+            ],
+            [
+              "Mit Nummer",
+              "§ 104 Nr. 1 BGB",
+              "§ 104 Nr. 1 BGB"
+            ],
+            [
+              "Mit Buchstabe",
+              "§ 309 Nr. 1 lit. c BGB",
+              "§ 309 Nr. 1 c) BGB"
+            ],
+            [
+              "Mehrere §§",
+              "§§ 145 ff. BGB",
+              "§§ 145 ff. BGB"
+            ],
+            [
+              "Verweis",
+              "§ 108 i.V.m. § 184 BGB",
+              "§ 108 i.V.m. § 184 BGB"
+            ]
           ]
         }
       ],
@@ -244,6 +320,60 @@
       "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
       "front": "Wie zitiert man § 92 Absatz 2 BGB in der Langversion und der Kurzversion?",
       "back": "**Langversion** (für Klausur/Hausarbeit): § 92 Abs. 2 BGB\n\n**Kurzversion** (nur für Lösungsskizzen): § 92 II BGB\n\nWichtig: In einem Text nie beide Varianten mischen!"
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z1",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Was regelt das Privatrecht?",
+      "back": "Rechtsbeziehungen zwischen gleichgeordneten Personen (kein Hoheitsverhaltnis); Grundlage: BGB."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z2",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Privatautonomie - Grundlage?",
+      "back": "Art. 2 I GG; Freiheit, Rechtsverhaltnisse selbst zu gestalten (Abschluss-, Inhalts-, Formfreiheit)."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z3",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Unterschied: rechtsgeschäftlich vs. Realakt",
+      "back": "Rechtsgeschaft: Wille ist auf Rechtsfolge gerichtet (z.B. Kaufvertrag). Realakt: Rechtsfolge tritt kraft Gesetzes ein, unabhangig vom Willen (z.B. Verarbeitung § 950 BGB)."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z4",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Gefälligkeitsverhältnis - Rechtsfolge?",
+      "back": "Keine Rechtsbindung; kein Anspruch auf die Leistung (z.B. unter Freunden)."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z5",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Gutachtenstil: 4 Schritte",
+      "back": "1. Obersatz (fraglich ist...) 2. Definition 3. Subsumtion 4. Ergebnis (somit/folglich)."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z6",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Dreistufige Anspruchsprüfung",
+      "back": "1. Anspruch entstanden? 2. Anspruch nicht erloschen? 3. Anspruch durchsetzbar?"
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z7",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Anspruchsformel",
+      "back": "Wer will was von wem woraus? (§ 194 I BGB)"
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z8",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Einwendung vs. Einrede",
+      "back": "Einwendung: wirkt von Amts wegen (z.B. Erfullung § 362 BGB, Nichtigkeit). Einrede: muss geltend gemacht werden (z.B. Verjahrung § 214 BGB, Zuruckbehaltungsrecht § 273 BGB)."
+    },
+    {
+      "id": "einfuehrung-und-grundlagen-der-veranstaltu-z9",
+      "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+      "front": "Absolutes vs. relatives Recht",
+      "back": "Absolut: gilt gegenuber jedermann (Eigentum § 903 BGB). Relativ: gilt nur zwischen bestimmten Personen (Anspruch aus Vertrag)."
     }
   ],
   "quiz": [
@@ -259,7 +389,9 @@
         "Ausschließlich Straftaten und ihre Folgen",
         "Nur Vertragsbeziehungen zwischen Unternehmen"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Privatrecht regelt das Verhältnis zwischen Personen, die rechtlich auf gleicher Ebene stehen (Gleichordnung). Das Über-/Unterordnungsverhältnis Staat–Bürger ist das Kennzeichen des öffentlichen Rechts. Das Strafrecht gehört zum öffentlichen Recht. Privatrecht gilt für alle Personen, nicht nur für Unternehmen."
     },
     {
@@ -286,7 +418,13 @@
         "Familienrecht",
         "Erbrecht"
       ],
-      "correct": [0, 2, 3, 5, 6],
+      "correct": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ],
       "multiple": true,
       "explanation": "Das BGB besteht aus fünf Büchern: Allgemeiner Teil, Schuldrecht, Sachenrecht, Familienrecht und Erbrecht. Strafrecht (StGB) und Verwaltungsrecht gehören zum öffentlichen Recht und sind nicht im BGB geregelt."
     },
@@ -302,7 +440,9 @@
         "Privatrecht liegt vor, wenn eine Privatperson klagt",
         "Öffentliches Recht gilt immer dann, wenn ein Gericht entscheidet"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die modifizierte Subjektstheorie: Öffentliches Recht liegt vor, wenn die Norm nur den Staat als hoheitlich handelndes Rechtssubjekt berechtigt oder verpflichtet. Privatrecht gilt dagegen für jedermann gleich. Option A ist zu weit (der Staat kann auch privatrechtlich handeln). C und D sind falsch."
     },
     {
@@ -326,7 +466,9 @@
         "Lex specialis",
         "Lex generalis"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Lex specialis derogat legi generali: Die speziellere Norm verdrängt die allgemeinere. Das allgemeinere Recht gilt dann nur noch subsidiär (ergänzend). Lex posterior = neueres Recht verdrängt älteres. Lex superior = höherrangiges Recht geht vor."
     },
     {
@@ -343,7 +485,12 @@
         "Nur für den Staat selbst geltend (keine Außenwirkung)",
         "Außenwirkung"
       ],
-      "correct": [0, 2, 3, 5],
+      "correct": [
+        0,
+        2,
+        3,
+        5
+      ],
       "multiple": true,
       "explanation": "Eine Rechtsnorm ist generell-abstrakt (für viele Personen/Sachverhalte), hoheitlich (staatlich erlassen), allgemeinverbindlich (Zwang möglich) und hat Außenwirkung (gilt gegenüber Außenstehenden). Sitte und Moral teilen manche dieser Merkmale, sind aber weder hoheitlich noch allgemeinverbindlich."
     },
@@ -359,7 +506,9 @@
         "§ 104 Abs. 1 BGB",
         "Art. 104 Nr. 1 BGB"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Nummern werden in beiden Versionen (lang und kurz) mit \"Nr.\" abgekürzt: § 104 Nr. 1 BGB. \"I\" steht für Absatz (Abs.) in der Kurzversion. Art. verwendet man nur für Artikel (z. B. im GG oder EU-Verträgen), nicht für BGB-Paragrafen."
     },
     {
@@ -378,7 +527,14 @@
       "difficulty": "schwer",
       "prompt": "Erklären Sie in eigenen Worten, warum im Privatrecht \"dispositives Recht\" existiert und welche Funktion es hat.",
       "sampleAnswer": "Dispositives Recht existiert, weil im Privatrecht die Privatautonomie gilt: Jede Person soll ihre Rechtsbeziehungen grundsätzlich selbst gestalten können (Art. 2 Abs. 1 GG). Dennoch können Verträge lückenhaft sein – die Parteien regeln nicht jede Einzelheit. Dispositives Recht füllt diese Lücken mit sinnvollen Standardregelungen auf, die dem typischen Parteiwillen entsprechen. Es ist also ein \"gesetzlicher Standardvertrag\", der gilt, bis die Parteien etwas anderes vereinbaren.",
-      "keywords": ["privatautonomie", "lücke", "vertrag", "ergänzung", "standardregelung", "abbedingen"],
+      "keywords": [
+        "privatautonomie",
+        "lücke",
+        "vertrag",
+        "ergänzung",
+        "standardregelung",
+        "abbedingen"
+      ],
       "explanation": "Kerngedanke: Dispositives Recht respektiert die Privatautonomie, indem es nur einspringt, wenn die Parteien keine eigene Regelung getroffen haben. Es ist kein Zwangsrecht, sondern gesetzgeberisches Angebot."
     },
     {
@@ -388,7 +544,14 @@
       "difficulty": "schwer",
       "prompt": "Formulieren Sie den Obersatz für folgende Fallkonstellation im Gutachtenstil: Käufer K hat bei Verkäufer V ein Fahrrad für 300 EUR gekauft. V verweigert nun die Lieferung. K möchte das Fahrrad erhalten.",
       "sampleAnswer": "K könnte gegen V einen Anspruch auf Übergabe und Übereignung des Fahrrads aus § 433 Abs. 1 S. 1 BGB haben.",
-      "keywords": ["könnte", "anspruch", "§ 433", "übergabe", "übereignung", "haben"],
+      "keywords": [
+        "könnte",
+        "anspruch",
+        "§ 433",
+        "übergabe",
+        "übereignung",
+        "haben"
+      ],
       "explanation": "Der Obersatz nennt: (1) den Anspruchsteller (K), (2) den Anspruchsgegner (V), (3) den Inhalt des Anspruchs (Übergabe und Übereignung des Fahrrads), (4) die Anspruchsgrundlage (§ 433 Abs. 1 S. 1 BGB), und (5) die Formulierung im Konjunktiv II (\"könnte ... haben\"). Am Schluss steht ein Punkt, kein Ausrufezeichen."
     },
     {
@@ -403,7 +566,9 @@
         "Kaufrecht (§§ 433 ff. BGB)",
         "Staatsrecht"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Das Kaufrecht (§§ 433 ff. BGB) ist Teil des Schuldrechts im BGB und damit Privatrecht. Strafrecht, Verwaltungsrecht und Staatsrecht sind Teilgebiete des öffentlichen Rechts."
     }
   ],

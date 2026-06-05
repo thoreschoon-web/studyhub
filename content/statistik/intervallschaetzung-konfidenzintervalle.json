@@ -24,12 +24,24 @@
           "title": "Konfidenzintervall-Intuition: Viele Stichproben",
           "caption": "Jede Stichprobe liefert ein anderes KI (Balken). Der wahre Wert μ (gestrichelte Linie) wird von ~95 % aller Intervalle überdeckt — manche (rot) verfehlen ihn.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
           "markers": [
-            { "x": -1.96, "label": "−z₀,₉₇₅" },
-            { "x": 1.96, "label": "+z₀,₉₇₅" }
+            {
+              "x": -1.96,
+              "label": "−z₀,₉₇₅"
+            },
+            {
+              "x": 1.96,
+              "label": "+z₀,₉₇₅"
+            }
           ],
-          "shade": { "from": -1.96, "to": 1.96 }
+          "shade": {
+            "from": -1.96,
+            "to": 1.96
+          }
         }
       ]
     },
@@ -63,11 +75,23 @@
           "title": "Gauß-KI: Mittlerer Bereich mit Wahrscheinlichkeit 1−α",
           "caption": "Die schraffierten Randflächen haben zusammen die Fläche α. Die Marker bei ±z₁₋α/₂ begrenzen den zentralen (1−α)-Bereich. Das KI für μ entsteht durch Umformen dieser Ungleichung.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "from": -1.96, "to": 1.96 },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "from": -1.96,
+            "to": 1.96
+          },
           "markers": [
-            { "x": -1.96, "label": "−z₁₋α/₂ = −1,96" },
-            { "x": 1.96, "label": "+z₁₋α/₂ = +1,96" }
+            {
+              "x": -1.96,
+              "label": "−z₁₋α/₂ = −1,96"
+            },
+            {
+              "x": 1.96,
+              "label": "+z₁₋α/₂ = +1,96"
+            }
           ]
         }
       ]
@@ -95,14 +119,31 @@
           "title": "t-Verteilung vs. Standardnormalverteilung",
           "caption": "Die t-Verteilung (df=8, blau) hat dickere Ränder als die N(0,1) (rot gestrichelt). Deshalb ist das t-Quantil größer als das z-Quantil, und das KI wird breiter.",
           "dist": "t",
-          "params": { "df": 8 },
+          "params": {
+            "df": 8
+          },
           "markers": [
-            { "x": -2.306, "label": "−t₈;₀,₉₇₅ = −2,306" },
-            { "x": 2.306, "label": "+t₈;₀,₉₇₅ = +2,306" },
-            { "x": -1.96, "label": "−z₀,₉₇₅" },
-            { "x": 1.96, "label": "+z₀,₉₇₅" }
+            {
+              "x": -2.306,
+              "label": "−t₈;₀,₉₇₅ = −2,306"
+            },
+            {
+              "x": 2.306,
+              "label": "+t₈;₀,₉₇₅ = +2,306"
+            },
+            {
+              "x": -1.96,
+              "label": "−z₀,₉₇₅"
+            },
+            {
+              "x": 1.96,
+              "label": "+z₀,₉₇₅"
+            }
           ],
-          "shade": { "from": -2.306, "to": 2.306 }
+          "shade": {
+            "from": -2.306,
+            "to": 2.306
+          }
         }
       ]
     },
@@ -124,11 +165,22 @@
           "title": "Varianzfunktion p(1−p): Maximum bei p = 0,5",
           "caption": "Die geschätzte Varianz des Anteilsschätzers ist p(1−p) und hat ihr Maximum von 0,25 bei p=0,5. Für den Mindeststichprobenumfang wird stets dieser Worst-Case-Wert verwendet.",
           "functions": [
-            { "fn": "x*(1-x)", "label": "p·(1−p)", "color": "blue" }
+            {
+              "fn": "x*(1-x)",
+              "label": "p·(1−p)",
+              "color": "blue"
+            }
           ],
-          "domain": [0, 1],
+          "domain": [
+            0,
+            1
+          ],
           "points": [
-            { "x": 0.5, "y": 0.25, "label": "Max: (0,5 ; 0,25)" }
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "label": "Max: (0,5 ; 0,25)"
+            }
           ]
         }
       ]
@@ -161,11 +213,24 @@
           "title": "KI für Anteil: Standardnormalverteilung mit α/2-Flächen",
           "caption": "Beim approximativen Anteils-KI nutzt man ebenfalls die Standardnormalverteilung. Die schraffierten Flächen links und rechts haben je die Größe α/2 = 0,025 (für 95%-KI).",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "tail": "two", "from": -1.96, "to": 1.96 },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "tail": "two",
+            "from": -1.96,
+            "to": 1.96
+          },
           "markers": [
-            { "x": -1.96, "label": "−1,96" },
-            { "x": 1.96, "label": "+1,96" }
+            {
+              "x": -1.96,
+              "label": "−1,96"
+            },
+            {
+              "x": 1.96,
+              "label": "+1,96"
+            }
           ]
         }
       ],
@@ -226,6 +291,150 @@
       "topicId": "intervallschaetzung-konfidenzintervalle",
       "front": "Welche drei Quantile $z_w$ der Standardnormalverteilung sollte man für KIs kennen?",
       "back": "$z_{0{,}95} = 1{,}645$ (für 90 %-KI)\n$z_{0{,}975} = 1{,}96$ (für 95 %-KI)\n$z_{0{,}995} = 2{,}576$ (für 99 %-KI)"
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z1",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Was ist ein Konfidenzintervall?",
+      "back": "Zufälliges Intervall $[S_u; S_o]$ mit $P(\\theta \\in [S_u; S_o])=1-\\alpha$. Überdeckt den wahren Parameter mit Wahrscheinlichkeit $1-\\alpha$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z2",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Konfidenzniveau $1-\\alpha$",
+      "back": "Vertrauenswahrscheinlichkeit, mit der das KI den wahren Parameter enthält. Typisch: $0{,}90$, $0{,}95$, $0{,}99$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z3",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Irrtumswahrscheinlichkeit $\\alpha$",
+      "back": "$P(\\theta \\notin [S_u; S_o])=\\alpha$. Wahrscheinlichkeit, dass das konkrete KI den wahren Parameter nicht enthält."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z4",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Intervalllänge eines KI",
+      "back": "$L=S_o-S_u$. Kürzeres Intervall = präzisere Schätzung; abhängig von $n$, $\\sigma^2$ und $\\alpha$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z5",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "KI für $\\mu$ bei bekannter Varianz (Gauß-KI)",
+      "back": "$\\left[\\bar{X}-\\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}};\\;\\bar{X}+\\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}}\\right]$. Setzt Normalverteilung oder $n \\ge 30$ voraus."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z6",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Intervalllänge des Gauß-KI",
+      "back": "$L=\\frac{2\\,\\sigma\\,z_{1-\\alpha/2}}{\\sqrt{n}}$. Kleiner bei größerem $n$, kleinerem $\\sigma$ oder kleinerem $z_{1-\\alpha/2}$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z7",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Mindeststichprobenumfang für vorgegebene Länge $L$ (bekannte Varianz)",
+      "back": "$n \\ge \\left(\\frac{2\\,\\sigma\\,z_{1-\\alpha/2}}{L}\\right)^2$. Immer aufrunden auf nächste ganze Zahl."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z8",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Wie beeinflusst $\\alpha$ die KI-Länge?",
+      "back": "Größeres $\\alpha$ $\\Rightarrow$ kleineres $z_{1-\\alpha/2}$ $\\Rightarrow$ kürzeres KI, aber geringere Vertrauenswahrscheinlichkeit. Trade-off."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z9",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "KI für $\\mu$ bei unbekannter Varianz",
+      "back": "$\\left[\\bar{X} \\pm t_{n-1,\\,1-\\alpha/2}\\,\\frac{\\hat{\\sigma}}{\\sqrt{n}}\\right]$. Verwendet $t$-Verteilung mit $n-1$ Freiheitsgraden statt $z$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z10",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Pivotgröße bei unbekannter Varianz",
+      "back": "$\\frac{\\sqrt{n}(\\bar{X}-\\mu)}{\\hat{\\sigma}} \\sim t_{n-1}$. Analog zur Standardisierung, aber mit $\\hat{\\sigma}$ statt $\\sigma$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z11",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "$t$-Verteilung vs. Standardnormalverteilung",
+      "back": "$t_{n-1}$ hat breitere Ränder als $N(0,1)$. Für $n \\ge 30$ Faustregel: $t_{n-1,1-\\alpha/2} \\approx z_{1-\\alpha/2}$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z12",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "KI für $\\mu$ bei nicht-normalverteilter GG (bekannte Varianz)",
+      "back": "$\\left[\\bar{X} \\pm \\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}}\\right]$. Approximativ gültig via ZGWS für $n \\ge 30$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z13",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "KI für $\\mu$ bei nicht-normalverteilter GG (unbekannte Varianz)",
+      "back": "$\\left[\\bar{X} \\pm \\frac{z_{1-\\alpha/2}\\,\\hat{\\sigma}}{\\sqrt{n}}\\right]$. Doppelt approximativ (ZGWS + $\\hat{\\sigma}$ statt $\\sigma$); $n \\ge 30$ erforderlich."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z14",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Approximatives KI für den Anteil $p$",
+      "back": "$\\left[\\bar{X} \\pm \\frac{z_{1-\\alpha/2}\\,\\hat{\\sigma}}{\\sqrt{n}}\\right]$ mit $\\hat{\\sigma}=\\sqrt{\\bar{X}(1-\\bar{X})}$. Approximation via ZGWS."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z15",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Obere Schranke der geschätzten Varianz beim Anteil",
+      "back": "$\\hat{\\sigma}^2=\\hat{p}(1-\\hat{p}) \\le \\tfrac{1}{4}$. Maximum bei $\\hat{p}=0{,}5$ (Worst Case für konservative KI-Bestimmung)."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z16",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Mindeststichprobenumfang für Anteil $p$ (konservativ)",
+      "back": "$n \\ge \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$. Nutzt $\\hat{\\sigma}^2 \\le 1/4$; $\\varepsilon$ ist die halbe gewünschte Intervalllänge."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z17",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Mindeststichprobenumfang bei bekanntem $\\hat{p}$",
+      "back": "$n \\ge \\left(\\frac{z_{1-\\alpha/2}}{L^*}\\right)^2$ mit $L^*=2\\varepsilon$. Kleiner als konservativer Wert, wenn $\\hat{p}$ weit von $0{,}5$ entfernt."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z18",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Richtige Interpretation eines 95%-KI",
+      "back": "Bei 100 unabhängigen Stichproben überdecken ca. 95 der berechneten KIs den wahren Parameter. Nicht: der Parameter liegt mit 95% Wahrscheinlichkeit im konkreten Intervall."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z19",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Wann t-KI, wann z-KI?",
+      "back": "t-KI: $\\sigma$ unbekannt, normalverteilte GG. z-KI: $\\sigma$ bekannt oder $n \\ge 30$ (Approximation). Bei $n \\ge 30$ und unbekanntem $\\sigma$: z-KI mit $\\hat{\\sigma}$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z20",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Stichprobenvarianz $S^2$ im KI-Kontext",
+      "back": "$S^2=\\hat{\\sigma}^2=\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$. Wird im t-KI als Ersatz für unbekanntes $\\sigma^2$ eingesetzt."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z21",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Einfluss von $n$ auf die KI-Länge",
+      "back": "$L \\propto \\frac{1}{\\sqrt{n}}$. Vierfaches $n$ halbiert die Intervalllänge. Präzision wächst langsam mit dem Stichprobenumfang."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z22",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Zusammenfassung: KI-Formeln im Überblick",
+      "back": "Bekannt $\\sigma$, normal/groß $n$: z-KI. Unbekannt $\\sigma$, normal: t-KI. Unbekannt $\\sigma$, $n\\ge30$: z-KI mit $\\hat{\\sigma}$. Anteil: z-KI mit $\\hat{p}(1-\\hat{p})$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z23",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Quantil $z_{1-\\alpha/2}$ für gängige Niveaus",
+      "back": "$1-\\alpha=0{,}90$: $z=1{,}645$. $1-\\alpha=0{,}95$: $z=1{,}960$. $1-\\alpha=0{,}99$: $z=2{,}576$."
+    },
+    {
+      "id": "intervallschaetzung-konfidenzintervalle-z24",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "front": "Warum ist das KI zufällig, der Parameter aber fest?",
+      "back": "In der frequentistischen Statistik ist $\\theta$ ein fester unbekannter Wert. Die Zufälligkeit liegt im Intervall $[S_u,S_o]$, das von der zufälligen Stichprobe abhängt."
     }
   ],
   "quiz": [
@@ -241,7 +450,9 @@
         "95 % der Stichprobenwerte liegen in diesem Intervall.",
         "Das Intervall enthält 95 % der Grundgesamtheit."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der wahre Parameter $\\mu$ ist eine feste (unbekannte) Zahl. Das KI selbst ist zufällig (hängt von der Stichprobe ab). Die korrekte Aussage bezieht sich auf das Verfahren: Bei wiederholter Anwendung überdecken 95 % der so konstruierten Intervalle den wahren Wert."
     },
     {
@@ -306,7 +517,9 @@
         "$\\left[50 \\pm t_{16,\\ 0{,}975} \\cdot \\frac{4}{\\sqrt{16}}\\right]$",
         "$\\left[50 \\pm 1{,}96 \\cdot \\frac{4}{16}\\right]$"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Da $\\sigma^2$ unbekannt und $n=16 < 30$ ist, muss man das t-Quantil mit $df = n-1 = 15$ Freiheitsgraden verwenden: $t_{15,\\ 0{,}975}$. Option A wäre falsch (z statt t), Option C hat falsche df."
     },
     {
@@ -325,7 +538,13 @@
       "difficulty": "mittel",
       "prompt": "Erkläre in eigenen Worten, warum man bei unbekannter Varianz das t-Quantil anstelle des z-Quantils verwendet, und was der Unterschied zwischen beiden ist.",
       "sampleAnswer": "Bei bekannter Varianz $\\sigma^2$ ist die standardisierte Größe $(\\bar{X}-\\mu)/(\\sigma/\\sqrt{n})$ exakt standardnormalverteilt. Bei unbekannter Varianz ersetzt man $\\sigma$ durch den Schätzer $\\hat{\\sigma}$. Dadurch kommt ein weiterer Zufallsfehler ins Spiel, der die Verteilung in den Rändern 'dicker' macht — das ist die t-Verteilung. Ihre Quantile $t_{n-1,\\ 0{,}975}$ sind größer als $z_{0{,}975}=1{,}96$, was zu einem breiteren KI führt. Je kleiner $n$, desto größer der Unterschied. Für $n \\to \\infty$ nähert sich die t-Verteilung der Standardnormalverteilung an.",
-      "keywords": ["dicker ränder", "schätzer", "freiheitsgrade", "breiter", "unsicherheit"],
+      "keywords": [
+        "dicker ränder",
+        "schätzer",
+        "freiheitsgrade",
+        "breiter",
+        "unsicherheit"
+      ],
       "explanation": "Der Kernpunkt: Das Ersetzen von $\\sigma$ durch $\\hat{\\sigma}$ fügt Zufälligkeit hinzu. Die t-Verteilung modelliert diese zusätzliche Unsicherheit durch dickere Ränder (größere Quantile = breiteres KI)."
     },
     {
@@ -350,7 +569,10 @@
         "Bei gleichem Niveau: Eine Verdopplung von $n$ halbiert die Intervalllänge.",
         "Das t-Quantil ist immer größer als das entsprechende z-Quantil (für gleiches $\\alpha$)."
       ],
-      "correct": [0, 3],
+      "correct": [
+        0,
+        3
+      ],
       "multiple": true,
       "explanation": "Option A ist korrekt: höheres Niveau → größeres Quantil → breiteres Intervall. Option B ist falsch: Die Verdopplung von $n$ ergibt Faktor $\\sqrt{2}$ in $\\sqrt{n}$, die Länge sinkt um Faktor $1/\\sqrt{2} \\approx 0{,}707$, nicht um die Hälfte. Man müsste $n$ vervierfachen, um die Länge zu halbieren. Option D ist korrekt: Die t-Verteilung hat dickere Ränder, daher ist ihr Quantil stets größer als das der N(0,1)."
     },
@@ -363,6 +585,80 @@
       "answer": 499.238,
       "tolerance": 0.005,
       "explanation": "$\\hat{\\sigma} = \\sqrt{5{,}25} \\approx 2{,}2913$. Halbbreite: $2{,}306 \\cdot 2{,}2913/\\sqrt{9} = 2{,}306 \\cdot 0{,}7638 \\approx 1{,}762$. Untere Grenze: $501 - 1{,}762 = 499{,}238$."
+    },
+    {
+      "kind": "mc",
+      "id": "intervallschaetzung-konfidenzintervalle-zq1",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "leicht",
+      "prompt": "Das 95%-Konfidenzintervall für $\\mu$ bei bekannter Varianz $\\sigma^2$ und normalverteilter Grundgesamtheit lautet:",
+      "options": [
+        "$\\left[\\bar{X} - \\frac{1{,}96\\, \\sigma}{\\sqrt{n}}\\;\\;,\\;\\; \\bar{X} + \\frac{1{,}96\\, \\sigma}{\\sqrt{n}}\\right]$",
+        "$\\left[\\bar{X} - \\frac{1{,}645\\, \\sigma}{\\sqrt{n}}\\;\\;,\\;\\; \\bar{X} + \\frac{1{,}645\\, \\sigma}{\\sqrt{n}}\\right]$",
+        "$\\left[\\bar{X} - \\frac{1{,}96\\, \\hat{\\sigma}}{n}\\;\\;,\\;\\; \\bar{X} + \\frac{1{,}96\\, \\hat{\\sigma}}{n}\\right]$",
+        "$\\left[\\bar{X} - \\frac{\\sigma}{n}\\;\\;,\\;\\; \\bar{X} + \\frac{\\sigma}{n}\\right]$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Für $\\alpha = 0{,}05$ ist $z_{1-\\alpha/2} = z_{0{,}975} = 1{,}96$. Das KI lautet $\\bar{X} \\pm \\frac{1{,}96\\,\\sigma}{\\sqrt{n}}$. Die Intervalllänge ist $L = \\frac{2 \\cdot 1{,}96 \\cdot \\sigma}{\\sqrt{n}}$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "intervallschaetzung-konfidenzintervalle-zq2",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "leicht",
+      "prompt": "Bei unbekannter Varianz und normalverteilter Grundgesamtheit wird für das KI von $\\mu$ die $t$-Verteilung mit $n-1$ Freiheitsgraden verwendet.",
+      "answer": true,
+      "explanation": "Da $\\sigma$ unbekannt ist, wird $\\hat{\\sigma}$ geschätzt. Dann gilt $\\frac{\\sqrt{n}(\\bar{X}-\\mu)}{\\hat{\\sigma}} \\sim t_{n-1}$, und das KI verwendet das Quantil $t_{n-1,\\, 1-\\alpha/2}$ statt $z_{1-\\alpha/2}$."
+    },
+    {
+      "kind": "numeric",
+      "id": "intervallschaetzung-konfidenzintervalle-zq3",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Rohrlängen seien normalverteilt mit bekannter Varianz $\\sigma^2 = 2{,}25$ ($\\sigma = 1{,}5$). Bei $n = 9$ und $\\bar{x} = 10$ sowie $z_{0{,}975} = 1{,}96$ berechnen Sie die Halbbreite des 95%-KI (also $\\frac{z_{1-\\alpha/2}\\,\\sigma}{\\sqrt{n}}$).",
+      "answer": 0.98,
+      "tolerance": 0.01,
+      "unit": "",
+      "explanation": "Halbbreite $= \\frac{1{,}96 \\cdot 1{,}5}{\\sqrt{9}} = \\frac{1{,}96 \\cdot 1{,}5}{3} = \\frac{2{,}94}{3} = 0{,}98$."
+    },
+    {
+      "kind": "mc",
+      "id": "intervallschaetzung-konfidenzintervalle-zq4",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Der Mindeststichprobenumfang für ein KI für den Anteil $p$ mit Genauigkeit $\\varepsilon$ (Halbbreite $\\le \\varepsilon$) beträgt im schlechtesten Fall:",
+      "options": [
+        "$n \\ge \\left(\\dfrac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$",
+        "$n \\ge \\left(\\dfrac{z_{1-\\alpha/2}}{\\varepsilon}\\right)^2$",
+        "$n \\ge \\dfrac{z_{1-\\alpha/2}}{4\\varepsilon^2}$",
+        "$n \\ge \\dfrac{4}{z_{1-\\alpha/2}\\,\\varepsilon}$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Da $\\hat{\\sigma}^2 = \\hat{p}(1-\\hat{p}) \\le \\frac{1}{4}$ (Maximum bei $p=0{,}5$), ergibt sich im Worst Case: $n \\ge \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "intervallschaetzung-konfidenzintervalle-zq5",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "mittel",
+      "prompt": "Ein konkretes 95%-Konfidenzintervall, das aus einer realisierten Stichprobe berechnet wurde, enthält den wahren Parameter $\\mu$ mit Wahrscheinlichkeit 0,95.",
+      "answer": false,
+      "explanation": "Das realisierte KI ist eine feste Menge von Zahlen — es enthält $\\mu$ entweder oder nicht. Die Aussage '95% Wahrscheinlichkeit' bezieht sich auf das Verfahren: von vielen wiederholten Stichproben enthalten 95% der so berechneten Intervalle $\\mu$."
+    },
+    {
+      "kind": "numeric",
+      "id": "intervallschaetzung-konfidenzintervalle-zq6",
+      "topicId": "intervallschaetzung-konfidenzintervalle",
+      "difficulty": "schwer",
+      "prompt": "Bei einer Umfrage zum Wähleranteil einer Partei soll der geschätzte Anteil um höchstens $\\varepsilon = 0{,}01$ vom wahren Wert abweichen (Niveau $1 - \\alpha = 0{,}95$, $z_{0{,}975} = 1{,}96$). Berechnen Sie den Mindeststichprobenumfang.",
+      "answer": 9604,
+      "tolerance": 1,
+      "unit": "",
+      "explanation": "$n \\ge \\left(\\frac{z_{1-\\alpha/2}}{2\\varepsilon}\\right)^2 = \\left(\\frac{1{,}96}{2 \\cdot 0{,}01}\\right)^2 = \\left(\\frac{1{,}96}{0{,}02}\\right)^2 = 98^2 = 9604$."
     }
   ],
   "exercises": [

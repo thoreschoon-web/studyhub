@@ -32,12 +32,32 @@
           "kind": "table",
           "id": "reg-annahmen-tab",
           "title": "Modellannahmen im Überblick",
-          "headers": ["Annahme", "Formel", "Bedeutung"],
+          "headers": [
+            "Annahme",
+            "Formel",
+            "Bedeutung"
+          ],
           "rows": [
-            ["Nullmittelwert der Störgröße", "$E(u_i) = 0$", "Kein systematischer Fehler"],
-            ["Homoskedastizität", "$\\text{Var}(u_i) = \\sigma^2$", "Konstante Fehlerstreuung"],
-            ["Normalverteilung", "$u_i \\sim N(0, \\sigma^2)$", "Fehler sind normalverteilt"],
-            ["Erwartungswert von $y_i$", "$E(y_i) = a + b x_i$", "Die Gerade trifft den Mittelwert"]
+            [
+              "Nullmittelwert der Störgröße",
+              "$E(u_i) = 0$",
+              "Kein systematischer Fehler"
+            ],
+            [
+              "Homoskedastizität",
+              "$\\text{Var}(u_i) = \\sigma^2$",
+              "Konstante Fehlerstreuung"
+            ],
+            [
+              "Normalverteilung",
+              "$u_i \\sim N(0, \\sigma^2)$",
+              "Fehler sind normalverteilt"
+            ],
+            [
+              "Erwartungswert von $y_i$",
+              "$E(y_i) = a + b x_i$",
+              "Die Gerade trifft den Mittelwert"
+            ]
           ]
         }
       ],
@@ -72,21 +92,71 @@
           "title": "Regressionsgerade: Energieausgaben vs. Nahrungsmittelausgaben",
           "caption": "Die KQ-Regressionsgerade ŷ = 19,78 + 0,1878·x durch die 10 Datenpunkte. Die Gerade minimiert die Summe der quadrierten vertikalen Abstände (Residuen).",
           "functions": [
-            { "fn": "19.778 + 0.18778*x", "label": "ŷ = 19,78 + 0,1878·x", "color": "#2563eb" }
+            {
+              "fn": "19.778 + 0.18778*x",
+              "label": "ŷ = 19,78 + 0,1878·x",
+              "color": "#2563eb"
+            }
           ],
-          "domain": [200, 1500],
-          "range": [0, 320],
+          "domain": [
+            200,
+            1500
+          ],
+          "range": [
+            0,
+            320
+          ],
           "points": [
-            { "x": 300, "y": 100, "label": "H1" },
-            { "x": 500, "y": 70, "label": "H2" },
-            { "x": 600, "y": 170, "label": "H3" },
-            { "x": 700, "y": 120, "label": "H4" },
-            { "x": 700, "y": 150, "label": "H5" },
-            { "x": 800, "y": 160, "label": "H6" },
-            { "x": 900, "y": 200, "label": "H7" },
-            { "x": 1000, "y": 250, "label": "H8" },
-            { "x": 1100, "y": 190, "label": "H9" },
-            { "x": 1400, "y": 290, "label": "H10" }
+            {
+              "x": 300,
+              "y": 100,
+              "label": "H1"
+            },
+            {
+              "x": 500,
+              "y": 70,
+              "label": "H2"
+            },
+            {
+              "x": 600,
+              "y": 170,
+              "label": "H3"
+            },
+            {
+              "x": 700,
+              "y": 120,
+              "label": "H4"
+            },
+            {
+              "x": 700,
+              "y": 150,
+              "label": "H5"
+            },
+            {
+              "x": 800,
+              "y": 160,
+              "label": "H6"
+            },
+            {
+              "x": 900,
+              "y": 200,
+              "label": "H7"
+            },
+            {
+              "x": 1000,
+              "y": 250,
+              "label": "H8"
+            },
+            {
+              "x": 1100,
+              "y": 190,
+              "label": "H9"
+            },
+            {
+              "x": 1400,
+              "y": 290,
+              "label": "H10"
+            }
           ]
         }
       ]
@@ -126,13 +196,32 @@
           "title": "Regressionsgerade: Erklärt 79,3 % der Streuung (R² = 0,793)",
           "caption": "Die Datenpunkte streuen um die Gerade. Wäre R²=1, lägen alle Punkte exakt auf der Geraden.",
           "functions": [
-            { "fn": "19.778 + 0.18778*x", "label": "Regressionsgerade", "color": "#2563eb" },
-            { "fn": "170", "label": "Mittelwert ȳ = 170", "color": "#dc2626", "dashed": true }
+            {
+              "fn": "19.778 + 0.18778*x",
+              "label": "Regressionsgerade",
+              "color": "#2563eb"
+            },
+            {
+              "fn": "170",
+              "label": "Mittelwert ȳ = 170",
+              "color": "#dc2626",
+              "dashed": true
+            }
           ],
-          "domain": [200, 1500],
-          "range": [0, 320],
+          "domain": [
+            200,
+            1500
+          ],
+          "range": [
+            0,
+            320
+          ],
           "points": [
-            { "x": 800, "y": 170, "label": "Schwerpunkt (800, 170)" }
+            {
+              "x": 800,
+              "y": 170,
+              "label": "Schwerpunkt (800, 170)"
+            }
           ]
         }
       ]
@@ -155,12 +244,27 @@
           "title": "t-Verteilung mit 8 Freiheitsgraden: Test auf b = 0",
           "caption": "Zweiseitiger Test (α = 0,05): Ablehnbereich |T| > 2,306. Prüfgröße T_b = 5,54 liegt weit im Ablehnbereich.",
           "dist": "t",
-          "params": { "df": 8 },
-          "shade": { "from": -2.306, "to": 2.306, "tail": "two" },
+          "params": {
+            "df": 8
+          },
+          "shade": {
+            "from": -2.306,
+            "to": 2.306,
+            "tail": "two"
+          },
           "markers": [
-            { "x": -2.306, "label": "−t₈;0,975 = −2,306" },
-            { "x": 2.306, "label": "t₈;0,975 = 2,306" },
-            { "x": 5.54, "label": "T_b = 5,54" }
+            {
+              "x": -2.306,
+              "label": "−t₈;0,975 = −2,306"
+            },
+            {
+              "x": 2.306,
+              "label": "t₈;0,975 = 2,306"
+            },
+            {
+              "x": 5.54,
+              "label": "T_b = 5,54"
+            }
           ]
         }
       ]
@@ -226,6 +330,168 @@
       "topicId": "lineare-regression",
       "front": "Wie schätzt man $\\sigma^2$ (Störtermvarianz) im Regressionsmodell?",
       "back": "$$\\hat{\\sigma}^2 = \\frac{1}{n-2}\\sum_{i=1}^n \\hat{u}_i^2 = \\frac{\\text{RSS}}{n-2}$$\nDer Nenner ist $n-2$ (nicht $n$), weil 2 Parameter ($a$ und $b$) geschätzt wurden."
+    },
+    {
+      "id": "lineare-regression-z1",
+      "topicId": "lineare-regression",
+      "front": "Einfaches lineares Regressionsmodell",
+      "back": "$y_i = a + b x_i + u_i$, $\\;i = 1,\\dots,n$; $u_i$ Störgröße mit $E(u_i) = 0$, $\\text{Var}(u_i) = \\sigma^2$."
+    },
+    {
+      "id": "lineare-regression-z2",
+      "topicId": "lineare-regression",
+      "front": "Was ist Homoskedastizität?",
+      "back": "Konstante Varianz der Störgrößen: $\\text{Var}(u_i) = \\sigma^2$ für alle $i$."
+    },
+    {
+      "id": "lineare-regression-z3",
+      "topicId": "lineare-regression",
+      "front": "KQ-Prinzip",
+      "back": "Minimiere $\\sum_{i=1}^n (y_i - a - b x_i)^2$ nach $a$ und $b$."
+    },
+    {
+      "id": "lineare-regression-z4",
+      "topicId": "lineare-regression",
+      "front": "KQ-Schätzer für die Steigung $\\hat{b}$",
+      "back": "$\\hat{b} = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2} = \\dfrac{s_{xy}}{s_x^2} = \\dfrac{\\overline{xy} - \\bar{x}\\bar{y}}{\\overline{x^2} - \\bar{x}^2}$"
+    },
+    {
+      "id": "lineare-regression-z5",
+      "topicId": "lineare-regression",
+      "front": "KQ-Schätzer für den Achsenabschnitt $\\hat{a}$",
+      "back": "$\\hat{a} = \\bar{y} - \\hat{b}\\,\\bar{x}$"
+    },
+    {
+      "id": "lineare-regression-z6",
+      "topicId": "lineare-regression",
+      "front": "Regressionsgerade geht durch den Schwerpunkt",
+      "back": "Ja. Der Punkt $(\\bar{x}, \\bar{y})$ liegt immer auf der geschätzten Geraden."
+    },
+    {
+      "id": "lineare-regression-z7",
+      "topicId": "lineare-regression",
+      "front": "Schätzer für die Störtermvarianz $\\hat{\\sigma}^2$",
+      "back": "$\\hat{\\sigma}^2 = \\dfrac{1}{n-2} \\sum (y_i - \\hat{a} - \\hat{b}\\,x_i)^2$"
+    },
+    {
+      "id": "lineare-regression-z8",
+      "topicId": "lineare-regression",
+      "front": "Warum Nenner $n-2$ bei $\\hat{\\sigma}^2$?",
+      "back": "Zwei Parameter ($a$, $b$) werden geschätzt, daher 2 Freiheitsgrade weniger."
+    },
+    {
+      "id": "lineare-regression-z9",
+      "topicId": "lineare-regression",
+      "front": "Bestimmtheitsmaß $R^2$",
+      "back": "$R^2 = r_{xy}^2 = 1 - \\dfrac{s_{\\hat{u}}^2}{s_y^2}$, $\\;0 \\le R^2 \\le 1$. Anteil der durch $X$ erklärten Varianz von $Y$."
+    },
+    {
+      "id": "lineare-regression-z10",
+      "topicId": "lineare-regression",
+      "front": "$R^2 = 0$ bedeutet…",
+      "back": "$X$ erklärt die Varianz von $Y$ überhaupt nicht; kein linearer Zusammenhang."
+    },
+    {
+      "id": "lineare-regression-z11",
+      "topicId": "lineare-regression",
+      "front": "$R^2 = 1$ bedeutet…",
+      "back": "Alle Beobachtungen liegen exakt auf der Regressionsgeraden; perfekte lineare Anpassung."
+    },
+    {
+      "id": "lineare-regression-z12",
+      "topicId": "lineare-regression",
+      "front": "Geschätzte Varianz von $\\hat{b}$",
+      "back": "$\\hat{\\sigma}_{\\hat{b}}^2 = \\dfrac{\\hat{\\sigma}^2}{\\sum x_i^2 - n\\bar{x}^2} = \\dfrac{\\hat{\\sigma}^2}{n\\,s_x^2}$"
+    },
+    {
+      "id": "lineare-regression-z13",
+      "topicId": "lineare-regression",
+      "front": "Konfidenzintervall für $b$",
+      "back": "$KI(b) = \\left[\\hat{b} \\pm t_{1-\\alpha/2,\\,n-2}\\,\\hat{\\sigma}_{\\hat{b}}\\right]$"
+    },
+    {
+      "id": "lineare-regression-z14",
+      "topicId": "lineare-regression",
+      "front": "Hypothesentest auf $b = 0$: Prüfgröße",
+      "back": "$T_b = \\dfrac{\\hat{b}}{\\hat{\\sigma}_{\\hat{b}}} \\sim t_{n-2}$. Alternativ: $T = r \\cdot \\dfrac{\\sqrt{n-2}}{\\sqrt{1-r^2}}$."
+    },
+    {
+      "id": "lineare-regression-z15",
+      "topicId": "lineare-regression",
+      "front": "Konfidenzintervall für $a$",
+      "back": "$KI(a) = \\left[\\hat{a} \\pm t_{1-\\alpha/2,\\,n-2}\\,\\hat{\\sigma}_{\\hat{a}}\\right]$"
+    },
+    {
+      "id": "lineare-regression-z16",
+      "topicId": "lineare-regression",
+      "front": "Prognose $\\hat{y}_0$ für einen neuen Wert $x_0$",
+      "back": "$\\hat{y}_0 = \\hat{a} + \\hat{b}\\,x_0$"
+    },
+    {
+      "id": "lineare-regression-z17",
+      "topicId": "lineare-regression",
+      "front": "Erwartungstreue der KQ-Schätzer",
+      "back": "$E(\\hat{a}) = a$, $\\;E(\\hat{b}) = b$, $\\;E(\\hat{\\sigma}^2) = \\sigma^2$."
+    },
+    {
+      "id": "lineare-regression-z18",
+      "topicId": "lineare-regression",
+      "front": "Verteilung von $y_i$ bei Normalverteilungsannahme",
+      "back": "$y_i \\sim N(a + b x_i,\\,\\sigma^2)$"
+    },
+    {
+      "id": "lineare-regression-z19",
+      "topicId": "lineare-regression",
+      "front": "Was misst $r_{XY}$ in der Regression?",
+      "back": "Den empirischen Korrelationskoeffizienten; $r_{XY}^2 = R^2$ ist das Bestimmtheitsmaß."
+    },
+    {
+      "id": "lineare-regression-z20",
+      "topicId": "lineare-regression",
+      "front": "Was sind Residuen $\\hat{u}_i$?",
+      "back": "$\\hat{u}_i = y_i - \\hat{a} - \\hat{b}\\,x_i$; beobachtete Abweichungen von der geschätzten Geraden."
+    },
+    {
+      "id": "lineare-regression-z21",
+      "topicId": "lineare-regression",
+      "front": "Wann ist $b$ statistisch signifikant von 0 verschieden?",
+      "back": "Wenn $|T_b| > t_{n-2,\\,1-\\alpha/2}$ oder das KI für $b$ die 0 nicht enthält."
+    },
+    {
+      "id": "lineare-regression-z22",
+      "topicId": "lineare-regression",
+      "front": "Zerlegung der Varianz in der Regression",
+      "back": "$s_y^2 = s_{\\hat{y}}^2 + s_{\\hat{u}}^2$: Gesamtvarianz = erklärte Varianz + Residualvarianz."
+    },
+    {
+      "id": "lineare-regression-z23",
+      "topicId": "lineare-regression",
+      "front": "Zusammenhang $R^2$ und Korrelation",
+      "back": "$R^2 = r_{xy}^2$; bei einfacher Regression ist das Bestimmtheitsmaß das Quadrat des Korrelationskoeffizienten."
+    },
+    {
+      "id": "lineare-regression-z24",
+      "topicId": "lineare-regression",
+      "front": "Was bedeutet Heteroskedastizität für die KQ-Schätzung?",
+      "back": "Die KQ-Schätzer sind zwar noch erwartungstreu, aber nicht mehr effizient; Standardfehler und Tests werden verzerrt."
+    },
+    {
+      "id": "lineare-regression-z25",
+      "topicId": "lineare-regression",
+      "front": "Freiheitsgrade bei Tests für Regressionskoeffizienten",
+      "back": "$n - 2$; weil zwei Parameter ($a$ und $b$) geschätzt werden."
+    },
+    {
+      "id": "lineare-regression-z26",
+      "topicId": "lineare-regression",
+      "front": "Interpretation von $\\hat{b}$",
+      "back": "Steigt $x$ um 1, steigt der vorhergesagte Wert von $y$ um $\\hat{b}$ Einheiten."
+    },
+    {
+      "id": "lineare-regression-z27",
+      "topicId": "lineare-regression",
+      "front": "Einfluss des Stichprobenumfangs $n$ auf die statistische Signifikanz von $\\hat{b}$",
+      "back": "Größeres $n$ verkleinert $\\hat{\\sigma}_{\\hat{b}}$, sodass auch kleine $\\hat{b} \\ne 0$ signifikant werden."
     }
   ],
   "quiz": [
@@ -241,7 +507,9 @@
         "Das Bestimmtheitsmaß $R^2$",
         "Die Varianz der Regressoren $\\sum (x_i - \\bar{x})^2$"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die KQ-Methode minimiert $\\sum (y_i - \\hat{y}_i)^2$ — die Summe der quadrierten vertikalen Abstände zwischen den Datenpunkten und der Geraden. Durch das Quadrieren werden alle Abweichungen positiv und große Fehler stärker gewichtet."
     },
     {
@@ -296,7 +564,9 @@
         "79 % der Datenpunkte liegen auf der Geraden",
         "Der Achsenabschnitt ist 79 % des Mittelwerts"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "$R^2$ gibt den Anteil der durch das Regressionsmodell erklärten Streuung an der Gesamtstreuung an. $R^2 = 0{,}79$ bedeutet: 79 % der Variabilität in $y$ wird durch den linearen Zusammenhang mit $x$ erklärt."
     },
     {
@@ -311,7 +581,9 @@
         "$t_{n-2}$ (t-Verteilung mit $n-2$ Freiheitsgraden)",
         "$\\chi^2_{n-2}$ (Chi-Quadrat-Verteilung)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Im einfachen linearen Regressionsmodell gilt $T_b \\sim t_{n-2}$, weil zwei Parameter ($a$ und $b$) geschätzt werden. Es gehen also 2 Freiheitsgrade verloren."
     },
     {
@@ -330,7 +602,14 @@
       "difficulty": "mittel",
       "prompt": "Erkläre in eigenen Worten, was ein Residuum $\\hat{u}_i$ ist und welche Rolle es in der Regressionsanalyse spielt.",
       "sampleAnswer": "Ein Residuum $\\hat{u}_i = y_i - \\hat{y}_i$ ist die Differenz zwischen dem tatsächlich beobachteten Wert $y_i$ und dem von der Regressionsgerade vorhergesagten Wert $\\hat{y}_i$. Es ist der Teil von $y_i$, den das Modell nicht erklärt. Die KQ-Methode minimiert die Summe der quadrierten Residuen, um die bestmögliche Gerade zu finden. Große Residuen zeigen an, dass das Modell für diese Beobachtungen schlecht passt.",
-      "keywords": ["residuum", "beobachtet", "vorhergesagt", "differenz", "fehler", "nicht erklärt"],
+      "keywords": [
+        "residuum",
+        "beobachtet",
+        "vorhergesagt",
+        "differenz",
+        "fehler",
+        "nicht erklärt"
+      ],
       "explanation": "Das Residuum misst den 'Schätztfehler' für jede Beobachtung. Die Analyse der Residuen (z.B. auf Normalverteilung, Homoskedastizität) erlaubt es, die Modellgüte und -annahmen zu prüfen."
     },
     {
@@ -345,7 +624,9 @@
         "`cor(y, x)`",
         "`glm(y, x)`"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "`lm(y ~ x)` steht für *linear model* und schätzt das einfache lineare Regressionsmodell. `cor()` berechnet nur den Korrelationskoeffizienten; `glm()` ist für verallgemeinerte lineare Modelle."
     },
     {
@@ -366,6 +647,80 @@
       "answer": 0.1837,
       "tolerance": 0.001,
       "explanation": "$r = 30/\\sqrt{100 \\cdot 49} = 30/70 = 3/7 \\approx 0{,}4286$. $R^2 = r^2 = (3/7)^2 = 9/49 \\approx 0{,}1837$. Nur 18,37 % der Streuung von $y$ wird durch den linearen Zusammenhang mit $x$ erklärt — eine schwache Anpassung."
+    },
+    {
+      "kind": "mc",
+      "id": "lineare-regression-zq1",
+      "topicId": "lineare-regression",
+      "difficulty": "leicht",
+      "prompt": "Der KQ-Schätzer für die Steigung $b$ der einfachen linearen Regression lautet:",
+      "options": [
+        "$\\hat{b} = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}$",
+        "$\\hat{b} = \\dfrac{\\sum x_i y_i}{\\sum x_i^2}$",
+        "$\\hat{b} = \\bar{y} - \\hat{a}\\bar{x}$",
+        "$\\hat{b} = \\dfrac{\\sum(y_i - \\bar{y})^2}{\\sum(x_i - \\bar{x})^2}$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Der KQ-Schätzer für $b$ minimiert $\\sum (y_i - a - bx_i)^2$ und ergibt $\\hat{b} = \\frac{s_{xy}}{s_x^2} = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sum(x_i-\\bar{x})^2}$. Der Achsenabschnitt folgt aus $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x}$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lineare-regression-zq2",
+      "topicId": "lineare-regression",
+      "difficulty": "leicht",
+      "prompt": "Die Regressionsgerade $\\hat{y} = \\hat{a} + \\hat{b}x$ verläuft stets durch den Schwerpunkt $(\\bar{x}, \\bar{y})$ der Daten.",
+      "answer": true,
+      "explanation": "Da $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x}$ gilt, folgt für $x = \\bar{x}$: $\\hat{y} = (\\bar{y} - \\hat{b}\\bar{x}) + \\hat{b}\\bar{x} = \\bar{y}$. Die Gerade geht also durch $( \\bar{x}, \\bar{y})$."
+    },
+    {
+      "kind": "numeric",
+      "id": "lineare-regression-zq3",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Gegeben: $n = 42$, $\\sum x_i = 252$, $\\sum y_i = 210$, $\\sum(x_i-\\bar{x})(y_i-\\bar{y}) = 30$, $\\sum(x_i-\\bar{x})^2 = 100$. Berechnen Sie den KQ-Schätzer $\\hat{b}$.",
+      "answer": 0.3,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$\\hat{b} = \\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sum(x_i-\\bar{x})^2} = \\frac{30}{100} = 0{,}3$."
+    },
+    {
+      "kind": "mc",
+      "id": "lineare-regression-zq4",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Das Bestimmtheitsmaß $R^2$ der einfachen linearen Regression kann interpretiert werden als:",
+      "options": [
+        "Anteil der durch die Regression erklärten Varianz an der Gesamtvarianz von $y$: $R^2 = \\frac{s_{\\hat{y}}^2}{s_y^2}$",
+        "Quadrat des Standardfehlers der Residuen",
+        "Anzahl der statistisch signifikanten Koeffizienten geteilt durch $n$",
+        "Wahrscheinlichkeit, dass das Modell korrekt ist"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "$R^2 = r_{xy}^2 = \\frac{s_{\\hat{y}}^2}{s_y^2} = 1 - \\frac{s_{\\hat{u}}^2}{s_y^2} \\in [0,1]$. Ein $R^2 = 1$ bedeutet perfekte Anpassung, $R^2 = 0$ bedeutet, dass die Regression nichts erklärt."
+    },
+    {
+      "kind": "truefalse",
+      "id": "lineare-regression-zq5",
+      "topicId": "lineare-regression",
+      "difficulty": "mittel",
+      "prompt": "Der erwartungstreue Schätzer für die Störtermvarianz $\\sigma^2$ im linearen Regressionsmodell teilt die Residuenquadratsumme durch $n-2$ (nicht $n$).",
+      "answer": true,
+      "explanation": "Da im Regressionsmodell zwei Parameter ($a$ und $b$) geschätzt werden, sind nur $n-2$ Freiheitsgrade für die Residuen übrig: $\\hat{\\sigma}^2 = \\frac{1}{n-2}\\sum_{i=1}^n \\hat{u}_i^2$, und es gilt $E(\\hat{\\sigma}^2) = \\sigma^2$."
+    },
+    {
+      "kind": "numeric",
+      "id": "lineare-regression-zq6",
+      "topicId": "lineare-regression",
+      "difficulty": "schwer",
+      "prompt": "Gegeben: $n = 42$, $\\bar{x} = 6$, $\\bar{y} = 5$, $\\hat{b} = 0{,}3$. Berechnen Sie den KQ-Schätzer $\\hat{a}$ für den Achsenabschnitt.",
+      "answer": 3.2,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$\\bar{x} = \\frac{252}{42} = 6$, $\\bar{y} = \\frac{210}{42} = 5$. $\\hat{a} = \\bar{y} - \\hat{b}\\bar{x} = 5 - 0{,}3 \\cdot 6 = 5 - 1{,}8 = 3{,}2$."
     }
   ],
   "exercises": [

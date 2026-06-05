@@ -79,8 +79,16 @@
           "title": "Stichprobenmittel wird mit wachsendem n genauer",
           "caption": "Mit wachsendem n verengt sich die Verteilung von X̄ um den wahren Mittelwert μ=0. Für n=1 entspricht sie der Grundgesamtheit (σ=1), für n=9 ist der Standardfehler 1/3, für n=25 ist er 1/5.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 0.2 },
-          "markers": [{ "x": 0, "label": "μ = 0" }]
+          "params": {
+            "mu": 0,
+            "sigma": 0.2
+          },
+          "markers": [
+            {
+              "x": 0,
+              "label": "μ = 0"
+            }
+          ]
         }
       ]
     },
@@ -105,11 +113,35 @@
           "kind": "table",
           "id": "fig-quantile-tabelle",
           "title": "Häufig verwendete Quantile der Standardnormalverteilung",
-          "headers": ["Konfidenzniveau 1-α", "α", "α/2", "z_{1-α/2} (zweiseitig)", "z_{1-α} (einseitig)"],
+          "headers": [
+            "Konfidenzniveau 1-α",
+            "α",
+            "α/2",
+            "z_{1-α/2} (zweiseitig)",
+            "z_{1-α} (einseitig)"
+          ],
           "rows": [
-            ["90 %", "0,10", "0,05", "1,645", "1,282"],
-            ["95 %", "0,05", "0,025", "1,960", "1,645"],
-            ["99 %", "0,01", "0,005", "2,576", "2,326"]
+            [
+              "90 %",
+              "0,10",
+              "0,05",
+              "1,645",
+              "1,282"
+            ],
+            [
+              "95 %",
+              "0,05",
+              "0,025",
+              "1,960",
+              "1,645"
+            ],
+            [
+              "99 %",
+              "0,01",
+              "0,005",
+              "2,576",
+              "2,326"
+            ]
           ]
         },
         {
@@ -118,11 +150,23 @@
           "title": "Standardnormalverteilung mit zweiseitigem Bereich (95 %)",
           "caption": "Die schraffierten Randflächen haben je die Größe α/2 = 2,5 %. Der mittlere Bereich (95 %) liegt zwischen den Quantilen -1,96 und +1,96.",
           "dist": "normal",
-          "params": { "mu": 0, "sigma": 1 },
-          "shade": { "from": -1.96, "to": 1.96 },
+          "params": {
+            "mu": 0,
+            "sigma": 1
+          },
+          "shade": {
+            "from": -1.96,
+            "to": 1.96
+          },
           "markers": [
-            { "x": -1.96, "label": "-z_{0.975} = -1,96" },
-            { "x": 1.96, "label": "z_{0.975} = 1,96" }
+            {
+              "x": -1.96,
+              "label": "-z_{0.975} = -1,96"
+            },
+            {
+              "x": 1.96,
+              "label": "z_{0.975} = 1,96"
+            }
           ]
         }
       ],
@@ -148,11 +192,35 @@
           "kind": "table",
           "id": "fig-uebersicht",
           "title": "Übersicht: Stichprobenfunktionen und ihre Eigenschaften",
-          "headers": ["Schätzgröße", "Formel", "Erwartungswert", "Varianz", "Verteilung (normal. GG)"],
+          "headers": [
+            "Schätzgröße",
+            "Formel",
+            "Erwartungswert",
+            "Varianz",
+            "Verteilung (normal. GG)"
+          ],
           "rows": [
-            ["Stichprobenmittel $\\bar{X}$", "$\\frac{1}{n}\\sum X_i$", "$\\mu$", "$\\frac{\\sigma^2}{n}$", "$N(\\mu, \\sigma^2/n)$"],
-            ["Rel. Häufigkeit $\\bar{p}$", "$\\frac{x}{n}$", "$p$", "$\\frac{p(1-p)}{n}$", "asympt. $N(p, \\frac{p(1-p)}{n})$"],
-            ["Stichprobenvar. $\\hat{\\sigma}^2$", "$\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$", "$\\sigma^2$", "komplex", "–"]
+            [
+              "Stichprobenmittel $\\bar{X}$",
+              "$\\frac{1}{n}\\sum X_i$",
+              "$\\mu$",
+              "$\\frac{\\sigma^2}{n}$",
+              "$N(\\mu, \\sigma^2/n)$"
+            ],
+            [
+              "Rel. Häufigkeit $\\bar{p}$",
+              "$\\frac{x}{n}$",
+              "$p$",
+              "$\\frac{p(1-p)}{n}$",
+              "asympt. $N(p, \\frac{p(1-p)}{n})$"
+            ],
+            [
+              "Stichprobenvar. $\\hat{\\sigma}^2$",
+              "$\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$",
+              "$\\sigma^2$",
+              "komplex",
+              "–"
+            ]
           ]
         }
       ]
@@ -200,6 +268,138 @@
       "topicId": "grundlagen-der-induktiven-statistik",
       "front": "Warum teilt man bei der Stichprobenvarianz durch $n-1$ statt durch $n$?",
       "back": "Damit $\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$ erwartungstreu ist: $E(\\hat{\\sigma}^2) = \\sigma^2$. Division durch $n$ würde die wahre Varianz systematisch unterschätzen. Der Nenner $n-1$ heißt Freiheitsgrade."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z1",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was ist eine einfache Zufallsstichprobe?",
+      "back": "$X_1, \\dots, X_n$ i.i.d. (unabhängig und identisch verteilt) mit $E(X_i)=\\mu$ und $Var(X_i)=\\sigma^2$."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z2",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was ist eine Stichprobenfunktion (Schätzstatistik)?",
+      "back": "Funktion der Stichprobenwerte $g(X_1,\\dots,X_n)$, die einen unbekannten Parameter schätzt, z. B. $\\bar{X}$ oder $\\hat{\\sigma}^2$."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z3",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Definition des Stichprobenmittels $\\bar{X}$",
+      "back": "$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^{n}X_i$. Selbst eine Zufallsvariable mit eigener Verteilung."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z4",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Erwartungswert des Stichprobenmittels",
+      "back": "$E(\\bar{X})=\\mu$. Das Stichprobenmittel ist ein erwartungstreuer Schätzer für $\\mu$."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z5",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Varianz und Standardfehler des Stichprobenmittels",
+      "back": "$Var(\\bar{X})=\\frac{\\sigma^2}{n}$, $\\quad \\sigma_{\\bar{X}}=\\frac{\\sigma}{\\sqrt{n}}$. Mit wachsendem $n$ sinkt die Streuung von $\\bar{X}$."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z6",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Verteilung von $\\bar{X}$ bei normalverteilter Grundgesamtheit",
+      "back": "$\\bar{X} \\sim N\\!\\left(\\mu,\\,\\tfrac{\\sigma^2}{n}\\right)$, also $\\sqrt{n}\\cdot\\frac{\\bar{X}-\\mu}{\\sigma} \\sim N(0,1)$ für alle $n$."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z7",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wozu dient der Standardfehler $\\sigma_{\\bar{X}}$?",
+      "back": "Er misst die Streuung des Stichprobenmittels um $\\mu$. Größeres $n$ $\\Rightarrow$ kleinerer Standardfehler $\\Rightarrow$ präzisere Schätzung."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z8",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Relative Häufigkeit als Stichprobenfunktion",
+      "back": "$\\hat{p}=\\bar{X}=\\frac{1}{n}\\sum X_i$ (bei $X_i \\in \\{0,1\\}$). Schätzt den Anteil $p$ in der Grundgesamtheit."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z9",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was bedeutet i.i.d.?",
+      "back": "Unabhängig und identisch verteilt (independent and identically distributed). Grundvoraussetzung für Stichprobentheorie und ZGWS."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z10",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Verteilung von $\\bar{X}$ bei nicht-normalverteilter Grundgesamtheit",
+      "back": "Für $n \\ge 30$ gilt näherungsweise $\\bar{X} \\approx N(\\mu,\\,\\tfrac{\\sigma^2}{n})$ dank ZGWS."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z11",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Ziel der induktiven Statistik",
+      "back": "Von der Stichprobe auf die Grundgesamtheit schließen: Schätzen unbekannter Parameter und Testen von Hypothesen."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z12",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Unterschied: Stichprobenvarianz vs. Populationsvarianz",
+      "back": "Stichprobenvarianz $\\hat{\\sigma}^2=\\frac{1}{n-1}\\sum(X_i-\\bar{X})^2$ ist erwartungstreu; $\\frac{1}{n}\\sum(X_i-\\bar{X})^2$ ist verzerrt nach unten."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z13",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was versteht man unter dem Standardfehler des Mittelwerts?",
+      "back": "$SE(\\bar{X})=\\frac{\\sigma}{\\sqrt{n}}$. Gibt die durchschnittliche Abweichung von $\\bar{X}$ vom wahren $\\mu$ an."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z14",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wie verhält sich $Var(\\bar{X})$ bei Verdopplung von $n$?",
+      "back": "$Var(\\bar{X})=\\sigma^2/n$ halbiert sich. Um die Streuung zu halbieren, muss $n$ vervierfacht werden."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z15",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Warum sind $X_1,\\dots,X_n$ Zufallsvariablen (nicht Zahlen)?",
+      "back": "Vor der Erhebung sind die Stichprobenwerte unbekannt und zufällig. Erst nach der Ziehung liegen feste Realisierungen $x_1,\\dots,x_n$ vor."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z16",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Pivotgröße für $\\mu$ bei bekanntem $\\sigma$",
+      "back": "$Z=\\sqrt{n}\\cdot\\frac{\\bar{X}-\\mu}{\\sigma} \\sim N(0,1)$. Verteilt unabhängig von $\\mu$ und $\\sigma$; Grundlage für KI und Tests."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z17",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Was ist der Unterschied zwischen Schätzer und Schätzung?",
+      "back": "Schätzer: Stichprobenfunktion $\\hat{\\theta}(X_1,\\dots,X_n)$ als ZV. Schätzung: konkreter Zahlenwert $\\hat{\\theta}(x_1,\\dots,x_n)$ nach der Ziehung."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z18",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Welche Größen charakterisieren die Verteilung von $\\bar{X}$?",
+      "back": "Lage: $E(\\bar{X})=\\mu$. Streuung: $\\sigma_{\\bar{X}}=\\sigma/\\sqrt{n}$. Form: normal (bei normaler GG oder via ZGWS für $n\\ge30$)."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z19",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Bedeutung der Unabhängigkeit in der Stichprobe",
+      "back": "Unabhängige Ziehungen stellen sicher, dass $Var(\\bar{X})=\\sigma^2/n$. Bei abhängigen Daten (Klumpenstichprobe) ist diese Formel falsch."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z20",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wofür steht der Begriff 'induktive Statistik'?",
+      "back": "Schluss vom Speziellen (Stichprobe) auf das Allgemeine (Grundgesamtheit). Gegensatz: deskriptive Statistik beschreibt nur die Stichprobe."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z21",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Wie wirkt sich $\\sigma^2$ auf die Stichprobengröße aus?",
+      "back": "Größeres $\\sigma^2$ $\\Rightarrow$ größerer Standardfehler $\\Rightarrow$ mehr Beobachtungen nötig für gleiche Präzision der Schätzung."
+    },
+    {
+      "id": "grundlagen-der-induktiven-statistik-z22",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "front": "Stichprobenmittel als Schätzer: Zusammenfassung",
+      "back": "$\\bar{X}$: erwartungstreu ($E=\\mu$), konsistent ($Var\\to0$), effizientester linearer Schätzer. Verteilt $N(\\mu,\\sigma^2/n)$ bei normaler GG."
     }
   ],
   "quiz": [
@@ -215,7 +415,9 @@
         "Alle Elemente einer Grundgesamtheit vermessen.",
         "Die Stichprobengröße möglichst klein halten."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die induktive (schließende) Statistik schließt von einer kleinen Stichprobe auf die unbekannten Parameter der Grundgesamtheit. Die deskriptive Statistik (Option A) fasst nur das Beobachtete zusammen."
     },
     {
@@ -272,7 +474,10 @@
         "Bei doppeltem $n$ halbiert sich der Standardfehler.",
         "Er ist unabhängig von $\\sigma$."
       ],
-      "correct": [0, 2],
+      "correct": [
+        0,
+        2
+      ],
       "multiple": true,
       "explanation": "Option A: korrekt – der Standardfehler ist die Standardabweichung von $\\bar{X}$. Option B: falsch – er wird kleiner mit wachsendem $n$. Option C: korrekt – $\\sigma/\\sqrt{2n} = (\\sigma/\\sqrt{n})/\\sqrt{2}$; Halbierung braucht Vervierfachung von $n$. Option C ist die Faustregel: man braucht 4-mal so viele Beobachtungen für halb so großen Fehler. Option D: falsch."
     },
@@ -292,7 +497,13 @@
       "difficulty": "mittel",
       "prompt": "Erkläre in eigenen Worten, warum der Standardfehler $\\sigma_{\\bar{X}} = \\sigma/\\sqrt{n}$ mit wachsendem $n$ sinkt. Was bedeutet das praktisch?",
       "sampleAnswer": "Das Stichprobenmittel $\\bar{X}$ ist der Durchschnitt von $n$ unabhängigen Beobachtungen. Zufällige Abweichungen einzelner Werte nach oben und unten gleichen sich beim Mitteln teilweise aus – je mehr Werte man mittelt, desto stärker. Mathematisch teilt man die Varianz durch $n$, was die Standardabweichung um Faktor $\\sqrt{n}$ reduziert. Praktisch: Mit mehr Daten wird die Schätzung präziser.",
-      "keywords": ["ausgleichen", "mitteln", "präziser", "varianz", "stichprobengröße"],
+      "keywords": [
+        "ausgleichen",
+        "mitteln",
+        "präziser",
+        "varianz",
+        "stichprobengröße"
+      ],
       "explanation": "Der Schlüssel ist die i.i.d.-Annahme: Da die $X_i$ unabhängig sind, addieren sich ihre Varianzen. Division durch $n^2$ ergibt $\\sigma^2/n$ für die Varianz des Mittels."
     },
     {
@@ -318,9 +529,88 @@
         "Für große $n$ gilt näherungsweise $\\bar{p} \\sim N(p, p(1-p)/n)$.",
         "$Var(\\bar{p})$ ist maximal, wenn $p = 0{,}5$."
       ],
-      "correct": [0, 1, 2, 3],
+      "correct": [
+        0,
+        1,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "Alle vier Aussagen sind korrekt. A: Erwartungstreue folgt aus $E(\\bar{p}) = E(X/n) = p$. B: Varianzformel für relative Häufigkeit. C: Zentraler Grenzwertsatz bzw. Satz 3.13 aus dem Skript. D: $p(1-p)$ ist maximal bei $p = 0{,}5$ mit Wert $0{,}25$ – das ist die Worst-Case-Varianz."
+    },
+    {
+      "kind": "mc",
+      "id": "grundlagen-der-induktiven-statistik-zq1",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "leicht",
+      "prompt": "Der Standardfehler des Stichprobenmittels $\\bar{X}$ bei bekannter Varianz $\\sigma^2$ und Stichprobenumfang $n$ beträgt:",
+      "options": [
+        "$\\dfrac{\\sigma}{\\sqrt{n}}$",
+        "$\\dfrac{\\sigma^2}{n}$",
+        "$\\dfrac{\\sigma}{n}$",
+        "$\\sigma \\cdot \\sqrt{n}$"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Die Varianz von $\\bar{X}$ ist $Var(\\bar{X}) = \\frac{\\sigma^2}{n}$, daher ist der Standardfehler (Standardabweichung von $\\bar{X}$) gleich $\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}$."
+    },
+    {
+      "kind": "truefalse",
+      "id": "grundlagen-der-induktiven-statistik-zq2",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "leicht",
+      "prompt": "Bei einer einfachen Zufallsstichprobe $X_1, \\dots, X_n$ aus einer normalverteilten Grundgesamtheit mit Erwartungswert $\\mu$ und Varianz $\\sigma^2$ gilt: $\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$.",
+      "answer": true,
+      "explanation": "Sind die $X_i$ i.i.d. normalverteilt mit $N(\\mu, \\sigma^2)$, so ist das Stichprobenmittel $\\bar{X}$ exakt normalverteilt mit $N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$."
+    },
+    {
+      "kind": "numeric",
+      "id": "grundlagen-der-induktiven-statistik-zq3",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Eine Zufallsvariable $X$ hat $\\mu = 10$ und $\\sigma^2 = 4$. Wie groß ist die Varianz des Stichprobenmittels $\\bar{X}$ bei $n = 25$?",
+      "answer": 0.16,
+      "tolerance": 0.001,
+      "unit": "",
+      "explanation": "$Var(\\bar{X}) = \\frac{\\sigma^2}{n} = \\frac{4}{25} = 0{,}16$. Der Standardfehler beträgt $\\sigma_{\\bar{X}} = \\sqrt{0{,}16} = 0{,}4$."
+    },
+    {
+      "kind": "mc",
+      "id": "grundlagen-der-induktiven-statistik-zq4",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Was beschreibt der Zentrale Grenzwertsatz (ZGWS) für i.i.d. Zufallsvariablen?",
+      "options": [
+        "Die standardisierte Summe/das standardisierte Mittel konvergiert für $n \\to \\infty$ in Verteilung gegen $N(0,1)$, unabhängig von der Verteilung der $X_i$.",
+        "Das Stichprobenmittel ist immer exakt normalverteilt.",
+        "Die Binomialverteilung konvergiert gegen die Poisson-Verteilung.",
+        "Die Varianz des Stichprobenmittels strebt gegen 0, wenn $n$ gegen unendlich geht."
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Der ZGWS besagt: $\\frac{\\frac{1}{n}\\sum X_i - \\mu}{\\sqrt{\\sigma^2/n}} \\xrightarrow{d} N(0,1)$ für $n \\to \\infty$. Als Faustregel gilt $n \\ge 30$. Die Grundverteilung der $X_i$ muss nicht normal sein."
+    },
+    {
+      "kind": "truefalse",
+      "id": "grundlagen-der-induktiven-statistik-zq5",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "mittel",
+      "prompt": "Der Erwartungswert des Stichprobenmittels $\\bar{X}$ ist stets gleich dem Erwartungswert $\\mu$ der Grundgesamtheit: $E(\\bar{X}) = \\mu$.",
+      "answer": true,
+      "explanation": "$E(\\bar{X}) = E\\!\\left(\\frac{1}{n}\\sum_{i=1}^n X_i\\right) = \\frac{1}{n} \\sum_{i=1}^n E(X_i) = \\frac{1}{n} \\cdot n\\mu = \\mu$. Das Stichprobenmittel ist also ein erwartungstreuer Schätzer für $\\mu$."
+    },
+    {
+      "kind": "numeric",
+      "id": "grundlagen-der-induktiven-statistik-zq6",
+      "topicId": "grundlagen-der-induktiven-statistik",
+      "difficulty": "schwer",
+      "prompt": "Ein Ladungsgewicht sei normalverteilt mit $\\mu = 10$ t und $\\sigma = 2$ t. Bei einer Stichprobe von $n = 25$ Fahrten: Wie groß ist der Standardfehler $\\sigma_{\\bar{X}}$?",
+      "answer": 0.4,
+      "tolerance": 0.001,
+      "unit": "t",
+      "explanation": "$\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{2}{\\sqrt{25}} = \\frac{2}{5} = 0{,}4$ t."
     }
   ],
   "exercises": [

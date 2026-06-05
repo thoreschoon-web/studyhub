@@ -274,6 +274,66 @@
       "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
       "front": "Was ist der Unterschied zwischen Rechtsgrundverweis und Rechtsfolgenverweis?",
       "back": "**Rechtsgrundverweis:** Der Verweis übernimmt Tatbestand **und** Rechtsfolge der Zielnorm – die Voraussetzungen müssen vollständig geprüft werden.\n**Rechtsfolgenverweis:** Nur die Rechtsfolge der Zielnorm wird übernommen, der Tatbestand ist ein anderer."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z1",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Wie ist eine Rechtsnorm aufgebaut?",
+      "back": "Wenn-dann-Struktur: Tatbestand (Voraussetzungen) --> Rechtsfolge. Sind alle Tatbestandsmerkmale erfullt, tritt die Rechtsfolge ein."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z2",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist der Unterschied zwischen kumulativen und alternativen Tatbestandsmerkmalen?",
+      "back": "Kumulativ (und): alle Merkmale mussen vorliegen. Alternativ (oder): es genugt das Vorliegen eines Merkmals."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z3",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was sind negativ gefasste Tatbestandsmerkmale?",
+      "back": "Voraussetzungen, die gerade nicht vorliegen durfen (z.B. kein Ausschlussgrund). Ihr Fehlen wird zur Voraussetzung der Rechtsfolge."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z4",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist eine Legaldefinition?",
+      "back": "Eine gesetzlich festgelegte Definition eines Begriffs (Hilfsnorm), die fur alle Normen gilt, die diesen Begriff verwenden (z.B. § 90 BGB: Sache)."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z5",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist der Unterschied zwischen Rechtsgrundverweis und Rechtsfolgenverweis?",
+      "back": "Rechtsgrundverweis: Tatbestand der Verweisungsnorm ist vollstandig zu prufen. Rechtsfolgenverweis: nur die Rechtsfolge der anderen Norm wird ubernommen."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z6",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Wie zitiert man eine Rechtsnorm korrekt (Kurzform)?",
+      "back": "Paragrafzeichen, Absatz (Abs. oder romische Zahl), Satz (S.), Nummer (Nr.), Buchstabe (lit.), Alternative (Alt.) -- z.B. § 433 Abs. 1 S. 1 BGB."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z7",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Wann verwendet man 'i.V.m.' beim Zitieren?",
+      "back": "Bei Verweisungsnormen: die Grundnorm wird zusammen mit der Verweisungsnorm angegeben, z.B. § 985 BGB i.V.m. § 90 BGB."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z8",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was bedeutet §§ 433 ff. BGB?",
+      "back": "§§ 433 und folgende: erfasst § 433 und alle direkt anschliessenden Paragraphen eines Abschnitts (nicht nur den nachsten)."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z9",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist die Beweislastfunktion des Tatbestands?",
+      "back": "Wer die Rechtsfolge einer Norm geltend macht, tragt die Beweislast fur das Vorliegen der positiven Tatbestandsmerkmale (Grundsatz: Vollbeweislast beim Anspruchsteller)."
+    },
+    {
+      "id": "methodik-aufbau-der-rechtsnorm-und-zitiere-z10",
+      "topicId": "methodik-aufbau-der-rechtsnorm-und-zitiere",
+      "front": "Was ist ein Gestaltungsrecht?",
+      "back": "Ein subjektives Recht, durch einseitige Erklarung ein Rechtsverhaltnis zu verandern (z.B. Anfechtung, Rucktritt, Kundigung)."
     }
   ],
   "quiz": [

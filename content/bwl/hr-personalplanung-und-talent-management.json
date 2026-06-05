@@ -45,14 +45,42 @@
           "kind": "table",
           "id": "pp-rechenschema",
           "title": "Rechenschema Personalbedarfsermittlung",
-          "headers": ["Position", "Wert", "Erläuterung"],
+          "headers": [
+            "Position",
+            "Wert",
+            "Erläuterung"
+          ],
           "rows": [
-            ["Bruttopersonalbedarf (Soll)", "120", "Wie viele brauchen wir insgesamt?"],
-            ["./. Ist-Bestand", "100", "Wie viele haben wir heute?"],
-            [".+. Geplante Zugänge", "+8", "Bereits bekannte Neueinstellungen"],
-            ["./. Abgänge", "-5", "Renten, Kündigungen, Befristungsende"],
-            ["= Fortgeschriebener Bestand", "103", "Voraussichtlicher Bestand"],
-            ["= Nettopersonalbedarf", "+17", "Positiv = Unterdeckung → Rekrutieren!"]
+            [
+              "Bruttopersonalbedarf (Soll)",
+              "120",
+              "Wie viele brauchen wir insgesamt?"
+            ],
+            [
+              "./. Ist-Bestand",
+              "100",
+              "Wie viele haben wir heute?"
+            ],
+            [
+              ".+. Geplante Zugänge",
+              "+8",
+              "Bereits bekannte Neueinstellungen"
+            ],
+            [
+              "./. Abgänge",
+              "-5",
+              "Renten, Kündigungen, Befristungsende"
+            ],
+            [
+              "= Fortgeschriebener Bestand",
+              "103",
+              "Voraussichtlicher Bestand"
+            ],
+            [
+              "= Nettopersonalbedarf",
+              "+17",
+              "Positiv = Unterdeckung → Rekrutieren!"
+            ]
           ]
         }
       ]
@@ -147,14 +175,49 @@
           "kind": "table",
           "id": "abc-positionen",
           "title": "A/B/C-Positions-Framework (Huselid, Beatty & Becker 2005)",
-          "headers": ["Dimension", "A-Position", "B-Position", "C-Position"],
+          "headers": [
+            "Dimension",
+            "A-Position",
+            "B-Position",
+            "C-Position"
+          ],
           "rows": [
-            ["Strategischer Einfluss", "Sehr hoch", "Mittel", "Gering"],
-            ["Leistungsvariabilität", "Sehr hoch", "Mittel", "Gering"],
-            ["Anteil an Belegschaft", "< 20 %", "Ca. 60–70 %", "10–20 %"],
-            ["HR-Investition", "Überproportional", "Standard", "Minimal / Outsourcing"],
-            ["Rekrutierungsfokus", "A-Player zwingend", "B-Player ausreichend", "Kostengünstig / extern"],
-            ["Beispiel", "Top-Verkäufer, Chefentwickler", "Buchhalter, HR-Generalist", "Teile, die outgesourct werden könnten"]
+            [
+              "Strategischer Einfluss",
+              "Sehr hoch",
+              "Mittel",
+              "Gering"
+            ],
+            [
+              "Leistungsvariabilität",
+              "Sehr hoch",
+              "Mittel",
+              "Gering"
+            ],
+            [
+              "Anteil an Belegschaft",
+              "< 20 %",
+              "Ca. 60–70 %",
+              "10–20 %"
+            ],
+            [
+              "HR-Investition",
+              "Überproportional",
+              "Standard",
+              "Minimal / Outsourcing"
+            ],
+            [
+              "Rekrutierungsfokus",
+              "A-Player zwingend",
+              "B-Player ausreichend",
+              "Kostengünstig / extern"
+            ],
+            [
+              "Beispiel",
+              "Top-Verkäufer, Chefentwickler",
+              "Buchhalter, HR-Generalist",
+              "Teile, die outgesourct werden könnten"
+            ]
           ]
         }
       ]
@@ -208,6 +271,36 @@
       "topicId": "hr-personalplanung-und-talent-management",
       "front": "Kernaussage des HBR-Artikels 'A Players or A Positions?' (Huselid et al. 2005)",
       "back": "Nicht einfach alle Top-Talente fördern, sondern zuerst strategisch wichtige Stellen (A-Positionen) identifizieren, dann die besten Menschen in diese bringen. Die Firmen mit dem *richtigen* Talent an der *richtigen* Stelle gewinnen."
+    },
+    {
+      "id": "hr-personalplanung-und-talent-management-z1",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Nettopersonalbedarf – Formel",
+      "back": "Nettopersonalbedarf = Bruttopersonalbedarf − (Personalbestand + Zugänge − Abgänge)"
+    },
+    {
+      "id": "hr-personalplanung-und-talent-management-z2",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Qualitative vs. quantitative Personalplanung",
+      "back": "Qualitativ: welche Qualifikationen werden gebraucht? Quantitativ: wie viele Mitarbeitende werden gebraucht?"
+    },
+    {
+      "id": "hr-personalplanung-und-talent-management-z3",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "A/B/C-Positionen (Huselid, Beatty & Becker 2005)",
+      "back": "A-Positionen: strategisch, hoher Leistungshebel (<20% der Stellen). B-Positionen: Support-Funktionen. C-Positionen: Surplus (strategisch nachrangig). Investitionen differenzieren!"
+    },
+    {
+      "id": "hr-personalplanung-und-talent-management-z4",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "Talent Management nach Collings & Mellahi",
+      "back": "Systematische Identifikation von Schlüsselpositionen (pivot roles) → Talent Pool aufbauen → differenzierte HR-Architektur für diese Positionen."
+    },
+    {
+      "id": "hr-personalplanung-und-talent-management-z5",
+      "topicId": "hr-personalplanung-und-talent-management",
+      "front": "HR Analytics – Einsatzbereiche",
+      "back": "Datenbasierte Personalentscheidungen: prädiktive Kündigungsprognosen, Recruiting-Optimierung, Talentbindung. Kritische Faktoren: Datenqualität, Kausalität."
     }
   ],
   "quiz": [
@@ -245,7 +338,9 @@
         "Wo sollen die Mitarbeitenden eingesetzt werden?",
         "Welche Führungskräfte sollen befördert werden?"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die **quantitative** Planung beantwortet 'Wie viele?', die **qualitative** Planung beantwortet 'Welche Qualifikationen?'."
     },
     {
@@ -260,7 +355,11 @@
         "Die Höhe der Managervergütung",
         "Personale Faktoren wie Fluktuation und Altersstruktur"
       ],
-      "correct": [0, 1, 3],
+      "correct": [
+        0,
+        1,
+        3
+      ],
       "multiple": true,
       "explanation": "Den Bruttopersonalbedarf beeinflussen externe (Konjunktur, Markt), interne (Produkte, Technologien) und personale/soziale Faktoren (Fluktuation, Renteneintrite). Die Vergütungshöhe des Managements ist kein direkter Einflussfaktor."
     },
@@ -285,7 +384,9 @@
         "Stellenanzeigen, Assessment Center, Onboarding",
         "Vergütung, Kontrolle, Sanktionen"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die drei Kernelemente sind: (1) Identifikation von Schlüsselpositionen (A-Positionen), (2) Aufbau eines Talent Pools aus internen und externen Kandidaten, (3) differenziertes HR-System mit unterschiedlichen Investitionen je Positionstyp."
     },
     {
@@ -309,7 +410,9 @@
         "Umschulung vorhandener Mitarbeitender",
         "Langfristiges Employer Branding"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "**Outsourcing** ist die einzige Maßnahme, die in 4 Wochen umsetzbar ist. Fluktuation reduzieren bringt keine neuen Skills, Umschulung dauert Monate, Employer Branding wirkt erst langfristig."
     },
     {
@@ -319,7 +422,13 @@
       "difficulty": "schwer",
       "prompt": "Was unterscheidet eine 'A-Position' von einer 'B-Position' im Modell von Huselid, Beatty & Becker? Nenne die zwei Definitionsmerkmale und erläutere kurz anhand eines Beispiels.",
       "sampleAnswer": "Eine A-Position zeichnet sich durch zwei Merkmale aus: (1) Überproportionale strategische Bedeutung für die Ausführung der Unternehmensstrategie und (2) hohe Leistungsvariabilität – d. h. es gibt große Qualitätsunterschiede zwischen guten und schlechten Stelleninhabern. Beispiel: Bei Nordstrom ist die Verkäuferrolle eine A-Position, weil Nordstroms Strategie auf personalisiertem Service basiert und ein Top-Verkäufer ein Vielfaches des Umsatzes eines mittelmäßigen erzielt. Eine B-Position (z. B. Buchhalter) ist wichtig, hat aber geringeren Einfluss auf die Differenzierungsstrategie.",
-      "keywords": ["strategische bedeutung", "leistungsvariabilität", "schlüsselposition", "differenzierung", "strategie"],
+      "keywords": [
+        "strategische bedeutung",
+        "leistungsvariabilität",
+        "schlüsselposition",
+        "differenzierung",
+        "strategie"
+      ],
       "explanation": "A-Positionen sind nicht automatisch die am besten bezahlten oder anspruchsvollsten Stellen – entscheidend ist ihr strategischer Hebel für den Unternehmenserfolg in Kombination mit der Variabilität der Leistungserbringung."
     },
     {

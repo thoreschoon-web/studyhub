@@ -1,0 +1,489 @@
+[
+  {
+    "id": "statistische-signifikanztests-z1",
+    "topicId": "statistische-signifikanztests",
+    "front": "Was ist die Nullhypothese $H_0$?",
+    "back": "Die zu testende Behauptung, die beibehalten wird, solange die Daten sie nicht klar widerlegen."
+  },
+  {
+    "id": "statistische-signifikanztests-z2",
+    "topicId": "statistische-signifikanztests",
+    "front": "Was ist die Alternativhypothese $H_1$?",
+    "back": "Die Gegenhypothese zu $H_0$; sie wird angenommen, wenn $H_0$ verworfen wird."
+  },
+  {
+    "id": "statistische-signifikanztests-z3",
+    "topicId": "statistische-signifikanztests",
+    "front": "Fehler 1. Art",
+    "back": "$H_0$ wird abgelehnt, obwohl sie wahr ist. Wahrscheinlichkeit $= \\alpha$ (Signifikanzniveau)."
+  },
+  {
+    "id": "statistische-signifikanztests-z4",
+    "topicId": "statistische-signifikanztests",
+    "front": "Fehler 2. Art",
+    "back": "$H_0$ wird nicht abgelehnt, obwohl $H_1$ wahr ist. Wahrscheinlichkeit $= \\beta$."
+  },
+  {
+    "id": "statistische-signifikanztests-z5",
+    "topicId": "statistische-signifikanztests",
+    "front": "Was ist der p-Wert?",
+    "back": "Die Wahrscheinlichkeit, unter $H_0$ einen mindestens so extremen Prüfgrößenwert zu erhalten. $H_0$ ablehnen, wenn $p \\le \\alpha$."
+  },
+  {
+    "id": "statistische-signifikanztests-z6",
+    "topicId": "statistische-signifikanztests",
+    "front": "Wann lehnt man $H_0$ ab?",
+    "back": "Wenn die Prüfgröße $T$ im Ablehnbereich $B$ liegt: $T \\in B$."
+  },
+  {
+    "id": "statistische-signifikanztests-z7",
+    "topicId": "statistische-signifikanztests",
+    "front": "Prüfgröße des Gauß-Tests (bekannte Varianz $\\sigma^2$)",
+    "back": "$Z = \\dfrac{\\bar{X} - \\mu_0}{\\sigma} \\sqrt{n} \\sim N(0,1)$"
+  },
+  {
+    "id": "statistische-signifikanztests-z8",
+    "topicId": "statistische-signifikanztests",
+    "front": "Ablehnbereich: zweiseitiger Gauß-Test ($H_0: \\mu = \\mu_0$)",
+    "back": "$B = (-\\infty,\\,-z_{1-\\alpha/2}) \\cup (z_{1-\\alpha/2},\\,\\infty)$"
+  },
+  {
+    "id": "statistische-signifikanztests-z9",
+    "topicId": "statistische-signifikanztests",
+    "front": "Ablehnbereich: rechtsseitiger Gauß-Test ($H_0: \\mu \\le \\mu_0$)",
+    "back": "$B = (z_{1-\\alpha},\\,\\infty)$"
+  },
+  {
+    "id": "statistische-signifikanztests-z10",
+    "topicId": "statistische-signifikanztests",
+    "front": "Ablehnbereich: linksseitiger Gauß-Test ($H_0: \\mu \\ge \\mu_0$)",
+    "back": "$B = (-\\infty,\\,-z_{1-\\alpha})$"
+  },
+  {
+    "id": "statistische-signifikanztests-z11",
+    "topicId": "statistische-signifikanztests",
+    "front": "Prüfgröße des t-Tests (unbekannte Varianz)",
+    "back": "$T = \\dfrac{\\bar{X} - \\mu_0}{\\hat{\\sigma}} \\sqrt{n} \\sim t_{n-1}$"
+
+  },
+  {
+    "id": "statistische-signifikanztests-z12",
+    "topicId": "statistische-signifikanztests",
+    "front": "Wann wird beim t-Test die Normalverteilung approximiert?",
+    "back": "Ab $n \\ge 30$; dann gilt $t_{n-1} \\approx N(0,1)$."
+  },
+  {
+    "id": "statistische-signifikanztests-z13",
+    "topicId": "statistische-signifikanztests",
+    "front": "Prüfgröße des Anteilstests ($H_0: p = p_0$)",
+    "back": "$T = \\dfrac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)}} \\sqrt{n} \\sim N(0,1)$"
+  },
+  {
+    "id": "statistische-signifikanztests-z14",
+    "topicId": "statistische-signifikanztests",
+    "front": "Voraussetzungen für den Anteilstest",
+    "back": "$n \\ge 30$, $n p_0 \\ge 10$, $n(1-p_0) \\ge 10$."
+  },
+  {
+    "id": "statistische-signifikanztests-z15",
+    "topicId": "statistische-signifikanztests",
+    "front": "Chi-Quadrat-Anpassungstest: Prüfgröße",
+    "back": "$T = \\sum_{i=1}^{K} \\dfrac{(n_i - \\tilde{n}_i)^2}{\\tilde{n}_i} \\sim \\chi^2_{K-1}$, wobei $\\tilde{n}_i = n \\cdot p_i$."
+  },
+  {
+    "id": "statistische-signifikanztests-z16",
+    "topicId": "statistische-signifikanztests",
+    "front": "Freiheitsgrade beim Chi-Quadrat-Anpassungstest",
+    "back": "$\\nu = K - m - 1$; $K$ = Klassen, $m$ = Anzahl geschätzter Parameter."
+  },
+  {
+    "id": "statistische-signifikanztests-z17",
+    "topicId": "statistische-signifikanztests",
+    "front": "Bedingung für Klassen im Chi-Quadrat-Test",
+    "back": "Erwartete Häufigkeit $\\tilde{n}_i \\ge 5$ je Klasse; ggf. Klassen zusammenfassen."
+  },
+  {
+    "id": "statistische-signifikanztests-z18",
+    "topicId": "statistische-signifikanztests",
+    "front": "Ablehnen beim Chi-Quadrat-Anpassungstest",
+    "back": "Verwerfe $H_0$, falls $T > \\chi^2_{K-1,\\,1-\\alpha}$."
+  },
+  {
+    "id": "statistische-signifikanztests-z19",
+    "topicId": "statistische-signifikanztests",
+    "front": "Stichprobener Korrelationskoeffizient $r_{XY}$",
+    "back": "$r_{XY} = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2 \\sum(y_i-\\bar{y})^2}}$, $\\;-1 \\le r_{XY} \\le 1$."
+  },
+  {
+    "id": "statistische-signifikanztests-z20",
+    "topicId": "statistische-signifikanztests",
+    "front": "Test auf $\\rho = 0$: Prüfgröße",
+    "back": "$T = \\dfrac{r_{XY}}{\\sqrt{1 - r_{XY}^2}} \\sqrt{n-2} \\sim t_{n-2}$"
+  },
+  {
+    "id": "statistische-signifikanztests-z21",
+    "topicId": "statistische-signifikanztests",
+    "front": "Fisher-Z-Transformation (Test auf $\\rho = \\rho_0 \\ne 0$)",
+    "back": "$Z = \\dfrac{1}{2}\\left[\\ln\\dfrac{1+r}{1-r} - \\ln\\dfrac{1+\\rho_0}{1-\\rho_0}\\right]\\sqrt{n-3} \\sim N(0,1)$"
+  },
+  {
+    "id": "statistische-signifikanztests-z22",
+    "topicId": "statistische-signifikanztests",
+    "front": "Chi-Quadrat-Unabhängigkeitstest: erwartete Häufigkeit",
+    "back": "$\\tilde{n}_{jl} = \\dfrac{n_{j\\cdot} \\cdot n_{\\cdot l}}{n}$ (Produkt der Randhäufigkeiten geteilt durch $n$)."
+  },
+  {
+    "id": "statistische-signifikanztests-z23",
+    "topicId": "statistische-signifikanztests",
+    "front": "Freiheitsgrade beim Chi-Quadrat-Unabhängigkeitstest",
+    "back": "$\\nu = (J-1)(L-1)$; $J$ = Zeilen, $L$ = Spalten der Kontingenztafel."
+  },
+  {
+    "id": "statistische-signifikanztests-z24",
+    "topicId": "statistische-signifikanztests",
+    "front": "Was ist der Unterschied zwischen ein- und zweiseitigem Test?",
+    "back": "Einseitig: Ablehnbereich nur auf einer Seite; der kritische Wert ist $z_{1-\\alpha}$. Zweiseitig: Ablehnbereiche beidseitig; kritischer Wert $z_{1-\\alpha/2}$."
+  },
+  {
+    "id": "statistische-signifikanztests-z25",
+    "topicId": "statistische-signifikanztests",
+    "front": "Stochastische Unabhängigkeit vs. lineare Unabhängigkeit",
+    "back": "Stochastische Unabhängigkeit $\\Rightarrow$ $\\rho = 0$. Aber $\\rho = 0$ bedeutet nur keine lineare Abhängigkeit, nicht unbedingt stochastische Unabhängigkeit."
+  },
+  {
+    "id": "statistische-signifikanztests-z26",
+    "topicId": "statistische-signifikanztests",
+    "front": "Signifikanzniveau $\\alpha$ — typische Werte",
+    "back": "$\\alpha = 0{,}01$, $0{,}05$ oder $0{,}10$. Kleineres $\\alpha$ $\\Rightarrow$ strengerer Test, aber höheres Risiko für Fehler 2. Art."
+  },
+  {
+    "id": "statistische-signifikanztests-z27",
+    "topicId": "statistische-signifikanztests",
+    "front": "Was passiert mit Fehler 2. Art, wenn $\\alpha$ verkleinert wird?",
+    "back": "$\\beta$ steigt (bei festem $n$). Fehler 1. und 2. Art stehen in einem Trade-off."
+  },
+  {
+    "id": "lineare-regression-z1",
+    "topicId": "lineare-regression",
+    "front": "Einfaches lineares Regressionsmodell",
+    "back": "$y_i = a + b x_i + u_i$, $\\;i = 1,\\dots,n$; $u_i$ Störgröße mit $E(u_i) = 0$, $\\text{Var}(u_i) = \\sigma^2$."
+  },
+  {
+    "id": "lineare-regression-z2",
+    "topicId": "lineare-regression",
+    "front": "Was ist Homoskedastizität?",
+    "back": "Konstante Varianz der Störgrößen: $\\text{Var}(u_i) = \\sigma^2$ für alle $i$."
+  },
+  {
+    "id": "lineare-regression-z3",
+    "topicId": "lineare-regression",
+    "front": "KQ-Prinzip",
+    "back": "Minimiere $\\sum_{i=1}^n (y_i - a - b x_i)^2$ nach $a$ und $b$."
+  },
+  {
+    "id": "lineare-regression-z4",
+    "topicId": "lineare-regression",
+    "front": "KQ-Schätzer für die Steigung $\\hat{b}$",
+    "back": "$\\hat{b} = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2} = \\dfrac{s_{xy}}{s_x^2} = \\dfrac{\\overline{xy} - \\bar{x}\\bar{y}}{\\overline{x^2} - \\bar{x}^2}$"
+  },
+  {
+    "id": "lineare-regression-z5",
+    "topicId": "lineare-regression",
+    "front": "KQ-Schätzer für den Achsenabschnitt $\\hat{a}$",
+    "back": "$\\hat{a} = \\bar{y} - \\hat{b}\\,\\bar{x}$"
+  },
+  {
+    "id": "lineare-regression-z6",
+    "topicId": "lineare-regression",
+    "front": "Regressionsgerade geht durch den Schwerpunkt",
+    "back": "Ja. Der Punkt $(\\bar{x}, \\bar{y})$ liegt immer auf der geschätzten Geraden."
+  },
+  {
+    "id": "lineare-regression-z7",
+    "topicId": "lineare-regression",
+    "front": "Schätzer für die Störtermvarianz $\\hat{\\sigma}^2$",
+    "back": "$\\hat{\\sigma}^2 = \\dfrac{1}{n-2} \\sum (y_i - \\hat{a} - \\hat{b}\\,x_i)^2$"
+  },
+  {
+    "id": "lineare-regression-z8",
+    "topicId": "lineare-regression",
+    "front": "Warum Nenner $n-2$ bei $\\hat{\\sigma}^2$?",
+    "back": "Zwei Parameter ($a$, $b$) werden geschätzt, daher 2 Freiheitsgrade weniger."
+  },
+  {
+    "id": "lineare-regression-z9",
+    "topicId": "lineare-regression",
+    "front": "Bestimmtheitsmaß $R^2$",
+    "back": "$R^2 = r_{xy}^2 = 1 - \\dfrac{s_{\\hat{u}}^2}{s_y^2}$, $\\;0 \\le R^2 \\le 1$. Anteil der durch $X$ erklärten Varianz von $Y$."
+  },
+  {
+    "id": "lineare-regression-z10",
+    "topicId": "lineare-regression",
+    "front": "$R^2 = 0$ bedeutet…",
+    "back": "$X$ erklärt die Varianz von $Y$ überhaupt nicht; kein linearer Zusammenhang."
+  },
+  {
+    "id": "lineare-regression-z11",
+    "topicId": "lineare-regression",
+    "front": "$R^2 = 1$ bedeutet…",
+    "back": "Alle Beobachtungen liegen exakt auf der Regressionsgeraden; perfekte lineare Anpassung."
+  },
+  {
+    "id": "lineare-regression-z12",
+    "topicId": "lineare-regression",
+    "front": "Geschätzte Varianz von $\\hat{b}$",
+    "back": "$\\hat{\\sigma}_{\\hat{b}}^2 = \\dfrac{\\hat{\\sigma}^2}{\\sum x_i^2 - n\\bar{x}^2} = \\dfrac{\\hat{\\sigma}^2}{n\\,s_x^2}$"
+  },
+  {
+    "id": "lineare-regression-z13",
+    "topicId": "lineare-regression",
+    "front": "Konfidenzintervall für $b$",
+    "back": "$KI(b) = \\left[\\hat{b} \\pm t_{1-\\alpha/2,\\,n-2}\\,\\hat{\\sigma}_{\\hat{b}}\\right]$"
+  },
+  {
+    "id": "lineare-regression-z14",
+    "topicId": "lineare-regression",
+    "front": "Hypothesentest auf $b = 0$: Prüfgröße",
+    "back": "$T_b = \\dfrac{\\hat{b}}{\\hat{\\sigma}_{\\hat{b}}} \\sim t_{n-2}$. Alternativ: $T = r \\cdot \\dfrac{\\sqrt{n-2}}{\\sqrt{1-r^2}}$."
+  },
+  {
+    "id": "lineare-regression-z15",
+    "topicId": "lineare-regression",
+    "front": "Konfidenzintervall für $a$",
+    "back": "$KI(a) = \\left[\\hat{a} \\pm t_{1-\\alpha/2,\\,n-2}\\,\\hat{\\sigma}_{\\hat{a}}\\right]$"
+  },
+  {
+    "id": "lineare-regression-z16",
+    "topicId": "lineare-regression",
+    "front": "Prognose $\\hat{y}_0$ für einen neuen Wert $x_0$",
+    "back": "$\\hat{y}_0 = \\hat{a} + \\hat{b}\\,x_0$"
+  },
+  {
+    "id": "lineare-regression-z17",
+    "topicId": "lineare-regression",
+    "front": "Erwartungstreue der KQ-Schätzer",
+    "back": "$E(\\hat{a}) = a$, $\\;E(\\hat{b}) = b$, $\\;E(\\hat{\\sigma}^2) = \\sigma^2$."
+  },
+  {
+    "id": "lineare-regression-z18",
+    "topicId": "lineare-regression",
+    "front": "Verteilung von $y_i$ bei Normalverteilungsannahme",
+    "back": "$y_i \\sim N(a + b x_i,\\,\\sigma^2)$"
+  },
+  {
+    "id": "lineare-regression-z19",
+    "topicId": "lineare-regression",
+    "front": "Was misst $r_{XY}$ in der Regression?",
+    "back": "Den empirischen Korrelationskoeffizienten; $r_{XY}^2 = R^2$ ist das Bestimmtheitsmaß."
+  },
+  {
+    "id": "lineare-regression-z20",
+    "topicId": "lineare-regression",
+    "front": "Was sind Residuen $\\hat{u}_i$?",
+    "back": "$\\hat{u}_i = y_i - \\hat{a} - \\hat{b}\\,x_i$; beobachtete Abweichungen von der geschätzten Geraden."
+  },
+  {
+    "id": "lineare-regression-z21",
+    "topicId": "lineare-regression",
+    "front": "Wann ist $b$ statistisch signifikant von 0 verschieden?",
+    "back": "Wenn $|T_b| > t_{n-2,\\,1-\\alpha/2}$ oder das KI für $b$ die 0 nicht enthält."
+  },
+  {
+    "id": "lineare-regression-z22",
+    "topicId": "lineare-regression",
+    "front": "Zerlegung der Varianz in der Regression",
+    "back": "$s_y^2 = s_{\\hat{y}}^2 + s_{\\hat{u}}^2$: Gesamtvarianz = erklärte Varianz + Residualvarianz."
+  },
+  {
+    "id": "lineare-regression-z23",
+    "topicId": "lineare-regression",
+    "front": "Zusammenhang $R^2$ und Korrelation",
+    "back": "$R^2 = r_{xy}^2$; bei einfacher Regression ist das Bestimmtheitsmaß das Quadrat des Korrelationskoeffizienten."
+  },
+  {
+    "id": "lineare-regression-z24",
+    "topicId": "lineare-regression",
+    "front": "Was bedeutet Heteroskedastizität für die KQ-Schätzung?",
+    "back": "Die KQ-Schätzer sind zwar noch erwartungstreu, aber nicht mehr effizient; Standardfehler und Tests werden verzerrt."
+  },
+  {
+    "id": "lineare-regression-z25",
+    "topicId": "lineare-regression",
+    "front": "Freiheitsgrade bei Tests für Regressionskoeffizienten",
+    "back": "$n - 2$; weil zwei Parameter ($a$ und $b$) geschätzt werden."
+  },
+  {
+    "id": "lineare-regression-z26",
+    "topicId": "lineare-regression",
+    "front": "Interpretation von $\\hat{b}$",
+    "back": "Steigt $x$ um 1, steigt der vorhergesagte Wert von $y$ um $\\hat{b}$ Einheiten."
+  },
+  {
+    "id": "lineare-regression-z27",
+    "topicId": "lineare-regression",
+    "front": "Einfluss des Stichprobenumfangs $n$ auf die statistische Signifikanz von $\\hat{b}$",
+    "back": "Größeres $n$ verkleinert $\\hat{\\sigma}_{\\hat{b}}$, sodass auch kleine $\\hat{b} \\ne 0$ signifikant werden."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z1",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Normalverteilungs-Dichte an Stelle $x$",
+    "back": "`dnorm(x, mean = mu, sd = sigma)` — gibt $f(x)$ der $N(\\mu, \\sigma^2)$-Verteilung zurück."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z2",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Normalverteilungs-CDF $P(X \\le x)$",
+    "back": "`pnorm(x, mean = mu, sd = sigma)` — gibt $\\Phi\\!\\left(\\frac{x-\\mu}{\\sigma}\\right)$ zurück."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z3",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Quantil der Normalverteilung",
+    "back": "`qnorm(p, mean = mu, sd = sigma)` — gibt $x$ mit $P(X \\le x) = p$ zurück."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z4",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Obere Schwanzwahrscheinlichkeit $P(X > x)$",
+    "back": "`pnorm(x, mean = mu, sd = sigma, lower.tail = FALSE)` oder `1 - pnorm(x, ...)`."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z5",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: t-Quantil $t_{n-1,\\,1-\\alpha/2}$",
+    "back": "`qt(1 - alpha/2, df = n - 1)` — gibt das $(1-\\alpha/2)$-Quantil der $t_{n-1}$-Verteilung."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z6",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Binomialwahrscheinlichkeit $P(X = k)$",
+    "back": "`dbinom(k, size = n, prob = p)`"
+  },
+  {
+    "id": "r-programmierung-begleituebung-z7",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Binomiale Verteilungsfunktion $P(X \\le k)$",
+    "back": "`pbinom(k, size = n, prob = p)`"
+  },
+  {
+    "id": "r-programmierung-begleituebung-z8",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Stichprobenmittelwert berechnen",
+    "back": "`mean(x)` — arithmetisches Mittel des Vektors `x`."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z9",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Stichprobenvarianz (erwartungstreu, Nenner $n-1$)",
+    "back": "`var(x)` — berechnet $\\hat{\\sigma}^2 = \\frac{1}{n-1}\\sum(x_i - \\bar{x})^2$."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z10",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Populationsvarianz (Nenner $n$) aus Stichprobenvarianz",
+    "back": "`var(x) * (n - 1) / n` — Korrektur, da `var()` den Nenner $n-1$ verwendet."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z11",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: t-Test durchführen",
+    "back": "`t.test(x, mu = mu0, alternative = \"two.sided\", conf.level = 0.95)` — gibt $T$, p-Wert und KI aus."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z12",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: t-Test einseitig (linksseitig, $H_1: \\mu < \\mu_0$)",
+    "back": "`t.test(x, mu = mu0, alternative = \"less\")`"
+  },
+  {
+    "id": "r-programmierung-begleituebung-z13",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Lineare Regression schätzen",
+    "back": "`lm(y ~ x, data = df)` — gibt KQ-Schätzer für $a$ (Intercept) und $b$ (Steigung) zurück."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z14",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Regressionszusammenfassung mit $R^2$ und Tests",
+    "back": "`summary(lm(y ~ x, data = df))` — zeigt Koeffizienten, Standardfehler, t-Werte, p-Werte und $R^2$."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z15",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Korrelationskoeffizient $r_{XY}$",
+    "back": "`cor(x, y)` — empirischer Pearson-Korrelationskoeffizient."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z16",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Standardabweichung berechnen",
+    "back": "`sd(x)` — Wurzel aus `var(x)`, Nenner $n-1$."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z17",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Daten aus Excel einlesen",
+    "back": "`library(readxl); df <- read_excel(\"Datei.xlsx\")`"
+  },
+  {
+    "id": "r-programmierung-begleituebung-z18",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Schnellübersicht eines Datensatzes",
+    "back": "`summary(df)` — Minimum, Maximum, Quartile und Mittelwert je Variable."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z19",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Histogramm erstellen (base R)",
+    "back": "`hist(x, breaks = 10, main = \"Titel\", xlab = \"x\")` — Häufigkeitshistogramm."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z20",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Empirische Verteilungsfunktion plotten",
+    "back": "`plot(ecdf(x))` — zeichnet die ECDF (Treppenfunktion)."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z21",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Chi-Quadrat-Quantil $\\chi^2_{\\nu,\\,1-\\alpha}$",
+    "back": "`qchisq(1 - alpha, df = nu)`"
+  },
+  {
+    "id": "r-programmierung-begleituebung-z22",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: z-Quantil $z_{1-\\alpha/2}$ der Standardnormalverteilung",
+    "back": "`qnorm(1 - alpha/2)` — z.B. `qnorm(0.975)` $\\approx 1{,}96$."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z23",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Konfidenzintervall für $\\mu$ (manuell, $\\sigma$ bekannt)",
+    "back": "`xbar <- mean(x); c(xbar - qnorm(0.975)*sigma/sqrt(n), xbar + qnorm(0.975)*sigma/sqrt(n))`"
+  },
+  {
+    "id": "r-programmierung-begleituebung-z24",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: `t.test()` — welche Größen gibt es aus?",
+    "back": "Prüfgröße `t`, Freiheitsgrade `df`, p-Wert `p.value`, Konfidenzintervall `conf.int`, Stichprobenmittel `estimate`."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z25",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: Regressionsgerade in Streudiagramm einzeichnen",
+    "back": "`plot(x, y); abline(lm(y ~ x))` — zeichnet Datenpunkte und Regressionsgerade."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z26",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "R: `lm()` — Koeffizienten extrahieren",
+    "back": "`mod <- lm(y ~ x); coef(mod)` — gibt `(Intercept)` ($\\hat{a}$) und `x` ($\\hat{b}$) zurück."
+  },
+  {
+    "id": "r-programmierung-begleituebung-z27",
+    "topicId": "r-programmierung-begleituebung",
+    "front": "Unterschied `var(x)` (R) vs. Populationsvarianz",
+    "back": "`var(x)` verwendet Nenner $n-1$ (erwartungstreu). Populationsvarianz hat Nenner $n$: $\\hat{\\sigma}^2_{pop} = \\frac{n-1}{n} \\cdot$ `var(x)`."
+  }
+]

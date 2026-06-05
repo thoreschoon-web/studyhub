@@ -37,21 +37,105 @@
           "kind": "table",
           "id": "fig-hofstede-tabelle",
           "title": "Hofstede-Werte im Ländervergleich (Quelle: Hofstede, 2011)",
-          "headers": ["Land", "Machtdistanz", "Individualismus", "Maskulinität", "Unsicherheitsvermeidung"],
+          "headers": [
+            "Land",
+            "Machtdistanz",
+            "Individualismus",
+            "Maskulinität",
+            "Unsicherheitsvermeidung"
+          ],
           "rows": [
-            ["UK", "35", "89", "66", "35"],
-            ["Japan", "54", "46", "95", "92"],
-            ["France", "68", "71", "43", "86"],
-            ["Germany", "35", "67", "66", "65"],
-            ["Spain", "57", "51", "42", "86"],
-            ["United States", "40", "91", "62", "46"],
-            ["Italy", "50", "76", "70", "75"],
-            ["Portugal", "63", "27", "31", "99"],
-            ["Russia", "93", "39", "36", "95"],
-            ["Austria", "11", "55", "79", "70"],
-            ["India", "77", "48", "56", "40"],
-            ["South Korea", "60", "18", "39", "85"],
-            ["United Arab Emirates", "90", "25", "50", "80"]
+            [
+              "UK",
+              "35",
+              "89",
+              "66",
+              "35"
+            ],
+            [
+              "Japan",
+              "54",
+              "46",
+              "95",
+              "92"
+            ],
+            [
+              "France",
+              "68",
+              "71",
+              "43",
+              "86"
+            ],
+            [
+              "Germany",
+              "35",
+              "67",
+              "66",
+              "65"
+            ],
+            [
+              "Spain",
+              "57",
+              "51",
+              "42",
+              "86"
+            ],
+            [
+              "United States",
+              "40",
+              "91",
+              "62",
+              "46"
+            ],
+            [
+              "Italy",
+              "50",
+              "76",
+              "70",
+              "75"
+            ],
+            [
+              "Portugal",
+              "63",
+              "27",
+              "31",
+              "99"
+            ],
+            [
+              "Russia",
+              "93",
+              "39",
+              "36",
+              "95"
+            ],
+            [
+              "Austria",
+              "11",
+              "55",
+              "79",
+              "70"
+            ],
+            [
+              "India",
+              "77",
+              "48",
+              "56",
+              "40"
+            ],
+            [
+              "South Korea",
+              "60",
+              "18",
+              "39",
+              "85"
+            ],
+            [
+              "United Arab Emirates",
+              "90",
+              "25",
+              "50",
+              "80"
+            ]
           ]
         }
       ],
@@ -89,12 +173,42 @@
           "kind": "table",
           "id": "fig-eprg",
           "title": "Die vier Stellenbesetzungsstrategien nach Perlmutter (EPRG-Modell)",
-          "headers": ["Orientierung", "Kurzname", "Beschreibung", "Typische Besetzung", "Steuerung"],
+          "headers": [
+            "Orientierung",
+            "Kurzname",
+            "Beschreibung",
+            "Typische Besetzung",
+            "Steuerung"
+          ],
           "rows": [
-            ["Ethnozentrisch", "E", "Strategische Entscheidungen werden zentral in der Unternehmenszentrale getroffen. Tochtergesellschaften werden von der Zentrale gesteuert.", "PCNs für Schlüsselpositionen im Ausland", "Hoch zentralisiert"],
-            ["Polyzentrisch", "P", "Jede Tochtergesellschaft wird als nationale Einheit mit eigener Entscheidungskompetenz behandelt.", "HCNs für alle Positionen im Gastland", "Dezentral, lokal"],
-            ["Regiozentrisch", "R", "Regionale geografische Struktur. Pool regional einsetzbarer Manager mit Entscheidungskompetenzen für ihre Region.", "Manager innerhalb einer Region austauschbar", "Regional"],
-            ["Geozentrisch", "G", "Weltweit integrierte Unternehmensstrategie. Pool global einsetzbarer Manager ohne Berücksichtigung der Nationalität.", "Beste Person für die Stelle, egal welche Nationalität", "Global integriert"]
+            [
+              "Ethnozentrisch",
+              "E",
+              "Strategische Entscheidungen werden zentral in der Unternehmenszentrale getroffen. Tochtergesellschaften werden von der Zentrale gesteuert.",
+              "PCNs für Schlüsselpositionen im Ausland",
+              "Hoch zentralisiert"
+            ],
+            [
+              "Polyzentrisch",
+              "P",
+              "Jede Tochtergesellschaft wird als nationale Einheit mit eigener Entscheidungskompetenz behandelt.",
+              "HCNs für alle Positionen im Gastland",
+              "Dezentral, lokal"
+            ],
+            [
+              "Regiozentrisch",
+              "R",
+              "Regionale geografische Struktur. Pool regional einsetzbarer Manager mit Entscheidungskompetenzen für ihre Region.",
+              "Manager innerhalb einer Region austauschbar",
+              "Regional"
+            ],
+            [
+              "Geozentrisch",
+              "G",
+              "Weltweit integrierte Unternehmensstrategie. Pool global einsetzbarer Manager ohne Berücksichtigung der Nationalität.",
+              "Beste Person für die Stelle, egal welche Nationalität",
+              "Global integriert"
+            ]
           ]
         },
         {
@@ -122,13 +236,31 @@
           "kind": "table",
           "id": "fig-repatriierung",
           "title": "Repatriierungsprobleme nach Bereichen (Festing et al. 2011)",
-          "headers": ["Bereich", "Problem"],
+          "headers": [
+            "Bereich",
+            "Problem"
+          ],
           "rows": [
-            ["Arbeitsaufgabe", "\"Aus den Augen – aus dem Sinn\": Keine herausfordernde, qualifikationsgerechte Position vakant"],
-            ["Karriere", "Position bei Rückkehr entspricht der vor der Ausreise – daheimgebliebene Kollegen haben inzwischen höhere Positionen erreicht"],
-            ["Erfahrungstransfer", "Das im Ausland gesammelte Wissen wird weder beachtet noch genutzt. Fachwissen kann veraltet sein."],
-            ["Persönlichkeitswandel", "Rückkehrer haben Werte, Gewohnheiten und Normen verinnerlicht, die nicht mehr zum Heimatland passen"],
-            ["Soziale Kontakte", "Beziehungen zu Freunden und Bekannten im Heimatland sind weniger intensiv. Auch die Partnerin/der Partner ist betroffen."]
+            [
+              "Arbeitsaufgabe",
+              "\"Aus den Augen – aus dem Sinn\": Keine herausfordernde, qualifikationsgerechte Position vakant"
+            ],
+            [
+              "Karriere",
+              "Position bei Rückkehr entspricht der vor der Ausreise – daheimgebliebene Kollegen haben inzwischen höhere Positionen erreicht"
+            ],
+            [
+              "Erfahrungstransfer",
+              "Das im Ausland gesammelte Wissen wird weder beachtet noch genutzt. Fachwissen kann veraltet sein."
+            ],
+            [
+              "Persönlichkeitswandel",
+              "Rückkehrer haben Werte, Gewohnheiten und Normen verinnerlicht, die nicht mehr zum Heimatland passen"
+            ],
+            [
+              "Soziale Kontakte",
+              "Beziehungen zu Freunden und Bekannten im Heimatland sind weniger intensiv. Auch die Partnerin/der Partner ist betroffen."
+            ]
           ]
         }
       ],
@@ -200,6 +332,48 @@
       "topicId": "hr-internationales-hrm",
       "front": "Was ist der Unterschied zwischen monochroner und polychroner Zeitorientierung nach Hall?",
       "back": "Monochron (z. B. Deutschland): Aufgaben werden nacheinander, sequenziell abgearbeitet. Polychron (z. B. Lateinamerika): Mehrere Aufgaben werden gleichzeitig / parallel bearbeitet. Führt im Arbeitsalltag zu unterschiedlichen Erwartungen an Planung und Verbindlichkeit."
+    },
+    {
+      "id": "hr-internationales-hrm-z1",
+      "topicId": "hr-internationales-hrm",
+      "front": "PCN / HCN / TCN",
+      "back": "PCN (Parent Country National): Stammland-Mitarbeiter. HCN (Host Country National): lokale Mitarbeiter im Gastland. TCN (Third Country National): Mitarbeiter aus Drittland."
+    },
+    {
+      "id": "hr-internationales-hrm-z2",
+      "topicId": "hr-internationales-hrm",
+      "front": "Perlmutter-Modell – 4 Orientierungen (Heenan & Perlmutter 1979)",
+      "back": "Ethno­zentrisch (Stammlandmitarbeiter überall), Poly­zentrisch (lokale Kräfte in Töchtern), Regio­zentrisch (regional), Geo­zentrisch (globale Besten unabhängig von Herkunft)."
+    },
+    {
+      "id": "hr-internationales-hrm-z3",
+      "topicId": "hr-internationales-hrm",
+      "front": "Hofstede – 4 Kulturdimensionen",
+      "back": "1. Machtdistanz 2. Individualismus vs. Kollektivismus 3. Maskulinität vs. Femininität 4. Unsicherheitsvermeidung. (Erweiterungen: Langzeitorientierung, Genuss vs. Beschränkung)"
+    },
+    {
+      "id": "hr-internationales-hrm-z4",
+      "topicId": "hr-internationales-hrm",
+      "front": "Interkulturelle Kommunikation – Hall: Mono- vs. Polychron",
+      "back": "Monochron: eine Aufgabe nach der anderen (z.B. Deutschland). Polychron: mehrere Aufgaben gleichzeitig (z.B. viele Mittelmeer-/Lateinamerika-Kulturen). Weitere Dimensionen: Kontext (high/low), Raumorientierung."
+    },
+    {
+      "id": "hr-internationales-hrm-z5",
+      "topicId": "hr-internationales-hrm",
+      "front": "Standardisierung vs. lokale Anpassung – Biemann et al. (2022)",
+      "back": "CRANET-Studie (42 Länder, 25.869 Organisationen): keine weltweite Konvergenz der Personalauswahlpraktiken – länderspezifische Muster bleiben bestehen."
+    },
+    {
+      "id": "hr-internationales-hrm-z6",
+      "topicId": "hr-internationales-hrm",
+      "front": "Balanced-Sheet-Ansatz (Expatriate-Vergütung)",
+      "back": "Vergütung orientiert sich am Heimatland-Niveau + Ausgleich für Mehrkosten im Gastland (Lebenshaltung, Wohnen, Steuern). Ziel: weder Gewinn noch Verlust durch Entsendung."
+    },
+    {
+      "id": "hr-internationales-hrm-z7",
+      "topicId": "hr-internationales-hrm",
+      "front": "Repatriierung – typische Probleme",
+      "back": "'Aus den Augen, aus dem Sinn': Karriereknick, verlorene Netzwerke, schwieriger Erfahrungstransfer, Reverse Culture Shock, veränderte Lebenserwartungen."
     }
   ],
   "quiz": [
@@ -209,8 +383,15 @@
       "topicId": "hr-internationales-hrm",
       "difficulty": "leicht",
       "prompt": "Ein deutsches Unternehmen entsendet einen deutschen Ingenieur in sein Werk in Indien. Welchem Mitarbeitertyp gehört er an?",
-      "options": ["HCN (Host Country National)", "PCN (Parent Country National)", "TCN (Third Country National)", "Inpatriate"],
-      "correct": [1],
+      "options": [
+        "HCN (Host Country National)",
+        "PCN (Parent Country National)",
+        "TCN (Third Country National)",
+        "Inpatriate"
+      ],
+      "correct": [
+        1
+      ],
       "explanation": "Ein PCN (Parent Country National) ist ein Mitarbeiter aus dem Stammland des MNU. Da das Unternehmen deutsch ist und der Ingenieur ebenfalls Deutscher ist, ist er ein PCN."
     },
     {
@@ -219,8 +400,15 @@
       "topicId": "hr-internationales-hrm",
       "difficulty": "leicht",
       "prompt": "Bei welcher internationalen Stellenbesetzungsstrategie werden Tochtergesellschaften von einheimischen Kräften (HCNs) geleitet und als selbstständige nationale Einheiten behandelt?",
-      "options": ["Ethnozentrisch", "Polyzentrisch", "Regiozentrisch", "Geozentrisch"],
-      "correct": [1],
+      "options": [
+        "Ethnozentrisch",
+        "Polyzentrisch",
+        "Regiozentrisch",
+        "Geozentrisch"
+      ],
+      "correct": [
+        1
+      ],
       "explanation": "Polyzentrisch: Die Unternehmenszentrale behandelt jede Tochtergesellschaft als nationale Einheit mit Entscheidungskompetenz. Tochtergesellschaften werden von HCNs gesteuert."
     },
     {
@@ -229,8 +417,17 @@
       "topicId": "hr-internationales-hrm",
       "difficulty": "mittel",
       "prompt": "Welche der folgenden Aussagen über die geozentrische Orientierung sind korrekt? (Mehrfachauswahl möglich)",
-      "options": ["Die beste Person für eine Stelle wird unabhängig von ihrer Nationalität ausgewählt.", "Es wird ein globaler Pool einsetzbarer Manager aufgebaut.", "Tochtergesellschaften werden ausschließlich von PCNs geleitet.", "Es handelt sich um eine weltweit integrierte Unternehmensstrategie."],
-      "correct": [0, 1, 3],
+      "options": [
+        "Die beste Person für eine Stelle wird unabhängig von ihrer Nationalität ausgewählt.",
+        "Es wird ein globaler Pool einsetzbarer Manager aufgebaut.",
+        "Tochtergesellschaften werden ausschließlich von PCNs geleitet.",
+        "Es handelt sich um eine weltweit integrierte Unternehmensstrategie."
+      ],
+      "correct": [
+        0,
+        1,
+        3
+      ],
       "multiple": true,
       "explanation": "Geozentrisch bedeutet: beste Person weltweit, egal welche Nationalität (kein PCN-Zwang), globaler Managerpool, weltweit integrierte Strategie. Aussage 3 beschreibt die ethnozentrische Orientierung."
     },
@@ -258,8 +455,15 @@
       "topicId": "hr-internationales-hrm",
       "difficulty": "mittel",
       "prompt": "Welche Hofstede-Dimension erklärt am besten, warum in Japan (Wert: 92) fixe Vergütung bevorzugt wird, während in den USA (Wert: 46) variable Vergütung verbreiteter ist?",
-      "options": ["Machtdistanz", "Individualismus vs. Kollektivismus", "Maskulinität vs. Femininität", "Unsicherheitsvermeidung"],
-      "correct": [3],
+      "options": [
+        "Machtdistanz",
+        "Individualismus vs. Kollektivismus",
+        "Maskulinität vs. Femininität",
+        "Unsicherheitsvermeidung"
+      ],
+      "correct": [
+        3
+      ],
       "explanation": "Unsicherheitsvermeidung: Japan hat einen sehr hohen Wert (92) – Mitarbeitende vermeiden Ungewissheit und bevorzugen sichere, fixe Vergütung. Die USA haben einen niedrigen Wert (46) und akzeptieren die Ungewissheit variabler Vergütung besser."
     },
     {
@@ -269,7 +473,14 @@
       "difficulty": "schwer",
       "prompt": "Siemens Energy beschäftigt in China zunehmend lokale chinesische Kräfte statt deutsche Expats. Welche Risiken sind mit dieser Lokalisierungsstrategie verbunden? Nennen Sie mindestens drei.",
       "sampleAnswer": "1. Kontrollverlust: Die organisationale Kontrolle und Koordination zwischen Zentrale und Tochtergesellschaft wird riskanter, da lokale Manager andere Prioritäten haben können. 2. Gefahr nationaler statt globaler Denkweise: HCNs denken möglicherweise stärker national und weniger im Sinne der globalen Unternehmensstrategie. 3. Wissenstransfer: Ohne PCNs wird der Transfer von Unternehmenswissen, -werten und -praktiken aus der Zentrale erschwert. 4. Image: Wenn PCNs fehlen, kann ein unangemessenes Image des Headquarters im Gastland entstehen.",
-      "keywords": ["kontrolle", "koordination", "national", "global", "wissenstransfer", "image"],
+      "keywords": [
+        "kontrolle",
+        "koordination",
+        "national",
+        "global",
+        "wissenstransfer",
+        "image"
+      ],
       "explanation": "Die Vorlesungsfolien 186/187 nennen als Nachteile von HCNs: organisationale Kontrolle wird risikobehaftet, Gefahr nationaler statt globaler Denkweise. Aus dem Handelsblatt-Artikel: weniger Kontrollmöglichkeiten, aber auch politische Risiken und mögliche Abhängigkeit vom chinesischen Arbeitsmarkt."
     },
     {
@@ -278,8 +489,15 @@
       "topicId": "hr-internationales-hrm",
       "difficulty": "mittel",
       "prompt": "Eine Mitarbeiterin kehrt nach 4 Jahren Auslandsentsendung zurück. Sie stellt fest, dass ihre früheren Kollegen inzwischen höhere Positionen innehaben, und bekommt dieselbe Stelle wie vor der Abreise. Welches Repatriierungsproblem wird hier beschrieben?",
-      "options": ["Persönlichkeitswandel", "Erfahrungstransfer", "Karriere", "Soziale Kontakte"],
-      "correct": [2],
+      "options": [
+        "Persönlichkeitswandel",
+        "Erfahrungstransfer",
+        "Karriere",
+        "Soziale Kontakte"
+      ],
+      "correct": [
+        2
+      ],
       "explanation": "Der Karriere-Problembereich: Die Rückkehrerin erhält eine Position, die in der Hierarchie der Position vor der Ausreise äquivalent ist, während daheimgebliebene Kollegen bereits höhere Positionen erreicht haben. Das führt zu Frustration und ist ein häufiger Auslöser für Kündigung nach der Rückkehr."
     },
     {
@@ -297,8 +515,15 @@
       "topicId": "hr-internationales-hrm",
       "difficulty": "schwer",
       "prompt": "Ein MNU baut einen Managerpool aus Fachkräften verschiedener Nationalitäten auf, der flexibel in verschiedenen Regionen eingesetzt werden kann, und strukturiert seine HR-Entscheidungen entlang geografischer Regionen (Europa, Asien, Amerika). Welche Orientierung trifft am ehesten zu?",
-      "options": ["Ethnozentrisch", "Polyzentrisch", "Regiozentrisch", "Geozentrisch"],
-      "correct": [2],
+      "options": [
+        "Ethnozentrisch",
+        "Polyzentrisch",
+        "Regiozentrisch",
+        "Geozentrisch"
+      ],
+      "correct": [
+        2
+      ],
       "explanation": "Regiozentrisch: Dieser Ansatz spiegelt eine regionale geografische Struktur wider. Ein Pool regional einsetzbarer Manager verfügt über Entscheidungskompetenzen für ihre Region. Im Gegensatz zur geozentrischen Orientierung bleibt die Mobilität auf Regionen begrenzt, nicht global."
     },
     {
@@ -308,7 +533,14 @@
       "difficulty": "mittel",
       "prompt": "Erklären Sie in eigenen Worten, warum die Kulturdimension 'Individualismus vs. Kollektivismus' (Hofstede) relevant für die Gestaltung von Personalauswahlpraktiken ist.",
       "sampleAnswer": "In individualistischen Kulturen (z. B. USA, Wert 91) zählt die individuelle Leistung des Bewerbers – Interviews fragen nach persönlichen Stärken, Einzelleistungen und Karrierezielen. In kollektivistischen Kulturen (z. B. Südkorea, Wert 18) sind teambezogene Fähigkeiten, Gruppenharmonie und die Einbettung in soziale Netzwerke wichtiger. Ein US-amerikanisches Auswahlinterview, das auf individuelle Eigeninitiative setzt, kann in einer kollektivistischen Kultur kulturell unpassend oder sogar abschreckend wirken.",
-      "keywords": ["individuell", "kollektiv", "team", "leistung", "auswahl", "kultur"],
+      "keywords": [
+        "individuell",
+        "kollektiv",
+        "team",
+        "leistung",
+        "auswahl",
+        "kultur"
+      ],
       "explanation": "Festing et al. (2011): In Kulturen mit hohem Kollektivismus sind teambezogene Fähigkeiten im Recruiting wichtiger. In individualistischen Kulturen steht individuelle Leistung im Vordergrund."
     }
   ],

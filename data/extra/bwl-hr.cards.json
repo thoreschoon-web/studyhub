@@ -1,0 +1,392 @@
+[
+  {
+    "id": "hr-grundlagen-des-human-resource-management-z1",
+    "topicId": "hr-grundlagen-des-human-resource-management",
+    "front": "Definition HRM (Noe et al.)",
+    "back": "Politiken, Praktiken und Systeme, die das Verhalten, die Einstellungen und die Leistung von Mitarbeitenden beeinflussen."
+  },
+  {
+    "id": "hr-grundlagen-des-human-resource-management-z2",
+    "topicId": "hr-grundlagen-des-human-resource-management",
+    "front": "Betriebliches Personalwesen vs. HRM – Kernunterschied",
+    "back": "Personalwesen: verwaltungsorientiert, Mitarbeitende als Kostenfaktor. HRM: strategisch-wertschöpfungsorientiert, Mitarbeitende als Ressource."
+  },
+  {
+    "id": "hr-grundlagen-des-human-resource-management-z3",
+    "topicId": "hr-grundlagen-des-human-resource-management",
+    "front": "Ulrich-Modell: Vier Rollen der HR-Abteilung",
+    "back": "1. Strategic Partner (strategische Partnerschaft) 2. Change Agent (Veränderungsmanager) 3. Administrative Expert (Verwaltungsexperte) 4. Employee Champion (Partnerschaft mit Belegschaft)"
+  },
+  {
+    "id": "hr-grundlagen-des-human-resource-management-z4",
+    "topicId": "hr-grundlagen-des-human-resource-management",
+    "front": "Ulrich-Matrix: Achsen",
+    "back": "X-Achse: Prozesse ↔ Menschen. Y-Achse: operativ ↔ strategisch/zukunftsorientiert."
+  },
+  {
+    "id": "hr-grundlagen-des-human-resource-management-z5",
+    "topicId": "hr-grundlagen-des-human-resource-management",
+    "front": "Employee Life Cycle – Phasen",
+    "back": "Planung → Rekrutierung → Auswahl → Entwicklung → Vergütung → Freisetzung."
+  },
+  {
+    "id": "hr-strategisches-hrm-z1",
+    "topicId": "hr-strategisches-hrm",
+    "front": "SHRM: Drei Ansätze",
+    "back": "1. Best Practice (universell wirksam) 2. Kontingenz (vertikaler Fit zur Strategie) 3. Konfigurational (horizontaler Fit: HR-Bündel intern stimmig)"
+  },
+  {
+    "id": "hr-strategisches-hrm-z2",
+    "topicId": "hr-strategisches-hrm",
+    "front": "VRIO-Kriterien (Resource-Based View)",
+    "back": "Ressource muss sein: Wertvoll (Valuable), Selten (Rare), Nicht imitierbar (Inimitable), Organisational verankert (Organized). Dann → nachhaltiger Wettbewerbsvorteil."
+  },
+  {
+    "id": "hr-strategisches-hrm-z3",
+    "topicId": "hr-strategisches-hrm",
+    "front": "Human Resource Advantage (Wright et al.)",
+    "back": "Human Capital Advantage (überlegene Mitarbeitende) + Human Process Advantage (überlegene HR-Prozesse) = Human Resource Advantage."
+  },
+  {
+    "id": "hr-strategisches-hrm-z4",
+    "topicId": "hr-strategisches-hrm",
+    "front": "Vertikaler vs. horizontaler Fit",
+    "back": "Vertikaler Fit: HR-Strategie passt zur Unternehmensstrategie. Horizontaler Fit: HR-Praktiken stimmen untereinander überein."
+  },
+  {
+    "id": "hr-strategisches-hrm-z5",
+    "topicId": "hr-strategisches-hrm",
+    "front": "Lepak & Snell HR-Architektur (1999): Vier Quadranten",
+    "back": "Zwei Dimensionen: strategischer Wert × Einzigartigkeit des Humankapitals. Quadranten: Entwicklung / Akquise / Kontrahierung / Allianz."
+  },
+  {
+    "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z1",
+    "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+    "front": "Scientific Management (Taylor, 1911) – Kernprinzipien",
+    "back": "Extreme Arbeitsteilung, 'one best way', Trennung Hand-/Kopfarbeit, Zeit- und Bewegungsstudien. Kritik: Dehumanisierung, Entfremdung."
+  },
+  {
+    "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z2",
+    "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+    "front": "Hawthorne-Studien – Kernbefund",
+    "back": "Soziale Faktoren und das Beobachtetwerden (Hawthorne-Effekt) erhöhen die Leistung mehr als physische Arbeitsbedingungen → Bedeutung informeller Gruppen."
+  },
+  {
+    "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z3",
+    "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+    "front": "JCM (Job Characteristics Model) – 5 Kernmerkmale",
+    "back": "Aufgabenvielfalt, Ganzheitlichkeit, Bedeutungsgehalt, Autonomie, Feedback. → kritische psychologische Zustände → Motivation, Zufriedenheit, Leistung."
+  },
+  {
+    "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z4",
+    "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+    "front": "MPS-Formel (Motivating Potential Score)",
+    "back": "MPS = ((Vielfalt + Ganzheitlichkeit + Bedeutung) / 3) × Autonomie × Feedback"
+  },
+  {
+    "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z5",
+    "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+    "front": "Job Enrichment vs. Job Enlargement vs. Job Rotation",
+    "back": "Enrichment: vertikale Erweiterung (mehr Verantwortung). Enlargement: horizontale Erweiterung (mehr Aufgaben gleicher Ebene). Rotation: Stellenwechsel zur Abwechslung."
+  },
+  {
+    "id": "hr-arbeitsorganisation-und-arbeitsgestaltung-z6",
+    "topicId": "hr-arbeitsorganisation-und-arbeitsgestaltung",
+    "front": "Taylorismus 2.0 – Beispiele",
+    "back": "Wearables und Tracking (Hitachi, Percolata, BP, Amazon) – moderne digitale Kontrolle nach tayloristischen Prinzipien."
+  },
+  {
+    "id": "hr-personalplanung-und-talent-management-z1",
+    "topicId": "hr-personalplanung-und-talent-management",
+    "front": "Nettopersonalbedarf – Formel",
+    "back": "Nettopersonalbedarf = Bruttopersonalbedarf − (Personalbestand + Zugänge − Abgänge)"
+  },
+  {
+    "id": "hr-personalplanung-und-talent-management-z2",
+    "topicId": "hr-personalplanung-und-talent-management",
+    "front": "Qualitative vs. quantitative Personalplanung",
+    "back": "Qualitativ: welche Qualifikationen werden gebraucht? Quantitativ: wie viele Mitarbeitende werden gebraucht?"
+  },
+  {
+    "id": "hr-personalplanung-und-talent-management-z3",
+    "topicId": "hr-personalplanung-und-talent-management",
+    "front": "A/B/C-Positionen (Huselid, Beatty & Becker 2005)",
+    "back": "A-Positionen: strategisch, hoher Leistungshebel (<20% der Stellen). B-Positionen: Support-Funktionen. C-Positionen: Surplus (strategisch nachrangig). Investitionen differenzieren!"
+  },
+  {
+    "id": "hr-personalplanung-und-talent-management-z4",
+    "topicId": "hr-personalplanung-und-talent-management",
+    "front": "Talent Management nach Collings & Mellahi",
+    "back": "Systematische Identifikation von Schlüsselpositionen (pivot roles) → Talent Pool aufbauen → differenzierte HR-Architektur für diese Positionen."
+  },
+  {
+    "id": "hr-personalplanung-und-talent-management-z5",
+    "topicId": "hr-personalplanung-und-talent-management",
+    "front": "HR Analytics – Einsatzbereiche",
+    "back": "Datenbasierte Personalentscheidungen: prädiktive Kündigungsprognosen, Recruiting-Optimierung, Talentbindung. Kritische Faktoren: Datenqualität, Kausalität."
+  },
+  {
+    "id": "hr-personalrekrutierung-z1",
+    "topicId": "hr-personalrekrutierung",
+    "front": "Interne vs. externe Rekrutierung – Vor-/Nachteile",
+    "back": "Intern: Bindung, Kenntnisse vorhanden, günstig; Nachteil: Betriebsblindheit. Extern: frisches Know-how, größerer Pool; Nachteil: höhere Kosten, längere Einarbeitung."
+  },
+  {
+    "id": "hr-personalrekrutierung-z2",
+    "topicId": "hr-personalrekrutierung",
+    "front": "Employer Branding",
+    "back": "Positionierung des Unternehmens als attraktiver Arbeitgeber (intern: Bindung; extern: Gewinnung). Arbeitgeberimage ≠ allgemeines Unternehmensimage."
+  },
+  {
+    "id": "hr-personalrekrutierung-z3",
+    "topicId": "hr-personalrekrutierung",
+    "front": "Signaling-Theorie im Recruiting (Spence / Connelly et al. 2011)",
+    "back": "Informationsasymmetrie: Bewerber signalisieren Qualität (z.B. Abschlüsse), Unternehmen signalisieren Attraktivität. Schema: Sender → Signal → Empfänger → Feedback."
+  },
+  {
+    "id": "hr-personalrekrutierung-z4",
+    "topicId": "hr-personalrekrutierung",
+    "front": "Active Sourcing",
+    "back": "Aktive Direktansprache potenzieller Kandidaten (z.B. über LinkedIn, Headhunter), ohne auf eingehende Bewerbungen zu warten."
+  },
+  {
+    "id": "hr-personalrekrutierung-z5",
+    "topicId": "hr-personalrekrutierung",
+    "front": "HBR: 'The Risky Business of Hiring Stars' – Kernbotschaft",
+    "back": "Starleistung ist nur ~30% portabel; ~70% sind firmen-/kontextspezifisch. Stars durch Einkauf verschlechtern oft die Team-Performance. Besser: 'Grow stars, don't buy them.'"
+  },
+  {
+    "id": "hr-personalauswahl-z1",
+    "topicId": "hr-personalauswahl",
+    "front": "Drei Hauptgütekriterien der Personalauswahl",
+    "back": "1. Objektivität (Durchführung, Auswertung, Interpretation unabhängig vom Beurteiler) 2. Reliabilität (Messgenauigkeit/Zuverlässigkeit) 3. Validität (misst, was es soll)"
+  },
+  {
+    "id": "hr-personalauswahl-z2",
+    "topicId": "hr-personalauswahl",
+    "front": "Prognostische Validität – strukturiertes vs. unstrukturiertes Interview",
+    "back": "Strukturierte Interviews haben deutlich höhere prognostische Validität als unstrukturierte. Sackett et al. (2021) revidierten viele Werte von Schmidt & Hunter (1998) nach unten."
+  },
+  {
+    "id": "hr-personalauswahl-z3",
+    "topicId": "hr-personalauswahl",
+    "front": "Assessment Center – Merkmale",
+    "back": "Mehrere Beobachter, mehrere Verfahren (Postkorb, Rollenspiel, Gruppendiskussion, Präsentation). Ziel: valide, objektive Einschätzung von Kompetenzen."
+  },
+  {
+    "id": "hr-personalauswahl-z4",
+    "topicId": "hr-personalauswahl",
+    "front": "Interviewformen – Übersicht",
+    "back": "Stressinterview, Tiefeninterview, Situatives Interview (hypothetische Szenarien), Multimodales Interview (Kombination). Strukturierung erhöht Validität."
+  },
+  {
+    "id": "hr-personalauswahl-z5",
+    "topicId": "hr-personalauswahl",
+    "front": "Robot Recruiting / CV-Parsing",
+    "back": "Automatisierte Vorauswahl durch Algorithmen (z.B. Xerox, Precire/Sprachanalyse). Vorteil: Effizienz. Kritik: Black-Box, mögliche Diskriminierung."
+  },
+  {
+    "id": "hr-performance-management-leistungsbeurteilun-z1",
+    "topicId": "hr-performance-management-leistungsbeurteilun",
+    "front": "Performance Management – Definition (Armstrong)",
+    "back": "Kontinuierlicher Prozess: Ziele setzen → beobachten → beurteilen → fördern. Ziel: Mitarbeiterleistung systematisch steuern und entwickeln."
+  },
+  {
+    "id": "hr-performance-management-leistungsbeurteilun-z2",
+    "topicId": "hr-performance-management-leistungsbeurteilun",
+    "front": "Vier Ansätze der Leistungsbeurteilung",
+    "back": "1. Vergleichend (Ranking, Forced Distribution) 2. Eigenschaft (trait-based) 3. Verhalten (BARS) 4. Ergebnis/Ziele (MbO)"
+  },
+  {
+    "id": "hr-performance-management-leistungsbeurteilun-z3",
+    "topicId": "hr-performance-management-leistungsbeurteilun",
+    "front": "Forced Ranking / Forced Distribution (20-70-10)",
+    "back": "Pflichtverteilung: 20% Top-Performer, 70% Mittelmäßige, 10% Low-Performer (Jack Welch). Praxis: Yahoo (Marissa Mayer). Kritik: destruktiv, willkürlich in guten Teams."
+  },
+  {
+    "id": "hr-performance-management-leistungsbeurteilun-z4",
+    "topicId": "hr-performance-management-leistungsbeurteilun",
+    "front": "Typische Beurteilungsfehler",
+    "back": "Halo-Effekt (ein Merkmal strahlt aus), Kontrasteffekt, Primär-/Recency-Effekt (Nikolaus-Effekt), Kleber-Effekt, Pygmalion-Effekt, Tendenz zur Mitte, Milde-/Strenge-Effekt."
+  },
+  {
+    "id": "hr-performance-management-leistungsbeurteilun-z5",
+    "topicId": "hr-performance-management-leistungsbeurteilun",
+    "front": "HBR: 'The Gentleman's Three' – Problem",
+    "back": "Grade Inflation/Compression: Fast alle Mitarbeitenden bekommen 4–5 (von 5). Differenzierung fehlt, Feedback wertlos. → Leistungsanreize kollabieren."
+  },
+  {
+    "id": "hr-performance-management-leistungsbeurteilun-z6",
+    "topicId": "hr-performance-management-leistungsbeurteilun",
+    "front": "9-Box-Grid",
+    "back": "Matrix: Leistung (niedrig/mittel/hoch) × Potenzial (niedrig/mittel/hoch). Instrument zur Identifikation von High Potentials und Entwicklungsbedarf."
+  },
+  {
+    "id": "hr-personal-und-karriereentwicklung-z1",
+    "topicId": "hr-personal-und-karriereentwicklung",
+    "front": "PE-Maßnahmen nach Becker – Systematik",
+    "back": "Bildung, Förderung, Organisationsentwicklung. Nach Zeitpunkt: Into-the-job / On-the-job / Near-the-job / Off-the-job / Out-of-the-job."
+  },
+  {
+    "id": "hr-personal-und-karriereentwicklung-z2",
+    "topicId": "hr-personal-und-karriereentwicklung",
+    "front": "Kirkpatrick-Modell – 4 Ebenen",
+    "back": "1. Reaktion (Zufriedenheit) 2. Lernen (Wissenszuwachs) 3. Verhalten (Transferleistung am Arbeitsplatz) 4. Ergebnisse (Unternehmensnutzen). 5. Ebene: ROI nach Phillips."
+  },
+  {
+    "id": "hr-personal-und-karriereentwicklung-z3",
+    "topicId": "hr-personal-und-karriereentwicklung",
+    "front": "ROI-Formel (Personalentwicklung, Phillips)",
+    "back": "ROI = (Programmnutzen − Programmkosten) / Programmkosten × 100"
+  },
+  {
+    "id": "hr-personal-und-karriereentwicklung-z4",
+    "topicId": "hr-personal-und-karriereentwicklung",
+    "front": "Boundaryless Career / Protean Career",
+    "back": "Boundaryless: Karriere über Unternehmensgrenzen hinweg. Protean: selbstgesteuert, wertegeleitet, flexibel – nicht mehr nur vertikal."
+  },
+  {
+    "id": "hr-personal-und-karriereentwicklung-z5",
+    "topicId": "hr-personal-und-karriereentwicklung",
+    "front": "Schein-Karrierekegel – 3 Bewegungsrichtungen",
+    "back": "Vertikal (Aufstieg), Horizontal (Funktionswechsel), Radial/Zentripetal (Zugang zum Machtzentrum)."
+  },
+  {
+    "id": "hr-personalfreisetzung-z1",
+    "topicId": "hr-personalfreisetzung",
+    "front": "Instrumente der Personalfreisetzung – Stufenmodell",
+    "back": "1. Vorbeugend (Einstellungsstopp, Überstundenabbau, Kurzarbeit) 2. Personalpolitisch (Versetzung, Fluktuation, Frühverrentung) 3. Direkter Abbau (Kündigung, Aufhebungsvertrag)"
+  },
+  {
+    "id": "hr-personalfreisetzung-z2",
+    "topicId": "hr-personalfreisetzung",
+    "front": "KSchG – Kündigungsschutzgesetz: Anwendungsbereich",
+    "back": "Gilt ab >10 Arbeitnehmern und >6 Monate Betriebszugehörigkeit. Schützt vor sozial ungerechtfertigten Kündigungen (betriebs-, personen-, verhaltensbedingt)."
+  },
+  {
+    "id": "hr-personalfreisetzung-z3",
+    "topicId": "hr-personalfreisetzung",
+    "front": "BetrVG §102 – Betriebsrat und Kündigung",
+    "back": "Arbeitgeber muss Betriebsrat vor jeder Kündigung anhören. Ohne Anhörung ist die Kündigung unwirksam."
+  },
+  {
+    "id": "hr-personalfreisetzung-z4",
+    "topicId": "hr-personalfreisetzung",
+    "front": "BetrVG §112 – Sozialplan",
+    "back": "Bei Betriebsänderungen (z.B. Massenentlassung) ist ein Interessenausgleich und ggf. Sozialplan mit dem Betriebsrat zu vereinbaren (Ausgleich wirtschaftlicher Nachteile)."
+  },
+  {
+    "id": "hr-personalfreisetzung-z5",
+    "topicId": "hr-personalfreisetzung",
+    "front": "HBR: 'How Honeywell Avoided Layoffs' – Kernbotschaft",
+    "back": "Honeywell setzte in der Rezession 2008/09 auf unbezahlte Furloughs (Zwangsurlaub) statt Entlassungen. 'False Promise of Layoffs': Einsparungen werden überschätzt, Kosten (Abfindungen, Wissens-/Kulturverlust) unterschätzt."
+  },
+  {
+    "id": "hr-personalfreisetzung-z6",
+    "topicId": "hr-personalfreisetzung",
+    "front": "Survivor-Syndrom",
+    "back": "Verbleibende Mitarbeitende nach Personalabbau leiden unter Schuldgefühlen, Misstrauen, sinkender Motivation und Loyalität – negativ für Unternehmenskultur."
+  },
+  {
+    "id": "hr-verguetung-und-anreizgestaltung-z1",
+    "topicId": "hr-verguetung-und-anreizgestaltung",
+    "front": "Equity Theory (Adams 1963) – Grundformel",
+    "back": "Eigene Outcomes/Inputs = Outcomes/Inputs der Referenzperson. Ungleichgewicht → wahrgenommene Ungerechtigkeit → Verhaltensänderung (z.B. Leistungsreduktion)."
+  },
+  {
+    "id": "hr-verguetung-und-anreizgestaltung-z2",
+    "topicId": "hr-verguetung-und-anreizgestaltung",
+    "front": "Drei Gerechtigkeitsdimensionen",
+    "back": "Distributiv (Was bekomme ich?), Prozedural (Wie wird entschieden?), Interaktional (Wie werde ich behandelt?)."
+  },
+  {
+    "id": "hr-verguetung-und-anreizgestaltung-z3",
+    "topicId": "hr-verguetung-und-anreizgestaltung",
+    "front": "Variable Vergütung – Probleme ('When bonuses backfire')",
+    "back": "Boni können intrinsische Motivation verdrängen, kurzfristiges Denken fördern und zu opportunistischem Verhalten führen (Alfitian/Sliwka/Vogelsang 2023)."
+  },
+  {
+    "id": "hr-verguetung-und-anreizgestaltung-z4",
+    "topicId": "hr-verguetung-und-anreizgestaltung",
+    "front": "Analytische vs. summarische Arbeitsbewertung",
+    "back": "Summarisch: Stelle wird als Ganzes eingestuft (einfach, subjektiv). Analytisch: Anforderungsmerkmale werden einzeln gewichtet und bewertet (differenzierter, aufwendiger)."
+  },
+  {
+    "id": "hr-verguetung-und-anreizgestaltung-z5",
+    "topicId": "hr-verguetung-und-anreizgestaltung",
+    "front": "Geld und Glück – abnehmender Grenznutzen",
+    "back": "Lebenszufriedenheit steigt mit Einkommen, aber mit abnehmendem Grenznutzen. Selbstdeterminationstheorie: Autonomie, Kompetenz, Zugehörigkeit wichtiger als Geld ab bestimmtem Niveau."
+  },
+  {
+    "id": "hr-internationales-hrm-z1",
+    "topicId": "hr-internationales-hrm",
+    "front": "PCN / HCN / TCN",
+    "back": "PCN (Parent Country National): Stammland-Mitarbeiter. HCN (Host Country National): lokale Mitarbeiter im Gastland. TCN (Third Country National): Mitarbeiter aus Drittland."
+  },
+  {
+    "id": "hr-internationales-hrm-z2",
+    "topicId": "hr-internationales-hrm",
+    "front": "Perlmutter-Modell – 4 Orientierungen (Heenan & Perlmutter 1979)",
+    "back": "Ethno­zentrisch (Stammlandmitarbeiter überall), Poly­zentrisch (lokale Kräfte in Töchtern), Regio­zentrisch (regional), Geo­zentrisch (globale Besten unabhängig von Herkunft)."
+  },
+  {
+    "id": "hr-internationales-hrm-z3",
+    "topicId": "hr-internationales-hrm",
+    "front": "Hofstede – 4 Kulturdimensionen",
+    "back": "1. Machtdistanz 2. Individualismus vs. Kollektivismus 3. Maskulinität vs. Femininität 4. Unsicherheitsvermeidung. (Erweiterungen: Langzeitorientierung, Genuss vs. Beschränkung)"
+  },
+  {
+    "id": "hr-internationales-hrm-z4",
+    "topicId": "hr-internationales-hrm",
+    "front": "Interkulturelle Kommunikation – Hall: Mono- vs. Polychron",
+    "back": "Monochron: eine Aufgabe nach der anderen (z.B. Deutschland). Polychron: mehrere Aufgaben gleichzeitig (z.B. viele Mittelmeer-/Lateinamerika-Kulturen). Weitere Dimensionen: Kontext (high/low), Raumorientierung."
+  },
+  {
+    "id": "hr-internationales-hrm-z5",
+    "topicId": "hr-internationales-hrm",
+    "front": "Standardisierung vs. lokale Anpassung – Biemann et al. (2022)",
+    "back": "CRANET-Studie (42 Länder, 25.869 Organisationen): keine weltweite Konvergenz der Personalauswahlpraktiken – länderspezifische Muster bleiben bestehen."
+  },
+  {
+    "id": "hr-internationales-hrm-z6",
+    "topicId": "hr-internationales-hrm",
+    "front": "Balanced-Sheet-Ansatz (Expatriate-Vergütung)",
+    "back": "Vergütung orientiert sich am Heimatland-Niveau + Ausgleich für Mehrkosten im Gastland (Lebenshaltung, Wohnen, Steuern). Ziel: weder Gewinn noch Verlust durch Entsendung."
+  },
+  {
+    "id": "hr-internationales-hrm-z7",
+    "topicId": "hr-internationales-hrm",
+    "front": "Repatriierung – typische Probleme",
+    "back": "'Aus den Augen, aus dem Sinn': Karriereknick, verlorene Netzwerke, schwieriger Erfahrungstransfer, Reverse Culture Shock, veränderte Lebenserwartungen."
+  },
+  {
+    "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z1",
+    "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+    "front": "HBR: 'A Players or A Positions?' – Kernthese",
+    "back": "Nicht nur A-Player identifizieren, sondern A-Positionen (strategisch kritische Stellen mit hohem Leistungshebel, <20% der Belegschaft). In diese Stellen überproportional investieren."
+  },
+  {
+    "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z2",
+    "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+    "front": "HBR: 'Risky Business of Hiring Stars' – 30/70-Regel",
+    "back": "~30% der Starleistung ist individuell portabel, ~70% hängen vom Unternehmenskontext ab (Ressourcen, Team, Kultur). Eingekaufte Stars enttäuschen daher oft."
+  },
+  {
+    "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z3",
+    "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+    "front": "HBR: 'The Gentleman's Three' – Lösung",
+    "back": "Grade Inflation bekämpfen durch: erzwungene Differenzierung (z.B. Forced Distribution), Kalibrierungsrunden unter Führungskräften, klare Bewertungskriterien und Feedback-Training."
+  },
+  {
+    "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z4",
+    "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+    "front": "HBR: 'How Honeywell Avoided Layoffs' – Furlough",
+    "back": "Furlough (dt. Zwangsurlaub): vorübergehende unbezahlte Freistellung statt Kündigung. Erhält Wissen und Kultur, reduziert regrettable Turnover, günstiger im Aufschwung."
+  },
+  {
+    "id": "hr-englischsprachige-hbr-cases-pruefungsrelev-z5",
+    "topicId": "hr-englischsprachige-hbr-cases-pruefungsrelev",
+    "front": "Regrettable Turnover",
+    "back": "Freiwilliger Abgang von Mitarbeitenden, den das Unternehmen bedauert (Leistungsträger, schwer ersetzbar). Gegenteil: funktionaler Turnover (Low Performer gehen freiwillig)."
+  }
+]

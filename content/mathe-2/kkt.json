@@ -81,13 +81,32 @@
           "title": "Höhenlinien von f=xy auf dem Einheitskreis",
           "caption": "Höhenlinie f=1/2 berührt den Kreisrand genau bei (1/√2, 1/√2). Größere Werte liegen außerhalb des zulässigen Bereichs.",
           "functions": [
-            { "fn": "sqrt(1-x*x)", "label": "Kreisrand x²+y²=1", "color": "#e74c3c" },
-            { "fn": "0.5/x", "label": "f=1/2 (Höhenlinie)", "color": "#3498db", "dashed": true }
+            {
+              "fn": "sqrt(1-x*x)",
+              "label": "Kreisrand x²+y²=1",
+              "color": "#e74c3c"
+            },
+            {
+              "fn": "0.5/x",
+              "label": "f=1/2 (Höhenlinie)",
+              "color": "#3498db",
+              "dashed": true
+            }
           ],
-          "domain": [0, 1],
-          "range": [0, 1.5],
+          "domain": [
+            0,
+            1
+          ],
+          "range": [
+            0,
+            1.5
+          ],
           "points": [
-            { "x": 0.7071, "y": 0.7071, "label": "Optimum (1/√2, 1/√2)" }
+            {
+              "x": 0.7071,
+              "y": 0.7071,
+              "label": "Optimum (1/√2, 1/√2)"
+            }
           ]
         }
       ]
@@ -146,6 +165,108 @@
       "topicId": "kkt",
       "front": "Wie behandelt man $\\min e^{u(\\vec{x})}$ als KKT-Aufgabe?",
       "back": "Da $e^u$ streng monoton wächst: $\\min e^{u(\\vec{x})} \\Leftrightarrow \\min u(\\vec{x})$. KKT-Bedingungen für $\\min u$ aufstellen — das ist meist viel einfacher."
+    },
+    {
+      "id": "kkt-z1",
+      "topicId": "kkt",
+      "front": "Wie lautet die Lagrange-Funktion für ein Ungleichungsproblem?",
+      "back": "$L(\\vec{x}, \\lambda_1, \\dots, \\lambda_m) = f(\\vec{x}) - \\sum_{i=1}^{m} \\lambda_i [g_i(\\vec{x}) - b_i]$"
+    },
+    {
+      "id": "kkt-z2",
+      "topicId": "kkt",
+      "front": "Nenne alle vier KKT-Bedingungen.",
+      "back": "1. Stationarität: $\\frac{\\partial L}{\\partial x_i} = 0$; 2. Primalzulässigkeit: $g_i(\\vec{x}^*) \\leq b_i$; 3. Dualzulässigkeit: $\\lambda_i^* \\geq 0$; 4. Komplementarität: $\\lambda_i^* [g_i(\\vec{x}^*) - b_i] = 0$."
+    },
+    {
+      "id": "kkt-z3",
+      "topicId": "kkt",
+      "front": "Was bedeutet die Komplementaritätsbedingung $\\lambda_i^* [g_i - b_i] = 0$?",
+      "back": "Entweder ist $\\lambda_i^* = 0$ (Nebenbedingung inaktiv) oder $g_i(\\vec{x}^*) = b_i$ (Nebenbedingung aktiv/bindend). Beides gleichzeitig $\\neq 0$ ist ausgeschlossen."
+    },
+    {
+      "id": "kkt-z4",
+      "topicId": "kkt",
+      "front": "Was gilt für einen inaktiven Constraint im KKT-Optimum?",
+      "back": "$g_i(\\vec{x}^*) < b_i$ und $\\lambda_i^* = 0$. Die Nebenbedingung hat keine Wirkung; das Optimum liegt im Inneren."
+    },
+    {
+      "id": "kkt-z5",
+      "topicId": "kkt",
+      "front": "Was gilt für einen aktiven Constraint im KKT-Optimum?",
+      "back": "$g_i(\\vec{x}^*) = b_i$ und $\\lambda_i^* \\geq 0$. Das Optimum liegt auf dem Rand; $\\lambda_i^*$ ist der Schattenpreis."
+    },
+    {
+      "id": "kkt-z6",
+      "topicId": "kkt",
+      "front": "Was ist LICQ (Linear Independence Constraint Qualification)?",
+      "back": "Die Gradienten der aktiven Nebenbedingungen an $\\vec{x}^*$ sind linear unabhängig. Äquivalent: Die Jacobi-Matrix der aktiven NB hat vollen Zeilenrang $k$."
+    },
+    {
+      "id": "kkt-z7",
+      "topicId": "kkt",
+      "front": "Warum wird LICQ benötigt?",
+      "back": "Damit die KKT-Bedingungen notwendig sind für ein Optimum. Ohne Constraint Qualification könnten KKT-Multiplikatoren nicht existieren."
+    },
+    {
+      "id": "kkt-z8",
+      "topicId": "kkt",
+      "front": "Wie löst man KKT-Bedingungen systematisch?",
+      "back": "Fallunterscheidung: Für jede Ungleichungs-NB annehmen ob $\\lambda_i = 0$ (inaktiv) oder $g_i = b_i$ (aktiv). Jeden Fall auflösen und auf Widersprüche prüfen ($\\lambda_i < 0$, Zulässigkeit verletzt)."
+    },
+    {
+      "id": "kkt-z9",
+      "topicId": "kkt",
+      "front": "Wie wandelt man ein Minimierungsproblem in ein Maximierungsproblem um?",
+      "back": "$\\min f(\\vec{x}) \\iff \\max (-f(\\vec{x}))$. Die KKT-Bedingungen werden auf das transformierte Problem angewendet."
+    },
+    {
+      "id": "kkt-z10",
+      "topicId": "kkt",
+      "front": "Wie behandelt man eine Ungleichung der Form $g(\\vec{x}) \\geq b$?",
+      "back": "Umformen zu $-g(\\vec{x}) \\leq -b$ — dann Standardform mit $\\leq$."
+    },
+    {
+      "id": "kkt-z11",
+      "topicId": "kkt",
+      "front": "Wie werden Vorzeichenbedingungen $x_i \\geq 0$ als KKT-Nebenbedingungen behandelt?",
+      "back": "Als Ungleichungs-NB: $-x_i \\leq 0$. Eigene KKT-Multiplikatoren $\\mu_i \\geq 0$ mit $\\mu_i (-x_i) = 0 \\Rightarrow \\mu_i x_i = 0$."
+    },
+    {
+      "id": "kkt-z12",
+      "topicId": "kkt",
+      "front": "Was ist die allgemeine Lagrange-Funktion für ein NLP mit Gleich- und Ungleichungs-NB?",
+      "back": "$L = f(\\vec{x}) - \\sum_i \\lambda_i [g_i(\\vec{x}) - b_i] - \\sum_j \\mu_j [h_j(\\vec{x}) - c_j]$, mit $\\lambda_i \\geq 0$ (Ungleichungen) und $\\mu_j$ beliebig (Gleichungen)."
+    },
+    {
+      "id": "kkt-z13",
+      "topicId": "kkt",
+      "front": "Typischer Fehler bei KKT: Vorzeichen des Multiplikators?",
+      "back": "Bei Maximierung mit $g \\leq b$ muss $\\lambda^* \\geq 0$. Ein negativer $\\lambda^*$ zeigt Widerspruch — dieser Fall ist kein zulässiges Optimum."
+    },
+    {
+      "id": "kkt-z14",
+      "topicId": "kkt",
+      "front": "Wie viele Fälle hat die Fallunterscheidung bei $m$ Ungleichungs-NB?",
+      "back": "Im schlimmsten Fall $2^m$ Fälle (jede NB aktiv oder inaktiv). In der Praxis scheiden viele durch Widersprüche schnell aus."
+    },
+    {
+      "id": "kkt-z15",
+      "topicId": "kkt",
+      "front": "Was ist ein zulässiger Punkt in einem KKT-Problem?",
+      "back": "Ein Punkt $\\vec{x}$, der alle Nebenbedingungen $g_i(\\vec{x}) \\leq b_i$ erfüllt (primale Zulässigkeit)."
+    },
+    {
+      "id": "kkt-z16",
+      "topicId": "kkt",
+      "front": "Was sind Gleichungsnebenbedingungen im KKT?",
+      "back": "Immer aktive Constraints $h_j(\\vec{x}) = c_j$. Zugehörige Multiplikatoren $\\mu_j$ können beliebiges Vorzeichen haben (kein $\\geq 0$ erforderlich)."
+    },
+    {
+      "id": "kkt-z17",
+      "topicId": "kkt",
+      "front": "Was ist der Unterschied zwischen primaler und dualer Zulässigkeit in KKT?",
+      "back": "Primale Zulässigkeit: $g_i(\\vec{x}^*) \\leq b_i$ (Original-Constraints eingehalten). Duale Zulässigkeit: $\\lambda_i^* \\geq 0$ (Vorzeichen der Multiplikatoren korrekt)."
     }
   ],
   "quiz": [
@@ -161,7 +282,9 @@
         "Entweder $\\lambda_i=0$ oder $g_i(\\vec{x}^*)=b_i$ (oder beides).",
         "Es muss immer $\\lambda_i>0$ und $g_i(\\vec{x}^*)=b_i$ gelten."
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Komplementärschlupf bedeutet: Das Produkt ist null, also muss mindestens einer der beiden Faktoren null sein. Beide können null sein (aktive NB mit $\\lambda=0$ im entarteten Fall), aber nie keiner."
     },
     {
@@ -185,7 +308,9 @@
         "Ja, da $x=y=0 \\geq 0$.",
         "Das lässt sich ohne weiteres Rechnen nicht entscheiden."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "$g(0,0)=-0-0+1=1>0$ verletzt $g \\leq 0$. Der Punkt $(0,0)$ ist **nicht** zulässig. Das Minimum muss am Rand $-x-y+1=0$, d.h. $x+y=1$ liegen."
     },
     {
@@ -234,7 +359,14 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, was LICQ bedeutet und warum sie für den KKT-Satz benötigt wird.",
       "sampleAnswer": "LICQ (Linear Independence Constraint Qualification) bedeutet, dass die Gradienten aller im Optimalpunkt aktiven Nebenbedingungen linear unabhängig sind. Sie wird benötigt, weil der KKT-Satz nur dann eine **notwendige** Bedingung liefert, wenn das Problem in geeigneter Weise regulär ist. Ohne LICQ könnte es Punkte geben, die Optima sind, aber keine KKT-Bedingungen erfüllen. LICQ stellt sicher, dass die KKT-Multiplikatoren eindeutig bestimmt sind.",
-      "keywords": ["linear unabhängig", "aktiv", "gradient", "notwendig", "regulär", "multiplikator"],
+      "keywords": [
+        "linear unabhängig",
+        "aktiv",
+        "gradient",
+        "notwendig",
+        "regulär",
+        "multiplikator"
+      ],
       "explanation": "LICQ ist eine hinreichende Constraint Qualification. Bei Verletzung können KKT-Bedingungen trotzdem gelten (oder auch nicht) — die Theorie macht keine Aussage."
     },
     {
@@ -249,7 +381,9 @@
         "$x_j^* = 0$ und $\\mu_j = 0$",
         "$x_j^* > 0$ und $\\mu_j > 0$"
       ],
-      "correct": [3],
+      "correct": [
+        3
+      ],
       "explanation": "Komplementärschlupf: $\\mu_j \\cdot x_j^* = 0$. Ist $x_j^* > 0$, muss $\\mu_j = 0$ sein. Also ist $x_j^* > 0$ und $\\mu_j > 0$ **nicht** möglich."
     },
     {

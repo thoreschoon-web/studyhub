@@ -271,6 +271,60 @@
       "topicId": "methodik-rechtsquellen-normenpyramide-und",
       "front": "Was ist Gewohnheitsrecht und welchen Rang hat es?",
       "back": "Gewohnheitsrecht entsteht, wenn eine Vielzahl von Menschen eine Norm ueber einen laengeren Zeitraum als allgemein rechtsverbindlich ansieht. Es ist ungeschriebenes Recht und hat im Regelfall den Rang eines einfachen formellen Gesetzes."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z1",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist der Anwendungsvorrang des EU-Rechts?",
+      "back": "Kollidierendes nationales Recht wird verdrangt und darf nicht angewendet werden (kein Geltungsvorrang -- die nationale Norm bleibt, wird aber unangewendet gelassen)."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z2",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was besagt Art. 31 GG?",
+      "back": "Bundesrecht bricht Landesrecht: Bei Widerspruch zwischen Bundes- und Landesrecht gilt das Bundesrecht."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z3",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Wie lautet die Normenpyramide im Privatrecht?",
+      "back": "Zwingendes Gesetzesrecht > Vertrag (Privatautonomie) > dispositives Gesetzesrecht. Dispositives Recht gilt nur, wenn die Parteien nichts anderes vereinbart haben."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z4",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist Gewohnheitsrecht?",
+      "back": "Ungeschriebenes Recht, das durch langere einheitliche Ubung (consuetudo) und die Uberzeugung seiner Rechtsgeltung (opinio iuris) entsteht."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z5",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist die Subordinationstheorie zur Abgrenzung offentliches Recht / Privatrecht?",
+      "back": "Offentliches Recht regelt Verhaltnisse zwischen Uber- und Untergeordneten (Staat -- Burger). Privatrecht regelt Verhaltnisse zwischen Gleichgeordneten."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z6",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was besagt der lex-specialis-Grundsatz?",
+      "back": "Das speziellere Gesetz geht dem allgemeinen vor. Das allgemeine Gesetz gilt nur erganzend (subsidiare Geltung), wenn das Spezialgesetz keine Regelung enthalt."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z7",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was besagt der lex-posterior-Grundsatz?",
+      "back": "Das spatere Gesetz verdrangt das fruhere, sofern beide denselben Rang haben und denselben Sachverhalt regeln."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z8",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Was ist der Unterschied zwischen Primar- und Sekundarrecht der EU?",
+      "back": "Primarrecht: Grundervertrage (EUV, AEUV). Sekundarrecht: abgeleitetes Recht (Verordnungen, Richtlinien, Beschlusse). Primarrecht geht vor."
+    },
+    {
+      "id": "methodik-rechtsquellen-normenpyramide-und-z9",
+      "topicId": "methodik-rechtsquellen-normenpyramide-und",
+      "front": "Welche Funktion hat das BGB AT gegenuber den Sondergesetzen?",
+      "back": "Das BGB AT ist allgemeines Gesetz und gilt subsidiare (Erganzungsfunktion), soweit Sondergesetze (z.B. HGB, AGBG, VerbrKrG) keine eigene Regelung treffen."
     }
   ],
   "quiz": [

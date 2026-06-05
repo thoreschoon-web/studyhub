@@ -28,13 +28,37 @@
           "id": "reihen-fig-partialsummen",
           "title": "Partialsummen von 1/2^k nähern sich 1",
           "caption": "Jeder Punkt zeigt s_n = 1 - (1/2)^n. Die Partialsummen konvergieren gegen 1.",
-          "functions": [{ "fn": "1 - (1/2)^x", "label": "s_n = 1 − (1/2)^n", "color": "#2563eb" }],
-          "domain": [1, 15],
-          "range": [0, 1.1],
+          "functions": [
+            {
+              "fn": "1 - (1/2)^x",
+              "label": "s_n = 1 − (1/2)^n",
+              "color": "#2563eb"
+            }
+          ],
+          "domain": [
+            1,
+            15
+          ],
+          "range": [
+            0,
+            1.1
+          ],
           "points": [
-            { "x": 1, "y": 0.5, "label": "s₁=0,5" },
-            { "x": 5, "y": 0.96875, "label": "s₅≈0,97" },
-            { "x": 10, "y": 0.999, "label": "s₁₀≈0,999" }
+            {
+              "x": 1,
+              "y": 0.5,
+              "label": "s₁=0,5"
+            },
+            {
+              "x": 5,
+              "y": 0.96875,
+              "label": "s₅≈0,97"
+            },
+            {
+              "x": 10,
+              "y": 0.999,
+              "label": "s₁₀≈0,999"
+            }
           ]
         }
       ]
@@ -60,14 +84,49 @@
           "kind": "table",
           "id": "reihen-tab-geom",
           "title": "Konvergenz geometrischer Reihen — Übersicht",
-          "headers": ["q", "|q|<1?", "Summe", "Konvergenz"],
+          "headers": [
+            "q",
+            "|q|<1?",
+            "Summe",
+            "Konvergenz"
+          ],
           "rows": [
-            ["1/2", "ja", "1/(1-1/2) = 2", "konvergiert"],
-            ["2/3", "ja", "1/(1-2/3) = 3", "konvergiert"],
-            ["3/5", "ja", "1/(1-3/5) = 5/2", "konvergiert"],
-            ["1", "nein (=1)", "—", "divergiert"],
-            ["-1", "nein (=1)", "—", "divergiert (alterniert)"],
-            ["2", "nein (>1)", "—", "divergiert"]
+            [
+              "1/2",
+              "ja",
+              "1/(1-1/2) = 2",
+              "konvergiert"
+            ],
+            [
+              "2/3",
+              "ja",
+              "1/(1-2/3) = 3",
+              "konvergiert"
+            ],
+            [
+              "3/5",
+              "ja",
+              "1/(1-3/5) = 5/2",
+              "konvergiert"
+            ],
+            [
+              "1",
+              "nein (=1)",
+              "—",
+              "divergiert"
+            ],
+            [
+              "-1",
+              "nein (=1)",
+              "—",
+              "divergiert (alterniert)"
+            ],
+            [
+              "2",
+              "nein (>1)",
+              "—",
+              "divergiert"
+            ]
           ]
         }
       ]
@@ -135,12 +194,28 @@
           "title": "Kapitalwachstum Sparvertrag (R=70€, q=1,0005)",
           "caption": "K_n = 70*(q^n - 1)/(q-1) mit q=1,0005. Nach 200 Einzahlungen ca. 14.720 €.",
           "functions": [
-            { "fn": "70*(1.0005^x - 1)/0.0005", "label": "K_n (mit Zinsen)", "color": "#16a34a" },
-            { "fn": "70*x", "label": "70·n (ohne Zinsen)", "color": "#9ca3af", "dashed": true }
+            {
+              "fn": "70*(1.0005^x - 1)/0.0005",
+              "label": "K_n (mit Zinsen)",
+              "color": "#16a34a"
+            },
+            {
+              "fn": "70*x",
+              "label": "70·n (ohne Zinsen)",
+              "color": "#9ca3af",
+              "dashed": true
+            }
           ],
-          "domain": [0, 200],
+          "domain": [
+            0,
+            200
+          ],
           "points": [
-            { "x": 200, "y": 14720, "label": "K₂₀₀ ≈ 14.720 €" }
+            {
+              "x": 200,
+              "y": 14720,
+              "label": "K₂₀₀ ≈ 14.720 €"
+            }
           ]
         }
       ]
@@ -188,6 +263,84 @@
       "topicId": "reihen",
       "front": "Was ist die Gaußsche Summenformel?",
       "back": "$$\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}$$\nBeispiel: $\\sum_{k=1}^{100}k = \\frac{100\\cdot101}{2}=5050$."
+    },
+    {
+      "id": "reihen-z1",
+      "topicId": "reihen",
+      "front": "Was ist eine unendliche Reihe?",
+      "back": "Der Grenzwert der Folge der Partialsummen: $\\sum_{k=1}^{\\infty} a_k = \\lim_{n\\to\\infty} s_n$, wobei $s_n = \\sum_{k=1}^{n} a_k$."
+    },
+    {
+      "id": "reihen-z2",
+      "topicId": "reihen",
+      "front": "Wann konvergiert die geometrische Reihe, und was ist ihr Wert?",
+      "back": "Für $|q| < 1$: $\\sum_{k=1}^{\\infty} q^{k-1} = \\dfrac{1}{1-q}$. Für $|q| \\geq 1$ divergiert sie."
+    },
+    {
+      "id": "reihen-z3",
+      "topicId": "reihen",
+      "front": "Allgemeine geometrische Reihe mit Startglied $a$?",
+      "back": "$\\sum_{k=0}^{\\infty} a\\, q^{k} = \\dfrac{a}{1-q}$ für $|q| < 1$."
+    },
+    {
+      "id": "reihen-z4",
+      "topicId": "reihen",
+      "front": "Was passiert bei der geometrischen Reihe, wenn $q \\geq 1$?",
+      "back": "Die Partialsummen wachsen unbegrenzt → Reihe divergiert (gegen $+\\infty$)."
+    },
+    {
+      "id": "reihen-z5",
+      "topicId": "reihen",
+      "front": "Was passiert bei der geometrischen Reihe, wenn $q = -1$?",
+      "back": "Die Partialsummen alternieren zwischen $0$ und $1$ (bzw. $a$ und $0$) → Reihe divergiert."
+    },
+    {
+      "id": "reihen-z6",
+      "topicId": "reihen",
+      "front": "Was ist eine Indexverschiebung beim Summenzeichen?",
+      "back": "Umbenennung des Laufindex ohne Wertänderung der Summe, z. B. $\\sum_{k=1}^{9}(k^2+2k) = \\sum_{k=2}^{10}(k^2-1)$."
+    },
+    {
+      "id": "reihen-z7",
+      "topicId": "reihen",
+      "front": "Linearitätsregel für Summen?",
+      "back": "$\\sum_{k}(\\alpha a_k + \\beta b_k) = \\alpha \\sum_k a_k + \\beta \\sum_k b_k$."
+    },
+    {
+      "id": "reihen-z8",
+      "topicId": "reihen",
+      "front": "Formel für $\\sum_{k=1}^{n} k$?",
+      "back": "$\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$."
+    },
+    {
+      "id": "reihen-z9",
+      "topicId": "reihen",
+      "front": "Partialsumme der geometrischen Folge (endlich)?",
+      "back": "$\\sum_{k=1}^{n} a_1 q^{k-1} = a_1 \\dfrac{1-q^n}{1-q}$ für $q \\neq 1$."
+    },
+    {
+      "id": "reihen-z10",
+      "topicId": "reihen",
+      "front": "Was ist ein notwendiges Kriterium für Konvergenz einer Reihe?",
+      "back": "Die Folgenglieder müssen gegen $0$ gehen: $a_k \\to 0$. (Kein hinreichendes Kriterium!)"
+    },
+    {
+      "id": "reihen-z11",
+      "topicId": "reihen",
+      "front": "Wie lautet $\\sum_{k=0}^{n}(3k+1)$?",
+      "back": "$\\dfrac{3n(n+1)}{2} + (n+1)$."
+    },
+    {
+      "id": "reihen-z12",
+      "topicId": "reihen",
+      "front": "Ökonomische Anwendung geometrischer Reihe?",
+      "back": "Sparvertrag mit regelmäßigen Einzahlungen: Summe der aufgezinsten Raten bildet eine geometrische Reihe."
+    },
+    {
+      "id": "reihen-z13",
+      "topicId": "reihen",
+      "front": "Divergenz der geometrischen Reihe für $q < -1$?",
+      "back": "Die Partialsummen oszillieren mit wachsender Amplitude → Reihe divergiert."
     }
   ],
   "quiz": [
@@ -203,7 +356,9 @@
         "Den Grenzwert der Reihe",
         "Das Verhältnis aufeinanderfolgender Glieder $a_{n+1}/a_n$"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die $n$-te Partialsumme ist die endliche Summe $s_n = \\sum_{k=1}^{n}a_k$. Der Grenzwert von $(s_n)$ — falls er existiert — ist der Wert der Reihe."
     },
     {
@@ -248,7 +403,9 @@
         "$\\displaystyle\\sum_{k=0}^{\\infty} \\left(\\frac{3}{4}\\right)^k$ (geometrisch mit $q=3/4$)",
         "$\\displaystyle\\sum_{k=1}^{\\infty} (-1)^k$ (alternierende Konstante)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Nur die geometrische Reihe mit $|q|=3/4<1$ konvergiert, Wert $=\\frac{1}{1-3/4}=4$. Die anderen divergieren: (a) Glieder $\\to 1\\neq 0$; (b) harmonisch; (d) Glieder $\\to\\pm 1\\neq 0$."
     },
     {
@@ -277,7 +434,13 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, wie man die Summenformel der geometrischen Reihe herleitet. Welcher algebraische Trick wird verwendet?",
       "sampleAnswer": "Man multipliziert die Partialsumme $s_n = 1+q+q^2+\\cdots+q^n$ mit dem Quotienten $q$, erhält $q\\cdot s_n = q+q^2+\\cdots+q^{n+1}$, und subtrahiert: $s_n - q\\cdot s_n = 1-q^{n+1}$, also $s_n(1-q)=1-q^{n+1}$. Division durch $(1-q)$ (geht für $q\\neq 1$) liefert $s_n=(1-q^{n+1})/(1-q)$. Für $|q|<1$ gilt $q^{n+1}\\to 0$, also Grenzwert $1/(1-q)$.",
-      "keywords": ["multiplizieren", "subtrahieren", "teleskop", "1-q^{n+1}", "grenzwert"],
+      "keywords": [
+        "multiplizieren",
+        "subtrahieren",
+        "teleskop",
+        "1-q^{n+1}",
+        "grenzwert"
+      ],
       "explanation": "Der Trick: $s_n$ und $q\\cdot s_n$ haben fast dieselben Terme, ihre Differenz kollabiert zu zwei Termen."
     },
     {
@@ -302,7 +465,9 @@
         "$L = \\frac{1}{2}$ (Reihe konvergiert)",
         "$L = 0$ (Reihe konvergiert)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "$\\frac{a_{k+1}}{a_k}=\\frac{(k+1)/2^{k+1}}{k/2^k}=\\frac{k+1}{2k}\\to\\frac{1}{2}$. Da $L=1/2<1$, konvergiert die Reihe."
     }
   ],

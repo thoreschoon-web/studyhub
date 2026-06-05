@@ -34,13 +34,31 @@
           "title": "Fläche unter f(x) = 2x von 1 bis 3",
           "caption": "Das bestimmte Integral entspricht der blau schraffierten Fläche. Ergebnis: F(3)−F(1) = 9−1 = 8.",
           "functions": [
-            { "fn": "2*x", "label": "f(x) = 2x", "color": "#2563eb" }
+            {
+              "fn": "2*x",
+              "label": "f(x) = 2x",
+              "color": "#2563eb"
+            }
           ],
-          "domain": [0, 4],
-          "range": [0, 8],
+          "domain": [
+            0,
+            4
+          ],
+          "range": [
+            0,
+            8
+          ],
           "points": [
-            { "x": 1, "y": 0, "label": "a=1" },
-            { "x": 3, "y": 0, "label": "b=3" }
+            {
+              "x": 1,
+              "y": 0,
+              "label": "a=1"
+            },
+            {
+              "x": 3,
+              "y": 0,
+              "label": "b=3"
+            }
           ]
         }
       ],
@@ -61,14 +79,42 @@
           "kind": "table",
           "id": "int-tab-grundintegrale",
           "title": "Grundintegrale (Kurzübersicht)",
-          "headers": ["Funktion f(x)", "Stammfunktion F(x)", "Probe: F'(x)"],
+          "headers": [
+            "Funktion f(x)",
+            "Stammfunktion F(x)",
+            "Probe: F'(x)"
+          ],
           "rows": [
-            ["$x^n$", "$x^{n+1}/(n+1)$", "$(n+1)x^n/(n+1)=x^n$ ✓"],
-            ["$1/x$", "$\\ln|x|$", "$1/x$ ✓"],
-            ["$e^x$", "$e^x$", "$e^x$ ✓"],
-            ["$e^{ax}$", "$(1/a)e^{ax}$", "$e^{ax}$ ✓"],
-            ["$a^x$", "$a^x/\\ln a$", "$a^x$ ✓"],
-            ["$\\cos(x)$", "$\\sin(x)$", "$\\cos(x)$ ✓"]
+            [
+              "$x^n$",
+              "$x^{n+1}/(n+1)$",
+              "$(n+1)x^n/(n+1)=x^n$ ✓"
+            ],
+            [
+              "$1/x$",
+              "$\\ln|x|$",
+              "$1/x$ ✓"
+            ],
+            [
+              "$e^x$",
+              "$e^x$",
+              "$e^x$ ✓"
+            ],
+            [
+              "$e^{ax}$",
+              "$(1/a)e^{ax}$",
+              "$e^{ax}$ ✓"
+            ],
+            [
+              "$a^x$",
+              "$a^x/\\ln a$",
+              "$a^x$ ✓"
+            ],
+            [
+              "$\\cos(x)$",
+              "$\\sin(x)$",
+              "$\\cos(x)$ ✓"
+            ]
           ]
         }
       ]
@@ -118,13 +164,32 @@
           "title": "Konsumentenrente bei p(x) = 100 − 2x",
           "caption": "Die Konsumentenrente (grau schraffiert) ist die Fläche zwischen Nachfragekurve p(x) und Preisgeraden p*=40 von x=0 bis x*=30.",
           "functions": [
-            { "fn": "100 - 2*x", "label": "p(x) = 100 − 2x", "color": "#2563eb" },
-            { "fn": "40", "label": "Preis p* = 40", "color": "#dc2626", "dashed": true }
+            {
+              "fn": "100 - 2*x",
+              "label": "p(x) = 100 − 2x",
+              "color": "#2563eb"
+            },
+            {
+              "fn": "40",
+              "label": "Preis p* = 40",
+              "color": "#dc2626",
+              "dashed": true
+            }
           ],
-          "domain": [0, 50],
-          "range": [0, 105],
+          "domain": [
+            0,
+            50
+          ],
+          "range": [
+            0,
+            105
+          ],
           "points": [
-            { "x": 30, "y": 40, "label": "Gleichgewicht (30, 40)" }
+            {
+              "x": 30,
+              "y": 40,
+              "label": "Gleichgewicht (30, 40)"
+            }
           ]
         }
       ],
@@ -179,6 +244,78 @@
       "topicId": "integralrechnung",
       "front": "Wann heißt $\\int_a^\\infty f(x)\\,dx$ konvergent?",
       "back": "Wenn der Grenzwert $\\lim_{R\\to\\infty}\\int_a^R f(x)\\,dx$ existiert (endlich ist)."
+    },
+    {
+      "id": "integralrechnung-z1",
+      "topicId": "integralrechnung",
+      "front": "Was berechnet das bestimmte Integral $\\int_a^b f(x)\\,dx$?",
+      "back": "Den orientierten Flächeninhalt zwischen dem Graphen von $f$ und der $x$-Achse auf $[a,b]$."
+    },
+    {
+      "id": "integralrechnung-z2",
+      "topicId": "integralrechnung",
+      "front": "Hauptsatz der Differential- und Integralrechnung?",
+      "back": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$, wobei $F$ eine Stammfunktion von $f$ ist ($F' = f$)."
+    },
+    {
+      "id": "integralrechnung-z3",
+      "topicId": "integralrechnung",
+      "front": "Substitutionsregel (Substitution $u = g(x)$)?",
+      "back": "$\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du$."
+    },
+    {
+      "id": "integralrechnung-z4",
+      "topicId": "integralrechnung",
+      "front": "Partielle Integration?",
+      "back": "$\\int u'\\, v\\,dx = u\\, v - \\int u\\, v'\\,dx$ (bzw. $\\int_a^b u'v = [uv]_a^b - \\int_a^b uv'$)."
+    },
+    {
+      "id": "integralrechnung-z5",
+      "topicId": "integralrechnung",
+      "front": "Was ist ein uneigentliches Integral (obere Grenze $\\infty$)?",
+      "back": "$\\int_a^{\\infty} f(x)\\,dx = \\lim_{R\\to\\infty} \\int_a^{R} f(x)\\,dx$, falls dieser Grenzwert existiert."
+    },
+    {
+      "id": "integralrechnung-z6",
+      "topicId": "integralrechnung",
+      "front": "Beispiel: $\\int_0^2 x^2\\sqrt{x^3+1}\\,dx$ — welche Methode?",
+      "back": "Substitution $u = x^3 + 1$, $du = 3x^2\\,dx$: $\\int_1^9 \\frac{1}{3}\\sqrt{u}\\,du = \\frac{2}{9}[u^{3/2}]_1^9 = \\frac{2}{9}(27-1) = \\frac{52}{9}$."
+    },
+    {
+      "id": "integralrechnung-z7",
+      "topicId": "integralrechnung",
+      "front": "Beispiel: $\\int_0^{\\infty} x\\cdot 3^{-x}\\,dx$ — welche Methode?",
+      "back": "Partielle Integration mit $u' = 3^{-x}$, $v = x$; anschließend uneigentliches Integral als Grenzwert auswerten."
+    },
+    {
+      "id": "integralrechnung-z8",
+      "topicId": "integralrechnung",
+      "front": "Stammfunktion von $x^n$ ($n \\neq -1$)?",
+      "back": "$\\int x^n\\,dx = \\dfrac{x^{n+1}}{n+1} + C$."
+    },
+    {
+      "id": "integralrechnung-z9",
+      "topicId": "integralrechnung",
+      "front": "Stammfunktion von $e^{ax}$?",
+      "back": "$\\int e^{ax}\\,dx = \\dfrac{1}{a}e^{ax} + C$."
+    },
+    {
+      "id": "integralrechnung-z10",
+      "topicId": "integralrechnung",
+      "front": "Wann konvergiert $\\int_1^{\\infty} x^{-p}\\,dx$?",
+      "back": "Für $p > 1$; der Wert ist dann $\\dfrac{1}{p-1}$."
+    },
+    {
+      "id": "integralrechnung-z11",
+      "topicId": "integralrechnung",
+      "front": "Wie wählt man $u'$ und $v$ bei partieller Integration geschickt?",
+      "back": "$v$ so wählen, dass $v'$ einfacher ist; $u'$ so, dass $u$ bekannt ist. Faustregel: ILATE (Logarithmus vor Polynom vor Exponential)."
+    },
+    {
+      "id": "integralrechnung-z12",
+      "topicId": "integralrechnung",
+      "front": "Linearität des Integrals?",
+      "back": "$\\int_a^b (\\alpha f + \\beta g)\\,dx = \\alpha\\int_a^b f\\,dx + \\beta\\int_a^b g\\,dx$."
     }
   ],
   "quiz": [
@@ -194,7 +331,9 @@
         "$\\dfrac{x^3}{3} + C$",
         "$x^4 + C$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Potenzregel: Exponent um 1 erhöhen (3→4) und durch den neuen Exponenten teilen: $x^4/4 + C$."
     },
     {
@@ -233,8 +372,15 @@
       "topicId": "integralrechnung",
       "difficulty": "mittel",
       "prompt": "Für die Substitutionsregel bei $\\int_0^2 x^2\\sqrt{x^3+1}\\,dx$ mit $u=x^3+1$: Welche Obergrenzen für $u$ ergibt sich?",
-      "options": ["$u=9$", "$u=8$", "$u=3$", "$u=5$"],
-      "correct": [0],
+      "options": [
+        "$u=9$",
+        "$u=8$",
+        "$u=3$",
+        "$u=5$"
+      ],
+      "correct": [
+        0
+      ],
       "explanation": "Bei $x=2$: $u = 2^3+1 = 8+1 = 9$."
     },
     {
@@ -263,7 +409,13 @@
       "difficulty": "schwer",
       "prompt": "Erkläre in eigenen Worten, warum $\\int_0^\\infty x\\cdot 3^{-x}\\,dx$ konvergiert (endlich ist), obwohl die obere Grenze unendlich ist.",
       "sampleAnswer": "Der Faktor $3^{-x}=e^{-x\\ln 3}$ fällt exponentiell schnell gegen 0, während $x$ nur linear wächst. Das Exponential 'gewinnt', sodass das Produkt $x\\cdot 3^{-x}$ für $x\\to\\infty$ gegen 0 geht und die Fläche unter der Kurve insgesamt endlich bleibt.",
-      "keywords": ["exponentiell", "konvergiert", "0", "dominiert", "endlich"],
+      "keywords": [
+        "exponentiell",
+        "konvergiert",
+        "0",
+        "dominiert",
+        "endlich"
+      ],
       "explanation": "Entscheidend ist, dass $3^{-x}$ exponentiell schneller auf 0 fällt als $x$ wächst — L'Hôpital oder Standardgrenzwert $x\\cdot a^{-x}\\to 0$ für $a>1$."
     },
     {
@@ -278,7 +430,9 @@
         "$\\frac{1}{2}x^2 + C$",
         "$e^x + C$"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die Ableitung von $\\ln|x|$ ist $1/x$ — daher ist $\\ln|x|+C$ die Stammfunktion. Die Potenzregel $x^n \\to x^{n+1}/(n+1)$ versagt bei $n=-1$, weil Division durch 0 entsteht."
     },
     {

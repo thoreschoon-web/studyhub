@@ -111,14 +111,42 @@
           "kind": "table",
           "id": "haftung-uebersicht",
           "title": "Übersicht Haftungsmaßstäbe",
-          "headers": ["Situation", "Haftungsmaßstab", "Rechtsgrundlage"],
+          "headers": [
+            "Situation",
+            "Haftungsmaßstab",
+            "Rechtsgrundlage"
+          ],
           "rows": [
-            ["Normalfall", "Vorsatz + Fahrlässigkeit", "§ 276 Abs. 1 BGB"],
-            ["Garantie / Beschaffungsgarantie", "Auch ohne Verschulden (Zufall)", "§ 276 Abs. 1 BGB, vertraglich"],
-            ["Im Gläubigerverzug", "Nur Vorsatz + grobe Fahrlässigkeit", "§ 300 Abs. 1 BGB"],
-            ["Schuldnerverzug (für Zufall)", "Auch zufällige Unmöglichkeit", "§ 287 S. 2 BGB"],
-            ["Für Erfüllungsgehilfen", "Wie eigenes Verschulden", "§ 278 BGB"],
-            ["Vorsatz vorauserlassen?", "Nicht möglich", "§ 276 Abs. 3 BGB"]
+            [
+              "Normalfall",
+              "Vorsatz + Fahrlässigkeit",
+              "§ 276 Abs. 1 BGB"
+            ],
+            [
+              "Garantie / Beschaffungsgarantie",
+              "Auch ohne Verschulden (Zufall)",
+              "§ 276 Abs. 1 BGB, vertraglich"
+            ],
+            [
+              "Im Gläubigerverzug",
+              "Nur Vorsatz + grobe Fahrlässigkeit",
+              "§ 300 Abs. 1 BGB"
+            ],
+            [
+              "Schuldnerverzug (für Zufall)",
+              "Auch zufällige Unmöglichkeit",
+              "§ 287 S. 2 BGB"
+            ],
+            [
+              "Für Erfüllungsgehilfen",
+              "Wie eigenes Verschulden",
+              "§ 278 BGB"
+            ],
+            [
+              "Vorsatz vorauserlassen?",
+              "Nicht möglich",
+              "§ 276 Abs. 3 BGB"
+            ]
           ]
         }
       ]
@@ -213,6 +241,72 @@
       "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
       "front": "Was sind die Voraussetzungen der Störung der Geschäftsgrundlage (§ 313 BGB)?",
       "back": "1. Geschäftsgrundlage (objektiv: gemeinsam vorausgesetzte Umstände; oder subjektiv: beiderseitiger Motivirrtum)\n2. Wesentliche Veränderung der Umstände / Vorstellungen\n3. Unzumutbarkeit des Festhaltens am Vertrag unter Berücksichtigung der Risikoverteilung\nRechtsfolge: primär Vertragsanpassung, nur subsidiär Rücktritt/Kündigung."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z1",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Absolute Unmöglichkeit (§ 275 I BGB)",
+      "back": "Leistungspflicht entfallt, wenn Leistung fur den Schuldner oder jedermann unmoglich ist (objektiv/subjektiv, rechtlich/tatsachlich). Kein Vertretenmussen erforderlich."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z2",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Faktische Unmöglichkeit (§ 275 II BGB)",
+      "back": "Schuldner kann Leistung verweigern, wenn Aufwand in grobem Missverhaltnis zum Glaubigerinteresse steht (Verhaltnismasigkeit)."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z3",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Vertretenmüssen (§ 276 BGB)",
+      "back": "Schuldner haftet fur Vorsatz und Fahrlassigkeit. Fahrlassig: wer die im Verkehr erforderliche Sorgfalt ausser Acht lasst (§ 276 II BGB)."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z4",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Haftung für Erfüllungsgehilfen (§ 278 BGB)",
+      "back": "Schuldner haftet fur Verschulden eines Erfullungsgehilfen (Person, die er zur Erfullung einsetzt) wie fur eigenes Verschulden; Sonderverbindung erforderlich."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z5",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Rücktritt wegen Nichterfüllung - Voraussetzungen (§ 323 BGB)",
+      "back": "1. Gegenseit. Vertrag 2. Schuldner hat nicht/nicht vertragsgemass erfullt 3. Fristsetzung (+ Fristablauf) 4. kein Ausschluss (§ 323 VI BGB)."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z6",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Entbehrlichkeit der Fristsetzung (§ 323 II BGB)",
+      "back": "1. Schuldner verweigert ernsthaft und endgultig. 2. Relativer Fixtermin. 3. Besondere Umstande (sofortiger Rucktritt gerechtfertigt)."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z7",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Rückgewährschuldverhältnis (§ 346 BGB)",
+      "back": "Nach wirksamen Rucktritt: gegenseitige Ruckgabe empfangener Leistungen; bei Unmogl. Ruckgabe: Wertersatz."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z8",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Stellvertretendes commodum (§ 285 BGB)",
+      "back": "Hat Schuldner fur das unmoglich gewordene Leistungsobjekt Ersatz erlangt (z.B. Versicherung), kann Glaubiger diesen Ersatz verlangen."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z9",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Gefahrtragung Gegenleistung bei Unmöglichkeit (§ 326 I BGB)",
+      "back": "Entfallt Leistungspflicht (§ 275 BGB), entfallt auch Anspruch auf Gegenleistung. Ausnahme: Schuldner hat nicht zu vertreten (§ 326 II BGB) oder Glaubigerverzug."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z10",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Störung der Geschäftsgrundlage (§ 313 BGB) - Voraussetzungen",
+      "back": "1. Schwerwiegende Veranderung der Geschäftsgrundlage. 2. Parteien hatten Vertrag bei Kenntnis nicht oder anders geschlossen. 3. Festhalten unzumutbar. Rechtsfolge: Anpassung, sonst Rucktritt/Kundigung."
+    },
+    {
+      "id": "schuldrecht-at-leistungsstoerungen-theorie-z11",
+      "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+      "front": "Schuldnerverzug - Voraussetzungen",
+      "back": "1. Falliger Anspruch. 2. Nicht erfullt. 3. Mahnung (§ 286 I BGB) oder Verzugs-Ausnahmen (§ 286 II BGB: Termin, ernsthafte Verweigerung etc.). 4. Vertretenmussen (vermutet)."
     }
   ],
   "quiz": [
@@ -228,7 +322,9 @@
         "§ 275 Abs. 3 BGB (persönliche Unmöglichkeit)",
         "§ 313 BGB (Störung der Geschäftsgrundlage)"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Nur bei § 275 Abs. 1 BGB erlischt die Leistungspflicht kraft Gesetzes (ipso iure). Bei Abs. 2 und 3 handelt es sich um Einreden, die der Schuldner aktiv geltend machen muss."
     },
     {
@@ -243,7 +339,9 @@
         "§ 275 Abs. 3 BGB – persönliche Unmöglichkeit",
         "§ 313 BGB – Störung der Geschäftsgrundlage"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Das Auto existiert noch (als Einzelteile), aber seine Wiederherstellung wäre unverhältnismäßig teuer. Das ist faktische Unmöglichkeit nach § 275 Abs. 2 BGB. V muss die Einrede geltend machen. § 275 Abs. 1 BGB wäre nur gegeben, wenn das Auto physisch vollständig untergegangen wäre."
     },
     {
@@ -267,7 +365,9 @@
         "Gegenseitiger Vertrag",
         "Der Gläubiger darf die Hauptleistung nicht mehr wollen (Schadensersatz statt der Leistung)"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "multiple": true,
       "explanation": "§ 281 BGB verlangt zusätzlich zu § 280 Abs. 1 BGB eine fruchtlos abgelaufene angemessene Nachfrist. Das Vertretenmüssen gilt schon über § 280 Abs. 1 BGB. Das Synallagma ist keine Voraussetzung des § 281 BGB selbst. Die Ablehnung der Hauptleistung ist keine formelle Voraussetzung, ergibt sich aber aus der Natur des Anspruchs."
     },
@@ -292,7 +392,9 @@
         "§§ 280 Abs. 1, 3, 281 BGB (Schadensersatz statt der Leistung nach Fristsetzung)",
         "§ 275 Abs. 1 BGB (Unmöglichkeit)"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Die Beschädigung der Drehtür ist eine Verletzung der Schutzpflicht aus § 241 Abs. 2 BGB (Nebenpflicht). Schadensersatzanspruch ergibt sich aus § 280 Abs. 1 BGB i.V.m. § 241 Abs. 2 BGB. Keine Fristsetzung erforderlich, da es sich um Schadensersatz neben (nicht statt) der Leistung handelt."
     },
     {
@@ -307,7 +409,10 @@
         "§ 323 Abs. 5 S. 1 BGB – Rücktritt bei Teilleistung",
         "§ 275 Abs. 2 BGB – faktische Unmöglichkeit"
       ],
-      "correct": [0, 2],
+      "correct": [
+        0,
+        2
+      ],
       "multiple": true,
       "explanation": "Die 12 Eimer sind durch Gs Verschulden untergegangen → Teilunmöglichkeit. § 326 Abs. 1 S. 1 BGB: G verliert anteilig seinen Anspruch auf den Kaufpreis für die 12 Eimer (Befreiung von der Gegenleistung). Da M an den 28 Eimern allein kein Interesse hat (Totalschaden des Auftrags), kann M nach § 323 Abs. 5 S. 1 BGB vom gesamten Vertrag zurücktreten (kein Interesse an Teilleistung). Da G die Unmöglichkeit zu vertreten hat, greift § 326 Abs. 2 BGB nicht."
     },
@@ -327,7 +432,14 @@
       "difficulty": "schwer",
       "prompt": "T ist als Ingenieur bei W beschäftigt und soll an der Entwicklung bewaffnungsfähiger Drohnen mitarbeiten. Dies ist mit seinem Gewissen als Pazifist unvereinbar. Er bleibt der Arbeit fern. Hat T einen Anspruch auf Lohn? Skizzieren Sie den Lösungsansatz.",
       "sampleAnswer": "T könnte einen Anspruch auf Lohn gegen W aus § 611a Abs. 2 BGB haben (Arbeitnehmer: Vergütungsanspruch). Fraglich ist, ob T seinerseits zur Leistung verpflichtet ist. W könnte ein Leistungsverweigerungsrecht nach § 275 Abs. 3 BGB geltend machen (persönliche Unmöglichkeit). Die Leistung des T ist höchstpersönlich und an seiner Person haftend. T müsste nachweisen, dass ihm die Leistung aufgrund eines ernsthaften Gewissenskonflikts unzumutbar ist (Abwägung mit Interessen von W). Kommt § 275 Abs. 3 BGB zur Anwendung (T macht die Einrede geltend), erlischt Ts Leistungspflicht – und damit nach § 326 Abs. 1 BGB auch Ws Lohnzahlungspflicht. T hat dann keinen Lohnanspruch. Ausnahme: § 326 Abs. 2 BGB greift nicht, da W den Gewissenskonflikt nicht verursacht hat.",
-      "keywords": ["§ 275 Abs. 3 BGB", "persönliche Unmöglichkeit", "Gewissenskonflikt", "Einrede", "§ 326 Abs. 1 BGB", "Lohnverlust"],
+      "keywords": [
+        "§ 275 Abs. 3 BGB",
+        "persönliche Unmöglichkeit",
+        "Gewissenskonflikt",
+        "Einrede",
+        "§ 326 Abs. 1 BGB",
+        "Lohnverlust"
+      ],
       "explanation": "§ 275 Abs. 3 BGB erfasst Fälle, in denen persönliche Umstände des Schuldners (hier: Gewissenskonflikt des Pazifisten T) eine höchstpersönliche Leistung unzumutbar machen. T muss die Einrede ausdrücklich erheben. Rechtsfolge: § 326 Abs. 1 BGB → kein Lohn."
     },
     {
@@ -342,7 +454,9 @@
         "Ja, weil H nur wegen Gläubigerverzugs haftet, der Wagen aber durch Zufall zerstört wurde",
         "Nein, weil § 275 Abs. 1 BGB die Kaufpreispflicht automatisch zum Erlöschen bringt"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "§ 326 Abs. 2 S. 1 Alt. 2 BGB: Der Schuldner (H) behält seinen Anspruch auf die Gegenleistung, wenn die Unmöglichkeit eintritt während der Gläubiger (B) im Annahmeverzug ist UND H die Unmöglichkeit nicht zu vertreten hat. Im Gläubigerverzug haftet H nach § 300 Abs. 1 BGB nur noch für Vorsatz und grobe Fahrlässigkeit. Einfache Fahrlässigkeit reicht nicht – also hat H die Unmöglichkeit nicht zu vertreten. Ergebnis: H behält seinen Kaufpreisanspruch."
     },
     {
@@ -357,7 +471,9 @@
         "Das Recht des Schuldners, statt der unmöglichen Leistung eine andere zu erbringen",
         "Der Anspruch des Schuldners auf Befreiung von der Gegenleistung"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "§ 285 BGB: Wenn der Schuldner für den Umstand, der zur Unmöglichkeit geführt hat, einen Ersatz erhalten hat (z. B. Versicherungsleistung für das verbrannte Auto), kann der Gläubiger diesen Ersatz herausverlangen. Der Gläubiger muss dann aber die Gegenleistung erbringen (§ 326 Abs. 3 BGB)."
     },
     {

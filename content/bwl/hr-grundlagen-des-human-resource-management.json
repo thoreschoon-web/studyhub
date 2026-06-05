@@ -33,14 +33,42 @@
           "kind": "table",
           "id": "fig-personalwesen-vs-hrm",
           "title": "Betriebliches Personalwesen vs. Human Resource Management",
-          "headers": ["Merkmal", "Betriebliches Personalwesen", "Human Resource Management"],
+          "headers": [
+            "Merkmal",
+            "Betriebliches Personalwesen",
+            "Human Resource Management"
+          ],
           "rows": [
-            ["Unternehmenspolitische Einordnung", "Nachgelagerte betriebliche Funktion", "Integrierter Bestandteil der Unternehmensstrategie"],
-            ["Aktivitätshorizont", "Kurzfristig-reaktiv", "Langfristig-proaktiv"],
-            ["Personalpolitisches Instrumentarium", "Bürokratisch-vereinheitlicht, zentralisiert-standardisiert", "Organisch-flexibel, dezentral-situativ"],
-            ["Kontrolle", "Fremdkontrolle", "Selbstkontrolle"],
-            ["Erfolgskriterien", "Konformität, Kostenreduzierung", "Selbstverpflichtung, Intensivierung der Arbeit"],
-            ["Grundhaltung", "Verwaltend", "Unternehmerisch"]
+            [
+              "Unternehmenspolitische Einordnung",
+              "Nachgelagerte betriebliche Funktion",
+              "Integrierter Bestandteil der Unternehmensstrategie"
+            ],
+            [
+              "Aktivitätshorizont",
+              "Kurzfristig-reaktiv",
+              "Langfristig-proaktiv"
+            ],
+            [
+              "Personalpolitisches Instrumentarium",
+              "Bürokratisch-vereinheitlicht, zentralisiert-standardisiert",
+              "Organisch-flexibel, dezentral-situativ"
+            ],
+            [
+              "Kontrolle",
+              "Fremdkontrolle",
+              "Selbstkontrolle"
+            ],
+            [
+              "Erfolgskriterien",
+              "Konformität, Kostenreduzierung",
+              "Selbstverpflichtung, Intensivierung der Arbeit"
+            ],
+            [
+              "Grundhaltung",
+              "Verwaltend",
+              "Unternehmerisch"
+            ]
           ]
         }
       ],
@@ -185,6 +213,36 @@
       "topicId": "hr-grundlagen-des-human-resource-management",
       "front": "Was bedeutet der Begriff 'War for Talents'?",
       "back": "Wettbewerb der Unternehmen um qualifizierte Fachkraefte (Talente). Entsteht durch demographischen Wandel (weniger Nachwuchs) und steigende Anforderungen in der Wissensgesellschaft."
+    },
+    {
+      "id": "hr-grundlagen-des-human-resource-management-z1",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Definition HRM (Noe et al.)",
+      "back": "Politiken, Praktiken und Systeme, die das Verhalten, die Einstellungen und die Leistung von Mitarbeitenden beeinflussen."
+    },
+    {
+      "id": "hr-grundlagen-des-human-resource-management-z2",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Betriebliches Personalwesen vs. HRM – Kernunterschied",
+      "back": "Personalwesen: verwaltungsorientiert, Mitarbeitende als Kostenfaktor. HRM: strategisch-wertschöpfungsorientiert, Mitarbeitende als Ressource."
+    },
+    {
+      "id": "hr-grundlagen-des-human-resource-management-z3",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Ulrich-Modell: Vier Rollen der HR-Abteilung",
+      "back": "1. Strategic Partner (strategische Partnerschaft) 2. Change Agent (Veränderungsmanager) 3. Administrative Expert (Verwaltungsexperte) 4. Employee Champion (Partnerschaft mit Belegschaft)"
+    },
+    {
+      "id": "hr-grundlagen-des-human-resource-management-z4",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Ulrich-Matrix: Achsen",
+      "back": "X-Achse: Prozesse ↔ Menschen. Y-Achse: operativ ↔ strategisch/zukunftsorientiert."
+    },
+    {
+      "id": "hr-grundlagen-des-human-resource-management-z5",
+      "topicId": "hr-grundlagen-des-human-resource-management",
+      "front": "Employee Life Cycle – Phasen",
+      "back": "Planung → Rekrutierung → Auswahl → Entwicklung → Vergütung → Freisetzung."
     }
   ],
   "quiz": [
@@ -200,7 +258,9 @@
         "Die strategische Planung des Personalbedarfs auf Basis von Marktanalysen",
         "Die rechtliche Regulierung des Arbeitsverhaeltnisses zwischen Arbeitgeber und Arbeitnehmer"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Noe et al. (2010, S. 4) definieren HRM als 'policies, practices, and systems that influence employees' behavior, attitudes and performance' — also Politiken, Praktiken und Systeme, die Verhalten, Einstellungen und Leistung beeinflussen."
     },
     {
@@ -224,7 +284,9 @@
         "Change Agent (Veraenderungsmanager)",
         "Partnerschaft mit Arbeitnehmenden (employee champion)"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Der Change Agent ist strategisch (Zukunftsfokus) UND menschenorientiert (er begleitet Menschen durch Veraenderungsprozesse). Die Strategische Partnerschaft ist strategisch + prozessorientiert, der Verwaltungsexperte operativ + prozessorientiert, der Employee Champion operativ + menschenorientiert."
     },
     {
@@ -239,7 +301,10 @@
         "Prozesse vs. Menschen",
         "Kosten vs. Nutzen"
       ],
-      "correct": [0, 2],
+      "correct": [
+        0,
+        2
+      ],
       "multiple": true,
       "explanation": "Das Ulrich-Modell hat die Achsen 'Strategisch/Zukunft vs. Operativ/Arbeitsalltag' und 'Prozesse vs. Menschen'. Aus diesen vier Kombinationen ergeben sich die vier Rollen."
     },
@@ -264,7 +329,9 @@
         "Change Agent",
         "Partnerschaft mit Arbeitnehmenden"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Bei der Entwicklung der Personalstrategie in Abstimmung mit der Unternehmensstrategie nimmt HR die Rolle der Strategischen Partnerschaft (strategic partner) ein — strategischer Fokus auf Prozesse."
     },
     {
@@ -274,7 +341,15 @@
       "difficulty": "mittel",
       "prompt": "Erklaere in 3-4 Saetzen den Unterschied zwischen dem klassischen Betrieblichen Personalwesen und dem modernen Human Resource Management.",
       "sampleAnswer": "Das klassische Betriebliche Personalwesen ist reaktiv und kurzfristig ausgerichtet; es verwaltet Personalangelegenheiten wie Gehaltsabrechnung und Vertragserstellung und sieht Mitarbeitende eher als Kostenfaktor. Das moderne HRM hingegen ist proaktiv und langfristig: Es ist integrierter Bestandteil der Unternehmensstrategie und sieht Mitarbeitende als Wertschopfungsfaktor. Statt Fremdkontrolle setzt HRM auf Selbstkontrolle der Mitarbeitenden, und statt Konformitaet strebt es Selbstverpflichtung und hohe Leistungsbereitschaft an.",
-      "keywords": ["strategisch", "proaktiv", "langfristig", "wertschoepfung", "kostenfaktor", "verwaltend", "unternehmerisch"],
+      "keywords": [
+        "strategisch",
+        "proaktiv",
+        "langfristig",
+        "wertschoepfung",
+        "kostenfaktor",
+        "verwaltend",
+        "unternehmerisch"
+      ],
       "explanation": "Kerndimension: Personalwesen = kurzfristig, reaktiv, verwaltend, Kostenfokus. HRM = langfristig, proaktiv, unternehmerisch, Wertschoepfungsfokus (Oechsler, 2011)."
     },
     {
@@ -289,7 +364,9 @@
         "Change Agent, weil HR einen Veraenderungsprozess begleitet und Menschen einbezieht",
         "Employee Champion, weil HR mit Mitarbeitenden kommuniziert"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Die primaere Rolle ist hier der Change Agent: Das Unternehmen befindet sich in einem Veraenderungsprozess (neues System), HR begleitet diesen durch Schulung, Kommunikation und Change Management. Das ist der Kern der Change-Agent-Rolle (strategisch + menschenorientiert)."
     },
     {
@@ -313,7 +390,9 @@
         "Unternehmensperformance beeinflusst HR-Praktiken, aber nicht umgekehrt",
         "Kontingenzfaktoren spielen fuer die Wirkung von HR-Praktiken keine Rolle"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Wirkungskette lautet: HR-Praktiken → HR-Ergebnisse (Motivation, Wissen, Bindung) → Unternehmensperformance. Zudem wirken Kontingenzfaktoren (Unternehmensgroesse, Branche, etc.) auf alle drei Ebenen ein. Es gibt auch Reverse Causality (erfolgreiche Unternehmen koennen mehr in HR investieren)."
     }
   ],

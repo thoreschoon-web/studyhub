@@ -1,0 +1,458 @@
+[
+  {
+    "id": "reihen-z1",
+    "topicId": "reihen",
+    "front": "Was ist eine unendliche Reihe?",
+    "back": "Der Grenzwert der Folge der Partialsummen: $\\sum_{k=1}^{\\infty} a_k = \\lim_{n\\to\\infty} s_n$, wobei $s_n = \\sum_{k=1}^{n} a_k$."
+  },
+  {
+    "id": "reihen-z2",
+    "topicId": "reihen",
+    "front": "Wann konvergiert die geometrische Reihe, und was ist ihr Wert?",
+    "back": "Für $|q| < 1$: $\\sum_{k=1}^{\\infty} q^{k-1} = \\dfrac{1}{1-q}$. Für $|q| \\geq 1$ divergiert sie."
+  },
+  {
+    "id": "reihen-z3",
+    "topicId": "reihen",
+    "front": "Allgemeine geometrische Reihe mit Startglied $a$?",
+    "back": "$\\sum_{k=0}^{\\infty} a\\, q^{k} = \\dfrac{a}{1-q}$ für $|q| < 1$."
+  },
+  {
+    "id": "reihen-z4",
+    "topicId": "reihen",
+    "front": "Was passiert bei der geometrischen Reihe, wenn $q \\geq 1$?",
+    "back": "Die Partialsummen wachsen unbegrenzt → Reihe divergiert (gegen $+\\infty$)."
+  },
+  {
+    "id": "reihen-z5",
+    "topicId": "reihen",
+    "front": "Was passiert bei der geometrischen Reihe, wenn $q = -1$?",
+    "back": "Die Partialsummen alternieren zwischen $0$ und $1$ (bzw. $a$ und $0$) → Reihe divergiert."
+  },
+  {
+    "id": "reihen-z6",
+    "topicId": "reihen",
+    "front": "Was ist eine Indexverschiebung beim Summenzeichen?",
+    "back": "Umbenennung des Laufindex ohne Wertänderung der Summe, z. B. $\\sum_{k=1}^{9}(k^2+2k) = \\sum_{k=2}^{10}(k^2-1)$."
+  },
+  {
+    "id": "reihen-z7",
+    "topicId": "reihen",
+    "front": "Linearitätsregel für Summen?",
+    "back": "$\\sum_{k}(\\alpha a_k + \\beta b_k) = \\alpha \\sum_k a_k + \\beta \\sum_k b_k$."
+  },
+  {
+    "id": "reihen-z8",
+    "topicId": "reihen",
+    "front": "Formel für $\\sum_{k=1}^{n} k$?",
+    "back": "$\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$."
+  },
+  {
+    "id": "reihen-z9",
+    "topicId": "reihen",
+    "front": "Partialsumme der geometrischen Folge (endlich)?",
+    "back": "$\\sum_{k=1}^{n} a_1 q^{k-1} = a_1 \\dfrac{1-q^n}{1-q}$ für $q \\neq 1$."
+  },
+  {
+    "id": "reihen-z10",
+    "topicId": "reihen",
+    "front": "Was ist ein notwendiges Kriterium für Konvergenz einer Reihe?",
+    "back": "Die Folgenglieder müssen gegen $0$ gehen: $a_k \\to 0$. (Kein hinreichendes Kriterium!)"
+  },
+  {
+    "id": "reihen-z11",
+    "topicId": "reihen",
+    "front": "Wie lautet $\\sum_{k=0}^{n}(3k+1)$?",
+    "back": "$\\dfrac{3n(n+1)}{2} + (n+1)$."
+  },
+  {
+    "id": "reihen-z12",
+    "topicId": "reihen",
+    "front": "Ökonomische Anwendung geometrischer Reihe?",
+    "back": "Sparvertrag mit regelmäßigen Einzahlungen: Summe der aufgezinsten Raten bildet eine geometrische Reihe."
+  },
+  {
+    "id": "newton-verfahren-z1",
+    "topicId": "newton-verfahren",
+    "front": "Wofür wird das Newton-Verfahren eingesetzt?",
+    "back": "Näherungsweise Bestimmung von Nullstellen einer Gleichung $f(x) = 0$ durch iterative Linearisierung."
+  },
+  {
+    "id": "newton-verfahren-z2",
+    "topicId": "newton-verfahren",
+    "front": "Iterationsformel des Newton-Verfahrens zur Nullstellenbestimmung?",
+    "back": "$x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)}$."
+  },
+  {
+    "id": "newton-verfahren-z3",
+    "topicId": "newton-verfahren",
+    "front": "Geometrische Deutung des Newton-Schritts?",
+    "back": "$x_{n+1}$ ist der Schnittpunkt der Tangente an $f$ im Punkt $(x_n, f(x_n))$ mit der $x$-Achse."
+  },
+  {
+    "id": "newton-verfahren-z4",
+    "topicId": "newton-verfahren",
+    "front": "Wie erhält man $x_{n+1}$ aus der Linearisierung?",
+    "back": "Setze $f(x) \\approx f(x_n) + f'(x_n)(x - x_n) = 0$ → löse nach $x$: $x = x_n - \\dfrac{f(x_n)}{f'(x_n)}$."
+  },
+  {
+    "id": "newton-verfahren-z5",
+    "topicId": "newton-verfahren",
+    "front": "Newton-Verfahren zur Extremstellenbestimmung: wie?",
+    "back": "Wende Newton auf $g(x) = f'(x) = 0$ an: $x_{n+1} = x_n - \\dfrac{f'(x_n)}{f''(x_n)}$."
+  },
+  {
+    "id": "newton-verfahren-z6",
+    "topicId": "newton-verfahren",
+    "front": "Was wird beim Newton-Verfahren als Startwert benötigt?",
+    "back": "Ein Startwert $x_0$, der möglichst nahe an der gesuchten Nullstelle liegt."
+  },
+  {
+    "id": "newton-verfahren-z7",
+    "topicId": "newton-verfahren",
+    "front": "Beispiel: Newton-Näherung für $\\sqrt{3}$ — welches $f$ verwendet man?",
+    "back": "$f(x) = x^2 - 3$, dann $f'(x) = 2x$, Iteration: $x_{n+1} = x_n - \\dfrac{x_n^2 - 3}{2x_n}$."
+  },
+  {
+    "id": "newton-verfahren-z8",
+    "topicId": "newton-verfahren",
+    "front": "Was passiert, wenn $f'(x_n) = 0$ in einem Newton-Schritt?",
+    "back": "Das Verfahren bricht zusammen (Division durch Null); der Startwert muss geändert werden."
+  },
+  {
+    "id": "newton-verfahren-z9",
+    "topicId": "newton-verfahren",
+    "front": "Newton zur Extremstelle: Iterationsformel für $\\min f(x) = x^4 - 12x$?",
+    "back": "$f'(x) = 4x^3 - 12$, $f''(x) = 12x^2$. Iteration: $x_{n+1} = x_n - \\dfrac{4x_n^3 - 12}{12x_n^2}$."
+  },
+  {
+    "id": "newton-verfahren-z10",
+    "topicId": "newton-verfahren",
+    "front": "Worin besteht die Linearisierung beim Newton-Verfahren?",
+    "back": "Die nichtlineare Funktion $f$ wird lokal durch ihre Tangente (lineares Taylorpolynom 1. Grades) approximiert."
+  },
+  {
+    "id": "newton-verfahren-z11",
+    "topicId": "newton-verfahren",
+    "front": "Konvergenz: Wann konvergiert das Newton-Verfahren schnell?",
+    "back": "In der Nähe einer einfachen Nullstelle konvergiert es quadratisch (Fehler quadriert sich pro Schritt)."
+  },
+  {
+    "id": "newton-verfahren-z12",
+    "topicId": "newton-verfahren",
+    "front": "Unterschied: Newton auf $f=0$ vs. Newton auf $f'=0$?",
+    "back": "Auf $f=0$: findet Nullstellen. Auf $f'=0$: findet Extremstellen (verwendet $f''$ als Nenner)."
+  },
+  {
+    "id": "exp-log-zins-z1",
+    "topicId": "exp-log-zins",
+    "front": "Definition der Euler-Zahl $e$?",
+    "back": "$e := \\lim_{n\\to\\infty}\\left(1+\\dfrac{1}{n}\\right)^n \\approx 2{,}71828\\ldots$"
+  },
+  {
+    "id": "exp-log-zins-z2",
+    "topicId": "exp-log-zins",
+    "front": "Grenzwert für kontinuierliche Verzinsung mit Rate $r$?",
+    "back": "$\\lim_{n\\to\\infty}\\left(1+\\dfrac{r}{n}\\right)^{nt} = e^{rt}$."
+  },
+  {
+    "id": "exp-log-zins-z3",
+    "topicId": "exp-log-zins",
+    "front": "Kapital nach $t$ Jahren bei stetiger Verzinsung mit Rate $r$?",
+    "back": "$K(t) = A \\cdot e^{rt}$, wobei $A$ das Anfangskapital ist."
+  },
+  {
+    "id": "exp-log-zins-z4",
+    "topicId": "exp-log-zins",
+    "front": "Kapital bei monatlicher Verzinsung mit Jahreszins $r$?",
+    "back": "$K(t) = A\\left(1+\\dfrac{r}{12}\\right)^{12t}$."
+  },
+  {
+    "id": "exp-log-zins-z5",
+    "topicId": "exp-log-zins",
+    "front": "Was ist der Barwert (diskontierter Marktwert)?",
+    "back": "$F(t) = V(t)\\, e^{-rt}$: heutiger Wert eines in $t$ Jahren erzielten Marktwerts $V(t)$ bei Diskontrate $r$."
+  },
+  {
+    "id": "exp-log-zins-z6",
+    "topicId": "exp-log-zins",
+    "front": "Bedingung für den optimalen Verkaufszeitpunkt $t_0$?",
+    "back": "$F'(t) = 0 \\Rightarrow \\dfrac{V'(t)}{V(t)} = (\\ln V(t))' = r$. Die relative Wachstumsrate von $V$ muss gleich dem Zinssatz $r$ sein."
+  },
+  {
+    "id": "exp-log-zins-z7",
+    "topicId": "exp-log-zins",
+    "front": "Herleitung der Optimalitätsbedingung für den Barwert?",
+    "back": "$F'(t) = V'(t)e^{-rt} - r V(t)e^{-rt} = 0 \\Rightarrow V'(t) = r V(t)$."
+  },
+  {
+    "id": "exp-log-zins-z8",
+    "topicId": "exp-log-zins",
+    "front": "Verdopplungszeit bei stetiger Verzinsung mit Rate $r$?",
+    "back": "$2A = A e^{rt} \\Rightarrow t = \\dfrac{\\ln 2}{r}$."
+  },
+  {
+    "id": "exp-log-zins-z9",
+    "topicId": "exp-log-zins",
+    "front": "Unterschied: jährliche, monatliche, stetige Verzinsung?",
+    "back": "Jährlich: $(1+r)^t$. Monatlich: $\\left(1+\\frac{r}{12}\\right)^{12t}$. Stetig: $e^{rt}$. Stetig wächst am schnellsten."
+  },
+  {
+    "id": "exp-log-zins-z10",
+    "topicId": "exp-log-zins",
+    "front": "Warum ist $e^{rt}$ der Grenzwert häufigerer Verzinsung?",
+    "back": "Weil $\\lim_{n\\to\\infty}\\left(1+\\frac{r}{n}\\right)^{nt} = e^{rt}$ nach der Definition von $e$."
+  },
+  {
+    "id": "exp-log-zins-z11",
+    "topicId": "exp-log-zins",
+    "front": "Sparvertrag mit regelmäßigen Einzahlungen: warum geometrische Reihe?",
+    "back": "Jede Rate wird unterschiedlich lang aufgezinst; die aufgezinsten Beträge bilden eine geometrische Folge, deren Summe eine geometrische Reihe ist."
+  },
+  {
+    "id": "exp-log-zins-z12",
+    "topicId": "exp-log-zins",
+    "front": "Ableitung von $F(t) = V(t)e^{-rt}$ nach der Produktregel?",
+    "back": "$F'(t) = V'(t)e^{-rt} + V(t)\\cdot(-r)e^{-rt} = e^{-rt}\\bigl(V'(t) - r V(t)\\bigr)$."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z1",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Grundform eines linearen Optimierungsproblems (LP)?",
+    "back": "$\\max\\; z = c_1 x_1 + \\cdots + c_n x_n$ unter NB $a_{i1}x_1+\\cdots+a_{in}x_n \\leq b_i$, $x_j \\geq 0$."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z2",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Was ist eine Isogewinnlinie?",
+    "back": "Die Menge aller $(x_1, x_2)$ mit gleichem Zielfunktionswert: $\\{(x_1,x_2) \\mid c_1 x_1 + c_2 x_2 = z\\}$."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z3",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Wo liegt das Optimum bei der graphischen LP-Lösung?",
+    "back": "In einer Ecke (Eckpunkt) des zulässigen Bereichs (Polyeder/Polygon)."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z4",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Was ist der zulässige Bereich eines LP?",
+    "back": "Die Menge aller $(x_1,\\ldots,x_n)$, die alle Nebenbedingungen (Ressourcen + Nicht-Negativität) erfüllen."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z5",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Was ist eine Schlupfvariable $s_i$?",
+    "back": "$s_i = b_i - (a_{i1}x_1 + \\cdots + a_{in}x_n) \\geq 0$ gibt die nicht ausgeschöpfte Ressource an und wandelt eine Ungleichung in eine Gleichung um."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z6",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Standardform des LP nach Einführung von Schlupfvariablen?",
+    "back": "$\\max z = \\vec{c}^T \\vec{x}$ u.d.NB $A\\vec{x} = \\vec{b}$, $\\vec{x} \\geq 0$ (Schlupfvariablen in $\\vec{x}$ enthalten, $N = n+m$ Variablen)."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z7",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Definition Basislösung?",
+    "back": "Lösung von $A\\vec{x}=\\vec{b}$ mit $N-m$ Variablen gleich Null, sodass die zugehörigen $m$ Spalten von $A$ linear unabhängig sind."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z8",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Was ist eine zulässige Basislösung?",
+    "back": "Eine Basislösung mit $\\vec{x} \\geq 0$ (alle Variablen nicht-negativ)."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z9",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Zusammenhang: zulässige Basislösung und Polyederecke (Satz 10)?",
+    "back": "Jede zulässige Basislösung entspricht einer Ecke des zulässigen Polyeders und umgekehrt."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z10",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Wie viele Basislösungen gibt es bei $m$ Gleichungen und $N$ Variablen?",
+    "back": "Höchstens $\\binom{N}{m}$ (Anzahl der Möglichkeiten, $m$ Basisvariablen aus $N$ zu wählen)."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z11",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Wie bestimmt man eine Basislösung rechnerisch?",
+    "back": "Setze $N-m$ Variablen auf Null, löse das verbleibende $m\\times m$-Gleichungssystem (Zeilenstufenform / Gauß)."
+  },
+  {
+    "id": "lineare-optimierung-graphisch-z12",
+    "topicId": "lineare-optimierung-graphisch",
+    "front": "Graphische LP-Lösung: Vorgehensweise?",
+    "back": "1. Zulässigen Bereich einzeichnen. 2. Isogewinnlinien parallel verschieben. 3. Letzte Ecke vor Verlassen des Bereichs = Optimum."
+  },
+  {
+    "id": "simplex-dualitaet-z1",
+    "topicId": "simplex-dualitaet",
+    "front": "Was ist das Simplex-Tableau?",
+    "back": "Eine Matrixdarstellung des LP in $x_0$-Form: Zeile 0 ist die Zielfunktionszeile, weitere Zeilen sind die Gleichungsnebenbedingungen; Basisvariablen stehen in der ersten Spalte."
+  },
+  {
+    "id": "simplex-dualitaet-z2",
+    "topicId": "simplex-dualitaet",
+    "front": "Wie wählt man die Pivot-Spalte?",
+    "back": "Spalte mit dem kleinsten (betragsmäßig größten negativen) Eintrag in Zeile 0."
+  },
+  {
+    "id": "simplex-dualitaet-z3",
+    "topicId": "simplex-dualitaet",
+    "front": "Wie wählt man die Pivot-Zeile?",
+    "back": "Zeile $i_0$ mit kleinstem Quotienten $y_{i,0}/y_{i,j_0}$ bei $y_{i,j_0} > 0$."
+  },
+  {
+    "id": "simplex-dualitaet-z4",
+    "topicId": "simplex-dualitaet",
+    "front": "Abbruchkriterium des Simplex-Algorithmus?",
+    "back": "Alle Einträge in Zeile 0 sind $\\geq 0$: die aktuelle Basislösung ist optimal."
+  },
+  {
+    "id": "simplex-dualitaet-z5",
+    "topicId": "simplex-dualitaet",
+    "front": "Sonderfall: Wann ist das LP unbeschränkt?",
+    "back": "Es gibt eine Pivot-Spalte $j_0$ mit $y_{0,j_0} < 0$, aber $y_{i,j_0} \\leq 0$ für alle $i \\geq 1$ → kein Minimum des Quotienten → unbeschränkt."
+  },
+  {
+    "id": "simplex-dualitaet-z6",
+    "topicId": "simplex-dualitaet",
+    "front": "Was ist das verkürzte Simplex-Tableau?",
+    "back": "Tableau ohne die Basisspalten (Einheitsvektoren); spart Platz, da Basisvariablen-Spalten redundant sind."
+  },
+  {
+    "id": "simplex-dualitaet-z7",
+    "topicId": "simplex-dualitaet",
+    "front": "Wie liest man die aktuelle Basislösung aus dem Tableau ab?",
+    "back": "Basisvariablen nehmen den Wert in der rechten Spalte (Konstantenspalte) ihrer Zeile an; Nicht-Basisvariablen sind $= 0$."
+  },
+  {
+    "id": "simplex-dualitaet-z8",
+    "topicId": "simplex-dualitaet",
+    "front": "Primales LP $(P)$ in Standardform?",
+    "back": "$\\max\\; \\vec{c}^T \\vec{x}$ u.d.NB $A\\vec{x} \\leq \\vec{b}$, $\\vec{x} \\geq 0$."
+  },
+  {
+    "id": "simplex-dualitaet-z9",
+    "topicId": "simplex-dualitaet",
+    "front": "Duales LP $(D)$ zum primalen $(P)$?",
+    "back": "$\\min\\; \\vec{b}^T \\vec{y}$ u.d.NB $A^T \\vec{y} \\geq \\vec{c}$, $\\vec{y} \\geq 0$."
+  },
+  {
+    "id": "simplex-dualitaet-z10",
+    "topicId": "simplex-dualitaet",
+    "front": "Schwache Dualität (Satz 11)?",
+    "back": "Für jeden zulässigen Primalpunkt $\\vec{x}$ und Dualpunkt $\\vec{y}$ gilt: $\\vec{c}^T \\vec{x} \\leq \\vec{b}^T \\vec{y}$."
+  },
+  {
+    "id": "simplex-dualitaet-z11",
+    "topicId": "simplex-dualitaet",
+    "front": "Starke Dualität (Satz 11)?",
+    "back": "Sind $(P)$ und $(D)$ beide zulässig, dann existieren Optimallösungen $\\vec{x}^*$, $\\vec{y}^*$ mit $\\vec{c}^T \\vec{x}^* = \\vec{b}^T \\vec{y}^*$."
+  },
+  {
+    "id": "simplex-dualitaet-z12",
+    "topicId": "simplex-dualitaet",
+    "front": "Folgerung: $(P)$ unbeschränkt $\\Rightarrow$?",
+    "back": "$(D)$ ist unzulässig (aus schwacher Dualität: kein endlicher Wert $\\vec{b}^T\\vec{y}$ kann obere Schranke sein)."
+  },
+  {
+    "id": "simplex-dualitaet-z13",
+    "topicId": "simplex-dualitaet",
+    "front": "Dual des Dualen?",
+    "back": "Das Dual des dualen LP $(D)$ ist wieder das primale LP $(P)$."
+  },
+  {
+    "id": "integralrechnung-z1",
+    "topicId": "integralrechnung",
+    "front": "Was berechnet das bestimmte Integral $\\int_a^b f(x)\\,dx$?",
+    "back": "Den orientierten Flächeninhalt zwischen dem Graphen von $f$ und der $x$-Achse auf $[a,b]$."
+  },
+  {
+    "id": "integralrechnung-z2",
+    "topicId": "integralrechnung",
+    "front": "Hauptsatz der Differential- und Integralrechnung?",
+    "back": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$, wobei $F$ eine Stammfunktion von $f$ ist ($F' = f$)."
+  },
+  {
+    "id": "integralrechnung-z3",
+    "topicId": "integralrechnung",
+    "front": "Substitutionsregel (Substitution $u = g(x)$)?",
+    "back": "$\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du$."
+  },
+  {
+    "id": "integralrechnung-z4",
+    "topicId": "integralrechnung",
+    "front": "Partielle Integration?",
+    "back": "$\\int u'\\, v\\,dx = u\\, v - \\int u\\, v'\\,dx$ (bzw. $\\int_a^b u'v = [uv]_a^b - \\int_a^b uv'$)."
+  },
+  {
+    "id": "integralrechnung-z5",
+    "topicId": "integralrechnung",
+    "front": "Was ist ein uneigentliches Integral (obere Grenze $\\infty$)?",
+    "back": "$\\int_a^{\\infty} f(x)\\,dx = \\lim_{R\\to\\infty} \\int_a^{R} f(x)\\,dx$, falls dieser Grenzwert existiert."
+  },
+  {
+    "id": "integralrechnung-z6",
+    "topicId": "integralrechnung",
+    "front": "Beispiel: $\\int_0^2 x^2\\sqrt{x^3+1}\\,dx$ — welche Methode?",
+    "back": "Substitution $u = x^3 + 1$, $du = 3x^2\\,dx$: $\\int_1^9 \\frac{1}{3}\\sqrt{u}\\,du = \\frac{2}{9}[u^{3/2}]_1^9 = \\frac{2}{9}(27-1) = \\frac{52}{9}$."
+  },
+  {
+    "id": "integralrechnung-z7",
+    "topicId": "integralrechnung",
+    "front": "Beispiel: $\\int_0^{\\infty} x\\cdot 3^{-x}\\,dx$ — welche Methode?",
+    "back": "Partielle Integration mit $u' = 3^{-x}$, $v = x$; anschließend uneigentliches Integral als Grenzwert auswerten."
+  },
+  {
+    "id": "integralrechnung-z8",
+    "topicId": "integralrechnung",
+    "front": "Stammfunktion von $x^n$ ($n \\neq -1$)?",
+    "back": "$\\int x^n\\,dx = \\dfrac{x^{n+1}}{n+1} + C$."
+  },
+  {
+    "id": "integralrechnung-z9",
+    "topicId": "integralrechnung",
+    "front": "Stammfunktion von $e^{ax}$?",
+    "back": "$\\int e^{ax}\\,dx = \\dfrac{1}{a}e^{ax} + C$."
+  },
+  {
+    "id": "integralrechnung-z10",
+    "topicId": "integralrechnung",
+    "front": "Wann konvergiert $\\int_1^{\\infty} x^{-p}\\,dx$?",
+    "back": "Für $p > 1$; der Wert ist dann $\\dfrac{1}{p-1}$."
+  },
+  {
+    "id": "integralrechnung-z11",
+    "topicId": "integralrechnung",
+    "front": "Wie wählt man $u'$ und $v$ bei partieller Integration geschickt?",
+    "back": "$v$ so wählen, dass $v'$ einfacher ist; $u'$ so, dass $u$ bekannt ist. Faustregel: ILATE (Logarithmus vor Polynom vor Exponential)."
+  },
+  {
+    "id": "integralrechnung-z12",
+    "topicId": "integralrechnung",
+    "front": "Linearität des Integrals?",
+    "back": "$\\int_a^b (\\alpha f + \\beta g)\\,dx = \\alpha\\int_a^b f\\,dx + \\beta\\int_a^b g\\,dx$."
+  },
+  {
+    "id": "reihen-z13",
+    "topicId": "reihen",
+    "front": "Divergenz der geometrischen Reihe für $q < -1$?",
+    "back": "Die Partialsummen oszillieren mit wachsender Amplitude → Reihe divergiert."
+  },
+  {
+    "id": "simplex-dualitaet-z14",
+    "topicId": "simplex-dualitaet",
+    "front": "Optimalitätskriterium via Dualität?",
+    "back": "$\\vec{x}$ ist optimal für $(P)$ und $\\vec{y}$ für $(D)$, falls beide zulässig sind und $\\vec{c}^T\\vec{x} = \\vec{b}^T\\vec{y}$ gilt (starke Dualität)."
+  },
+  {
+    "id": "exp-log-zins-z13",
+    "topicId": "exp-log-zins",
+    "front": "Verdreifachungszeit bei stetiger Verzinsung?",
+    "back": "$3A = A e^{rt} \\Rightarrow t = \\dfrac{\\ln 3}{r}$."
+  }
+]

@@ -1,0 +1,440 @@
+[
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z1",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Was regelt das Privatrecht?",
+    "back": "Rechtsbeziehungen zwischen gleichgeordneten Personen (kein Hoheitsverhaltnis); Grundlage: BGB."
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z2",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Privatautonomie - Grundlage?",
+    "back": "Art. 2 I GG; Freiheit, Rechtsverhaltnisse selbst zu gestalten (Abschluss-, Inhalts-, Formfreiheit)."
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z3",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Unterschied: rechtsgeschäftlich vs. Realakt",
+    "back": "Rechtsgeschaft: Wille ist auf Rechtsfolge gerichtet (z.B. Kaufvertrag). Realakt: Rechtsfolge tritt kraft Gesetzes ein, unabhangig vom Willen (z.B. Verarbeitung § 950 BGB)."
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z4",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Gefälligkeitsverhältnis - Rechtsfolge?",
+    "back": "Keine Rechtsbindung; kein Anspruch auf die Leistung (z.B. unter Freunden)."
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z5",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Gutachtenstil: 4 Schritte",
+    "back": "1. Obersatz (fraglich ist...) 2. Definition 3. Subsumtion 4. Ergebnis (somit/folglich)."
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z6",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Dreistufige Anspruchsprüfung",
+    "back": "1. Anspruch entstanden? 2. Anspruch nicht erloschen? 3. Anspruch durchsetzbar?"
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z7",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Anspruchsformel",
+    "back": "Wer will was von wem woraus? (§ 194 I BGB)"
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z8",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Einwendung vs. Einrede",
+    "back": "Einwendung: wirkt von Amts wegen (z.B. Erfullung § 362 BGB, Nichtigkeit). Einrede: muss geltend gemacht werden (z.B. Verjahrung § 214 BGB, Zuruckbehaltungsrecht § 273 BGB)."
+  },
+  {
+    "id": "einfuehrung-und-grundlagen-der-veranstaltu-z9",
+    "topicId": "einfuehrung-und-grundlagen-der-veranstaltu",
+    "front": "Absolutes vs. relatives Recht",
+    "back": "Absolut: gilt gegenuber jedermann (Eigentum § 903 BGB). Relativ: gilt nur zwischen bestimmten Personen (Anspruch aus Vertrag)."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z1",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Wann beginnt die Rechtsfähigkeit natürlicher Personen?",
+    "back": "Mit Vollendung der Geburt, § 1 BGB."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z2",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Geschäftsunfähigkeit - Voraussetzungen (§ 104 BGB)",
+    "back": "Kinder unter 7 Jahren ODER dauerhafte krankhafte Storung der Geiststatigkeit. Rechtsfolge: WE nichtig (§ 105 BGB)."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z3",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Beschränkte Geschäftsfähigkeit - Altersgruppe?",
+    "back": "7 bis unter 18 Jahre, §§ 106 ff. BGB."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z4",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Wann ist ein Minderjährigengeschäft ohne Einwilligung wirksam?",
+    "back": "Wenn es lediglich rechtlich vorteilhaft ist, § 107 BGB (kein rechtlicher Nachteil)."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z5",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Taschengeldparagraf § 110 BGB",
+    "back": "Vertrag des Minderj. wirksam, wenn Leistung mit Mitteln bewirkt wird, die der Minderj. zu diesem Zweck oder zur freien Verfugung uberlassen wurden."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z6",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Genehmigung vs. Einwilligung bei Minderjährigen",
+    "back": "Einwilligung = vorherige Zustimmung (§ 183 BGB). Genehmigung = nachtragliche Zustimmung (§ 184 BGB, wirkt ex tunc). Ohne: schwebend unwirksam (§ 108 BGB)."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z7",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Deliktsfähigkeit - Altersgrenzen (§§ 827, 828 BGB)",
+    "back": "Unter 7 J.: deliktsunfahig. 7-10 J.: nicht haftbar bei Kfz-/Bahn-/Schienenunfall (§ 828 II BGB). Ab 7 J.: haftbar, wenn Einsichtsfahigkeit vorhanden (§ 828 III BGB)."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z8",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Wesentliche Bestandteile - Rechtsfolge (§ 93 BGB)",
+    "back": "Konnen nicht Gegenstand besonderer Rechte sein; Trennung nur mit wesent. Zerstorung/Beschadigung moglich."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z9",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Zubehör (§§ 97 f. BGB) - Definition",
+    "back": "Bewegliche Sachen, die ohne Bestandteil zu sein dem wirtsch. Zweck der Hauptsache dauerhaft zu dienen bestimmt sind (z.B. Schlusselbund zu Auto)."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z10",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Scheinbestandteil § 95 BGB",
+    "back": "Verbindung nur vorubergehend oder in Ausubung eines Rechts an fremdem Grundstuck: kein wesentl. Bestandteil."
+  },
+  {
+    "id": "bgb-at-rechtssubjekte-und-rechtsobjekte-th-z11",
+    "topicId": "bgb-at-rechtssubjekte-und-rechtsobjekte-th",
+    "front": "Zurechnung bei juristischen Personen - § 31 BGB",
+    "back": "Jurist. Person haftet fur unerlaubte Handlungen ihrer Organe (verfassungsm. berufene Vertreter) in Ausubung der ihnen zustehenden Verrichtungen."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z1",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Trennungsprinzip",
+    "back": "Verpflichtungsgeschaft (z.B. Kaufvertrag) und Verfugungsgeschaft (z.B. Ubereignung) sind rechtlich getrennte Geschafte."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z2",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Abstraktionsprinzip",
+    "back": "Wirksamkeit des Verfugungsgeschafts ist unabhangig vom Verpflichtungsgeschaft (Fehler beim Kauf lasst Ubereignung unberuhrt)."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z3",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Antrag (Angebot) - Voraussetzungen § 145 BGB",
+    "back": "Empfangsbedurft. WE; wesentl. Vertragsinhalt (essentialia negotii) bestimmt/bestimmbar; Rechtsbindungswille; Bindung des Antragenden."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z4",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Invitatio ad offerendum",
+    "back": "Aufforderung zur Abgabe eines Angebots (kein Angebot selbst); z.B. Schaufensterauslage, Internetshop-Anzeige."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z5",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Modifizierte Annahme - Rechtsfolge (§ 150 II BGB)",
+    "back": "Gilt als Ablehnung des urspr. Angebots verbunden mit neuem Angebot (Ablehnung + Gegenangebot)."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z6",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Offener vs. versteckter Dissens",
+    "back": "Offener Dissens (§ 154 BGB): Parteien wissen, dass keine Einigung; kein Vertrag. Versteckter Dissens (§ 155 BGB): Parteien glauben einig, sind es aber nicht; im Zweifel kein Vertrag."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z7",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Aufschiebende vs. auflösende Bedingung (§ 158 BGB)",
+    "back": "Aufschiebend: Rechtswirkung tritt erst mit Bedingungseintritt ein. Auflosend: Rechtswirkung endet mit Bedingungseintritt."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z8",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Fristberechnung: Ereignisfrist vs. Tagesbeginnfrist",
+    "back": "Ereignisfrist (§ 187 I BGB): Tag des Ereignisses wird nicht mitgezahlt. Tagesbeginnfrist (§ 187 II BGB): Beginn eines Tages zahlt mit."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z9",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "§ 193 BGB - Fristende",
+    "back": "Fallt Fristende auf Sonn-/Feiertag oder Samstag, endet Frist am nachsten Werktag."
+  },
+  {
+    "id": "bgb-at-rechtsgeschaeft-und-vertragsschluss-z10",
+    "topicId": "bgb-at-rechtsgeschaeft-und-vertragsschluss",
+    "front": "Annahmefrist unter Abwesenden (§ 147 II BGB)",
+    "back": "Annahme muss innerhalb der Frist zugehen, die der Antragende fur den Eingang der Antwort erwarten darf (ubliche Postlaufzeit + Uberlegungszeit)."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z1",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Elemente der Willenserklärung (subjektiver Tatbestand)",
+    "back": "1. Handlungswille 2. Erklarungsbewusstsein (Rechtsbindungswille) 3. Geschaftswille."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z2",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Zugang einer Willenserklärung (§ 130 BGB)",
+    "back": "WE geht zu, wenn sie so in den Machtbereich des Empfangers gelangt, dass dieser unter normalen Umstanden Kenntnis nehmen kann."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z3",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Anfechtung wegen Inhaltsirrtums? § ?",
+    "back": "§ 119 I Alt. 1 BGB; Erklärungsinhalt entspricht nicht dem Gewollten (z.B. falsche Bezeichnung eines Gegenstands)."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z4",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Anfechtung wegen Erklärungsirrtums? § ?",
+    "back": "§ 119 I Alt. 2 BGB; Versprechen, Verschreiben, Vergreifen (Erklarungshandlung falsch)."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z5",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Anfechtung wegen Eigenschaftsirrtums? § ?",
+    "back": "§ 119 II BGB; Irrtum uber verkehrswesentliche Eigenschaft einer Person oder Sache."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z6",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Anfechtung wegen arglistiger Täuschung? § ?",
+    "back": "§ 123 I BGB. Frist: 1 Jahr ab Kenntnis der Tauschung (§ 124 BGB)."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z7",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Anfechtungsfolge (§ 142 I BGB)",
+    "back": "Nichtigkeit ex tunc (von Anfang an); das Rechtsgeschaft gilt als nie vorgenommen."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z8",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Schadensersatz bei Anfechtung wegen Irrtums? § ?",
+    "back": "§ 122 BGB: Anfechtender ersetzt Vertrauensschaden (negatives Interesse), max. Erfulungsinteresse."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z9",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Anfechtungsfrist bei Irrtum (§ 121 BGB)",
+    "back": "Unverzuglich (ohne schuldhaftes Zogern) nach Kenntnis des Anfechtungsgrundes; spatestens 10 Jahre nach WE-Abgabe."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z10",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Sittenwidrigkeit (§ 138 I BGB) - Rechtsfolge",
+    "back": "Nichtigkeit; auffalliges Missverhaltnis zwischen Leistung und Gegenleistung kann Wucher sein (§ 138 II BGB)."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z11",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Teilnichtigkeit (§ 139 BGB)",
+    "back": "Nur der nichtige Teil ist unwirksam, wenn anzunehmen ist, dass das Geschaft auch ohne diesen Teil vorgenommen worden ware."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z12",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Motivirrtum - anfechtbar?",
+    "back": "Grundsatzlich nicht anfechtbar (kein Anfechtungsgrund); Ausnahme: § 119 II BGB (verkehrswesentl. Eigenschaft) oder § 313 BGB (Geschaftsgrundlage)."
+  },
+  {
+    "id": "bgb-at-willenserklaerung-nichtigkeit-und-a-z13",
+    "topicId": "bgb-at-willenserklaerung-nichtigkeit-und-a",
+    "front": "Formanforderungen im BGB (Stufen)",
+    "back": "Formfrei > Textform (§ 126b) > Schriftform (§ 126) > offentl. Beglaubigung (§ 129) > notarielle Beurkundung (§ 128). Verstos: § 125 BGB Nichtigkeit."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z1",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Voraussetzungen der Stellvertretung (§ 164 BGB)",
+    "back": "1. Zulassigkeit 2. Eigene WE des Vertreters 3. Handeln im Namen des Vertretenen (Offenkundigkeit) 4. Vertretungsmacht."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z2",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Abgrenzung Vertreter vs. Bote",
+    "back": "Vertreter: gibt eigene WE ab. Bote: ubermittelt fremde WE (kein Handlungsspielraum)."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z3",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Vollmacht erteilen (§ 167 BGB)",
+    "back": "Durch WE an Vertreter (Innenvollmacht) oder an Dritten (Außenvollmacht); grds. formfrei (§ 167 II BGB)."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z4",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Duldungsvollmacht vs. Anscheinsvollmacht",
+    "back": "Duldungsvollmacht: Vertretener weis und duldet Auftreten des Vertreters. Anscheinsvollmacht: Vertretener weis es nicht, hatte es aber erkennen konnen."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z5",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Vertreter ohne Vertretungsmacht - Rechtsfolge (§ 177 BGB)",
+    "back": "Vertrag schwebend unwirksam; wirksam bei Genehmigung des Vertretenen; andernfalls Haftung des Vertreters (§ 179 BGB)."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z6",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "In-Sich-Geschäft (§ 181 BGB)",
+    "back": "Vertreter schließt Vertrag mit sich selbst als Vertreter oder zugleich als Vertreter beider Parteien; grds. unzulassig (Ausnahmen: Erfullung, Gestattung)."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z7",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Regelmäßige Verjährungsfrist + Beginn",
+    "back": "3 Jahre, § 195 BGB. Beginn: Schluss des Jahres der Entstehung und Kenntnis (oder grob fahrlassiger Unkenntnis) von Anspruch und Schuldner, § 199 BGB."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z8",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Verjährungs-Einrede (§ 214 BGB)",
+    "back": "Schuldner kann nach Eintritt der Verjahrung die Leistung verweigern (Einrede, nicht Einwendung; muss geltend gemacht werden)."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z9",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Hemmung der Verjährung - Beispiele",
+    "back": "§§ 203, 204, 209 BGB: Verhandlungen, Klageerhebung, Mahnbescheid; hemmt den Ablauf der Frist (Zeit der Hemmung wird nicht angerechnet)."
+  },
+  {
+    "id": "bgb-at-stellvertretung-und-verjaehrung-the-z10",
+    "topicId": "bgb-at-stellvertretung-und-verjaehrung-the",
+    "front": "Ausschlussfrist vs. Verjährung",
+    "back": "Ausschlussfrist (Einwendung): wirkt von Amts wegen, nicht hemmbar, nicht verlangerbar. Verjahrung (Einrede): muss gerügt werden, hemmbar."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z1",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Schuldverhältnis i.e.S. vs. i.w.S.",
+    "back": "i.e.S.: einzelne Forderung (Leistungspflicht). i.w.S.: gesamtes Rechtsverhaltnis mit Haupt-/Nebenpflichten (§ 241 I, II BGB)."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z2",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Culpa in contrahendo (c.i.c.) - Grundlage",
+    "back": "§ 311 II i.V.m. § 241 II BGB; vorvertragliches Schuldverhaltnis bei Vertragsanbahnung; Haftung fur Vertrauensschaden."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z3",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Hauptpflicht vs. Nebenpflicht",
+    "back": "Hauptpflicht (§ 241 I BGB): Kern des Schuldverhaltnisses (z.B. Kaufpreiszahlung). Nebenpflicht (§ 241 II BGB): Treue-, Schutz-, Aufklarungspflichten."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z4",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Erfüllung (§ 362 I BGB) - Art der Einwendung?",
+    "back": "Rechtsvernichtende Einwendung; Schuldverhaltnis erloscht, wenn Leistung an Glaubiger bewirkt wird."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z5",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Aufrechnung (§ 387 BGB) - Voraussetzungen",
+    "back": "Gegenseitigkeit, Gleichartigkeit, Falligkeit der Gegenforderung, Erfullung der Hauptforderung moglich + keine Verbote (§ 393 BGB). Wirkung ex tunc (§ 389 BGB)."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z6",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Stückschuld vs. Gattungsschuld (§ 243 BGB)",
+    "back": "Stuckschuld: individuell bestimmte Sache. Gattungsschuld: nur nach Gattungsmerkmalen bestimmt; Konkretisierung durch Aussonderung mittelerer Art und Gute (§ 243 II BGB)."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z7",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Hol-, Bring-, Schickschuld",
+    "back": "Holschuld: Erfullung am Schuldnerwohnsitz. Bringschuld: Erfullung am Glaubigerwohnsitz. Schickschuld: Schuldner schickt, Gefahr geht bei Ubergabe an Transportperson uber."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z8",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Allgemeines Zurückbehaltungsrecht (§ 273 BGB)",
+    "back": "Schuldner kann Leistung verweigern, bis Glaubiger seinen falligen konnexen Gegenanspruch erfullt (Konnexitat erforderlich); Verurteilung Zug-um-Zug (§ 274 BGB)."
+  },
+  {
+    "id": "schuldrecht-at-grundlagen-pflichten-und-an-z9",
+    "topicId": "schuldrecht-at-grundlagen-pflichten-und-an",
+    "front": "Einrede des nicht erfüllten Vertrages (§ 320 BGB)",
+    "back": "Bei gegenseit. Vertrag: Leistungsverweigerung bis Glaubiger seine Gegenleistung erbringt (kein Konnexitatserfordernis; nur Synallagma)."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z1",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Absolute Unmöglichkeit (§ 275 I BGB)",
+    "back": "Leistungspflicht entfallt, wenn Leistung fur den Schuldner oder jedermann unmoglich ist (objektiv/subjektiv, rechtlich/tatsachlich). Kein Vertretenmussen erforderlich."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z2",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Faktische Unmöglichkeit (§ 275 II BGB)",
+    "back": "Schuldner kann Leistung verweigern, wenn Aufwand in grobem Missverhaltnis zum Glaubigerinteresse steht (Verhaltnismasigkeit)."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z3",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Vertretenmüssen (§ 276 BGB)",
+    "back": "Schuldner haftet fur Vorsatz und Fahrlassigkeit. Fahrlassig: wer die im Verkehr erforderliche Sorgfalt ausser Acht lasst (§ 276 II BGB)."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z4",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Haftung für Erfüllungsgehilfen (§ 278 BGB)",
+    "back": "Schuldner haftet fur Verschulden eines Erfullungsgehilfen (Person, die er zur Erfullung einsetzt) wie fur eigenes Verschulden; Sonderverbindung erforderlich."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z5",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Rücktritt wegen Nichterfüllung - Voraussetzungen (§ 323 BGB)",
+    "back": "1. Gegenseit. Vertrag 2. Schuldner hat nicht/nicht vertragsgemass erfullt 3. Fristsetzung (+ Fristablauf) 4. kein Ausschluss (§ 323 VI BGB)."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z6",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Entbehrlichkeit der Fristsetzung (§ 323 II BGB)",
+    "back": "1. Schuldner verweigert ernsthaft und endgultig. 2. Relativer Fixtermin. 3. Besondere Umstande (sofortiger Rucktritt gerechtfertigt)."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z7",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Rückgewährschuldverhältnis (§ 346 BGB)",
+    "back": "Nach wirksamen Rucktritt: gegenseitige Ruckgabe empfangener Leistungen; bei Unmogl. Ruckgabe: Wertersatz."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z8",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Stellvertretendes commodum (§ 285 BGB)",
+    "back": "Hat Schuldner fur das unmoglich gewordene Leistungsobjekt Ersatz erlangt (z.B. Versicherung), kann Glaubiger diesen Ersatz verlangen."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z9",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Gefahrtragung Gegenleistung bei Unmöglichkeit (§ 326 I BGB)",
+    "back": "Entfallt Leistungspflicht (§ 275 BGB), entfallt auch Anspruch auf Gegenleistung. Ausnahme: Schuldner hat nicht zu vertreten (§ 326 II BGB) oder Glaubigerverzug."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z10",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Störung der Geschäftsgrundlage (§ 313 BGB) - Voraussetzungen",
+    "back": "1. Schwerwiegende Veranderung der Geschäftsgrundlage. 2. Parteien hatten Vertrag bei Kenntnis nicht oder anders geschlossen. 3. Festhalten unzumutbar. Rechtsfolge: Anpassung, sonst Rucktritt/Kundigung."
+  },
+  {
+    "id": "schuldrecht-at-leistungsstoerungen-theorie-z11",
+    "topicId": "schuldrecht-at-leistungsstoerungen-theorie",
+    "front": "Schuldnerverzug - Voraussetzungen",
+    "back": "1. Falliger Anspruch. 2. Nicht erfullt. 3. Mahnung (§ 286 I BGB) oder Verzugs-Ausnahmen (§ 286 II BGB: Termin, ernsthafte Verweigerung etc.). 4. Vertretenmussen (vermutet)."
+  }
+]

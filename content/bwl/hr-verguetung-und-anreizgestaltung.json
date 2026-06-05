@@ -23,12 +23,32 @@
           "kind": "table",
           "id": "verguetung-anreize-tabelle",
           "title": "Materielle vs. immaterielle Anreize",
-          "headers": ["Anreizart", "Beispiele", "Besonderheit"],
+          "headers": [
+            "Anreizart",
+            "Beispiele",
+            "Besonderheit"
+          ],
           "rows": [
-            ["Materielle Anreize (fix)", "Grundgehalt, Tarifzulagen", "Planbar, sicher, Grundlage"],
-            ["Materielle Anreize (variabel)", "Boni, Erfolgsbeteiligung, Aktienoptionen", "Leistungsabhängig, Anreizwirkung"],
-            ["Materielle Anreize (Sozialleistungen)", "Betriebliche Altersvorsorge, Dienstwagen, Kita-Zuschuss", "Steuerlich begünstigt, Bindung"],
-            ["Immaterielle Anreize", "Anerkennung, Karrierechancen, Arbeitsinhalt, Autonomie, Homeoffice", "Wertewandel: nehmen stark an Bedeutung zu"]
+            [
+              "Materielle Anreize (fix)",
+              "Grundgehalt, Tarifzulagen",
+              "Planbar, sicher, Grundlage"
+            ],
+            [
+              "Materielle Anreize (variabel)",
+              "Boni, Erfolgsbeteiligung, Aktienoptionen",
+              "Leistungsabhängig, Anreizwirkung"
+            ],
+            [
+              "Materielle Anreize (Sozialleistungen)",
+              "Betriebliche Altersvorsorge, Dienstwagen, Kita-Zuschuss",
+              "Steuerlich begünstigt, Bindung"
+            ],
+            [
+              "Immaterielle Anreize",
+              "Anerkennung, Karrierechancen, Arbeitsinhalt, Autonomie, Homeoffice",
+              "Wertewandel: nehmen stark an Bedeutung zu"
+            ]
           ]
         }
       ]
@@ -155,6 +175,36 @@
       "topicId": "hr-verguetung-und-anreizgestaltung",
       "front": "Was ist der Unterschied zwischen Aktienoptionen und ESOPs?",
       "back": "**Aktienoptionen:** Recht, Aktien zu einem festen (niedrigeren) Preis zu kaufen. Hauptziel: Motivation. Populär in den 90ern.\n\n**ESOPs (Employee Stock Ownership Plans):** Mitarbeitende erhalten direkt Aktien (oft leistungsunabhängig). Hauptziel: langfristige Bindung. Heute gängigste Form."
+    },
+    {
+      "id": "hr-verguetung-und-anreizgestaltung-z1",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Equity Theory (Adams 1963) – Grundformel",
+      "back": "Eigene Outcomes/Inputs = Outcomes/Inputs der Referenzperson. Ungleichgewicht → wahrgenommene Ungerechtigkeit → Verhaltensänderung (z.B. Leistungsreduktion)."
+    },
+    {
+      "id": "hr-verguetung-und-anreizgestaltung-z2",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Drei Gerechtigkeitsdimensionen",
+      "back": "Distributiv (Was bekomme ich?), Prozedural (Wie wird entschieden?), Interaktional (Wie werde ich behandelt?)."
+    },
+    {
+      "id": "hr-verguetung-und-anreizgestaltung-z3",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Variable Vergütung – Probleme ('When bonuses backfire')",
+      "back": "Boni können intrinsische Motivation verdrängen, kurzfristiges Denken fördern und zu opportunistischem Verhalten führen (Alfitian/Sliwka/Vogelsang 2023)."
+    },
+    {
+      "id": "hr-verguetung-und-anreizgestaltung-z4",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Analytische vs. summarische Arbeitsbewertung",
+      "back": "Summarisch: Stelle wird als Ganzes eingestuft (einfach, subjektiv). Analytisch: Anforderungsmerkmale werden einzeln gewichtet und bewertet (differenzierter, aufwendiger)."
+    },
+    {
+      "id": "hr-verguetung-und-anreizgestaltung-z5",
+      "topicId": "hr-verguetung-und-anreizgestaltung",
+      "front": "Geld und Glück – abnehmender Grenznutzen",
+      "back": "Lebenszufriedenheit steigt mit Einkommen, aber mit abnehmendem Grenznutzen. Selbstdeterminationstheorie: Autonomie, Kompetenz, Zugehörigkeit wichtiger als Geld ab bestimmtem Niveau."
     }
   ],
   "quiz": [
@@ -170,7 +220,11 @@
         "Energie auf strategische Unternehmensziele ausrichten",
         "Möglichst niedrige Lohnkosten um jeden Preis"
       ],
-      "correct": [0, 1, 2],
+      "correct": [
+        0,
+        1,
+        2
+      ],
       "multiple": true,
       "explanation": "Die ersten drei Optionen sind korrekte Ziele laut Vorlesung (Jackson et al., 2009). Rein auf Kostenminimierung zu setzen widerspricht dem strategischen Ansatz, der auch externe Wettbewerbsfähigkeit und interne Fairness berücksichtigt."
     },
@@ -186,7 +240,9 @@
         "Seine Arbeitszeit mit der gesetzlichen Höchstarbeitszeit",
         "Seinen Bonus mit dem Vorjahresbonus"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die Equity Theory besagt: Menschen vergleichen ihr Input/Outcome-Verhältnis mit dem einer Referenzperson. Wahrgenommene Ungleichheit führt zu Demotivation — unabhängig vom Absolut-Betrag."
     },
     {
@@ -219,7 +275,9 @@
         "Interaktionale Unfairness",
         "Kein Fairness-Problem, da absolute Gehälter wichtiger sind"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Distributive Fairness bezieht sich auf die Verteilung der Ergebnisse (Outcomes). Wenn bei gleichen Inputs (Leistung, Erfahrung) die Outcomes (Gehalt) ungleich sind, liegt distributive Unfairness vor — genau das, was die Equity Theory beschreibt."
     },
     {
@@ -234,7 +292,9 @@
         "Lösung des Prinzipal-Agenten-Problems durch Leistungskopplung",
         "Reduzierung der Fixlohnkosten"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "ESOPs haben als Hauptziel die langfristige Bindung von Mitarbeitenden. Da die Aktienanzahl meist leistungsunabhängig vergeben wird, ist der kurzfristige Motivationsanreiz geringer als bei Aktienoptionen. Aktienoptionen dagegen zielen primär auf Motivation."
     },
     {
@@ -255,7 +315,15 @@
       "difficulty": "schwer",
       "prompt": "Ein Unternehmen führt einen Anwesenheitsbonus von 500 € jährlich für Mitarbeitende ohne Fehlzeiten ein. Erläutern Sie mögliche unbeabsichtigte Folgen anhand des Crowding-out-Effekts und der Studie von Alfitian et al. (2023).",
       "sampleAnswer": "Der Crowding-out-Effekt beschreibt das Verdrängen intrinsischer Motivation durch externe Anreize. Indem das Unternehmen Anwesenheit mit 500 € belohnt, signalisiert es implizit, dass Anwesenheit keine Selbstverständlichkeit ist, sondern eine besondere Leistung. Mitarbeitende, die zuvor aus Pflichtbewusstsein (intrinsisch) anwesend waren, können ihre Einstellung ändern: Anwesenheit wird nun als 'leistungsabhängige Option' wahrgenommen. Alfitian et al. (2023) zeigten genau dies: Bei Auszubildenden einer Supermarktkette stieg der Absentismus nach Einführung von Anwesenheitsboni um 50 % (5 Tage/Jahr) an. Der Effekt war besonders stark bei neu eingestellten Auszubildenden, die noch kein gefestigtes Pflichtgefühl entwickelt hatten. Fazit: Boni können ihre eigentliche Wirkung ins Gegenteil verkehren.",
-      "keywords": ["crowding-out", "intrinsisch", "pflichtgefühl", "alfitian", "absentismus", "signal", "50 Prozent"],
+      "keywords": [
+        "crowding-out",
+        "intrinsisch",
+        "pflichtgefühl",
+        "alfitian",
+        "absentismus",
+        "signal",
+        "50 Prozent"
+      ],
       "explanation": "Kernidee: Externe Anreize verändern die Wahrnehmung einer Verhaltensweise. Was zuvor Pflicht war, wird zur (optional belohnten) Sonderleistung. Das untergräbt intrinsisches Pflichtgefühl."
     },
     {
@@ -270,7 +338,9 @@
         "Sie eliminiert alle politischen Einflüsse auf die Lohnpolitik",
         "Sie orientiert sich ausschließlich am externen Markt"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die analytische Arbeitsbewertung zerlegt Stellen in Einzelanforderungen (z.B. Können, Belastung, Verantwortung), bewertet und gewichtet diese. Ziel ist anforderungsgerechte Differenzierung der Gehälter. Sie ist aufwendiger als die summarische Methode, aber transparenter und nachvollziehbarer."
     },
     {
@@ -289,7 +359,16 @@
       "difficulty": "schwer",
       "prompt": "Erläutern Sie anhand des Beispiels Elon Musk / Tesla, wie das Prinzipal-Agenten-Problem durch Vergütungsgestaltung gelöst werden soll. Welche Risiken bleiben trotzdem bestehen?",
       "sampleAnswer": "Das Prinzipal-Agenten-Problem bei Tesla: Die Aktionäre (Prinzipal) können Musks Entscheidungen nicht vollständig beobachten; Musks Interessen könnten von ihren abweichen. Musks Vergütungspaket koppelt seinen persönlichen Reichtum direkt an 12 Meilensteine (Marktkapitalisierung + operative Ziele). Damit hat Musk ein massives finanzielles Eigeninteresse, genau die Ziele zu verfolgen, die Aktionäre wollen — Interessenangleichung. Verbleibende Risiken: (1) Manipulierbarkeit der Kennzahlen (Musk könnte auf Kennzahloptimierung statt echte Wertschöpfung setzen); (2) Zeithorizont-Problem (kurzfristige Kurssteigerungen statt langfristiger Nachhaltigkeit); (3) extreme Konzentration von Macht und Incentives auf eine Person; (4) insgesamt heterogene Forschungsbefunde zur Wirkung solcher Vergütungsmodelle.",
-      "keywords": ["prinzipal", "agent", "interessenangleichung", "musk", "aktien", "meilensteine", "risiken", "kennzahlen"],
+      "keywords": [
+        "prinzipal",
+        "agent",
+        "interessenangleichung",
+        "musk",
+        "aktien",
+        "meilensteine",
+        "risiken",
+        "kennzahlen"
+      ],
       "explanation": "Pay-for-Performance löst das Motivationsproblem durch Interessenangleichung — aber neue Probleme entstehen: Kennzahlenmanipulation, Zeithorizont-Konflikte, Überfokus auf messbare Größen."
     },
     {
@@ -305,7 +384,11 @@
         "Interessante Arbeitsaufgaben",
         "Partizipation an Entscheidungen"
       ],
-      "correct": [1, 3, 4],
+      "correct": [
+        1,
+        3,
+        4
+      ],
       "multiple": true,
       "explanation": "Jahresbonus (materiell, variabel) und betriebliche Altersvorsorge (materiell, Sozialleistung) sind materielle Anreize. Flexible Arbeitszeit, interessante Aufgaben und Partizipation sind immaterielle Anreize — sie befriedigen Bedürfnisse nach Autonomie, Kompetenz und sozialer Eingebundenheit."
     }

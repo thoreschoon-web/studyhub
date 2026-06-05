@@ -35,14 +35,36 @@
           "title": "Preisabsatzfunktion p(x) = 14 − 0,2x",
           "caption": "Lineare PAF: Bei Preis 14 € (Prohibitivpreis) ist Nachfrage 0; bei Preis 0 ist Nachfrage 70 (Sättigungsmenge). Der gewinnmaximale Preis liegt in der Mitte.",
           "functions": [
-            { "fn": "14 - 0.2*x", "label": "p(x) = 14 − 0,2x", "color": "#2563eb" }
+            {
+              "fn": "14 - 0.2*x",
+              "label": "p(x) = 14 − 0,2x",
+              "color": "#2563eb"
+            }
           ],
-          "domain": [0, 70],
-          "range": [0, 16],
+          "domain": [
+            0,
+            70
+          ],
+          "range": [
+            0,
+            16
+          ],
           "points": [
-            { "x": 0, "y": 14, "label": "Prohibitivpreis (14 €)" },
-            { "x": 70, "y": 0, "label": "Sättigungsmenge (70)" },
-            { "x": 35, "y": 7, "label": "Mittelpunkt (35, 7)" }
+            {
+              "x": 0,
+              "y": 14,
+              "label": "Prohibitivpreis (14 €)"
+            },
+            {
+              "x": 70,
+              "y": 0,
+              "label": "Sättigungsmenge (70)"
+            },
+            {
+              "x": 35,
+              "y": 7,
+              "label": "Mittelpunkt (35, 7)"
+            }
           ]
         }
       ],
@@ -87,12 +109,26 @@
           "title": "Gewinnfunktion G(P) = −4P² + 1200P − 56000",
           "caption": "Die Gewinnparabel zeigt das Maximum bei P* = 150 €, G_max = 34.000 €. Links und rechts des Cournot-Punktes sinkt der Gewinn.",
           "functions": [
-            { "fn": "-4*x^2 + 1200*x - 56000", "label": "G(P) = −4P² + 1200P − 56000", "color": "#16a34a" }
+            {
+              "fn": "-4*x^2 + 1200*x - 56000",
+              "label": "G(P) = −4P² + 1200P − 56000",
+              "color": "#16a34a"
+            }
           ],
-          "domain": [50, 250],
-          "range": [-10000, 40000],
+          "domain": [
+            50,
+            250
+          ],
+          "range": [
+            -10000,
+            40000
+          ],
           "points": [
-            { "x": 150, "y": 34000, "label": "Cournot-Punkt: P*=150€, G=34.000€" }
+            {
+              "x": 150,
+              "y": 34000,
+              "label": "Cournot-Punkt: P*=150€, G=34.000€"
+            }
           ]
         }
       ],
@@ -123,13 +159,37 @@
           "kind": "table",
           "id": "fig-kostenkalk-tabelle",
           "title": "Stückkostenberechnung in zwei Perioden",
-          "headers": ["", "Periode 1 (10.000 ME)", "Periode 2 (1.000 ME)"],
+          "headers": [
+            "",
+            "Periode 1 (10.000 ME)",
+            "Periode 2 (1.000 ME)"
+          ],
           "rows": [
-            ["Variable Kosten (kv)", "3,00 €", "3,00 €"],
-            ["Fixkosten/Stück (KF/M)", "1,50 €", "15,00 €"],
-            ["Stückkosten (k)", "4,50 €", "18,00 €"],
-            ["+ 50% Aufschlag", "2,25 €", "9,00 €"],
-            ["Verkaufspreis (p)", "6,75 €", "27,00 €"]
+            [
+              "Variable Kosten (kv)",
+              "3,00 €",
+              "3,00 €"
+            ],
+            [
+              "Fixkosten/Stück (KF/M)",
+              "1,50 €",
+              "15,00 €"
+            ],
+            [
+              "Stückkosten (k)",
+              "4,50 €",
+              "18,00 €"
+            ],
+            [
+              "+ 50% Aufschlag",
+              "2,25 €",
+              "9,00 €"
+            ],
+            [
+              "Verkaufspreis (p)",
+              "6,75 €",
+              "27,00 €"
+            ]
           ]
         }
       ],
@@ -210,6 +270,54 @@
       "topicId": "mkt-vl7-preispolitik",
       "front": "Was versteht man unter dem Wertgewinn-Konzept?",
       "back": "Wertgewinn = Nutzenwahrnehmung − Gesamtkosten (Kauf- + Akquisitions- + Nutzungs- + Pflege- + Eigentums- + Entsorgungskosten).\n\nKunden kaufen das Produkt mit dem **höchsten Wertgewinn**, nicht unbedingt das günstigste."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z1",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Lineare Preisabsatzfunktion (PAF) – Formel und Parameter",
+      "back": "$X(p) = a - b \\cdot p$\n\n$a$=Sättigungsmenge (bei $p=0$), $a/b$=Prohibitivpreis (bei $X=0$), $b$=Steigung (negativ). Beispiel: $p = 14 - 0{,}2x$."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z2",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Formel: Preiselastizität der Nachfrage",
+      "back": "$e = \\dfrac{\\Delta x / x}{\\Delta p / p} = \\dfrac{\\text{Nachfrageänderung (\\%)}}{\\text{Preisänderung (\\%)}}$\n\n$|e| > 1$: elastisch (z. B. Kaffeepads). $|e| < 1$: unelastisch (z. B. Medikamente). Vorzeichen meist negativ."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z3",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Gewinnmaximierung durch Differenzialrechnung – Vorgehen",
+      "back": "1. Nachfragefunktion $M = a - bP$ aufstellen.\n2. Kostenfunktion $K = K_F + k_v \\cdot M$.\n3. $G = U - K = P \\cdot M - K$ in $P$ ausdrücken.\n4. $G'(P) = 0$ lösen → $P^*$.\n\nBeispiel: $G' = 1200 - 8P = 0 \\Rightarrow P = 150\\,€$; $G_{max} = 34.000\\,€$."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z4",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Kostenorientierte Preisfestlegung – Formel",
+      "back": "$\\text{Stückkosten} = k_v + \\dfrac{K_F}{M}$\n\n$p = \\dfrac{\\text{Stückkosten}}{1 - \\text{Umsatzrendite}}$\n\nProblem: Bei sinkendem Absatz steigen Stückkosten → Preis steigt → weiterer Absatzrückgang (\"sich aus dem Markt kalkulieren\")."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z5",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Penetration vs. Skimming-Strategie",
+      "back": "**Penetration**: niedriger Einführungspreis → schnelle Marktdurchdringung, hohe Preiselastizität nötig (z. B. Wii). **Skimming**: hoher Einführungspreis → Abschöpfen zahlungsbereiter Kunden, dann sukzessive Preisreduktion; setzt Technologie-/Konkurrenzvorsprung voraus."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z6",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Gutenberg-PAF – was ist der monopolistische Bereich?",
+      "back": "Im **heterogenen Polypol** (Markenartikel) ist die PAF doppelt-geknickt. Der flache mittlere Teil = monopolistischer Bereich (Preissetzungsspielraum dank Markenpräferenz). Die steilen Randbereiche = kompetitiv (Preissensibilität hoch)."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z7",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Wettbewerbsorientierte Preisfestlegung – Erwartungswert",
+      "back": "$EW(p_A) = \\sum_i P(\\text{Reaktion}_i) \\cdot DB_i$\n\nBeispiel: $EW(p=12) = 0{,}5 \\cdot 10500 + 0{,}25 \\cdot 8400 + 0{,}25 \\cdot 7000 = 9.100\\,€$. Preisalternative mit höchstem Erwartungswert wird gewählt."
+    },
+    {
+      "id": "mkt-vl7-preispolitik-z8",
+      "topicId": "mkt-vl7-preispolitik",
+      "front": "Was sind die drei Einflussfaktoren der Preisfestlegung (3 Ks)?",
+      "back": "**Käufer** (Zahlungsbereitschaft, Preissensibilität, Wertgewinn), **Kosten** (Kostenboden), **Konkurrenz** (Wettbewerbspreise). Ergänzt durch interne Ziele (Positionierung, Liquidität) und externe Rahmenbedingungen (Konjunktur, Saisonalität)."
     }
   ],
   "quiz": [
@@ -225,7 +333,9 @@
         "Der günstigste Preis, den ein Unternehmen anbieten kann",
         "Der Preis, den der stärkste Wettbewerber verlangt"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Der Prohibitivpreis ist der Maximalpreis, bei dem die Nachfrage auf null sinkt. In der PAF $p(x) = a - \\frac{1}{b}x$ findet man ihn, indem man $x=0$ einsetzt: $p_{\\max} = a$."
     },
     {
@@ -293,7 +403,9 @@
         "Gutenberg-PAF (doppelt-geknickt)",
         "Alle PAF haben Prohibitivpreis und Sättigungsmenge"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die **multiplikative PAF** $x(p) = a \\cdot p^{-b}$ nähert sich für $p \\to \\infty$ der null an, erreicht sie aber nie (kein Prohibitivpreis). Für $p \\to 0$ geht die Nachfrage gegen unendlich (keine Sättigungsmenge). Typisch für Monopolisten."
     },
     {
@@ -311,8 +423,15 @@
       "topicId": "mkt-vl7-preispolitik",
       "difficulty": "schwer",
       "prompt": "Ein Unternehmen hat Fixkosten 15.000 € und variable Kosten 3 €/Stück. Gewinnaufschlag 50%. In Periode 1 verkauft es 10.000 Stück, in Periode 2 nur 1.000 Stück. Welcher Preis ergibt sich in Periode 2?",
-      "options": ["6,75 €", "18,00 €", "27,00 €", "21,00 €"],
-      "correct": [2],
+      "options": [
+        "6,75 €",
+        "18,00 €",
+        "27,00 €",
+        "21,00 €"
+      ],
+      "correct": [
+        2
+      ],
       "explanation": "Periode 2: Stückkosten $k_2 = 3 + 15.000/1.000 = 3 + 15 = 18$ €. Preis: $p_2 = 18 \\cdot 1{,}5 = 27$ €. Dies illustriert das Problem der Zuschlagskalkulation: sinkender Absatz → steigende Stückkosten → höherer Preis → noch weniger Absatz."
     },
     {
@@ -322,7 +441,14 @@
       "difficulty": "schwer",
       "prompt": "Erkläre das Gutenberg-Modell der Preisabsatzfunktion und warum es realistischer ist als die lineare PAF.",
       "sampleAnswer": "Das Gutenberg-Modell (auch doppelt-geknickte PAF) beschreibt die Nachfrage im heterogenen Polypol: In einem mittleren Preisbereich (monopolistischer Bereich) reagiert die Menge kaum auf Preisänderungen — Stammkunden bleiben treu. Wird der Preis zu hoch, verliert das Unternehmen viele Kunden an günstigere Wettbewerber (kompetitiver Bereich oben). Wird der Preis zu niedrig, fragen zwar mehr Kunden nach, aber das Unternehmen verliert Qualitätsimage (kompetitiver Bereich unten). Durch Markenaufbau und Präferenzwerbung kann das Unternehmen diesen monopolistischen Bereich ausweiten und damit mehr Preissetzungsspielraum gewinnen.",
-      "keywords": ["monopolistischer Bereich", "heterogenes Polypol", "kompetitiver Bereich", "Stammkunden", "Preisspielraum", "Markenaufbau"],
+      "keywords": [
+        "monopolistischer Bereich",
+        "heterogenes Polypol",
+        "kompetitiver Bereich",
+        "Stammkunden",
+        "Preisspielraum",
+        "Markenaufbau"
+      ],
       "explanation": "Das Gutenberg-Modell berücksichtigt, dass Kunden bei kleinen Preisänderungen loyal bleiben, aber bei starken Abweichungen abwandern. Die lineare PAF nimmt dagegen konstante Preiswirkung über den gesamten Preisbereich an — das ist unrealistisch."
     },
     {
@@ -347,7 +473,9 @@
         "Kapital, Kosten, Kunden",
         "Kannibalisierung, Kosten, Kapazität"
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Die **3 Ks** der Preisfestsetzung: **Käufer** (Zahlungsbereitschaft, Preiselastizität), **Kosten** (Untergrenze des Preises), **Konkurrenz** (Marktpreise, Reaktionen der Wettbewerber). Alle drei müssen bei der Preisfindung berücksichtigt werden."
     }
   ],

@@ -28,16 +28,52 @@
           "kind": "table",
           "id": "tab-intern-extern",
           "title": "Interne vs. externe Rekrutierung im Vergleich",
-          "headers": ["Kriterium", "Intern", "Extern"],
+          "headers": [
+            "Kriterium",
+            "Intern",
+            "Extern"
+          ],
           "rows": [
-            ["Kosten", "Gering (kein Headhunter, keine Anzeige)", "Höher (Anzeigen, ggf. Headhunter)"],
-            ["Geschwindigkeit", "Schnell (Person bekannt)", "Langsamer (Suche, Auswahl)"],
-            ["Kenntnisse über Person", "Hoch (Leistung bekannt)", "Niedrig (Informationsasymmetrie)"],
-            ["Frisches Know-how", "Gering (Betriebsblindheit möglich)", "Hoch (neue Perspektiven)"],
-            ["Motivation bestehender MA", "Positiv (Karriereperspektive sichtbar)", "Neutral bis negativ (übergangen?)"],
-            ["Größe des Bewerberpools", "Begrenzt auf Belegschaft", "Prinzipiell unbegrenzt"],
-            ["Einarbeitungszeit", "Kurz (Unternehmenskultur bekannt)", "Länger (Onboarding nötig)"],
-            ["Risiko 'Positionsvakanz'", "Andere Stelle wird frei", "Kein interner Dominoeffekt"]
+            [
+              "Kosten",
+              "Gering (kein Headhunter, keine Anzeige)",
+              "Höher (Anzeigen, ggf. Headhunter)"
+            ],
+            [
+              "Geschwindigkeit",
+              "Schnell (Person bekannt)",
+              "Langsamer (Suche, Auswahl)"
+            ],
+            [
+              "Kenntnisse über Person",
+              "Hoch (Leistung bekannt)",
+              "Niedrig (Informationsasymmetrie)"
+            ],
+            [
+              "Frisches Know-how",
+              "Gering (Betriebsblindheit möglich)",
+              "Hoch (neue Perspektiven)"
+            ],
+            [
+              "Motivation bestehender MA",
+              "Positiv (Karriereperspektive sichtbar)",
+              "Neutral bis negativ (übergangen?)"
+            ],
+            [
+              "Größe des Bewerberpools",
+              "Begrenzt auf Belegschaft",
+              "Prinzipiell unbegrenzt"
+            ],
+            [
+              "Einarbeitungszeit",
+              "Kurz (Unternehmenskultur bekannt)",
+              "Länger (Onboarding nötig)"
+            ],
+            [
+              "Risiko 'Positionsvakanz'",
+              "Andere Stelle wird frei",
+              "Kein interner Dominoeffekt"
+            ]
           ]
         }
       ],
@@ -94,15 +130,55 @@
           "kind": "table",
           "id": "tab-kanaele",
           "title": "Recruiting-Kanäle — Reichweite, Kosten, Eignung",
-          "headers": ["Kanal", "Reichweite", "Kosten", "Besonders geeignet für"],
+          "headers": [
+            "Kanal",
+            "Reichweite",
+            "Kosten",
+            "Besonders geeignet für"
+          ],
           "rows": [
-            ["Online-Stellenanzeige (Indeed, Stepstone)", "Sehr hoch", "Mittel", "Breit gefächerte Suche, Masse"],
-            ["LinkedIn / XING (Active Sourcing)", "Hoch (gezielt)", "Mittel–Hoch", "Fach- und Führungskräfte, die nicht aktiv suchen"],
-            ["Headhunter", "Mittel (sehr gezielt)", "Sehr hoch", "Top-Management, seltene Spezialisten"],
-            ["Hochschulmarketing / Messen", "Mittel", "Mittel", "Berufseinsteiger, Nachwuchstalente"],
-            ["Mitarbeiterempfehlung", "Gering (Netzwerk)", "Niedrig (Prämie)", "Kulturell passende Kandidaten"],
-            ["Social Media (TikTok, Instagram)", "Sehr hoch", "Niedrig–Mittel", "Junge Zielgruppen, Arbeitgeberimage"],
-            ["Rückkehrerbörse", "Niedrig (spezifisch)", "Niedrig", "Regionale Unternehmen, Provinz-Standorte"]
+            [
+              "Online-Stellenanzeige (Indeed, Stepstone)",
+              "Sehr hoch",
+              "Mittel",
+              "Breit gefächerte Suche, Masse"
+            ],
+            [
+              "LinkedIn / XING (Active Sourcing)",
+              "Hoch (gezielt)",
+              "Mittel–Hoch",
+              "Fach- und Führungskräfte, die nicht aktiv suchen"
+            ],
+            [
+              "Headhunter",
+              "Mittel (sehr gezielt)",
+              "Sehr hoch",
+              "Top-Management, seltene Spezialisten"
+            ],
+            [
+              "Hochschulmarketing / Messen",
+              "Mittel",
+              "Mittel",
+              "Berufseinsteiger, Nachwuchstalente"
+            ],
+            [
+              "Mitarbeiterempfehlung",
+              "Gering (Netzwerk)",
+              "Niedrig (Prämie)",
+              "Kulturell passende Kandidaten"
+            ],
+            [
+              "Social Media (TikTok, Instagram)",
+              "Sehr hoch",
+              "Niedrig–Mittel",
+              "Junge Zielgruppen, Arbeitgeberimage"
+            ],
+            [
+              "Rückkehrerbörse",
+              "Niedrig (spezifisch)",
+              "Niedrig",
+              "Regionale Unternehmen, Provinz-Standorte"
+            ]
           ]
         }
       ],
@@ -149,15 +225,47 @@
           "kind": "table",
           "id": "tab-hiring-stars",
           "title": "Stars kaufen vs. Stars entwickeln — Vergleich",
-          "headers": ["Kriterium", "Stars einkaufen (Buy)", "Stars entwickeln (Make/Grow)"],
+          "headers": [
+            "Kriterium",
+            "Stars einkaufen (Buy)",
+            "Stars entwickeln (Make/Grow)"
+          ],
           "rows": [
-            ["Geschwindigkeit", "Schnell besetzbar", "Dauert Jahre"],
-            ["Kosten", "Sehr hoch (Gehalt, Prämien)", "Mittel (Training, Entwicklung)"],
-            ["Leistung nach Transfer", "~20 % Einbruch (Groysberg)", "Konstant bis steigend"],
-            ["Bindung ans Unternehmen", "Gering (Star wechselt wieder)", "Hoch (firmenspez. Know-how)"],
-            ["Teameffekte", "Oft negativ (Neid, Unruhe)", "Positiv (Rollenmodell)"],
-            ["Portabilität der Leistung", "Nur ~30 %", "~70 % firmenspezifisch nutzbar"],
-            ["Beispiel", "Merrill Lynch (1 von 30)", "Sanford Bernstein (1 von 5)"]
+            [
+              "Geschwindigkeit",
+              "Schnell besetzbar",
+              "Dauert Jahre"
+            ],
+            [
+              "Kosten",
+              "Sehr hoch (Gehalt, Prämien)",
+              "Mittel (Training, Entwicklung)"
+            ],
+            [
+              "Leistung nach Transfer",
+              "~20 % Einbruch (Groysberg)",
+              "Konstant bis steigend"
+            ],
+            [
+              "Bindung ans Unternehmen",
+              "Gering (Star wechselt wieder)",
+              "Hoch (firmenspez. Know-how)"
+            ],
+            [
+              "Teameffekte",
+              "Oft negativ (Neid, Unruhe)",
+              "Positiv (Rollenmodell)"
+            ],
+            [
+              "Portabilität der Leistung",
+              "Nur ~30 %",
+              "~70 % firmenspezifisch nutzbar"
+            ],
+            [
+              "Beispiel",
+              "Merrill Lynch (1 von 30)",
+              "Sanford Bernstein (1 von 5)"
+            ]
           ]
         }
       ],
@@ -212,6 +320,36 @@
       "topicId": "hr-personalrekrutierung",
       "front": "Was ist Robot Recruiting und welches zentrale Risiko birgt es?",
       "back": "Robot Recruiting = algorithmische/KI-gestützte Kandidatenvorauswahl (CV-Parsing, automatisches Matching). Zentrales Risiko: algorithmischer Bias — KI repliziert historische Muster (z. B. Bevorzugung von Männern, wenn Trainingsdaten so verzerrt sind)."
+    },
+    {
+      "id": "hr-personalrekrutierung-z1",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Interne vs. externe Rekrutierung – Vor-/Nachteile",
+      "back": "Intern: Bindung, Kenntnisse vorhanden, günstig; Nachteil: Betriebsblindheit. Extern: frisches Know-how, größerer Pool; Nachteil: höhere Kosten, längere Einarbeitung."
+    },
+    {
+      "id": "hr-personalrekrutierung-z2",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Employer Branding",
+      "back": "Positionierung des Unternehmens als attraktiver Arbeitgeber (intern: Bindung; extern: Gewinnung). Arbeitgeberimage ≠ allgemeines Unternehmensimage."
+    },
+    {
+      "id": "hr-personalrekrutierung-z3",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Signaling-Theorie im Recruiting (Spence / Connelly et al. 2011)",
+      "back": "Informationsasymmetrie: Bewerber signalisieren Qualität (z.B. Abschlüsse), Unternehmen signalisieren Attraktivität. Schema: Sender → Signal → Empfänger → Feedback."
+    },
+    {
+      "id": "hr-personalrekrutierung-z4",
+      "topicId": "hr-personalrekrutierung",
+      "front": "Active Sourcing",
+      "back": "Aktive Direktansprache potenzieller Kandidaten (z.B. über LinkedIn, Headhunter), ohne auf eingehende Bewerbungen zu warten."
+    },
+    {
+      "id": "hr-personalrekrutierung-z5",
+      "topicId": "hr-personalrekrutierung",
+      "front": "HBR: 'The Risky Business of Hiring Stars' – Kernbotschaft",
+      "back": "Starleistung ist nur ~30% portabel; ~70% sind firmen-/kontextspezifisch. Stars durch Einkauf verschlechtern oft die Team-Performance. Besser: 'Grow stars, don't buy them.'"
     }
   ],
   "quiz": [
@@ -227,7 +365,9 @@
         "Der Bewerberpool ist größer.",
         "Die Einarbeitungszeit ist länger."
       ],
-      "correct": [1],
+      "correct": [
+        1
+      ],
       "explanation": "Bei interner Rekrutierung kennt das Unternehmen die Person bereits — ihre Leistung, ihr Verhalten, ihre Stärken. Das reduziert das Einstellungsrisiko erheblich. Frisches Know-how kommt hingegen typischerweise von außen (externer Vorteil)."
     },
     {
@@ -242,7 +382,9 @@
         "Jobtitel, Bewerbungsfrist, Ansprechpartner, Gehalt, Aufgaben, Teamgröße",
         "Arbeitsort, Branche, Unternehmensgröße, Hierarchie, Dresscode, Benefits"
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Naurath (Curato Leads): Die wichtigsten sechs Informationen sind Tätigkeit, Arbeitsort, Arbeitszeitmodell, Vergütung, Vertragsart und Benefits. Viele Anzeigen stellen stattdessen lange Unternehmenstexte an erste Stelle — was Bewerber abschreckt."
     },
     {
@@ -266,7 +408,9 @@
         "20 %",
         "50 %"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Groysberg et al. fanden einen durchschnittlichen Leistungsabfall von ~20 % nach dem Wechsel — und dieser Einbruch erholte sich auch nach 5 Jahren nicht vollständig. 46 % der Stars erbrachten im Folgejahr schlechte Leistungen."
     },
     {
@@ -290,7 +434,11 @@
         "Der Börsenkurs der einstellenden Bank sank im Schnitt um 0,74 % bei der Ankündigung.",
         "Sanford Bernstein machte aus 1 von 5 Analysten einen Star — Merrill Lynch nur aus 1 von 30."
       ],
-      "correct": [0, 2, 3],
+      "correct": [
+        0,
+        2,
+        3
+      ],
       "multiple": true,
       "explanation": "Korrekt sind: (1) ~30 % portabel, (3) Kurseinbruch von 0,74 %, (4) Sanford Bernstein 1/5 vs. Merrill Lynch 1/30. Falsch ist Option 2: Stars blieben gerade NICHT lange — 36 % der studierten Analysten verließen die Bank innerhalb von 36 Monaten, weitere 29 % innerhalb von 24 weiteren Monaten."
     },
@@ -306,7 +454,9 @@
         "Beide Begriffe sind synonym und werden austauschbar verwendet.",
         "Arbeitgeberimage betrifft nur die Vergütung, Unternehmensimage alle anderen Faktoren."
       ],
-      "correct": [0],
+      "correct": [
+        0
+      ],
       "explanation": "Nach Gatewood: Unternehmensimage = Gesamtbild (Produkte, Marke, gesellschaftliche Rolle). Arbeitgeberimage = spezifisches Bild als Arbeitgeber (Arbeitsbedingungen, Kultur, Entwicklung). Ein Unternehmen kann bekannt sein und trotzdem als schlechter Arbeitgeber gelten."
     },
     {
@@ -325,7 +475,16 @@
       "difficulty": "schwer",
       "prompt": "Erläutere in 3–5 Sätzen, warum externe Stars (Top-Performer) nach einem Firmenwechsel oft schlechtere Leistungen erbringen — und was Unternehmen stattdessen tun sollten.",
       "sampleAnswer": "Stars erbringen schlechtere Leistungen nach einem Wechsel, weil ca. 70 % ihrer Performance firmen- und kontextspezifisch ist: Sie verlieren Ressourcen (IT, Netzwerke, Teamstrukturen), Vertrauen der Kollegen und müssen sich in neue Systeme einarbeiten. Hinzu kommt, dass Stars ihre alten Methoden beibehalten wollen und sich schlecht anpassen. Unternehmen sollten stattdessen eigene Talente identifizieren, gezielt fördern (Training, Netzwerke, Entwicklung) und binden — 'Grow stars, don't buy them'. Wenn doch externe Stars nötig sind, sollten sie gezielt als Ersatz für abgegangene Stars eingesetzt und mit einem starken Integrationsprogramm begleitet werden.",
-      "keywords": ["kontextspezifisch", "firmenspezifisch", "ressourcen", "netzwerk", "grow", "entwickeln", "integration", "portabel"],
+      "keywords": [
+        "kontextspezifisch",
+        "firmenspezifisch",
+        "ressourcen",
+        "netzwerk",
+        "grow",
+        "entwickeln",
+        "integration",
+        "portabel"
+      ],
       "explanation": "Kernidee: Leistung = Person + Kontext. Wer nur die Person kauft, bekommt nicht den vollen Kontext mit."
     },
     {
@@ -340,7 +499,9 @@
         "Zahlung von Relocation-Boni in Höhe von 10.000 EUR",
         "Ansprechen von Menschen, für die Großstadtvorteile unwichtig sind"
       ],
-      "correct": [2],
+      "correct": [
+        2
+      ],
       "explanation": "Rehau nutzte Flexibilität, Apartmenthaus, Messeauftritte (u. a. Gamescom) und zielgerichtete Ansprache. Ein pauschaler Relocation-Bonus von 10.000 EUR wird im Artikel nicht erwähnt. Rehau vermittelt stattdessen Sonderkonditionen bei Baudarlehen und bietet niedrigere Lebenshaltungskosten als Argument."
     }
   ],
