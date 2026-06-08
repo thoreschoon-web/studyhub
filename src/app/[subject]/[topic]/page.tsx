@@ -2,9 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSubjectMeta } from "@/lib/subjects";
 import { getSubjectTopics, getTopic } from "@/lib/content";
-import { requireUser } from "@/lib/session";
+import { getCurrentUser } from "@/lib/session";
 import { recordPageOpen } from "@/lib/progress-server";
 import { Paywall } from "@/components/billing/Paywall";
+import { AuthGate } from "@/components/billing/AuthGate";
+import { AnonTopicGate } from "@/components/billing/AnonTopicGate";
 import { SubjectTheme } from "@/components/SubjectTheme";
 import { SectionView } from "@/components/content/SectionView";
 import { TabsShell, type TabDef } from "@/components/learn/TabsShell";
@@ -24,15 +26,21 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
   const topic = getTopic(meta.id, topicId);
   if (!topic) notFound();
 
-  // Free-tier page-open gate (5 distinct topic pages). Owner/paid bypass.
-  const user = await requireUser();
-  const allowed = await recordPageOpen(user, topic.id);
-  if (!allowed) {
-    return (
-      <SubjectTheme subject={meta} className="mx-auto max-w-3xl px-5 py-8 lg:px-8">
-        <Paywall title={topic.title} />
-      </SubjectTheme>
-    );
+  const user = await getCurrentUser();
+  const isAnon = !user;
+
+  // Logged-in free-tier page-open gate (5 distinct topic pages). Owner/paid bypass.
+  // Anonymous users browse freely here; the 3-topic limit is enforced client-side
+  // by <AnonTopicGate/>, and interactive tabs are replaced by a sign-in prompt.
+  if (user) {
+    const allowed = await recordPageOpen(user, topic.id);
+    if (!allowed) {
+      return (
+        <SubjectTheme subject={meta} className="mx-auto max-w-3xl px-5 py-8 lg:px-8">
+          <Paywall title={topic.title} />
+        </SubjectTheme>
+      );
+    }
   }
 
   const all = getSubjectTopics(meta.id);
@@ -55,7 +63,9 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
       label: "Quiz",
       icon: <ListChecks size={15} />,
       badge: topic.quiz.length,
-      content: (
+      content: isAnon ? (
+        <AuthGate feature="das Quiz" />
+      ) : (
         <div className="mx-auto max-w-2xl">
           <QuizEngine questions={topic.quiz} topicId={topic.id} />
         </div>
@@ -66,7 +76,9 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
       label: "Karteikarten",
       icon: <Layers size={15} />,
       badge: topic.flashcards.length,
-      content: (
+      content: isAnon ? (
+        <AuthGate feature="die Karteikarten" />
+      ) : (
         <div className="mx-auto max-w-2xl">
           <FlashcardDeck cards={topic.flashcards} />
         </div>
@@ -77,12 +89,13 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
       label: "Aufgaben",
       icon: <FileText size={15} />,
       badge: topic.exercises.length,
-      content: <ExerciseList exercises={topic.exercises} />,
+      content: isAnon ? <AuthGate feature="die Aufgaben" /> : <ExerciseList exercises={topic.exercises} />,
     },
   ];
 
   return (
     <SubjectTheme subject={meta} className={`mx-auto max-w-3xl px-5 py-8 lg:px-8 lg:py-10 ${isMath ? "math-karo" : ""}`}>
+      {isAnon && <AnonTopicGate topicId={topic.id} />}
       <div className="no-print mb-6">
         <Link href={`/${meta.id}`} className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-text">
           <ArrowLeft size={15} /> {meta.title}
@@ -134,16 +147,18 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
         ) : <span />}
       </nav>
 
-      <TutorDock
-        subject={meta.title}
-        topic={topic.title}
-        context={context}
-        suggestions={[
-          `Erkläre mir „${topic.title}“ in einfachen Worten.`,
-          "Gib mir eine typische Klausuraufgabe dazu.",
-          "Was sind die häufigsten Fehler bei diesem Thema?",
-        ]}
-      />
+      {!isAnon && (
+        <TutorDock
+          subject={meta.title}
+          topic={topic.title}
+          context={context}
+          suggestions={[
+            `Erkläre mir „${topic.title}“ in einfachen Worten.`,
+            "Gib mir eine typische Klausuraufgabe dazu.",
+            "Was sind die häufigsten Fehler bei diesem Thema?",
+          ]}
+        />
+      )}
     </SubjectTheme>
   );
 }

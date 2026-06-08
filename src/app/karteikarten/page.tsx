@@ -2,10 +2,13 @@ import { SUBJECTS } from "@/lib/subjects";
 import { getSubjectTopics } from "@/lib/content";
 import { KarteikartenClient, type Deck } from "@/components/karteikarten/KarteikartenClient";
 import { Layers } from "lucide-react";
+import { getCurrentUser } from "@/lib/session";
+import { AuthGate } from "@/components/billing/AuthGate";
 
 export const dynamic = "force-dynamic";
 
-export default function KarteikartenPage() {
+export default async function KarteikartenPage() {
+  const user = await getCurrentUser();
   const decks: Deck[] = SUBJECTS.map((s) => ({
     subjectId: s.id,
     title: s.title,
@@ -25,7 +28,7 @@ export default function KarteikartenPage() {
           Spaced-Repetition (SM-2): bewerte ehrlich, wie gut du eine Karte konntest – die App plant die Wiederholung optimal.
         </p>
       </header>
-      <KarteikartenClient decks={decks} />
+      {user ? <KarteikartenClient decks={decks} /> : <AuthGate feature="die Karteikarten" />}
     </div>
   );
 }

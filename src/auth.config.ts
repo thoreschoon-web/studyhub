@@ -14,8 +14,14 @@ export const authConfig = {
   providers: oauthProviders,
   callbacks: {
     // Used by proxy.ts to gate routes (matcher decides which).
-    authorized({ auth }) {
-      return !!auth?.user;
+    // Anonymous browsing is allowed; only the upgrade/checkout funnel forces login.
+    // Interactive features self-gate in the pages/components; the API routes
+    // (/api/progress, /api/chat) independently enforce auth (401) for security.
+    authorized({ auth, request }) {
+      if (auth?.user) return true;
+      const p = request.nextUrl.pathname;
+      if (p === "/upgrade" || p.startsWith("/upgrade/")) return false; // → /login?callbackUrl=/upgrade
+      return true;
     },
     jwt({ token, user }) {
       if (user) token.id = (user as { id?: string }).id;

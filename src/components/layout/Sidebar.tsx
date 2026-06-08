@@ -10,7 +10,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 
@@ -70,7 +70,7 @@ export function Sidebar() {
 
       <ThemeToggle className="mt-3 w-full justify-center" />
 
-      {session?.user && (
+      {status === "authenticated" && session?.user && (
         <div className="mt-3 flex items-center gap-2 rounded-[var(--radius)] border border-line bg-surface/40 px-2.5 py-2">
           <div className="grid h-8 w-8 shrink-0 place-items-center rounded-[5px] bg-surface-2 text-xs font-semibold uppercase text-muted">
             {(session.user.email ?? "?").slice(0, 1)}
@@ -87,6 +87,17 @@ export function Sidebar() {
           >
             <LogOut size={16} />
           </button>
+        </div>
+      )}
+
+      {status === "unauthenticated" && (
+        <div className="mt-3 flex flex-col gap-2">
+          <Link href="/register" className="rounded-[var(--radius)] py-2 text-center text-sm font-semibold text-white" style={{ background: "var(--accent)" }}>
+            Registrieren
+          </Link>
+          <Link href="/login" className="rounded-[var(--radius)] border border-line py-2 text-center text-sm font-medium text-muted transition-colors hover:text-text">
+            Anmelden
+          </Link>
         </div>
       )}
     </aside>

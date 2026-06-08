@@ -4,10 +4,7 @@ import "katex/dist/katex.min.css";
 import "./globals.css";
 import { auth } from "@/auth";
 import { SessionProvider } from "@/components/auth/SessionProvider";
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileTopBar } from "@/components/layout/MobileTopBar";
-import { ProgressBootstrap } from "@/components/progress/ProgressBootstrap";
-import { UpgradeModal } from "@/components/billing/UpgradeModal";
+import { AppShell } from "@/components/layout/AppShell";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 const mono = JetBrains_Mono({ variable: "--font-mono-jb", subsets: ["latin"], display: "swap" });
@@ -22,7 +19,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const loggedIn = !!session?.user;
 
   return (
-    <html lang="de" className={`${inter.variable} ${mono.variable} h-full antialiased`}>
+    <html lang="de" suppressHydrationWarning className={`${inter.variable} ${mono.variable} h-full antialiased`}>
       <body className="min-h-full">
         <script
           dangerouslySetInnerHTML={{
@@ -30,21 +27,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           }}
         />
         <SessionProvider session={session}>
-          {loggedIn ? (
-            <>
-              <div className="lg:grid lg:grid-cols-[272px_1fr] min-h-screen">
-                <Sidebar />
-                <div className="flex min-h-screen flex-col">
-                  <MobileTopBar />
-                  <main className="flex-1">{children}</main>
-                </div>
-              </div>
-              <ProgressBootstrap />
-              <UpgradeModal />
-            </>
-          ) : (
-            <main className="min-h-screen">{children}</main>
-          )}
+          <AppShell loggedIn={loggedIn}>{children}</AppShell>
         </SessionProvider>
       </body>
     </html>

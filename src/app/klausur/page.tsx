@@ -2,10 +2,13 @@ import { SUBJECTS } from "@/lib/subjects";
 import { getSubjectTopics } from "@/lib/content";
 import { ExamSimulator, type Pool } from "@/components/klausur/ExamSimulator";
 import { GraduationCap } from "lucide-react";
+import { getCurrentUser } from "@/lib/session";
+import { AuthGate } from "@/components/billing/AuthGate";
 
 export const dynamic = "force-dynamic";
 
-export default function KlausurPage() {
+export default async function KlausurPage() {
+  const user = await getCurrentUser();
   const pools: Pool[] = SUBJECTS.map((s) => ({
     subjectId: s.id,
     title: s.title,
@@ -25,7 +28,7 @@ export default function KlausurPage() {
           Übe unter realen Bedingungen: Fragen, Zeitlimit, Auswertung am Ende – ganz ohne Lösungen während des Tests.
         </p>
       </header>
-      <ExamSimulator pools={pools} />
+      {user ? <ExamSimulator pools={pools} /> : <AuthGate feature="den Klausur-Simulator" />}
     </div>
   );
 }

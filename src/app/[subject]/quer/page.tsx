@@ -8,6 +8,8 @@ import { QuizEngine } from "@/components/learn/QuizEngine";
 import { FlashcardDeck } from "@/components/learn/FlashcardDeck";
 import { ExerciseList } from "@/components/learn/ExerciseList";
 import { ArrowLeft, ListChecks, Layers, FileText, Shuffle } from "lucide-react";
+import { getCurrentUser } from "@/lib/session";
+import { AuthGate } from "@/components/billing/AuthGate";
 
 export const dynamic = "force-dynamic";
 
@@ -16,6 +18,7 @@ export default async function QuerPage({ params }: { params: Promise<{ subject: 
   const meta = getSubjectMeta(subject);
   if (!meta) notFound();
 
+  const user = await getCurrentUser();
   const topics = getSubjectTopics(meta.id);
   const quiz = topics.flatMap((t) => t.quiz);
   const cards = topics.flatMap((t) => t.flashcards);
@@ -69,7 +72,7 @@ export default async function QuerPage({ params }: { params: Promise<{ subject: 
           quer durcheinander gemischt, ideal zum Wiederholen am Ende der Lernphase.
         </p>
       </header>
-      <TabsShell tabs={tabs} />
+      {user ? <TabsShell tabs={tabs} /> : <AuthGate feature="den Querbeet-Modus" />}
     </SubjectTheme>
   );
 }

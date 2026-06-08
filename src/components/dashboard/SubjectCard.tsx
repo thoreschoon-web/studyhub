@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { SubjectMeta } from "@/lib/types";
 import { useStore, isDue } from "@/lib/store";
+import { useSession } from "next-auth/react";
 import { Layers, ArrowUpRight } from "lucide-react";
 
 export function SubjectCard({
@@ -22,6 +23,8 @@ export function SubjectCard({
 }) {
   const topics = useStore((s) => s.topics);
   const srs = useStore((s) => s.srs);
+  const { status } = useSession();
+  const showProgress = status === "authenticated"; // anonymous: no progress UI
 
   const correct = topicIds.reduce((n, tid) => n + (topics[tid]?.quizCorrect.length ?? 0), 0);
   const quizPct = totalQuiz ? Math.round((correct / totalQuiz) * 100) : 0;
@@ -41,10 +44,10 @@ export function SubjectCard({
           <span className="numeral font-mono text-sm" style={{ color: meta.accent }}>{n}</span>
           <span className="h-2.5 w-2.5 translate-y-[1px] rounded-[2px]" style={{ background: meta.accent }} aria-hidden />
         </div>
-        {empty ? (
-          <ArrowUpRight size={18} className="text-faint transition-colors group-hover:text-text" />
-        ) : (
+        {!empty && showProgress ? (
           <span className="numeral font-mono text-xs text-faint">{quizPct}%</span>
+        ) : (
+          <ArrowUpRight size={18} className="text-faint transition-colors group-hover:text-text" />
         )}
       </div>
 
@@ -54,8 +57,8 @@ export function SubjectCard({
       </h3>
       <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{meta.tagline}</p>
 
-      {/* progress bar */}
-      {!empty && (
+      {/* progress bar (logged-in only) */}
+      {!empty && showProgress && (
         <div className="mt-6 h-1 w-full overflow-hidden rounded-full bg-surface-2">
           <div
             className="h-full rounded-full transition-[width] duration-700"
@@ -79,7 +82,7 @@ export function SubjectCard({
           Inhalte werden gerade erstellt…
         </div>
       ) : (
-        due > 0 && (
+        showProgress && due > 0 && (
           <div
             className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-[3px] px-2 py-1 text-xs font-medium"
             style={{ color: meta.accent, background: `color-mix(in oklab, ${meta.accent} 12%, transparent)` }}

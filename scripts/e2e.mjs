@@ -43,7 +43,12 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
 
   console.log("=== 1. Gating ===");
   let r = await fetch(BASE + "/", { redirect: "manual" });
-  console.log("  ausgeloggt / -> " + r.status + " " + pass(r.status === 307 && /login/.test(r.headers.get("location") || "")));
+  console.log("  ausgeloggt / -> " + r.status + " " + pass(r.status === 200) + " (öffentlich)");
+  r = await fetch(BASE + "/mathe-2/jacobi-matrix");
+  const anonTopic = await r.text();
+  console.log("  ausgeloggt Thema -> " + r.status + " " + pass(r.status === 200 && !anonTopic.includes("Gratis-Limit") && anonTopic.includes("Kostenlos registrieren")));
+  r = await fetch(BASE + "/upgrade", { redirect: "manual" });
+  console.log("  ausgeloggt /upgrade -> " + r.status + " " + pass(r.status === 307 && /login/.test(r.headers.get("location") || "")));
   const cFree = await login("free@test.de", "test123456");
   r = await fetch(BASE + "/", { headers: { cookie: cFree.hdr() }, redirect: "manual" });
   console.log("  eingeloggt / -> " + r.status + " " + pass(r.status === 200));

@@ -3,6 +3,7 @@ import { SUBJECTS } from "@/lib/subjects";
 import { getSubjectTopics, getSubjectStat } from "@/lib/content";
 import { SubjectCard } from "@/components/dashboard/SubjectCard";
 import { GraduationCap, Sparkles, Layers, ArrowUpRight } from "lucide-react";
+import { AnonCta } from "@/components/dashboard/AnonCta";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +22,7 @@ export default function Dashboard() {
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-14 lg:px-10 lg:py-20">
+      <AnonCta />
       {/* ── HERO ───────────────────────────────────────────────── */}
       <header className="max-w-3xl">
         <div className="label-mono animate-fade-in">

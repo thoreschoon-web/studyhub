@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { SUBJECTS } from "@/lib/subjects";
 import { Menu, X } from "lucide-react";
+import { useSession } from "next-auth/react";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function MobileTopBar() {
   const [open, setOpen] = useState(false);
+  const { status } = useSession();
   return (
     <header className="app-header no-print sticky top-0 z-40 flex items-center justify-between border-b border-line bg-bg-soft/90 px-4 py-3 backdrop-blur-xl lg:hidden">
       <Link href="/" className="flex items-center gap-2.5">
@@ -51,6 +53,17 @@ export function MobileTopBar() {
           <Link href="/tutor" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-surface">
             KI-Tutor
           </Link>
+          {status === "unauthenticated" && (
+            <>
+              <div className="my-1 border-t border-line" />
+              <Link href="/register" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-semibold" style={{ color: "var(--accent)" }}>
+                Registrieren
+              </Link>
+              <Link href="/login" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-surface">
+                Anmelden
+              </Link>
+            </>
+          )}
         </div>
       )}
     </header>
