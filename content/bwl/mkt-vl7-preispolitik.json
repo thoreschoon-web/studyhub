@@ -239,7 +239,7 @@
       "id": "mkt-vl7-fc-2",
       "topicId": "mkt-vl7-preispolitik",
       "front": "Wie berechnet man die Preiselastizität der Nachfrage?",
-      "back": "$$\\varepsilon = \\frac{\\text{% Änderung Menge}}{\\text{% Änderung Preis}} = \\frac{\\Delta x / x_1}{\\Delta p / p_1}$$\n\n- $|\\varepsilon| > 1$: elastisch (Preissteigerung → starker Mengenrückgang)\n- $|\\varepsilon| < 1$: unelastisch (Menge reagiert kaum)"
+      "back": "$$\\varepsilon = \\frac{\\text{\\% Änderung Menge}}{\\text{\\% Änderung Preis}} = \\frac{\\Delta x / x_1}{\\Delta p / p_1}$$\n\n- $|\\varepsilon| > 1$: elastisch (Preissteigerung → starker Mengenrückgang)\n- $|\\varepsilon| < 1$: unelastisch (Menge reagiert kaum)"
     },
     {
       "id": "mkt-vl7-fc-3",

@@ -324,7 +324,7 @@
       "id": "nwt-fc-6",
       "topicId": "newton-verfahren",
       "front": "$f(x) = x^3 - 6x$, $x_0 = 2$. Berechne $x_1$ mit Newton.",
-      "back": "$f(2)=8-12=-4$, $f'(2)=3\\cdot4-6=6$.\\n$$x_1=2-\\frac{-4}{6}=2+\\frac{2}{3}=\\frac{8}{3}\\approx 2{,}667$$"
+      "back": "$f(2)=8-12=-4$, $f'(2)=3\\cdot4-6=6$.\n\n$$x_1=2-\\frac{-4}{6}=2+\\frac{2}{3}=\\frac{8}{3}\\approx 2{,}667$$"
     },
     {
       "id": "newton-verfahren-z1",

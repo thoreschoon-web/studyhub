@@ -26,7 +26,7 @@
     {
       "id": "beispiel",
       "heading": "Beispiel: maximales Produkt bei fester Summe",
-      "body": "Maximiere $f(x,y)=x\\,y$ unter $g(x,y)=x+y-10=0$.\n\n**Bedingungen:** $f_x=y=\\lambda$ und $f_y=x=\\lambda$, also $x=y$. Eingesetzt in $x+y=10$ folgt $2x=10$, somit\n$$x^\\* = y^\\* = 5,\\qquad \\lambda = 5,\\qquad f_{\\max}=25.$$\n\nEntlang der Nebenbedingung gilt $y=10-x$, also $h(x)=x(10-x)$. Diese Parabel hat ihr Maximum genau bei $x=5$:",
+      "body": "Maximiere $f(x,y)=x\\,y$ unter $g(x,y)=x+y-10=0$.\n\n**Bedingungen:** $f_x=y=\\lambda$ und $f_y=x=\\lambda$, also $x=y$. Eingesetzt in $x+y=10$ folgt $2x=10$, somit\n$$x^* = y^* = 5,\\qquad \\lambda = 5,\\qquad f_{\\max}=25.$$\n\nEntlang der Nebenbedingung gilt $y=10-x$, also $h(x)=x(10-x)$. Diese Parabel hat ihr Maximum genau bei $x=5$:",
       "figures": [
         {
           "kind": "function-plot",
@@ -291,7 +291,7 @@
       "hasOfficialSolution": false,
       "prompt": "Maximiere die Nutzenfunktion $U(x,y)=x^{0{,}5}y^{0{,}5}$ unter der Budgetrestriktion $2x+4y=40$.",
       "hint": "Cobb-Douglas: das Verhältnis der Grenznutzen gleicht dem Preisverhältnis.",
-      "solution": "**Lagrange:** $L = x^{0{,}5}y^{0{,}5} - \\lambda(2x+4y-40)$.\n\n$$L_x = 0{,}5\\,x^{-0{,}5}y^{0{,}5} - 2\\lambda = 0,\\qquad L_y = 0{,}5\\,x^{0{,}5}y^{-0{,}5} - 4\\lambda = 0.$$\n\nDivision der beiden Gleichungen:\n$$\\frac{y}{x} = \\frac{2}{4} \\;\\Rightarrow\\; y = \\tfrac{1}{2}x.$$\n\n**Budget:** $2x + 4\\cdot\\tfrac{1}{2}x = 4x = 40 \\Rightarrow x^\\*=10,\\; y^\\*=5$.\n\nNutzen: $U=\\sqrt{10\\cdot 5}=\\sqrt{50}\\approx 7{,}07$."
+      "solution": "**Lagrange:** $L = x^{0{,}5}y^{0{,}5} - \\lambda(2x+4y-40)$.\n\n$$L_x = 0{,}5\\,x^{-0{,}5}y^{0{,}5} - 2\\lambda = 0,\\qquad L_y = 0{,}5\\,x^{0{,}5}y^{-0{,}5} - 4\\lambda = 0.$$\n\nDivision der beiden Gleichungen:\n$$\\frac{y}{x} = \\frac{2}{4} \\;\\Rightarrow\\; y = \\tfrac{1}{2}x.$$\n\n**Budget:** $2x + 4\\cdot\\tfrac{1}{2}x = 4x = 40 \\Rightarrow x^*=10,\\; y^*=5$.\n\nNutzen: $U=\\sqrt{10\\cdot 5}=\\sqrt{50}\\approx 7{,}07$."
     }
   ]
 }
