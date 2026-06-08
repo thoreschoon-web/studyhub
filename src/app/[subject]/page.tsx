@@ -21,7 +21,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
       <header className="mb-9">
         <div className="flex items-start gap-4">
           <div
-            className="font-display grid h-14 w-14 shrink-0 place-items-center rounded-2xl border text-3xl"
+            className="font-display grid h-14 w-14 shrink-0 place-items-center rounded-[var(--radius)] border text-3xl"
             style={{
               color: meta.accent,
               borderColor: `color-mix(in oklab, ${meta.accent} 35%, transparent)`,
@@ -38,7 +38,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
         </div>
 
         {meta.exam && (
-          <div className="mt-6 rounded-2xl border border-line bg-surface/50 p-5">
+          <div className="mt-6 rounded-[var(--radius)] border border-line bg-surface/50 p-5">
             <div className="mb-3 flex items-center gap-2 text-sm font-semibold">
               <FileCheck2 size={16} style={{ color: meta.accent }} /> Klausur-Info
             </div>
@@ -61,10 +61,10 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
         <div className="mb-8 grid gap-3 sm:grid-cols-2">
           <Link
             href={`/${meta.id}/quer`}
-            className="group flex items-center gap-3 rounded-2xl border px-5 py-4 transition-all hover:-translate-y-0.5"
+            className="group flex items-center gap-3 rounded-[var(--radius)] border px-5 py-4 transition-colors"
             style={{ borderColor: "color-mix(in oklab, var(--accent) 40%, var(--color-line))", background: "color-mix(in oklab, var(--accent) 9%, transparent)" }}
           >
-            <span className="grid h-11 w-11 place-items-center rounded-xl" style={{ color: meta.accent, background: "color-mix(in oklab, var(--accent) 16%, transparent)" }}>
+            <span className="grid h-11 w-11 place-items-center rounded-[6px]" style={{ color: meta.accent, background: "color-mix(in oklab, var(--accent) 16%, transparent)" }}>
               <Shuffle size={20} />
             </span>
             <div>
@@ -74,9 +74,9 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
           </Link>
           <Link
             href="/klausur"
-            className="group flex items-center gap-3 rounded-2xl border border-line bg-surface/40 px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-surface-2/60"
+            className="group flex items-center gap-3 rounded-[var(--radius)] border border-line bg-surface/40 px-5 py-4 transition-colors hover:bg-surface-2/60"
           >
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-surface-2 text-muted transition-colors group-hover:text-text">
+            <span className="grid h-11 w-11 place-items-center rounded-[6px] bg-surface-2 text-muted transition-colors group-hover:text-text">
               <GraduationCap size={20} />
             </span>
             <div>
@@ -90,7 +90,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
       {headers.length ? (
         <TopicList headers={headers} />
       ) : (
-        <div className="rounded-2xl border border-dashed border-line p-10 text-center">
+        <div className="rounded-[var(--radius)] border border-dashed border-line p-10 text-center">
           <p className="text-muted">Die Inhalte für dieses Fach werden gerade aus deinen Unterlagen erstellt.</p>
           <p className="mt-1 text-sm text-faint">Sobald sie fertig sind, erscheinen hier alle Themen.</p>
         </div>

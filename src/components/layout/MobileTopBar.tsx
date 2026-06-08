@@ -10,11 +10,11 @@ export function MobileTopBar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="app-header no-print sticky top-0 z-40 flex items-center justify-between border-b border-line bg-bg-soft/90 px-4 py-3 backdrop-blur-xl lg:hidden">
-      <Link href="/" className="flex items-center gap-2">
-        <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-teal-400 font-bold text-white">
-          ◆
+      <Link href="/" className="flex items-center gap-2.5">
+        <span className="grid h-8 w-8 place-items-center rounded-[var(--radius)] bg-heading font-display text-sm font-bold text-bg">
+          S
         </span>
-        <span className="font-semibold">StudyHub</span>
+        <span className="font-display font-semibold tracking-tight text-heading">StudyHub</span>
       </Link>
       <div className="flex items-center gap-2">
         <ThemeToggle compact />

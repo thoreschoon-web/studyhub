@@ -95,7 +95,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
             <h1 className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-heading lg:text-[2.6rem]">
               {topic.title}
             </h1>
-            <p className="serif-italic mt-3 max-w-2xl text-lg leading-relaxed text-muted">{topic.summary}</p>
+            <p className="mt-3 max-w-2xl text-lg leading-relaxed text-muted">{topic.summary}</p>
           </div>
           <PdfButton targetId="pdf-export-root" filename={`${topic.id}.pdf`} />
         </div>
@@ -109,7 +109,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
       <div id="pdf-export-root" aria-hidden className="pdf-export-root">
         <div className="label-mono mb-2" style={{ color: "var(--accent)" }}>{meta.short} · Thema {idx + 1}</div>
         <h1 className="font-display mb-1 text-3xl font-medium tracking-tight text-heading">{topic.title}</h1>
-        <p className="serif-italic mb-7 text-muted">{topic.summary}</p>
+        <p className="mb-7 text-muted">{topic.summary}</p>
         <SectionView sections={topic.sections} />
       </div>
 

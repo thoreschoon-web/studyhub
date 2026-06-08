@@ -11,8 +11,7 @@ export function Card({
     <div
       className={cn(
         "card-print rounded-[var(--radius)] border border-line bg-surface/70 backdrop-blur-sm",
-        "shadow-[0_1px_0_0_rgba(255,255,255,0.03)_inset,0_10px_30px_-20px_rgba(0,0,0,0.8)]",
-        hover && "transition-all duration-200 hover:border-[color:color-mix(in_oklab,var(--accent)_45%,var(--color-line))] hover:bg-surface-2/70",
+        hover && "transition-colors duration-200 hover:border-[color:color-mix(in_oklab,var(--accent)_45%,var(--color-line))] hover:bg-surface-2/70",
         className,
       )}
       {...props}
@@ -39,7 +38,7 @@ export function Badge({
     warn: "border-warn/30 bg-warn/10 text-warn",
   };
   return (
-    <span className={cn("inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-medium", tones[tone], className)}>
+    <span className={cn("inline-flex items-center gap-1 rounded-[3px] border px-2 py-0.5 text-xs font-medium", tones[tone], className)}>
       {children}
     </span>
   );
@@ -59,7 +58,7 @@ export function ProgressBar({ value, className }: { value: number; className?: s
 export function ProgressRing({
   value,
   size = 44,
-  stroke = 4,
+  stroke = 3,
   children,
 }: {
   value: number;
@@ -94,7 +93,7 @@ export function ProgressRing({
 
 export function Stat({ label, value, sub }: { label: string; value: React.ReactNode; sub?: string }) {
   return (
-    <div className="rounded-xl border border-line bg-surface/50 px-4 py-3">
+    <div className="rounded-[var(--radius)] border border-line bg-surface/50 px-4 py-3">
       <div className="text-2xl font-semibold tracking-tight tabular-nums">{value}</div>
       <div className="mt-0.5 text-xs text-muted">{label}</div>
       {sub && <div className="mt-0.5 text-[0.7rem] text-faint">{sub}</div>}

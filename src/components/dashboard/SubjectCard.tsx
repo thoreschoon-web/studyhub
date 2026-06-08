@@ -3,7 +3,6 @@
 import Link from "next/link";
 import type { SubjectMeta } from "@/lib/types";
 import { useStore, isDue } from "@/lib/store";
-import { ProgressRing } from "@/components/ui";
 import { Layers, ArrowUpRight } from "lucide-react";
 
 export function SubjectCard({
@@ -28,63 +27,61 @@ export function SubjectCard({
   const quizPct = totalQuiz ? Math.round((correct / totalQuiz) * 100) : 0;
   const due = cardIds.filter((id) => isDue(srs[id])).length;
   const empty = counts.topics === 0;
+  const n = String(index + 1).padStart(2, "0");
 
   return (
     <Link
       href={`/${meta.id}`}
-      style={{ "--accent": meta.accent, animationDelay: `${index * 80}ms` } as React.CSSProperties}
-      className="reveal card-print group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-surface/55 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[color:color-mix(in_oklab,var(--accent)_55%,var(--color-line))] hover:bg-surface-2/60"
+      style={{ "--accent": meta.accent, animationDelay: `${index * 70}ms` } as React.CSSProperties}
+      className="reveal card-print group relative flex flex-col rounded-[var(--radius)] border border-line bg-surface/55 p-6 transition-colors duration-200 hover:border-[color:color-mix(in_oklab,var(--accent)_55%,var(--color-line))] hover:bg-surface-2/60"
     >
-      <div
-        className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full opacity-[0.18] blur-2xl transition-opacity duration-300 group-hover:opacity-40"
-        style={{ background: meta.accent }}
-      />
-
+      {/* top row — index numeral · subject glyph */}
       <div className="flex items-start justify-between">
-        <div
-          className="font-display grid h-14 w-14 place-items-center rounded-2xl border text-3xl"
-          style={{
-            color: meta.accent,
-            borderColor: `color-mix(in oklab, ${meta.accent} 38%, transparent)`,
-            background: `color-mix(in oklab, ${meta.accent} 11%, transparent)`,
-          }}
-        >
-          {meta.icon}
+        <div className="flex items-baseline gap-2.5">
+          <span className="numeral font-mono text-sm" style={{ color: meta.accent }}>{n}</span>
+          <span className="h-2.5 w-2.5 translate-y-[1px] rounded-[2px]" style={{ background: meta.accent }} aria-hidden />
         </div>
-        {!empty ? (
-          <div style={{ "--accent": meta.accent } as React.CSSProperties}>
-            <ProgressRing value={quizPct} size={46}>{quizPct}%</ProgressRing>
-          </div>
+        {empty ? (
+          <ArrowUpRight size={18} className="text-faint transition-colors group-hover:text-text" />
         ) : (
-          <ArrowUpRight size={20} className="text-faint transition-colors group-hover:text-text" />
+          <span className="numeral font-mono text-xs text-faint">{quizPct}%</span>
         )}
       </div>
 
-      <h3 className="font-display mt-5 text-[1.45rem] font-medium leading-tight tracking-tight text-heading">
+      <h3 className="font-display mt-7 flex items-center gap-2.5 text-[1.4rem] font-semibold leading-tight tracking-tight text-heading">
+        <span className="text-[1.15em] leading-none" style={{ color: meta.accent }} aria-hidden>{meta.icon}</span>
         {meta.title}
       </h3>
-      <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted">{meta.tagline}</p>
+      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{meta.tagline}</p>
 
-      <div className="mt-5 h-px w-full origin-left scale-x-100" style={{ background: `color-mix(in oklab, ${meta.accent} 28%, var(--color-line))` }} />
+      {/* progress bar */}
+      {!empty && (
+        <div className="mt-6 h-1 w-full overflow-hidden rounded-full bg-surface-2">
+          <div
+            className="h-full rounded-full transition-[width] duration-700"
+            style={{ width: `${quizPct}%`, background: meta.accent }}
+          />
+        </div>
+      )}
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 label-mono">
+      <div className="mt-4 flex flex-wrap items-center gap-x-3.5 gap-y-1 label-mono">
         <span>{counts.topics} Themen</span>
-        <span>·</span>
+        <span aria-hidden>·</span>
         <span>{counts.quiz} Quiz</span>
-        <span>·</span>
+        <span aria-hidden>·</span>
         <span>{counts.exercises} Aufgaben</span>
-        <span>·</span>
+        <span aria-hidden>·</span>
         <span>{counts.flashcards} Karten</span>
       </div>
 
       {empty ? (
-        <div className="mt-4 rounded-lg border border-dashed border-line px-3 py-2 text-center text-xs text-faint">
+        <div className="mt-4 rounded-[var(--radius)] border border-dashed border-line px-3 py-2 text-center text-xs text-faint">
           Inhalte werden gerade erstellt…
         </div>
       ) : (
         due > 0 && (
           <div
-            className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium"
+            className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-[3px] px-2 py-1 text-xs font-medium"
             style={{ color: meta.accent, background: `color-mix(in oklab, ${meta.accent} 12%, transparent)` }}
           >
             <Layers size={12} /> {due} Karten fällig

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "katex/dist/katex.min.css";
 import "./globals.css";
 import { auth } from "@/auth";
@@ -9,13 +9,12 @@ import { MobileTopBar } from "@/components/layout/MobileTopBar";
 import { ProgressBootstrap } from "@/components/progress/ProgressBootstrap";
 import { UpgradeModal } from "@/components/billing/UpgradeModal";
 
-const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], style: ["normal", "italic"], display: "swap" });
-const hanken = Hanken_Grotesk({ variable: "--font-hanken", subsets: ["latin"], display: "swap" });
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 const mono = JetBrains_Mono({ variable: "--font-mono-jb", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "StudyHub — Deine Lernplattform",
-  description: "Persönliche Lernplattform für BWL, Mathe 2, Schließende Statistik & Privatrecht.",
+  description: "Lernmaterial für die Wirtschaftswissenschaften · Sommersemester 2026 · Leibniz Universität Hannover.",
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -23,15 +22,13 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const loggedIn = !!session?.user;
 
   return (
-    <html lang="de" className={`${fraunces.variable} ${hanken.variable} ${mono.variable} h-full antialiased`}>
+    <html lang="de" className={`${inter.variable} ${mono.variable} h-full antialiased`}>
       <body className="min-h-full">
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('studyhub.theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
           }}
         />
-        <div className="bg-atmosphere" aria-hidden />
-        <div className="bg-grain" aria-hidden />
         <SessionProvider session={session}>
           {loggedIn ? (
             <>
