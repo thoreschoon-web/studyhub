@@ -96,6 +96,12 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   r = await fetch(BASE + "/api/chat", { method: "POST", headers: { cookie: cFree.hdr(), "content-type": "application/json" }, body: JSON.stringify({ messages: [{ role: "user", content: "hi" }] }) });
   console.log("  eingeloggt, kein Key -> " + r.status + " " + pass(r.status === 503));
 
+  console.log("=== 8. Eingabe-Validierung (Defense-in-Depth) ===");
+  const badAct = await post(cFree, "DROP TABLE users; --", { topicId: "x" });
+  console.log("  ungültige Action abgelehnt: " + pass(badAct?.error === "bad_action"));
+  r = await fetch(BASE + "/api/progress", { method: "POST", headers: { cookie: cFree.hdr(), "content-type": "application/json" }, body: JSON.stringify({ action: "markSection", args: { topicId: "x".repeat(6000) } }) });
+  console.log("  Riesen-Payload -> 413: " + pass(r.status === 413));
+
   // cleanup test accounts
   await db.user.deleteMany({ where: { email: { in: ["free@test.de", "paid@test.de", "testuser@example.com"] } } });
   console.log("\n(Test-Konten gelöscht — deine DB ist sauber)");

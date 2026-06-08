@@ -40,11 +40,27 @@ export function TutorChat({
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history, context, subject, topic }),
+        body: JSON.stringify({ messages: history.slice(-20), context, subject, topic }),
       });
       if (res.status === 503) {
         setNoKey(true);
         setMessages((m) => m.slice(0, -1));
+        return;
+      }
+      if (res.status === 429) {
+        setMessages((m) => {
+          const copy = [...m];
+          copy[copy.length - 1] = { role: "assistant", content: "_Zu viele Anfragen — bitte einen kurzen Moment warten und erneut versuchen._" };
+          return copy;
+        });
+        return;
+      }
+      if (!res.ok) {
+        setMessages((m) => {
+          const copy = [...m];
+          copy[copy.length - 1] = { role: "assistant", content: "_Die Anfrage konnte nicht verarbeitet werden (zu lang oder ungültig)._" };
+          return copy;
+        });
         return;
       }
       if (!res.body) throw new Error("Keine Antwort");
