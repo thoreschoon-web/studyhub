@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { getCurrentUser } from "@/lib/session";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -11,6 +12,9 @@ interface ChatBody {
 }
 
 export async function POST(req: Request) {
+  const user = await getCurrentUser();
+  if (!user) return Response.json({ error: "unauthorized" }, { status: 401 });
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     return Response.json({ error: "no_key" }, { status: 503 });

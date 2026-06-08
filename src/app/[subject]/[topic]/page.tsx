@@ -2,6 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSubjectMeta } from "@/lib/subjects";
 import { getSubjectTopics, getTopic } from "@/lib/content";
+import { requireUser } from "@/lib/session";
+import { recordPageOpen } from "@/lib/progress-server";
+import { Paywall } from "@/components/billing/Paywall";
 import { SubjectTheme } from "@/components/SubjectTheme";
 import { SectionView } from "@/components/content/SectionView";
 import { TabsShell, type TabDef } from "@/components/learn/TabsShell";
@@ -20,6 +23,17 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
   if (!meta) notFound();
   const topic = getTopic(meta.id, topicId);
   if (!topic) notFound();
+
+  // Free-tier page-open gate (5 distinct topic pages). Owner/paid bypass.
+  const user = await requireUser();
+  const allowed = await recordPageOpen(user, topic.id);
+  if (!allowed) {
+    return (
+      <SubjectTheme subject={meta} className="mx-auto max-w-3xl px-5 py-8 lg:px-8">
+        <Paywall title={topic.title} />
+      </SubjectTheme>
+    );
+  }
 
   const all = getSubjectTopics(meta.id);
   const idx = all.findIndex((t) => t.id === topic.id);

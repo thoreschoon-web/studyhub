@@ -4,11 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SUBJECTS } from "@/lib/subjects";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, Layers, Sparkles, GraduationCap } from "lucide-react";
+import { LayoutDashboard, Layers, Sparkles, GraduationCap, LogOut } from "lucide-react";
+import { useSession, signOut } from "next-auth/react";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Sidebar() {
   const pathname = usePathname();
+  const { data: session } = useSession();
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 
@@ -69,9 +71,25 @@ export function Sidebar() {
 
       <ThemeToggle className="mt-3 w-full justify-center" />
 
-      <div className="mt-3 rounded-xl border border-line bg-surface/40 px-3 py-2.5 text-[0.7rem] text-faint">
-        Lokal & privat · alle Fortschritte bleiben in diesem Browser.
-      </div>
+      {session?.user && (
+        <div className="mt-3 flex items-center gap-2 rounded-xl border border-line bg-surface/40 px-2.5 py-2">
+          <div className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-surface-2 text-xs font-semibold uppercase text-muted">
+            {(session.user.email ?? "?").slice(0, 1)}
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="truncate text-xs font-medium" title={session.user.email ?? ""}>{session.user.email}</div>
+            <div className="text-[0.65rem] text-faint">Angemeldet</div>
+          </div>
+          <button
+            onClick={() => signOut({ callbackUrl: "/login" })}
+            className="rounded-lg p-1.5 text-faint transition-colors hover:text-bad"
+            aria-label="Abmelden"
+            title="Abmelden"
+          >
+            <LogOut size={16} />
+          </button>
+        </div>
+      )}
     </aside>
   );
 }
