@@ -5,7 +5,7 @@ import type { Question } from "@/lib/types";
 import { actions } from "@/lib/store";
 import { Markdown } from "@/components/content/Markdown";
 import { cn, shuffle } from "@/lib/utils";
-import { Check, X, RotateCcw, ChevronRight, Trophy } from "lucide-react";
+import { Check, X, RotateCcw, ChevronLeft, ChevronRight, Trophy } from "lucide-react";
 
 export function QuizEngine({ questions, topicId }: { questions: Question[]; topicId: string }) {
   const [seed, setSeed] = useState(1);
@@ -29,6 +29,10 @@ export function QuizEngine({ questions, topicId }: { questions: Question[]; topi
   function next() {
     if (i + 1 >= total) setDone(true);
     else setI(i + 1);
+  }
+
+  function prev() {
+    if (i > 0) setI(i - 1);
   }
 
   function restart() {
@@ -62,9 +66,17 @@ export function QuizEngine({ questions, topicId }: { questions: Question[]; topi
   return (
     <div>
       <div className="mb-4 flex items-center justify-between text-xs text-muted">
-        <span>
-          Frage {i + 1} / {total}
-        </span>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={prev}
+            disabled={i === 0}
+            aria-label="Vorherige Frage"
+            className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 transition-colors hover:text-text disabled:cursor-default disabled:opacity-30 disabled:hover:text-muted"
+          >
+            <ChevronLeft size={14} /> Zurück
+          </button>
+          <span>Frage {i + 1} / {total}</span>
+        </div>
         <span className="tabular-nums">
           ✓ {correctCount} richtig
         </span>

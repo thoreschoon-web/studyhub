@@ -17,15 +17,18 @@ export function PdfButton({ targetId, filename, label = "Als PDF" }: { targetId:
       const node = document.getElementById(targetId);
       if (!node) return;
 
-      const [{ toCanvas }, jspdf] = await Promise.all([import("html-to-image"), import("jspdf")]);
+      const [{ default: html2canvas }, jspdf] = await Promise.all([import("html2canvas-pro"), import("jspdf")]);
       const JsPDF = jspdf.jsPDF;
 
       // Cap resolution so the source canvas stays under the browser's max dimension (~32k px).
       const h = node.scrollHeight || 1;
-      const pixelRatio = Math.min(2, Math.max(1, Math.floor(30000 / h)));
+      const scale = Math.min(2, Math.max(1, Math.floor(30000 / h)));
       const bg = getComputedStyle(node).backgroundColor || getComputedStyle(document.body).backgroundColor;
 
-      const canvas = await toCanvas(node, { pixelRatio, backgroundColor: bg, cacheBust: true });
+      // html2canvas-pro (statt html-to-image) rastert moderne CSS-Farben (oklch/oklab/color-mix)
+      // korrekt. html-to-image rendert sie über den SVG-foreignObject-Pfad als LEERE weiße Seiten
+      // (Tailwind v4 nutzt oklab/color-mix überall).
+      const canvas = await html2canvas(node, { scale, backgroundColor: bg, useCORS: true, logging: false });
       const img = canvas.toDataURL("image/jpeg", 0.92);
 
       const pdf = new JsPDF("p", "mm", "a4");

@@ -5,7 +5,7 @@ import type { Flashcard } from "@/lib/types";
 import { actions, useStore, isDue } from "@/lib/store";
 import { Markdown } from "@/components/content/Markdown";
 import { cn, shuffle } from "@/lib/utils";
-import { RotateCw, Check } from "lucide-react";
+import { RotateCw, Check, ChevronLeft } from "lucide-react";
 
 const GRADES = [
   { q: 1, label: "Nochmal", hint: "< 1 Tag", color: "#ef4444" },
@@ -49,10 +49,26 @@ export function FlashcardDeck({ cards, dueOnly = false }: { cards: Flashcard[]; 
     setFlipped(false);
   }
 
+  function back() {
+    if (i === 0) return;
+    setI(i - 1);
+    setFlipped(false);
+  }
+
   return (
     <div>
       <div className="mb-3 flex items-center justify-between text-xs text-muted">
-        <span>Karte {i + 1} / {deck.length}{dueOnly ? " fällig" : ""}</span>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={back}
+            disabled={i === 0}
+            aria-label="Vorherige Karte"
+            className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 transition-colors hover:text-text disabled:cursor-default disabled:opacity-30 disabled:hover:text-muted"
+          >
+            <ChevronLeft size={14} /> Zurück
+          </button>
+          <span>Karte {i + 1} / {deck.length}{dueOnly ? " fällig" : ""}</span>
+        </div>
         <span>{reviewed} wiederholt</span>
       </div>
 
