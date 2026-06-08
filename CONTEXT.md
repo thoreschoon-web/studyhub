@@ -94,9 +94,25 @@ node scripts/e2e.mjs            # Auth/Limit-E2E (Dev-Server muss laufen)
 ```
 
 ## Git-Historie (main)
-`Initial CNA → Gerüst+Editorial-Dark → 51 Themen Inhalte → White-Mode → Querbeet+Karopapier+PDF → ≥200 Karten/≥100 Quiz → Mehrnutzer-Plattform (Login/Limits/Stripe)`. Aktuell: Commit `7b05517`.
+`Initial CNA → Gerüst+Editorial-Dark → 51 Themen Inhalte → White-Mode → Querbeet+Karopapier+PDF → ≥200 Karten/≥100 Quiz → Mehrnutzer-Plattform (Login/Limits/Stripe) → Anti-Abuse (E-Mail-Norm) → Deploy-Prep (Postgres/Supabase) → Bugfixes (PDF/Zurück-Nav)`. Aktuell: Commit `e8e981d`.
+
+## Aktueller Stand (Session 08.06.2026)
+
+**Bugfixes (committet `e8e981d`, Build ✓):**
+1. **PDF-Export → weiße Leerseiten behoben.** `html-to-image` rastert moderne CSS-Farben (`oklab`/`color-mix`, in Tailwind v4 überall) über den SVG-`foreignObject`-Pfad nicht → nur Hintergrund-Füllung, im White-Mode ≈ weiß. Umgestellt auf **`html2canvas-pro`** (`src/components/PdfButton.tsx`, gleiche UX, kein Druckdialog). *Visuelle Prüfung steht noch aus — Thore testet lokal.* (Alte `html-to-image`-Dep noch in package.json, ungenutzt; Aufräumen = `npm uninstall html-to-image`, aber ACHTUNG: löst `prisma generate` aus → siehe ⚠️ unten.)
+2. **Zurück-Navigation ergänzt:** „Zurück"-Button in `QuizEngine` (`prev()`) + `FlashcardDeck` (`back()`), beim ersten Element ausgegraut.
+
+**Anti-Abuse der Gratis-Limits (`src/lib/email.ts`):** Gmail-Tricks (Punkte/`+tags`/googlemail) kollabieren auf EIN Konto, Wegwerf-Domains geblockt. Test: `node scripts/test-email.ts`. Details im Mehrnutzer-Abschnitt oben.
+
+**Deployment (IN ARBEIT) → Schritt-für-Schritt in `DEPLOY.md`.** Ziel: Supabase (Postgres) + Vercel + vorerst `*.vercel.app`, privates Repo.
+- ✅ **Phase A:** Prisma `sqlite`→`postgresql` (`directUrl` für Pooling/Migrationen; JSON-Felder bleiben `String` → keine App-Code-Änderung), `.env.local.example` erweitert; privates Repo **`github.com/thoreschoon-web/studyhub`** erstellt & gepusht (`gh`-Account `thoreschoon-web`).
+- ✅ **Supabase-MCP eingerichtet:** `claude mcp add supabase … --read-only`, **local scope** (`~/.claude.json`, projektgebunden, **NICHT im Repo**), `claude mcp list` → ✓ Connected. **Tools erst ab Claude-Code-Neustart verfügbar.** GitHub braucht keinen MCP (`gh` reicht).
+- ⏳ **Phase C (direkt als Nächstes):** Connection-Strings in gitignored `.env` (Transaction 6543 → `DATABASE_URL`, Direct 5432 → `DIRECT_URL`) → `rm -rf prisma/migrations` → `npx prisma migrate dev --name init` gegen Supabase → `npm run build` verifizieren → committen.
+- ⏳ **Phase D/E:** Vercel-Import + Env-Vars (`DATABASE_URL`,`DIRECT_URL`,`AUTH_SECRET` *neu* für Prod,`AUTH_URL`,`OWNER_EMAIL`); später eigene Domain. Vercel Hobby = nicht-kommerziell; `ANTHROPIC_API_KEY` in Prod erst weglassen.
+- ⚠️ **Lokales Dev läuft NOCH auf SQLite** (generierter Prisma-Client ist noch `sqlite`, `.env` zeigt auf `file:./dev.db`). Sobald `prisma generate`/`migrate` gegen Postgres läuft, ist SQLite-Dev weg — also nicht versehentlich `npm install`/`prisma generate` ausführen, bevor `.env` auf Supabase zeigt.
+- 🔒 **Secrets** (DB-Passwort, `sbp_`-Token) liegen lokal in `.env` bzw. `~/.claude.json` — **niemals** in CONTEXT.md/Memory/Repo.
 
 ## Offene / mögliche nächste Schritte
+- **Deployment fortsetzen** — Stand & Schritte siehe „Aktueller Stand" oben + `DEPLOY.md`.
 - Google-Login / Stripe-Live / Anthropic-Key **aktivieren** (Anleitungen in `.env.local.example`) — der Nutzer hatte noch keine dieser Zugänge.
 - Optional: harte Mathe-Lösungen (KKT/Simplex) mit Opus gegenprüfen; WebR-Sandbox (Statistik); Gutachtenstil-Trainer (Privatrecht); Klausur-Simulator auch ans Limit hängen; „Fortschritt zurücksetzen"-Buttons im UI prominenter; optional Alt-localStorage-Import beim ersten Login.
-- Später deploybar machen: SQLite → Postgres (Neon/Supabase), Stripe Live, Domain + Google-Redirect-URI.
