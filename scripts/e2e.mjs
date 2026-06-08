@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
 const db = new PrismaClient();
-const BASE = "http://localhost:3000";
+const BASE = process.env.E2E_BASE || "http://localhost:3000";
 const pass = (b) => (b ? "✓" : "✗ FEHLER");
 
 async function ensureUser(email, password, plan) {

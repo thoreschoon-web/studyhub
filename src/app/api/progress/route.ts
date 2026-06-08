@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   // Reject pathological payloads + rate limit (defense-in-depth).
   const len = Number(req.headers.get("content-length") || 0);
   if (len > 50_000) return Response.json({ error: "too_large" }, { status: 413 });
-  const rl = rateLimit(`prog:${user.id}`, PROGRESS_LIMITS.rate.limit, PROGRESS_LIMITS.rate.windowMs);
+  const rl = await rateLimit(`prog:${user.id}`, PROGRESS_LIMITS.rate.limit, PROGRESS_LIMITS.rate.windowMs);
   if (!rl.ok) {
     return Response.json({ error: "rate_limited" }, { status: 429, headers: { "Retry-After": String(rl.retryAfter) } });
   }

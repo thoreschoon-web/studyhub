@@ -34,8 +34,10 @@ export async function POST(req: Request) {
   if (len > 200_000) return Response.json({ error: "too_large" }, { status: 413 });
 
   // 3) Per-user rate limit (cost-abuse guard): short burst + hourly volume.
-  const b = rateLimit(`chat:b:${user.id}`, CHAT_LIMITS.burst.limit, CHAT_LIMITS.burst.windowMs);
-  const h = rateLimit(`chat:h:${user.id}`, CHAT_LIMITS.hourly.limit, CHAT_LIMITS.hourly.windowMs);
+  const [b, h] = await Promise.all([
+    rateLimit(`chat:b:${user.id}`, CHAT_LIMITS.burst.limit, CHAT_LIMITS.burst.windowMs),
+    rateLimit(`chat:h:${user.id}`, CHAT_LIMITS.hourly.limit, CHAT_LIMITS.hourly.windowMs),
+  ]);
   if (!b.ok || !h.ok) {
     return Response.json(
       { error: "rate_limited" },
