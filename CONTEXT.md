@@ -106,7 +106,9 @@ node scripts/e2e.mjs            # Auth/Limit-E2E (Dev-Server muss laufen)
 
 **Deployment (IN ARBEIT) → Schritt-für-Schritt in `DEPLOY.md`.** Ziel: Supabase (Postgres) + Vercel + vorerst `*.vercel.app`, privates Repo.
 - ✅ **Phase A:** Prisma `sqlite`→`postgresql` (`directUrl` für Pooling/Migrationen; JSON-Felder bleiben `String` → keine App-Code-Änderung), `.env.local.example` erweitert; privates Repo **`github.com/thoreschoon-web/studyhub`** erstellt & gepusht (`gh`-Account `thoreschoon-web`).
-- ✅ **Supabase-MCP eingerichtet:** `claude mcp add supabase … --read-only`, **local scope** (`~/.claude.json`, projektgebunden, **NICHT im Repo**), `claude mcp list` → ✓ Connected. **Tools erst ab Claude-Code-Neustart verfügbar.** GitHub braucht keinen MCP (`gh` reicht).
+- ✅ **MCP-Server eingerichtet** (beide **local scope** in `~/.claude.json`, projektgebunden, **NICHT im Repo**; Tools erst ab Claude-Code-**Neustart** verfügbar):
+  - **supabase:** `claude mcp add supabase … --read-only` → `claude mcp list` ✓ Connected.
+  - **github:** offizieller Remote-Server `https://api.githubcopilot.com/mcp/` (HTTP/OAuth). Endpoint verifiziert (401=OAuth-geschützt, live). **Muss noch per `/mcp` → github → OAuth-Login** authentifiziert werden (Health-Check zeigt bis dahin „Failed to connect" = normal). `gh`-CLI bleibt zusätzlich nutzbar.
 - ⏳ **Phase C (direkt als Nächstes):** Connection-Strings in gitignored `.env` (Transaction 6543 → `DATABASE_URL`, Direct 5432 → `DIRECT_URL`) → `rm -rf prisma/migrations` → `npx prisma migrate dev --name init` gegen Supabase → `npm run build` verifizieren → committen.
 - ⏳ **Phase D/E:** Vercel-Import + Env-Vars (`DATABASE_URL`,`DIRECT_URL`,`AUTH_SECRET` *neu* für Prod,`AUTH_URL`,`OWNER_EMAIL`); später eigene Domain. Vercel Hobby = nicht-kommerziell; `ANTHROPIC_API_KEY` in Prod erst weglassen.
 - ⚠️ **Lokales Dev läuft NOCH auf SQLite** (generierter Prisma-Client ist noch `sqlite`, `.env` zeigt auf `file:./dev.db`). Sobald `prisma generate`/`migrate` gegen Postgres läuft, ist SQLite-Dev weg — also nicht versehentlich `npm install`/`prisma generate` ausführen, bevor `.env` auf Supabase zeigt.
