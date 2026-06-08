@@ -4,8 +4,11 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  // Supabase: gepoolte Verbindung (Supavisor/pgbouncer, Port 6543) für die App (serverless-tauglich).
+  url       = env("DATABASE_URL")
+  // Direkte Verbindung (Port 5432) für Migrationen — pgbouncer kann kein DDL/Prepared Statements.
+  directUrl = env("DIRECT_URL")
 }
 
 // ---------------- Auth.js core ----------------
