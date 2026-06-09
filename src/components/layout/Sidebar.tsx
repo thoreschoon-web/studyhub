@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SUBJECTS } from "@/lib/subjects";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, Layers, Sparkles, GraduationCap, LogOut } from "lucide-react";
+import { LayoutDashboard, Layers, Sparkles, GraduationCap, LogOut, Search } from "lucide-react";
 import { useSession, signOut } from "next-auth/react";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -27,6 +27,14 @@ export function Sidebar() {
       </Link>
 
       <nav className="flex flex-1 flex-col gap-1 overflow-y-auto">
+        <button
+          onClick={() => window.dispatchEvent(new Event("studyhub:search"))}
+          className="mb-2 flex items-center gap-3 rounded-[var(--radius)] border border-line bg-surface/50 px-3 py-2 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-text"
+        >
+          <Search size={16} />
+          <span className="flex-1 text-left">Suche</span>
+          <kbd className="rounded border border-line bg-surface-2 px-1.5 py-0.5 font-mono text-[0.6rem] text-faint">⌘K</kbd>
+        </button>
         <NavItem href="/" icon={<LayoutDashboard size={17} />} label="Übersicht" active={isActive("/")} />
 
         <div className="mb-2 mt-6 px-3 label-mono">Fächer</div>

@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileTopBar } from "@/components/layout/MobileTopBar";
 import { Footer } from "@/components/layout/Footer";
+import { SearchPalette } from "@/components/layout/SearchPalette";
 import { ProgressBootstrap } from "@/components/progress/ProgressBootstrap";
 import { UpgradeModal } from "@/components/billing/UpgradeModal";
 
@@ -41,6 +42,7 @@ export function AppShell({ loggedIn, children }: { loggedIn: boolean; children: 
           <Footer />
         </div>
       </div>
+      <SearchPalette />
       {isLoggedIn && (
         <>
           <ProgressBootstrap />

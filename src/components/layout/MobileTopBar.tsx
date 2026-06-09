@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { SUBJECTS } from "@/lib/subjects";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -19,6 +19,13 @@ export function MobileTopBar() {
         <span className="font-display font-semibold tracking-tight text-heading">StudyHub</span>
       </Link>
       <div className="flex items-center gap-2">
+        <button
+          onClick={() => window.dispatchEvent(new Event("studyhub:search"))}
+          className="rounded-lg border border-line p-2 text-muted"
+          aria-label="Suche"
+        >
+          <Search size={18} />
+        </button>
         <ThemeToggle compact />
         <button onClick={() => setOpen((o) => !o)} className="rounded-lg border border-line p-2 text-muted" aria-label="Menü">
           {open ? <X size={18} /> : <Menu size={18} />}

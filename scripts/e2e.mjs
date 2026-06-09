@@ -155,6 +155,13 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   r = await fetch(BASE + "/konto", { headers: { cookie: cFree.hdr() } });
   console.log("  /konto -> 200: " + pass(r.status === 200 && (await r.text()).includes("Konto löschen")));
 
+  console.log("=== 11b. Themen-Suche ===");
+  r = await fetch(BASE + "/api/search?q=lagrange");
+  const sj = await r.json();
+  console.log("  'lagrange' findet Thema: " + pass(r.status === 200 && sj.hits?.some((h) => h.topicId === "lagrange")));
+  r = await fetch(BASE + "/api/search?q=x");
+  console.log("  zu kurze Query -> leer: " + pass((await r.json()).hits?.length === 0));
+
   console.log("=== 12. Rechtsseiten & Footer ===");
   for (const p of ["/impressum", "/datenschutz", "/agb", "/widerruf"]) {
     r = await fetch(BASE + p);
