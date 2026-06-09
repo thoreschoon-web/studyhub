@@ -6,11 +6,12 @@ const db = new PrismaClient();
 const BASE = process.env.E2E_BASE || "http://localhost:3000";
 const pass = (b) => (b ? "✓" : "✗ FEHLER");
 
-async function ensureUser(email, password, plan) {
+async function ensureUser(email, password, { plan = "free", paidUntil = null } = {}) {
   const passwordHash = await bcrypt.hash(password, 10);
+  const data = { plan, paidUntil, passwordHash };
   const existing = await db.user.findUnique({ where: { email } });
-  if (existing) return db.user.update({ where: { email }, data: { plan, passwordHash, usage: { upsert: { create: {}, update: {} } } } });
-  return db.user.create({ data: { email, passwordHash, role: "user", plan, usage: { create: {} } } });
+  if (existing) return db.user.update({ where: { email }, data: { ...data, usage: { upsert: { create: {}, update: {} } } } });
+  return db.user.create({ data: { email, ...data, role: "user", usage: { create: {} } } });
 }
 async function resetData(userId) {
   await db.topicProgress.deleteMany({ where: { userId } });
@@ -39,8 +40,9 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
 (async () => {
   for (let i = 0; i < 45; i++) { try { const r = await fetch(BASE + "/login"); if (r.ok) break; } catch {} await new Promise((r) => setTimeout(r, 1000)); }
 
-  const free = await ensureUser("free@test.de", "test123456", "free");
-  const paid = await ensureUser("paid@test.de", "test123456", "paid");
+  const free = await ensureUser("free@test.de", "test123456");
+  // "paid" = aktiver Semester-Pass (paidUntil in der Zukunft) — plan bleibt "free".
+  const paid = await ensureUser("paid@test.de", "test123456", { paidUntil: new Date(Date.now() + 30 * 86400_000) });
 
   console.log("=== 1. Gating ===");
   let r = await fetch(BASE + "/", { redirect: "manual" });
@@ -86,6 +88,15 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   console.log("  6 Karten alle ok: " + pass(pr.every((x) => x.ok)));
   let pp = ""; for (const t of topics) { r = await fetch(BASE + "/mathe-2/" + t, { headers: { cookie: cPaid.hdr() } }); pp = await r.text(); }
   console.log("  6. Seite frei (keine Paywall): " + pass(!pp.includes("Gratis-Limit erreicht")));
+
+  console.log("=== 5b. Abgelaufener Semester-Pass = wieder limitiert ===");
+  await db.user.update({ where: { id: paid.id }, data: { paidUntil: new Date(Date.now() - 86400_000) } });
+  await resetData(paid.id);
+  const xr = []; for (let i = 1; i <= 4; i++) xr.push(await post(cPaid, "gradeCard", { cardId: "x" + i, quality: 4 }));
+  console.log("  4. Karte blockiert: " + pass(xr.slice(0, 3).every((x) => x.ok) && xr[3].limit === "flashcards"));
+  await db.user.update({ where: { id: paid.id }, data: { paidUntil: new Date(Date.now() + 30 * 86400_000) } });
+  await resetData(paid.id);
+  for (let i = 1; i <= 6; i++) await post(cPaid, "gradeCard", { cardId: "p" + i, quality: 4 });
 
   console.log("=== 6. Konten isoliert ===");
   const fS = await getStore(cFree), pS = await getStore(cPaid);

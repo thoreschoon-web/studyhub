@@ -19,10 +19,11 @@ export async function requireUser(): Promise<User> {
   return user;
 }
 
-/** Owner & paid accounts have no usage limits. */
-export function isUnlimited(user: Pick<User, "plan" | "email"> | null | undefined): boolean {
+/** Owner-Konto & aktiver Semester-Pass (paidUntil in der Zukunft) haben keine Limits. */
+export function isUnlimited(user: Pick<User, "plan" | "email" | "paidUntil"> | null | undefined): boolean {
   if (!user) return false;
-  if (user.plan === "owner" || user.plan === "paid") return true;
+  if (user.plan === "owner") return true;
+  if (user.paidUntil && user.paidUntil > new Date()) return true;
   const owner = process.env.OWNER_EMAIL?.toLowerCase();
   return !!owner && user.email?.toLowerCase() === owner;
 }

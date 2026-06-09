@@ -10,18 +10,18 @@ export function Paywall({ title }: { title?: string }) {
       <h1 className="font-display text-2xl font-medium text-heading">Gratis-Limit erreicht</h1>
       <p className="mt-3 text-muted">
         Du hast mit deinem kostenlosen Konto bereits 5 Themenseiten geöffnet
-        {title ? <> und möchtest „{title}" ansehen</> : null}. In der kostenlosen Version ist hier Schluss.
+        {title ? <> und möchtest „{title}&ldquo; ansehen</> : null}. In der kostenlosen Version ist hier Schluss.
       </p>
       <p className="mt-2 text-muted">
-        Mit <strong className="text-text">StudyHub Pro</strong> bekommst du <strong className="text-text">unbegrenzten Zugang</strong> zu allen
-        Themen, Karteikarten, Aufgaben und Quizfragen.
+        Mit dem <strong className="text-text">Semester-Pass</strong> bekommst du <strong className="text-text">unbegrenzten Zugang</strong> zu
+        allen Themen, Karteikarten, Aufgaben und Quizfragen — einmal zahlen, fürs ganze Semester.
       </p>
       <Link
         href="/upgrade"
         className="mt-7 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white"
         style={{ background: "var(--accent)" }}
       >
-        <Sparkles size={17} /> Auf Pro upgraden
+        <Sparkles size={17} /> Semester-Pass ansehen
       </Link>
       <div className="mt-4">
         <Link href="/" className="text-sm text-muted hover:text-text">

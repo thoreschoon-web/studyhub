@@ -1,9 +1,16 @@
 import type Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
 import { db } from "@/lib/db";
+import { currentSemesterEnd } from "@/lib/billing";
 
 export const runtime = "nodejs";
 
+/**
+ * Semester-Pass-Webhook (Einmalzahlung):
+ * - checkout.session.completed (bezahlt) → paidUntil = Semesterende
+ * - charge.refunded / charge.dispute.created → paidUntil entziehen
+ * Idempotent: dieselbe Nachricht mehrfach zu verarbeiten ist harmlos.
+ */
 export async function POST(req: Request) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
   if (!stripe || !secret) return Response.json({ ok: false, reason: "stripe_disabled" }, { status: 503 });
@@ -17,36 +24,43 @@ export async function POST(req: Request) {
     return Response.json({ error: "bad_signature", detail: String((e as Error).message) }, { status: 400 });
   }
 
-  async function setPlanByCustomer(customerId: string, plan: string, subId?: string, status?: string) {
-    await db.user.updateMany({ where: { stripeCustomerId: customerId }, data: { plan, stripeSubId: subId, subStatus: status } });
+  async function revokeByCustomer(customerId: string) {
+    await db.user.updateMany({ where: { stripeCustomerId: customerId }, data: { paidUntil: null } });
   }
 
   switch (event.type) {
     case "checkout.session.completed": {
       const s = event.data.object as Stripe.Checkout.Session;
+      if (s.payment_status !== "paid") break; // z. B. asynchrone Zahlarten — erst bei Zahlungseingang freischalten
       const userId = s.metadata?.userId;
       if (userId) {
         await db.user.update({
           where: { id: userId },
           data: {
-            plan: "paid",
-            subStatus: "active",
-            stripeSubId: typeof s.subscription === "string" ? s.subscription : undefined,
+            paidUntil: currentSemesterEnd(),
             stripeCustomerId: typeof s.customer === "string" ? s.customer : undefined,
           },
         });
       }
       break;
     }
-    case "customer.subscription.updated": {
-      const sub = event.data.object as Stripe.Subscription;
-      const active = sub.status === "active" || sub.status === "trialing";
-      await setPlanByCustomer(String(sub.customer), active ? "paid" : "free", sub.id, sub.status);
+    // Asynchrone Zahlarten (z. B. Lastschrift): completed feuert erst unbezahlt,
+    // dieser Event liefert die Bestätigung nach.
+    case "checkout.session.async_payment_succeeded": {
+      const s = event.data.object as Stripe.Checkout.Session;
+      const userId = s.metadata?.userId;
+      if (userId) await db.user.update({ where: { id: userId }, data: { paidUntil: currentSemesterEnd() } });
       break;
     }
-    case "customer.subscription.deleted": {
-      const sub = event.data.object as Stripe.Subscription;
-      await setPlanByCustomer(String(sub.customer), "free", sub.id, "canceled");
+    case "charge.refunded": {
+      const c = event.data.object as Stripe.Charge;
+      if (typeof c.customer === "string") await revokeByCustomer(c.customer);
+      break;
+    }
+    case "charge.dispute.created": {
+      const d = event.data.object as Stripe.Dispute;
+      const charge = typeof d.charge === "string" ? await stripe.charges.retrieve(d.charge) : d.charge;
+      if (charge && typeof charge.customer === "string") await revokeByCustomer(charge.customer);
       break;
     }
   }

@@ -35,7 +35,8 @@ export function UpgradeModal() {
         <h2 className="font-display text-xl font-medium text-heading">Gratis-Limit erreicht</h2>
         <p className="mt-2 text-sm text-muted">
           {LABELS[kind] ?? "Dein kostenloses Kontingent ist aufgebraucht"} — das ist das Limit der kostenlosen Version.
-          Mit <strong className="text-text">StudyHub Pro</strong> lernst du unbegrenzt: alle Themen, Karteikarten, Aufgaben & Quizze.
+          Mit dem <strong className="text-text">Semester-Pass</strong> lernst du unbegrenzt: alle Themen, Karteikarten,
+          Aufgaben & Quizze — einmal zahlen, fürs ganze Semester.
         </p>
         <Link
           href="/upgrade"
@@ -43,7 +44,7 @@ export function UpgradeModal() {
           className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl py-2.5 text-sm font-semibold text-white"
           style={{ background: "var(--accent)" }}
         >
-          <Sparkles size={16} /> Auf Pro upgraden
+          <Sparkles size={16} /> Semester-Pass ansehen
         </Link>
         <button onClick={() => setKind(null)} className="mt-2 w-full rounded-xl py-2 text-sm text-muted hover:text-text">
           Später

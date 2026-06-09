@@ -43,7 +43,15 @@ export default async function KontoPage() {
             </div>
             <div className="flex justify-between gap-4">
               <dt className="text-muted">Zugang</dt>
-              <dd className="font-medium">{unlimited ? "Unbegrenzt" : "Kostenlos (Testzugang)"}</dd>
+              <dd className="font-medium">
+                {user.plan === "owner"
+                  ? "Owner (unbegrenzt)"
+                  : user.paidUntil && user.paidUntil > new Date()
+                    ? `Semester-Pass bis ${user.paidUntil.toLocaleDateString("de-DE")}`
+                    : unlimited
+                      ? "Unbegrenzt"
+                      : "Kostenlos (Testzugang)"}
+              </dd>
             </div>
             <div className="flex justify-between gap-4">
               <dt className="text-muted">Mitglied seit</dt>

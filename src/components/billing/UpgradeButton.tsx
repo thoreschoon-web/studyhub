@@ -17,7 +17,13 @@ export function UpgradeButton() {
         window.location.href = j.url;
         return;
       }
-      setErr("Checkout ist gerade nicht verfügbar.");
+      if (j.error === "email_unverified") {
+        setErr("Bitte bestätige zuerst deine E-Mail-Adresse — wir haben dir einen Link geschickt.");
+      } else if (j.error === "already_paid") {
+        setErr("Du hast bereits einen aktiven Semester-Pass.");
+      } else {
+        setErr("Checkout ist gerade nicht verfügbar.");
+      }
     } catch {
       setErr("Netzwerkfehler. Bitte erneut versuchen.");
     }
@@ -33,7 +39,7 @@ export function UpgradeButton() {
         style={{ background: "var(--accent)" }}
       >
         {busy ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}
-        {busy ? "Weiterleitung zu Stripe…" : "Auf Pro upgraden"}
+        {busy ? "Weiterleitung zu Stripe…" : "Semester-Pass holen"}
       </button>
       {err && <p className="mt-2 text-center text-sm text-bad">{err}</p>}
     </div>
