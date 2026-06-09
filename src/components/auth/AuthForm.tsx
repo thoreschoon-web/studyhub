@@ -52,7 +52,14 @@ export function AuthForm({ mode, googleEnabled }: { mode: "login" | "register"; 
             />
           </div>
           <div>
-            <label className="mb-1 block text-xs font-medium text-muted">Passwort</label>
+            <div className="mb-1 flex items-center justify-between">
+              <label className="block text-xs font-medium text-muted">Passwort</label>
+              {isLogin && (
+                <Link href="/passwort-vergessen" className="text-xs text-faint hover:text-muted">
+                  Passwort vergessen?
+                </Link>
+              )}
+            </div>
             <input
               name="password"
               type="password"

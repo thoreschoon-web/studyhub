@@ -49,7 +49,7 @@ export default function DatenschutzPage() {
         </ul>
         <p>
           Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Die Daten bleiben gespeichert, bis du dein
-          Konto löschst (jederzeit unter „Konto" möglich); damit werden alle Konto- und Lerndaten unwiderruflich
+          Konto löschst (jederzeit unter „Konto“ möglich); damit werden alle Konto- und Lerndaten unwiderruflich
           entfernt.
         </p>
       </LegalSection>
@@ -112,9 +112,9 @@ export default function DatenschutzPage() {
       <LegalSection title="12. Deine Rechte">
         <p>Du hast nach der DSGVO insbesondere das Recht auf:</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li>Auskunft (Art. 15) — Export deiner Daten jederzeit unter „Konto" möglich</li>
+          <li>Auskunft (Art. 15) — Export deiner Daten jederzeit unter „Konto“ möglich</li>
           <li>Berichtigung (Art. 16)</li>
-          <li>Löschung (Art. 17) — Konto-Löschung jederzeit unter „Konto" möglich</li>
+          <li>Löschung (Art. 17) — Konto-Löschung jederzeit unter „Konto“ möglich</li>
           <li>Einschränkung der Verarbeitung (Art. 18)</li>
           <li>Datenübertragbarkeit (Art. 20)</li>
           <li>Widerspruch gegen Verarbeitungen auf Basis von Art. 6 Abs. 1 lit. f (Art. 21)</li>

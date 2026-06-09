@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import crypto from "node:crypto";
 
 const db = new PrismaClient();
 const BASE = process.env.E2E_BASE || "http://localhost:3000";
@@ -101,6 +102,45 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   console.log("  ungültige Action abgelehnt: " + pass(badAct?.error === "bad_action"));
   r = await fetch(BASE + "/api/progress", { method: "POST", headers: { cookie: cFree.hdr(), "content-type": "application/json" }, body: JSON.stringify({ action: "markSection", args: { topicId: "x".repeat(6000) } }) });
   console.log("  Riesen-Payload -> 413: " + pass(r.status === 413));
+
+  console.log("=== 9. E-Mail-Verifizierung (Token-Flow) ===");
+  // Token wie src/lib/tokens.ts: DB hält nur den sha256-Hash, der Link den Klartext.
+  const sha256 = (s) => crypto.createHash("sha256").update(s).digest("hex");
+  await db.user.update({ where: { id: free.id }, data: { emailVerified: null } });
+  const rawToken = crypto.randomBytes(32).toString("hex");
+  await db.verificationToken.deleteMany({ where: { identifier: "verify:free@test.de" } });
+  await db.verificationToken.create({ data: { identifier: "verify:free@test.de", token: sha256(rawToken), expires: new Date(Date.now() + 3600_000) } });
+  r = await fetch(BASE + "/verifizieren?email=free%40test.de&token=WRONG");
+  console.log("  falscher Token -> ungültig: " + pass((await r.text()).includes("Link ungültig")));
+  r = await fetch(BASE + "/verifizieren?email=free%40test.de&token=" + rawToken);
+  const verHtml = await r.text();
+  const verUser = await db.user.findUnique({ where: { id: free.id } });
+  console.log("  gültiger Token -> bestätigt + DB gesetzt: " + pass(verHtml.includes("E-Mail bestätigt") && !!verUser.emailVerified));
+  const tokenGone = await db.verificationToken.count({ where: { identifier: "verify:free@test.de" } });
+  console.log("  Token verbraucht (Einmal-Nutzung): " + pass(tokenGone === 0));
+
+  console.log("=== 10. Passwort-Reset-Seiten ===");
+  r = await fetch(BASE + "/passwort-vergessen");
+  console.log("  /passwort-vergessen -> 200: " + pass(r.status === 200 && (await r.text()).includes("Passwort vergessen")));
+  r = await fetch(BASE + "/passwort-reset");
+  console.log("  /passwort-reset ohne Token -> Hinweis: " + pass((await r.text()).includes("unvollständig")));
+
+  console.log("=== 11. Konto: Export & Zugriffsschutz ===");
+  r = await fetch(BASE + "/api/account/export");
+  console.log("  Export ohne Login -> 401: " + pass(r.status === 401));
+  r = await fetch(BASE + "/api/account/export", { headers: { cookie: cFree.hdr() } });
+  const exp = await r.json();
+  console.log("  Export eingeloggt -> eigene Daten, ohne passwordHash: " + pass(r.status === 200 && exp.account?.email === "free@test.de" && !JSON.stringify(exp).includes("passwordHash")));
+  r = await fetch(BASE + "/konto", { headers: { cookie: cFree.hdr() } });
+  console.log("  /konto -> 200: " + pass(r.status === 200 && (await r.text()).includes("Konto löschen")));
+
+  console.log("=== 12. Rechtsseiten & Footer ===");
+  for (const p of ["/impressum", "/datenschutz", "/agb", "/widerruf"]) {
+    r = await fetch(BASE + p);
+    console.log("  " + p + " -> " + r.status + " " + pass(r.status === 200));
+  }
+  r = await fetch(BASE + "/login");
+  console.log("  Footer auf /login: " + pass((await r.text()).includes("/impressum")));
 
   // cleanup test accounts
   await db.user.deleteMany({ where: { email: { in: ["free@test.de", "paid@test.de", "testuser@example.com"] } } });

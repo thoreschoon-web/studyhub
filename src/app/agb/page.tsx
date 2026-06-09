@@ -11,7 +11,7 @@ export default function AgbPage() {
       <LegalSection title="§ 1 Geltungsbereich und Anbieter">
         <p>
           Diese AGB gelten für die Nutzung der Lernplattform {SERVICE_NAME}, betrieben von {OPERATOR.name},{" "}
-          {OPERATOR.street}, {OPERATOR.city} („Anbieter"). Sie richten sich ausschließlich an Verbraucher.
+          {OPERATOR.street}, {OPERATOR.city} („Anbieter“). Sie richten sich ausschließlich an Verbraucher.
         </p>
       </LegalSection>
 
@@ -81,7 +81,7 @@ export default function AgbPage() {
       <LegalSection title="§ 8 Laufzeit, Kündigung, Kontolöschung">
         <p>
           Der Semester-Pass endet automatisch zum angegebenen Datum — eine Kündigung ist nicht erforderlich. Das
-          kostenlose Konto kannst du jederzeit unter „Konto" löschen; damit werden alle gespeicherten Daten entfernt.
+          kostenlose Konto kannst du jederzeit unter „Konto“ löschen; damit werden alle gespeicherten Daten entfernt.
           Eine Kontolöschung vor Ablauf eines bezahlten Semester-Passes begründet keinen Erstattungsanspruch.
         </p>
       </LegalSection>

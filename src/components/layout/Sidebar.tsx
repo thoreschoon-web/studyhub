@@ -72,13 +72,15 @@ export function Sidebar() {
 
       {status === "authenticated" && session?.user && (
         <div className="mt-3 flex items-center gap-2 rounded-[var(--radius)] border border-line bg-surface/40 px-2.5 py-2">
-          <div className="grid h-8 w-8 shrink-0 place-items-center rounded-[5px] bg-surface-2 text-xs font-semibold uppercase text-muted">
-            {(session.user.email ?? "?").slice(0, 1)}
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="truncate text-xs font-medium" title={session.user.email ?? ""}>{session.user.email}</div>
-            <div className="text-[0.65rem] text-faint">Angemeldet</div>
-          </div>
+          <Link href="/konto" className="flex min-w-0 flex-1 items-center gap-2" title="Konto verwalten">
+            <div className="grid h-8 w-8 shrink-0 place-items-center rounded-[5px] bg-surface-2 text-xs font-semibold uppercase text-muted">
+              {(session.user.email ?? "?").slice(0, 1)}
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="truncate text-xs font-medium" title={session.user.email ?? ""}>{session.user.email}</div>
+              <div className="text-[0.65rem] text-faint">Konto verwalten</div>
+            </div>
+          </Link>
           <button
             onClick={() => signOut({ callbackUrl: "/login" })}
             className="rounded-[5px] p-1.5 text-faint transition-colors hover:text-bad"

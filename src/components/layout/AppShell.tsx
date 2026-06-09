@@ -9,7 +9,7 @@ import { ProgressBootstrap } from "@/components/progress/ProgressBootstrap";
 import { UpgradeModal } from "@/components/billing/UpgradeModal";
 
 // Routes that render WITHOUT the app shell (sidebar/nav).
-const BARE_ROUTES = new Set(["/login", "/register"]);
+const BARE_ROUTES = new Set(["/login", "/register", "/passwort-vergessen", "/passwort-reset", "/verifizieren"]);
 
 /**
  * Decides bare vs. app-shell layout client-side (so anonymous browsing pages get

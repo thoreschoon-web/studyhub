@@ -5,6 +5,7 @@ import "./globals.css";
 import { auth } from "@/auth";
 import { SessionProvider } from "@/components/auth/SessionProvider";
 import { AppShell } from "@/components/layout/AppShell";
+import { VerifyBanner } from "@/components/auth/VerifyBanner";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 const mono = JetBrains_Mono({ variable: "--font-mono-jb", subsets: ["latin"], display: "swap" });
@@ -27,7 +28,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           }}
         />
         <SessionProvider session={session}>
-          <AppShell loggedIn={loggedIn}>{children}</AppShell>
+          <AppShell loggedIn={loggedIn}>
+            <VerifyBanner />
+            {children}
+          </AppShell>
         </SessionProvider>
       </body>
     </html>
