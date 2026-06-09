@@ -4,7 +4,7 @@
 > **Zuerst lesen:** `AGENTS.md` — Next.js 16 hat Breaking Changes; vor Code-Änderungen die Docs unter `node_modules/next/dist/docs/` prüfen.
 
 ## TL;DR
-**StudyHub** ist eine **lokal gehostete Lern-Plattform** (localhost) für die Uni-Klausuren von **Thore** (WiWi-Student, **kommuniziert auf Deutsch** → alle Inhalte/UI auf Deutsch). Vier Fächer: **Mathematik 2, Schließende Statistik, Privatrecht, BWL II (Marketing & Personal)**. Aus den Original-Unterlagen (PDFs im Elternordner `../`) wurden **51 Themen** mit Erklärungen, Quiz, Karteikarten und durchgerechneten Aufgaben erzeugt. Seit kurzem ist es eine **Mehrnutzer-Plattform mit Login, Konto-Fortschritt, Gratis-Limits und vorbereiteter Stripe-Bezahlung** (lokal-first).
+**StudyHub** ist eine Lern-Plattform für die Uni-Klausuren von **Thore** (WiWi-Student, **kommuniziert auf Deutsch** → alle Inhalte/UI auf Deutsch), die **kommerziell an Kommilitonen** (LUH) verkauft werden soll: **Semester-Pass als Einmalzahlung** (kein Abo), Vercel Pro + privates Repo geplant, KI-Tutor nur für Zahler. Vier Fächer: **Mathematik 2, Schließende Statistik, Privatrecht, BWL II (Marketing & Personal)**, **51 Themen** mit Erklärungen, Quiz, Karteikarten, durchgerechneten Aufgaben. Mehrnutzer-Plattform mit Login, Konto-Fortschritt, Gratis-Limits, Stripe-Payment-Mode, Rechtsseiten, Passwort-Reset/E-Mail-Verifizierung (Resend), DSGVO-Export/Löschung. **Go-Live-Checkliste (Owner-Aktionen): `LAUNCH.md`.**
 
 ## Tech-Stack
 - **Next.js 16.2.7** (App Router, **Turbopack**), **React 19.2**, **TypeScript**, Alias `@/*` → `src/*`
@@ -115,7 +115,17 @@ node scripts/e2e.mjs            # Auth/Limit-E2E (Dev-Server muss laufen)
 - ✅ **Lokales Dev läuft auf Postgres** (Homebrew `postgresql@17`, DB `studyhub`, Port 5432; `.env` zeigt darauf). Die alte SQLite-Falle ist beseitigt — `npm install`/`prisma generate`/`prisma migrate dev` sind lokal gefahrlos. `html-to-image` (ungenutzt) wurde deinstalliert.
 - 🔒 **Secrets** (DB-Passwort, `sbp_`-Token) liegen lokal in `.env` bzw. `~/.claude.json` — **niemals** in CONTEXT.md/Memory/Repo.
 
+## Kommerzialisierung (Juni 2026) — was gebaut wurde
+- **Recht:** `/impressum`, `/datenschutz`, `/agb`, `/widerruf` (Anbieterdaten zentral in `src/lib/legal.ts` — **[PLATZHALTER] vor Launch füllen!**), Footer überall (auch /login). Kein Tracking → kein Cookie-Banner. Checkout sammelt AGB-Consent + §356(5)-BGB-Erlöschens-Zustimmung.
+- **Konto-Lebenszyklus:** Passwort-Reset (`/passwort-vergessen`, `/passwort-reset`) + E-Mail-Verifizierung (`/verifizieren`, weicher Banner via `VerifyBanner`, hartes Gate vor Checkout) über `src/lib/tokens.ts` (sha256-Einmal-Tokens im VerificationToken-Model) + `src/lib/mail.ts` (Resend, graceful-null). Kontoseite `/konto`: DSGVO-Export (`/api/account/export`) + Löschung (Cascades).
+- **Billing = Semester-Pass:** `User.paidUntil` statt Abo (`stripeSubId`/`subStatus` entfernt). `isUnlimited()` = owner ODER `paidUntil > now`. `src/lib/billing.ts` `currentSemesterEnd()` (SoSe→30.09., WiSe→31.03., `SEMESTER_END_OVERRIDE`-Env). Checkout `mode:"payment"` + invoice; Webhook: `completed`/`async_payment_succeeded` → paidUntil, `charge.refunded`/`dispute` → Entzug. Upgrade-Seite zeigt Preis live aus Stripe + FAQ.
+- **Tutor paid-only:** `/api/chat` → 402 für Free; Tagesbudget 50 Nachrichten (DB-Zähler `Usage.chatMsgs/chatDay`, atomar, Owner exempt) → 429 `daily_limit`. Client-Teaser (`locked`-Prop in TutorChat/TutorDock: "login"/"upgrade").
+- **Lern-Features:** Dashboard-Lernstand (`src/lib/insights-server.ts` + `LearnInsights`: fällige Karten, schwache Themen <60 %, Readiness-Score je Fach), Klausur-Ergebnis mit Antwort-Review (deine vs. richtige Antwort) + Themen-Auswertung (+ `ExamAttempt.detail`), Themen-Suche `⌘K` (`/api/search` + `SearchPalette`), Onboarding-Hinweis (localStorage).
+- **Ops:** `error.tsx`/`global-error.tsx`, Sentry env-gated (`src/instrumentation*.ts`, nur mit `SENTRY_DSN`), GitHub-Actions-CI (`.github/workflows/ci.yml`: audit→lint→migrate→build→e2e mit postgres:17-Service), Security-Header in `next.config.ts`, `public/robots.txt`. Lint: 0 Fehler.
+- **Content-Verifikation:** KKT-Lösungen unabhängig nachgerechnet (3 Korrekturen). Statistik-Aufgaben aufgestockt.
+- **Neue Env-Vars:** `RESEND_API_KEY`+`MAIL_FROM`, `SENTRY_DSN`/`NEXT_PUBLIC_SENTRY_DSN`, `SEMESTER_END_OVERRIDE` (optional) — alles graceful-null/optional.
+
 ## Offene / mögliche nächste Schritte
-- **Deployment fortsetzen** — Stand & Schritte siehe „Aktueller Stand" oben + `DEPLOY.md`.
-- Google-Login / Stripe-Live / Anthropic-Key **aktivieren** (Anleitungen in `.env.local.example`) — der Nutzer hatte noch keine dieser Zugänge.
-- Optional: harte Mathe-Lösungen (KKT/Simplex) mit Opus gegenprüfen; WebR-Sandbox (Statistik); Gutachtenstil-Trainer (Privatrecht); Klausur-Simulator auch ans Limit hängen; „Fortschritt zurücksetzen"-Buttons im UI prominenter; optional Alt-localStorage-Import beim ersten Login.
+- **`LAUNCH.md` abarbeiten** (nur Owner: Vercel Pro, Repo privat, Stripe-Live, Domain, Resend/Upstash/Sentry/Anthropic, Rechtstexte-Platzhalter, Gewerbe-/Urheberrechts-Frage).
+- ⚠️ **Nach jeder Prisma-Migration den Dev-Server neu starten** (laufender Prozess hält den alten Client — Queries auf geänderte Tabellen schlagen sonst fehl).
+- Backlog (bewusst verschoben): Streak/Zeitstatistik, gespeicherte Tutor-Chats, Themen-Kontext-Picker auf /tutor, Daumen-Feedback, semantisches Freitext-Grading, WebR-Sandbox (Statistik), Gutachtenstil-Trainer (Privatrecht), Klausur-Historie-Detailansicht (detail-Feld liegt schon in der DB).
