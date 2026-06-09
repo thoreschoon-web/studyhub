@@ -9,11 +9,13 @@ export function TutorDock({
   subject,
   topic,
   suggestions,
+  locked,
 }: {
   context?: string;
   subject?: string;
   topic?: string;
   suggestions?: string[];
+  locked?: "login" | "upgrade";
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -40,7 +42,7 @@ export function TutorDock({
                 <X size={18} />
               </button>
             </div>
-            <TutorChat context={context} subject={subject} topic={topic} suggestions={suggestions} className="flex-1 min-h-0" />
+            <TutorChat context={context} subject={subject} topic={topic} suggestions={suggestions} locked={locked} className="flex-1 min-h-0" />
           </div>
         </>
       )}

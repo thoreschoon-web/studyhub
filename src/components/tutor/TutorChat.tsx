@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Markdown } from "@/components/content/Markdown";
-import { Send, Sparkles, KeyRound, Loader2 } from "lucide-react";
+import { Send, Sparkles, KeyRound, Loader2, Lock } from "lucide-react";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -12,12 +13,15 @@ export function TutorChat({
   topic,
   suggestions = [],
   className,
+  locked,
 }: {
   context?: string;
   subject?: string;
   topic?: string;
   suggestions?: string[];
   className?: string;
+  /** Teaser-Modus: "login" (anonym) oder "upgrade" (Free-Konto) — Eingabe gesperrt, CTA sichtbar. */
+  locked?: "login" | "upgrade";
 }) {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
@@ -31,7 +35,7 @@ export function TutorChat({
 
   async function send(text: string) {
     const q = text.trim();
-    if (!q || busy) return;
+    if (!q || busy || locked) return;
     setInput("");
     const history = [...messages, { role: "user" as const, content: q }];
     setMessages([...history, { role: "assistant", content: "" }]);
@@ -47,10 +51,28 @@ export function TutorChat({
         setMessages((m) => m.slice(0, -1));
         return;
       }
-      if (res.status === 429) {
+      if (res.status === 402) {
         setMessages((m) => {
           const copy = [...m];
-          copy[copy.length - 1] = { role: "assistant", content: "_Zu viele Anfragen — bitte einen kurzen Moment warten und erneut versuchen._" };
+          copy[copy.length - 1] = {
+            role: "assistant",
+            content: "_Der KI-Tutor ist Teil des Semester-Passes. [Jetzt freischalten →](/upgrade)_",
+          };
+          return copy;
+        });
+        return;
+      }
+      if (res.status === 429) {
+        const err = await res.json().catch(() => null);
+        const daily = err?.error === "daily_limit";
+        setMessages((m) => {
+          const copy = [...m];
+          copy[copy.length - 1] = {
+            role: "assistant",
+            content: daily
+              ? "_Dein Tageslimit ist erreicht — morgen geht's weiter. (Das Limit deckelt die KI-Kosten für alle.)_"
+              : "_Zu viele Anfragen — bitte einen kurzen Moment warten und erneut versuchen._",
+          };
           return copy;
         });
         return;
@@ -105,13 +127,15 @@ export function TutorChat({
                   <button
                     key={s}
                     onClick={() => send(s)}
-                    className="rounded-xl border border-line bg-surface/60 px-3 py-2 text-left text-sm text-muted transition-colors hover:border-[color:var(--accent)] hover:text-text"
+                    disabled={!!locked}
+                    className="rounded-xl border border-line bg-surface/60 px-3 py-2 text-left text-sm text-muted transition-colors hover:border-[color:var(--accent)] hover:text-text disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:border-line"
                   >
                     {s}
                   </button>
                 ))}
               </div>
             )}
+            {locked && <LockedNotice kind={locked} />}
           </div>
         )}
 
@@ -150,18 +174,42 @@ export function TutorChat({
             }
           }}
           rows={1}
-          placeholder="Frage stellen…  (Enter zum Senden)"
-          className="max-h-32 flex-1 resize-none rounded-xl border border-line bg-surface-2 px-3 py-2.5 text-sm focus:border-[color:var(--accent)] focus:outline-none"
+          disabled={!!locked}
+          placeholder={locked ? "Mit dem Semester-Pass freischalten" : "Frage stellen…  (Enter zum Senden)"}
+          className="max-h-32 flex-1 resize-none rounded-xl border border-line bg-surface-2 px-3 py-2.5 text-sm focus:border-[color:var(--accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-60"
         />
         <button
           type="submit"
-          disabled={busy || !input.trim()}
+          disabled={busy || !input.trim() || !!locked}
           className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white transition-opacity disabled:opacity-40"
           style={{ background: "var(--accent)" }}
         >
           {busy ? <Loader2 size={17} className="animate-spin" /> : <Send size={16} />}
         </button>
       </form>
+    </div>
+  );
+}
+
+function LockedNotice({ kind }: { kind: "login" | "upgrade" }) {
+  return (
+    <div className="mx-auto mt-4 max-w-sm rounded-xl border border-line bg-surface/60 p-4 text-center">
+      <div className="mb-2 inline-flex items-center gap-2 text-sm font-semibold text-heading">
+        <Lock size={15} style={{ color: "var(--accent)" }} />
+        {kind === "login" ? "Anmelden, um den Tutor zu nutzen" : "Teil des Semester-Passes"}
+      </div>
+      <p className="text-sm text-muted">
+        {kind === "login"
+          ? "Erstelle ein kostenloses Konto, um StudyHub zu nutzen."
+          : "Der KI-Tutor beantwortet deine Fragen direkt zum Kursstoff — enthalten im Semester-Pass."}
+      </p>
+      <Link
+        href={kind === "login" ? "/login" : "/upgrade"}
+        className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2 text-sm font-semibold text-white"
+        style={{ background: "var(--accent)" }}
+      >
+        <Sparkles size={15} /> {kind === "login" ? "Anmelden" : "Semester-Pass ansehen"}
+      </Link>
     </div>
   );
 }

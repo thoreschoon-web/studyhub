@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getSubjectMeta } from "@/lib/subjects";
 import { getTopicHeaders } from "@/lib/content";
+import { getCurrentUser, isUnlimited } from "@/lib/session";
 import { SubjectTheme } from "@/components/SubjectTheme";
 import { TopicList } from "@/components/subject/TopicList";
 import { TutorDock } from "@/components/tutor/TutorDock";
@@ -15,6 +16,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
   if (!meta) notFound();
 
   const headers = getTopicHeaders(meta.id);
+  const user = await getCurrentUser();
 
   return (
     <SubjectTheme subject={meta} className="mx-auto max-w-5xl px-5 py-10 lg:px-10 lg:py-12">
@@ -98,6 +100,7 @@ export default async function SubjectPage({ params }: { params: Promise<{ subjec
 
       <TutorDock
         subject={meta.title}
+        locked={!user ? "login" : isUnlimited(user) ? undefined : "upgrade"}
         suggestions={[
           `Gib mir einen Überblick über ${meta.short}.`,
           "Was sind die wichtigsten Klausurthemen?",

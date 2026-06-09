@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Usage" ADD COLUMN     "chatDay" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "chatMsgs" INTEGER NOT NULL DEFAULT 0;

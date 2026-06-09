@@ -102,11 +102,13 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   const fS = await getStore(cFree), pS = await getStore(cPaid);
   console.log("  free hat p1? " + !!fS.srs?.p1 + " | paid hat p1? " + !!pS.srs?.p1 + " -> " + pass(!fS.srs?.p1 && !!pS.srs?.p1));
 
-  console.log("=== 7. KI-Gate ===");
+  console.log("=== 7. KI-Gate (Tutor = Teil des Semester-Passes) ===");
   r = await fetch(BASE + "/api/chat", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ messages: [{ role: "user", content: "hi" }] }) });
   console.log("  ohne Login -> " + r.status + " " + pass(r.status === 401));
   r = await fetch(BASE + "/api/chat", { method: "POST", headers: { cookie: cFree.hdr(), "content-type": "application/json" }, body: JSON.stringify({ messages: [{ role: "user", content: "hi" }] }) });
-  console.log("  eingeloggt, kein Key -> " + r.status + " " + pass(r.status === 503));
+  console.log("  Free-Konto -> 402 upgrade_required: " + pass(r.status === 402));
+  r = await fetch(BASE + "/api/chat", { method: "POST", headers: { cookie: cPaid.hdr(), "content-type": "application/json" }, body: JSON.stringify({ messages: [{ role: "user", content: "hi" }] }) });
+  console.log("  Semester-Pass, kein Key -> 503: " + pass(r.status === 503));
 
   console.log("=== 8. Eingabe-Validierung (Defense-in-Depth) ===");
   const badAct = await post(cFree, "DROP TABLE users; --", { topicId: "x" });

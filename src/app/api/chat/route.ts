@@ -1,8 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
-import { getCurrentUser } from "@/lib/session";
+import { getCurrentUser, isUnlimited } from "@/lib/session";
 import { rateLimit } from "@/lib/rate-limit";
 import { CHAT_LIMITS } from "@/lib/limits";
+import { consumeChatBudget } from "@/lib/chat-budget";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -25,6 +26,9 @@ export async function POST(req: Request) {
   // 1) Auth — anonymous users cannot reach the paid API at all.
   const user = await getCurrentUser();
   if (!user) return Response.json({ error: "unauthorized" }, { status: 401 });
+
+  // 1b) Der Tutor ist Teil des Semester-Passes (deckt die API-Kosten).
+  if (!isUnlimited(user)) return Response.json({ error: "upgrade_required" }, { status: 402 });
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return Response.json({ error: "no_key" }, { status: 503 });
@@ -62,6 +66,14 @@ export async function POST(req: Request) {
   const context = (parsed.context ?? "").slice(0, CHAT_LIMITS.maxContextChars);
   const totalChars = messages.reduce((n, m) => n + m.content.length, 0) + context.length;
   if (totalChars > CHAT_LIMITS.maxTotalChars) return Response.json({ error: "too_large" }, { status: 413 });
+
+  // 7) Tagesbudget (Kostendeckel) — erst NACH der Validierung zählen; Owner ausgenommen.
+  if (user.plan !== "owner") {
+    const budget = await consumeChatBudget(user.id);
+    if (!budget.ok) {
+      return Response.json({ error: "daily_limit" }, { status: 429, headers: { "Retry-After": "3600" } });
+    }
+  }
 
   const client = new Anthropic({ apiKey });
   const model = process.env.ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";

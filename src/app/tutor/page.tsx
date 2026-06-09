@@ -1,6 +1,6 @@
 import { TutorChat } from "@/components/tutor/TutorChat";
 import { Sparkles } from "lucide-react";
-import { getCurrentUser } from "@/lib/session";
+import { getCurrentUser, isUnlimited } from "@/lib/session";
 import { AuthGate } from "@/components/billing/AuthGate";
 
 export const dynamic = "force-dynamic";
@@ -20,6 +20,7 @@ export default async function TutorPage() {
       {user ? (
         <div className="flex-1 min-h-0 rounded-2xl border border-line bg-surface/40 p-4">
           <TutorChat
+            locked={isUnlimited(user) ? undefined : "upgrade"}
             suggestions={[
               "Erkläre mir den Unterschied zwischen Lagrange und KKT.",
               "Wie funktioniert ein Hypothesentest, Schritt für Schritt?",

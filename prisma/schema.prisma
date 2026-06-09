@@ -118,6 +118,8 @@ model Usage {
   flashcardsRead Int      @default(0)
   exercisesDone  Int      @default(0)
   quizAnswered   Int      @default(0)
+  chatMsgs       Int      @default(0) // KI-Tutor-Nachrichten am chatDay (Tagesbudget)
+  chatDay        String   @default("") // UTC YYYY-MM-DD des Zählers
   updatedAt      DateTime @updatedAt
   user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

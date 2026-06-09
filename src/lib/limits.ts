@@ -20,6 +20,7 @@ export const CHAT_LIMITS = {
   maxOutputTokens: 1500, // caps output cost per call
   burst: { limit: 8, windowMs: 30_000 }, // per user: anti-spam burst
   hourly: { limit: 60, windowMs: 3_600_000 }, // per user: volume cap
+  daily: 50, // Nachrichten/Tag pro Nutzer (DB-Zähler, Kostendeckel; Owner ausgenommen)
 } as const;
 
 /** Progress API (/api/progress) input guardrails (defense-in-depth; Prisma already prevents SQLi). */

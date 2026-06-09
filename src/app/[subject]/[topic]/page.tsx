@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSubjectMeta } from "@/lib/subjects";
 import { getSubjectTopics, getTopic } from "@/lib/content";
-import { getCurrentUser } from "@/lib/session";
+import { getCurrentUser, isUnlimited } from "@/lib/session";
 import { recordPageOpen } from "@/lib/progress-server";
 import { Paywall } from "@/components/billing/Paywall";
 import { AuthGate } from "@/components/billing/AuthGate";
@@ -152,6 +152,7 @@ export default async function TopicPage({ params }: { params: Promise<{ subject:
           subject={meta.title}
           topic={topic.title}
           context={context}
+          locked={isUnlimited(user) ? undefined : "upgrade"}
           suggestions={[
             `Erkläre mir „${topic.title}“ in einfachen Worten.`,
             "Gib mir eine typische Klausuraufgabe dazu.",
