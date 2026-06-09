@@ -4,6 +4,7 @@ import { getSubjectTopics, getSubjectStat } from "@/lib/content";
 import { getCurrentUser } from "@/lib/session";
 import { SubjectCard } from "@/components/dashboard/SubjectCard";
 import { LearnInsights } from "@/components/dashboard/LearnInsights";
+import { OnboardingHint } from "@/components/dashboard/OnboardingHint";
 import { GraduationCap, Sparkles, Layers, ArrowUpRight } from "lucide-react";
 import { AnonCta } from "@/components/dashboard/AnonCta";
 
@@ -48,6 +49,7 @@ export default async function Dashboard() {
       </header>
 
       {/* ── LERNSTAND (nur eingeloggt) ─────────────────────────── */}
+      {user && <OnboardingHint />}
       {user && <LearnInsights userId={user.id} />}
 
       {/* ── FÄCHER ─────────────────────────────────────────────── */}

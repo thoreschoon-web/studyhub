@@ -111,6 +111,42 @@ export default async function UpgradePage({ searchParams }: { searchParams: Prom
           )}
         </div>
       </div>
+
+      {/* FAQ */}
+      <div className="mt-8">
+        <div className="label-mono mb-3">Häufige Fragen</div>
+        <div className="space-y-2">
+          <Faq q="Was passiert nach Semesterende?">
+            Dein Pass läuft automatisch aus — es gibt kein Abo und keine automatische Abbuchung. Dein Lernfortschritt
+            bleibt gespeichert; fürs neue Semester holst du dir einfach einen neuen Pass.
+          </Faq>
+          <Faq q="Habe ich ein Widerrufsrecht?">
+            Ja, grundsätzlich 14 Tage. Da der Zugang sofort freigeschaltet wird, stimmst du beim Kauf der sofortigen
+            Bereitstellung zu — damit erlischt das Widerrufsrecht (§ 356 Abs. 5 BGB). Details in der{" "}
+            <Link href="/widerruf" className="underline hover:text-text">Widerrufsbelehrung</Link>.
+          </Faq>
+          <Faq q="Bekomme ich eine Rechnung?">
+            Ja — nach dem Kauf erhältst du Beleg und Rechnung automatisch per E-Mail von unserem Zahlungsdienstleister
+            Stripe.
+          </Faq>
+          <Faq q="Was kann ich kostenlos testen?">
+            Mit einem kostenlosen Konto kannst du 5 Themenseiten lesen sowie je ein paar Quizfragen, Karteikarten und
+            eine Aufgabe ausprobieren — genug, um zu sehen, ob StudyHub zu dir passt.
+          </Faq>
+        </div>
+      </div>
     </div>
+  );
+}
+
+function Faq({ q, children }: { q: string; children: React.ReactNode }) {
+  return (
+    <details className="group rounded-xl border border-line bg-surface/40 px-4 py-3">
+      <summary className="cursor-pointer list-none text-sm font-medium text-text marker:hidden">
+        <span className="mr-2 inline-block text-faint transition-transform group-open:rotate-90">›</span>
+        {q}
+      </summary>
+      <p className="mt-2 pl-5 text-sm leading-relaxed text-muted">{children}</p>
+    </details>
   );
 }

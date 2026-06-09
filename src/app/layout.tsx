@@ -12,7 +12,16 @@ const mono = JetBrains_Mono({ variable: "--font-mono-jb", subsets: ["latin"], di
 
 export const metadata: Metadata = {
   title: "StudyHub — Deine Lernplattform",
-  description: "Lernmaterial für die Wirtschaftswissenschaften · Sommersemester 2026 · Leibniz Universität Hannover.",
+  description:
+    "Lernmaterial für die Wirtschaftswissenschaften · Sommersemester 2026 · Leibniz Universität Hannover. 51 Themen, 600+ Quizfragen, Karteikarten mit Spaced Repetition, Klausur-Simulator und KI-Tutor.",
+  openGraph: {
+    title: "StudyHub — Deine WiWi-Lernplattform",
+    description:
+      "Vier Fächer von Grund auf erklärt: Mathe 2, Statistik, Privatrecht, BWL. Quizze, Karteikarten, Klausur-Simulator, KI-Tutor.",
+    siteName: "StudyHub",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
