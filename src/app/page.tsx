@@ -1,13 +1,16 @@
 import Link from "next/link";
 import { SUBJECTS } from "@/lib/subjects";
 import { getSubjectTopics, getSubjectStat } from "@/lib/content";
+import { getCurrentUser } from "@/lib/session";
 import { SubjectCard } from "@/components/dashboard/SubjectCard";
+import { LearnInsights } from "@/components/dashboard/LearnInsights";
 import { GraduationCap, Sparkles, Layers, ArrowUpRight } from "lucide-react";
 import { AnonCta } from "@/components/dashboard/AnonCta";
 
 export const dynamic = "force-dynamic";
 
-export default function Dashboard() {
+export default async function Dashboard() {
+  const user = await getCurrentUser();
   const cards = SUBJECTS.map((meta) => {
     const topics = getSubjectTopics(meta.id);
     const stat = getSubjectStat(meta.id);
@@ -43,6 +46,9 @@ export default function Dashboard() {
           Spaced-Repetition und einem KI-Tutor, der deine Unterlagen kennt.
         </p>
       </header>
+
+      {/* ── LERNSTAND (nur eingeloggt) ─────────────────────────── */}
+      {user && <LearnInsights userId={user.id} />}
 
       {/* ── FÄCHER ─────────────────────────────────────────────── */}
       <div className="mt-16 flex items-baseline justify-between">

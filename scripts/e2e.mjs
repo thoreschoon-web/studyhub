@@ -61,6 +61,8 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   await post(cFree, "recordQuiz", { topicId: "kkt", questionId: "QX", correct: true });
   const s2 = await getStore(cFree);
   console.log("  " + pass(s2.topics?.kkt?.quizCorrect?.includes("QX")));
+  r = await fetch(BASE + "/", { headers: { cookie: cFree.hdr() } });
+  console.log("  Dashboard zeigt Lernstand: " + pass((await r.text()).includes("Dein Lernstand")));
 
   console.log("=== 3. Interaktions-Limits (frei: 3/1/3) ===");
   await resetData(free.id);
