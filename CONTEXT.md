@@ -11,7 +11,7 @@
 - **Tailwind v4** (CSS-first: `@theme` in `src/app/globals.css`, KEINE tailwind.config)
 - Inhalt/Render: **KaTeX**, **react-markdown** (+ remark-math/gfm, rehype-katex), **mermaid**, **mathjs**, **lucide-react**
 - PDF: **html-to-image + jspdf** · Utils: clsx, tailwind-merge
-- **Auth.js v5** (`next-auth@5 beta`), **Prisma 6 + SQLite**, **bcryptjs**, **zod**, **Stripe** (Testmodus), **@anthropic-ai/sdk** (KI-Tutor)
+- **Auth.js v5** (`next-auth@5 beta`), **Prisma 6 + Postgres** (lokal: Homebrew-Postgres 17, Prod: Supabase), **bcryptjs**, **zod**, **Stripe** (Testmodus), **@anthropic-ai/sdk** (KI-Tutor)
 - ⚠️ **Next 16 Besonderheiten:** `params`/`searchParams` sind **Promises** (`await`); `middleware` heißt jetzt **`proxy`** (Node-Runtime); `cookies()/headers()` async; Turbopack default.
 
 ## Verzeichnis-/Architektur-Überblick
@@ -63,7 +63,7 @@ src/
 
 ## Mehrnutzer-Plattform (lokal-first)
 - **Login-Pflicht:** ausgeloggt → Redirect `/login` (via `src/proxy.ts`). Primär **E-Mail+Passwort** (bcrypt, sofort nutzbar, keine externen Dienste); **Google optional** (env-gated, erscheint nur mit Keys).
-- **DB (Prisma 6 + SQLite):** `prisma/schema.prisma`. JSON-Felder als **String** (SQLite kann kein Json/Array), `due` als `DateTime`↔ms an der Grenze. Migration liegt unter `prisma/migrations/`.
+- **DB (Prisma 6 + Postgres):** `prisma/schema.prisma`. JSON-Felder als **String** (historisch wg. SQLite; App-Code parst an der Grenze), `due` als `DateTime`↔ms an der Grenze. Migration (Postgres-DDL) liegt unter `prisma/migrations/`. Lokal: Homebrew-Postgres 17 (`brew services start postgresql@17`, DB `studyhub`, URLs in `.env`). Prod: Supabase.
 - **Fortschritt pro Konto:** früher localStorage → jetzt DB. `src/lib/store.tsx` behält die alte Public-API (deshalb 0 Pflicht-Edits an den Verbraucher-Komponenten), fetcht einmal `/api/progress` (`ProgressBootstrap`), Mutationen optimistisch + Rollback.
 - **Gratis-Limits (serverseitig, total über die App):** **5 Themenseiten · 3 Karteikarten · 1 Aufgabe · 3 Quizfragen** → dann Paywall/UpgradeModal. Erzwungen in `progress-server.ts` (Interaktionen) + Topic-Page (`recordPageOpen` → `Paywall`). `pagesOpened` zählt **distinkte** Seiten (Re-Besuch frei). **`OWNER_EMAIL`-Konto & `plan="paid"` = unbegrenzt** (`isUnlimited`).
 - **Anti-Abuse der Limits (`src/lib/email.ts`):** `normalizeEmail()` kollabiert Gmail-Tricks auf EIN Konto (Punkte entfernt, `+tags` abgeschnitten, googlemail→gmail) — angewandt bei Registrierung **und** Login-`authorize` **und** Google-Upsert (sonst findet der Login das Konto nicht). `isDisposableEmail()` blockt bekannte Wegwerf-Domains bei der Registrierung. Reiner Code, keine externen Dienste. Test: `node scripts/test-email.ts` (Node-24-Type-Stripping; aus tsconfig excluded). Google-User bekommen `emailVerified` gesetzt. **Noch offen:** echte E-Mail-Verifizierung (Bestätigungslink) — braucht einen Mail-Versand-Dienst (z. B. Resend), daher env-gated wie Stripe nachzurüsten.
@@ -77,16 +77,17 @@ src/
 4. **`force-dynamic`** auf datengetriebenen Seiten beibehalten (kein statisches Caching von Nutzerdaten).
 5. **Content-Generierung:** häufige JSON-Killer = deutsche Komma-Dezimalzahlen (`1,5` statt `1.5`) in numerischen Werten + typografische `„…"` mit ASCII-Endquote. Sub-Agenten daher IMMER per `jq empty` selbst validieren lassen; Dateien < ~75 KB (sonst Output-Limit); aufgabenreiche Themen (KKT/Simplex) sparsam PDF lesen (sonst Kontext-Limit).
 6. **CSS:** modernes `color-mix(in oklab, …)`/CSS-Vars überall → für PDF html-to-image (rendert das korrekt), NICHT html2canvas. SVG-Plot-Farben via inline `style={{stroke:"var(--…)"}}` (Attribut-`var()` ist unzuverlässig).
-7. Env liegt in **`.env`** (DATABASE_URL, von Prisma+Next gelesen) und **`.env.local`** (Secrets). Beide gitignored; `dev.db` gitignored.
+7. Env liegt in **`.env`** (DATABASE_URL/DIRECT_URL → lokales Postgres, von Prisma+Next gelesen) und **`.env.local`** (Secrets). Beide gitignored. **SQLite ist Geschichte** — `npm install`/`prisma generate`/`prisma migrate dev` sind lokal wieder GEFAHRLOS (Client = Postgres, DB = Homebrew-Postgres `studyhub`).
 
 ## Env-Variablen (`.env.local`; Vorlage: `.env.local.example`)
-Pflicht: `AUTH_SECRET` (`npx auth secret`), `AUTH_URL=http://localhost:3000`, `OWNER_EMAIL` (= dein unbegrenztes Konto), `DATABASE_URL=file:./dev.db` (in `.env`).
-Optional (Feature schaltet sich frei): `AUTH_GOOGLE_ID/_SECRET` · `STRIPE_SECRET_KEY/_PRICE_ID/_WEBHOOK_SECRET` · `ANTHROPIC_API_KEY` (`ANTHROPIC_MODEL` default Haiku).
+Pflicht: `AUTH_SECRET` (`npx auth secret`), `AUTH_URL=http://localhost:3000`, `OWNER_EMAIL` (= dein unbegrenztes Konto), `DATABASE_URL`+`DIRECT_URL` (lokales Postgres, in `.env`).
+Optional (Feature schaltet sich frei): `AUTH_GOOGLE_ID/_SECRET` · `STRIPE_SECRET_KEY/_PRICE_ID/_WEBHOOK_SECRET` · `RESEND_API_KEY`+`MAIL_FROM` · `ANTHROPIC_API_KEY` (`ANTHROPIC_MODEL` default Haiku).
 
 ## Starten & Verifizieren
 ```bash
+brew services start postgresql@17   # lokales Postgres (einmalig: brew install postgresql@17 + createdb studyhub)
 npm install
-npx prisma migrate dev          # erstellt dev.db (falls noch nicht da) + Prisma-Client
+npx prisma migrate dev          # wendet Migrationen auf lokales Postgres an + Prisma-Client
 npm run dev                     # http://localhost:3000  → /login → registrieren (OWNER_EMAIL = unbegrenzt)
 npm run build                   # Prod-Build (fängt Next-16/Edge/Node-Fehler)
 node scripts/audit.mjs          # Inhalts-Check (erwartet 0 Fehler)
@@ -111,7 +112,7 @@ node scripts/e2e.mjs            # Auth/Limit-E2E (Dev-Server muss laufen)
   - **github:** offizieller Remote-Server `https://api.githubcopilot.com/mcp/` (HTTP/OAuth). Endpoint verifiziert (401=OAuth-geschützt, live). **Muss noch per `/mcp` → github → OAuth-Login** authentifiziert werden (Health-Check zeigt bis dahin „Failed to connect" = normal). `gh`-CLI bleibt zusätzlich nutzbar.
 - ⏳ **Phase C (direkt als Nächstes):** Connection-Strings in gitignored `.env` (Transaction 6543 → `DATABASE_URL`, Direct 5432 → `DIRECT_URL`) → `rm -rf prisma/migrations` → `npx prisma migrate dev --name init` gegen Supabase → `npm run build` verifizieren → committen.
 - ⏳ **Phase D/E:** Vercel-Import + Env-Vars (`DATABASE_URL`,`DIRECT_URL`,`AUTH_SECRET` *neu* für Prod,`AUTH_URL`,`OWNER_EMAIL`); später eigene Domain. Vercel Hobby = nicht-kommerziell; `ANTHROPIC_API_KEY` in Prod erst weglassen.
-- ⚠️ **Lokales Dev läuft NOCH auf SQLite** (generierter Prisma-Client ist noch `sqlite`, `.env` zeigt auf `file:./dev.db`). Sobald `prisma generate`/`migrate` gegen Postgres läuft, ist SQLite-Dev weg — also nicht versehentlich `npm install`/`prisma generate` ausführen, bevor `.env` auf Supabase zeigt.
+- ✅ **Lokales Dev läuft auf Postgres** (Homebrew `postgresql@17`, DB `studyhub`, Port 5432; `.env` zeigt darauf). Die alte SQLite-Falle ist beseitigt — `npm install`/`prisma generate`/`prisma migrate dev` sind lokal gefahrlos. `html-to-image` (ungenutzt) wurde deinstalliert.
 - 🔒 **Secrets** (DB-Passwort, `sbp_`-Token) liegen lokal in `.env` bzw. `~/.claude.json` — **niemals** in CONTEXT.md/Memory/Repo.
 
 ## Offene / mögliche nächste Schritte
