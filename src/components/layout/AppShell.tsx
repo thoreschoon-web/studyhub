@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileTopBar } from "@/components/layout/MobileTopBar";
+import { Footer } from "@/components/layout/Footer";
 import { ProgressBootstrap } from "@/components/progress/ProgressBootstrap";
 import { UpgradeModal } from "@/components/billing/UpgradeModal";
 
@@ -22,7 +23,12 @@ export function AppShell({ loggedIn, children }: { loggedIn: boolean; children: 
   const isLoggedIn = status === "authenticated" ? true : status === "unauthenticated" ? false : loggedIn;
 
   if (pathname && BARE_ROUTES.has(pathname)) {
-    return <main className="min-h-screen">{children}</main>;
+    return (
+      <div className="flex min-h-screen flex-col">
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
+    );
   }
 
   return (
@@ -32,6 +38,7 @@ export function AppShell({ loggedIn, children }: { loggedIn: boolean; children: 
         <div className="flex min-h-screen flex-col">
           <MobileTopBar />
           <main className="flex-1">{children}</main>
+          <Footer />
         </div>
       </div>
       {isLoggedIn && (
