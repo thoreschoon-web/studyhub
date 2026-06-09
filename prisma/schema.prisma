@@ -107,6 +107,7 @@ model ExamAttempt {
   date        DateTime @default(now())
   durationSec Int
   selfScore   Int
+  detail      String   @default("[]") // JSON [{q,t,ok}] — Frage-ID, Topic-ID, korrekt
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])

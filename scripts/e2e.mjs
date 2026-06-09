@@ -115,8 +115,14 @@ const getStore = (c) => fetch(BASE + "/api/progress", { headers: { cookie: c.hdr
   console.log("=== 8. Eingabe-Validierung (Defense-in-Depth) ===");
   const badAct = await post(cFree, "DROP TABLE users; --", { topicId: "x" });
   console.log("  ungültige Action abgelehnt: " + pass(badAct?.error === "bad_action"));
-  r = await fetch(BASE + "/api/progress", { method: "POST", headers: { cookie: cFree.hdr(), "content-type": "application/json" }, body: JSON.stringify({ action: "markSection", args: { topicId: "x".repeat(6000) } }) });
+  r = await fetch(BASE + "/api/progress", { method: "POST", headers: { cookie: cFree.hdr(), "content-type": "application/json" }, body: JSON.stringify({ action: "markSection", args: { topicId: "x".repeat(9000) } }) });
   console.log("  Riesen-Payload -> 413: " + pass(r.status === 413));
+
+  console.log("=== 8b. Klausur-Versuch mit Themen-Detail ===");
+  await post(cPaid, "addExam", { exam: { subjectId: "mathe-2", label: "Test · 2 Fragen", date: Date.now(), durationSec: 60, selfScore: 50, detail: [{ q: "q1", t: "kkt", ok: true }, { q: "q2", t: "lagrange", ok: false }, { bad: "ignored" }] } });
+  const attempt = await db.examAttempt.findFirst({ where: { userId: paid.id }, orderBy: { date: "desc" } });
+  const det = JSON.parse(attempt?.detail ?? "[]");
+  console.log("  detail persistiert + normalisiert: " + pass(det.length === 2 && det[0].q === "q1" && det[1].ok === false));
 
   console.log("=== 9. E-Mail-Verifizierung (Token-Flow) ===");
   // Token wie src/lib/tokens.ts: DB hält nur den sha256-Hash, der Link den Klartext.

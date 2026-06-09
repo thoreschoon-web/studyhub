@@ -146,8 +146,33 @@ export async function applyAction(user: User, action: string, args: Record<strin
       return { ok: true };
     }
     case "addExam": {
-      const e = args.exam as { subjectId: string; label: string; date: number; durationSec: number; selfScore: number };
-      await db.examAttempt.create({ data: { userId: uid, subjectId: e.subjectId, label: e.label, date: new Date(e.date || Date.now()), durationSec: e.durationSec, selfScore: e.selfScore } });
+      const e = args.exam as {
+        subjectId: string;
+        label: string;
+        date: number;
+        durationSec: number;
+        selfScore: number;
+        detail?: unknown;
+      };
+      // Detail strikt auf das kompakte {q,t,ok}-Format normalisieren (max. 60 Einträge).
+      const detail = (Array.isArray(e.detail) ? e.detail : [])
+        .slice(0, 60)
+        .filter(
+          (d): d is { q: string; t: string; ok: boolean } =>
+            !!d && typeof d === "object" && typeof (d as { q?: unknown }).q === "string" && typeof (d as { t?: unknown }).t === "string",
+        )
+        .map((d) => ({ q: d.q.slice(0, 80), t: d.t.slice(0, 80), ok: !!d.ok }));
+      await db.examAttempt.create({
+        data: {
+          userId: uid,
+          subjectId: e.subjectId,
+          label: e.label,
+          date: new Date(e.date || Date.now()),
+          durationSec: e.durationSec,
+          selfScore: e.selfScore,
+          detail: JSON.stringify(detail),
+        },
+      });
       return { ok: true };
     }
     case "resetTopic": {

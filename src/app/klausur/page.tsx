@@ -17,6 +17,9 @@ export default async function KlausurPage() {
     icon: s.icon,
     questions: getSubjectTopics(s.id).flatMap((t) => t.quiz),
   }));
+  const topicTitles = Object.fromEntries(
+    SUBJECTS.flatMap((s) => getSubjectTopics(s.id).map((t) => [t.id, t.title] as const)),
+  );
 
   return (
     <div className="mx-auto max-w-2xl px-5 py-10 lg:px-8">
@@ -28,7 +31,7 @@ export default async function KlausurPage() {
           Übe unter realen Bedingungen: Fragen, Zeitlimit, Auswertung am Ende – ganz ohne Lösungen während des Tests.
         </p>
       </header>
-      {user ? <ExamSimulator pools={pools} /> : <AuthGate feature="den Klausur-Simulator" />}
+      {user ? <ExamSimulator pools={pools} topicTitles={topicTitles} /> : <AuthGate feature="den Klausur-Simulator" />}
     </div>
   );
 }

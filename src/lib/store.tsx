@@ -27,6 +27,8 @@ export interface ExamAttempt {
   date: number;
   durationSec: number;
   selfScore: number;
+  /** Pro Frage: Frage-ID, Topic-ID, korrekt — Basis für die Themen-Auswertung. */
+  detail?: { q: string; t: string; ok: boolean }[];
 }
 
 export interface StoreState {

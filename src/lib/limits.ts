@@ -25,7 +25,7 @@ export const CHAT_LIMITS = {
 
 /** Progress API (/api/progress) input guardrails (defense-in-depth; Prisma already prevents SQLi). */
 export const PROGRESS_LIMITS = {
-  maxPayloadChars: 4000,
+  maxPayloadChars: 8000, // Platz für addExam-Detail (bis 30 Fragen à {q,t,ok})
   rate: { limit: 150, windowMs: 60_000 },
 } as const;
 
