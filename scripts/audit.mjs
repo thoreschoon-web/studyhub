@@ -2,7 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { parse } from "mathjs";
 
-const PROJ = "/Users/thore/Desktop/UNI semester 2/lernplattform";
+import { fileURLToPath } from "node:url";
+
+// Projektwurzel relativ zum Skript (läuft lokal UND im CI).
+const PROJ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = path.join(PROJ, "content");
 const PUBLIC = path.join(PROJ, "public");
 const DIST = new Set(["normal", "t", "chi2", "f", "binomial", "poisson"]);
