@@ -10,15 +10,11 @@ type Hit = { topicId: string; subjectId: string; title: string; summary: string;
 /**
  * Cmd/Ctrl+K-Suchpalette über alle Themen. Öffnet auch über das
  * CustomEvent "studyhub:search" (Trigger in Sidebar/MobileTopBar).
+ * Der Eingabe-/Ergebnis-State lebt in <PaletteInner/>, die bei jedem
+ * Öffnen frisch mountet — kein Reset-Effekt nötig.
  */
 export function SearchPalette() {
-  const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [q, setQ] = useState("");
-  const [hits, setHits] = useState<Hit[]>([]);
-  const [active, setActive] = useState(0);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -37,21 +33,25 @@ export function SearchPalette() {
     };
   }, []);
 
+  if (!open) return null;
+  return <PaletteInner close={() => setOpen(false)} />;
+}
+
+function PaletteInner({ close }: { close: () => void }) {
+  const router = useRouter();
+  const [q, setQ] = useState("");
+  const [hits, setHits] = useState<Hit[]>([]);
+  const [active, setActive] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const abortRef = useRef<AbortController | null>(null);
+
   useEffect(() => {
-    if (open) {
-      setQ("");
-      setHits([]);
-      setActive(0);
-      setTimeout(() => inputRef.current?.focus(), 10);
-    }
-  }, [open]);
+    inputRef.current?.focus();
+  }, []);
 
   useEffect(() => {
     abortRef.current?.abort();
-    if (q.trim().length < 2) {
-      setHits([]);
-      return;
-    }
+    if (q.trim().length < 2) return; // Leeren übernimmt der onChange-Handler
     const ctrl = new AbortController();
     abortRef.current = ctrl;
     const id = setTimeout(async () => {
@@ -69,24 +69,26 @@ export function SearchPalette() {
 
   const go = useCallback(
     (h: Hit) => {
-      setOpen(false);
+      close();
       router.push(`/${h.subjectId}/${h.topicId}`);
     },
-    [router],
+    [router, close],
   );
-
-  if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-[110] flex items-start justify-center p-4 pt-[12vh]">
-      <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" onClick={() => setOpen(false)} />
+      <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" onClick={close} />
       <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-line bg-bg-soft shadow-2xl">
         <div className="flex items-center gap-3 border-b border-line px-4">
           <Search size={17} className="shrink-0 text-muted" />
           <input
             ref={inputRef}
             value={q}
-            onChange={(e) => setQ(e.target.value)}
+            onChange={(e) => {
+              const v = e.target.value;
+              setQ(v);
+              if (v.trim().length < 2) setHits([]);
+            }}
             onKeyDown={(e) => {
               if (e.key === "ArrowDown") {
                 e.preventDefault();

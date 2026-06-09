@@ -12,6 +12,8 @@ export function ThemeToggle({ className, compact = false }: { className?: string
 
   useEffect(() => {
     const current = (document.documentElement.getAttribute("data-theme") as Theme) || "dark";
+    // Einmaliger Post-Hydration-Sync mit dem vom Init-Script gesetzten DOM-Attribut.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(current);
     setMounted(true);
   }, []);

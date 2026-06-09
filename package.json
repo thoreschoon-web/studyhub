@@ -15,6 +15,7 @@
     "@anthropic-ai/sdk": "^0.100.1",
     "@auth/prisma-adapter": "^2.11.2",
     "@prisma/client": "^6.19.3",
+    "@sentry/nextjs": "^10.57.0",
     "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "html2canvas-pro": "^2.0.4",

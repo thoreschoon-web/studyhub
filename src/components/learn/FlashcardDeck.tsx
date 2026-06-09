@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import type { Flashcard } from "@/lib/types";
 import { actions, useStore, isDue } from "@/lib/store";
 import { Markdown } from "@/components/content/Markdown";
-import { cn, shuffle } from "@/lib/utils";
+import { shuffle } from "@/lib/utils";
 import { RotateCw, Check, ChevronLeft } from "lucide-react";
 
 const GRADES = [

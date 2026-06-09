@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: ci
+          POSTGRES_DB: studyhub
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://postgres:ci@localhost:5432/studyhub
+      DIRECT_URL: postgresql://postgres:ci@localhost:5432/studyhub
+      AUTH_SECRET: ci-secret-not-used-in-prod-0000000000000000
+      AUTH_URL: http://localhost:3000
+      OWNER_EMAIL: ci@example.com
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install (runs prisma generate via postinstall)
+        run: npm ci
+
+      - name: Content-Audit (51 Themen, 0 Fehler erwartet)
+        run: node scripts/audit.mjs
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Migrationen anwenden
+        run: npx prisma migrate deploy
+
+      - name: Build
+        run: npm run build
+
+      - name: E2E (gegen next start)
+        run: |
+          npm run start -- --port 3000 &
+          E2E_BASE=http://localhost:3000 node scripts/e2e.mjs | tee e2e.log
+          # Fehlschlag, wenn irgendein Check ✗ meldet
+          ! grep -q "✗" e2e.log

@@ -1,0 +1,15 @@
+# StudyHub — Startseite & Fach-Übersichten indexierbar, Rest (Konto/Auth/API) nicht.
+User-agent: *
+Allow: /$
+Allow: /impressum
+Allow: /datenschutz
+Allow: /agb
+Allow: /widerruf
+Disallow: /api/
+Disallow: /konto
+Disallow: /login
+Disallow: /register
+Disallow: /passwort-vergessen
+Disallow: /passwort-reset
+Disallow: /verifizieren
+Disallow: /upgrade

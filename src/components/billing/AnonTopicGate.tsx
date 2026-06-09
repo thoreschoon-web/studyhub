@@ -27,6 +27,8 @@ export function AnonTopicGate({ topicId }: { topicId: string }) {
     }
     if (list.includes(topicId)) return; // re-visit is free
     if (list.length >= LIMIT) {
+      // Einmaliger Post-Hydration-Sync aus localStorage (SSR kennt den Zähler nicht).
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setBlocked(true);
       return;
     }
